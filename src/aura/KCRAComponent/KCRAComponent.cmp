@@ -1,0 +1,60 @@
+<aura:component controller="KCRAController" implements="force:hasRecordId,flexipage:availableForAllPageTypes">
+	 <!-- Required Scripts/Styles -->
+
+   <aura:attribute name="KCRAItems" type="List" />
+   <aura:attribute name="updatedKCRAItems" type="List" />
+   <aura:attribute name="isDirty" type="Boolean" default="false" />
+   <aura:attribute name="saveMethod" type="String" required="true" default="updateKCRA" description="Save method on server" />
+
+   <aura:attribute name="OpportunityId" type="Id" required="true" access="PUBLIC" default="" />
+
+   <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+   <aura:handler event="c:KCRAEvent" action="{!c.doInit}"/>
+   
+   <!-- Use the Apex model and controller to fetch server side data -->
+    
+    <!--<div class="slds-button-group" role="group">-->
+    <div class="slds-section-title--divider">
+        <h2>Key Commercial Risk Approval (KCRA)
+        <ui:button aura:id="savebtn" label="Save" class="slds-button slds-button--neutral slds-button--brand slds-float--right" disabled="false" press="{!c.doSave}"/>
+        </h2>
+        
+    
+    </div>
+	<div class="slds-grid slds-wrap">
+       <table class="slds-table slds-table--bordered slds-table--striped">
+          <thead>
+            <tr>
+               <th scope="col"><span class="slds-truncate">Item #</span></th>
+               <th scope="col"><span class="slds-truncate">KCRA Item</span></th>
+               <th scope="col"><span class="slds-truncate">Applicable</span></th>
+               <th scope="col"><span class="slds-truncate">Approved</span></th>
+         
+    
+            </tr>
+          </thead>
+          <tbody>
+            <aura:iteration items="{!v.KCRAItems}" var="KCRA">
+             <tr>
+               <td>{!KCRA.ItemNo__c}</td>
+               <td class="no-text-overflow">{!KCRA.KCRA_Item__c}</td>             
+               <td>
+                   <ui:inputSelect aura:id="YesNo" value="{!KCRA.Applicable__c}" change="{!c.doChangeKCRA}" labelClass="{!KCRA.Id}">
+                    <ui:inputSelectOption text="Yes"/>
+                    <ui:inputSelectOption text="No"/>
+                   </ui:inputSelect>
+					<!--<select name="{!KCRA.Id}" onchange="{!c.doChangeKCRA}">
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>-->
+                   
+               </td>
+               <td><ui:inputCheckbox text="{!KCRA.Id}" value="{!KCRA.Approved__c}" change="{!c.doChangeKCRA}"/></td>
+
+             </tr>
+            </aura:iteration>
+          </tbody>
+       </table>
+    </div>
+
+</aura:component>

@@ -15,20 +15,32 @@ public class PRAController {
    public static List<Project_Risk_Assessment__c> getAllPRARecords(String opportunityId) {
 
        
-       List<Project_Risk_Assessment__c> allPRAs = [SELECT Id,name,
-                                                   		  category__c,
-                                                   		  Is_Critical_Risk__c,
-                                                        ItemNo__c,
-                                                   		  Mitigation_Strategy__c,
-                                                   		  Rating__c,
-                                                   		  Risk_Item__c
+       List<Project_Risk_Assessment__c> allPRAs = [SELECT Id,name,Category__c,Is_Critical_Risk__c,ItemNo__c,Mitigation_Strategy__c,Rating__c,Risk_Item__c,
+                                                             		description__c,Help_Text_0A__c,Help_Text_0B__c,Help_Text_0C__c,Help_Text_1A__c,Help_Text_1B__c, 
+                                                             		Help_Text_1C__c,Help_Text_2A__c,Help_Text_2B__c,Help_Text_2C__c,Help_Text_3A__c,Help_Text_3B__c,
+                                                             		Help_Text_3C__c,Mitigation_Advice__c,Selected_Indicators__c,Selected_Indicators_With_Text__c
 												   FROM Project_Risk_Assessment__c
                                                    WHERE Opportunity__c = :opportunityId
                                                    ORDER BY ItemNo__c]; 
 
        return allPRAs;
 
-    }   
+    }  
+    @AuraEnabled
+    public static Project_Risk_Assessment__c getPRA(Id PRAId) {
+    	Project_Risk_Assessment__c pra;
+        
+        if(PRAId != NULL){
+            pra = [SELECT Id,name,Category__c,Is_Critical_Risk__c,ItemNo__c,Mitigation_Strategy__c,Rating__c,Risk_Item__c,
+                                                             		description__c,Help_Text_0A__c,Help_Text_0B__c,Help_Text_0C__c,Help_Text_1A__c,Help_Text_1B__c, 
+                                                             		Help_Text_1C__c,Help_Text_2A__c,Help_Text_2B__c,Help_Text_2C__c,Help_Text_3A__c,Help_Text_3B__c,
+                                                             		Help_Text_3C__c,Mitigation_Advice__c,Selected_Indicators__c,Selected_Indicators_With_Text__c
+												   FROM Project_Risk_Assessment__c
+                                      WHERE Id =: PRAId ORDER BY ItemNo__c ];
+ 			System.debug('PRA ' + pra);       
+        }
+        return pra;
+    } 
     /*@AuraEnabled
     public static String updateKCRA(List<Key_Commercial_Risks_Approvals__c> updatedKCRA) {
         String resultMsg = '';

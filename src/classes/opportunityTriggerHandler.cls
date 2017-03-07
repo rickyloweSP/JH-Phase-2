@@ -44,7 +44,10 @@ public class opportunityTriggerHandler extends TriggerHandler{
      **/
     private void insertPRAitems(){
         List<Project_Risk_Assessment__c> PRAItemsToCreate = new List<Project_Risk_Assessment__c>();
-        List<Project_Risk_Assessment__c> PRATemplateItems = [SELECT name,category__c,Is_Critical_Risk__c,ItemNo__c,Mitigation_Strategy__c,Rating__c,Risk_Item__c
+        List<Project_Risk_Assessment__c> PRATemplateItems = [SELECT name,category__c,Is_Critical_Risk__c,ItemNo__c,Mitigation_Strategy__c,Rating__c,Risk_Item__c,
+                                                             		description__c,Help_Text_0A__c,Help_Text_0B__c,Help_Text_0C__c,Help_Text_1A__c,Help_Text_1B__c, 
+                                                             		Help_Text_1C__c,Help_Text_2A__c,Help_Text_2B__c,Help_Text_2C__c,Help_Text_3A__c,Help_Text_3B__c,
+                                                             		Help_Text_3C__c,Mitigation_Advice__c,Selected_Indicators__c,Selected_Indicators_With_Text__c
                                                              FROM Project_Risk_Assessment__c
                                                              WHERE RecordTypeId =: PRATemplateRecordTypeID];    
          for(Opportunity opp: (List<Opportunity>) Trigger.new){
@@ -54,9 +57,18 @@ public class opportunityTriggerHandler extends TriggerHandler{
                                                                                     Category__c=PRATemplateItem.Category__c,
                                                                                     Is_Critical_Risk__c = PRATemplateItem.Is_Critical_Risk__c ,
                                                                                     Mitigation_Strategy__c = PRATemplateItem.Mitigation_Strategy__c,
+                                                                                    Mitigation_Advice__c = PRATemplateItem.Mitigation_Advice__c,
                                                                                     Rating__c = PRATemplateItem.Rating__c,
                                                                                     RecordTypeId = PRARecordTypeID,
-                                                                                    Opportunity__c=opp.id);
+                                                                                    Opportunity__c=opp.id,
+                                                                                    Help_Text_0A__c = PRATemplateItem.Help_Text_0A__c ,Help_Text_0B__c = PRATemplateItem.Help_Text_0B__c,
+                                                                                    Help_Text_0C__c = PRATemplateItem.Help_Text_0C__c ,Help_Text_1A__c = PRATemplateItem.Help_Text_1A__c,
+                                                                                    Help_Text_1B__c = PRATemplateItem.Help_Text_1B__c ,Help_Text_1C__c = PRATemplateItem.Help_Text_1C__c,
+                                                                                    Help_Text_2A__c = PRATemplateItem.Help_Text_2A__c ,Help_Text_2B__c = PRATemplateItem.Help_Text_2B__c,
+                                                                                    Help_Text_2C__c = PRATemplateItem.Help_Text_2C__c ,Help_Text_3A__c = PRATemplateItem.Help_Text_3A__c,
+                                                                                    Help_Text_3B__c = PRATemplateItem.Help_Text_3B__c ,Help_Text_3C__c = PRATemplateItem.Help_Text_3C__c,
+                                                                                    Selected_Indicators__c= PRATemplateItem.Selected_Indicators__c 
+                                                                                   );
                  PRAItemsToCreate.add(newPRA);
              }   
          }

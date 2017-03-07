@@ -1,0 +1,35 @@
+<aura:component controller="PRAController" implements="force:hasRecordId,flexipage:availableForAllPageTypes">
+   
+
+    <aura:attribute name="mode" type="String" default="edit" />
+    <aura:attribute name="newRecordSaved" type="Boolean" default="false" />
+    <aura:attribute name="defaultHeader" type="String" default="Edit PRA Item" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="PRAItemId" type="Id" required="true" access="PUBLIC" default="" />
+    
+    <aura:attribute name="PRA" type="Project_Risk_Assessment__c" />
+    <div aria-hidden="false" role="dialog" class="slds-modal slds-fade-in-open">
+       <div class="slds-modal__container">
+        <div class="slds-modal__header">
+     
+            
+            
+            
+            
+            <h2 class="slds-text-heading--medium">{!v.defaultHeader}</h2>
+        </div>
+        <div class="slds-modal__content">
+    		
+            <force:recordEdit aura:id="edit" recordId="{!v.PRA.Id}"/> 
+        </div>
+        <div class="slds-modal__footer">
+          <div class="slds-x-small-buttons--horizontal">
+             <button class="slds-button slds-button--neutral" onclick="{!c.close}">Cancel</button>
+             <button class="slds-button slds-button--neutral slds-button--brand" onclick="{!c.save}">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slds-backdrop slds-backdrop--open" id="backGroundSection"></div>     
+</aura:component>

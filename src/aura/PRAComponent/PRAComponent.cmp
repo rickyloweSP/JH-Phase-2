@@ -1,0 +1,68 @@
+<aura:component controller="PRAController" implements="force:hasRecordId,flexipage:availableForAllPageTypes">
+	 <!-- Required Scripts/Styles -->
+
+   <aura:attribute name="PRAItems" type="List" />
+   <aura:attribute name="updatedPRAItems" type="List" />
+   <aura:attribute name="isDirty" type="Boolean" default="false" />
+   <aura:attribute name="saveMethod" type="String" required="true" default="updatePRA" description="Save method on server" />
+
+   <aura:attribute name="OpportunityId" type="Id" required="true" access="PUBLIC" default="" />
+    <aura:attribute name="PRA" type="Project_Risk_Assessment__c" />
+
+   <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+   <aura:handler event="c:KCRAEvent" action="{!c.doInit}"/>
+   
+   <!-- Use the Apex model and controller to fetch server side data -->
+    
+    <!--<div class="slds-button-group" role="group">-->
+    <div class="slds-section-title--divider">
+        <h2>Project Risk Assessment(PRA)
+        </h2>
+        
+    
+    </div>
+	<div class="slds-grid slds-wrap">
+       <table class="slds-table slds-table--bordered slds-table--striped">
+          <thead>
+            <tr>
+               <th scope="col"><span class="slds-truncate">Edit Item</span></th>
+               <th scope="col"><span class="slds-truncate">Item #</span></th>
+                <th scope="col"><span class="slds-truncate">Is Critical Risk ?</span></th>
+               <th scope="col"><span class="slds-truncate">Category</span></th>
+               <th scope="col"><span class="slds-truncate">Rating</span></th>
+               <th scope="col"><span class="slds-truncate">Risk Item Name</span></th>
+               <th scope="col"><span class="slds-truncate">Selected Criteria</span></th>
+               <th scope="col"><span class="slds-truncate">Mitigation Strategy</span></th>
+               
+         
+    
+            </tr>
+          </thead>
+          <tbody>
+            <aura:iteration items="{!v.PRAItems}" var="PRA">
+             <tr>
+               <td><ui:button aura:id="editbtn" label="Edit" class="slds-button slds-button--neutral slds-button--brand slds-float--right" disabled="false" press="{!c.editMode}"/></td>
+               <td class="no-text-overflow">{!PRA.ItemNo__c}</td> 
+               <aura:if isTrue="{!PRA.Is_Critical_Risk__c}">
+             	<td><img src="/resource/redsquare" height="9" width="10"/></td>
+                <aura:set attribute="else">
+      				<td><img src="/resource/greensquare" height="9" width="10"/></td>
+                </aura:set> 
+  		 	   </aura:if> 
+               <!--<td class="no-text-overflow">{!PRA.Is_Critical_Risk__c}</td> -->
+               <td class="no-text-overflow">{!PRA.Category__c}</td>  
+               <td class="no-text-overflow">{!PRA.Rating__c}</td>  
+               <td class="no-text-overflow">{!PRA.Risk_Item__c}</td>  
+               <td class="no-text-overflow">{!PRA.Selected_Indicators_With_Text__c}</td>  
+               <td class="no-text-overflow">{!PRA.Mitigation_Strategy__c}</td>  
+
+
+             </tr>
+            </aura:iteration>
+          </tbody>
+       </table>
+    </div>
+    <div aura:id="body">
+    </div> 
+
+</aura:component>
