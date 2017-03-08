@@ -1,0 +1,31 @@
+<aura:component >
+    <!-- This component should NOT be used as standalone component.
+		It must be used within KCRAListComponent.
+		The component display a KCRA  record. Instead of stars with tr, it starts with th.
+		tr element is provided in aura:iteration in KCRAListComponent.
+  		This is due to error (Cannot read property 'childNodes' of null) when re rendering / refreshing the list.
+	-->    
+ 
+    <aura:attribute name="KCRA" type="Key_Commercial_Risks_Approvals__c" />
+    <aura:registerEvent name="onClick" type="c:messageEvt" />
+
+   
+            <th scope="row">
+                <div class="slds-truncate"><a onclick="{!c.navigateToKCRA}">{!v.KCRA.ItemNo__c}</a></div>
+		    </th>    
+
+               
+                <td class="no-text-overflow">{!v.KCRA.KCRA_Item__c}</td>
+    			<td>
+                   <ui:inputSelect aura:id="YesNo" value="{!v.KCRA.Applicable__c}" change="{!c.doChangeKCRA}" labelClass="{!v.KCRA.Id}">
+                    <ui:inputSelectOption text="Yes"/>
+                    <ui:inputSelectOption text="No"/>
+                   </ui:inputSelect>
+                   
+                </td>
+                 <td><ui:inputCheckbox text="{!v.KCRA.Id}" value="{!v.KCRA.Approved__c}" change="{!c.doChangeKCRA}"/></td>
+  
+    <div aura:id="body">
+    </div> 
+      
+</aura:component>

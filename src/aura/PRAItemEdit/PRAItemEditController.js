@@ -1,8 +1,9 @@
 ({
     doInit: function(component, event, helper) { // retrieve the attachments 
-/*        var mode = component.get("v.mode");
+
+ 		 component.set("v.cssStyle", ".forceStyle .viewport.oneHeader.desktop {z-index:0} .forceStyle.desktop .viewport{overflow:hidden}");
         
-*/        
+        
 
    }, 
     close : function(component, event, helper) {
@@ -20,5 +21,8 @@
     },    
     save : function(component, event, helper) {
         helper.save(component);
-    }
+    },
+    overrideHeaderStyle : function(component, event, helper){
+    	component.set("v.cssStyle", ".forceStyle .viewport.oneHeader.desktop {z-index:0} .forceStyle.desktop .viewport{overflow:hidden}");
+	}
 })

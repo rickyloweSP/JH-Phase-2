@@ -20,8 +20,8 @@
         var PRA=component.getReference("v.PRA");
         
         $A.createComponent("c:PRAItemEdit",{
-           // "PRA": PRA
-            "PRA":'a0hO00000056Qsc'
+            "PRA": PRA
+            //"PRA":'a0hO00000056Qsc'
         }, function(newComp) {
             var content = component.find("body");
             content.set("v.body", newComp);
