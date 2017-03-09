@@ -2,9 +2,6 @@
     doInit: function(component, event, helper) { // retrieve the attachments 
 
  		 component.set("v.cssStyle", ".forceStyle .viewport.oneHeader.desktop {z-index:0} .forceStyle.desktop .viewport{overflow:hidden}");
-        
-        
-
    }, 
     close : function(component, event, helper) {
         var newRecordSaved = component.get("v.newRecordSaved");
@@ -21,6 +18,12 @@
     },    
     save : function(component, event, helper) {
         helper.save(component);
+    },
+    moveNext : function(component, event, helper) {
+        recordId = 'a0hO00000056ZBbIAM';
+        
+        
+        //window.location.reload(true);
     },
     overrideHeaderStyle : function(component, event, helper){
     	component.set("v.cssStyle", ".forceStyle .viewport.oneHeader.desktop {z-index:0} .forceStyle.desktop .viewport{overflow:hidden}");

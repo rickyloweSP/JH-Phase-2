@@ -1,10 +1,11 @@
 <aura:component controller="KCRAController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName" access="global">
     
     <aura:attribute name="KCRAList" type="List" description="KCRA Items"/>
+    <aura:attribute name="updatedKCRAItems" type="List" />
     <aura:attribute name="currentNumRecordDisplay" type="Integer" default="2" description="Variable to set the number of records viewable based on View All/ Less button"/>    
     <aura:attribute name="maxNumRecordDisplay" type="Integer" default="2" description="Variable to set the MAX number of records viewable (all files based on the query retrieved via init)"/>        
     <aura:attribute name="recordId" type="Id" required="true" access="PUBLIC" default="" description="The current record Id to display" />
-    <aura:attribute name="newKCRA" type="Project_Risk_Assessment__c" />
+    <aura:attribute name="newKCRA" type="Key_Commercial_Risks_Approvals__c" />
     <aura:attribute name="newRecordSaved" type="Boolean" default="false" />
     
     <!-- variables that can be changed in the design -->    
@@ -16,12 +17,13 @@
 
     
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
-    <aura:handler name="change" value="{!v.newRecordSaved}" action="{!c.doInit}" />      
+    <!--<aura:handler name="change" value="{!v.newRecordSaved}" action="{!c.doInit}" />   -->   
     <!-- Events -->
     <aura:handler event="c:KCRAEvent" action="{!c.doInit}"/>
+    <!--<aura:handler name="setKCRA" event="c:messageEvt" action="{!c.addUpdatedKCRA}"/>-->
  
     <div class="slds-card">
-        <div class="slds-card__header slds-grid slds-wrap">
+        <div class="slds-card__header slds-grid">
             <div class="slds-media slds-media--center slds-has-flexi-truncate">
                 <!-- placeholder for icon if required -->
                 <div class="slds-media__body  slds-truncate">
@@ -36,7 +38,8 @@
                 </div>
             </aura:if>   
         </div>
-        <div class="slds-card__body slds-scrollable--x slds-grid slds-wrap">            
+
+        <div class="slds-card__body slds-scrollable--x">            
                 <table class="slds-table slds-wrap slds-table--bordered slds-no-row-hover slds-table--cell-buffer">
                     <thead>
                        <tr>
@@ -56,7 +59,7 @@
                                 Encapsulate using tr element instead
                             -->
                             <tr class="slds-hint-parent">
-                               <c:KCRAItem KCRA="{!KCRA}" onClick="{!c.clickStore}"/>    
+                               <c:KCRAItem KCRA="{!KCRA}"/>    
                             </tr>                      
                         </aura:iteration>
                     </tbody>
@@ -69,7 +72,7 @@
         <div class="slds-card__footer">
             <div aura:id="viewToggle"> <!-- by default View All is visible -->
                 <button id="viewAllButton" class="slds-button" onclick="{!c.viewToggle}">View All</button></div>
-            <div aura:id="viewToggle" class="toggle"> <!-- by default View Less is NOT visible -->
+            <div aura:id="viewToggle" class="toggle"><!-- by default View Less is NOT visible -->
                 <button id="viewLessButton" class="slds-button" onclick="{!c.viewToggle}">View Less</button></div>
         </div>   
     </div>    

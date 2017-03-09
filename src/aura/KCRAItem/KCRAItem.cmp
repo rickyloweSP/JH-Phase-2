@@ -7,8 +7,7 @@
 	-->    
  
     <aura:attribute name="KCRA" type="Key_Commercial_Risks_Approvals__c" />
-    <aura:registerEvent name="onClick" type="c:messageEvt" />
-
+   
    
             <th scope="row">
                 <div class="slds-truncate"><a onclick="{!c.navigateToKCRA}">{!v.KCRA.ItemNo__c}</a></div>
@@ -17,13 +16,13 @@
                
                 <td class="no-text-overflow">{!v.KCRA.KCRA_Item__c}</td>
     			<td>
-                   <ui:inputSelect aura:id="YesNo" value="{!v.KCRA.Applicable__c}" change="{!c.doChangeKCRA}" labelClass="{!v.KCRA.Id}">
+                   <ui:inputSelect aura:id="YesNo" value="{!v.KCRA.Applicable__c}">
                     <ui:inputSelectOption text="Yes"/>
                     <ui:inputSelectOption text="No"/>
                    </ui:inputSelect>
                    
                 </td>
-                 <td><ui:inputCheckbox text="{!v.KCRA.Id}" value="{!v.KCRA.Approved__c}" change="{!c.doChangeKCRA}"/></td>
+                 <td><ui:inputCheckbox value="{!v.KCRA.Approved__c}"/></td>
   
     <div aura:id="body">
     </div> 

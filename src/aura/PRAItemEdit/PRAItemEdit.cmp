@@ -9,6 +9,7 @@
     <aura:attribute name="PRAItemId" type="Id" required="true" access="PUBLIC" default="" />
     
     <aura:attribute name="PRA" type="Project_Risk_Assessment__c" />
+    <aura:attribute name="PRAList" type="List" />
 
 
     <div aria-hidden="false" role="dialog" class="slds-modal slds-fade-in-open slds-modal--large">
@@ -32,7 +33,7 @@
         <div class="slds-modal__footer">
           <div class="slds-x-small-buttons--horizontal">
               <button class="slds-button slds-button--neutral" onclick="{!c.close}">Previous</button>
-              <button class="slds-button slds-button--neutral" onclick="{!c.close}">Next</button>
+              <button class="slds-button slds-button--neutral" onclick="{!c.moveNext}">Next</button>
              <button class="slds-button slds-button--neutral" onclick="{!c.close}">Cancel</button>
              <button class="slds-button slds-button--neutral slds-button--brand" onclick="{!c.save}">Save</button>
           </div>

@@ -2,9 +2,10 @@
     editMode : function(component, event, helper) {
         console.log("PRAItemHelper editMode");        
         var PRA=component.getReference("v.PRA");
-        
+        var PRAList=component.getReference("v.PRAList");
         $A.createComponent("c:PRAItemEdit",{
-            "PRA": PRA
+            "PRA": PRA,
+            "PRAList": PRAList
         }, function(newComp) {
             var content = component.find("body");
             content.set("v.body", newComp);
