@@ -70,9 +70,14 @@
         this.displayToast('Info', 'info', 'dismissible', message);
     },
 
-    showSuccess : function (message) {
-        this.displayToast('Success', 'success', 'dismissible', message);
-    },
+    showEndOfListToast : function(component, event, helper) {
+        var toastEvent = $A.get("e.force:showToast");
+        toastEvent.setParams({
+            "title": "End of Record List!",
+            "message": "This is the last record in the list."
+        });
+        toastEvent.fire();
+	},   
 
     showWarning : function (message) {
         this.displayToast('Warning', 'warning', 'sticky', message);

@@ -1,0 +1,157 @@
+34.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous: Email_Alert_Class EA = new Email_Alert_Class(null, false, true);
+Execute Anonymous: 
+Execute Anonymous: Messaging.SingleEmailMessage[] messages = new List<Messaging.SingleEmailMessage> {EA.message};
+Execute Anonymous: Messaging.SendEmailResult[] results = Messaging.sendEmail(messages);
+Execute Anonymous: if (results[0].success) {
+Execute Anonymous:     System.debug('The email was sent successfully.');
+Execute Anonymous: } else {
+Execute Anonymous:     System.debug('The email failed to send: '
+Execute Anonymous:           + results[0].errors[0].message);
+Execute Anonymous: }
+03:05:46.1 (1825134)|USER_INFO|[EXTERNAL]|005O0000003t7an|ricky.lowe@jhg.com.au.pcphase2|Australian Eastern Standard Time|GMT+11:00
+03:05:46.1 (1839917)|EXECUTION_STARTED
+03:05:46.1 (1844322)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+03:05:46.1 (42401987)|VARIABLE_SCOPE_BEGIN|[1]|EA|Email_Alert_Class|true|false
+03:05:46.1 (42502764)|VARIABLE_SCOPE_BEGIN|[3]|messages|List<Messaging.SingleEmailMessage>|true|false
+03:05:46.1 (42534906)|VARIABLE_SCOPE_BEGIN|[4]|results|List<Messaging.SendEmailResult>|true|false
+03:05:46.1 (42675064)|HEAP_ALLOCATE|[72]|Bytes:3
+03:05:46.1 (42716026)|HEAP_ALLOCATE|[77]|Bytes:152
+03:05:46.1 (42731968)|HEAP_ALLOCATE|[342]|Bytes:408
+03:05:46.1 (42764111)|HEAP_ALLOCATE|[355]|Bytes:408
+03:05:46.1 (42784306)|HEAP_ALLOCATE|[467]|Bytes:48
+03:05:46.1 (42814821)|HEAP_ALLOCATE|[139]|Bytes:6
+03:05:46.1 (42844387)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:13
+03:05:46.1 (42915215)|STATEMENT_EXECUTE|[1]
+03:05:46.1 (42917960)|STATEMENT_EXECUTE|[1]
+03:05:46.1 (42922834)|HEAP_ALLOCATE|[1]|Bytes:14
+03:05:46.1 (42928604)|HEAP_ALLOCATE|[1]|Bytes:2
+03:05:46.1 (42985668)|METHOD_ENTRY|[1]|01pO00000003HJI|Email_Alert_Class.Email_Alert_Class()
+03:05:46.1 (42989806)|STATEMENT_EXECUTE|[1]
+03:05:46.1 (42993806)|STATEMENT_EXECUTE|[1]
+03:05:46.1 (43027828)|HEAP_ALLOCATE|[50]|Bytes:5
+03:05:46.1 (43053701)|HEAP_ALLOCATE|[56]|Bytes:5
+03:05:46.1 (43062859)|HEAP_ALLOCATE|[64]|Bytes:7
+03:05:46.1 (43083146)|SYSTEM_MODE_ENTER|false
+03:05:46.1 (43095788)|HEAP_ALLOCATE|[1]|Bytes:5
+03:05:46.1 (43103658)|SYSTEM_MODE_EXIT|false
+03:05:46.1 (43111276)|METHOD_EXIT|[1]|Email_Alert_Class
+03:05:46.1 (43153606)|HEAP_ALLOCATE|[1]|Bytes:28
+03:05:46.1 (43186796)|SYSTEM_MODE_ENTER|false
+03:05:46.1 (43200597)|HEAP_ALLOCATE|[1]|Bytes:5
+03:05:46.1 (43221411)|CONSTRUCTOR_ENTRY|[1]|01pO00000003HJI|<init>(String,Boolean,Boolean)
+03:05:46.1 (43253156)|VARIABLE_SCOPE_BEGIN|[11]|this|Email_Alert_Class|true|false
+03:05:46.1 (43305623)|VARIABLE_ASSIGNMENT|[11]|this|{}|0x4035ec0c
+03:05:46.1 (43310183)|VARIABLE_SCOPE_BEGIN|[11]|templateDevName|String|false|false
+03:05:46.1 (43314507)|VARIABLE_ASSIGNMENT|[11]|templateDevName|null
+03:05:46.1 (43318720)|VARIABLE_SCOPE_BEGIN|[11]|sendToPreContractGroup|Boolean|false|false
+03:05:46.1 (43322088)|VARIABLE_ASSIGNMENT|[11]|sendToPreContractGroup|false
+03:05:46.1 (43324694)|VARIABLE_SCOPE_BEGIN|[11]|sendToCentralEmailAddress|Boolean|false|false
+03:05:46.1 (43327174)|VARIABLE_ASSIGNMENT|[11]|sendToCentralEmailAddress|true
+03:05:46.1 (43339221)|HEAP_ALLOCATE|[7]|Bytes:5
+03:05:46.1 (43343567)|STATEMENT_EXECUTE|[1]
+03:05:46.1 (43346357)|HEAP_ALLOCATE|[7]|Bytes:5
+03:05:46.1 (43348359)|STATEMENT_EXECUTE|[2]
+03:05:46.1 (43349619)|STATEMENT_EXECUTE|[3]
+03:05:46.1 (43350637)|STATEMENT_EXECUTE|[4]
+03:05:46.1 (43351515)|STATEMENT_EXECUTE|[5]
+03:05:46.1 (43352357)|STATEMENT_EXECUTE|[6]
+03:05:46.1 (43353209)|STATEMENT_EXECUTE|[7]
+03:05:46.1 (43356186)|HEAP_ALLOCATE|[7]|Bytes:29
+03:05:46.1 (43370600)|VARIABLE_ASSIGNMENT|[7]|this.CentralEmailAddress|"ricky.lowe@systempar (9 more) ..."|0x4035ec0c
+03:05:46.1 (43381111)|HEAP_ALLOCATE|[7]|Bytes:6
+03:05:46.1 (43402665)|STATEMENT_EXECUTE|[11]
+03:05:46.1 (43404465)|STATEMENT_EXECUTE|[12]
+03:05:46.1 (43411497)|VARIABLE_ASSIGNMENT|[12]|this.templateDevName|null|0x4035ec0c
+03:05:46.1 (43413518)|STATEMENT_EXECUTE|[13]
+03:05:46.1 (43417514)|HEAP_ALLOCATE|[13]|Bytes:5
+03:05:46.1 (43422985)|VARIABLE_ASSIGNMENT|[13]|this.sendToPreContractGroup|false|0x4035ec0c
+03:05:46.1 (43424830)|STATEMENT_EXECUTE|[14]
+03:05:46.1 (43427238)|HEAP_ALLOCATE|[14]|Bytes:5
+03:05:46.1 (43431762)|VARIABLE_ASSIGNMENT|[14]|this.sendToCentralEmailAddress|true|0x4035ec0c
+03:05:46.1 (43433613)|STATEMENT_EXECUTE|[15]
+03:05:46.1 (43439267)|HEAP_ALLOCATE|[15]|Bytes:4
+03:05:46.1 (43529310)|VARIABLE_ASSIGNMENT|[15]|this.toAddresses|[]|0x4035ec0c
+03:05:46.1 (43533195)|STATEMENT_EXECUTE|[16]
+03:05:46.1 (43558250)|METHOD_ENTRY|[16]|01pO00000003HJI|Email_Alert_Class.buildEmailMessage()
+03:05:46.1 (43581083)|VARIABLE_SCOPE_BEGIN|[23]|this|Email_Alert_Class|true|false
+03:05:46.1 (43608291)|VARIABLE_ASSIGNMENT|[23]|this|{"CentralEmailAddress":"ricky.lowe@systempar (9 more) ...","sendToCentralEmailAd (5 more) ...":true,"sendToPreContractGro (2 more) ...":false,"toAddresses":"0x518c467b"}|0x4035ec0c
+03:05:46.1 (43620964)|HEAP_ALLOCATE|[24]|Bytes:5
+03:05:46.1 (43624835)|STATEMENT_EXECUTE|[23]
+03:05:46.1 (43625997)|STATEMENT_EXECUTE|[24]
+03:05:46.1 (43777382)|VARIABLE_ASSIGNMENT|[24]|this.message|"common.api.soap.wsdl.SingleEmailMessage@701d4054"|0x4035ec0c
+03:05:46.1 (43787414)|STATEMENT_EXECUTE|[27]
+03:05:46.1 (43789847)|STATEMENT_EXECUTE|[32]
+03:05:46.1 (43790836)|STATEMENT_EXECUTE|[33]
+03:05:46.1 (43832296)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+03:05:46.1 (43843257)|STATEMENT_EXECUTE|[38]
+03:05:46.1 (43975750)|HEAP_ALLOCATE|[38]|Bytes:17
+03:05:46.1 (44041650)|HEAP_ALLOCATE|[38]|Bytes:31
+03:05:46.1 (44062232)|HEAP_ALLOCATE|[38]|Bytes:48
+03:05:46.1 (44093222)|USER_DEBUG|[38]|ERROR|*** toAddresses: {ricky.lowe@systempartners.com}
+03:05:46.1 (44099743)|STATEMENT_EXECUTE|[39]
+03:05:46.1 (44107077)|HEAP_ALLOCATE|[39]|Bytes:4
+03:05:46.1 (44139641)|HEAP_ALLOCATE|[39]|Bytes:4
+03:05:46.1 (44188069)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+03:05:46.1 (44230149)|STATEMENT_EXECUTE|[40]
+03:05:46.1 (44234197)|HEAP_ALLOCATE|[40]|Bytes:20
+03:05:46.1 (44277006)|STATEMENT_EXECUTE|[41]
+03:05:46.1 (44280364)|HEAP_ALLOCATE|[41]|Bytes:25
+03:05:46.1 (44302921)|STATEMENT_EXECUTE|[42]
+03:05:46.1 (44314770)|METHOD_ENTRY|[42]|01pO00000003HJI|Email_Alert_Class.getTemplateID()
+03:05:46.1 (44337855)|VARIABLE_SCOPE_BEGIN|[45]|this|Email_Alert_Class|true|false
+03:05:46.1 (44444233)|VARIABLE_ASSIGNMENT|[45]|this|{"CentralEmailAddress":"ricky.lowe@systempartners.com","message":"common.api.soap.wsdl.SingleEmailMessage@701d4054","sendToCentralEmailAddress":true,"sendToPreContractGroup":false,"toAddresses":"0x518c467b"}|0x4035ec0c
+03:05:46.1 (44456570)|HEAP_ALLOCATE|[46]|Bytes:5
+03:05:46.1 (44460290)|STATEMENT_EXECUTE|[45]
+03:05:46.1 (44461436)|STATEMENT_EXECUTE|[46]
+03:05:46.1 (44463872)|HEAP_ALLOCATE|[46]|Bytes:88
+03:05:46.1 (44473165)|HEAP_ALLOCATE|[46]|Bytes:4
+03:05:46.1 (44483549)|HEAP_ALLOCATE|[46]|Bytes:7
+03:05:46.1 (44795718)|SOQL_EXECUTE_BEGIN|[46]|Aggregations:0|SELECT DeveloperName, Id, Name FROM EmailTemplate WHERE DeveloperName = :tmpVar1 LIMIT 1
+03:05:46.1 (46712028)|SOQL_EXECUTE_END|[46]|Rows:0
+03:05:46.1 (46729259)|HEAP_ALLOCATE|[46]|Bytes:4
+03:05:46.1 (46738994)|HEAP_ALLOCATE|[46]|Bytes:0
+03:05:46.1 (46793855)|HEAP_ALLOCATE|[46]|Bytes:4
+03:05:46.1 (46803900)|VARIABLE_SCOPE_BEGIN|[46]|ET|List<EmailTemplate>|true|false
+03:05:46.1 (46815228)|VARIABLE_ASSIGNMENT|[46]|ET|[]|0x361ddcd8
+03:05:46.1 (46878547)|STATEMENT_EXECUTE|[50]
+03:05:46.1 (46880755)|STATEMENT_EXECUTE|[51]
+03:05:46.1 (46897685)|METHOD_EXIT|[42]|01pO00000003HJI|Email_Alert_Class.getTemplateID()
+03:05:46.1 (46938961)|METHOD_EXIT|[16]|01pO00000003HJI|Email_Alert_Class.buildEmailMessage()
+03:05:46.1 (46951837)|CONSTRUCTOR_EXIT|[1]|01pO00000003HJI|<init>(String,Boolean,Boolean)
+03:05:46.1 (46957923)|SYSTEM_MODE_EXIT|false
+03:05:46.1 (47069725)|VARIABLE_ASSIGNMENT|[1]|EA|{"CentralEmailAddress":"ricky.lowe@systempartners.com","message":"common.api.soap.wsdl.SingleEmailMessage@701d4054","sendToCentralEmailAddress":true,"sendToPreContractGroup":false,"toAddresses":"0x518c467b"}|0x4035ec0c
+03:05:46.1 (47075821)|STATEMENT_EXECUTE|[3]
+03:05:46.1 (47080893)|HEAP_ALLOCATE|[3]|Bytes:4
+03:05:46.1 (47149172)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+03:05:46.1 (47217731)|VARIABLE_ASSIGNMENT|[3]|messages|"common.apex.runtime.impl.ScalarList@701d4073"|0x37889343
+03:05:46.1 (47222432)|STATEMENT_EXECUTE|[4]
+03:05:46.1 (47282765)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+03:05:46.1 (113760513)|EMAIL_QUEUE|[4]|subject: Opt Out Test Message, bccSender: false, saveAsActivity: true, useSignature: true, toAddresses: [ricky.lowe@systempartners.com], plainTextBody: This is the message body., 
+03:05:46.1 (113830173)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+03:05:46.1 (113849342)|HEAP_ALLOCATE|[4]|Bytes:8
+03:05:46.1 (113980312)|VARIABLE_ASSIGNMENT|[4]|results|"common.apex.runtime.impl.ScalarList@30920e96"|0x4899eb5f
+03:05:46.1 (114166710)|HEAP_ALLOCATE|[5]|Bytes:4
+03:05:46.1 (114230773)|STATEMENT_EXECUTE|[5]
+03:05:46.1 (114233438)|STATEMENT_EXECUTE|[6]
+03:05:46.1 (114240662)|HEAP_ALLOCATE|[6]|Bytes:32
+03:05:46.1 (114294567)|USER_DEBUG|[6]|DEBUG|The email was sent successfully.
+03:05:46.135 (135615849)|CUMULATIVE_LIMIT_USAGE
+03:05:46.135 (135615849)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 1 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+03:05:46.135 (135615849)|CUMULATIVE_LIMIT_USAGE_END
+
+03:05:46.1 (135668191)|CODE_UNIT_FINISHED|execute_anonymous_apex
+03:05:46.1 (137123784)|EXECUTION_FINISHED

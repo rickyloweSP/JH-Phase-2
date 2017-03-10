@@ -17,13 +17,40 @@
 		component.destroy();
     },    
     save : function(component, event, helper) {
-        helper.save(component);
+        //helper.save(component);
+        component.find("edit").get("e.recordSave").fire();
     },
     moveNext : function(component, event, helper) {
-        recordId = 'a0hO00000056ZBbIAM';
-        
-        
-        //window.location.reload(true);
+        var currentPRAItem = component.get("v.PRA");
+        var allPRAItems = component.get("v.PRAList");
+        console.log(allPRAItems);
+        var currentIndex = allPRAItems.indexOf(currentPRAItem);
+        console.log('Current Index '  + currentIndex);
+        var nextIndex = currentIndex + 1;
+        console.log('Next Index '  + nextIndex);
+        if(nextIndex===allPRAItems.length){
+            //component.destroy();
+			//helper.showEndOfListToast;
+			alert('This is the last record');
+        }
+        else
+        	component.set("v.PRA",allPRAItems[nextIndex]);
+    },
+    movePrevious : function(component, event, helper) {
+        var currentPRAItem = component.get("v.PRA");
+        var allPRAItems = component.get("v.PRAList");
+        console.log(allPRAItems);
+        var currentIndex = allPRAItems.indexOf(currentPRAItem);
+         console.log('Current Index '  + currentIndex);
+        var previousIndex = currentIndex-1;
+         console.log('Previous Index '  + previousIndex);
+        if(currentIndex===0){
+            //component.destroy();
+			//helper.showEndOfListToast;
+			alert('This is the first record');
+        }
+        else
+        	component.set("v.PRA",allPRAItems[previousIndex]);
     },
     overrideHeaderStyle : function(component, event, helper){
     	component.set("v.cssStyle", ".forceStyle .viewport.oneHeader.desktop {z-index:0} .forceStyle.desktop .viewport{overflow:hidden}");

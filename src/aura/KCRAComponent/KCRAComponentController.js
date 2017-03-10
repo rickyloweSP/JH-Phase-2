@@ -6,7 +6,7 @@
    },
     doSave : function(cmp, event, helper) {      
         var updatedItems = cmp.get('v.updatedKCRAItems');
-        //var updatedItems = cmp.get('v.KCRAItems'); //<---- RL: would update all of the KCRA items not just the ones that had changed
+        //var updatedItems = cmp.get('v.KCRAItems'); <---- RL: would update all of the KCRA items not just the ones that had changed
         var OpportunityId = cmp.get("v.recordId");
         
         console.log('Updated Items SAVE 1==========' + 'OppId ' + OpportunityId + '----' + updatedItems);
@@ -42,16 +42,9 @@
         $A.enqueueAction(action);		
 	},
     doChangeKCRA : function(cmp, event, helper) {
-        
-        
-        
         var a = event.getSource();
         var items = cmp.get('v.KCRAItems');
         var updatedItems = cmp.get('v.updatedKCRAItems');
-
-        
-        console.log('Updated Items 1==========' + updatedItems);
-        
         if (!updatedItems) updatedItems = [];
         var xid = a.get("v.text");
         var selectedYesNo = a.get("v.labelClass");
@@ -92,9 +85,6 @@
         if (updatedItem != null && updatedItem != undefined) {
         	updatedItems.push(updatedItem);
         }
-        
-        console.log('Updated Items 2==========' + updatedItems);
-        
         cmp.set('v.isDirty', true);
         cmp.set('v.updatedKCRAItems', updatedItems);
         

@@ -1,0 +1,723 @@
+{
+    "constructors": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 9,
+                "line": 9
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "Email_Alert_Class",
+            "parameters": [],
+            "references": [],
+            "type": null
+        }
+    ],
+    "externalReferences": [],
+    "id": "01pO00000003HJIIA2",
+    "innerClasses": [
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [],
+            "key": null,
+            "methods": [],
+            "name": "EmailMessage",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 17,
+                        "line": 28
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "templateDevName",
+                    "references": [],
+                    "type": "String"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 18,
+                        "line": 29
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "sendToPreContractGroup",
+                    "references": [],
+                    "type": "Boolean"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 18,
+                        "line": 30
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "sendToCentralEmailAddress",
+                    "references": [],
+                    "type": "Boolean"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 13,
+                        "line": 31
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "OppID",
+                    "references": [],
+                    "type": "Id"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 18,
+                        "line": 32
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "sendToPDM",
+                    "references": [],
+                    "type": "Boolean"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 18,
+                        "line": 33
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "sendToBDM",
+                    "references": [],
+                    "type": "Boolean"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 18,
+                        "line": 34
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "sendToAllApprovers",
+                    "references": [],
+                    "type": "Boolean"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 13,
+                        "line": 35
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "currentApprover",
+                    "references": [],
+                    "type": "Id"
+                }
+            ],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 15,
+                    "line": 27
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "EmailMessage",
+                "references": [],
+                "type": "EmailMessage"
+            },
+            "variables": []
+        }
+    ],
+    "interfaces": [],
+    "key": "01pO00000003HJIIA2",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 14,
+                "line": 14
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "registerNewEmail",
+            "parameters": [
+                {
+                    "name": "templateDevName",
+                    "type": "String"
+                },
+                {
+                    "name": "sendToPreContractGroup",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "sendToCentralEmailAddress",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "OppID",
+                    "type": "Id"
+                },
+                {
+                    "name": "sendToPDM",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "sendToBDM",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "sendToAllApprovers",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "currentApprover",
+                    "type": "Id"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 14,
+                "line": 38
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "sendEmails",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 44,
+                "line": 120
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "getOppTeamMembers",
+            "parameters": [
+                {
+                    "name": "OppIds",
+                    "type": "Set"
+                }
+            ],
+            "references": [],
+            "returnType": "Map",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 157
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "getTemplateIDs",
+            "parameters": [
+                {
+                    "name": "EmailTemplateDevNames",
+                    "type": "Set"
+                }
+            ],
+            "references": [],
+            "returnType": "Map",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 167
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "getPreContractGroupMembers",
+            "parameters": [],
+            "references": [],
+            "returnType": "Set",
+            "type": null
+        }
+    ],
+    "name": "Email_Alert_Class",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 3
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "toAddresses",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 4
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "CentralEmailAddress",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 40,
+                "line": 5
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "messages",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 28,
+                "line": 6
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "EmailMessages",
+            "references": [],
+            "type": "LIST"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 27,
+            "line": 1
+        },
+        "modifiers": [
+            "public",
+            "with sharing"
+        ],
+        "name": "Email_Alert_Class",
+        "references": [],
+        "type": "Email_Alert_Class"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 38,
+                "line": 14
+            },
+            "modifiers": [],
+            "name": "templateDevName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 63,
+                "line": 14
+            },
+            "modifiers": [],
+            "name": "sendToPreContractGroup",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 95,
+                "line": 14
+            },
+            "modifiers": [],
+            "name": "sendToCentralEmailAddress",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 125,
+                "line": 14
+            },
+            "modifiers": [],
+            "name": "OppID",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 140,
+                "line": 14
+            },
+            "modifiers": [],
+            "name": "sendToPDM",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 159,
+                "line": 14
+            },
+            "modifiers": [],
+            "name": "sendToBDM",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 178,
+                "line": 14
+            },
+            "modifiers": [],
+            "name": "sendToAllApprovers",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 201,
+                "line": 14
+            },
+            "modifiers": [],
+            "name": "currentApprover",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 15
+            },
+            "modifiers": [],
+            "name": "EM",
+            "references": [],
+            "type": "EmailMessage"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 11,
+                "line": 39
+            },
+            "modifiers": [],
+            "name": "OppIds",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 15,
+                "line": 40
+            },
+            "modifiers": [],
+            "name": "EmailTemplateDevNames",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 42
+            },
+            "modifiers": [],
+            "name": "EM",
+            "references": [],
+            "type": "EmailMessage"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 47
+            },
+            "modifiers": [],
+            "name": "EmailTemplatesDevNameToID",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 15,
+                "line": 48
+            },
+            "modifiers": [],
+            "name": "PreContract",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 49
+            },
+            "modifiers": [],
+            "name": "MapOppToOppTeamMemberGroupedByRole",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 52
+            },
+            "modifiers": [],
+            "name": "EM",
+            "references": [],
+            "type": "EmailMessage"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 33,
+                "line": 53
+            },
+            "modifiers": [],
+            "name": "message",
+            "references": [],
+            "type": "SingleEmailMessage"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 54
+            },
+            "modifiers": [],
+            "name": "toAddresses",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 29,
+                "line": 67
+            },
+            "modifiers": [],
+            "name": "groupedByRole",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 33,
+                "line": 114
+            },
+            "modifiers": [],
+            "name": "SendResult",
+            "references": [],
+            "type": "SendEmailResult"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 70,
+                "line": 120
+            },
+            "modifiers": [],
+            "name": "OppIds",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 121
+            },
+            "modifiers": [],
+            "name": "MapOppToOppTeamMemberGroupedByRole",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 29,
+                "line": 123
+            },
+            "modifiers": [],
+            "name": "OTM",
+            "references": [],
+            "type": "OpportunityTeamMember"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 124
+            },
+            "modifiers": [],
+            "name": "UserIds",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 29,
+                "line": 125
+            },
+            "modifiers": [],
+            "name": "groupedByRole",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 138
+            },
+            "modifiers": [],
+            "name": "UserIdsNew",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 30,
+                "line": 145
+            },
+            "modifiers": [],
+            "name": "groupedByRoleNew",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 146
+            },
+            "modifiers": [],
+            "name": "UserIdsNew2",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 53,
+                "line": 157
+            },
+            "modifiers": [],
+            "name": "EmailTemplateDevNames",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 158
+            },
+            "modifiers": [],
+            "name": "EmailTemplatesDevNameToID",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 160
+            },
+            "modifiers": [],
+            "name": "ET",
+            "references": [],
+            "type": "EmailTemplate"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 15,
+                "line": 168
+            },
+            "modifiers": [],
+            "name": "PreContract",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 15,
+                "line": 169
+            },
+            "modifiers": [],
+            "name": "PreContractUserIDs",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 171
+            },
+            "modifiers": [],
+            "name": "gm",
+            "references": [],
+            "type": "GroupMember"
+        }
+    ]
+}

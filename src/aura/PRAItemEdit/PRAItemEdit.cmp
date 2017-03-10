@@ -14,6 +14,8 @@
 
     <div aria-hidden="false" role="dialog" class="slds-modal slds-fade-in-open slds-modal--large">
        <div class="slds-modal__container">
+           
+           
         <div class="slds-modal__header" >
      		  <button class="slds-button slds-modal__close slds-button--icon-inverse" 
                                       onclick="{!c.closeModal}">
@@ -32,7 +34,7 @@
         </div>
         <div class="slds-modal__footer">
           <div class="slds-x-small-buttons--horizontal">
-              <button class="slds-button slds-button--neutral" onclick="{!c.close}">Previous</button>
+              <button class="slds-button slds-button--neutral" onclick="{!c.movePrevious}">Previous</button>
               <button class="slds-button slds-button--neutral" onclick="{!c.moveNext}">Next</button>
              <button class="slds-button slds-button--neutral" onclick="{!c.close}">Cancel</button>
              <button class="slds-button slds-button--neutral slds-button--brand" onclick="{!c.save}">Save</button>
@@ -40,6 +42,6 @@
         </div>
       </div>
     </div>
-    <div class="slds-backdrop slds-backdrop--open" id="backGroundSection"></div>    
+    <div class="slds-backdrop slds-backdrop--open" id="backGroundSection"></div>  
     
 </aura:component>
