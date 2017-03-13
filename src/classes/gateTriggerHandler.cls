@@ -1,14 +1,26 @@
+/*------------------------------------------------------------------------
+ * Author:        Ricky Lowe
+ * Company:       System Partners
+ * Description:   Apex Trigger Handler for the Gate Object
+ *
+ * Test Class:    
+ * 
+ * History:
+ * 2017-MAR-10    Ricky Lowe     Created
+ * 2017-MAR-13    Ricky Lowe     Commented out so no issues arise while I am away
+ --------------------------------------------------------------------------*/
+
 public with sharing class gateTriggerHandler extends TriggerHandler {
 	public gateTriggerHandler() {
 		
 	}
 
 	public override void afterInsert() {
-		getApprovers();
+		//getApprovers();
     }
 
     public override void afterUpdate() {
-		findNextApprover(trigger.newMap.KeySet());
+		//findNextApprover(trigger.newMap.KeySet());
     }
 
     /**
@@ -30,7 +42,7 @@ public with sharing class gateTriggerHandler extends TriggerHandler {
      *			3) 	Add in logic for gates 4 + 5
      *			4) 	Clean up logic for assigning approvers
      **/
-    private void getApprovers(){
+    /*private void getApprovers(){
 
     	set<ID> Business_Unit_Ids = new set<ID>();
     	Map<ID, Gate__c> gateToOppfields = new Map<ID, Gate__c>(getOppFields(Trigger.newMap.keySet()));
@@ -102,7 +114,7 @@ public with sharing class gateTriggerHandler extends TriggerHandler {
      * @return List<Gate__c>
      * To Do:   1)  
      **/
-    private static List<Gate__c> getOppFields(set<id> gateIds){
+    /*private static List<Gate__c> getOppFields(set<id> gateIds){
     	return [SELECT ID, Opportunity__r.Business_Group__c, Opportunity__r.Regional_Business__c, Opportunity__r.Overall_Prospect_Value__c, Opportunity__r.Number_of_PRA_Critical_Items_Rated_3__c, Opportunity__r.D_I_Involvement__c FROM gate__c WHERE ID IN : gateIds];
     }
 
@@ -112,7 +124,7 @@ public with sharing class gateTriggerHandler extends TriggerHandler {
      * @return Map<ID, List<Assigned_Approver__c>>
      * To Do:   1)  
      **/
-    private static Map<ID, List<Assigned_Approver__c>> getBusinessUnitToApproverMap(set<id> BusinessUnitIDs){
+    /*private static Map<ID, List<Assigned_Approver__c>> getBusinessUnitToApproverMap(set<id> BusinessUnitIDs){
     	Map<ID, List<Assigned_Approver__c>> BusinessUnitToApproverMap = new Map<ID, List<Assigned_Approver__c>>();
 
     	for(Business_Unit_Approvers__c BUA : [SELECT Approval_Level__c,Approver_Role__c,Approver__c,Business_Unit__c,Id,Name FROM Business_Unit_Approvers__c WHERE Business_Unit__c = :BusinessUnitIDs]){
@@ -136,6 +148,6 @@ public with sharing class gateTriggerHandler extends TriggerHandler {
     	}
 
     	return BusinessUnitToApproverMap;
-    }
+    }*/
     
 }

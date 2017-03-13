@@ -4,7 +4,7 @@
             "annotations": [],
             "location": {
                 "column": 9,
-                "line": 2
+                "line": 14
             },
             "modifiers": [
                 "public"
@@ -25,7 +25,7 @@
             "annotations": [],
             "location": {
                 "column": 23,
-                "line": 6
+                "line": 18
             },
             "modifiers": [
                 "public",
@@ -41,7 +41,7 @@
             "annotations": [],
             "location": {
                 "column": 26,
-                "line": 10
+                "line": 22
             },
             "modifiers": [
                 "public",
@@ -56,23 +56,8 @@
         {
             "annotations": [],
             "location": {
-                "column": 18,
-                "line": 33
-            },
-            "modifiers": [
-                "private"
-            ],
-            "name": "getApprovers",
-            "parameters": [],
-            "references": [],
-            "returnType": "void",
-            "type": null
-        },
-        {
-            "annotations": [],
-            "location": {
                 "column": 24,
-                "line": 19
+                "line": 31
             },
             "modifiers": [
                 "static",
@@ -88,48 +73,6 @@
             "references": [],
             "returnType": "void",
             "type": null
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 34,
-                "line": 105
-            },
-            "modifiers": [
-                "private",
-                "static"
-            ],
-            "name": "getOppFields",
-            "parameters": [
-                {
-                    "name": "gateIds",
-                    "type": "Set"
-                }
-            ],
-            "references": [],
-            "returnType": "LIST",
-            "type": null
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 56,
-                "line": 115
-            },
-            "modifiers": [
-                "private",
-                "static"
-            ],
-            "name": "getBusinessUnitToApproverMap",
-            "parameters": [
-                {
-                    "name": "BusinessUnitIDs",
-                    "type": "Set"
-                }
-            ],
-            "references": [],
-            "returnType": "Map",
-            "type": null
         }
     ],
     "name": "gateTriggerHandler",
@@ -140,7 +83,7 @@
         "annotations": [],
         "location": {
             "column": 27,
-            "line": 1
+            "line": 13
         },
         "modifiers": [
             "public",
@@ -154,200 +97,13 @@
         {
             "annotations": [],
             "location": {
-                "column": 14,
-                "line": 35
-            },
-            "modifiers": [],
-            "name": "Business_Unit_Ids",
-            "references": [],
-            "type": "Set"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 23,
-                "line": 36
-            },
-            "modifiers": [],
-            "name": "gateToOppfields",
-            "references": [],
-            "type": "Map"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 18,
-                "line": 38
-            },
-            "modifiers": [],
-            "name": "gate",
-            "references": [],
-            "type": "Gate__c"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 42,
-                "line": 49
-            },
-            "modifiers": [],
-            "name": "BusinessUnitToApproverMap",
-            "references": [],
-            "type": "Map"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 33,
-                "line": 50
-            },
-            "modifiers": [],
-            "name": "Assigned_Approvers_ToInsert",
-            "references": [],
-            "type": "LIST"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 18,
-                "line": 53
-            },
-            "modifiers": [],
-            "name": "gate",
-            "references": [],
-            "type": "Gate__c"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 15,
-                "line": 55
-            },
-            "modifiers": [],
-            "name": "gateWithOppFields",
-            "references": [],
-            "type": "Gate__c"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 10,
-                "line": 56
-            },
-            "modifiers": [],
-            "name": "theBusinessUnit",
-            "references": [],
-            "type": "Id"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 22,
-                "line": 60
-            },
-            "modifiers": [],
-            "name": "maxLevelApprover",
-            "references": [],
-            "type": "Integer"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 39,
-                "line": 77
-            },
-            "modifiers": [],
-            "name": "AA",
-            "references": [],
-            "type": "Assigned_Approver__c"
-        },
-        {
-            "annotations": [],
-            "location": {
                 "column": 49,
-                "line": 19
+                "line": 31
             },
             "modifiers": [],
             "name": "gateIds",
             "references": [],
             "type": "Set"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 55,
-                "line": 105
-            },
-            "modifiers": [],
-            "name": "gateIds",
-            "references": [],
-            "type": "Set"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 93,
-                "line": 115
-            },
-            "modifiers": [],
-            "name": "BusinessUnitIDs",
-            "references": [],
-            "type": "Set"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 42,
-                "line": 116
-            },
-            "modifiers": [],
-            "name": "BusinessUnitToApproverMap",
-            "references": [],
-            "type": "Map"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 37,
-                "line": 118
-            },
-            "modifiers": [],
-            "name": "BUA",
-            "references": [],
-            "type": "Business_Unit_Approvers__c"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 28,
-                "line": 121
-            },
-            "modifiers": [],
-            "name": "AA",
-            "references": [],
-            "type": "Assigned_Approver__c"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 35,
-                "line": 128
-            },
-            "modifiers": [],
-            "name": "AAlist",
-            "references": [],
-            "type": "LIST"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 35,
-                "line": 132
-            },
-            "modifiers": [],
-            "name": "AAlistNew",
-            "references": [],
-            "type": "LIST"
         }
     ]
 }

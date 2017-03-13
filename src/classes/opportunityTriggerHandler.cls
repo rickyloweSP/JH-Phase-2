@@ -1,3 +1,15 @@
+/*------------------------------------------------------------------------
+ * Authors:       Alex Odago, Ricky Lowe
+ * Company:       System Partners
+ * Description:   Apex Trigger Handler for Opportunity object
+ *
+ * Test Class:    
+ * 
+ * History:
+ * 2017-MAR-03    Alex Odago     Created
+ * 2017-MAR-10    Ricky Lowe     Added logic for Prospect Lifecycle and Approval
+ * 2017-MAR-13    Ricky Lowe     Commented out logic for Prospect Lifecycle and Approval so no issues arise while I am away
+ --------------------------------------------------------------------------*/
 public class opportunityTriggerHandler extends TriggerHandler{
     public static Boolean runOnce = true;
     public static final String KCRATemplateRecordTypeID   = Key_Commercial_Risks_Approvals__c.sObjectType.getDescribe().getRecordTypeInfosByName().get('KCRA Template').getRecordTypeId();
@@ -16,11 +28,11 @@ public class opportunityTriggerHandler extends TriggerHandler{
 
 
     public override void beforeUpdate() {
-        determineGate();
+        //determineGate();
     }   
 
     public override void AfterUpdate(){
-        ApprovalProcessOrchestrator();
+        //ApprovalProcessOrchestrator();
     }
 
 
@@ -97,7 +109,7 @@ public class opportunityTriggerHandler extends TriggerHandler{
      *          3)  X Set Gate Status properly for gates 4 + 5
      *          4)  Error handling
      **/
-    private void determineGate(){
+    /*private void determineGate(){
         for(Opportunity opp: (List<Opportunity>) Trigger.new){
             Opportunity oldOpp = (Opportunity) Trigger.oldMap.get(opp.ID);
             
@@ -182,7 +194,7 @@ public class opportunityTriggerHandler extends TriggerHandler{
      * @description Controls the approval process temporarily while we use field changes instead of the button component
      * @return void
      **/
-    private void ApprovalProcessOrchestrator(){
+    /*private void ApprovalProcessOrchestrator(){
         list<gate__c> gatesToUpsert = new list<gate__c>();
         set<id> OppsToStartApprovalProcess = new set<id>();
 
@@ -220,9 +232,6 @@ public class opportunityTriggerHandler extends TriggerHandler{
                     OppsToStartApprovalProcess.add(opp.ID);
                 }
             }
-            /*CRA_Gate_Status__c
-            Gate_Status__c
-            TSF_Gate_Status__c*/
         }
 
         for(Opportunity Opp: [SELECT ID,stageName, Gate_Status__c,CRA_Gate_Status__c,TSF_Gate_Status__c, (SELECT ID, Gate_Number__c, Gate_Type__c FROM Gates__r WHERE status__c = 'Not Started' ORDER BY CreatedDate desc) FROM Opportunity WHERE ID IN : OppsToStartApprovalProcess]){
@@ -278,6 +287,7 @@ public class opportunityTriggerHandler extends TriggerHandler{
         else if(stage == 'Gate 5') return '5';
         else return '';
     }
+    */
 
 
 }
