@@ -63,6 +63,47 @@
             }
         });
         $A.enqueueAction(action); 
-    }
+    },
     
+    updateOpportunity : function(component){
+        console.log('2..');
+        var opp = component.get("v.opp");
+    	var action = component.get("c.updateOpportunity");
+        action.setParams({ 
+            "opp": opp
+        });
+        action.setCallback(this, function(response) {  
+            var state = response.getState();
+            if (state == "SUCCESS") {
+                var returnVal =response.getReturnValue(); 
+                console.log('update opp successfully');
+            }
+            else if (state == "ERROR") {
+                var errors = response.getError();                
+                alert('Error : ' + JSON.stringify(errors));
+            }
+        });
+        $A.enqueueAction(action);
+        this.getRevList(component);
+	},
+    
+    updateRevList: function(component){
+    	var revList = component.get("v.RevList");
+    	var action = component.get("c.updateRevList");
+        action.setParams({ 
+            "revList": revList
+        });
+        action.setCallback(this, function(response) {  
+            var state = response.getState();
+            if (state == "SUCCESS") {
+                var returnVal =response.getReturnValue(); 
+            }
+            else if (state == "ERROR") {
+                var errors = response.getError();                
+                alert('Error : ' + JSON.stringify(errors));
+            }
+        });
+        $A.enqueueAction(action);
+        this.getRevList(component);
+	}
 })

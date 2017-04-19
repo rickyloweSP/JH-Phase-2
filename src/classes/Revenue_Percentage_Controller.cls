@@ -17,4 +17,16 @@ public with sharing class Revenue_Percentage_Controller {
 	    											where id=:opportunityId limit 1]; 
     } 
     
+    @AuraEnabled
+	public static Opportunity updateOpportunity(Opportunity opp) {
+        upsert opp;
+        return opp;
+	}
+    
+     @AuraEnabled
+    public static List<Percentage_Revenue__c> updateRevList(List<Percentage_Revenue__c> revList){
+    	update revList;
+    	return revList;
+    }
+    
 }

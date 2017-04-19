@@ -105,6 +105,7 @@
                 </tr>
               </thead>
               <tbody>
+                <aura:if isTrue="{!or(v.PRA.Help_Text_0A__c!='',v.PRA.Help_Text_1A__c!='',v.PRA.Help_Text_2A__c!='',v.PRA.Help_Text_3A__c!='')}">
                 <tr>
                   <td class="slds-cell-wrap" width="25%">
                     <div>A: {!v.PRA.Help_Text_0A__c}</div>
@@ -119,6 +120,8 @@
                     <div>A: {!v.PRA.Help_Text_3A__c}</div>
                   </td>
                 </tr>
+                </aura:if>
+                <aura:if isTrue="{!or(and(v.PRA.Help_Text_0B__c!='',v.PRA.Help_Text_0B__c!=null),and(v.PRA.Help_Text_1B__c!='',v.PRA.Help_Text_1B__c!=null),and(v.PRA.Help_Text_2B__c!='',v.PRA.Help_Text_2B__c!=null),and(v.PRA.Help_Text_3B__c!='',v.PRA.Help_Text_3B__c!=null))}">
                 <tr>
                   <td>
                     <div>B: {!v.PRA.Help_Text_0B__c}</div>
@@ -133,6 +136,8 @@
                     <div>B: {!v.PRA.Help_Text_3B__c}</div>
                   </td>
                 </tr>
+                </aura:if>
+                <aura:if isTrue="{!or(and(v.PRA.Help_Text_0C__c!='',v.PRA.Help_Text_0C__c!=null),and(v.PRA.Help_Text_1C__c!='',v.PRA.Help_Text_1C__c!=null),and(v.PRA.Help_Text_2C__c!='',v.PRA.Help_Text_2C__c!=null),and(v.PRA.Help_Text_3C__c!='',v.PRA.Help_Text_3C__c!=null))}">
                 <tr>
                   <td>
                     <div>C: {!v.PRA.Help_Text_0C__c}</div>
@@ -147,6 +152,8 @@
                     <div>C: {!v.PRA.Help_Text_3C__c}</div>
                   </td>
                 </tr>
+                </aura:if> 
+                <aura:if isTrue="{!or(and(v.PRA.Help_Text_0D__c!='',v.PRA.Help_Text_0D__c!=null),and(v.PRA.Help_Text_1D__c!='',v.PRA.Help_Text_1D__c!=null),and(v.PRA.Help_Text_2D__c!='',v.PRA.Help_Text_2D__c!=null),and(v.PRA.Help_Text_3D__c!='',v.PRA.Help_Text_3D__c!=null))}">
                 <tr>
                   <td>
                     <div>D: {!v.PRA.Help_Text_0D__c}</div>
@@ -161,6 +168,8 @@
                     <div>D: {!v.PRA.Help_Text_3D__c}</div>
                   </td>
                 </tr>
+                </aura:if> 
+                <aura:if isTrue="{!or(and(v.PRA.Help_Text_0E__c!='',v.PRA.Help_Text_0E__c!=null),and(v.PRA.Help_Text_1E__c!='',v.PRA.Help_Text_1E__c!=null),and(v.PRA.Help_Text_2E__c!='',v.PRA.Help_Text_2E__c!=null),and(v.PRA.Help_Text_3E__c!='',v.PRA.Help_Text_3E__c!=null))}">
                 <tr>
                   <td>
                     <div>E: {!v.PRA.Help_Text_0E__c}</div>
@@ -175,6 +184,8 @@
                     <div>E: {!v.PRA.Help_Text_3E__c}</div>
                   </td>
                 </tr>
+                </aura:if>  
+                <aura:if isTrue="{!or(and(v.PRA.Help_Text_0F__c!='',v.PRA.Help_Text_0F__c!=null),and(v.PRA.Help_Text_1F__c!='',v.PRA.Help_Text_1F__c!=null),and(v.PRA.Help_Text_2F__c!='',v.PRA.Help_Text_2F__c!=null),and(v.PRA.Help_Text_3F__c!='',v.PRA.Help_Text_3F__c!=null))}">
                 <tr>
                   <td>
                     <div>F: {!v.PRA.Help_Text_0F__c}</div>
@@ -189,6 +200,8 @@
                     <div>F: {!v.PRA.Help_Text_3F__c}</div>
                   </td>
                 </tr>
+                </aura:if>  
+                <aura:if isTrue="{!or(and(v.PRA.Help_Text_0G__c!='',v.PRA.Help_Text_0G__c!=null),and(v.PRA.Help_Text_1G__c!='',v.PRA.Help_Text_1G__c!=null),and(v.PRA.Help_Text_2G__c!='',v.PRA.Help_Text_2G__c!=null),and(v.PRA.Help_Text_3G__c!='',v.PRA.Help_Text_3G__c!=null))}">
                 <tr>
                   <td>
                     <div>G: {!v.PRA.Help_Text_0G__c}</div>
@@ -203,6 +216,8 @@
                     <div>G: {!v.PRA.Help_Text_3G__c}</div>
                   </td>
                 </tr>
+              </aura:if>
+              <aura:if isTrue="{!or(and(v.PRA.Help_Text_0H__c!='',v.PRA.Help_Text_0H__c!=null),and(v.PRA.Help_Text_1H__c!='',v.PRA.Help_Text_1H__c!=null),and(v.PRA.Help_Text_2H__c!='',v.PRA.Help_Text_2H__c!=null),and(v.PRA.Help_Text_3H__c!='',v.PRA.Help_Text_3H__c!=null))}">
                 <tr>
                   <td>
                     <div>H: {!v.PRA.Help_Text_0H__c}</div>
@@ -217,6 +232,8 @@
                     <div>H: {!v.PRA.Help_Text_3H__c}</div>
                   </td>
                 </tr>
+              </aura:if>
+              <aura:if isTrue="{!or(and(v.PRA.Help_Text_0I__c!='',v.PRA.Help_Text_0I__c!=null),and(v.PRA.Help_Text_1I__c!='',v.PRA.Help_Text_1I__c!=null),and(v.PRA.Help_Text_2I__c!='',v.PRA.Help_Text_2I__c!=null),and(v.PRA.Help_Text_3I__c!='',v.PRA.Help_Text_3I__c!=null))}">
                 <tr>
                   <td>
                     <div>I: {!v.PRA.Help_Text_0I__c}</div>
@@ -231,6 +248,8 @@
                     <div>I: {!v.PRA.Help_Text_3I__c}</div>
                   </td>
                 </tr>
+              </aura:if>
+                <aura:if isTrue="{!or(and(v.PRA.Help_Text_0J__c!='',v.PRA.Help_Text_0J__c!=null),and(v.PRA.Help_Text_1J__c!='',v.PRA.Help_Text_1J__c!=null),and(v.PRA.Help_Text_2J__c!='',v.PRA.Help_Text_2J__c!=null),and(v.PRA.Help_Text_3J__c!='',v.PRA.Help_Text_3J__c!=null))}">
                 <tr>
                   <td>
                     <div>J: {!v.PRA.Help_Text_0J__c}</div>
@@ -245,6 +264,8 @@
                     <div>J: {!v.PRA.Help_Text_3J__c}</div>
                   </td>
                 </tr>
+              </aura:if>
+              <aura:if isTrue="{!or(and(v.PRA.Help_Text_0K__c!='',v.PRA.Help_Text_0K__c!=null),and(v.PRA.Help_Text_1K__c!='',v.PRA.Help_Text_1K__c!=null),and(v.PRA.Help_Text_2K__c!='',v.PRA.Help_Text_2K__c!=null),and(v.PRA.Help_Text_3K__c!='',v.PRA.Help_Text_3K__c!=null))}">
                 <tr>
                   <td>
                     <div>K: {!v.PRA.Help_Text_0K__c}</div>
@@ -259,6 +280,8 @@
                     <div>K: {!v.PRA.Help_Text_3K__c}</div>
                   </td>
                 </tr>
+              </aura:if>
+              <aura:if isTrue="{!or(and(v.PRA.Help_Text_0L__c!='',v.PRA.Help_Text_0L__c!=null),and(v.PRA.Help_Text_1L__c!='',v.PRA.Help_Text_1L__c!=null),and(v.PRA.Help_Text_2L__c!='',v.PRA.Help_Text_2L__c!=null),and(v.PRA.Help_Text_3L__c!='',v.PRA.Help_Text_3L__c!=null))}">
                 <tr>
                   <td>
                     <div>L: {!v.PRA.Help_Text_0L__c}</div>
@@ -273,6 +296,8 @@
                     <div>L: {!v.PRA.Help_Text_3L__c}</div>
                   </td>
                 </tr>
+              </aura:if>
+              <aura:if isTrue="{!or(and(v.PRA.Help_Text_0M__c!='',v.PRA.Help_Text_0M__c!=null),and(v.PRA.Help_Text_1M__c!='',v.PRA.Help_Text_1M__c!=null),and(v.PRA.Help_Text_2M__c!='',v.PRA.Help_Text_2M__c!=null),and(v.PRA.Help_Text_3M__c!='',v.PRA.Help_Text_3M__c!=null))}">
                 <tr>
                   <td>
                     <div>M: {!v.PRA.Help_Text_0M__c}</div>
@@ -287,6 +312,8 @@
                     <div>M: {!v.PRA.Help_Text_3M__c}</div>
                   </td>
                 </tr>
+              </aura:if>
+              <aura:if isTrue="{!or(and(v.PRA.Help_Text_0N__c!='',v.PRA.Help_Text_0N__c!=null),and(v.PRA.Help_Text_1N__c!='',v.PRA.Help_Text_1N__c!=null),and(v.PRA.Help_Text_2N__c!='',v.PRA.Help_Text_2N__c!=null),and(v.PRA.Help_Text_3N__c!='',v.PRA.Help_Text_3N__c!=null))}">
                 <tr>
                   <td>
                     <div>N: {!v.PRA.Help_Text_0N__c}</div>
@@ -301,6 +328,8 @@
                     <div>N: {!v.PRA.Help_Text_3N__c}</div>
                   </td>
                 </tr>
+              </aura:if>
+              <aura:if isTrue="{!or(and(v.PRA.Help_Text_0O__c!='',v.PRA.Help_Text_0O__c!=null),and(v.PRA.Help_Text_1O__c!='',v.PRA.Help_Text_1O__c!=null),and(v.PRA.Help_Text_2O__c!='',v.PRA.Help_Text_2O__c!=null),and(v.PRA.Help_Text_3O__c!='',v.PRA.Help_Text_3O__c!=null))}">
                 <tr>
                   <td>
                     <div>O: {!v.PRA.Help_Text_0O__c}</div>
@@ -315,6 +344,7 @@
                     <div>O: {!v.PRA.Help_Text_3O__c}</div>
                   </td>
                 </tr>
+              </aura:if>
               </tbody>
             </table>
            </div>
@@ -329,15 +359,15 @@
             <div class="slds-grid slds-m-vertical--x-small">           
                 
                 <div class="slds-size--2-of-2">
-                    <ui:outputText class="uiLabel-left form-element__label uiLabel" value="Mitigation Advice "/><br/>
+                    <ui:outputText class="uiLabel-left fandm-element__label uiLabel" value="Mitigation Advice "/><br/>
                     <ui:outputTextArea aura:id="outputMitigationAdvice" value="{!v.PRA.Mitigation_Advice__c}" class="textarea" />
                 </div>
         	</div>            
         </div>
         <div class="slds-modal__footer">
-          <div class="slds-x-small-buttons--horizontal">
-              <button class="slds-button slds-button--neutral" onclick="{!c.movePrevious}">Save and Previous</button>
-              <button class="slds-button slds-button--neutral" onclick="{!c.moveNext}">Save and Next</button>
+          <div class="slds-x-small-buttons--handizontal">
+              <button class="slds-button slds-button--neutral" onclick="{!c.movePrevious}">Previous</button>
+              <button class="slds-button slds-button--neutral" onclick="{!c.moveNext}">Next</button>
              <button class="slds-button slds-button--neutral" onclick="{!c.close}">Close</button>
              <button class="slds-button slds-button--neutral slds-button--brand" onclick="{!c.save}">Save and Close</button>
           </div>

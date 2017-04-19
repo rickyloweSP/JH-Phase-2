@@ -29,6 +29,7 @@
 
   <aura:if isTrue="{!v.Opp.Is_Gate_1_To_3__c}">
     <div style="display:block; width:100%; border-style: solid; border-radius: 10px; border-color: #EE3124; height: 110px;">
+      <div><br/></div>
       <div style="width:100%;margin-left:30%;float: left;"><b>
           <ui:outputTextArea value="{!v.Opp.StageName}" class="slds-text-heading--medium"></ui:outputTextArea>&nbsp;&nbsp;&nbsp;
           <ui:outputTextArea value="Approval Status :" class="slds-text-heading--medium"></ui:outputTextArea>&nbsp;
@@ -46,14 +47,17 @@
     
 
   <aura:if isTrue="{!v.Opp.Is_Gate_4_To_5__c}">
-    <div style="display:block; width:100%; border-style: solid; border-radius: 10px; border-color: #EE3124; height: 250px;">
+    <div style="display:block; width:100%; border-style: solid; border-radius: 10px; border-color: #EE3124; height: 290px;">
+      <div><br/></div>
       <div style="width:100%;margin-left:30%;float: left;"><b>
           <ui:outputTextArea value="{!v.Opp.StageName}" class="slds-text-heading--medium"></ui:outputTextArea>&nbsp;
           <ui:outputTextArea value="CRA Approval Status :" class="slds-text-heading--medium"></ui:outputTextArea>&nbsp;
           <ui:outputTextArea value="{!v.Opp.CRA_Gate_Status__c}" class="slds-text-heading--medium"></ui:outputTextArea></b><br/>
       </div>
       <div><br/></div>
-      <div class="slds-grid" style="width:100%;margin-left:30%;float: left;">
+
+      <div class="slds-grid slds-m-top--small" style="width:100%;margin-left:30%;float: left;">
+
           <div> Are there any CRA Critical Risks ?&nbsp;&nbsp;</div>
           <div>
            <ui:inputSelect aura:id="CRACriticalRisks" value="{!v.Opp.Are_there_any_critical_risks__c}">
@@ -83,8 +87,9 @@
           <ui:outputTextArea value="TSF Approval Status :" class="slds-text-heading--medium"></ui:outputTextArea>&nbsp;
           <ui:outputTextArea value="{!v.Opp.TSF_Gate_Status__c}" class="slds-text-heading--medium"></ui:outputTextArea></b><br/>
       </div>
-	   <div class="slds-grid" style="width:100%;margin-left:30%;float: left;">
-          
+      
+	   <div class="slds-grid slds-m-top--small" style="width:100%;margin-left:30%;float: left;">
+
           <div> Has the TSF Changed since the last approval ?&nbsp;&nbsp;</div>
           <div>
            <ui:inputSelect aura:id="TSFChanged" value="{!v.Opp.Has_TSF_changed_since_last_approval__c}">

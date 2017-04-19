@@ -14,7 +14,7 @@
                 <!-- placeholder for icon if required -->
                 <div class="slds-media__body  slds-truncate">
                     <span class="slds-text-heading--small slds-truncate">Percentage Revenue Component
-                     <ui:button aura:id="savebtn" label="Save" class="slds-button slds-button--neutral slds-button--brand slds-float--right" disabled="false" press="{!c.doSave}"/>
+                     <ui:button aura:id="savebtn" label="Save Opportunity" class="slds-button slds-button--neutral slds-button--brand slds-float--right" disabled="false" press="{!c.doSave}"/>
                     </span>
                 </div>
             </div>
@@ -55,6 +55,7 @@
         <div>
             <h3>total</h3>
         	<h3>{!v.total}</h3>
+            <ui:button aura:id="saveRevbtn" label="Save Revenue" class="slds-button slds-button--neutral slds-button--brand slds-float--right" disabled="false" press="{!c.doSaveRev}"/>
         </div>
         
         <div aura:id="body"> <!-- dynamic component -->
