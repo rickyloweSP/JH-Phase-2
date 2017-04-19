@@ -61,31 +61,6 @@ public with sharing class Email_Alert_Class {
 	public void setCurrentEmailField_sendToAllApprovers(boolean sendToAllApprovers){
 		//EM.sendToAllApprovers = sendToAllApprovers;
 	}
-	
-
-
-	/*public void registerNewEmail(string templateDevName, boolean sendToPreContractGroup, boolean sendToCentralEmailAddress, ID OppID, boolean sendToPDM, boolean sendToBDM, boolean sendToAllApprovers, ID specificUserRecipient, ID objectForTemplateID){
-		EM = new EmailMessage();
-		EM.templateDevName = templateDevName;
-		EM.sendToPreContractGroup = sendToPreContractGroup;
-		EM.sendToCentralEmailAddress = sendToCentralEmailAddress;
-		EM.OppID = OppID;
-		EM.sendToPDM = sendToPDM;
-		EM.sendToBDM = sendToBDM;
-		EM.sendToAllApprovers = sendToAllApprovers;
-		EM.specificUserRecipient = specificUserRecipient;
-		EM.objectForTemplateID = objectForTemplateID;
-		EmailMessages.add(EM);
-		
-		//add to the OppID Set + Email Template dev Set for querying the Opp Team members and Email Template IDs
-		if(EM.OppID != null){
-			OppIds.add(EM.OppID);
-		}
-
-		if(EM.templateDevName != null){
-			EmailTemplateDevNames.add(EM.templateDevName);
-		}
-	}*/
 
 	public class EmailMessage{
 		public string templateDevName;
@@ -102,7 +77,7 @@ public with sharing class Email_Alert_Class {
 
 	public void sendEmails(){
 		//if there are any messages to send
-		if(EmailMessages != null && EmailMessages.size() > 0){
+		if(EmailMessages != null && EmailMessages.size() > 0 && Constants.Approvers.Turn_Off_Emails__c != true){
 			Debug_Log_Service debug = new Debug_Log_Service('Send Email');
 			try{
 				getTemplateIDs(EmailTemplateDevNames);												//Get Template IDs

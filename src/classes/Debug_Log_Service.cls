@@ -19,7 +19,7 @@ public class Debug_Log_Service
 			log.Status__c = 'Success';
 		}
 
-		if (!test.IsRunningTest()){
+		if(doesLogIncludeErrors() == false || Constants.Approvers.Enable_Detailed_Logging__c){
 			insert log;
 		}
 	}

@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"Oppo",
+				"opportunityService\t[Custom Apex Class]"
+			],
+			[
+				"p",
+				"Proxy_Approver__c"
+			],
+			[
+				"fi",
+				"finishLogging"
+			],
+			[
+				"Debu",
+				"DebugToDelete"
+			],
+			[
 				"for",
 				"for\tTraditional FOR loop"
 			],
@@ -156,10 +172,56 @@
 	"buffers":
 	[
 		{
-			"file": "src/classes/OpportunityHelper.cls",
+			"file": "src/classes/OpportunityTriggerHandler.cls",
 			"settings":
 			{
-				"buffer_size": 11562,
+				"buffer_size": 4413,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "apex-scripts/CreateProspect.cls",
+			"settings":
+			{
+				"buffer_size": 616,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/classes/OpportunityService.cls",
+			"settings":
+			{
+				"buffer_size": 35951,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/classes/Email_Reminder_Batch.cls",
+			"settings":
+			{
+				"buffer_size": 1150,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/classes/Email_Alert_Class.cls",
+			"settings":
+			{
+				"buffer_size": 8406,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "public with sharing class Util {\n\t/**\n     * @description Truncates a string to the required length. Used for shortening text to the field length\n     * @return sting - the truncated sting \n     **/\n    public static string ConcatanateStringLength(string stringIn, integer length){\n        if(stringIn != null && stringIn.length() > length){\n            return stringIn.left(length);\n        }\n        else{\n            return stringIn;\n        }\n    }\n\n    /**\n     * @description Returns a random string\n     * @return the random string \n     **/\n    public static string returnRandomString(integer length){\n        return ConcatanateStringLength(String.ValueOf(Math.random()).subString(2), length);\n    }\n\n    /**\n     * @description increments a number. Treat null as a 0\n     * @return the random string \n     **/\n    public static integer incrementNumber(integer numberToIncrement){\n        integer newNumber;\n        if(numberToIncrement == null){\n            newNumber = 1;\n            return newNumber;\n        }\n        else{\n            newNumber = numberToIncrement + 1;\n            return newNumber;\n        }\n    }\n\n\n    \n}",
+			"file": "src/classes/Util.cls",
+			"file_size": 1130,
+			"file_write_time": 131370292740000000,
+			"settings":
+			{
+				"buffer_size": 1137,
 				"line_ending": "Unix"
 			}
 		}
@@ -207,49 +269,62 @@
 	],
 	"file_history":
 	[
-		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/Opportunity_Helper.cls",
-		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/OpportunityService.cls",
-		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/OpportunityTriggerHandler.cls",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/apex-scripts/UnscheduleJobs.cls",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/Email_Reminder_Schedulable.cls",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/apex-scripts/ScheduleEmailReminder.cls",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/apex-scripts/RunEmailReminderBatch.cls",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/GateService.cls",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/Assigned_Approver_Service.cls",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/triggers/OpportunityTeamMemberTriggerHandler.trigger",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/Approval_Process_Test.cls",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/GateHelper.cls",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/GateTriggerHandler.cls",
+		"/Users/rickylowe/Dropbox/Code Backups/JH/old gate trigger handler.cls",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/Debug_Log_Service.cls",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/Assigned_Approver_TriggerHandler.cls",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/Assigned_Approver_Helper.cls",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/Approval_VF_Controller.cls",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/triggers/AssignedApproverTrigger.trigger",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/triggers/LessonsLearntReportTrigger.trigger",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/triggers/GateTrigger.trigger",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/OpportunityTriggerHandler.cls",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/Test_Data_Factory.cls",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/apex-scripts/CreateProspect.cls",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/Constants.cls",
+		"/Users/rickylowe/Dropbox/Code Backups/JH/gate reset logic.cls",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/Email_Reminder_Batch.cls",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/Util.cls",
+		"/Users/rickylowe/Dropbox/Code Backups/JH/old Assigned Approver code.cls",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/aura/RevenuePercentageList/RevenuePercentageList.cmp",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/aura/RevenuePercentageList/RevenuePercentageListController.js",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/aura/RevenuePercentageList/RevenuePercentageListHelper.js",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/BusinessUnitService.cls",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/aura/PRAItemEditModal/PRAItemEditModal.cmp",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/OpportunityService.cls",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/OpportunityHelper.cls",
+		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/Opportunity_Helper.cls",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/ApprovalController.cls",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/Email_Alert_Class.cls",
-		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/GateTriggerHandler.cls",
-		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/Constants.cls",
-		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/Email_Reminder_Batch.cls",
-		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/Assigned_Approver_Helper.cls",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/Revenue_Percentage_Controller.cls",
-		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/aura/PRAItemEditModal/PRAItemEditModal.cmp",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/LessonsLearntTriggerHandler.cls",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/aura/KCRAItem/KCRAItem.cmp",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/aura/PRAItem/PRAItem.cmp",
-		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/aura/RevenuePercentageList/RevenuePercentageList.cmp",
-		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/aura/RevenuePercentageList/RevenuePercentageListController.js",
-		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/apex-scripts/CreateProspect.cls",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/aura/KCRAListComponent/KCRAListComponentController.js",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/aura/KCRAListComponent/KCRAListComponent.cmp",
-		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/aura/RevenuePercentageList/RevenuePercentageListHelper.js",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/aura/KCRAListComponent/KCRAListComponentHelper.js",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/PRAController.cls",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/aura/KCRAItem/KCRAItemController.js",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/aura/KCRAItem/KCRAItemHelper.js",
-		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/BusinessUnitService.cls",
-		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/Assigned_Approver_TriggerHandler.cls",
-		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/GateService.cls",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/components/Approval_Outcome_Notification_VF.component",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/components/Approval_Submission_VF.component",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/components/Decision_Required_VF.component",
-		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/Test_Data_Factory.cls",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/aura/PRAListComponent/PRAListComponentHelper.js",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/aura/PRAListComponent/PRAListComponentController.js",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/aura/PRAListComponent/PRAListComponent.cmp",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/aura/PRAEvent/PRAEvent.evt",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/aura/PRAItemEditModal/PRAItemEditModalController.js",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/apex-scripts/testConcatante.cls",
-		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/Util.cls",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/apex-scripts/DeleteAllRickyTestOpps.cls",
-		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/triggers/GateTrigger.trigger",
-		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/triggers/AssignedApproverTrigger.trigger",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/triggers/gateTrigger.trigger",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/triggers/OpportunityTrigger.trigger",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/aura/Competitor_Analysis_Component/Competitor_Analysis_Component.cmp",
@@ -266,7 +341,6 @@
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/aura/ApprovalControlComponentGate1To3/ApprovalControlComponentGate1To3.css",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/aura/ApprovalControlComponentGate1To3/ApprovalControlComponentGate1To3.cmp-meta.xml",
 		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/aura/Bonding_Security_Component/Bonding_Security_ComponentHelper.js",
-		"/Users/rickylowe/Dropbox/MavensMate Workspace/JH Phase 2/src/classes/Debug_Log_Service.cls",
 		"/Users/rickylowe/Dropbox/Code Backups/JH/old debug class.cls",
 		"/Users/rickylowe/Dropbox (Personal)/MavensMate Workspace/JH Phase 2/src/aura/ApprovalControlComponentGate1To3/ApprovalControlComponentGate1To3Controller.js",
 		"/Users/rickylowe/Dropbox (Personal)/MavensMate Workspace/JH Phase 2/src/classes/GateTriggerHandler.cls",
@@ -322,19 +396,7 @@
 		"/Users/rickylowe/Dropbox (Personal)/MavensMate Workspace/JH Phase 2/src/aura/PRAListComponent/PRAListComponent.cmp",
 		"/Users/rickylowe/Downloads/JH list of Object API names",
 		"/Users/rickylowe/Dropbox (Personal)/MavensMate Workspace/JH Phase 2/apex-scripts/AddManagedApexSharing.cls",
-		"/Users/rickylowe/Dropbox (Personal)/Code Backups/untitled folder/Gate Trigger Handler before clean up.cls",
-		"/Users/rickylowe/Dropbox (Personal)/MavensMate Workspace/JH Phase 2/src/aura/ApprovalControlComponentGate1To3/ApprovalControlComponentGate1To3.cmp-meta.xml",
-		"/Users/rickylowe/Dropbox (Personal)/MavensMate Workspace/JH Phase 2/apex-scripts/testConcatante.cls",
-		"/Users/rickylowe/Dropbox (Personal)/MavensMate Workspace/JH Phase 2/apex-scripts/DeleteAllRickyTestOpps.cls",
-		"/Users/rickylowe/Dropbox (Personal)/MavensMate Workspace/JH Phase 2/debug/logs/2017-03-28 14-40-16.log",
-		"/Users/rickylowe/Dropbox (Personal)/MavensMate Workspace/JH Phase 2/debug/logs/2017-03-28 14-59-58.log",
-		"/Users/rickylowe/Dropbox (Personal)/MavensMate Workspace/JH Phase 2/debug/logs/2017-03-28 14-48-29.log",
-		"/Users/rickylowe/Dropbox (Personal)/MavensMate Workspace/JH Phase 2/debug/logs/2017-03-28 14-46-33.log",
-		"/Users/rickylowe/Dropbox (Personal)/MavensMate Workspace/JH Phase 2/debug/logs/2017-03-28 14-46-38.log",
-		"/Users/rickylowe/Dropbox (Personal)/MavensMate Workspace/JH Phase 2/debug/logs/2017-03-28 14-46-24.log",
-		"/Users/rickylowe/Dropbox (Personal)/MavensMate Workspace/JH Phase 2/debug/logs/2017-03-28 14-48-04.log",
-		"/Users/rickylowe/Dropbox (Personal)/MavensMate Workspace/JH Phase 2/debug/logs/2017-03-28 14-47-38.log",
-		"/Users/rickylowe/Dropbox (Personal)/MavensMate Workspace/JH Phase 2/debug/logs/2017-03-28 14-38-38.log"
+		"/Users/rickylowe/Dropbox (Personal)/Code Backups/untitled folder/Gate Trigger Handler before clean up.cls"
 	],
 	"find":
 	{
@@ -358,6 +420,34 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Trigger.IsUpdate",
+			"Trigger.IsInsert",
+			"(map<Id,Opportunity>) Trigger.OldMap",
+			"(list<Opportunity>) Trigger.New",
+			"gatesToUpsert",
+			"ApprovalProcessOrchestrator",
+			"OppTeamMembers",
+			"findNextApprover",
+			"cloneAndAddApprovers",
+			"addApprovers(",
+			"GateShareList",
+			"Assigned_Approvers_ToInsert",
+			"oldMap",
+			"gateWithOppFields",
+			"Assigned_Approvers_ToInsert",
+			"addPDMandBDM_GateShare",
+			"GateService",
+			"gsProxy",
+			"Assigned_Approvers_ToInsert",
+			"getProfileID",
+			"profileNameToID",
+			"determineGateOneOrThree",
+			"Previous_Gate_Status__c",
+			"determineFirstGate",
+			"determineFirstGateFromNew",
+			"determineGateOneOrThree",
+			"Approvers.",
+			"Approvers",
 			"Opportunity_Helper",
 			"OpportunityService",
 			"specificUserRecipient",
@@ -457,35 +547,7 @@
 			"opportunityTea",
 			"gateNumber",
 			"BusinessUnitToApproverMap",
-			"006O0000008l2gV",
-			"***",
-			"*** TEST ApprovalProcessOrchestrator",
-			"***",
-			"*** TEST 1 oppGate Status",
-			"***",
-			"getOppFields",
-			"***",
-			"stageName = 'new'",
-			"***",
-			"opportunityTrigger on Opportunity trigger event BeforeUpdate",
-			"test",
-			"stageName",
-			"*** TEST 1 opp:",
-			"\\n",
-			"\t",
-			"Submitted For Approval",
-			"Reviewing Approvers",
-			"Assigned_Approvers_ToInsert, gate.ID);",
-			"rejected",
-			"N/A",
-			"||",
-			"approversToInsert",
-			"Current_Approver__c",
-			"targetObjectId",
-			"doChangeKCRA",
-			"Deactivate\t",
-			"Edit | Del | ",
-			"stage"
+			"006O0000008l2gV"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -493,6 +555,17 @@
 		"regex": false,
 		"replace_history":
 		[
+			"isUpdate",
+			"isInsert",
+			"oldMap",
+			"newList",
+			"GateHelper.cloneAndAddApprovers(",
+			"GateHelper.addApprovers(",
+			"GateHelper",
+			"share",
+			"determineFirstGateFromNew",
+			"determineFirstGate",
+			"determineFirstGateFromNew",
 			"OpportunityService",
 			"OpportunityHelper",
 			"Contract_Responsibility__c",
@@ -609,18 +682,7 @@
 			"E",
 			"Event",
 			"Task",
-			"ActivityDate",
-			"theTasks",
-			"oldTask",
-			"T",
-			"newTask",
-			"Task",
-			"Event",
-			"EventHandler",
-			"Sobject",
-			"oldQ",
-			"Q",
-			"Quote"
+			"ActivityDate"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -631,24 +693,170 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/classes/OpportunityHelper.cls",
+					"file": "src/classes/OpportunityTriggerHandler.cls",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11562,
+						"buffer_size": 4413,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								10659,
-								10659
+								1712,
+								1712
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MavensMate/sublime/lang/Apex.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 734.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "apex-scripts/CreateProspect.cls",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 616,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MavensMate/sublime/lang/Apex.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/classes/OpportunityService.cls",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 35951,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								15065,
+								15086
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MavensMate/sublime/lang/Apex.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 7849.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/classes/Email_Reminder_Batch.cls",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1150,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MavensMate/sublime/lang/Apex.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/classes/Email_Alert_Class.cls",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8406,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2208,
+								2208
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MavensMate/sublime/lang/Apex.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 748.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/classes/Util.cls",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1137,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1135,
+								1135
 							]
 						],
 						"settings":
@@ -661,7 +869,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]

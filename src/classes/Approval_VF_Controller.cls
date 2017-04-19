@@ -35,7 +35,7 @@ public with sharing class Approval_VF_Controller {
      **/
 	public list<Assigned_Approver__c> getApproversForCurrentGate(){
 		Assigned_Approver__c AA = getAssignedApprover();
-		return gateService.getApproversForGate(AA.gate__c);
+		return GateHelper.getApproversForGate(AA.gate__c);
 	}
 
 
@@ -68,7 +68,7 @@ public with sharing class Approval_VF_Controller {
 
 		//if the gate exists then return the approvers
 		if(theGate != null){
-			return gateService.getApproversForGate(theGate.ID);
+			return GateHelper.getApproversForGate(theGate.ID);
 		}
 		else{
 			return new list<Assigned_Approver__c>();
