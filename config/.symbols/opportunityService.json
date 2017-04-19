@@ -1,0 +1,577 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01pO00000003HOSIA2",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01pO00000003HOSIA2",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 5
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createKCRARelatedList",
+            "parameters": [
+                {
+                    "name": "newOpportunities",
+                    "type": "LIST"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 30
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "getOppAndTeamMemberApprovers",
+            "parameters": [
+                {
+                    "name": "OppIDs",
+                    "type": "Set"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 47,
+                "line": 44
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "getOppTeamMemberApprovers",
+            "parameters": [
+                {
+                    "name": "OppIDs",
+                    "type": "Set"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 57
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "getOpportunityFields",
+            "parameters": [
+                {
+                    "name": "OppID",
+                    "type": "Id"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 65
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "getOpportunityFields",
+            "parameters": [
+                {
+                    "name": "OppIDs",
+                    "type": "Set"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 76
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "getOpportunitiesAndInitiatedGates",
+            "parameters": [
+                {
+                    "name": "OppsToStartApprovalProcess",
+                    "type": "Set"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 91
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "getOpportunitiesAndDecidedGates",
+            "parameters": [
+                {
+                    "name": "OppToFindDecidedGates",
+                    "type": "Id"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 100
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "getOpportunitiesAndDecidedGates",
+            "parameters": [
+                {
+                    "name": "OppsToFindDecidedGates",
+                    "type": "Set"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 46,
+                "line": 120
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "getTheCurrentApprover",
+            "parameters": [
+                {
+                    "name": "OppToFindCurrentApproverFor",
+                    "type": "Id"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 46,
+                "line": 128
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "getTheCurrentApprover",
+            "parameters": [
+                {
+                    "name": "OppsToFindCurrentApproverFor",
+                    "type": "Set"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 53,
+                "line": 142
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "getOppTeamMembers",
+            "parameters": [
+                {
+                    "name": "OppIds",
+                    "type": "Set"
+                }
+            ],
+            "references": [],
+            "returnType": "Map",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 183
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "getGateNumber",
+            "parameters": [
+                {
+                    "name": "stage",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "String",
+            "type": null
+        }
+    ],
+    "name": "OpportunityService",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 2
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "final"
+            ],
+            "name": "KCRATemplateRecordTypeID",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 3
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "final"
+            ],
+            "name": "KCRARecordTypeID",
+            "references": [],
+            "type": "String"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 27,
+            "line": 1
+        },
+        "modifiers": [
+            "public",
+            "with sharing"
+        ],
+        "name": "OpportunityService",
+        "references": [],
+        "type": "OpportunityService"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 64,
+                "line": 5
+            },
+            "modifiers": [],
+            "name": "newOpportunities",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 49,
+                "line": 6
+            },
+            "modifiers": [],
+            "name": "KCRAItemsToCreate",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 49,
+                "line": 7
+            },
+            "modifiers": [],
+            "name": "KCRATemplateItems",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 10
+            },
+            "modifiers": [],
+            "name": "opp",
+            "references": [],
+            "type": "Opportunity"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 51,
+                "line": 11
+            },
+            "modifiers": [],
+            "name": "KCRATemplateItem",
+            "references": [],
+            "type": "Key_Commercial_Risks_Approvals__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 51,
+                "line": 12
+            },
+            "modifiers": [],
+            "name": "newKCRA",
+            "references": [],
+            "type": "Key_Commercial_Risks_Approvals__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 74,
+                "line": 30
+            },
+            "modifiers": [],
+            "name": "OppIDs",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 81,
+                "line": 44
+            },
+            "modifiers": [],
+            "name": "OppIDs",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 61,
+                "line": 57
+            },
+            "modifiers": [],
+            "name": "OppID",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 66,
+                "line": 65
+            },
+            "modifiers": [],
+            "name": "OppIDs",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 79,
+                "line": 76
+            },
+            "modifiers": [],
+            "name": "OppsToStartApprovalProcess",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 72,
+                "line": 91
+            },
+            "modifiers": [],
+            "name": "OppToFindDecidedGates",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 77,
+                "line": 100
+            },
+            "modifiers": [],
+            "name": "OppsToFindDecidedGates",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 71,
+                "line": 120
+            },
+            "modifiers": [],
+            "name": "OppToFindCurrentApproverFor",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 76,
+                "line": 128
+            },
+            "modifiers": [],
+            "name": "OppsToFindCurrentApproverFor",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 79,
+                "line": 142
+            },
+            "modifiers": [],
+            "name": "OppIds",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 43,
+                "line": 143
+            },
+            "modifiers": [],
+            "name": "MapOppToOppTeamMemberGroupedByRole",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 35,
+                "line": 145
+            },
+            "modifiers": [],
+            "name": "OTM",
+            "references": [],
+            "type": "OpportunityTeamMember"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 146
+            },
+            "modifiers": [],
+            "name": "UserIds",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 38,
+                "line": 147
+            },
+            "modifiers": [],
+            "name": "groupedByRole",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 33,
+                "line": 160
+            },
+            "modifiers": [],
+            "name": "UserIdsNew",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 42,
+                "line": 167
+            },
+            "modifiers": [],
+            "name": "groupedByRoleNew",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 29,
+                "line": 168
+            },
+            "modifiers": [],
+            "name": "UserIdsNew2",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 47,
+                "line": 183
+            },
+            "modifiers": [],
+            "name": "stage",
+            "references": [],
+            "type": "String"
+        }
+    ]
+}

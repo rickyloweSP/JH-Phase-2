@@ -5,12 +5,16 @@
         //helper.getPRAList(component,OpportunityId);
         helper.getPRAList(component);
         component.set("v.currentNumRecordDisplay", component.get("v.defaultNumRecordDisplay"));    // set the currentNumDisplay to the default on init                
-   },   
+    },  
+    refreshList: function(component, event, helper) { 
+        console.log("PRAListController in refreshList");
+        helper.getPRAList(component);               
+    }, 
     newRecord: function(component, event, helper) {
         helper.newRecord(component);
  
         console.log("PRAListController end new record controller");        
-   }, 
+    }, 
     viewToggle: function(component, event, helper) { // toggle view/ hide
        var buttonClicked = event.target.getAttribute('id');
        //console.log(buttonClicked);
@@ -25,9 +29,9 @@
        var viewToggle = component.find('viewToggle');
        //console.log(viewToggle);
        //console.log(viewToggle.length);        
-       
+       var i=0;
        for (i = 0; i < viewToggle.length; i++) {  // toggle for each element contain "viewToggle"
           $A.util.toggleClass(viewToggle[i], "toggle");  
        }       
-   }
+    }
 })

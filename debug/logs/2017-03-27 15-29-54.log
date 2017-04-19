@@ -1,0 +1,575 @@
+39.0 APEX_CODE,FINEST;APEX_PROFILING,FINEST;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+15:29:51.0 (667377)|USER_INFO|[EXTERNAL]|00528000006B07F|dev@systempartners.com.prod.pcphase2|Australian Eastern Standard Time|GMT+11:00
+15:29:51.0 (690155)|EXECUTION_STARTED
+15:29:51.0 (694710)|CODE_UNIT_STARTED|[EXTERNAL]|TRIGGERS
+15:29:51.0 (728663)|CODE_UNIT_STARTED|[EXTERNAL]|01qO00000000SDP|opportunityTrigger on Opportunity trigger event BeforeUpdate for [006O0000008kYYv]
+15:29:51.0 (765743)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+15:29:51.0 (998717)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+15:29:51.0 (1393974)|HEAP_ALLOCATE|[72]|Bytes:3
+15:29:51.0 (1424506)|HEAP_ALLOCATE|[77]|Bytes:152
+15:29:51.0 (1443935)|HEAP_ALLOCATE|[342]|Bytes:408
+15:29:51.0 (1465601)|HEAP_ALLOCATE|[355]|Bytes:408
+15:29:51.0 (1484210)|HEAP_ALLOCATE|[467]|Bytes:48
+15:29:51.0 (1511782)|HEAP_ALLOCATE|[139]|Bytes:6
+15:29:51.0 (1534848)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+15:29:51.0 (1539213)|VARIABLE_SCOPE_BEGIN|[1]|this|opportunityTrigger|true|false
+15:29:51.0 (1559965)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x5ef7c4c7
+15:29:51.0 (1584890)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+15:29:51.0 (1590508)|VARIABLE_SCOPE_BEGIN|[1]|this|opportunityTrigger|true|false
+15:29:51.0 (1598763)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x5ef7c4c7
+15:29:51.0 (1602110)|STATEMENT_EXECUTE|[1]
+15:29:51.0 (1603530)|STATEMENT_EXECUTE|[4]
+15:29:51.0 (6586286)|VARIABLE_SCOPE_BEGIN|[16]|opportunityTriggerHandler.KCRARecordTypeID|String|false|true
+15:29:51.0 (6591884)|VARIABLE_SCOPE_BEGIN|[15]|opportunityTriggerHandler.KCRATemplateRecordTypeID|String|false|true
+15:29:51.0 (6594690)|VARIABLE_SCOPE_BEGIN|[18]|opportunityTriggerHandler.PRARecordTypeID|String|false|true
+15:29:51.0 (6597207)|VARIABLE_SCOPE_BEGIN|[17]|opportunityTriggerHandler.PRATemplateRecordTypeID|String|false|true
+15:29:51.0 (6599525)|VARIABLE_SCOPE_BEGIN|[19]|opportunityTriggerHandler.recursion|Boolean|false|true
+15:29:51.0 (6602023)|VARIABLE_SCOPE_BEGIN|[14]|opportunityTriggerHandler.runOnce|Boolean|false|true
+15:29:52.609 (1609219129)|VARIABLE_SCOPE_BEGIN|[5]|TriggerHandler.bypassedHandlers|Set<String>|true|true
+15:29:52.609 (1609636326)|VARIABLE_SCOPE_BEGIN|[4]|TriggerHandler.loopCountMap|Map<String,TriggerHandler.LoopCount>|true|true
+15:29:52.609 (1609684994)|HEAP_ALLOCATE|[4]|Bytes:21
+15:29:52.609 (1609757314)|METHOD_ENTRY|[13]|01pO0000000371i|opportunityTriggerHandler.opportunityTriggerHandler()
+15:29:52.609 (1609763273)|STATEMENT_EXECUTE|[13]
+15:29:52.609 (1609771009)|STATEMENT_EXECUTE|[13]
+15:29:52.609 (1609772817)|STATEMENT_EXECUTE|[14]
+15:29:52.609 (1609810046)|HEAP_ALLOCATE|[50]|Bytes:5
+15:29:52.609 (1609849383)|HEAP_ALLOCATE|[56]|Bytes:5
+15:29:52.609 (1609860140)|HEAP_ALLOCATE|[64]|Bytes:7
+15:29:52.609 (1609893073)|HEAP_ALLOCATE|[14]|Bytes:5
+15:29:52.609 (1609934368)|VARIABLE_ASSIGNMENT|[14]|opportunityTriggerHandler.runOnce|true
+15:29:52.609 (1609940544)|STATEMENT_EXECUTE|[15]
+15:29:52.609 (1609945755)|HEAP_ALLOCATE|[15]|Bytes:33
+15:29:52.609 (1610462545)|HEAP_ALLOCATE|[15]|Bytes:4
+15:29:52.609 (1610506237)|LIMIT_USAGE|[15]|RECORD_TYPE_DESCRIBES|1|100
+15:29:52.609 (1612432127)|HEAP_ALLOCATE|[15]|Bytes:16
+15:29:52.609 (1612441734)|HEAP_ALLOCATE|[15]|Bytes:13
+15:29:52.609 (1612591587)|HEAP_ALLOCATE|[15]|Bytes:4
+15:29:52.609 (1612607130)|HEAP_ALLOCATE|[15]|Bytes:18
+15:29:52.609 (1612622568)|VARIABLE_ASSIGNMENT|[15]|opportunityTriggerHandler.KCRATemplateRecordTypeID|"012O0000000DCgLIAW"
+15:29:52.609 (1612625698)|STATEMENT_EXECUTE|[16]
+15:29:52.609 (1612676500)|HEAP_ALLOCATE|[16]|Bytes:4
+15:29:52.609 (1612693677)|LIMIT_USAGE|[16]|RECORD_TYPE_DESCRIBES|2|100
+15:29:52.609 (1612708952)|HEAP_ALLOCATE|[16]|Bytes:16
+15:29:52.609 (1612714420)|HEAP_ALLOCATE|[16]|Bytes:4
+15:29:52.609 (1612746300)|HEAP_ALLOCATE|[16]|Bytes:4
+15:29:52.609 (1612756581)|HEAP_ALLOCATE|[16]|Bytes:18
+15:29:52.609 (1612766894)|VARIABLE_ASSIGNMENT|[16]|opportunityTriggerHandler.KCRARecordTypeID|"012O0000000DCgGIAW"
+15:29:52.609 (1612769665)|STATEMENT_EXECUTE|[17]
+15:29:52.609 (1612772621)|HEAP_ALLOCATE|[17]|Bytes:26
+15:29:52.609 (1612910161)|HEAP_ALLOCATE|[17]|Bytes:4
+15:29:52.609 (1612929920)|LIMIT_USAGE|[17]|RECORD_TYPE_DESCRIBES|3|100
+15:29:52.609 (1614057492)|HEAP_ALLOCATE|[17]|Bytes:16
+15:29:52.609 (1614070107)|HEAP_ALLOCATE|[17]|Bytes:12
+15:29:52.609 (1614123196)|HEAP_ALLOCATE|[17]|Bytes:4
+15:29:52.609 (1614137868)|HEAP_ALLOCATE|[17]|Bytes:18
+15:29:52.609 (1614156151)|VARIABLE_ASSIGNMENT|[17]|opportunityTriggerHandler.PRATemplateRecordTypeID|"012O0000000DDVTIA4"
+15:29:52.609 (1614161458)|STATEMENT_EXECUTE|[18]
+15:29:52.609 (1614225363)|HEAP_ALLOCATE|[18]|Bytes:4
+15:29:52.609 (1614249054)|LIMIT_USAGE|[18]|RECORD_TYPE_DESCRIBES|4|100
+15:29:52.609 (1614264204)|HEAP_ALLOCATE|[18]|Bytes:16
+15:29:52.609 (1614269775)|HEAP_ALLOCATE|[18]|Bytes:3
+15:29:52.609 (1614300613)|HEAP_ALLOCATE|[18]|Bytes:4
+15:29:52.609 (1614308114)|HEAP_ALLOCATE|[18]|Bytes:18
+15:29:52.609 (1614318672)|VARIABLE_ASSIGNMENT|[18]|opportunityTriggerHandler.PRARecordTypeID|"012O0000000DDVOIA4"
+15:29:52.609 (1614321291)|STATEMENT_EXECUTE|[19]
+15:29:52.609 (1614327129)|HEAP_ALLOCATE|[19]|Bytes:5
+15:29:52.609 (1614333417)|VARIABLE_ASSIGNMENT|[19]|opportunityTriggerHandler.recursion|false
+15:29:52.609 (1614340887)|METHOD_EXIT|[13]|opportunityTriggerHandler
+15:29:52.609 (1614347969)|HEAP_ALLOCATE|[4]|Bytes:12
+15:29:52.609 (1614360563)|CONSTRUCTOR_ENTRY|[4]|01pO0000000371i|<init>()
+15:29:52.609 (1614380219)|VARIABLE_SCOPE_BEGIN|[20]|this|opportunityTriggerHandler|true|false
+15:29:52.609 (1614619699)|VARIABLE_ASSIGNMENT|[20]|this|{}|0x51ff7210
+15:29:52.609 (1614627914)|STATEMENT_EXECUTE|[13]
+15:29:52.609 (1614640978)|HEAP_ALLOCATE|[20]|Bytes:48
+15:29:52.609 (1614652100)|HEAP_ALLOCATE|[20]|Bytes:69
+15:29:52.609 (1614671262)|METHOD_ENTRY|[1]|01pO00000003AAn|TriggerHandler.TriggerHandler()
+15:29:52.609 (1614676061)|STATEMENT_EXECUTE|[1]
+15:29:52.609 (1614680575)|STATEMENT_EXECUTE|[1]
+15:29:52.609 (1614682298)|STATEMENT_EXECUTE|[16]
+15:29:52.609 (1614683732)|STATEMENT_EXECUTE|[17]
+15:29:52.609 (1614690313)|HEAP_ALLOCATE|[17]|Bytes:4
+15:29:52.609 (1614737514)|VARIABLE_ASSIGNMENT|[17]|TriggerHandler.loopCountMap|{}|0x278ac08
+15:29:52.609 (1614743052)|STATEMENT_EXECUTE|[18]
+15:29:52.609 (1614754576)|HEAP_ALLOCATE|[18]|Bytes:4
+15:29:52.609 (1614821546)|VARIABLE_ASSIGNMENT|[18]|TriggerHandler.bypassedHandlers|[]|0x4619d5a2
+15:29:52.609 (1614825658)|STATEMENT_EXECUTE|[187]
+15:29:52.609 (1614826955)|STATEMENT_EXECUTE|[236]
+15:29:52.609 (1614832619)|METHOD_EXIT|[1]|TriggerHandler
+15:29:52.609 (1614839557)|CONSTRUCTOR_ENTRY|[20]|01pO00000003AAn|<init>()
+15:29:52.609 (1614939843)|VARIABLE_SCOPE_BEGIN|[22]|this|TriggerHandler|true|false
+15:29:52.609 (1614959319)|VARIABLE_ASSIGNMENT|[22]|this|{}|0x51ff7210
+15:29:52.609 (1614963604)|STATEMENT_EXECUTE|[1]
+15:29:52.609 (1614964838)|STATEMENT_EXECUTE|[9]
+15:29:52.609 (1614965989)|STATEMENT_EXECUTE|[13]
+15:29:52.609 (1614973497)|HEAP_ALLOCATE|[23]|Bytes:6
+15:29:52.609 (1614997380)|STATEMENT_EXECUTE|[22]
+15:29:52.609 (1614999297)|STATEMENT_EXECUTE|[23]
+15:29:52.609 (1615017627)|METHOD_ENTRY|[23]|01pO00000003AAn|TriggerHandler.setTriggerContext()
+15:29:52.609 (1615038702)|VARIABLE_SCOPE_BEGIN|[94]|this|TriggerHandler|true|false
+15:29:52.609 (1615059389)|VARIABLE_ASSIGNMENT|[94]|this|{}|0x51ff7210
+15:29:52.609 (1615064873)|STATEMENT_EXECUTE|[94]
+15:29:52.609 (1615066246)|STATEMENT_EXECUTE|[95]
+15:29:52.609 (1615078709)|METHOD_ENTRY|[95]|01pO00000003AAn|TriggerHandler.setTriggerContext(String, Boolean)
+15:29:52.609 (1615091159)|VARIABLE_SCOPE_BEGIN|[99]|this|TriggerHandler|true|false
+15:29:52.609 (1615105066)|VARIABLE_ASSIGNMENT|[99]|this|{}|0x51ff7210
+15:29:52.609 (1615108214)|VARIABLE_SCOPE_BEGIN|[99]|ctx|String|false|false
+15:29:52.609 (1615111987)|VARIABLE_ASSIGNMENT|[99]|ctx|null
+15:29:52.609 (1615116106)|VARIABLE_SCOPE_BEGIN|[99]|testMode|Boolean|false|false
+15:29:52.609 (1615119221)|VARIABLE_ASSIGNMENT|[99]|testMode|false
+15:29:52.609 (1615123250)|STATEMENT_EXECUTE|[99]
+15:29:52.609 (1615138942)|STATEMENT_EXECUTE|[103]
+15:29:52.609 (1615140564)|STATEMENT_EXECUTE|[104]
+15:29:52.609 (1615145326)|HEAP_ALLOCATE|[104]|Bytes:5
+15:29:52.609 (1615170863)|STATEMENT_EXECUTE|[111]
+15:29:52.609 (1615172416)|STATEMENT_EXECUTE|[112]
+15:29:52.609 (1615199521)|HEAP_ALLOCATE|[112]|Bytes:12
+15:29:52.609 (1615205362)|HEAP_ALLOCATE|[112]|Bytes:13
+15:29:52.609 (1615262586)|HEAP_ALLOCATE|[112]|Bytes:12
+15:29:52.609 (1615267829)|HEAP_ALLOCATE|[112]|Bytes:13
+15:29:52.609 (1615280612)|HEAP_ALLOCATE|[112]|Bytes:12
+15:29:52.609 (1615284213)|HEAP_ALLOCATE|[112]|Bytes:13
+15:29:52.609 (1615294464)|HEAP_ALLOCATE|[112]|Bytes:12
+15:29:52.609 (1615297835)|HEAP_ALLOCATE|[112]|Bytes:12
+15:29:52.609 (1615307672)|HEAP_ALLOCATE|[112]|Bytes:12
+15:29:52.609 (1615310948)|HEAP_ALLOCATE|[112]|Bytes:12
+15:29:52.609 (1615320550)|HEAP_ALLOCATE|[112]|Bytes:12
+15:29:52.609 (1615323765)|HEAP_ALLOCATE|[112]|Bytes:12
+15:29:52.609 (1615333405)|HEAP_ALLOCATE|[112]|Bytes:12
+15:29:52.609 (1615336692)|HEAP_ALLOCATE|[112]|Bytes:14
+15:29:52.609 (1615357124)|METHOD_EXIT|[95]|01pO00000003AAn|TriggerHandler.setTriggerContext(String, Boolean)
+15:29:52.609 (1615362493)|METHOD_EXIT|[23]|01pO00000003AAn|TriggerHandler.setTriggerContext()
+15:29:52.609 (1615366130)|CONSTRUCTOR_EXIT|[20]|01pO00000003AAn|<init>()
+15:29:52.609 (1615368660)|STATEMENT_EXECUTE|[20]
+15:29:52.609 (1615371428)|CONSTRUCTOR_EXIT|[4]|01pO0000000371i|<init>()
+15:29:52.609 (1615379214)|METHOD_ENTRY|[4]|01pO00000003AAn|TriggerHandler.run()
+15:29:52.609 (1615383819)|VARIABLE_SCOPE_BEGIN|[31]|this|TriggerHandler|true|false
+15:29:52.609 (1615408890)|VARIABLE_ASSIGNMENT|[31]|this|{"context":"0x75fd6786","isTriggerExecuting":true}|0x51ff7210
+15:29:52.609 (1615415063)|STATEMENT_EXECUTE|[31]
+15:29:52.609 (1615424072)|METHOD_ENTRY|[33]|01pO00000003AAn|TriggerHandler.validateRun()
+15:29:52.609 (1615436825)|VARIABLE_SCOPE_BEGIN|[146]|this|TriggerHandler|true|false
+15:29:52.609 (1615454293)|VARIABLE_ASSIGNMENT|[146]|this|{"context":"0x75fd6786","isTriggerExecuting":true}|0x51ff7210
+15:29:52.609 (1615459626)|STATEMENT_EXECUTE|[146]
+15:29:52.609 (1615464786)|STATEMENT_EXECUTE|[147]
+15:29:52.609 (1615474629)|METHOD_ENTRY|[150]|01pO00000003AAn|TriggerHandler.getHandlerName()
+15:29:52.609 (1615486172)|VARIABLE_SCOPE_BEGIN|[157]|this|TriggerHandler|true|false
+15:29:52.609 (1615502570)|VARIABLE_ASSIGNMENT|[157]|this|{"context":"0x75fd6786","isTriggerExecuting":true}|0x51ff7210
+15:29:52.609 (1615507301)|STATEMENT_EXECUTE|[157]
+15:29:52.609 (1615508274)|STATEMENT_EXECUTE|[158]
+15:29:52.609 (1615609288)|HEAP_ALLOCATE|[158]|Bytes:365
+15:29:52.609 (1615694358)|HEAP_ALLOCATE|[158]|Bytes:365
+15:29:52.609 (1615711614)|HEAP_ALLOCATE|[158]|Bytes:1
+15:29:52.609 (1615742998)|HEAP_ALLOCATE|[158]|Bytes:25
+15:29:52.609 (1615752860)|METHOD_EXIT|[150]|01pO00000003AAn|TriggerHandler.getHandlerName()
+15:29:52.609 (1615769709)|STATEMENT_EXECUTE|[150]
+15:29:52.609 (1615771734)|STATEMENT_EXECUTE|[153]
+15:29:52.609 (1615775393)|METHOD_EXIT|[33]|01pO00000003AAn|TriggerHandler.validateRun()
+15:29:52.609 (1615778226)|STATEMENT_EXECUTE|[33]
+15:29:52.609 (1615779401)|STATEMENT_EXECUTE|[35]
+15:29:52.609 (1615785561)|METHOD_ENTRY|[35]|01pO00000003AAn|TriggerHandler.addToLoopCount()
+15:29:52.609 (1615798518)|VARIABLE_SCOPE_BEGIN|[133]|this|TriggerHandler|true|false
+15:29:52.609 (1615819476)|VARIABLE_ASSIGNMENT|[133]|this|{"context":"0x75fd6786","isTriggerExecuting":true}|0x51ff7210
+15:29:52.609 (1615825060)|STATEMENT_EXECUTE|[133]
+15:29:52.609 (1615826116)|STATEMENT_EXECUTE|[134]
+15:29:52.609 (1615834054)|METHOD_ENTRY|[134]|01pO00000003AAn|TriggerHandler.getHandlerName()
+15:29:52.609 (1615844265)|VARIABLE_SCOPE_BEGIN|[157]|this|TriggerHandler|true|false
+15:29:52.609 (1615859801)|VARIABLE_ASSIGNMENT|[157]|this|{"context":"0x75fd6786","isTriggerExecuting":true}|0x51ff7210
+15:29:52.609 (1615864025)|STATEMENT_EXECUTE|[157]
+15:29:52.609 (1615865144)|STATEMENT_EXECUTE|[158]
+15:29:52.609 (1615914148)|HEAP_ALLOCATE|[158]|Bytes:365
+15:29:52.609 (1615964161)|HEAP_ALLOCATE|[158]|Bytes:365
+15:29:52.609 (1615989892)|HEAP_ALLOCATE|[158]|Bytes:25
+15:29:52.609 (1615999205)|METHOD_EXIT|[134]|01pO00000003AAn|TriggerHandler.getHandlerName()
+15:29:52.609 (1616003576)|VARIABLE_SCOPE_BEGIN|[134]|handlerName|String|false|false
+15:29:52.609 (1616013111)|VARIABLE_ASSIGNMENT|[134]|handlerName|"opportunityTriggerHa (5 more) ..."
+15:29:52.609 (1616076119)|STATEMENT_EXECUTE|[135]
+15:29:52.609 (1616084444)|METHOD_EXIT|[35]|01pO00000003AAn|TriggerHandler.addToLoopCount()
+15:29:52.609 (1616244050)|STATEMENT_EXECUTE|[40]
+15:29:52.609 (1616247000)|STATEMENT_EXECUTE|[41]
+15:29:52.609 (1616257140)|METHOD_ENTRY|[41]|01pO0000000371i|opportunityTriggerHandler.beforeUpdate()
+15:29:52.609 (1616268737)|VARIABLE_SCOPE_BEGIN|[30]|this|opportunityTriggerHandler|true|false
+15:29:52.609 (1616290235)|VARIABLE_ASSIGNMENT|[30]|this|{"context":"0x75fd6786","isTriggerExecuting":true}|0x51ff7210
+15:29:52.609 (1616295272)|STATEMENT_EXECUTE|[30]
+15:29:52.609 (1616296469)|STATEMENT_EXECUTE|[31]
+15:29:52.609 (1616306120)|METHOD_ENTRY|[31]|01pO0000000371i|opportunityTriggerHandler.determineGate()
+15:29:52.609 (1616317229)|VARIABLE_SCOPE_BEGIN|[112]|this|opportunityTriggerHandler|true|false
+15:29:52.609 (1616333901)|VARIABLE_ASSIGNMENT|[112]|this|{"context":"0x75fd6786","isTriggerExecuting":true}|0x51ff7210
+15:29:52.609 (1616338719)|STATEMENT_EXECUTE|[112]
+15:29:52.609 (1616343627)|STATEMENT_EXECUTE|[113]
+15:29:52.609 (1616599956)|HEAP_ALLOCATE|[114]|Bytes:5
+15:29:52.609 (1616636397)|HEAP_ALLOCATE|[114]|Bytes:4
+15:29:52.609 (1616645863)|VARIABLE_SCOPE_BEGIN|[114]|opp|Opportunity|true|false
+15:29:52.609 (1630061497)|VARIABLE_ASSIGNMENT|[114]|opp|{"LastModifiedDate":"2017-03-27T04:26:51.000Z","Regional_Business__c":"a0BO000000F5hL5MAJ","Technology__c":"Look at new technolo (169 more) ...","Industry_Sector_GM__ (1 more) ...":"00528000006BVXaAAO","TSF_Gate_Status__c":"Not Applicable","Count_of_Tender_Less (21 more) ...":0,"CloseDate":"2018-01-01T00:00:00.000Z","HasOpenActivity":false,"Budget_Confirmed__c":false,"Overall_Prospect_Val (5 more) ...":61000000,"Methodology__c":"Investigate construc (320 more) ...","Less_Cost_Recoveries (10 more) ...":0,"District__c":"Northern Rivers","Value_of_Managed_Wor (5 more) ...":950000,"Discipline__c":"TBC","State__c":"New South Wales","D_I_Involvement__c":false,"IsDeleted":false,"Non_Binding_Proposal (12 more) ...":true,"Net_Budget_Post_Tend (5 more) ...":0,"Parent_Company_Guara (11 more) ...":" ","Detailed_Description (3 more) ...":"This prospect is Mai (797 more) ...","ROI_Analysis_Complet (5 more) ...":false,"PPP_or_Third_Party_F (16 more) ...":false,"Executive_Summary__c":"This prospect is Mai (796 more) ...","CRA_Gate_Status__c":"Not Applicable","Tender_Dates_Header_ (2 more) ...":" ","Less_Cost_Recoveries (10 more) ...":0,"Is_internal_BG_colla (11 more) ...":false,"Prospect_Status__c":"Dead - Unsuitable fo (4 more) ...","People__c":"- Explore efficienci (267 more) ...","Id":"006O0000008kYYvIAM","Proposed_Margin_on_R (9 more) ...":5,"Client_Drivers__c":"Value for money / go (61 more) ...","Cost__c":"- Obtain and utilise (1146 more) ...","Relationship__c":"Lismore Hospital Sta (53 more) ...","IsClosed":false,"Payment_Mechanism__c":"TBC","Delivery_End_Date__c":"2020-12-31T00:00:00.000Z","OwnerId":"00528000006B07FAAS","Prospect_Duration_Yr (4 more) ...":3.0,"Reason_For_Performin (9 more) ...":"Key client for JH in (386 more) ...","RecordTypeId":"012O0000000DD8KIAW","Country__c":"Australia","Total_Budget_AUD__c":0,"StageName":"Gate 2","Amount":60000000.00,"Probability":40,"EOI_PQ_Close_Date__c":"2017-05-31T00:00:00.000Z","Sponsor_Details_Head (5 more) ...":" ","Independent_Credit_C (16 more) ...":false,"JH_Revenue_Share__c":60000000,"SystemModstamp":"2017-03-27T04:26:51.000Z","Total_Less_Recoverie (4 more) ...":0,"Reason_for_Status__c":"Reason","Business_Development (11 more) ...":"00528000006BYTIAA4","Count_of_EOI_Lessons (18 more) ...":1,"AccountId":"001O0000018AKplIAG","HasOpportunityLineIt (2 more) ...":false,"Prospect_Number__c":"PRS-0000024","Procurement_Process_ (2 more) ...":"John Holland has bee (474 more) ...","ForecastCategory":"Pipeline","Net_Budget_EOI_PQ__c":0,"Client_Relationship_ (13 more) ...":"Quarterly meetings t (363 more) ...","Number_of_PRA_Critic (19 more) ...":2,"Name":"Lismore Base Hospita (73 more) ...","Prospect_Priority__c":"4","Time__c":"- Develop a design a (794 more) ...","CreatedById":"00528000006B07FAAS","Winning_Strategy_Hea (6 more) ...":" ","A_PCG_Is_Required_Fr (5 more) ...":"JHG","Design__c":"- Develop a design p (431 more) ...","Tender_Close_Date__c":"2017-06-30T00:00:00.000Z","JH_Margin_Value__c":3000000,"Other__c":"Put a big effort in  (120 more) ...","Innovation__c":"Other opportunities  (276 more) ...","Defect_Liability_Dur (15 more) ...":12,"Sync_Date_Fields__c":false,"Is_this_project_a_JV (15 more) ...":false,"Project_Duration_Mon (6 more) ...":36,"JH_Bid_Cost_of_JH_Re (8 more) ...":0.0,"Delivery_End_Defect_ (21 more) ...":"2021-12-31T00:00:00.000Z","Is_Gate_1_To_3__c":true,"Bonding_Security_Hea (6 more) ...":" ","Net_Budget_Tender__c":0,"CreatedDate":"2017-03-15T22:16:11.000Z","HasOverdueTask":false,"Discovery_Completed_ (2 more) ...":false,"Data_Quality_Score__ (1 more) ...":40,"Project_Probability_ (2 more) ...":100,"ForecastCategoryName":"Pipeline","Client_Probity__c":false,"Client_Supplied_Mate (8 more) ...":1000000,"Relationships__c":"- Good relationship  (160 more) ...","Total_Budget_EOI_PQ_ (2 more) ...":0,"Managing_Contractor_ (12 more) ...":false,"Manually_Assign_Gate (5 more) ...":false,"Business_Group__c":"a0BO000000F5hL0MAJ","Contract_Type__c":"Managing Contractor","Prospect_Location_He (8 more) ...":" ","Anticipated_Revenue_ (13 more) ...":"2018-03-01T00:00:00.000Z","Is_Gate_4_To_5__c":false,"Also_Known_As__c":"Lismore Base Hospita (1 more) ...","Data_Quality_Descrip (7 more) ...":"Missing: Type, Lead  (18 more) ...","ExpectedRevenue":24000000.00,"Net_Budget_Amount__c":0,"IsWon":false,"EOI_PQ_Start_Date__c":"2017-03-31T00:00:00.000Z","Location__c":"Lismore, New South W (15 more) ...","D_I_Involvement_Text (3 more) ...":"No","Less_Cost_Recoveries (15 more) ...":0,"Financial_Viability_ (11 more) ...":"Annual budget for ne (45 more) ...","Request_For_Special_ (22 more) ...":false,"Conga_Other_Heading_ (8 more) ...":"ECI/RFT","Apply_Default_Bondin (4 more) ...":true,"Gate_Status__c":"Submitted For Approv (2 more) ...","Win_Probability__c":90,"D_I_Involvement_Guid (12 more) ...":"This box should be c (183 more) ...","Total_Budget_Tender_ (2 more) ...":0,"Total_Budget_Post_Te (7 more) ...":0,"Restrict_Access__c":false,"Nearest_City__c":"Lismore","Tender_Start_Date__c":"2017-06-15T00:00:00.000Z","Other_Custom_Heading (3 more) ...":"ECI/RFT","Alignment_with_Busin (11 more) ...":"Category 1 client in (90 more) ...","IsPrivate":false,"LastModifiedById":"00528000006B07FAAS","Is_internal_Regional (21 more) ...":false}|0x5294627c
+15:29:52.609 (1630094559)|STATEMENT_EXECUTE|[114]
+15:29:52.609 (1630096432)|STATEMENT_EXECUTE|[115]
+15:29:52.609 (1630285768)|VARIABLE_SCOPE_BEGIN|[115]|oldOpp|Opportunity|true|false
+15:29:52.609 (1633562355)|VARIABLE_ASSIGNMENT|[115]|oldOpp|{"LastModifiedDate":"2017-03-27T04:26:51.000Z","Regional_Business__c":"a0BO000000F5hL5MAJ","Technology__c":"Look at new technolo (169 more) ...","Industry_Sector_GM__ (1 more) ...":"00528000006BVXaAAO","TSF_Gate_Status__c":"Not Applicable","Count_of_Tender_Less (21 more) ...":0,"CloseDate":"2018-01-01T00:00:00.000Z","HasOpenActivity":false,"Budget_Confirmed__c":false,"Overall_Prospect_Val (5 more) ...":61000000,"Methodology__c":"Investigate construc (320 more) ...","Less_Cost_Recoveries (10 more) ...":0,"District__c":"Northern Rivers","Value_of_Managed_Wor (5 more) ...":950000,"Discipline__c":"TBC","State__c":"New South Wales","D_I_Involvement__c":false,"IsDeleted":false,"Non_Binding_Proposal (12 more) ...":true,"Net_Budget_Post_Tend (5 more) ...":0,"Parent_Company_Guara (11 more) ...":" ","Detailed_Description (3 more) ...":"This prospect is Mai (797 more) ...","ROI_Analysis_Complet (5 more) ...":false,"PPP_or_Third_Party_F (16 more) ...":false,"Executive_Summary__c":"This prospect is Mai (796 more) ...","CRA_Gate_Status__c":"Not Applicable","Tender_Dates_Header_ (2 more) ...":" ","Less_Cost_Recoveries (10 more) ...":0,"Is_internal_BG_colla (11 more) ...":false,"Prospect_Status__c":"Dead - Unsuitable fo (4 more) ...","People__c":"- Explore efficienci (267 more) ...","Id":"006O0000008kYYvIAM","Proposed_Margin_on_R (9 more) ...":5,"Client_Drivers__c":"Value for money / go (61 more) ...","Cost__c":"- Obtain and utilise (1146 more) ...","Relationship__c":"Lismore Hospital Sta (53 more) ...","IsClosed":false,"Payment_Mechanism__c":"TBC","Delivery_End_Date__c":"2020-12-31T00:00:00.000Z","OwnerId":"00528000006B07FAAS","Prospect_Duration_Yr (4 more) ...":3.0,"Reason_For_Performin (9 more) ...":"Key client for JH in (386 more) ...","RecordTypeId":"012O0000000DD8KIAW","Country__c":"Australia","Total_Budget_AUD__c":0,"StageName":"Gate 2","Amount":60000000.00,"Probability":40,"EOI_PQ_Close_Date__c":"2017-05-31T00:00:00.000Z","Sponsor_Details_Head (5 more) ...":" ","Independent_Credit_C (16 more) ...":false,"JH_Revenue_Share__c":60000000,"SystemModstamp":"2017-03-27T04:26:51.000Z","Total_Less_Recoverie (4 more) ...":0,"Business_Development (11 more) ...":"00528000006BYTIAA4","Count_of_EOI_Lessons (18 more) ...":1,"AccountId":"001O0000018AKplIAG","HasOpportunityLineIt (2 more) ...":false,"Prospect_Number__c":"PRS-0000024","Procurement_Process_ (2 more) ...":"John Holland has bee (474 more) ...","ForecastCategory":"Pipeline","Net_Budget_EOI_PQ__c":0,"Client_Relationship_ (13 more) ...":"Quarterly meetings t (363 more) ...","Number_of_PRA_Critic (19 more) ...":2,"Name":"Lismore Base Hospita (73 more) ...","Prospect_Priority__c":"4","Time__c":"- Develop a design a (794 more) ...","CreatedById":"00528000006B07FAAS","Winning_Strategy_Hea (6 more) ...":" ","A_PCG_Is_Required_Fr (5 more) ...":"JHG","Design__c":"- Develop a design p (431 more) ...","Tender_Close_Date__c":"2017-06-30T00:00:00.000Z","JH_Margin_Value__c":3000000,"Other__c":"Put a big effort in  (120 more) ...","Innovation__c":"Other opportunities  (276 more) ...","Defect_Liability_Dur (15 more) ...":12,"Sync_Date_Fields__c":false,"Is_this_project_a_JV (15 more) ...":false,"Project_Duration_Mon (6 more) ...":36,"JH_Bid_Cost_of_JH_Re (8 more) ...":0.0,"Delivery_End_Defect_ (21 more) ...":"2021-12-31T00:00:00.000Z","Is_Gate_1_To_3__c":true,"Bonding_Security_Hea (6 more) ...":" ","Net_Budget_Tender__c":0,"CreatedDate":"2017-03-15T22:16:11.000Z","HasOverdueTask":false,"Discovery_Completed_ (2 more) ...":false,"Data_Quality_Score__ (1 more) ...":40,"Project_Probability_ (2 more) ...":100,"ForecastCategoryName":"Pipeline","Client_Probity__c":false,"Client_Supplied_Mate (8 more) ...":1000000,"Relationships__c":"- Good relationship  (160 more) ...","Total_Budget_EOI_PQ_ (2 more) ...":0,"Managing_Contractor_ (12 more) ...":false,"Manually_Assign_Gate (5 more) ...":false,"Business_Group__c":"a0BO000000F5hL0MAJ","Contract_Type__c":"Managing Contractor","Prospect_Location_He (8 more) ...":" ","Anticipated_Revenue_ (13 more) ...":"2018-03-01T00:00:00.000Z","Is_Gate_4_To_5__c":false,"Also_Known_As__c":"Lismore Base Hospita (1 more) ...","Data_Quality_Descrip (7 more) ...":"Missing: Type, Lead  (18 more) ...","ExpectedRevenue":24000000.00,"Net_Budget_Amount__c":0,"IsWon":false,"EOI_PQ_Start_Date__c":"2017-03-31T00:00:00.000Z","Location__c":"Lismore, New South W (15 more) ...","D_I_Involvement_Text (3 more) ...":"No","Less_Cost_Recoveries (15 more) ...":0,"Financial_Viability_ (11 more) ...":"Annual budget for ne (45 more) ...","Request_For_Special_ (22 more) ...":false,"Conga_Other_Heading_ (8 more) ...":"ECI/RFT","Apply_Default_Bondin (4 more) ...":true,"Gate_Status__c":"Submitted For Approv (2 more) ...","Win_Probability__c":90,"D_I_Involvement_Guid (12 more) ...":"This box should be c (183 more) ...","Total_Budget_Tender_ (2 more) ...":0,"Total_Budget_Post_Te (7 more) ...":0,"Restrict_Access__c":false,"Nearest_City__c":"Lismore","Tender_Start_Date__c":"2017-06-15T00:00:00.000Z","Other_Custom_Heading (3 more) ...":"ECI/RFT","Alignment_with_Busin (11 more) ...":"Category 1 client in (90 more) ...","IsPrivate":false,"LastModifiedById":"00528000006B07FAAS","Is_internal_Regional (21 more) ...":false}|0x5df372f4
+15:29:52.609 (1633658188)|STATEMENT_EXECUTE|[118]
+15:29:52.609 (1633668749)|HEAP_ALLOCATE|[124]|Bytes:6
+15:29:52.609 (1633680671)|STATEMENT_EXECUTE|[124]
+15:29:52.609 (1633685824)|HEAP_ALLOCATE|[129]|Bytes:3
+15:29:52.609 (1633694915)|HEAP_ALLOCATE|[142]|Bytes:6
+15:29:52.609 (1633704764)|HEAP_ALLOCATE|[160]|Bytes:6
+15:29:52.609 (1633712329)|STATEMENT_EXECUTE|[160]
+15:29:52.609 (1633734034)|HEAP_ALLOCATE|[161]|Bytes:8
+15:29:52.609 (1633747216)|HEAP_ALLOCATE|[165]|Bytes:8
+15:29:52.609 (1633753416)|STATEMENT_EXECUTE|[161]
+15:29:52.609 (1633762004)|STATEMENT_EXECUTE|[168]
+15:29:52.609 (1633765198)|HEAP_ALLOCATE|[168]|Bytes:14
+15:29:52.609 (1634647875)|VARIABLE_ASSIGNMENT|[168]|this.TSF_Gate_Status__c|"Not Applicable"|0x5294627c
+15:29:52.609 (1634653519)|STATEMENT_EXECUTE|[169]
+15:29:52.609 (1635412198)|VARIABLE_ASSIGNMENT|[169]|this.CRA_Gate_Status__c|"Not Applicable"|0x5294627c
+15:29:52.609 (1635438959)|HEAP_ALLOCATE|[114]|Bytes:5
+15:29:52.609 (1635455343)|VARIABLE_ASSIGNMENT|[114]|opp|null|
+15:29:52.609 (1635459006)|STATEMENT_EXECUTE|[211]
+15:29:52.609 (1635465626)|HEAP_ALLOCATE|[211]|Bytes:5
+15:29:52.609 (1635476493)|VARIABLE_ASSIGNMENT|[211]|opportunityTriggerHandler.recursion|true
+15:29:52.609 (1635484997)|METHOD_EXIT|[31]|01pO0000000371i|opportunityTriggerHandler.determineGate()
+15:29:52.609 (1635490545)|METHOD_EXIT|[41]|01pO0000000371i|opportunityTriggerHandler.beforeUpdate()
+15:29:52.609 (1635495493)|METHOD_EXIT|[4]|01pO00000003AAn|TriggerHandler.run()
+15:29:52.635 (1635506192)|CUMULATIVE_LIMIT_USAGE
+15:29:52.635 (1635506192)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+15:29:52.635 (1635506192)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+15:29:52.635 (1635506192)|STATIC_VARIABLE_LIST|
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MAX_VALUE:0
+  Boolean:FALSE:0
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_static_PRATemplateRecordTypeID:0
+  Boolean:_static_runOnce:0
+  double:MIN_VALUE:0
+  int:SIZE:0
+  TriggerHandler.TriggerContext:BEFORE_INSERT:0
+  double:NEGATIVE_INFINITY:0
+  int:MAX_VALUE:0
+  TriggerHandler.TriggerContext:AFTER_UNDELETE:0
+  char[]:digits:0
+  double:NaN:0
+  Boolean:TRUE:0
+  TriggerHandler.TriggerContext:AFTER_INSERT:0
+  Boolean:_static_recursion:0
+  TriggerHandler.TriggerContext:AFTER_DELETE:0
+  int:MIN_VALUE:0
+  char[]:DigitOnes:0
+  String:_static_KCRATemplateRecordTypeID:0
+  TriggerHandler.TriggerContext:AFTER_UPDATE:0
+  String:__sfdcInnerTypes:0
+  int:BYTES:0
+  Map<String,TriggerHandler.LoopCount>:_static_loopCountMap:0
+  Set<String>:_static_bypassedHandlers:0
+  int:MIN_EXPONENT:0
+  int[]:sizeTable:0
+  TriggerHandler.TriggerContext:BEFORE_DELETE:0
+  int:MAX_EXPONENT:0
+  String:_static_PRARecordTypeID:0
+  TriggerHandler.TriggerContext:BEFORE_UPDATE:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  double:MIN_NORMAL:0
+  String:_static_KCRARecordTypeID:0
+  int:BYTES:0
+
+15:29:52.635 (1635506192)|CUMULATIVE_LIMIT_USAGE_END
+
+15:29:52.609 (1638537052)|CODE_UNIT_FINISHED|opportunityTrigger on Opportunity trigger event BeforeUpdate for [006O0000008kYYv]
+15:29:52.609 (1651779645)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Opportunity:006O0000008kYYv
+15:29:52.609 (1651788320)|VALIDATION_RULE|03dO00000000vWR|CANDY_Tender_No_mandatory_at_Gate_4
+15:29:52.609 (1651929139)|VALIDATION_FORMULA|AND(ISBLANK(Value_of_Managed_Works__c ), 
+ISPICKVAL(StageName, "Gate 4"))|Value_of_Managed_Works__c=950000 , StageName=Gate 2
+15:29:52.609 (1651935801)|VALIDATION_PASS
+15:29:52.609 (1651937893)|VALIDATION_RULE|03dO00000000vKk|Enforce_EOI_AND_PQ_Dates
+15:29:52.609 (1652093324)|VALIDATION_FORMULA|AND( 
+Non_Binding_Proposal_Required__c = TRUE, 
+OR(
+ISBLANK( EOI_PQ_Start_Date__c),
+ISBLANK( EOI_PQ_Close_Date__c)))|EOI_PQ_Close_Date__c=2017-05-31 00:00:00 , Non_Binding_Proposal_Required__c=1 , EOI_PQ_Start_Date__c=2017-03-31 00:00:00
+15:29:52.609 (1652099271)|VALIDATION_PASS
+15:29:52.609 (1652100948)|VALIDATION_RULE|03dO00000000vWW|Make_PCG_mandatory_at_Gate_2
+15:29:52.609 (1652216226)|VALIDATION_FORMULA|AND( 
+ISPICKVAL(StageName, "Gate 2"), 
+ISBLANK(TEXT(A_PCG_Is_Required_From__c)))|A_PCG_Is_Required_From__c=JHG , StageName=Gate 2
+15:29:52.609 (1652221467)|VALIDATION_PASS
+15:29:52.609 (1652223208)|VALIDATION_RULE|03dO000000011W3|Must_enter_a_Reason_for_Status_if_Dead
+15:29:52.609 (1652407074)|VALIDATION_FORMULA|AND(OR(ISPICKVAL(Prospect_Status__c, 'Dead - Failed to Prequalify'), ISPICKVAL(Prospect_Status__c, 'EOI Dead - Project Cancelled'),ISPICKVAL(Prospect_Status__c, 'Tender Dead - Project Cancelled'), ISPICKVAL(Prospect_Status__c, 'Dead - Unsuitable for JH')), ISBLANK( Reason_for_Status__c))|Prospect_Status__c=Dead - Unsuitable for JH , Reason_for_Status__c=Reason
+15:29:52.609 (1652413033)|VALIDATION_PASS
+15:29:52.609 (1652414557)|VALIDATION_RULE|03dO00000000vKz|Populate_District_if_Country_is_Aust
+15:29:52.609 (1652520503)|VALIDATION_FORMULA|AND(
+ISPICKVAL( Country__c, "Australia"),
+ISBLANK(TEXT( District__c )))|Country__c=Australia , District__c=Northern Rivers
+15:29:52.609 (1652525675)|VALIDATION_PASS
+15:29:52.609 (1652527031)|VALIDATION_RULE|03dO00000000vKp|Populate_State_if_Country_is_Australia
+15:29:52.609 (1652626490)|VALIDATION_FORMULA|AND(
+ISPICKVAL( Country__c, "Australia"),
+ISBLANK(TEXT(State__c)))|Country__c=Australia , State__c=New South Wales
+15:29:52.609 (1652631224)|VALIDATION_PASS
+15:29:52.609 (1652632557)|VALIDATION_RULE|03dO00000000vL9|Populate_value_of_managed_works
+15:29:52.609 (1652754479)|VALIDATION_FORMULA|AND(ISBLANK( Value_of_Managed_Works__c ),
+OR(
+ISPICKVAL( Contract_Type__c, "Managing Contractor"),
+ISPICKVAL( Contract_Type__c, "Construction Management")))|Value_of_Managed_Works__c=950000 , Contract_Type__c=Managing Contractor
+15:29:52.609 (1652759678)|VALIDATION_PASS
+15:29:52.609 (1652761152)|VALIDATION_RULE|03dO00000000vLT|Winning_Strategy_Other_Custom_Heading
+15:29:52.609 (1652929114)|VALIDATION_FORMULA|AND(LEN( Other__c )  > 0,
+ISBLANK( Other_Custom_Heading__c ))|Other__c=Put a big effort in the ECI/RFT phase (8 wks) to come up with smarts that save the client &amp; JH money and minimise risk.. Multiplex will. , Other_Custom_Heading__c=ECI/RFT
+15:29:52.609 (1652936464)|VALIDATION_PASS
+15:29:52.609 (1652980668)|CODE_UNIT_FINISHED|Validation:Opportunity:006O0000008kYYv
+15:29:52.609 (1690021658)|CODE_UNIT_STARTED|[EXTERNAL]|01qO00000000SDP|opportunityTrigger on Opportunity trigger event AfterUpdate for [006O0000008kYYv]
+15:29:52.609 (1690050488)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+15:29:52.609 (1690080000)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+15:29:52.609 (1690148081)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+15:29:52.609 (1690156383)|VARIABLE_SCOPE_BEGIN|[1]|this|opportunityTrigger|true|false
+15:29:52.609 (1690178148)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x4818f0c4
+15:29:52.609 (1690205440)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+15:29:52.609 (1690210628)|VARIABLE_SCOPE_BEGIN|[1]|this|opportunityTrigger|true|false
+15:29:52.609 (1690219625)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x4818f0c4
+15:29:52.609 (1690223264)|STATEMENT_EXECUTE|[1]
+15:29:52.609 (1690224912)|STATEMENT_EXECUTE|[4]
+15:29:52.609 (1690234809)|HEAP_ALLOCATE|[4]|Bytes:12
+15:29:52.609 (1690247225)|CONSTRUCTOR_ENTRY|[4]|01pO0000000371i|<init>()
+15:29:52.609 (1690252650)|VARIABLE_SCOPE_BEGIN|[20]|this|opportunityTriggerHandler|true|false
+15:29:52.609 (1690278187)|VARIABLE_ASSIGNMENT|[20]|this|{}|0x55fe0689
+15:29:52.609 (1690294673)|STATEMENT_EXECUTE|[13]
+15:29:52.609 (1690305015)|CONSTRUCTOR_ENTRY|[20]|01pO00000003AAn|<init>()
+15:29:52.609 (1690312392)|VARIABLE_SCOPE_BEGIN|[22]|this|TriggerHandler|true|false
+15:29:52.609 (1690331437)|VARIABLE_ASSIGNMENT|[22]|this|{}|0x55fe0689
+15:29:52.609 (1690335574)|STATEMENT_EXECUTE|[1]
+15:29:52.609 (1690337043)|STATEMENT_EXECUTE|[9]
+15:29:52.609 (1690338423)|STATEMENT_EXECUTE|[13]
+15:29:52.609 (1690389012)|STATEMENT_EXECUTE|[22]
+15:29:52.609 (1690395009)|STATEMENT_EXECUTE|[23]
+15:29:52.609 (1690408123)|METHOD_ENTRY|[23]|01pO00000003AAn|TriggerHandler.setTriggerContext()
+15:29:52.609 (1690417696)|VARIABLE_SCOPE_BEGIN|[94]|this|TriggerHandler|true|false
+15:29:52.609 (1690441516)|VARIABLE_ASSIGNMENT|[94]|this|{}|0x55fe0689
+15:29:52.609 (1690448596)|STATEMENT_EXECUTE|[94]
+15:29:52.609 (1690450629)|STATEMENT_EXECUTE|[95]
+15:29:52.609 (1690463035)|METHOD_ENTRY|[95]|01pO00000003AAn|TriggerHandler.setTriggerContext(String, Boolean)
+15:29:52.609 (1690470124)|VARIABLE_SCOPE_BEGIN|[99]|this|TriggerHandler|true|false
+15:29:52.609 (1690489452)|VARIABLE_ASSIGNMENT|[99]|this|{}|0x55fe0689
+15:29:52.609 (1690493708)|VARIABLE_SCOPE_BEGIN|[99]|ctx|String|false|false
+15:29:52.609 (1690499098)|VARIABLE_ASSIGNMENT|[99]|ctx|null
+15:29:52.609 (1690504747)|VARIABLE_SCOPE_BEGIN|[99]|testMode|Boolean|false|false
+15:29:52.609 (1690510287)|VARIABLE_ASSIGNMENT|[99]|testMode|false
+15:29:52.609 (1690515408)|STATEMENT_EXECUTE|[99]
+15:29:52.609 (1690529528)|STATEMENT_EXECUTE|[103]
+15:29:52.609 (1690532208)|STATEMENT_EXECUTE|[104]
+15:29:52.609 (1690539715)|HEAP_ALLOCATE|[104]|Bytes:5
+15:29:52.609 (1690604479)|STATEMENT_EXECUTE|[120]
+15:29:52.609 (1690608286)|STATEMENT_EXECUTE|[121]
+15:29:52.609 (1690634652)|METHOD_EXIT|[95]|01pO00000003AAn|TriggerHandler.setTriggerContext(String, Boolean)
+15:29:52.609 (1690643645)|METHOD_EXIT|[23]|01pO00000003AAn|TriggerHandler.setTriggerContext()
+15:29:52.609 (1690650173)|CONSTRUCTOR_EXIT|[20]|01pO00000003AAn|<init>()
+15:29:52.609 (1690653709)|STATEMENT_EXECUTE|[20]
+15:29:52.609 (1690658071)|CONSTRUCTOR_EXIT|[4]|01pO0000000371i|<init>()
+15:29:52.609 (1690665808)|METHOD_ENTRY|[4]|01pO00000003AAn|TriggerHandler.run()
+15:29:52.609 (1690672067)|VARIABLE_SCOPE_BEGIN|[31]|this|TriggerHandler|true|false
+15:29:52.609 (1690699570)|VARIABLE_ASSIGNMENT|[31]|this|{"context":"0x5b08409b","isTriggerExecuting":true}|0x55fe0689
+15:29:52.609 (1690706557)|STATEMENT_EXECUTE|[31]
+15:29:52.609 (1690716018)|METHOD_ENTRY|[33]|01pO00000003AAn|TriggerHandler.validateRun()
+15:29:52.609 (1690722522)|VARIABLE_SCOPE_BEGIN|[146]|this|TriggerHandler|true|false
+15:29:52.609 (1690742671)|VARIABLE_ASSIGNMENT|[146]|this|{"context":"0x5b08409b","isTriggerExecuting":true}|0x55fe0689
+15:29:52.609 (1690748283)|STATEMENT_EXECUTE|[146]
+15:29:52.609 (1690754017)|STATEMENT_EXECUTE|[147]
+15:29:52.609 (1690763488)|METHOD_ENTRY|[150]|01pO00000003AAn|TriggerHandler.getHandlerName()
+15:29:52.609 (1690769763)|VARIABLE_SCOPE_BEGIN|[157]|this|TriggerHandler|true|false
+15:29:52.609 (1690790310)|VARIABLE_ASSIGNMENT|[157]|this|{"context":"0x5b08409b","isTriggerExecuting":true}|0x55fe0689
+15:29:52.609 (1690796418)|STATEMENT_EXECUTE|[157]
+15:29:52.609 (1690798842)|STATEMENT_EXECUTE|[158]
+15:29:52.609 (1690903825)|HEAP_ALLOCATE|[158]|Bytes:363
+15:29:52.609 (1690992354)|HEAP_ALLOCATE|[158]|Bytes:363
+15:29:52.609 (1691031852)|HEAP_ALLOCATE|[158]|Bytes:25
+15:29:52.609 (1691045061)|METHOD_EXIT|[150]|01pO00000003AAn|TriggerHandler.getHandlerName()
+15:29:52.609 (1691060771)|STATEMENT_EXECUTE|[150]
+15:29:52.609 (1691062837)|STATEMENT_EXECUTE|[153]
+15:29:52.609 (1691066404)|METHOD_EXIT|[33]|01pO00000003AAn|TriggerHandler.validateRun()
+15:29:52.609 (1691069220)|STATEMENT_EXECUTE|[33]
+15:29:52.609 (1691070496)|STATEMENT_EXECUTE|[35]
+15:29:52.609 (1691075716)|METHOD_ENTRY|[35]|01pO00000003AAn|TriggerHandler.addToLoopCount()
+15:29:52.609 (1691080141)|VARIABLE_SCOPE_BEGIN|[133]|this|TriggerHandler|true|false
+15:29:52.609 (1691100242)|VARIABLE_ASSIGNMENT|[133]|this|{"context":"0x5b08409b","isTriggerExecuting":true}|0x55fe0689
+15:29:52.609 (1691105165)|STATEMENT_EXECUTE|[133]
+15:29:52.609 (1691106583)|STATEMENT_EXECUTE|[134]
+15:29:52.609 (1691112194)|METHOD_ENTRY|[134]|01pO00000003AAn|TriggerHandler.getHandlerName()
+15:29:52.609 (1691125211)|VARIABLE_SCOPE_BEGIN|[157]|this|TriggerHandler|true|false
+15:29:52.609 (1691141023)|VARIABLE_ASSIGNMENT|[157]|this|{"context":"0x5b08409b","isTriggerExecuting":true}|0x55fe0689
+15:29:52.609 (1691145125)|STATEMENT_EXECUTE|[157]
+15:29:52.609 (1691146302)|STATEMENT_EXECUTE|[158]
+15:29:52.609 (1691200174)|HEAP_ALLOCATE|[158]|Bytes:363
+15:29:52.609 (1691261300)|HEAP_ALLOCATE|[158]|Bytes:363
+15:29:52.609 (1691313331)|HEAP_ALLOCATE|[158]|Bytes:25
+15:29:52.609 (1691334229)|METHOD_EXIT|[134]|01pO00000003AAn|TriggerHandler.getHandlerName()
+15:29:52.609 (1691342822)|VARIABLE_SCOPE_BEGIN|[134]|handlerName|String|false|false
+15:29:52.609 (1691356189)|VARIABLE_ASSIGNMENT|[134]|handlerName|"opportunityTriggerHa (5 more) ..."
+15:29:52.609 (1691379384)|STATEMENT_EXECUTE|[135]
+15:29:52.609 (1691384736)|METHOD_EXIT|[35]|01pO00000003AAn|TriggerHandler.addToLoopCount()
+15:29:52.609 (1691581032)|STATEMENT_EXECUTE|[46]
+15:29:52.609 (1691583712)|STATEMENT_EXECUTE|[47]
+15:29:52.609 (1691595015)|METHOD_ENTRY|[47]|01pO0000000371i|opportunityTriggerHandler.afterUpdate()
+15:29:52.609 (1691617216)|VARIABLE_SCOPE_BEGIN|[34]|this|opportunityTriggerHandler|true|false
+15:29:52.609 (1691637114)|VARIABLE_ASSIGNMENT|[34]|this|{"context":"0x5b08409b","isTriggerExecuting":true}|0x55fe0689
+15:29:52.609 (1691642982)|STATEMENT_EXECUTE|[34]
+15:29:52.609 (1691648938)|METHOD_EXIT|[47]|01pO0000000371i|opportunityTriggerHandler.afterUpdate()
+15:29:52.609 (1691653921)|METHOD_EXIT|[4]|01pO00000003AAn|TriggerHandler.run()
+15:29:52.691 (1691662970)|CUMULATIVE_LIMIT_USAGE
+15:29:52.691 (1691662970)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+15:29:52.691 (1691662970)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+15:29:52.691 (1691662970)|STATIC_VARIABLE_LIST|
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MAX_VALUE:0
+  Boolean:FALSE:0
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_static_PRATemplateRecordTypeID:0
+  Boolean:_static_runOnce:0
+  double:MIN_VALUE:0
+  int:SIZE:0
+  TriggerHandler.TriggerContext:BEFORE_INSERT:0
+  double:NEGATIVE_INFINITY:0
+  int:MAX_VALUE:0
+  TriggerHandler.TriggerContext:AFTER_UNDELETE:0
+  char[]:digits:0
+  double:NaN:0
+  Boolean:TRUE:0
+  TriggerHandler.TriggerContext:AFTER_INSERT:0
+  Boolean:_static_recursion:0
+  TriggerHandler.TriggerContext:AFTER_DELETE:0
+  int:MIN_VALUE:0
+  char[]:DigitOnes:0
+  String:_static_KCRATemplateRecordTypeID:0
+  TriggerHandler.TriggerContext:AFTER_UPDATE:0
+  String:__sfdcInnerTypes:0
+  int:BYTES:0
+  Map<String,TriggerHandler.LoopCount>:_static_loopCountMap:0
+  Set<String>:_static_bypassedHandlers:0
+  int:MIN_EXPONENT:0
+  int[]:sizeTable:0
+  TriggerHandler.TriggerContext:BEFORE_DELETE:0
+  int:MAX_EXPONENT:0
+  String:_static_PRARecordTypeID:0
+  TriggerHandler.TriggerContext:BEFORE_UPDATE:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  double:MIN_NORMAL:0
+  String:_static_KCRARecordTypeID:0
+  int:BYTES:0
+
+15:29:52.691 (1691662970)|CUMULATIVE_LIMIT_USAGE_END
+
+15:29:52.609 (1693237625)|CODE_UNIT_FINISHED|opportunityTrigger on Opportunity trigger event AfterUpdate for [006O0000008kYYv]
+15:29:52.609 (1694471929)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Opportunity
+15:29:52.609 (1729799155)|WF_RULE_EVAL_BEGIN|Workflow
+15:29:52.609 (1729839877)|WF_CRITERIA_BEGIN|[Opportunity: Lismore Base Hospital - Stage 3B Main Works Redevelopment (Construction Phase - Main Works 1) 006O0000008kYYv]|Gate 1|01QO00000009L9k|ON_CREATE_OR_TRIGGERING_UPDATE|0
+15:29:52.609 (1736445362)|WF_RULE_FILTER|[Opportunity : Stage equals Gate 1]
+15:29:52.609 (1736462360)|WF_RULE_EVAL_VALUE|Gate 2
+15:29:52.609 (1736466945)|WF_CRITERIA_END|false
+15:29:52.609 (1736482844)|WF_CRITERIA_BEGIN|[Opportunity: Lismore Base Hospital - Stage 3B Main Works Redevelopment (Construction Phase - Main Works 1) 006O0000008kYYv]|Gate 4|01QO00000009LEa|ON_CREATE_OR_TRIGGERING_UPDATE|0
+15:29:52.609 (1736528463)|WF_RULE_FILTER|[Opportunity : Stage equals Gate 4]
+15:29:52.609 (1736538247)|WF_RULE_EVAL_VALUE|Gate 2
+15:29:52.609 (1736540480)|WF_CRITERIA_END|false
+15:29:52.609 (1736550602)|WF_CRITERIA_BEGIN|[Opportunity: Lismore Base Hospital - Stage 3B Main Works Redevelopment (Construction Phase - Main Works 1) 006O0000008kYYv]|Apply_Date_Sync301O00000000zJx|01QO00000009S4h|ON_ALL_CHANGES|0
+15:29:52.609 (1736645589)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+15:29:52.609 (1736649403)|WF_CRITERIA_END|true
+15:29:52.609 (1737478060)|WF_CRITERIA_BEGIN|[Opportunity: Lismore Base Hospital - Stage 3B Main Works Redevelopment (Construction Phase - Main Works 1) 006O0000008kYYv]|Gate 5|01QO00000009LEp|ON_CREATE_OR_TRIGGERING_UPDATE|0
+15:29:52.609 (1737528053)|WF_RULE_FILTER|[Opportunity : Stage equals Gate 5]
+15:29:52.609 (1737538515)|WF_RULE_EVAL_VALUE|Gate 2
+15:29:52.609 (1737540955)|WF_CRITERIA_END|false
+15:29:52.609 (1737550790)|WF_CRITERIA_BEGIN|[Opportunity: Lismore Base Hospital - Stage 3B Main Works Redevelopment (Construction Phase - Main Works 1) 006O0000008kYYv]|Create_Default_Performance_defect_Liability_Bonds301O00000000zLF|01QO00000009S69|ON_RECURSIVE_UPDATE|0
+15:29:52.609 (1737587309)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+15:29:52.609 (1737590776)|WF_CRITERIA_END|true
+15:29:52.609 (1737608641)|WF_CRITERIA_BEGIN|[Opportunity: Lismore Base Hospital - Stage 3B Main Works Redevelopment (Construction Phase - Main Works 1) 006O0000008kYYv]|Apply_synch_default_Bonding_Securities301O00000000yUz|01QO00000009RRa|ON_RECURSIVE_UPDATE|0
+15:29:52.609 (1737639359)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+15:29:52.609 (1737642359)|WF_CRITERIA_END|true
+15:29:52.609 (1737658193)|WF_CRITERIA_BEGIN|[Opportunity: Lismore Base Hospital - Stage 3B Main Works Redevelopment (Construction Phase - Main Works 1) 006O0000008kYYv]|Outbound Message - Opportunity|01QO00000009Msg|ON_ALL_CHANGES|0
+15:29:52.609 (1737685270)|WF_RULE_FILTER|[Opportunity : Created Date not equal to ]
+15:29:52.609 (1737706666)|WF_RULE_EVAL_VALUE|2017-03-15 22:16:11
+15:29:52.609 (1737708973)|WF_CRITERIA_END|true
+15:29:52.609 (1737723219)|WF_CRITERIA_BEGIN|[Opportunity: Lismore Base Hospital - Stage 3B Main Works Redevelopment (Construction Phase - Main Works 1) 006O0000008kYYv]|Gate 2|01QO00000009L9p|ON_CREATE_OR_TRIGGERING_UPDATE|0
+15:29:52.609 (1737751122)|WF_RULE_NOT_EVALUATED
+15:29:52.609 (1737764031)|WF_CRITERIA_BEGIN|[Opportunity: Lismore Base Hospital - Stage 3B Main Works Redevelopment (Construction Phase - Main Works 1) 006O0000008kYYv]|Gate 3|01QO00000009LAx|ON_CREATE_OR_TRIGGERING_UPDATE|0
+15:29:52.609 (1737801820)|WF_RULE_FILTER|[Opportunity : Stage equals Gate 3]
+15:29:52.609 (1737811818)|WF_RULE_EVAL_VALUE|Gate 2
+15:29:52.609 (1737814040)|WF_CRITERIA_END|false
+15:29:52.609 (1737825305)|WF_SPOOL_ACTION_BEGIN|Workflow
+15:29:52.609 (1737849659)|WF_RULE_INVOCATION|[Opportunity: Lismore Base Hospital - Stage 3B Main Works Redevelopment (Construction Phase - Main Works 1) 006O0000008kYYv]
+15:29:52.609 (1737865100)|WF_OUTBOUND_MSG|[Opportunity: Lismore Base Hospital - Stage 3B Main Works Redevelopment (Construction Phase - Main Works 1) 006O0000008kYYv]|Id=04kO00000004DCX|CurrentRule:Outbound Message - Opportunity (Id=01QO00000009Msg)
+15:29:52.609 (1737896888)|WF_ACTION| Outbound Message: 1; Flow Trigger: 3;
+15:29:52.609 (1737900274)|WF_RULE_EVAL_END
+15:29:52.609 (1748266846)|WF_FLOW_ACTION_BEGIN|09LO0000000ClS6
+15:29:52.748 (1748362207)|FLOW_CREATE_INTERVIEW_BEGIN|00DO00000054ynj|300O0000000092g|301O00000000yUz
+15:29:52.748 (1750254990)|FLOW_CREATE_INTERVIEW_END|6431ec9ff10c61eef67623d8ecb415b0df2860a-1908|Apply synch default Bonding / Securities v5
+15:29:52.750 (1750613157)|FLOW_START_INTERVIEWS_BEGIN|1
+15:29:52.750 (1751460151)|FLOW_START_INTERVIEW_BEGIN|6431ec9ff10c61eef67623d8ecb415b0df2860a-1908|Apply synch default Bonding / Securities v5
+15:29:52.750 (1755701898)|FLOW_START_INTERVIEW_END|6431ec9ff10c61eef67623d8ecb415b0df2860a-1908|Apply synch default Bonding / Securities v5
+15:29:52.750 (1755712474)|FLOW_START_INTERVIEWS_END|1
+15:29:52.609 (1758124596)|WF_FLOW_ACTION_END|09LO0000000ClS6
+15:29:52.609 (1758136805)|WF_FLOW_ACTION_BEGIN|09LO0000000Clat
+15:29:52.758 (1758180266)|FLOW_CREATE_INTERVIEW_BEGIN|00DO00000054ynj|300O000000007lj|301O00000000zLF
+15:29:52.758 (1759625700)|FLOW_CREATE_INTERVIEW_END|6432ec9ff10c61eef67623d8ecb415b0df2860a-1907|Create Default Performance & defect Liability Bonds v5
+15:29:52.759 (1759813806)|FLOW_START_INTERVIEWS_BEGIN|1
+15:29:52.759 (1760788987)|FLOW_START_INTERVIEW_BEGIN|6432ec9ff10c61eef67623d8ecb415b0df2860a-1907|Create Default Performance & defect Liability Bonds v5
+15:29:52.759 (1763703837)|FLOW_START_INTERVIEW_END|6432ec9ff10c61eef67623d8ecb415b0df2860a-1907|Create Default Performance & defect Liability Bonds v5
+15:29:52.759 (1763711125)|FLOW_START_INTERVIEWS_END|1
+15:29:52.609 (1764656129)|WF_FLOW_ACTION_END|09LO0000000Clat
+15:29:52.609 (1764667851)|WF_FLOW_ACTION_BEGIN|09LO0000000ClaP
+15:29:52.764 (1764714116)|FLOW_CREATE_INTERVIEW_BEGIN|00DO00000054ynj|300O000000009Tr|301O00000000zJx
+15:29:52.764 (1765981738)|FLOW_CREATE_INTERVIEW_END|6433ec9ff10c61eef67623d8ecb415b0df2860a-1906|Apply Date Sync with all key date fields
+15:29:52.766 (1766213408)|FLOW_START_INTERVIEWS_BEGIN|1
+15:29:52.766 (1767116575)|FLOW_START_INTERVIEW_BEGIN|6433ec9ff10c61eef67623d8ecb415b0df2860a-1906|Apply Date Sync with all key date fields
+15:29:52.766 (1770640157)|FLOW_START_INTERVIEW_END|6433ec9ff10c61eef67623d8ecb415b0df2860a-1906|Apply Date Sync with all key date fields
+15:29:52.766 (1770647290)|FLOW_START_INTERVIEWS_END|1
+15:29:52.609 (1771936746)|WF_FLOW_ACTION_END|09LO0000000ClaP
+15:29:52.609 (1772050528)|WF_ACTIONS_END| Outbound Message: 1; Flow Trigger: 3;
+15:29:52.609 (1772058023)|CODE_UNIT_FINISHED|Workflow:Opportunity
+15:29:52.609 (1797889930)|CODE_UNIT_FINISHED|TRIGGERS
+15:29:52.609 (1797905245)|EXECUTION_FINISHED
+15:29:52.801 (1801869683)|CUMULATIVE_PROFILING_BEGIN
+15:29:52.801 (1801869683)|CUMULATIVE_PROFILING|No profiling information for SOQL operations
+15:29:52.801 (1801869683)|CUMULATIVE_PROFILING|No profiling information for SOSL operations
+15:29:52.801 (1801869683)|CUMULATIVE_PROFILING|No profiling information for DML operations
+15:29:52.801 (1801869683)|CUMULATIVE_PROFILING|method invocations|
+Trigger.opportunityTrigger: line 4, column 1: public opportunityTriggerHandler(): executed 4 times in 23 ms
+Class.TriggerHandler.run: line 41, column 1: public void beforeUpdate(): executed 1 time in 20 ms
+Class.opportunityTriggerHandler.beforeUpdate: line 31, column 1: private void determineGate(): executed 1 time in 20 ms
+External entry point: public void invoke(): executed 1 time in 2 ms
+Class.opportunityTriggerHandler.<init>: line 20, column 1: public TriggerHandler(): executed 2 times in 2 ms
+Class.TriggerHandler.run: line 35, column 1: private void addToLoopCount(): executed 2 times in 1 ms
+Class.TriggerHandler.<init>: line 23, column 1: private void setTriggerContext(): executed 2 times in 1 ms
+Class.TriggerHandler.setTriggerContext: line 95, column 1: private void setTriggerContext(String, Boolean): executed 2 times in 1 ms
+Class.opportunityTriggerHandler: line 15, column 1: global Schema.DescribeSObjectResult getDescribe(): executed 2 times in 1 ms
+Class.TriggerHandler.run: line 33, column 1: private Boolean validateRun(): executed 2 times in 0 ms
+Class.TriggerHandler.addToLoopCount: line 134, column 1: private String getHandlerName(): executed 2 times in 0 ms
+
+15:29:52.801 (1801869683)|CUMULATIVE_PROFILING_END

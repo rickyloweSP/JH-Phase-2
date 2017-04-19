@@ -1,0 +1,268 @@
+34.0 APEX_CODE,FINEST;APEX_PROFILING,FINEST;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+09:46:09.0 (73224)|USER_INFO|[EXTERNAL]|005O0000003t7an|ricky.lowe@jhg.com.au.pcphase2|Australian Eastern Standard Time|GMT+11:00
+09:46:09.0 (110605)|EXECUTION_STARTED
+09:46:09.0 (115227)|CODE_UNIT_STARTED|[EXTERNAL]|FutureHandler - state load
+09:46:09.0 (2489171)|CODE_UNIT_FINISHED|FutureHandler - state load
+09:46:09.0 (20579585)|EXECUTION_FINISHED
+09:46:09.35 (35598553)|USER_INFO|[EXTERNAL]|005O0000003t7an|ricky.lowe@jhg.com.au.pcphase2|Australian Eastern Standard Time|GMT+11:00
+09:46:09.35 (35627440)|EXECUTION_STARTED
+09:46:09.35 (35644398)|CODE_UNIT_STARTED|[EXTERNAL]|01pO00000003IBZ|gateTriggerHandler.findNextApprover
+09:46:09.35 (35973400)|VARIABLE_SCOPE_BEGIN|[5]|TriggerHandler.bypassedHandlers|Set<String>|true|true
+09:46:09.35 (35986711)|VARIABLE_SCOPE_BEGIN|[4]|TriggerHandler.loopCountMap|Map<String,TriggerHandler.LoopCount>|true|true
+09:46:09.35 (36217250)|HEAP_ALLOCATE|[72]|Bytes:3
+09:46:09.35 (36262035)|HEAP_ALLOCATE|[77]|Bytes:152
+09:46:09.35 (36288600)|HEAP_ALLOCATE|[342]|Bytes:408
+09:46:09.35 (36320244)|HEAP_ALLOCATE|[355]|Bytes:408
+09:46:09.35 (36351487)|HEAP_ALLOCATE|[467]|Bytes:48
+09:46:09.35 (36397906)|HEAP_ALLOCATE|[139]|Bytes:6
+09:46:09.35 (36427967)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:30
+09:46:09.35 (36434882)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:29
+09:46:09.35 (36445895)|METHOD_ENTRY|[14]|01pO00000003IBZ|gateTriggerHandler.gateTriggerHandler()
+09:46:09.35 (36450788)|STATEMENT_EXECUTE|[14]
+09:46:09.35 (36458463)|STATEMENT_EXECUTE|[14]
+09:46:09.35 (36499054)|HEAP_ALLOCATE|[50]|Bytes:5
+09:46:09.35 (36530589)|HEAP_ALLOCATE|[56]|Bytes:5
+09:46:09.35 (36549281)|HEAP_ALLOCATE|[64]|Bytes:7
+09:46:09.35 (37192277)|SYSTEM_MODE_ENTER|false
+09:46:09.35 (37206394)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+09:46:09.35 (37213637)|SYSTEM_MODE_EXIT|false
+09:46:09.35 (37222209)|METHOD_EXIT|[14]|gateTriggerHandler
+09:46:09.35 (37233904)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+09:46:09.35 (37241656)|VARIABLE_SCOPE_BEGIN|[57]|gateIds|Set<Id>|true|false
+09:46:09.35 (37275955)|VARIABLE_ASSIGNMENT|[57]|gateIds|["a0nO0000003xMJlIAM"]|0x6e6ec26
+09:46:09.35 (37287217)|SYSTEM_MODE_ENTER|false
+09:46:09.35 (37291793)|HEAP_ALLOCATE|[58]|Bytes:5
+09:46:09.35 (37295428)|STATEMENT_EXECUTE|[57]
+09:46:09.35 (37296825)|STATEMENT_EXECUTE|[58]
+09:46:09.35 (37489266)|HEAP_ALLOCATE|[58]|Bytes:4
+09:46:09.35 (37586365)|VARIABLE_SCOPE_BEGIN|[58]|approversToUpdate|List<Assigned_Approver__c>|true|false
+09:46:09.35 (37595557)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+09:46:09.35 (37617160)|VARIABLE_ASSIGNMENT|[58]|approversToUpdate|[]|0x7b9da7d9
+09:46:09.35 (37620411)|STATEMENT_EXECUTE|[59]
+09:46:09.35 (37663681)|HEAP_ALLOCATE|[59]|Bytes:4
+09:46:09.35 (37701833)|VARIABLE_SCOPE_BEGIN|[59]|gatesToUpdate|List<Gate__c>|true|false
+09:46:09.35 (37708008)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+09:46:09.35 (37714497)|VARIABLE_ASSIGNMENT|[59]|gatesToUpdate|[]|0x4838f88d
+09:46:09.35 (37717562)|STATEMENT_EXECUTE|[61]
+09:46:09.35 (37869690)|HEAP_ALLOCATE|[61]|Bytes:20
+09:46:09.35 (37926041)|USER_DEBUG|[61]|ERROR|*** findNextApprover
+09:46:09.35 (37936277)|HEAP_ALLOCATE|[64]|Bytes:250
+09:46:09.35 (37947850)|HEAP_ALLOCATE|[64]|Bytes:4
+09:46:09.35 (37957181)|HEAP_ALLOCATE|[64]|Bytes:7
+09:46:09.35 (38813996)|SOQL_EXECUTE_BEGIN|[64]|Aggregations:1|SELECT ID, Status__c, (SELECT Approval_Level__c, Approval_Status__c, Approver__c, Current_Approver__c, Gate__c, Id FROM Assigned_Approvers__r ORDER BY Approval_Level__c ASC NULLS FIRST) FROM Gate__c 
+09:46:09.35 (38835156)|LIMIT_USAGE|[64]|SOQL|1|200
+09:46:09.35 (38842765)|LIMIT_USAGE|[64]|AGGS|1|600
+09:46:09.35 (48692822)|SOQL_EXECUTE_END|[64]|Rows:1
+09:46:09.35 (48707088)|LIMIT_USAGE|[64]|SOQL_ROWS|1|50000
+09:46:09.35 (48719972)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+09:46:09.35 (48976218)|HEAP_ALLOCATE|[64]|Bytes:49
+09:46:09.35 (48987283)|HEAP_ALLOCATE|[64]|Bytes:8
+09:46:09.35 (48999489)|SYSTEM_METHOD_ENTRY|[7]|QueryLocatorIterator.QueryLocatorIterator()
+09:46:09.35 (49002994)|STATEMENT_EXECUTE|[7]
+09:46:09.35 (49016075)|SYSTEM_METHOD_EXIT|[7]|QueryLocatorIterator
+09:46:09.35 (49024709)|HEAP_ALLOCATE|[64]|Bytes:28
+09:46:09.35 (49053632)|HEAP_ALLOCATE|[64]|Bytes:8
+09:46:09.35 (49068623)|HEAP_ALLOCATE|[64]|Bytes:8
+09:46:09.35 (49070891)|HEAP_ALLOCATE|[64]|Bytes:8
+09:46:09.35 (49076781)|VARIABLE_SCOPE_BEGIN|[15]|this|Database.QueryLocatorIterator|true|false
+09:46:09.35 (49120327)|VARIABLE_ASSIGNMENT|[15]|this|{}|0x6b82c8af
+09:46:09.35 (49123667)|VARIABLE_SCOPE_BEGIN|[15]|values|List<SObject>|true|false
+09:46:09.35 (49168423)|VARIABLE_ASSIGNMENT|[15]|values|[{"Id":"a0nO0000003xMJlIAM","Status__c":"In Progress","Assigned_Approvers__ (1 more) ...":[{"Gate__c":"a0nO0000003xMJlIAM","Id":"a0oO0000002tV8jIAE","Approval_Level__c":"1","Approval_Status__c":"Approved with Condit (4 more) ...","Approver__c":"00528000004d3msAAA","Current_Approver__c":false},{"Gate__c":"a0nO0000003xMJlIAM","Id":"a0oO0000002tV8kIAE","Approval_Level__c":"2","Approval_Status__c":"Approved","Approver__c":"005O0000003t7anIAA","Current_Approver__c":false},{"Gate__c":"a0nO0000003xMJlIAM","Id":"a0oO0000002tV8hIAE","Approval_Level__c":"3","Approval_Status__c":"Rejected","Approver__c":"005O0000003t7anIAA","Current_Approver__c":false},{"Gate__c":"a0nO0000003xMJlIAM","Id":"a0oO0000002tV8iIAE","Approval_Level__c":"4","Approval_Status__c":"Assigned Pending App (5 more) ...","Approver__c":"005O0000003t7anIAA","Current_Approver__c":false}]}]|0x776d4505
+09:46:09.35 (49176142)|VARIABLE_SCOPE_BEGIN|[15]|ql|Database.QueryLocator|true|false
+09:46:09.35 (49189351)|VARIABLE_ASSIGNMENT|[15]|ql|{"query":"SELECT ID, Status__c (230 more) ..."}|0x3dbba13b
+09:46:09.35 (49191717)|VARIABLE_SCOPE_BEGIN|[15]|totalNumRecords|Integer|false|false
+09:46:09.35 (49195119)|VARIABLE_ASSIGNMENT|[15]|totalNumRecords|1
+09:46:09.35 (49196750)|VARIABLE_SCOPE_BEGIN|[15]|queryMoreSize|Integer|false|false
+09:46:09.35 (49199178)|VARIABLE_ASSIGNMENT|[15]|queryMoreSize|49999
+09:46:09.35 (49288863)|HEAP_ALLOCATE|[64]|Bytes:28
+09:46:09.35 (49312081)|METHOD_ENTRY|[64]||Database.QueryLocatorIterator.hasNext()
+09:46:09.35 (49385415)|METHOD_EXIT|[64]||Database.QueryLocatorIterator.hasNext()
+09:46:09.35 (49398974)|METHOD_ENTRY|[64]||Database.QueryLocatorIterator.next()
+09:46:09.35 (49512684)|METHOD_EXIT|[64]||Database.QueryLocatorIterator.next()
+09:46:09.35 (49519864)|VARIABLE_SCOPE_BEGIN|[64]|G|Gate__c|true|false
+09:46:09.35 (49549451)|VARIABLE_ASSIGNMENT|[64]|G|{"Id":"a0nO0000003xMJlIAM","Status__c":"In Progress","Assigned_Approvers__ (1 more) ...":[{"Gate__c":"a0nO0000003xMJlIAM","Id":"a0oO0000002tV8jIAE","Approval_Level__c":"1","Approval_Status__c":"Approved with Condit (4 more) ...","Approver__c":"00528000004d3msAAA","Current_Approver__c":false},{"Gate__c":"a0nO0000003xMJlIAM","Id":"a0oO0000002tV8kIAE","Approval_Level__c":"2","Approval_Status__c":"Approved","Approver__c":"005O0000003t7anIAA","Current_Approver__c":false},{"Gate__c":"a0nO0000003xMJlIAM","Id":"a0oO0000002tV8hIAE","Approval_Level__c":"3","Approval_Status__c":"Rejected","Approver__c":"005O0000003t7anIAA","Current_Approver__c":false},{"Gate__c":"a0nO0000003xMJlIAM","Id":"a0oO0000002tV8iIAE","Approval_Level__c":"4","Approval_Status__c":"Assigned Pending App (5 more) ...","Approver__c":"005O0000003t7anIAA","Current_Approver__c":false}]}|0x4dca9045
+09:46:09.35 (49557791)|STATEMENT_EXECUTE|[69]
+09:46:09.35 (49559243)|STATEMENT_EXECUTE|[71]
+09:46:09.35 (49563792)|HEAP_ALLOCATE|[71]|Bytes:21
+09:46:09.35 (49571545)|HEAP_ALLOCATE|[71]|Bytes:20
+09:46:09.35 (49612503)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:20
+09:46:09.35 (49633155)|HEAP_ALLOCATE|[71]|Bytes:20
+09:46:09.35 (49641794)|VARIABLE_SCOPE_BEGIN|[71]|AAs|List<Assigned_Approver__c>|true|false
+09:46:09.35 (49669279)|VARIABLE_ASSIGNMENT|[71]|AAs|[{"Gate__c":"a0nO0000003xMJlIAM","Id":"a0oO0000002tV8jIAE","Approval_Level__c":"1","Approval_Status__c":"Approved with Condit (4 more) ...","Approver__c":"00528000004d3msAAA","Current_Approver__c":false},{"Gate__c":"a0nO0000003xMJlIAM","Id":"a0oO0000002tV8kIAE","Approval_Level__c":"2","Approval_Status__c":"Approved","Approver__c":"005O0000003t7anIAA","Current_Approver__c":false},{"Gate__c":"a0nO0000003xMJlIAM","Id":"a0oO0000002tV8hIAE","Approval_Level__c":"3","Approval_Status__c":"Rejected","Approver__c":"005O0000003t7anIAA","Current_Approver__c":false},{"Gate__c":"a0nO0000003xMJlIAM","Id":"a0oO0000002tV8iIAE","Approval_Level__c":"4","Approval_Status__c":"Assigned Pending App (5 more) ...","Approver__c":"005O0000003t7anIAA","Current_Approver__c":false}]|0x5012a194
+09:46:09.35 (49674693)|STATEMENT_EXECUTE|[72]
+09:46:09.35 (49682366)|HEAP_ALLOCATE|[72]|Bytes:9
+09:46:09.35 (49897075)|HEAP_ALLOCATE|[72]|Bytes:765
+09:46:09.35 (49919662)|HEAP_ALLOCATE|[72]|Bytes:774
+09:46:09.35 (49949076)|USER_DEBUG|[72]|ERROR|*** AAs: (Assigned_Approver__c:{Gate__c=a0nO0000003xMJlIAM, Id=a0oO0000002tV8jIAE, Approval_Level__c=1, Approval_Status__c=Approved with Conditions, Approver__c=00528000004d3msAAA, Current_Approver__c=false}, Assigned_Approver__c:{Gate__c=a0nO0000003xMJlIAM, Id=a0oO0000002tV8kIAE, Approval_Level__c=2, Approval_Status__c=Approved, Approver__c=005O0000003t7anIAA, Current_Approver__c=false}, Assigned_Approver__c:{Gate__c=a0nO0000003xMJlIAM, Id=a0oO0000002tV8hIAE, Approval_Level__c=3, Approval_Status__c=Rejected, Approver__c=005O0000003t7anIAA, Current_Approver__c=false}, Assigned_Approver__c:{Gate__c=a0nO0000003xMJlIAM, Id=a0oO0000002tV8iIAE, Approval_Level__c=4, Approval_Status__c=Assigned Pending Approval, Approver__c=005O0000003t7anIAA, Current_Approver__c=false})
+09:46:09.35 (49958230)|STATEMENT_EXECUTE|[74]
+09:46:09.35 (49959683)|STATEMENT_EXECUTE|[77]
+09:46:09.35 (49963523)|VARIABLE_SCOPE_BEGIN|[77]|updateGate|Boolean|false|false
+09:46:09.35 (49969750)|HEAP_ALLOCATE|[77]|Bytes:5
+09:46:09.35 (49976419)|VARIABLE_ASSIGNMENT|[77]|updateGate|false
+09:46:09.35 (49978316)|STATEMENT_EXECUTE|[78]
+09:46:09.35 (49982017)|VARIABLE_SCOPE_BEGIN|[78]|gateStatus|String|false|false
+09:46:09.35 (49986544)|VARIABLE_ASSIGNMENT|[78]|gateStatus|""
+09:46:09.35 (50131907)|HEAP_ALLOCATE|[79]|Bytes:5
+09:46:09.35 (50149577)|HEAP_ALLOCATE|[79]|Bytes:28
+09:46:09.35 (50155852)|VARIABLE_SCOPE_BEGIN|[79]|AA|Assigned_Approver__c|true|false
+09:46:09.35 (50171802)|VARIABLE_ASSIGNMENT|[79]|AA|{"Gate__c":"a0nO0000003xMJlIAM","Id":"a0oO0000002tV8jIAE","Approval_Level__c":"1","Approval_Status__c":"Approved with Condit (4 more) ...","Approver__c":"00528000004d3msAAA","Current_Approver__c":false}|0x5b07b10b
+09:46:09.35 (50175867)|STATEMENT_EXECUTE|[79]
+09:46:09.35 (50177245)|STATEMENT_EXECUTE|[80]
+09:46:09.35 (50181684)|HEAP_ALLOCATE|[80]|Bytes:18
+09:46:09.35 (50259345)|HEAP_ALLOCATE|[80]|Bytes:197
+09:46:09.35 (50276335)|HEAP_ALLOCATE|[80]|Bytes:215
+09:46:09.35 (50291646)|USER_DEBUG|[80]|ERROR|*** Debug 1 - AA: Assigned_Approver__c:{Gate__c=a0nO0000003xMJlIAM, Id=a0oO0000002tV8jIAE, Approval_Level__c=1, Approval_Status__c=Approved with Conditions, Approver__c=00528000004d3msAAA, Current_Approver__c=false}
+09:46:09.35 (50325290)|HEAP_ALLOCATE|[83]|Bytes:8
+09:46:09.35 (50353132)|HEAP_ALLOCATE|[90]|Bytes:8
+09:46:09.35 (50363821)|HEAP_ALLOCATE|[96]|Bytes:25
+09:46:09.35 (50374594)|HEAP_ALLOCATE|[102]|Bytes:24
+09:46:09.35 (50391232)|HEAP_ALLOCATE|[102]|Bytes:11
+09:46:09.35 (50397292)|HEAP_ALLOCATE|[102]|Bytes:11
+09:46:09.35 (50403607)|STATEMENT_EXECUTE|[102]
+09:46:09.35 (50405315)|STATEMENT_EXECUTE|[103]
+09:46:09.35 (50413698)|VARIABLE_ASSIGNMENT|[103]|gateStatus|"Approved with Condit (4 more) ..."
+09:46:09.35 (50415754)|STATEMENT_EXECUTE|[104]
+09:46:09.35 (50420262)|HEAP_ALLOCATE|[104]|Bytes:5
+09:46:09.35 (50425027)|VARIABLE_ASSIGNMENT|[104]|updateGate|true
+09:46:09.35 (50426875)|STATEMENT_EXECUTE|[105]
+09:46:09.35 (50432369)|HEAP_ALLOCATE|[105]|Bytes:40
+09:46:09.35 (50438036)|HEAP_ALLOCATE|[105]|Bytes:64
+09:46:09.35 (50464729)|USER_DEBUG|[105]|ERROR|*** Debug 2.d - App w/ cond gateStatus: Approved with Conditions
+09:46:09.35 (50479062)|HEAP_ALLOCATE|[79]|Bytes:5
+09:46:09.35 (50504225)|HEAP_ALLOCATE|[79]|Bytes:28
+09:46:09.35 (50511249)|VARIABLE_SCOPE_BEGIN|[79]|AA|Assigned_Approver__c|true|false
+09:46:09.35 (50525519)|VARIABLE_ASSIGNMENT|[79]|AA|{"Gate__c":"a0nO0000003xMJlIAM","Id":"a0oO0000002tV8kIAE","Approval_Level__c":"2","Approval_Status__c":"Approved","Approver__c":"005O0000003t7anIAA","Current_Approver__c":false}|0x7eb570d2
+09:46:09.35 (50529619)|STATEMENT_EXECUTE|[79]
+09:46:09.35 (50530871)|STATEMENT_EXECUTE|[80]
+09:46:09.35 (50589128)|HEAP_ALLOCATE|[80]|Bytes:181
+09:46:09.35 (50603388)|HEAP_ALLOCATE|[80]|Bytes:199
+09:46:09.35 (50615808)|USER_DEBUG|[80]|ERROR|*** Debug 1 - AA: Assigned_Approver__c:{Gate__c=a0nO0000003xMJlIAM, Id=a0oO0000002tV8kIAE, Approval_Level__c=2, Approval_Status__c=Approved, Approver__c=005O0000003t7anIAA, Current_Approver__c=false}
+09:46:09.35 (50648919)|HEAP_ALLOCATE|[108]|Bytes:8
+09:46:09.35 (50676499)|STATEMENT_EXECUTE|[83]
+09:46:09.35 (50691931)|HEAP_ALLOCATE|[79]|Bytes:5
+09:46:09.35 (50716035)|HEAP_ALLOCATE|[79]|Bytes:28
+09:46:09.35 (50723069)|VARIABLE_SCOPE_BEGIN|[79]|AA|Assigned_Approver__c|true|false
+09:46:09.35 (50737316)|VARIABLE_ASSIGNMENT|[79]|AA|{"Gate__c":"a0nO0000003xMJlIAM","Id":"a0oO0000002tV8hIAE","Approval_Level__c":"3","Approval_Status__c":"Rejected","Approver__c":"005O0000003t7anIAA","Current_Approver__c":false}|0x185c09e6
+09:46:09.35 (50740988)|STATEMENT_EXECUTE|[79]
+09:46:09.35 (50741990)|STATEMENT_EXECUTE|[80]
+09:46:09.35 (50798428)|HEAP_ALLOCATE|[80]|Bytes:181
+09:46:09.35 (50812519)|HEAP_ALLOCATE|[80]|Bytes:199
+09:46:09.35 (50824535)|USER_DEBUG|[80]|ERROR|*** Debug 1 - AA: Assigned_Approver__c:{Gate__c=a0nO0000003xMJlIAM, Id=a0oO0000002tV8hIAE, Approval_Level__c=3, Approval_Status__c=Rejected, Approver__c=005O0000003t7anIAA, Current_Approver__c=false}
+09:46:09.35 (50843071)|STATEMENT_EXECUTE|[83]
+09:46:09.35 (50844839)|STATEMENT_EXECUTE|[84]
+09:46:09.35 (50851976)|VARIABLE_ASSIGNMENT|[84]|gateStatus|"Rejected"
+09:46:09.35 (50854082)|STATEMENT_EXECUTE|[85]
+09:46:09.35 (50858592)|HEAP_ALLOCATE|[85]|Bytes:5
+09:46:09.35 (50863441)|VARIABLE_ASSIGNMENT|[85]|updateGate|true
+09:46:09.35 (50865287)|STATEMENT_EXECUTE|[86]
+09:46:09.35 (50870308)|HEAP_ALLOCATE|[86]|Bytes:37
+09:46:09.35 (50875589)|HEAP_ALLOCATE|[86]|Bytes:45
+09:46:09.35 (50897250)|USER_DEBUG|[86]|ERROR|*** Debug 2.a - rejected gateStatus: Rejected
+09:46:09.35 (50903707)|STATEMENT_EXECUTE|[87]
+09:46:09.35 (50910516)|VARIABLE_ASSIGNMENT|[79]|AA|null|
+09:46:09.35 (50913392)|STATEMENT_EXECUTE|[115]
+09:46:09.35 (50917221)|HEAP_ALLOCATE|[115]|Bytes:26
+09:46:09.35 (50922781)|HEAP_ALLOCATE|[115]|Bytes:34
+09:46:09.35 (50939868)|USER_DEBUG|[115]|ERROR|*** Debug 3 - gateStatus: Rejected
+09:46:09.35 (50954290)|STATEMENT_EXECUTE|[118]
+09:46:09.35 (50957351)|STATEMENT_EXECUTE|[130]
+09:46:09.35 (50958664)|STATEMENT_EXECUTE|[131]
+09:46:09.35 (51036755)|VARIABLE_ASSIGNMENT|[131]|this.Status__c|"Rejected"|0x4dca9045
+09:46:09.35 (51042787)|STATEMENT_EXECUTE|[132]
+09:46:09.35 (51084412)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+09:46:09.35 (51104444)|METHOD_ENTRY|[64]||Database.QueryLocatorIterator.hasNext()
+09:46:09.35 (51128344)|METHOD_EXIT|[64]||Database.QueryLocatorIterator.hasNext()
+09:46:09.35 (51140933)|VARIABLE_ASSIGNMENT|[64]|G|null|
+09:46:09.35 (51162408)|STATEMENT_EXECUTE|[138]
+09:46:09.35 (51164686)|STATEMENT_EXECUTE|[138]
+09:46:09.35 (51197676)|STATEMENT_EXECUTE|[139]
+09:46:09.35 (51222857)|STATEMENT_EXECUTE|[142]
+09:46:09.35 (51225827)|STATEMENT_EXECUTE|[143]
+09:46:09.35 (51277809)|DML_BEGIN|[143]|Op:Update|Type:Gate__c|Rows:1
+09:46:09.35 (51294159)|LIMIT_USAGE|[143]|DML|1|150
+09:46:09.35 (51304039)|LIMIT_USAGE|[143]|DML_ROWS|1|10000
+09:46:09.35 (51322916)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+09:46:09.35 (69012436)|DML_END|[143]
+09:46:09.35 (69111988)|EXCEPTION_THROWN|[143]|System.DmlException: Update failed. First exception on row 0 with id a0nO0000003xMJlIAM; first error: INVALID_OR_NULL_FOR_RESTRICTED_PICKLIST, Status: bad value for restricted picklist field: Rejected: [Status__c]
+09:46:09.35 (69659292)|HEAP_ALLOCATE|[143]|Bytes:196
+09:46:09.35 (69717693)|VARIABLE_SCOPE_BEGIN|[146]|e|Exception|true|false
+09:46:09.35 (69815542)|VARIABLE_ASSIGNMENT|[146]|e|"common.apex.runtime.impl.DmlExecutionException: Update failed. First exception on row 0 with id a0nO0000003xMJlIAM; first error: INVALID_OR_NULL_FOR_RESTRICTED_PICKLIST, Status: bad value for restricted picklist field: Rejected: [Status__c]"|0x184854c8
+09:46:09.35 (69825993)|STATEMENT_EXECUTE|[146]
+09:46:09.35 (69837638)|SYSTEM_MODE_EXIT|false
+09:46:09.69 (69856858)|CUMULATIVE_LIMIT_USAGE
+09:46:09.69 (69856858)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 200
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:46:09.69 (69856858)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+09:46:09.69 (69856858)|STATIC_VARIABLE_LIST|
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MAX_VALUE:0
+  Boolean:FALSE:0
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MIN_VALUE:0
+  int:SIZE:0
+  double:NEGATIVE_INFINITY:0
+  int:MAX_VALUE:0
+  char[]:digits:0
+  double:NaN:0
+  Boolean:TRUE:0
+  String:__sfdcParameterizedTypes:0
+  int:MIN_VALUE:0
+  char[]:DigitOnes:0
+  int:BYTES:0
+  int:MIN_EXPONENT:0
+  String:_sfdcSuppressedCodeLocations:0
+  int[]:sizeTable:0
+  int:MAX_EXPONENT:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  double:MIN_NORMAL:0
+  int:BYTES:0
+
+09:46:09.69 (69856858)|CUMULATIVE_LIMIT_USAGE_END
+
+09:46:09.35 (70005720)|CODE_UNIT_FINISHED|gateTriggerHandler.findNextApprover
+09:46:09.35 (71594727)|EXECUTION_FINISHED
+09:46:09.116 (116428324)|CUMULATIVE_PROFILING_BEGIN
+09:46:09.116 (116428324)|CUMULATIVE_PROFILING|SOQL operations|
+Class.gateTriggerHandler.findNextApprover: line 64, column 1: [SELECT ID,Status__c, 
+                           (SELECT Approval_Level__c,Approval_Status__c,Approver__c,Current_Approver__c,Gate__c,Id 
+                            FROM Assigned_Approvers__r 
+                            ORDER BY Approval_Level__c ASC) 
+                        FROM Gate__c 
+                        WHERE ID IN: gateIds AND status__c = 'In Progress']: executed 5 times in 12 ms
+
+09:46:09.116 (116428324)|CUMULATIVE_PROFILING|No profiling information for SOSL operations
+09:46:09.116 (116428324)|CUMULATIVE_PROFILING|DML operations|
+Class.gateTriggerHandler.findNextApprover: line 143, column 1: Update: List<Gate__c>: executed 1 time in 18 ms
+
+09:46:09.116 (116428324)|CUMULATIVE_PROFILING|method invocations|
+External entry point: public static void findNextApprover(Set<Id>): executed 1 time in 33 ms
+Class.gateTriggerHandler.findNextApprover: line 79, column 1: global public System.Iterator iterator(): executed 4 times in 1 ms
+Class.gateTriggerHandler.findNextApprover: line 132, column 1: global public Object add(Object): executed 1 time in 0 ms
+Class.gateTriggerHandler.findNextApprover: line 72, column 1: public static String valueOf(Object): executed 2 times in 0 ms
+Class.gateTriggerHandler.findNextApprover: line 105, column 1: global public static void debug(APEX_OBJECT, ANY): executed 1 time in 0 ms
+Class.gateTriggerHandler.findNextApprover: line 139, column 1: global public Integer size(): executed 1 time in 0 ms
+Class.gateTriggerHandler.findNextApprover: line 142, column 1: global public Integer size(): executed 1 time in 0 ms
+Class.gateTriggerHandler.findNextApprover: line 80, column 1: public static String valueOf(Object): executed 6 times in 0 ms
+Class.gateTriggerHandler.findNextApprover: line 115, column 1: global public static void debug(APEX_OBJECT, ANY): executed 1 time in 0 ms
+Class.gateTriggerHandler.findNextApprover: line 86, column 1: global public static void debug(APEX_OBJECT, ANY): executed 1 time in 0 ms
+Class.gateTriggerHandler.findNextApprover: line 58, column 1: global public List<Assigned_Approver__c>(): executed 1 time in 0 ms
+
+09:46:09.116 (116428324)|CUMULATIVE_PROFILING_END

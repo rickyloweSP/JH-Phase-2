@@ -1,0 +1,941 @@
+39.0 APEX_CODE,FINEST;APEX_PROFILING,FINEST;CALLOUT,NONE;DB,FINEST;SYSTEM,FINE;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,FINER
+16:33:34.0 (506353)|USER_INFO|[EXTERNAL]|005O0000003t7an|ricky.lowe@jhg.com.au.pcphase2|Australian Eastern Standard Time|GMT+11:00
+16:33:34.0 (541667)|EXECUTION_STARTED
+16:33:34.0 (545865)|CODE_UNIT_STARTED|[EXTERNAL]|TRIGGERS
+16:33:34.0 (582155)|CODE_UNIT_STARTED|[EXTERNAL]|01qO00000000SDP|opportunityTrigger on Opportunity trigger event BeforeUpdate for [006O0000008l3xR]
+16:33:34.0 (618068)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+16:33:34.0 (865713)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+16:33:34.0 (1470441)|HEAP_ALLOCATE|[72]|Bytes:3
+16:33:34.0 (1507448)|HEAP_ALLOCATE|[77]|Bytes:152
+16:33:34.0 (1527630)|HEAP_ALLOCATE|[342]|Bytes:408
+16:33:34.0 (1549124)|HEAP_ALLOCATE|[355]|Bytes:408
+16:33:34.0 (1567253)|HEAP_ALLOCATE|[467]|Bytes:48
+16:33:34.0 (1598383)|HEAP_ALLOCATE|[139]|Bytes:6
+16:33:34.0 (1627751)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+16:33:34.0 (1638262)|VARIABLE_SCOPE_BEGIN|[1]|this|opportunityTrigger|true|false
+16:33:34.0 (1689451)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x6c17eac2
+16:33:34.0 (1746541)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+16:33:34.0 (1755637)|VARIABLE_SCOPE_BEGIN|[1]|this|opportunityTrigger|true|false
+16:33:34.0 (1768802)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x6c17eac2
+16:33:34.0 (1775172)|STATEMENT_EXECUTE|[1]
+16:33:34.0 (1777274)|STATEMENT_EXECUTE|[4]
+16:33:34.0 (6565164)|VARIABLE_SCOPE_BEGIN|[16]|opportunityTriggerHandler.KCRARecordTypeID|String|false|true
+16:33:34.0 (6574414)|VARIABLE_SCOPE_BEGIN|[15]|opportunityTriggerHandler.KCRATemplateRecordTypeID|String|false|true
+16:33:34.0 (6581642)|VARIABLE_SCOPE_BEGIN|[18]|opportunityTriggerHandler.PRARecordTypeID|String|false|true
+16:33:34.0 (6588104)|VARIABLE_SCOPE_BEGIN|[17]|opportunityTriggerHandler.PRATemplateRecordTypeID|String|false|true
+16:33:34.0 (6597996)|VARIABLE_SCOPE_BEGIN|[20]|opportunityTriggerHandler.isTest|Boolean|false|true
+16:33:34.0 (6601878)|VARIABLE_SCOPE_BEGIN|[19]|opportunityTriggerHandler.recursion|Boolean|false|true
+16:33:34.0 (6605181)|VARIABLE_SCOPE_BEGIN|[14]|opportunityTriggerHandler.runOnce|Boolean|false|true
+16:33:34.0 (10005763)|VARIABLE_SCOPE_BEGIN|[5]|TriggerHandler.bypassedHandlers|Set<String>|true|true
+16:33:34.0 (10287822)|VARIABLE_SCOPE_BEGIN|[4]|TriggerHandler.loopCountMap|Map<String,TriggerHandler.LoopCount>|true|true
+16:33:34.0 (10327823)|HEAP_ALLOCATE|[4]|Bytes:36
+16:33:34.0 (10339483)|HEAP_ALLOCATE|[4]|Bytes:67
+16:33:34.0 (10373490)|METHOD_ENTRY|[13]|01pO0000000371i|opportunityTriggerHandler.opportunityTriggerHandler()
+16:33:34.0 (10379463)|STATEMENT_EXECUTE|[13]
+16:33:34.0 (10387958)|STATEMENT_EXECUTE|[13]
+16:33:34.0 (10389507)|STATEMENT_EXECUTE|[14]
+16:33:34.0 (10424359)|HEAP_ALLOCATE|[50]|Bytes:5
+16:33:34.0 (10461149)|HEAP_ALLOCATE|[56]|Bytes:5
+16:33:34.0 (10471107)|HEAP_ALLOCATE|[64]|Bytes:7
+16:33:34.0 (10503169)|HEAP_ALLOCATE|[14]|Bytes:5
+16:33:34.0 (10521221)|VARIABLE_ASSIGNMENT|[14]|opportunityTriggerHandler.runOnce|true
+16:33:34.0 (10526260)|STATEMENT_EXECUTE|[15]
+16:33:34.0 (10531292)|HEAP_ALLOCATE|[15]|Bytes:33
+16:33:34.0 (10671017)|SYSTEM_METHOD_ENTRY|[15]|Schema.SObjectType.getDescribe()
+16:33:34.0 (10978021)|HEAP_ALLOCATE|[15]|Bytes:4
+16:33:34.0 (10992490)|SYSTEM_METHOD_EXIT|[15]|Schema.SObjectType.getDescribe()
+16:33:34.0 (11028635)|LIMIT_USAGE|[15]|RECORD_TYPE_DESCRIBES|1|100
+16:33:34.0 (13721528)|HEAP_ALLOCATE|[15]|Bytes:16
+16:33:34.0 (13741693)|HEAP_ALLOCATE|[15]|Bytes:13
+16:33:34.0 (13796047)|SYSTEM_METHOD_ENTRY|[15]|Map<String,Schema.RecordTypeInfo>.get(Object)
+16:33:34.0 (13953110)|SYSTEM_METHOD_EXIT|[15]|Map<String,Schema.RecordTypeInfo>.get(Object)
+16:33:34.0 (13995053)|HEAP_ALLOCATE|[15]|Bytes:4
+16:33:34.0 (14022321)|HEAP_ALLOCATE|[15]|Bytes:18
+16:33:34.0 (14045955)|VARIABLE_ASSIGNMENT|[15]|opportunityTriggerHandler.KCRATemplateRecordTypeID|"012O0000000DCgLIAW"
+16:33:34.0 (14051076)|STATEMENT_EXECUTE|[16]
+16:33:34.0 (14094866)|SYSTEM_METHOD_ENTRY|[16]|Schema.SObjectType.getDescribe()
+16:33:34.0 (14129719)|HEAP_ALLOCATE|[16]|Bytes:4
+16:33:34.0 (14139881)|SYSTEM_METHOD_EXIT|[16]|Schema.SObjectType.getDescribe()
+16:33:34.0 (14159722)|LIMIT_USAGE|[16]|RECORD_TYPE_DESCRIBES|2|100
+16:33:34.0 (14182556)|HEAP_ALLOCATE|[16]|Bytes:16
+16:33:34.0 (14192592)|HEAP_ALLOCATE|[16]|Bytes:4
+16:33:34.0 (14215010)|SYSTEM_METHOD_ENTRY|[16]|Map<String,Schema.RecordTypeInfo>.get(Object)
+16:33:34.0 (14232490)|SYSTEM_METHOD_EXIT|[16]|Map<String,Schema.RecordTypeInfo>.get(Object)
+16:33:34.0 (14253301)|HEAP_ALLOCATE|[16]|Bytes:4
+16:33:34.0 (14261176)|HEAP_ALLOCATE|[16]|Bytes:18
+16:33:34.0 (14272743)|VARIABLE_ASSIGNMENT|[16]|opportunityTriggerHandler.KCRARecordTypeID|"012O0000000DCgGIAW"
+16:33:34.0 (14275549)|STATEMENT_EXECUTE|[17]
+16:33:34.0 (14279297)|HEAP_ALLOCATE|[17]|Bytes:26
+16:33:34.0 (14318429)|SYSTEM_METHOD_ENTRY|[17]|Schema.SObjectType.getDescribe()
+16:33:34.0 (14429477)|HEAP_ALLOCATE|[17]|Bytes:4
+16:33:34.0 (14437534)|SYSTEM_METHOD_EXIT|[17]|Schema.SObjectType.getDescribe()
+16:33:34.0 (14450833)|LIMIT_USAGE|[17]|RECORD_TYPE_DESCRIBES|3|100
+16:33:34.0 (15661861)|HEAP_ALLOCATE|[17]|Bytes:16
+16:33:34.0 (15674684)|HEAP_ALLOCATE|[17]|Bytes:12
+16:33:34.0 (15699545)|SYSTEM_METHOD_ENTRY|[17]|Map<String,Schema.RecordTypeInfo>.get(Object)
+16:33:34.0 (15725729)|SYSTEM_METHOD_EXIT|[17]|Map<String,Schema.RecordTypeInfo>.get(Object)
+16:33:34.0 (15800159)|HEAP_ALLOCATE|[17]|Bytes:4
+16:33:34.0 (15813080)|HEAP_ALLOCATE|[17]|Bytes:18
+16:33:34.0 (15829934)|VARIABLE_ASSIGNMENT|[17]|opportunityTriggerHandler.PRATemplateRecordTypeID|"012O0000000DDVTIA4"
+16:33:34.0 (15834357)|STATEMENT_EXECUTE|[18]
+16:33:34.0 (15876652)|SYSTEM_METHOD_ENTRY|[18]|Schema.SObjectType.getDescribe()
+16:33:34.0 (15906042)|HEAP_ALLOCATE|[18]|Bytes:4
+16:33:34.0 (15915540)|SYSTEM_METHOD_EXIT|[18]|Schema.SObjectType.getDescribe()
+16:33:34.0 (15933847)|LIMIT_USAGE|[18]|RECORD_TYPE_DESCRIBES|4|100
+16:33:34.0 (15953253)|HEAP_ALLOCATE|[18]|Bytes:16
+16:33:34.0 (15962847)|HEAP_ALLOCATE|[18]|Bytes:3
+16:33:34.0 (15983297)|SYSTEM_METHOD_ENTRY|[18]|Map<String,Schema.RecordTypeInfo>.get(Object)
+16:33:34.0 (16007690)|SYSTEM_METHOD_EXIT|[18]|Map<String,Schema.RecordTypeInfo>.get(Object)
+16:33:34.0 (16034819)|HEAP_ALLOCATE|[18]|Bytes:4
+16:33:34.0 (16093281)|HEAP_ALLOCATE|[18]|Bytes:18
+16:33:34.0 (16112041)|VARIABLE_ASSIGNMENT|[18]|opportunityTriggerHandler.PRARecordTypeID|"012O0000000DDVOIA4"
+16:33:34.0 (16116311)|STATEMENT_EXECUTE|[19]
+16:33:34.0 (16128441)|HEAP_ALLOCATE|[19]|Bytes:5
+16:33:34.0 (16140528)|VARIABLE_ASSIGNMENT|[19]|opportunityTriggerHandler.recursion|false
+16:33:34.0 (16144102)|STATEMENT_EXECUTE|[20]
+16:33:34.0 (16151108)|HEAP_ALLOCATE|[20]|Bytes:5
+16:33:34.0 (16159518)|VARIABLE_ASSIGNMENT|[20]|opportunityTriggerHandler.isTest|false
+16:33:34.0 (16172186)|METHOD_EXIT|[13]|opportunityTriggerHandler
+16:33:34.0 (16495286)|HEAP_ALLOCATE|[4]|Bytes:12
+16:33:34.0 (16517300)|CONSTRUCTOR_ENTRY|[4]|01pO0000000371i|<init>()
+16:33:34.0 (16555292)|VARIABLE_SCOPE_BEGIN|[22]|this|opportunityTriggerHandler|true|false
+16:33:34.0 (16604383)|VARIABLE_ASSIGNMENT|[22]|this|{}|0x24006e58
+16:33:34.0 (16611588)|STATEMENT_EXECUTE|[13]
+16:33:34.0 (16622989)|HEAP_ALLOCATE|[22]|Bytes:48
+16:33:34.0 (16631181)|HEAP_ALLOCATE|[22]|Bytes:69
+16:33:34.0 (16650399)|METHOD_ENTRY|[1]|01pO00000003AAn|TriggerHandler.TriggerHandler()
+16:33:34.0 (16654637)|STATEMENT_EXECUTE|[1]
+16:33:34.0 (16659295)|STATEMENT_EXECUTE|[1]
+16:33:34.0 (16661427)|STATEMENT_EXECUTE|[16]
+16:33:34.0 (16663255)|STATEMENT_EXECUTE|[17]
+16:33:34.0 (16670935)|HEAP_ALLOCATE|[17]|Bytes:4
+16:33:34.0 (16724021)|VARIABLE_ASSIGNMENT|[17]|TriggerHandler.loopCountMap|{}|0x61e568a2
+16:33:34.0 (16733664)|STATEMENT_EXECUTE|[18]
+16:33:34.0 (16742872)|HEAP_ALLOCATE|[18]|Bytes:4
+16:33:34.0 (16764170)|SYSTEM_CONSTRUCTOR_ENTRY|[18]|<init>(Integer)
+16:33:34.0 (16793213)|SYSTEM_CONSTRUCTOR_EXIT|[18]|<init>(Integer)
+16:33:34.0 (16833752)|VARIABLE_ASSIGNMENT|[18]|TriggerHandler.bypassedHandlers|[]|0xa5d773c
+16:33:34.0 (16837817)|STATEMENT_EXECUTE|[187]
+16:33:34.0 (16839214)|STATEMENT_EXECUTE|[236]
+16:33:34.0 (16845670)|METHOD_EXIT|[1]|TriggerHandler
+16:33:34.0 (16852175)|CONSTRUCTOR_ENTRY|[22]|01pO00000003AAn|<init>()
+16:33:34.0 (16996919)|VARIABLE_SCOPE_BEGIN|[22]|this|TriggerHandler|true|false
+16:33:34.0 (17013745)|VARIABLE_ASSIGNMENT|[22]|this|{}|0x24006e58
+16:33:34.0 (17018634)|STATEMENT_EXECUTE|[1]
+16:33:34.0 (17020302)|STATEMENT_EXECUTE|[9]
+16:33:34.0 (17021538)|STATEMENT_EXECUTE|[13]
+16:33:34.0 (17030164)|HEAP_ALLOCATE|[23]|Bytes:6
+16:33:34.0 (17057464)|STATEMENT_EXECUTE|[22]
+16:33:34.0 (17059520)|STATEMENT_EXECUTE|[23]
+16:33:34.0 (17089098)|METHOD_ENTRY|[23]|01pO00000003AAn|TriggerHandler.setTriggerContext()
+16:33:34.0 (17115550)|VARIABLE_SCOPE_BEGIN|[94]|this|TriggerHandler|true|false
+16:33:34.0 (17130065)|VARIABLE_ASSIGNMENT|[94]|this|{}|0x24006e58
+16:33:34.0 (17136589)|STATEMENT_EXECUTE|[94]
+16:33:34.0 (17137829)|STATEMENT_EXECUTE|[95]
+16:33:34.0 (17152053)|METHOD_ENTRY|[95]|01pO00000003AAn|TriggerHandler.setTriggerContext(String, Boolean)
+16:33:34.0 (17174926)|VARIABLE_SCOPE_BEGIN|[99]|this|TriggerHandler|true|false
+16:33:34.0 (17189263)|VARIABLE_ASSIGNMENT|[99]|this|{}|0x24006e58
+16:33:34.0 (17192655)|VARIABLE_SCOPE_BEGIN|[99]|ctx|String|false|false
+16:33:34.0 (17196390)|VARIABLE_ASSIGNMENT|[99]|ctx|null
+16:33:34.0 (17200813)|VARIABLE_SCOPE_BEGIN|[99]|testMode|Boolean|false|false
+16:33:34.0 (17204098)|VARIABLE_ASSIGNMENT|[99]|testMode|false
+16:33:34.0 (17208564)|STATEMENT_EXECUTE|[99]
+16:33:34.0 (17228094)|STATEMENT_EXECUTE|[103]
+16:33:34.0 (17229720)|STATEMENT_EXECUTE|[104]
+16:33:34.0 (17236746)|HEAP_ALLOCATE|[104]|Bytes:5
+16:33:34.0 (17266522)|STATEMENT_EXECUTE|[111]
+16:33:34.0 (17268183)|STATEMENT_EXECUTE|[112]
+16:33:34.0 (17291606)|HEAP_ALLOCATE|[112]|Bytes:12
+16:33:34.0 (17297165)|HEAP_ALLOCATE|[112]|Bytes:13
+16:33:34.0 (17355868)|HEAP_ALLOCATE|[112]|Bytes:12
+16:33:34.0 (17360680)|HEAP_ALLOCATE|[112]|Bytes:13
+16:33:34.0 (17373228)|HEAP_ALLOCATE|[112]|Bytes:12
+16:33:34.0 (17376478)|HEAP_ALLOCATE|[112]|Bytes:13
+16:33:34.0 (17387098)|HEAP_ALLOCATE|[112]|Bytes:12
+16:33:34.0 (17389921)|HEAP_ALLOCATE|[112]|Bytes:12
+16:33:34.0 (17399836)|HEAP_ALLOCATE|[112]|Bytes:12
+16:33:34.0 (17402675)|HEAP_ALLOCATE|[112]|Bytes:12
+16:33:34.0 (17412524)|HEAP_ALLOCATE|[112]|Bytes:12
+16:33:34.0 (17415403)|HEAP_ALLOCATE|[112]|Bytes:12
+16:33:34.0 (17425504)|HEAP_ALLOCATE|[112]|Bytes:12
+16:33:34.0 (17428503)|HEAP_ALLOCATE|[112]|Bytes:14
+16:33:34.0 (17451357)|METHOD_EXIT|[95]|01pO00000003AAn|TriggerHandler.setTriggerContext(String, Boolean)
+16:33:34.0 (17457752)|METHOD_EXIT|[23]|01pO00000003AAn|TriggerHandler.setTriggerContext()
+16:33:34.0 (17462083)|CONSTRUCTOR_EXIT|[22]|01pO00000003AAn|<init>()
+16:33:34.0 (17464720)|STATEMENT_EXECUTE|[22]
+16:33:34.0 (17467433)|CONSTRUCTOR_EXIT|[4]|01pO0000000371i|<init>()
+16:33:34.0 (17475649)|METHOD_ENTRY|[4]|01pO00000003AAn|TriggerHandler.run()
+16:33:34.0 (17480672)|VARIABLE_SCOPE_BEGIN|[31]|this|TriggerHandler|true|false
+16:33:34.0 (17502179)|VARIABLE_ASSIGNMENT|[31]|this|{"context":"0x65900c9c","isTriggerExecuting":true}|0x24006e58
+16:33:34.0 (17507061)|STATEMENT_EXECUTE|[31]
+16:33:34.0 (17515565)|METHOD_ENTRY|[33]|01pO00000003AAn|TriggerHandler.validateRun()
+16:33:34.0 (17534268)|VARIABLE_SCOPE_BEGIN|[146]|this|TriggerHandler|true|false
+16:33:34.0 (17551221)|VARIABLE_ASSIGNMENT|[146]|this|{"context":"0x65900c9c","isTriggerExecuting":true}|0x24006e58
+16:33:34.0 (17555839)|STATEMENT_EXECUTE|[146]
+16:33:34.0 (17564116)|STATEMENT_EXECUTE|[147]
+16:33:34.0 (17575966)|METHOD_ENTRY|[150]|01pO00000003AAn|TriggerHandler.getHandlerName()
+16:33:34.0 (17591033)|VARIABLE_SCOPE_BEGIN|[157]|this|TriggerHandler|true|false
+16:33:34.0 (17606503)|VARIABLE_ASSIGNMENT|[157]|this|{"context":"0x65900c9c","isTriggerExecuting":true}|0x24006e58
+16:33:34.0 (17610948)|STATEMENT_EXECUTE|[157]
+16:33:34.0 (17612234)|STATEMENT_EXECUTE|[158]
+16:33:34.0 (17645406)|SYSTEM_METHOD_ENTRY|[158]|String.valueOf(Object)
+16:33:34.0 (17719663)|HEAP_ALLOCATE|[158]|Bytes:379
+16:33:34.0 (17741072)|SYSTEM_METHOD_EXIT|[158]|String.valueOf(Object)
+16:33:34.0 (17758982)|SYSTEM_METHOD_ENTRY|[158]|String.valueOf(Object)
+16:33:34.0 (17796558)|HEAP_ALLOCATE|[158]|Bytes:379
+16:33:34.0 (17811120)|SYSTEM_METHOD_EXIT|[158]|String.valueOf(Object)
+16:33:34.0 (17816521)|HEAP_ALLOCATE|[158]|Bytes:1
+16:33:34.0 (17830583)|SYSTEM_METHOD_ENTRY|[158]|String.indexOf(String)
+16:33:34.0 (17841146)|SYSTEM_METHOD_EXIT|[158]|String.indexOf(String)
+16:33:34.0 (17853993)|SYSTEM_METHOD_ENTRY|[158]|String.substring(Integer, Integer)
+16:33:34.0 (17860365)|HEAP_ALLOCATE|[158]|Bytes:25
+16:33:34.0 (17868549)|SYSTEM_METHOD_EXIT|[158]|String.substring(Integer, Integer)
+16:33:34.0 (17874896)|METHOD_EXIT|[150]|01pO00000003AAn|TriggerHandler.getHandlerName()
+16:33:34.0 (17889562)|SYSTEM_METHOD_ENTRY|[150]|Set<String>.contains(Object)
+16:33:34.0 (17900903)|SYSTEM_METHOD_EXIT|[150]|Set<String>.contains(Object)
+16:33:34.0 (17906670)|STATEMENT_EXECUTE|[150]
+16:33:34.0 (17909583)|STATEMENT_EXECUTE|[153]
+16:33:34.0 (17916813)|METHOD_EXIT|[33]|01pO00000003AAn|TriggerHandler.validateRun()
+16:33:34.0 (17923210)|STATEMENT_EXECUTE|[33]
+16:33:34.0 (17925594)|STATEMENT_EXECUTE|[35]
+16:33:34.0 (17937792)|METHOD_ENTRY|[35]|01pO00000003AAn|TriggerHandler.addToLoopCount()
+16:33:34.0 (17962813)|VARIABLE_SCOPE_BEGIN|[133]|this|TriggerHandler|true|false
+16:33:34.0 (17982206)|VARIABLE_ASSIGNMENT|[133]|this|{"context":"0x65900c9c","isTriggerExecuting":true}|0x24006e58
+16:33:34.0 (17987430)|STATEMENT_EXECUTE|[133]
+16:33:34.0 (17988584)|STATEMENT_EXECUTE|[134]
+16:33:34.0 (17997207)|METHOD_ENTRY|[134]|01pO00000003AAn|TriggerHandler.getHandlerName()
+16:33:34.0 (18007892)|VARIABLE_SCOPE_BEGIN|[157]|this|TriggerHandler|true|false
+16:33:34.0 (18023351)|VARIABLE_ASSIGNMENT|[157]|this|{"context":"0x65900c9c","isTriggerExecuting":true}|0x24006e58
+16:33:34.0 (18027466)|STATEMENT_EXECUTE|[157]
+16:33:34.0 (18028588)|STATEMENT_EXECUTE|[158]
+16:33:34.0 (18045393)|SYSTEM_METHOD_ENTRY|[158]|String.valueOf(Object)
+16:33:34.0 (18085571)|HEAP_ALLOCATE|[158]|Bytes:379
+16:33:34.0 (18107291)|SYSTEM_METHOD_EXIT|[158]|String.valueOf(Object)
+16:33:34.0 (18135190)|SYSTEM_METHOD_ENTRY|[158]|String.valueOf(Object)
+16:33:34.0 (18176806)|HEAP_ALLOCATE|[158]|Bytes:379
+16:33:34.0 (18192392)|SYSTEM_METHOD_EXIT|[158]|String.valueOf(Object)
+16:33:34.0 (18203765)|SYSTEM_METHOD_ENTRY|[158]|String.indexOf(String)
+16:33:34.0 (18212270)|SYSTEM_METHOD_EXIT|[158]|String.indexOf(String)
+16:33:34.0 (18222201)|SYSTEM_METHOD_ENTRY|[158]|String.substring(Integer, Integer)
+16:33:34.0 (18226315)|HEAP_ALLOCATE|[158]|Bytes:25
+16:33:34.0 (18234556)|SYSTEM_METHOD_EXIT|[158]|String.substring(Integer, Integer)
+16:33:34.0 (18239955)|METHOD_EXIT|[134]|01pO00000003AAn|TriggerHandler.getHandlerName()
+16:33:34.0 (18243648)|VARIABLE_SCOPE_BEGIN|[134]|handlerName|String|false|false
+16:33:34.0 (18254605)|VARIABLE_ASSIGNMENT|[134]|handlerName|"opportunityTriggerHa (5 more) ..."
+16:33:34.0 (18272643)|SYSTEM_METHOD_ENTRY|[135]|Map<String,TriggerHandler.LoopCount>.containsKey(Object)
+16:33:34.0 (18294564)|SYSTEM_METHOD_EXIT|[135]|Map<String,TriggerHandler.LoopCount>.containsKey(Object)
+16:33:34.0 (18300395)|STATEMENT_EXECUTE|[135]
+16:33:34.0 (18304953)|METHOD_EXIT|[35]|01pO00000003AAn|TriggerHandler.addToLoopCount()
+16:33:34.0 (18342041)|SYSTEM_METHOD_ENTRY|[38]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+16:33:34.0 (18408808)|SYSTEM_METHOD_EXIT|[38]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+16:33:34.0 (18432438)|SYSTEM_METHOD_ENTRY|[40]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+16:33:34.0 (18458456)|SYSTEM_METHOD_EXIT|[40]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+16:33:34.0 (18464064)|STATEMENT_EXECUTE|[40]
+16:33:34.0 (18465554)|STATEMENT_EXECUTE|[41]
+16:33:34.0 (18476541)|METHOD_ENTRY|[41]|01pO0000000371i|opportunityTriggerHandler.beforeUpdate()
+16:33:34.0 (18493857)|VARIABLE_SCOPE_BEGIN|[37]|this|opportunityTriggerHandler|true|false
+16:33:34.0 (18512141)|VARIABLE_ASSIGNMENT|[37]|this|{"context":"0x65900c9c","isTriggerExecuting":true}|0x24006e58
+16:33:34.0 (18517331)|STATEMENT_EXECUTE|[37]
+16:33:34.0 (18519100)|STATEMENT_EXECUTE|[38]
+16:33:34.0 (18668468)|HEAP_ALLOCATE|[38]|Bytes:20
+16:33:34.0 (18692369)|SYSTEM_METHOD_ENTRY|[38]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (18717978)|USER_DEBUG|[38]|ERROR|*** BEFORE UPDATE **
+16:33:34.0 (18724338)|SYSTEM_METHOD_EXIT|[38]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (18732380)|STATEMENT_EXECUTE|[39]
+16:33:34.0 (18742278)|METHOD_ENTRY|[39]|01pO0000000371i|opportunityTriggerHandler.determineGate()
+16:33:34.0 (18761248)|VARIABLE_SCOPE_BEGIN|[146]|this|opportunityTriggerHandler|true|false
+16:33:34.0 (18779558)|VARIABLE_ASSIGNMENT|[146]|this|{"context":"0x65900c9c","isTriggerExecuting":true}|0x24006e58
+16:33:34.0 (18784339)|STATEMENT_EXECUTE|[146]
+16:33:34.0 (18790813)|STATEMENT_EXECUTE|[147]
+16:33:34.0 (18903559)|SYSTEM_METHOD_ENTRY|[148]|List<Opportunity>.iterator()
+16:33:34.0 (19038081)|SYSTEM_METHOD_EXIT|[148]|List<Opportunity>.iterator()
+16:33:34.0 (19062418)|SYSTEM_METHOD_ENTRY|[148]|system.ListIterator.hasNext()
+16:33:34.0 (19072008)|HEAP_ALLOCATE|[148]|Bytes:5
+16:33:34.0 (19079054)|SYSTEM_METHOD_EXIT|[148]|system.ListIterator.hasNext()
+16:33:34.0 (19116728)|HEAP_ALLOCATE|[148]|Bytes:4
+16:33:34.0 (19128346)|VARIABLE_SCOPE_BEGIN|[148]|opp|Opportunity|true|false
+16:33:34.0 (54553404)|VARIABLE_ASSIGNMENT|[148]|opp|{"LastModifiedDate":"2017-03-28T05:31:20.000Z","Regional_Business__c":"a0BO000000F4DiNMAV","TSF_Gate_Status__c":"Approved","Contract_Risk__c":"Client-side risk: Co (21 more) ...","CloseDate":"2017-03-28T00:00:00.000Z","HasOpenActivity":false,"Budget_Confirmed__c":false,"Overall_Prospect_Val (5 more) ...":100000,"Less_Cost_Recoveries (10 more) ...":0,"District__c":"Northern Melbourne","Value_of_Managed_Wor (5 more) ...":1000000,"State__c":"Victoria","D_I_Involvement__c":false,"IsDeleted":false,"Non_Binding_Proposal (12 more) ...":false,"Net_Budget_Post_Tend (5 more) ...":0,"Parent_Company_Guara (11 more) ...":" ","Detailed_Description (3 more) ...":"test","ROI_Analysis_Complet (5 more) ...":false,"PPP_or_Third_Party_F (16 more) ...":false,"Executive_Summary__c":"Test","CRA_Gate_Status__c":"Not Started","Tender_Dates_Header_ (2 more) ...":" ","Less_Cost_Recoveries (10 more) ...":0,"Is_internal_BG_colla (11 more) ...":false,"Prospect_Status__c":"Tender Submitted","Has_CRA_changed_sinc (18 more) ...":"Yes","Id":"006O0000008l3xRIAQ","Proposed_Margin_on_R (9 more) ...":10,"Client_Drivers__c":"test","IsClosed":false,"Delivery_End_Date__c":"2019-03-28T00:00:00.000Z","OwnerId":"005O0000003t7anIAA","Prospect_Duration_Yr (4 more) ...":2.0,"Reason_For_Performin (9 more) ...":"test","RecordTypeId":"012O0000000DDB4IAO","Key_Account_Manager_ (2 more) ...":"System Partners","Country__c":"Australia","Total_Budget_AUD__c":0,"StageName":"Gate 5","Amount":100000.00,"Probability":90,"Sponsor_Details_Head (5 more) ...":" ","Independent_Credit_C (16 more) ...":false,"SystemModstamp":"2017-03-28T05:31:20.000Z","Total_Less_Recoverie (4 more) ...":0,"AccountId":"001O0000017RQomIAG","HasOpportunityLineIt (2 more) ...":false,"Prospect_Number__c":"PRS-0000054","ForecastCategory":"Pipeline","Net_Budget_EOI_PQ__c":0,"Has_TSF_changed_sinc (18 more) ...":"Yes","Client_Relationship_ (13 more) ...":"test","Number_of_PRA_Critic (19 more) ...":1,"Name":"RL Test Opp 2017-03- (11 more) ...","Prospect_Priority__c":"1","CreatedById":"005O0000003t7anIAA","Winning_Strategy_Hea (6 more) ...":" ","Tender_Close_Date__c":"2017-03-28T00:00:00.000Z","JH_Margin_Value__c":0,"Defect_Liability_Dur (15 more) ...":12,"Sync_Date_Fields__c":false,"Is_this_project_a_JV (15 more) ...":false,"Project_Duration_Mon (6 more) ...":24,"Delivery_End_Defect_ (21 more) ...":"2020-03-27T00:00:00.000Z","Is_Gate_1_To_3__c":false,"Bonding_Security_Hea (6 more) ...":" ","Net_Budget_Tender__c":0,"CreatedDate":"2017-03-28T05:05:11.000Z","HasOverdueTask":false,"Discovery_Completed_ (2 more) ...":false,"Are_there_any_critic (11 more) ...":"Yes","Data_Quality_Score__ (1 more) ...":40,"Project_Probability_ (2 more) ...":10,"ForecastCategoryName":"Pipeline","Client_Probity__c":false,"Total_Budget_EOI_PQ_ (2 more) ...":0,"Managing_Contractor_ (12 more) ...":false,"Business_Group__c":"a0BO000000F4Di8MAF","Prospect_Location_He (8 more) ...":" ","Anticipated_Revenue_ (13 more) ...":"2017-03-28T00:00:00.000Z","Is_Gate_4_To_5__c":true,"Data_Quality_Descrip (7 more) ...":"Missing: Type, Lead  (18 more) ...","ExpectedRevenue":90000.00,"Net_Budget_Amount__c":0,"IsWon":false,"Location__c":", Victoria, Australi (1 more) ...","D_I_Involvement_Text (3 more) ...":"No","Less_Cost_Recoveries (15 more) ...":0,"Request_For_Special_ (22 more) ...":false,"Conga_Other_Heading_ (8 more) ...":"Other:","Apply_Default_Bondin (4 more) ...":false,"Gate_Status__c":"Not Applicable","Win_Probability__c":10,"D_I_Involvement_Guid (12 more) ...":"This box should be c (183 more) ...","Total_Budget_Tender_ (2 more) ...":0,"Total_Budget_Post_Te (7 more) ...":0,"Restrict_Access__c":false,"Tender_Start_Date__c":"2017-03-28T00:00:00.000Z","IsPrivate":false,"LastModifiedById":"005O0000003t7anIAA","Is_internal_Regional (21 more) ...":false}|0x3aa02289
+16:33:34.0 (54588640)|STATEMENT_EXECUTE|[148]
+16:33:34.0 (54591372)|STATEMENT_EXECUTE|[149]
+16:33:34.0 (54806935)|SYSTEM_METHOD_ENTRY|[149]|Map<Id,Opportunity>.get(Object)
+16:33:34.0 (54855377)|SYSTEM_METHOD_EXIT|[149]|Map<Id,Opportunity>.get(Object)
+16:33:34.0 (54880438)|VARIABLE_SCOPE_BEGIN|[149]|oldOpp|Opportunity|true|false
+16:33:34.0 (58682168)|VARIABLE_ASSIGNMENT|[149]|oldOpp|{"LastModifiedDate":"2017-03-28T05:31:20.000Z","Regional_Business__c":"a0BO000000F4DiNMAV","TSF_Gate_Status__c":"Not Started","Contract_Risk__c":"Client-side risk: Co (21 more) ...","CloseDate":"2017-03-28T00:00:00.000Z","HasOpenActivity":false,"Budget_Confirmed__c":false,"Overall_Prospect_Val (5 more) ...":100000,"Less_Cost_Recoveries (10 more) ...":0,"District__c":"Northern Melbourne","Value_of_Managed_Wor (5 more) ...":1000000,"State__c":"Victoria","D_I_Involvement__c":false,"IsDeleted":false,"Non_Binding_Proposal (12 more) ...":false,"Net_Budget_Post_Tend (5 more) ...":0,"Parent_Company_Guara (11 more) ...":" ","Detailed_Description (3 more) ...":"test","ROI_Analysis_Complet (5 more) ...":false,"PPP_or_Third_Party_F (16 more) ...":false,"Executive_Summary__c":"Test","CRA_Gate_Status__c":"Not Started","Tender_Dates_Header_ (2 more) ...":" ","Less_Cost_Recoveries (10 more) ...":0,"Is_internal_BG_colla (11 more) ...":false,"Prospect_Status__c":"Tender Submitted","Has_CRA_changed_sinc (18 more) ...":"Yes","Id":"006O0000008l3xRIAQ","Proposed_Margin_on_R (9 more) ...":10,"Client_Drivers__c":"test","IsClosed":false,"Delivery_End_Date__c":"2019-03-28T00:00:00.000Z","OwnerId":"005O0000003t7anIAA","Prospect_Duration_Yr (4 more) ...":2.0,"Reason_For_Performin (9 more) ...":"test","RecordTypeId":"012O0000000DDB4IAO","Key_Account_Manager_ (2 more) ...":"System Partners","Country__c":"Australia","Total_Budget_AUD__c":0,"StageName":"Gate 5","Amount":100000.00,"Probability":90,"Sponsor_Details_Head (5 more) ...":" ","Independent_Credit_C (16 more) ...":false,"SystemModstamp":"2017-03-28T05:31:20.000Z","Total_Less_Recoverie (4 more) ...":0,"AccountId":"001O0000017RQomIAG","HasOpportunityLineIt (2 more) ...":false,"Prospect_Number__c":"PRS-0000054","ForecastCategory":"Pipeline","Net_Budget_EOI_PQ__c":0,"Has_TSF_changed_sinc (18 more) ...":"Yes","Client_Relationship_ (13 more) ...":"test","Number_of_PRA_Critic (19 more) ...":1,"Name":"RL Test Opp 2017-03- (11 more) ...","Prospect_Priority__c":"1","CreatedById":"005O0000003t7anIAA","Winning_Strategy_Hea (6 more) ...":" ","Tender_Close_Date__c":"2017-03-28T00:00:00.000Z","JH_Margin_Value__c":0,"Defect_Liability_Dur (15 more) ...":12,"Sync_Date_Fields__c":false,"Is_this_project_a_JV (15 more) ...":false,"Project_Duration_Mon (6 more) ...":24,"Delivery_End_Defect_ (21 more) ...":"2020-03-27T00:00:00.000Z","Is_Gate_1_To_3__c":false,"Bonding_Security_Hea (6 more) ...":" ","Net_Budget_Tender__c":0,"CreatedDate":"2017-03-28T05:05:11.000Z","HasOverdueTask":false,"Discovery_Completed_ (2 more) ...":false,"Are_there_any_critic (11 more) ...":"Yes","Data_Quality_Score__ (1 more) ...":40,"Project_Probability_ (2 more) ...":10,"ForecastCategoryName":"Pipeline","Client_Probity__c":false,"Total_Budget_EOI_PQ_ (2 more) ...":0,"Managing_Contractor_ (12 more) ...":false,"Business_Group__c":"a0BO000000F4Di8MAF","Prospect_Location_He (8 more) ...":" ","Anticipated_Revenue_ (13 more) ...":"2017-03-28T00:00:00.000Z","Is_Gate_4_To_5__c":true,"Data_Quality_Descrip (7 more) ...":"Missing: Type, Lead  (18 more) ...","ExpectedRevenue":90000.00,"Net_Budget_Amount__c":0,"IsWon":false,"Location__c":", Victoria, Australi (1 more) ...","D_I_Involvement_Text (3 more) ...":"No","Less_Cost_Recoveries (15 more) ...":0,"Request_For_Special_ (22 more) ...":false,"Conga_Other_Heading_ (8 more) ...":"Other:","Apply_Default_Bondin (4 more) ...":false,"Gate_Status__c":"Not Applicable","Win_Probability__c":10,"D_I_Involvement_Guid (12 more) ...":"This box should be c (183 more) ...","Total_Budget_Tender_ (2 more) ...":0,"Total_Budget_Post_Te (7 more) ...":0,"Restrict_Access__c":false,"Tender_Start_Date__c":"2017-03-28T00:00:00.000Z","IsPrivate":false,"LastModifiedById":"005O0000003t7anIAA","Is_internal_Regional (21 more) ...":false}|0x30b9a552
+16:33:34.0 (58719709)|STATEMENT_EXECUTE|[151]
+16:33:34.0 (58752336)|HEAP_ALLOCATE|[151]|Bytes:29
+16:33:34.0 (58840033)|SYSTEM_METHOD_ENTRY|[151]|String.valueOf(Object)
+16:33:34.0 (62172102)|HEAP_ALLOCATE|[151]|Bytes:5961
+16:33:34.0 (62249940)|SYSTEM_METHOD_EXIT|[151]|String.valueOf(Object)
+16:33:34.0 (62294406)|HEAP_ALLOCATE|[151]|Bytes:5990
+16:33:34.0 (62331358)|SYSTEM_METHOD_ENTRY|[151]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (62355439)|USER_DEBUG|[151]|ERROR|*** TEST Determine Gate opp: Opportunity:{Id=006O0000008l3xRIAQ, IsDeleted=false, AccountId=001O0000017RQomIAG, RecordTypeId=012O0000000DDB4IAO, IsPrivate=false, Name=RL Test Opp 2017-03-28 16:05:11, Description=null, StageName=Gate 5, Amount=100000.00, Probability=90, ExpectedRevenue=90000.00, TotalOpportunityQuantity=null, CloseDate=2017-03-28 00:00:00, Type=null, NextStep=null, LeadSource=null, IsClosed=false, IsWon=false, ForecastCategory=Pipeline, ForecastCategoryName=Pipeline, CampaignId=null, HasOpportunityLineItem=false, Pricebook2Id=null, OwnerId=005O0000003t7anIAA, CreatedDate=2017-03-28 05:05:11, CreatedById=005O0000003t7anIAA, LastModifiedDate=2017-03-28 05:31:20, LastModifiedById=005O0000003t7anIAA, SystemModstamp=2017-03-28 05:31:20, LastActivityDate=null, FiscalYear=null, FiscalQuarter=null, LastViewedDate=null, LastReferencedDate=null, SyncedQuoteId=null, ContractId=null, HasOpenActivity=false, HasOverdueTask=false, Budget_Confirmed__c=false, Discovery_Completed__c=false, ROI_Analysis_Completed__c=false, Loss_Reason__c=null, Business_Group__c=a0BO000000F4Di8MAF, Data_Quality_Description__c=Missing: Type, Lead Source, Next Steps, Data_Quality_Score__c=40, EOI_Tender_Date__c=null, Prospect_Code__c=null, Prospect_Manager__c=null, Regional_Business__c=a0BO000000F4DiNMAV, CANDY_Tender_Number__c=null, Also_Known_As__c=null, Prospect_Priority__c=1, Prospect_Number__c=PRS-0000054, Win_Probability__c=10, Project_Probability__c=10, Project_Duration_Months__c=24, Scope__c=null, Payment_Mechanism__c=null, Discipline__c=null, D_I_Involvement__c=false, D_I_Involvement_Guidance_Note__c=This box should be checked if JH D&I are directly involved in providing financial advice, direction or lead of SPV for the prospect. It should not be checked if there is no D&I requirement to be involved, Client_Probity__c=false, Restrict_Access__c=false, Prospect_Status__c=Tender Submitted, Industry_Sector_GM__c=null, Project_Development_Manager__c=null, Detailed_Description__c=test, Non_Binding_Proposal_Required__c=false, EOI_PQ_Start_Date__c=null, EOI_PQ_Close_Date__c=null, Announcement_of_Pre_Qualified_Bidders__c=null, Strategy_Bid_Development_Meeting_Date__c=null, Tender_Start_Date__c=2017-03-28 00:00:00, Tender_Close_Date__c=2017-03-28 00:00:00, Anticipated_Revenue_Start_Date__c=2017-03-28 00:00:00, Interim_Review__c=null, Preliminary_Final_Review__c=null, Final_Tender_Review__c=null, Tender_Collaboration_Pack_Aconex_DB_URL__c=null, Country__c=Australia, State__c=Victoria, Nearest_City__c=null, District__c=Northern Melbourne, Reason_For_Performing_Work__c=test, Client_Drivers__c=test, Relationship__c=null, Client_Relationship_Management__c=test, Financial_Viability_Exposure__c=null, Independent_Credit_Check_Required__c=false, Client_Supplied_Materials__c=null, Value_of_Managed_Works__c=1000000, Overall_Prospect_Value__c=100000, Managing_Contractor_Time_Risk__c=false, Proposed_Margin_on_Revenue__c=10, PPP_or_Third_Party_Funded_Project__c=false, Payment_Variation_Terms__c=null, Finance_Prospect_Comments__c=null, Defect_Liability_Duration_Months__c=12, Minimum_Credit_Rating_Required__c=null, Request_For_Special_Wording_In_The_Bond__c=false, A_PCG_Is_Required_From__c=null, PCG_Comments__c=null, Proposed_FA__c=null, Funding_Strategy__c=null, Target_Gearing_Ratio__c=null, Total_Indicative__c=null, JH_Target_Equity__c=null, JH_Target_Equity_Amount__c=null, Timing_for_Contribution__c=null, Equity_Residual_Risk__c=null, Target_IRR_and_or_D_I_Revenues__c=null, Intended_Exit_Strategy__c=null, JH_Accounting_Tax_Considerations__c=null, Relationship_Agreements__c=null, Is_this_project_a_JV_or_Alliance__c=false, Proposed_form_of_Relationship__c=null, Is_internal_BG_collaboration__c=false, Major_Risks__c=null, Nature_of_technology_design_proposed__c=null, Intentions_to_Resource_Project_Team__c=null, Is_internal_Regional_Bus_collaboration__c=false, Contract_Risk__c=Client-side risk: Construction Management, Client_Relationship_Manager__c=null, Other_Custom_Heading__c=null, Business_Development_Manager__c=null, Procurement_Process__c=null, Alignment_with_Business_Plan__c=null, Competitor_Analysis_General_Comments__c=null, Intentions_to_Resource_Bid_Team__c=null, Conversion_Budget_Comments__c=null, Specific_KCRA_Approvals_Comments__c=null, Design__c=null, Cost__c=null, Time__c=null, Relationships__c=null, People__c=null, Technology__c=null, Methodology__c=null, Innovation__c=null, Other__c=null, Key_Points__c=null, Alignment_with_Core_Competencies__c=null, Executive_Summary__c=Test, Prospect_Location_Heading__c= , Parent_Company_Guarantee_PCG__c= , Winning_Strategy_Header__c= , Bonding_Security_Header__c= , Sponsor_Details_Header__c= , Tender_Dates_Header__c= , JH_Revenue_Share__c=null, JH_Margin_Value__c=0, Total_Budget_EOI_PQ__c=0, Total_Budget_Tender__c=0, Total_Budget_Post_Tender__c=0, Less_Cost_Recoveries_EOI_PQ__c=0, Less_Cost_Recoveries_Tender__c=0, Less_Cost_Recoveries_Post_Tender__c=0, Total_Budget_AUD__c=0, Total_Less_Recoveries__c=0, Net_Budget_Amount__c=0, Net_Budget_EOI_PQ__c=0, Net_Budget_Tender__c=0, Net_Budget_Post_Tender__c=0, JH_Bid_Cost_of_JH_Revenue__c=null, Location__c=, Victoria, Australia, Delivery_End_Date__c=2019-03-28 00:00:00, Prospect_Duration_Yrs__c=2.0, Conga_Other_Heading_Field__c=Other:, Apply_Default_Bonding__c=false, Notes_Doc_ID__c=null, Delivery_End_Defect_Liability_Duration__c=2020-03-27 00:00:00, EOI_PQ_Submitted_Date__c=null, Tender_Submitted_Date__c=null, Count_of_EOI_Lessons_Learnt_Reports__c=null, Count_of_Tender_Lessons_Learnt_Reports__c=null, Gate_Status__c=Not Applicable, TSF_Gate_Status__c=Approved, CRA_Gate_Status__c=Not Started, Number_of_PRA_Critical_Items_Rated_3__c=1, Are_there_any_critical_risks__c=Yes, Has_TSF_changed_since_last_approval__c=Yes, Has_CRA_changed_since_last_approval__c=Yes, Sync_Date_Fields__c=false, Is_Gate_1_To_3__c=false, Is_Gate_4_To_5__c=true, D_I_Involvement_Text__c=No, Reason_for_Status__c=null, Key_Account_Manager__c=System Partners}
+16:33:34.0 (62386557)|SYSTEM_METHOD_EXIT|[151]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (62393470)|STATEMENT_EXECUTE|[152]
+16:33:34.0 (62405610)|HEAP_ALLOCATE|[152]|Bytes:39
+16:33:34.0 (62452585)|HEAP_ALLOCATE|[152]|Bytes:45
+16:33:34.0 (62465090)|SYSTEM_METHOD_ENTRY|[152]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (62498312)|USER_DEBUG|[152]|ERROR|*** TEST Determine Gate OLD opp Stage: Gate 5
+16:33:34.0 (62503510)|SYSTEM_METHOD_EXIT|[152]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (62506955)|STATEMENT_EXECUTE|[153]
+16:33:34.0 (62512397)|HEAP_ALLOCATE|[153]|Bytes:35
+16:33:34.0 (62527310)|HEAP_ALLOCATE|[153]|Bytes:41
+16:33:34.0 (62536850)|SYSTEM_METHOD_ENTRY|[153]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (62550271)|USER_DEBUG|[153]|ERROR|*** TEST Determine Gate opp Stage: Gate 5
+16:33:34.0 (62555136)|SYSTEM_METHOD_EXIT|[153]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (62558184)|STATEMENT_EXECUTE|[154]
+16:33:34.0 (62563124)|HEAP_ALLOCATE|[154]|Bytes:44
+16:33:34.0 (62588216)|HEAP_ALLOCATE|[154]|Bytes:58
+16:33:34.0 (62599634)|SYSTEM_METHOD_ENTRY|[154]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (62614882)|USER_DEBUG|[154]|ERROR|*** TEST Determine Gate OLD oppGate Status: Not Applicable
+16:33:34.0 (62619879)|SYSTEM_METHOD_EXIT|[154]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (62623046)|STATEMENT_EXECUTE|[155]
+16:33:34.0 (62628045)|HEAP_ALLOCATE|[155]|Bytes:40
+16:33:34.0 (62637769)|HEAP_ALLOCATE|[155]|Bytes:54
+16:33:34.0 (62645970)|SYSTEM_METHOD_ENTRY|[155]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (62657329)|USER_DEBUG|[155]|ERROR|*** TEST Determine Gate oppGate Status: Not Applicable
+16:33:34.0 (62662064)|SYSTEM_METHOD_EXIT|[155]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (62698207)|STATEMENT_EXECUTE|[160]
+16:33:34.0 (62704817)|HEAP_ALLOCATE|[166]|Bytes:3
+16:33:34.0 (62716524)|HEAP_ALLOCATE|[170]|Bytes:6
+16:33:34.0 (62727729)|HEAP_ALLOCATE|[188]|Bytes:6
+16:33:34.0 (62742598)|HEAP_ALLOCATE|[200]|Bytes:6
+16:33:34.0 (62754057)|HEAP_ALLOCATE|[213]|Bytes:6
+16:33:34.0 (62769086)|HEAP_ALLOCATE|[226]|Bytes:6
+16:33:34.0 (62776842)|STATEMENT_EXECUTE|[226]
+16:33:34.0 (62797834)|HEAP_ALLOCATE|[227]|Bytes:8
+16:33:34.0 (62830442)|HEAP_ALLOCATE|[231]|Bytes:8
+16:33:34.0 (62844777)|STATEMENT_EXECUTE|[227]
+16:33:34.0 (62846632)|STATEMENT_EXECUTE|[234]
+16:33:34.0 (62849200)|HEAP_ALLOCATE|[234]|Bytes:14
+16:33:34.0 (64222751)|VARIABLE_ASSIGNMENT|[234]|this.Gate_Status__c|"Not Applicable"|0x3aa02289
+16:33:34.0 (64230048)|STATEMENT_EXECUTE|[237]
+16:33:34.0 (64237356)|HEAP_ALLOCATE|[237]|Bytes:33
+16:33:34.0 (64264753)|SYSTEM_METHOD_ENTRY|[237]|String.valueOf(Object)
+16:33:34.0 (65992297)|HEAP_ALLOCATE|[237]|Bytes:5961
+16:33:34.0 (66017875)|SYSTEM_METHOD_EXIT|[237]|String.valueOf(Object)
+16:33:34.0 (66031566)|HEAP_ALLOCATE|[237]|Bytes:5994
+16:33:34.0 (66048906)|SYSTEM_METHOD_ENTRY|[237]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (66060364)|USER_DEBUG|[237]|ERROR|*** TEST END Determine Gate opp: Opportunity:{Id=006O0000008l3xRIAQ, IsDeleted=false, AccountId=001O0000017RQomIAG, RecordTypeId=012O0000000DDB4IAO, IsPrivate=false, Name=RL Test Opp 2017-03-28 16:05:11, Description=null, StageName=Gate 5, Amount=100000.00, Probability=90, ExpectedRevenue=90000.00, TotalOpportunityQuantity=null, CloseDate=2017-03-28 00:00:00, Type=null, NextStep=null, LeadSource=null, IsClosed=false, IsWon=false, ForecastCategory=Pipeline, ForecastCategoryName=Pipeline, CampaignId=null, HasOpportunityLineItem=false, Pricebook2Id=null, OwnerId=005O0000003t7anIAA, CreatedDate=2017-03-28 05:05:11, CreatedById=005O0000003t7anIAA, LastModifiedDate=2017-03-28 05:31:20, LastModifiedById=005O0000003t7anIAA, SystemModstamp=2017-03-28 05:31:20, LastActivityDate=null, FiscalYear=null, FiscalQuarter=null, LastViewedDate=null, LastReferencedDate=null, SyncedQuoteId=null, ContractId=null, HasOpenActivity=false, HasOverdueTask=false, Budget_Confirmed__c=false, Discovery_Completed__c=false, ROI_Analysis_Completed__c=false, Loss_Reason__c=null, Business_Group__c=a0BO000000F4Di8MAF, Data_Quality_Description__c=Missing: Type, Lead Source, Next Steps, Data_Quality_Score__c=40, EOI_Tender_Date__c=null, Prospect_Code__c=null, Prospect_Manager__c=null, Regional_Business__c=a0BO000000F4DiNMAV, CANDY_Tender_Number__c=null, Also_Known_As__c=null, Prospect_Priority__c=1, Prospect_Number__c=PRS-0000054, Win_Probability__c=10, Project_Probability__c=10, Project_Duration_Months__c=24, Scope__c=null, Payment_Mechanism__c=null, Discipline__c=null, D_I_Involvement__c=false, D_I_Involvement_Guidance_Note__c=This box should be checked if JH D&I are directly involved in providing financial advice, direction or lead of SPV for the prospect. It should not be checked if there is no D&I requirement to be involved, Client_Probity__c=false, Restrict_Access__c=false, Prospect_Status__c=Tender Submitted, Industry_Sector_GM__c=null, Project_Development_Manager__c=null, Detailed_Description__c=test, Non_Binding_Proposal_Required__c=false, EOI_PQ_Start_Date__c=null, EOI_PQ_Close_Date__c=null, Announcement_of_Pre_Qualified_Bidders__c=null, Strategy_Bid_Development_Meeting_Date__c=null, Tender_Start_Date__c=2017-03-28 00:00:00, Tender_Close_Date__c=2017-03-28 00:00:00, Anticipated_Revenue_Start_Date__c=2017-03-28 00:00:00, Interim_Review__c=null, Preliminary_Final_Review__c=null, Final_Tender_Review__c=null, Tender_Collaboration_Pack_Aconex_DB_URL__c=null, Country__c=Australia, State__c=Victoria, Nearest_City__c=null, District__c=Northern Melbourne, Reason_For_Performing_Work__c=test, Client_Drivers__c=test, Relationship__c=null, Client_Relationship_Management__c=test, Financial_Viability_Exposure__c=null, Independent_Credit_Check_Required__c=false, Client_Supplied_Materials__c=null, Value_of_Managed_Works__c=1000000, Overall_Prospect_Value__c=100000, Managing_Contractor_Time_Risk__c=false, Proposed_Margin_on_Revenue__c=10, PPP_or_Third_Party_Funded_Project__c=false, Payment_Variation_Terms__c=null, Finance_Prospect_Comments__c=null, Defect_Liability_Duration_Months__c=12, Minimum_Credit_Rating_Required__c=null, Request_For_Special_Wording_In_The_Bond__c=false, A_PCG_Is_Required_From__c=null, PCG_Comments__c=null, Proposed_FA__c=null, Funding_Strategy__c=null, Target_Gearing_Ratio__c=null, Total_Indicative__c=null, JH_Target_Equity__c=null, JH_Target_Equity_Amount__c=null, Timing_for_Contribution__c=null, Equity_Residual_Risk__c=null, Target_IRR_and_or_D_I_Revenues__c=null, Intended_Exit_Strategy__c=null, JH_Accounting_Tax_Considerations__c=null, Relationship_Agreements__c=null, Is_this_project_a_JV_or_Alliance__c=false, Proposed_form_of_Relationship__c=null, Is_internal_BG_collaboration__c=false, Major_Risks__c=null, Nature_of_technology_design_proposed__c=null, Intentions_to_Resource_Project_Team__c=null, Is_internal_Regional_Bus_collaboration__c=false, Contract_Risk__c=Client-side risk: Construction Management, Client_Relationship_Manager__c=null, Other_Custom_Heading__c=null, Business_Development_Manager__c=null, Procurement_Process__c=null, Alignment_with_Business_Plan__c=null, Competitor_Analysis_General_Comments__c=null, Intentions_to_Resource_Bid_Team__c=null, Conversion_Budget_Comments__c=null, Specific_KCRA_Approvals_Comments__c=null, Design__c=null, Cost__c=null, Time__c=null, Relationships__c=null, People__c=null, Technology__c=null, Methodology__c=null, Innovation__c=null, Other__c=null, Key_Points__c=null, Alignment_with_Core_Competencies__c=null, Executive_Summary__c=Test, Prospect_Location_Heading__c= , Parent_Company_Guarantee_PCG__c= , Winning_Strategy_Header__c= , Bonding_Security_Header__c= , Sponsor_Details_Header__c= , Tender_Dates_Header__c= , JH_Revenue_Share__c=null, JH_Margin_Value__c=0, Total_Budget_EOI_PQ__c=0, Total_Budget_Tender__c=0, Total_Budget_Post_Tender__c=0, Less_Cost_Recoveries_EOI_PQ__c=0, Less_Cost_Recoveries_Tender__c=0, Less_Cost_Recoveries_Post_Tender__c=0, Total_Budget_AUD__c=0, Total_Less_Recoveries__c=0, Net_Budget_Amount__c=0, Net_Budget_EOI_PQ__c=0, Net_Budget_Tender__c=0, Net_Budget_Post_Tender__c=0, JH_Bid_Cost_of_JH_Revenue__c=null, Location__c=, Victoria, Australia, Delivery_End_Date__c=2019-03-28 00:00:00, Prospect_Duration_Yrs__c=2.0, Conga_Other_Heading_Field__c=Other:, Apply_Default_Bonding__c=false, Notes_Doc_ID__c=null, Delivery_End_Defect_Liability_Duration__c=2020-03-27 00:00:00, EOI_PQ_Submitted_Date__c=null, Tender_Submitted_Date__c=null, Count_of_EOI_Lessons_Learnt_Reports__c=null, Count_of_Tender_Lessons_Learnt_Reports__c=null, Gate_Status__c=Not Applicable, TSF_Gate_Status__c=Approved, CRA_Gate_Status__c=Not Started, Number_of_PRA_Critical_Items_Rated_3__c=1, Are_there_any_critical_risks__c=Yes, Has_TSF_changed_since_last_approval__c=Yes, Has_CRA_changed_since_last_approval__c=Yes, Sync_Date_Fields__c=false, Is_Gate_1_To_3__c=false, Is_Gate_4_To_5__c=true, D_I_Involvement_Text__c=No, Reason_for_Status__c=null, Key_Account_Manager__c=System Partners}
+16:33:34.0 (66091612)|SYSTEM_METHOD_EXIT|[237]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (66095805)|STATEMENT_EXECUTE|[238]
+16:33:34.0 (66102106)|HEAP_ALLOCATE|[238]|Bytes:39
+16:33:34.0 (66116343)|HEAP_ALLOCATE|[238]|Bytes:45
+16:33:34.0 (66125805)|SYSTEM_METHOD_ENTRY|[238]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (66142833)|USER_DEBUG|[238]|ERROR|*** TEST END Determine Gate opp Stage: Gate 5
+16:33:34.0 (66148321)|SYSTEM_METHOD_EXIT|[238]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (66151362)|STATEMENT_EXECUTE|[239]
+16:33:34.0 (66156294)|HEAP_ALLOCATE|[239]|Bytes:43
+16:33:34.0 (66165985)|HEAP_ALLOCATE|[239]|Bytes:49
+16:33:34.0 (66174277)|SYSTEM_METHOD_ENTRY|[239]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (66186115)|USER_DEBUG|[239]|ERROR|*** TEST END Determine Gate old opp Stage: Gate 5
+16:33:34.0 (66190760)|SYSTEM_METHOD_EXIT|[239]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (66204717)|SYSTEM_METHOD_ENTRY|[148]|system.ListIterator.hasNext()
+16:33:34.0 (66221901)|HEAP_ALLOCATE|[148]|Bytes:5
+16:33:34.0 (66229725)|SYSTEM_METHOD_EXIT|[148]|system.ListIterator.hasNext()
+16:33:34.0 (66250200)|VARIABLE_ASSIGNMENT|[148]|opp|null|
+16:33:34.0 (66253901)|STATEMENT_EXECUTE|[241]
+16:33:34.0 (66262545)|HEAP_ALLOCATE|[241]|Bytes:5
+16:33:34.0 (66276306)|VARIABLE_ASSIGNMENT|[241]|opportunityTriggerHandler.recursion|true
+16:33:34.0 (66286744)|METHOD_EXIT|[39]|01pO0000000371i|opportunityTriggerHandler.determineGate()
+16:33:34.0 (66294224)|METHOD_EXIT|[41]|01pO0000000371i|opportunityTriggerHandler.beforeUpdate()
+16:33:34.0 (66299206)|METHOD_EXIT|[4]|01pO00000003AAn|TriggerHandler.run()
+16:33:34.66 (66312262)|CUMULATIVE_LIMIT_USAGE
+16:33:34.66 (66312262)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+16:33:34.66 (66312262)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+16:33:34.66 (66312262)|STATIC_VARIABLE_LIST|
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MAX_VALUE:0
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_static_PRATemplateRecordTypeID:0
+  Boolean:_static_runOnce:0
+  int:SIZE:0
+  TriggerHandler.TriggerContext:BEFORE_INSERT:0
+  int:MAX_VALUE:0
+  TriggerHandler.TriggerContext:AFTER_UNDELETE:0
+  Boolean:_static_recursion:0
+  int:MIN_VALUE:0
+  char[]:DigitOnes:0
+  String:_static_KCRATemplateRecordTypeID:0
+  int:MIN_EXPONENT:0
+  String:_sfdcSuppressedCodeLocations:0
+  int:MAX_EXPONENT:0
+  String:_static_PRARecordTypeID:0
+  int:BYTES:0
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  Boolean:FALSE:0
+  double:MIN_VALUE:0
+  double:NEGATIVE_INFINITY:0
+  char[]:digits:0
+  double:NaN:0
+  Boolean:TRUE:0
+  TriggerHandler.TriggerContext:AFTER_INSERT:0
+  Boolean:_static_isTest:0
+  TriggerHandler.TriggerContext:AFTER_DELETE:0
+  TriggerHandler.TriggerContext:AFTER_UPDATE:0
+  String:__sfdcInnerTypes:0
+  int:BYTES:0
+  Map<String,TriggerHandler.LoopCount>:_static_loopCountMap:0
+  Set<String>:_static_bypassedHandlers:0
+  int[]:sizeTable:0
+  TriggerHandler.TriggerContext:BEFORE_DELETE:0
+  TriggerHandler.TriggerContext:BEFORE_UPDATE:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  double:MIN_NORMAL:0
+  String:_static_KCRARecordTypeID:0
+
+16:33:34.66 (66312262)|CUMULATIVE_LIMIT_USAGE_END
+
+16:33:34.0 (69275600)|CODE_UNIT_FINISHED|opportunityTrigger on Opportunity trigger event BeforeUpdate for [006O0000008l3xR]
+16:33:34.0 (88636767)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Opportunity:006O0000008l3xR
+16:33:34.0 (88651230)|VALIDATION_RULE|03dO00000000vWR|CANDY_Tender_No_mandatory_at_Gate_4
+16:33:34.0 (88801857)|VALIDATION_FORMULA|AND(ISBLANK(Value_of_Managed_Works__c ), 
+ISPICKVAL(StageName, "Gate 4"))|Value_of_Managed_Works__c=1000000 , StageName=Gate 5
+16:33:34.0 (88807907)|VALIDATION_PASS
+16:33:34.0 (88810135)|VALIDATION_RULE|03dO00000000vKk|Enforce_EOI_AND_PQ_Dates
+16:33:34.0 (88946034)|VALIDATION_FORMULA|AND( 
+Non_Binding_Proposal_Required__c = TRUE, 
+OR(
+ISBLANK( EOI_PQ_Start_Date__c),
+ISBLANK( EOI_PQ_Close_Date__c)))|EOI_PQ_Close_Date__c=null , Non_Binding_Proposal_Required__c=0 , EOI_PQ_Start_Date__c=null
+16:33:34.0 (88951247)|VALIDATION_PASS
+16:33:34.0 (88952868)|VALIDATION_RULE|03dO00000000vWW|Make_PCG_mandatory_at_Gate_2
+16:33:34.0 (89124110)|VALIDATION_FORMULA|AND( 
+ISPICKVAL(StageName, "Gate 2"), 
+ISBLANK(TEXT(A_PCG_Is_Required_From__c)))|A_PCG_Is_Required_From__c=null , StageName=Gate 5
+16:33:34.0 (89130167)|VALIDATION_PASS
+16:33:34.0 (89131659)|VALIDATION_RULE|03dO000000011W3|Must_enter_a_Reason_for_Status_if_Dead
+16:33:34.0 (89273866)|VALIDATION_FORMULA|AND(OR(ISPICKVAL(Prospect_Status__c, 'Dead - Prequalified but Declined'), ISPICKVAL(Prospect_Status__c, 'Dead - Unsuitable for JH')), ISBLANK( Reason_for_Status__c))|Prospect_Status__c=Tender Submitted , Reason_for_Status__c=null
+16:33:34.0 (89279181)|VALIDATION_PASS
+16:33:34.0 (89280528)|VALIDATION_RULE|03dO00000000vKz|Populate_District_if_Country_is_Aust
+16:33:34.0 (89391338)|VALIDATION_FORMULA|AND(
+ISPICKVAL( Country__c, "Australia"),
+ISBLANK(TEXT( District__c )))|Country__c=Australia , District__c=Northern Melbourne
+16:33:34.0 (89396314)|VALIDATION_PASS
+16:33:34.0 (89397585)|VALIDATION_RULE|03dO00000000vKp|Populate_State_if_Country_is_Australia
+16:33:34.0 (89500774)|VALIDATION_FORMULA|AND(
+ISPICKVAL( Country__c, "Australia"),
+ISBLANK(TEXT(State__c)))|Country__c=Australia , State__c=Victoria
+16:33:34.0 (89505424)|VALIDATION_PASS
+16:33:34.0 (89506625)|VALIDATION_RULE|03dO00000000vL9|Populate_value_of_managed_works
+16:33:34.0 (89646040)|VALIDATION_FORMULA|AND(ISBLANK( Value_of_Managed_Works__c ),
+OR(
+ISPICKVAL( Contract_Risk__c, "Shared Risk: Managing Contractor"),
+ISPICKVAL( Contract_Risk__c, "Client-side risk: Construction Management")))|Value_of_Managed_Works__c=1000000 , Contract_Risk__c=Client-side risk: Construction Management
+16:33:34.0 (89651898)|VALIDATION_PASS
+16:33:34.0 (89653186)|VALIDATION_RULE|03dO00000000vLT|Winning_Strategy_Other_Custom_Heading
+16:33:34.0 (89807107)|VALIDATION_FORMULA|AND(LEN( Other__c )  > 0,
+ISBLANK( Other_Custom_Heading__c ))|Other__c= , Other_Custom_Heading__c=null
+16:33:34.0 (89812020)|VALIDATION_PASS
+16:33:34.0 (89839786)|CODE_UNIT_FINISHED|Validation:Opportunity:006O0000008l3xR
+16:33:34.0 (138749915)|CODE_UNIT_STARTED|[EXTERNAL]|01qO00000000SDP|opportunityTrigger on Opportunity trigger event AfterUpdate for [006O0000008l3xR]
+16:33:34.0 (138782651)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+16:33:34.0 (138824439)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+16:33:34.0 (138909304)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+16:33:34.0 (138921166)|VARIABLE_SCOPE_BEGIN|[1]|this|opportunityTrigger|true|false
+16:33:34.0 (138960892)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x7481fa93
+16:33:34.0 (138998612)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+16:33:34.0 (139006146)|VARIABLE_SCOPE_BEGIN|[1]|this|opportunityTrigger|true|false
+16:33:34.0 (139021629)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x7481fa93
+16:33:34.0 (139030169)|STATEMENT_EXECUTE|[1]
+16:33:34.0 (139033383)|STATEMENT_EXECUTE|[4]
+16:33:34.0 (139041805)|HEAP_ALLOCATE|[4]|Bytes:12
+16:33:34.0 (139060026)|CONSTRUCTOR_ENTRY|[4]|01pO0000000371i|<init>()
+16:33:34.0 (139069867)|VARIABLE_SCOPE_BEGIN|[22]|this|opportunityTriggerHandler|true|false
+16:33:34.0 (139100509)|VARIABLE_ASSIGNMENT|[22]|this|{}|0x4bd6c712
+16:33:34.0 (139106348)|STATEMENT_EXECUTE|[13]
+16:33:34.0 (139114905)|CONSTRUCTOR_ENTRY|[22]|01pO00000003AAn|<init>()
+16:33:34.0 (139121567)|VARIABLE_SCOPE_BEGIN|[22]|this|TriggerHandler|true|false
+16:33:34.0 (139139971)|VARIABLE_ASSIGNMENT|[22]|this|{}|0x4bd6c712
+16:33:34.0 (139145288)|STATEMENT_EXECUTE|[1]
+16:33:34.0 (139147657)|STATEMENT_EXECUTE|[9]
+16:33:34.0 (139150103)|STATEMENT_EXECUTE|[13]
+16:33:34.0 (139176618)|STATEMENT_EXECUTE|[22]
+16:33:34.0 (139179349)|STATEMENT_EXECUTE|[23]
+16:33:34.0 (139193720)|METHOD_ENTRY|[23]|01pO00000003AAn|TriggerHandler.setTriggerContext()
+16:33:34.0 (139200548)|VARIABLE_SCOPE_BEGIN|[94]|this|TriggerHandler|true|false
+16:33:34.0 (139219106)|VARIABLE_ASSIGNMENT|[94]|this|{}|0x4bd6c712
+16:33:34.0 (139224973)|STATEMENT_EXECUTE|[94]
+16:33:34.0 (139227614)|STATEMENT_EXECUTE|[95]
+16:33:34.0 (139239609)|METHOD_ENTRY|[95]|01pO00000003AAn|TriggerHandler.setTriggerContext(String, Boolean)
+16:33:34.0 (139246438)|VARIABLE_SCOPE_BEGIN|[99]|this|TriggerHandler|true|false
+16:33:34.0 (139263630)|VARIABLE_ASSIGNMENT|[99]|this|{}|0x4bd6c712
+16:33:34.0 (139267736)|VARIABLE_SCOPE_BEGIN|[99]|ctx|String|false|false
+16:33:34.0 (139273927)|VARIABLE_ASSIGNMENT|[99]|ctx|null
+16:33:34.0 (139279928)|VARIABLE_SCOPE_BEGIN|[99]|testMode|Boolean|false|false
+16:33:34.0 (139286290)|VARIABLE_ASSIGNMENT|[99]|testMode|false
+16:33:34.0 (139291298)|STATEMENT_EXECUTE|[99]
+16:33:34.0 (139305577)|STATEMENT_EXECUTE|[103]
+16:33:34.0 (139307966)|STATEMENT_EXECUTE|[104]
+16:33:34.0 (139315599)|HEAP_ALLOCATE|[104]|Bytes:5
+16:33:34.0 (139380615)|STATEMENT_EXECUTE|[120]
+16:33:34.0 (139384042)|STATEMENT_EXECUTE|[121]
+16:33:34.0 (139404507)|METHOD_EXIT|[95]|01pO00000003AAn|TriggerHandler.setTriggerContext(String, Boolean)
+16:33:34.0 (139415001)|METHOD_EXIT|[23]|01pO00000003AAn|TriggerHandler.setTriggerContext()
+16:33:34.0 (139423855)|CONSTRUCTOR_EXIT|[22]|01pO00000003AAn|<init>()
+16:33:34.0 (139427617)|STATEMENT_EXECUTE|[22]
+16:33:34.0 (139432955)|CONSTRUCTOR_EXIT|[4]|01pO0000000371i|<init>()
+16:33:34.0 (139442592)|METHOD_ENTRY|[4]|01pO00000003AAn|TriggerHandler.run()
+16:33:34.0 (139448778)|VARIABLE_SCOPE_BEGIN|[31]|this|TriggerHandler|true|false
+16:33:34.0 (139478178)|VARIABLE_ASSIGNMENT|[31]|this|{"context":"0x2ab31b2d","isTriggerExecuting":true}|0x4bd6c712
+16:33:34.0 (139484546)|STATEMENT_EXECUTE|[31]
+16:33:34.0 (139495293)|METHOD_ENTRY|[33]|01pO00000003AAn|TriggerHandler.validateRun()
+16:33:34.0 (139502213)|VARIABLE_SCOPE_BEGIN|[146]|this|TriggerHandler|true|false
+16:33:34.0 (139531556)|VARIABLE_ASSIGNMENT|[146]|this|{"context":"0x2ab31b2d","isTriggerExecuting":true}|0x4bd6c712
+16:33:34.0 (139538553)|STATEMENT_EXECUTE|[146]
+16:33:34.0 (139546093)|STATEMENT_EXECUTE|[147]
+16:33:34.0 (139557460)|METHOD_ENTRY|[150]|01pO00000003AAn|TriggerHandler.getHandlerName()
+16:33:34.0 (139564704)|VARIABLE_SCOPE_BEGIN|[157]|this|TriggerHandler|true|false
+16:33:34.0 (139587018)|VARIABLE_ASSIGNMENT|[157]|this|{"context":"0x2ab31b2d","isTriggerExecuting":true}|0x4bd6c712
+16:33:34.0 (139593369)|STATEMENT_EXECUTE|[157]
+16:33:34.0 (139595531)|STATEMENT_EXECUTE|[158]
+16:33:34.0 (139634093)|SYSTEM_METHOD_ENTRY|[158]|String.valueOf(Object)
+16:33:34.0 (139742507)|HEAP_ALLOCATE|[158]|Bytes:377
+16:33:34.0 (139768169)|SYSTEM_METHOD_EXIT|[158]|String.valueOf(Object)
+16:33:34.0 (139796300)|SYSTEM_METHOD_ENTRY|[158]|String.valueOf(Object)
+16:33:34.0 (139857104)|HEAP_ALLOCATE|[158]|Bytes:377
+16:33:34.0 (139879631)|SYSTEM_METHOD_EXIT|[158]|String.valueOf(Object)
+16:33:34.0 (139901539)|SYSTEM_METHOD_ENTRY|[158]|String.indexOf(String)
+16:33:34.0 (139920168)|SYSTEM_METHOD_EXIT|[158]|String.indexOf(String)
+16:33:34.0 (139940458)|SYSTEM_METHOD_ENTRY|[158]|String.substring(Integer, Integer)
+16:33:34.0 (139949971)|HEAP_ALLOCATE|[158]|Bytes:25
+16:33:34.0 (139966939)|SYSTEM_METHOD_EXIT|[158]|String.substring(Integer, Integer)
+16:33:34.0 (139977906)|METHOD_EXIT|[150]|01pO00000003AAn|TriggerHandler.getHandlerName()
+16:33:34.0 (139999897)|SYSTEM_METHOD_ENTRY|[150]|Set<String>.contains(Object)
+16:33:34.0 (140019670)|SYSTEM_METHOD_EXIT|[150]|Set<String>.contains(Object)
+16:33:34.0 (140029834)|STATEMENT_EXECUTE|[150]
+16:33:34.0 (140032498)|STATEMENT_EXECUTE|[153]
+16:33:34.0 (140039555)|METHOD_EXIT|[33]|01pO00000003AAn|TriggerHandler.validateRun()
+16:33:34.0 (140046104)|STATEMENT_EXECUTE|[33]
+16:33:34.0 (140048388)|STATEMENT_EXECUTE|[35]
+16:33:34.0 (140057435)|METHOD_ENTRY|[35]|01pO00000003AAn|TriggerHandler.addToLoopCount()
+16:33:34.0 (140064056)|VARIABLE_SCOPE_BEGIN|[133]|this|TriggerHandler|true|false
+16:33:34.0 (140088737)|VARIABLE_ASSIGNMENT|[133]|this|{"context":"0x2ab31b2d","isTriggerExecuting":true}|0x4bd6c712
+16:33:34.0 (140095417)|STATEMENT_EXECUTE|[133]
+16:33:34.0 (140097653)|STATEMENT_EXECUTE|[134]
+16:33:34.0 (140107102)|METHOD_ENTRY|[134]|01pO00000003AAn|TriggerHandler.getHandlerName()
+16:33:34.0 (140113467)|VARIABLE_SCOPE_BEGIN|[157]|this|TriggerHandler|true|false
+16:33:34.0 (140135509)|VARIABLE_ASSIGNMENT|[157]|this|{"context":"0x2ab31b2d","isTriggerExecuting":true}|0x4bd6c712
+16:33:34.0 (140141185)|STATEMENT_EXECUTE|[157]
+16:33:34.0 (140143313)|STATEMENT_EXECUTE|[158]
+16:33:34.0 (140167697)|SYSTEM_METHOD_ENTRY|[158]|String.valueOf(Object)
+16:33:34.0 (140230754)|HEAP_ALLOCATE|[158]|Bytes:377
+16:33:34.0 (140254196)|SYSTEM_METHOD_EXIT|[158]|String.valueOf(Object)
+16:33:34.0 (140279423)|SYSTEM_METHOD_ENTRY|[158]|String.valueOf(Object)
+16:33:34.0 (140337591)|HEAP_ALLOCATE|[158]|Bytes:377
+16:33:34.0 (140358846)|SYSTEM_METHOD_EXIT|[158]|String.valueOf(Object)
+16:33:34.0 (140378137)|SYSTEM_METHOD_ENTRY|[158]|String.indexOf(String)
+16:33:34.0 (140394870)|SYSTEM_METHOD_EXIT|[158]|String.indexOf(String)
+16:33:34.0 (140418348)|SYSTEM_METHOD_ENTRY|[158]|String.substring(Integer, Integer)
+16:33:34.0 (140426025)|HEAP_ALLOCATE|[158]|Bytes:25
+16:33:34.0 (140442458)|SYSTEM_METHOD_EXIT|[158]|String.substring(Integer, Integer)
+16:33:34.0 (140452750)|METHOD_EXIT|[134]|01pO00000003AAn|TriggerHandler.getHandlerName()
+16:33:34.0 (140459656)|VARIABLE_SCOPE_BEGIN|[134]|handlerName|String|false|false
+16:33:34.0 (140474599)|VARIABLE_ASSIGNMENT|[134]|handlerName|"opportunityTriggerHa (5 more) ..."
+16:33:34.0 (140497194)|SYSTEM_METHOD_ENTRY|[135]|Map<String,TriggerHandler.LoopCount>.containsKey(Object)
+16:33:34.0 (140517593)|SYSTEM_METHOD_EXIT|[135]|Map<String,TriggerHandler.LoopCount>.containsKey(Object)
+16:33:34.0 (140531267)|STATEMENT_EXECUTE|[135]
+16:33:34.0 (140539739)|METHOD_EXIT|[35]|01pO00000003AAn|TriggerHandler.addToLoopCount()
+16:33:34.0 (140573032)|SYSTEM_METHOD_ENTRY|[38]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+16:33:34.0 (140634126)|SYSTEM_METHOD_EXIT|[38]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+16:33:34.0 (140662185)|SYSTEM_METHOD_ENTRY|[40]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+16:33:34.0 (140703027)|SYSTEM_METHOD_EXIT|[40]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+16:33:34.0 (140735505)|SYSTEM_METHOD_ENTRY|[42]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+16:33:34.0 (140798561)|SYSTEM_METHOD_EXIT|[42]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+16:33:34.0 (140829431)|SYSTEM_METHOD_ENTRY|[44]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+16:33:34.0 (140881669)|SYSTEM_METHOD_EXIT|[44]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+16:33:34.0 (140911830)|SYSTEM_METHOD_ENTRY|[46]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+16:33:34.0 (140951996)|SYSTEM_METHOD_EXIT|[46]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+16:33:34.0 (140960085)|STATEMENT_EXECUTE|[46]
+16:33:34.0 (140962438)|STATEMENT_EXECUTE|[47]
+16:33:34.0 (140979467)|METHOD_ENTRY|[47]|01pO0000000371i|opportunityTriggerHandler.afterUpdate()
+16:33:34.0 (141008333)|VARIABLE_SCOPE_BEGIN|[42]|this|opportunityTriggerHandler|true|false
+16:33:34.0 (141036134)|VARIABLE_ASSIGNMENT|[42]|this|{"context":"0x2ab31b2d","isTriggerExecuting":true}|0x4bd6c712
+16:33:34.0 (141043572)|STATEMENT_EXECUTE|[42]
+16:33:34.0 (141046125)|STATEMENT_EXECUTE|[43]
+16:33:34.0 (141056855)|HEAP_ALLOCATE|[43]|Bytes:19
+16:33:34.0 (141080640)|SYSTEM_METHOD_ENTRY|[43]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (141113797)|USER_DEBUG|[43]|ERROR|*** AFTER UPDATE **
+16:33:34.0 (141124431)|SYSTEM_METHOD_EXIT|[43]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (141130488)|STATEMENT_EXECUTE|[44]
+16:33:34.0 (141146674)|METHOD_ENTRY|[44]|01pO0000000371i|opportunityTriggerHandler.ApprovalProcessOrchestrator()
+16:33:34.0 (141174854)|VARIABLE_SCOPE_BEGIN|[249]|this|opportunityTriggerHandler|true|false
+16:33:34.0 (141200525)|VARIABLE_ASSIGNMENT|[249]|this|{"context":"0x2ab31b2d","isTriggerExecuting":true}|0x4bd6c712
+16:33:34.0 (141208175)|STATEMENT_EXECUTE|[249]
+16:33:34.0 (141210482)|STATEMENT_EXECUTE|[250]
+16:33:34.0 (141278734)|HEAP_ALLOCATE|[250]|Bytes:4
+16:33:34.0 (141335052)|SYSTEM_CONSTRUCTOR_ENTRY|[250]|<init>()
+16:33:34.0 (141362922)|SYSTEM_CONSTRUCTOR_EXIT|[250]|<init>()
+16:33:34.0 (141369557)|VARIABLE_SCOPE_BEGIN|[250]|gatesToUpsert|List<Gate__c>|true|false
+16:33:34.0 (141379193)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+16:33:34.0 (141391589)|VARIABLE_ASSIGNMENT|[250]|gatesToUpsert|[]|0x1c8ec80b
+16:33:34.0 (141395754)|STATEMENT_EXECUTE|[251]
+16:33:34.0 (141407311)|HEAP_ALLOCATE|[251]|Bytes:4
+16:33:34.0 (141426178)|SYSTEM_CONSTRUCTOR_ENTRY|[251]|<init>(Integer)
+16:33:34.0 (141446877)|SYSTEM_CONSTRUCTOR_EXIT|[251]|<init>(Integer)
+16:33:34.0 (141453461)|VARIABLE_SCOPE_BEGIN|[251]|OppsToStartApprovalProcess|Set<Id>|true|false
+16:33:34.0 (141486287)|VARIABLE_ASSIGNMENT|[251]|OppsToStartApprovalProcess|[]|0x2ed6d2c4
+16:33:34.0 (141535943)|SYSTEM_METHOD_ENTRY|[253]|List<Opportunity>.iterator()
+16:33:34.0 (141564488)|SYSTEM_METHOD_EXIT|[253]|List<Opportunity>.iterator()
+16:33:34.0 (141583123)|SYSTEM_METHOD_ENTRY|[253]|system.ListIterator.hasNext()
+16:33:34.0 (141595252)|HEAP_ALLOCATE|[253]|Bytes:5
+16:33:34.0 (141606054)|SYSTEM_METHOD_EXIT|[253]|system.ListIterator.hasNext()
+16:33:34.0 (141634901)|VARIABLE_SCOPE_BEGIN|[253]|opp|Opportunity|true|false
+16:33:34.0 (147867353)|VARIABLE_ASSIGNMENT|[253]|opp|{"LastModifiedDate":"2017-03-28T05:33:34.000Z","Regional_Business__c":"a0BO000000F4DiNMAV","TSF_Gate_Status__c":"Approved","Contract_Risk__c":"Client-side risk: Co (21 more) ...","CloseDate":"2017-03-28T00:00:00.000Z","HasOpenActivity":false,"Budget_Confirmed__c":false,"Overall_Prospect_Val (5 more) ...":100000,"Less_Cost_Recoveries (10 more) ...":0,"District__c":"Northern Melbourne","Value_of_Managed_Wor (5 more) ...":1000000,"State__c":"Victoria","D_I_Involvement__c":false,"IsDeleted":false,"Non_Binding_Proposal (12 more) ...":false,"Net_Budget_Post_Tend (5 more) ...":0,"Parent_Company_Guara (11 more) ...":" ","Detailed_Description (3 more) ...":"test","ROI_Analysis_Complet (5 more) ...":false,"PPP_or_Third_Party_F (16 more) ...":false,"Executive_Summary__c":"Test","CRA_Gate_Status__c":"Not Started","Tender_Dates_Header_ (2 more) ...":" ","Less_Cost_Recoveries (10 more) ...":0,"Is_internal_BG_colla (11 more) ...":false,"Prospect_Status__c":"Tender Submitted","Has_CRA_changed_sinc (18 more) ...":"Yes","Id":"006O0000008l3xRIAQ","Proposed_Margin_on_R (9 more) ...":10,"Client_Drivers__c":"test","IsClosed":false,"Delivery_End_Date__c":"2019-03-28T00:00:00.000Z","OwnerId":"005O0000003t7anIAA","Prospect_Duration_Yr (4 more) ...":2.0,"Reason_For_Performin (9 more) ...":"test","RecordTypeId":"012O0000000DDB4IAO","Key_Account_Manager_ (2 more) ...":"System Partners","Country__c":"Australia","Total_Budget_AUD__c":0,"StageName":"Gate 5","Amount":100000.00,"Probability":90,"Sponsor_Details_Head (5 more) ...":" ","Independent_Credit_C (16 more) ...":false,"SystemModstamp":"2017-03-28T05:33:34.000Z","Total_Less_Recoverie (4 more) ...":0,"AccountId":"001O0000017RQomIAG","HasOpportunityLineIt (2 more) ...":false,"Prospect_Number__c":"PRS-0000054","ForecastCategory":"Pipeline","Net_Budget_EOI_PQ__c":0,"Has_TSF_changed_sinc (18 more) ...":"Yes","Client_Relationship_ (13 more) ...":"test","Number_of_PRA_Critic (19 more) ...":1,"Name":"RL Test Opp 2017-03- (11 more) ...","Prospect_Priority__c":"1","CreatedById":"005O0000003t7anIAA","Winning_Strategy_Hea (6 more) ...":" ","Tender_Close_Date__c":"2017-03-28T00:00:00.000Z","JH_Margin_Value__c":0,"Defect_Liability_Dur (15 more) ...":12,"Sync_Date_Fields__c":false,"Is_this_project_a_JV (15 more) ...":false,"Project_Duration_Mon (6 more) ...":24,"Delivery_End_Defect_ (21 more) ...":"2020-03-27T00:00:00.000Z","Is_Gate_1_To_3__c":false,"Bonding_Security_Hea (6 more) ...":" ","Net_Budget_Tender__c":0,"CreatedDate":"2017-03-28T05:05:11.000Z","HasOverdueTask":false,"Discovery_Completed_ (2 more) ...":false,"Are_there_any_critic (11 more) ...":"Yes","Data_Quality_Score__ (1 more) ...":40,"Project_Probability_ (2 more) ...":10,"ForecastCategoryName":"Pipeline","Client_Probity__c":false,"Total_Budget_EOI_PQ_ (2 more) ...":0,"Managing_Contractor_ (12 more) ...":false,"Business_Group__c":"a0BO000000F4Di8MAF","Prospect_Location_He (8 more) ...":" ","Anticipated_Revenue_ (13 more) ...":"2017-03-28T00:00:00.000Z","Is_Gate_4_To_5__c":true,"Data_Quality_Descrip (7 more) ...":"Missing: Type, Lead  (18 more) ...","ExpectedRevenue":90000.00,"Net_Budget_Amount__c":0,"IsWon":false,"Location__c":", Victoria, Australi (1 more) ...","D_I_Involvement_Text (3 more) ...":"No","Less_Cost_Recoveries (15 more) ...":0,"Request_For_Special_ (22 more) ...":false,"Conga_Other_Heading_ (8 more) ...":"Other:","Apply_Default_Bondin (4 more) ...":false,"Gate_Status__c":"Not Applicable","Win_Probability__c":10,"D_I_Involvement_Guid (12 more) ...":"This box should be c (183 more) ...","Total_Budget_Tender_ (2 more) ...":0,"Total_Budget_Post_Te (7 more) ...":0,"Restrict_Access__c":false,"Tender_Start_Date__c":"2017-03-28T00:00:00.000Z","IsPrivate":false,"LastModifiedById":"005O0000003t7anIAA","Is_internal_Regional (21 more) ...":false}|0x2e2b335d
+16:33:34.0 (147893371)|STATEMENT_EXECUTE|[253]
+16:33:34.0 (147895484)|STATEMENT_EXECUTE|[254]
+16:33:34.0 (147952875)|SYSTEM_METHOD_ENTRY|[254]|Map<Id,Opportunity>.get(Object)
+16:33:34.0 (147989975)|SYSTEM_METHOD_EXIT|[254]|Map<Id,Opportunity>.get(Object)
+16:33:34.0 (148009318)|VARIABLE_SCOPE_BEGIN|[254]|oldOpp|Opportunity|true|false
+16:33:34.0 (151467534)|VARIABLE_ASSIGNMENT|[254]|oldOpp|{"LastModifiedDate":"2017-03-28T05:31:20.000Z","Regional_Business__c":"a0BO000000F4DiNMAV","TSF_Gate_Status__c":"Not Started","Contract_Risk__c":"Client-side risk: Co (21 more) ...","CloseDate":"2017-03-28T00:00:00.000Z","HasOpenActivity":false,"Budget_Confirmed__c":false,"Overall_Prospect_Val (5 more) ...":100000,"Less_Cost_Recoveries (10 more) ...":0,"District__c":"Northern Melbourne","Value_of_Managed_Wor (5 more) ...":1000000,"State__c":"Victoria","D_I_Involvement__c":false,"IsDeleted":false,"Non_Binding_Proposal (12 more) ...":false,"Net_Budget_Post_Tend (5 more) ...":0,"Parent_Company_Guara (11 more) ...":" ","Detailed_Description (3 more) ...":"test","ROI_Analysis_Complet (5 more) ...":false,"PPP_or_Third_Party_F (16 more) ...":false,"Executive_Summary__c":"Test","CRA_Gate_Status__c":"Not Started","Tender_Dates_Header_ (2 more) ...":" ","Less_Cost_Recoveries (10 more) ...":0,"Is_internal_BG_colla (11 more) ...":false,"Prospect_Status__c":"Tender Submitted","Has_CRA_changed_sinc (18 more) ...":"Yes","Id":"006O0000008l3xRIAQ","Proposed_Margin_on_R (9 more) ...":10,"Client_Drivers__c":"test","IsClosed":false,"Delivery_End_Date__c":"2019-03-28T00:00:00.000Z","OwnerId":"005O0000003t7anIAA","Prospect_Duration_Yr (4 more) ...":2.0,"Reason_For_Performin (9 more) ...":"test","RecordTypeId":"012O0000000DDB4IAO","Key_Account_Manager_ (2 more) ...":"System Partners","Country__c":"Australia","Total_Budget_AUD__c":0,"StageName":"Gate 5","Amount":100000.00,"Probability":90,"Sponsor_Details_Head (5 more) ...":" ","Independent_Credit_C (16 more) ...":false,"SystemModstamp":"2017-03-28T05:31:20.000Z","Total_Less_Recoverie (4 more) ...":0,"AccountId":"001O0000017RQomIAG","HasOpportunityLineIt (2 more) ...":false,"Prospect_Number__c":"PRS-0000054","ForecastCategory":"Pipeline","Net_Budget_EOI_PQ__c":0,"Has_TSF_changed_sinc (18 more) ...":"Yes","Client_Relationship_ (13 more) ...":"test","Number_of_PRA_Critic (19 more) ...":1,"Name":"RL Test Opp 2017-03- (11 more) ...","Prospect_Priority__c":"1","CreatedById":"005O0000003t7anIAA","Winning_Strategy_Hea (6 more) ...":" ","Tender_Close_Date__c":"2017-03-28T00:00:00.000Z","JH_Margin_Value__c":0,"Defect_Liability_Dur (15 more) ...":12,"Sync_Date_Fields__c":false,"Is_this_project_a_JV (15 more) ...":false,"Project_Duration_Mon (6 more) ...":24,"Delivery_End_Defect_ (21 more) ...":"2020-03-27T00:00:00.000Z","Is_Gate_1_To_3__c":false,"Bonding_Security_Hea (6 more) ...":" ","Net_Budget_Tender__c":0,"CreatedDate":"2017-03-28T05:05:11.000Z","HasOverdueTask":false,"Discovery_Completed_ (2 more) ...":false,"Are_there_any_critic (11 more) ...":"Yes","Data_Quality_Score__ (1 more) ...":40,"Project_Probability_ (2 more) ...":10,"ForecastCategoryName":"Pipeline","Client_Probity__c":false,"Total_Budget_EOI_PQ_ (2 more) ...":0,"Managing_Contractor_ (12 more) ...":false,"Business_Group__c":"a0BO000000F4Di8MAF","Prospect_Location_He (8 more) ...":" ","Anticipated_Revenue_ (13 more) ...":"2017-03-28T00:00:00.000Z","Is_Gate_4_To_5__c":true,"Data_Quality_Descrip (7 more) ...":"Missing: Type, Lead  (18 more) ...","ExpectedRevenue":90000.00,"Net_Budget_Amount__c":0,"IsWon":false,"Location__c":", Victoria, Australi (1 more) ...","D_I_Involvement_Text (3 more) ...":"No","Less_Cost_Recoveries (15 more) ...":0,"Request_For_Special_ (22 more) ...":false,"Conga_Other_Heading_ (8 more) ...":"Other:","Apply_Default_Bondin (4 more) ...":false,"Gate_Status__c":"Not Applicable","Win_Probability__c":10,"D_I_Involvement_Guid (12 more) ...":"This box should be c (183 more) ...","Total_Budget_Tender_ (2 more) ...":0,"Total_Budget_Post_Te (7 more) ...":0,"Restrict_Access__c":false,"Tender_Start_Date__c":"2017-03-28T00:00:00.000Z","IsPrivate":false,"LastModifiedById":"005O0000003t7anIAA","Is_internal_Regional (21 more) ...":false}|0x2457c5e0
+16:33:34.0 (151489121)|STATEMENT_EXECUTE|[256]
+16:33:34.0 (154483131)|VARIABLE_SCOPE_BEGIN|[3]|opportunityService.KCRARecordTypeID|String|false|true
+16:33:34.0 (154491155)|VARIABLE_SCOPE_BEGIN|[2]|opportunityService.KCRATemplateRecordTypeID|String|false|true
+16:33:34.0 (154510081)|HEAP_ALLOCATE|[256]|Bytes:22
+16:33:34.0 (154539953)|METHOD_ENTRY|[1]|01pO00000003HOS|opportunityService.opportunityService()
+16:33:34.0 (154543865)|STATEMENT_EXECUTE|[1]
+16:33:34.0 (154548827)|STATEMENT_EXECUTE|[1]
+16:33:34.0 (155379334)|SYSTEM_MODE_ENTER|false
+16:33:34.0 (155394343)|HEAP_ALLOCATE|[2]|Bytes:5
+16:33:34.0 (155399678)|STATEMENT_EXECUTE|[2]
+16:33:34.0 (155474412)|SYSTEM_METHOD_ENTRY|[2]|Schema.SObjectType.getDescribe()
+16:33:34.0 (155532641)|HEAP_ALLOCATE|[2]|Bytes:4
+16:33:34.0 (155542289)|SYSTEM_METHOD_EXIT|[2]|Schema.SObjectType.getDescribe()
+16:33:34.0 (155573845)|LIMIT_USAGE|[2]|RECORD_TYPE_DESCRIBES|5|100
+16:33:34.0 (155605118)|HEAP_ALLOCATE|[2]|Bytes:16
+16:33:34.0 (155639662)|SYSTEM_METHOD_ENTRY|[2]|Map<String,Schema.RecordTypeInfo>.get(Object)
+16:33:34.0 (155659024)|SYSTEM_METHOD_EXIT|[2]|Map<String,Schema.RecordTypeInfo>.get(Object)
+16:33:34.0 (155691507)|HEAP_ALLOCATE|[2]|Bytes:4
+16:33:34.0 (155706063)|HEAP_ALLOCATE|[2]|Bytes:18
+16:33:34.0 (155723730)|VARIABLE_ASSIGNMENT|[2]|opportunityService.KCRATemplateRecordTypeID|"012O0000000DCgLIAW"
+16:33:34.0 (155726520)|STATEMENT_EXECUTE|[3]
+16:33:34.0 (155757773)|SYSTEM_METHOD_ENTRY|[3]|Schema.SObjectType.getDescribe()
+16:33:34.0 (155788168)|HEAP_ALLOCATE|[3]|Bytes:4
+16:33:34.0 (155794584)|SYSTEM_METHOD_EXIT|[3]|Schema.SObjectType.getDescribe()
+16:33:34.0 (155806819)|LIMIT_USAGE|[3]|RECORD_TYPE_DESCRIBES|6|100
+16:33:34.0 (155821241)|HEAP_ALLOCATE|[3]|Bytes:16
+16:33:34.0 (155839493)|SYSTEM_METHOD_ENTRY|[3]|Map<String,Schema.RecordTypeInfo>.get(Object)
+16:33:34.0 (155854772)|SYSTEM_METHOD_EXIT|[3]|Map<String,Schema.RecordTypeInfo>.get(Object)
+16:33:34.0 (155873268)|HEAP_ALLOCATE|[3]|Bytes:4
+16:33:34.0 (155880855)|HEAP_ALLOCATE|[3]|Bytes:18
+16:33:34.0 (155891615)|VARIABLE_ASSIGNMENT|[3]|opportunityService.KCRARecordTypeID|"012O0000000DCgGIAW"
+16:33:34.0 (155899042)|SYSTEM_MODE_EXIT|false
+16:33:34.0 (155912053)|METHOD_EXIT|[1]|opportunityService
+16:33:34.0 (155939808)|METHOD_ENTRY|[256]|01pO00000003HOS|opportunityService.getGateNumber(String)
+16:33:34.0 (155964938)|VARIABLE_SCOPE_BEGIN|[88]|stage|String|false|false
+16:33:34.0 (155971458)|VARIABLE_ASSIGNMENT|[88]|stage|"Gate 5"
+16:33:34.0 (155980758)|SYSTEM_MODE_ENTER|false
+16:33:34.0 (155986111)|HEAP_ALLOCATE|[89]|Bytes:5
+16:33:34.0 (155989603)|STATEMENT_EXECUTE|[88]
+16:33:34.0 (156025731)|STATEMENT_EXECUTE|[93]
+16:33:34.0 (156029931)|HEAP_ALLOCATE|[93]|Bytes:1
+16:33:34.0 (156034938)|SYSTEM_MODE_EXIT|false
+16:33:34.0 (156043108)|METHOD_EXIT|[256]|01pO00000003HOS|opportunityService.getGateNumber(String)
+16:33:34.0 (156049361)|VARIABLE_SCOPE_BEGIN|[256]|gateNumber|String|false|false
+16:33:34.0 (156055101)|VARIABLE_ASSIGNMENT|[256]|gateNumber|"5"
+16:33:34.0 (156057174)|STATEMENT_EXECUTE|[258]
+16:33:34.0 (156066328)|HEAP_ALLOCATE|[258]|Bytes:42
+16:33:34.0 (156089298)|SYSTEM_METHOD_ENTRY|[258]|String.valueOf(Object)
+16:33:34.0 (157984192)|HEAP_ALLOCATE|[258]|Bytes:5961
+16:33:34.0 (158006411)|SYSTEM_METHOD_EXIT|[258]|String.valueOf(Object)
+16:33:34.0 (158021152)|HEAP_ALLOCATE|[258]|Bytes:6003
+16:33:34.0 (158041937)|SYSTEM_METHOD_ENTRY|[258]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (158061962)|USER_DEBUG|[258]|ERROR|*** TEST ApprovalProcessOrchestrator opp: Opportunity:{Id=006O0000008l3xRIAQ, IsDeleted=false, AccountId=001O0000017RQomIAG, RecordTypeId=012O0000000DDB4IAO, IsPrivate=false, Name=RL Test Opp 2017-03-28 16:05:11, Description=null, StageName=Gate 5, Amount=100000.00, Probability=90, ExpectedRevenue=90000.00, TotalOpportunityQuantity=null, CloseDate=2017-03-28 00:00:00, Type=null, NextStep=null, LeadSource=null, IsClosed=false, IsWon=false, ForecastCategory=Pipeline, ForecastCategoryName=Pipeline, CampaignId=null, HasOpportunityLineItem=false, Pricebook2Id=null, OwnerId=005O0000003t7anIAA, CreatedDate=2017-03-28 05:05:11, CreatedById=005O0000003t7anIAA, LastModifiedDate=2017-03-28 05:33:34, LastModifiedById=005O0000003t7anIAA, SystemModstamp=2017-03-28 05:33:34, LastActivityDate=null, FiscalYear=null, FiscalQuarter=null, LastViewedDate=null, LastReferencedDate=null, SyncedQuoteId=null, ContractId=null, HasOpenActivity=false, HasOverdueTask=false, Budget_Confirmed__c=false, Discovery_Completed__c=false, ROI_Analysis_Completed__c=false, Loss_Reason__c=null, Business_Group__c=a0BO000000F4Di8MAF, Data_Quality_Description__c=Missing: Type, Lead Source, Next Steps, Data_Quality_Score__c=40, EOI_Tender_Date__c=null, Prospect_Code__c=null, Prospect_Manager__c=null, Regional_Business__c=a0BO000000F4DiNMAV, CANDY_Tender_Number__c=null, Also_Known_As__c=null, Prospect_Priority__c=1, Prospect_Number__c=PRS-0000054, Win_Probability__c=10, Project_Probability__c=10, Project_Duration_Months__c=24, Scope__c=null, Payment_Mechanism__c=null, Discipline__c=null, D_I_Involvement__c=false, D_I_Involvement_Guidance_Note__c=This box should be checked if JH D&I are directly involved in providing financial advice, direction or lead of SPV for the prospect. It should not be checked if there is no D&I requirement to be involved, Client_Probity__c=false, Restrict_Access__c=false, Prospect_Status__c=Tender Submitted, Industry_Sector_GM__c=null, Project_Development_Manager__c=null, Detailed_Description__c=test, Non_Binding_Proposal_Required__c=false, EOI_PQ_Start_Date__c=null, EOI_PQ_Close_Date__c=null, Announcement_of_Pre_Qualified_Bidders__c=null, Strategy_Bid_Development_Meeting_Date__c=null, Tender_Start_Date__c=2017-03-28 00:00:00, Tender_Close_Date__c=2017-03-28 00:00:00, Anticipated_Revenue_Start_Date__c=2017-03-28 00:00:00, Interim_Review__c=null, Preliminary_Final_Review__c=null, Final_Tender_Review__c=null, Tender_Collaboration_Pack_Aconex_DB_URL__c=null, Country__c=Australia, State__c=Victoria, Nearest_City__c=null, District__c=Northern Melbourne, Reason_For_Performing_Work__c=test, Client_Drivers__c=test, Relationship__c=null, Client_Relationship_Management__c=test, Financial_Viability_Exposure__c=null, Independent_Credit_Check_Required__c=false, Client_Supplied_Materials__c=null, Value_of_Managed_Works__c=1000000, Overall_Prospect_Value__c=100000, Managing_Contractor_Time_Risk__c=false, Proposed_Margin_on_Revenue__c=10, PPP_or_Third_Party_Funded_Project__c=false, Payment_Variation_Terms__c=null, Finance_Prospect_Comments__c=null, Defect_Liability_Duration_Months__c=12, Minimum_Credit_Rating_Required__c=null, Request_For_Special_Wording_In_The_Bond__c=false, A_PCG_Is_Required_From__c=null, PCG_Comments__c=null, Proposed_FA__c=null, Funding_Strategy__c=null, Target_Gearing_Ratio__c=null, Total_Indicative__c=null, JH_Target_Equity__c=null, JH_Target_Equity_Amount__c=null, Timing_for_Contribution__c=null, Equity_Residual_Risk__c=null, Target_IRR_and_or_D_I_Revenues__c=null, Intended_Exit_Strategy__c=null, JH_Accounting_Tax_Considerations__c=null, Relationship_Agreements__c=null, Is_this_project_a_JV_or_Alliance__c=false, Proposed_form_of_Relationship__c=null, Is_internal_BG_collaboration__c=false, Major_Risks__c=null, Nature_of_technology_design_proposed__c=null, Intentions_to_Resource_Project_Team__c=null, Is_internal_Regional_Bus_collaboration__c=false, Contract_Risk__c=Client-side risk: Construction Management, Client_Relationship_Manager__c=null, Other_Custom_Heading__c=null, Business_Development_Manager__c=null, Procurement_Process__c=null, Alignment_with_Business_Plan__c=null, Competitor_Analysis_General_Comments__c=null, Intentions_to_Resource_Bid_Team__c=null, Conversion_Budget_Comments__c=null, Specific_KCRA_Approvals_Comments__c=null, Design__c=null, Cost__c=null, Time__c=null, Relationships__c=null, People__c=null, Technology__c=null, Methodology__c=null, Innovation__c=null, Other__c=null, Key_Points__c=null, Alignment_with_Core_Competencies__c=null, Executive_Summary__c=Test, Prospect_Location_Heading__c= , Parent_Company_Guarantee_PCG__c= , Winning_Strategy_Header__c= , Bonding_Security_Header__c= , Sponsor_Details_Header__c= , Tender_Dates_Header__c= , JH_Revenue_Share__c=null, JH_Margin_Value__c=0, Total_Budget_EOI_PQ__c=0, Total_Budget_Tender__c=0, Total_Budget_Post_Tender__c=0, Less_Cost_Recoveries_EOI_PQ__c=0, Less_Cost_Recoveries_Tender__c=0, Less_Cost_Recoveries_Post_Tender__c=0, Total_Budget_AUD__c=0, Total_Less_Recoveries__c=0, Net_Budget_Amount__c=0, Net_Budget_EOI_PQ__c=0, Net_Budget_Tender__c=0, Net_Budget_Post_Tender__c=0, JH_Bid_Cost_of_JH_Revenue__c=null, Location__c=, Victoria, Australia, Delivery_End_Date__c=2019-03-28 00:00:00, Prospect_Duration_Yrs__c=2.0, Conga_Other_Heading_Field__c=Other:, Apply_Default_Bonding__c=false, Notes_Doc_ID__c=null, Delivery_End_Defect_Liability_Duration__c=2020-03-27 00:00:00, EOI_PQ_Submitted_Date__c=null, Tender_Submitted_Date__c=null, Count_of_EOI_Lessons_Learnt_Reports__c=null, Count_of_Tender_Lessons_Learnt_Reports__c=null, Gate_Status__c=Not Applicable, TSF_Gate_Status__c=Approved, CRA_Gate_Status__c=Not Started, Number_of_PRA_Critical_Items_Rated_3__c=1, Are_there_any_critical_risks__c=Yes, Has_TSF_changed_since_last_approval__c=Yes, Has_CRA_changed_since_last_approval__c=Yes, Sync_Date_Fields__c=false, Is_Gate_1_To_3__c=false, Is_Gate_4_To_5__c=true, D_I_Involvement_Text__c=No, Reason_for_Status__c=null, Key_Account_Manager__c=System Partners}
+16:33:34.0 (158090957)|SYSTEM_METHOD_EXIT|[258]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (158094955)|STATEMENT_EXECUTE|[259]
+16:33:34.0 (158101108)|HEAP_ALLOCATE|[259]|Bytes:48
+16:33:34.0 (158113909)|HEAP_ALLOCATE|[259]|Bytes:54
+16:33:34.0 (158123231)|SYSTEM_METHOD_ENTRY|[259]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (158140353)|USER_DEBUG|[259]|ERROR|*** TEST ApprovalProcessOrchestrator opp Stage: Gate 5
+16:33:34.0 (158145444)|SYSTEM_METHOD_EXIT|[259]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (158148565)|STATEMENT_EXECUTE|[260]
+16:33:34.0 (158153655)|HEAP_ALLOCATE|[260]|Bytes:52
+16:33:34.0 (158163579)|HEAP_ALLOCATE|[260]|Bytes:58
+16:33:34.0 (158172212)|SYSTEM_METHOD_ENTRY|[260]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (158184316)|USER_DEBUG|[260]|ERROR|*** TEST ApprovalProcessOrchestrator old opp Stage: Gate 5
+16:33:34.0 (158189205)|SYSTEM_METHOD_EXIT|[260]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (158192436)|STATEMENT_EXECUTE|[261]
+16:33:34.0 (158197411)|HEAP_ALLOCATE|[261]|Bytes:53
+16:33:34.0 (158206658)|HEAP_ALLOCATE|[261]|Bytes:67
+16:33:34.0 (158215134)|SYSTEM_METHOD_ENTRY|[261]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (158226655)|USER_DEBUG|[261]|ERROR|*** TEST ApprovalProcessOrchestrator oppGate Status: Not Applicable
+16:33:34.0 (158231315)|SYSTEM_METHOD_EXIT|[261]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (158234237)|STATEMENT_EXECUTE|[262]
+16:33:34.0 (158239075)|HEAP_ALLOCATE|[262]|Bytes:57
+16:33:34.0 (158248060)|HEAP_ALLOCATE|[262]|Bytes:71
+16:33:34.0 (158255881)|SYSTEM_METHOD_ENTRY|[262]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (158266670)|USER_DEBUG|[262]|ERROR|*** TEST ApprovalProcessOrchestrator OLD oppGate Status: Not Applicable
+16:33:34.0 (158271487)|SYSTEM_METHOD_EXIT|[262]|System.debug(APEX_OBJECT, ANY)
+16:33:34.0 (158275884)|HEAP_ALLOCATE|[264]|Bytes:1
+16:33:34.0 (158286800)|HEAP_ALLOCATE|[264]|Bytes:1
+16:33:34.0 (158293563)|HEAP_ALLOCATE|[264]|Bytes:1
+16:33:34.0 (158317896)|STATEMENT_EXECUTE|[274]
+16:33:34.0 (158324638)|HEAP_ALLOCATE|[276]|Bytes:11
+16:33:34.0 (158336915)|HEAP_ALLOCATE|[276]|Bytes:9
+16:33:34.0 (158350567)|STATEMENT_EXECUTE|[276]
+16:33:34.0 (158373127)|STATEMENT_EXECUTE|[285]
+16:33:34.0 (158384959)|SYSTEM_METHOD_ENTRY|[253]|system.ListIterator.hasNext()
+16:33:34.0 (158395192)|HEAP_ALLOCATE|[253]|Bytes:5
+16:33:34.0 (158402454)|SYSTEM_METHOD_EXIT|[253]|system.ListIterator.hasNext()
+16:33:34.0 (158415438)|VARIABLE_ASSIGNMENT|[253]|opp|null|
+16:33:34.0 (158439835)|METHOD_ENTRY|[295]|01pO00000003HOS|opportunityService.getOpportunitiesAndInitiatedGates(Set<Id>)
+16:33:34.0 (158458796)|VARIABLE_SCOPE_BEGIN|[76]|OppsToStartApprovalProcess|Set<Id>|true|false
+16:33:34.0 (158471514)|VARIABLE_ASSIGNMENT|[76]|OppsToStartApprovalProcess|[]|0x2ed6d2c4
+16:33:34.0 (158479968)|SYSTEM_MODE_ENTER|false
+16:33:34.0 (158485383)|HEAP_ALLOCATE|[78]|Bytes:5
+16:33:34.0 (158488929)|STATEMENT_EXECUTE|[76]
+16:33:34.0 (158490365)|STATEMENT_EXECUTE|[78]
+16:33:34.0 (158493276)|HEAP_ALLOCATE|[78]|Bytes:238
+16:33:34.0 (158506412)|HEAP_ALLOCATE|[78]|Bytes:4
+16:33:34.0 (158522765)|HEAP_ALLOCATE|[78]|Bytes:7
+16:33:34.0 (158601189)|HEAP_ALLOCATE|[78]|Bytes:4
+16:33:34.0 (158608009)|HEAP_ALLOCATE|[78]|Bytes:4
+16:33:34.0 (160668727)|SOQL_EXECUTE_BEGIN|[78]|Aggregations:1|SELECT ID, stageName, Gate_Status__c, CRA_Gate_Status__c, TSF_Gate_Status__c, (SELECT ID, Gate_Number__c, Gate_Type__c FROM Gates__r WHERE status__c = 'Initiated' ORDER BY CreatedDate DESC NULLS FIRST) FROM Opportunity WHERE ID = :tmpVar1
+16:33:34.0 (160678357)|LIMIT_USAGE|[78]|SOQL|1|100
+16:33:34.0 (160686705)|LIMIT_USAGE|[78]|AGGS|1|300
+16:33:34.0 (163029610)|SOQL_EXECUTE_END|[78]|Rows:0
+16:33:34.0 (163037516)|LIMIT_USAGE|[78]|SOQL_ROWS|0|50000
+16:33:34.0 (163053686)|HEAP_ALLOCATE|[78]|Bytes:4
+16:33:34.0 (163065329)|HEAP_ALLOCATE|[78]|Bytes:0
+16:33:34.0 (163090995)|HEAP_ALLOCATE|[78]|Bytes:4
+16:33:34.0 (163105168)|SYSTEM_MODE_EXIT|false
+16:33:34.0 (163117485)|METHOD_EXIT|[295]|01pO00000003HOS|opportunityService.getOpportunitiesAndInitiatedGates(Set<Id>)
+16:33:34.0 (163133037)|SYSTEM_METHOD_ENTRY|[295]|List<Opportunity>.iterator()
+16:33:34.0 (163141624)|SYSTEM_METHOD_EXIT|[295]|List<Opportunity>.iterator()
+16:33:34.0 (163152691)|SYSTEM_METHOD_ENTRY|[295]|system.ListIterator.hasNext()
+16:33:34.0 (163161652)|HEAP_ALLOCATE|[295]|Bytes:5
+16:33:34.0 (163167872)|SYSTEM_METHOD_EXIT|[295]|system.ListIterator.hasNext()
+16:33:34.0 (163181049)|VARIABLE_ASSIGNMENT|[295]|Opp|null|
+16:33:34.0 (163185772)|STATEMENT_EXECUTE|[295]
+16:33:34.0 (163188055)|STATEMENT_EXECUTE|[333]
+16:33:34.0 (163189024)|STATEMENT_EXECUTE|[333]
+16:33:34.0 (163190181)|STATEMENT_EXECUTE|[334]
+16:33:34.0 (163302920)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+16:33:34.0 (163318361)|METHOD_EXIT|[44]|01pO0000000371i|opportunityTriggerHandler.ApprovalProcessOrchestrator()
+16:33:34.0 (163326374)|METHOD_EXIT|[47]|01pO0000000371i|opportunityTriggerHandler.afterUpdate()
+16:33:34.0 (163331326)|METHOD_EXIT|[4]|01pO00000003AAn|TriggerHandler.run()
+16:33:34.163 (163343828)|CUMULATIVE_LIMIT_USAGE
+16:33:34.163 (163343828)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+16:33:34.163 (163343828)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+16:33:34.163 (163343828)|STATIC_VARIABLE_LIST|
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MAX_VALUE:0
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_static_PRATemplateRecordTypeID:0
+  Boolean:_static_runOnce:0
+  int:SIZE:0
+  TriggerHandler.TriggerContext:BEFORE_INSERT:0
+  String:_static_KCRARecordTypeID:0
+  int:MAX_VALUE:0
+  TriggerHandler.TriggerContext:AFTER_UNDELETE:0
+  Boolean:_static_recursion:0
+  int:MIN_VALUE:0
+  char[]:DigitOnes:0
+  String:_static_KCRATemplateRecordTypeID:0
+  int:MIN_EXPONENT:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  int:MAX_EXPONENT:0
+  String:_static_PRARecordTypeID:0
+  int:BYTES:0
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  Boolean:FALSE:0
+  double:MIN_VALUE:0
+  double:NEGATIVE_INFINITY:0
+  char[]:digits:0
+  double:NaN:0
+  Boolean:TRUE:0
+  TriggerHandler.TriggerContext:AFTER_INSERT:0
+  Boolean:_static_isTest:0
+  String:_static_KCRATemplateRecordTypeID:0
+  TriggerHandler.TriggerContext:AFTER_DELETE:0
+  TriggerHandler.TriggerContext:AFTER_UPDATE:0
+  String:__sfdcInnerTypes:0
+  int:BYTES:0
+  Map<String,TriggerHandler.LoopCount>:_static_loopCountMap:0
+  Set<String>:_static_bypassedHandlers:0
+  int[]:sizeTable:0
+  TriggerHandler.TriggerContext:BEFORE_DELETE:0
+  TriggerHandler.TriggerContext:BEFORE_UPDATE:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  double:MIN_NORMAL:0
+  String:_static_KCRARecordTypeID:0
+
+16:33:34.163 (163343828)|CUMULATIVE_LIMIT_USAGE_END
+
+16:33:34.0 (165375094)|CODE_UNIT_FINISHED|opportunityTrigger on Opportunity trigger event AfterUpdate for [006O0000008l3xR]
+16:33:34.0 (166668616)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Opportunity
+16:33:34.0 (188719287)|WF_RULE_EVAL_BEGIN|Workflow
+16:33:34.0 (188767801)|WF_CRITERIA_BEGIN|[Opportunity: RL Test Opp 2017-03-28 16:05:11 006O0000008l3xR]|Gate 1|01QO00000009L9k|ON_CREATE_OR_TRIGGERING_UPDATE|0
+16:33:34.0 (195903695)|WF_RULE_FILTER|[Opportunity : Stage equals Gate 1]
+16:33:34.0 (195922085)|WF_RULE_EVAL_VALUE|Gate 5
+16:33:34.0 (195926430)|WF_CRITERIA_END|false
+16:33:34.0 (195943007)|WF_CRITERIA_BEGIN|[Opportunity: RL Test Opp 2017-03-28 16:05:11 006O0000008l3xR]|Gate 4|01QO00000009LEa|ON_CREATE_OR_TRIGGERING_UPDATE|0
+16:33:34.0 (195991171)|WF_RULE_FILTER|[Opportunity : Stage equals Gate 4]
+16:33:34.0 (196001572)|WF_RULE_EVAL_VALUE|Gate 5
+16:33:34.0 (196004155)|WF_CRITERIA_END|false
+16:33:34.0 (196014292)|WF_CRITERIA_BEGIN|[Opportunity: RL Test Opp 2017-03-28 16:05:11 006O0000008l3xR]|Apply_Date_Sync301O00000000zJx|01QO00000009S4h|ON_ALL_CHANGES|0
+16:33:34.0 (196128501)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+16:33:34.0 (196132898)|WF_CRITERIA_END|true
+16:33:34.0 (197136322)|WF_CRITERIA_BEGIN|[Opportunity: RL Test Opp 2017-03-28 16:05:11 006O0000008l3xR]|Gate 5|01QO00000009LEp|ON_CREATE_OR_TRIGGERING_UPDATE|0
+16:33:34.0 (197171861)|WF_RULE_NOT_EVALUATED
+16:33:34.0 (197185679)|WF_CRITERIA_BEGIN|[Opportunity: RL Test Opp 2017-03-28 16:05:11 006O0000008l3xR]|Create_Default_Performance_defect_Liability_Bonds301O00000000zLF|01QO00000009S69|ON_RECURSIVE_UPDATE|0
+16:33:34.0 (197222873)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+16:33:34.0 (197226089)|WF_CRITERIA_END|true
+16:33:34.0 (197244705)|WF_CRITERIA_BEGIN|[Opportunity: RL Test Opp 2017-03-28 16:05:11 006O0000008l3xR]|Apply_synch_default_Bonding_Securities301O00000000yUz|01QO00000009RRa|ON_RECURSIVE_UPDATE|0
+16:33:34.0 (197273802)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+16:33:34.0 (197276491)|WF_CRITERIA_END|true
+16:33:34.0 (197293192)|WF_CRITERIA_BEGIN|[Opportunity: RL Test Opp 2017-03-28 16:05:11 006O0000008l3xR]|Outbound Message - Opportunity|01QO00000009Msg|ON_ALL_CHANGES|0
+16:33:34.0 (197320967)|WF_RULE_FILTER|[Opportunity : Created Date not equal to ]
+16:33:34.0 (197339889)|WF_RULE_EVAL_VALUE|2017-03-28 05:05:11
+16:33:34.0 (197342184)|WF_CRITERIA_END|true
+16:33:34.0 (197356784)|WF_CRITERIA_BEGIN|[Opportunity: RL Test Opp 2017-03-28 16:05:11 006O0000008l3xR]|Gate 2|01QO00000009L9p|ON_CREATE_OR_TRIGGERING_UPDATE|0
+16:33:34.0 (197401648)|WF_RULE_FILTER|[Opportunity : Stage equals Gate 2]
+16:33:34.0 (197412495)|WF_RULE_EVAL_VALUE|Gate 5
+16:33:34.0 (197414589)|WF_CRITERIA_END|false
+16:33:34.0 (197424093)|WF_CRITERIA_BEGIN|[Opportunity: RL Test Opp 2017-03-28 16:05:11 006O0000008l3xR]|Gate 3|01QO00000009LAx|ON_CREATE_OR_TRIGGERING_UPDATE|0
+16:33:34.0 (197463970)|WF_RULE_FILTER|[Opportunity : Stage equals Gate 3]
+16:33:34.0 (197473893)|WF_RULE_EVAL_VALUE|Gate 5
+16:33:34.0 (197475969)|WF_CRITERIA_END|false
+16:33:34.0 (197495785)|WF_SPOOL_ACTION_BEGIN|Workflow
+16:33:34.0 (197524232)|WF_RULE_INVOCATION|[Opportunity: RL Test Opp 2017-03-28 16:05:11 006O0000008l3xR]
+16:33:34.0 (197535757)|WF_OUTBOUND_MSG|[Opportunity: RL Test Opp 2017-03-28 16:05:11 006O0000008l3xR]|Id=04kO00000004DCX|CurrentRule:Outbound Message - Opportunity (Id=01QO00000009Msg)
+16:33:34.0 (197561852)|WF_ACTION| Outbound Message: 1; Flow Trigger: 3;
+16:33:34.0 (197565236)|WF_RULE_EVAL_END
+16:33:34.0 (206128249)|WF_FLOW_ACTION_BEGIN|09LO0000000ClS6
+16:33:34.0 (206174762)|WF_FLOW_ACTION_DETAIL|09LO0000000ClS6|[Opportunity: RL Test Opp 2017-03-28 16:05:11 006O0000008l3xR]|Id=09LO0000000ClS6|CurrentRule:Gate 3 (Id=01QO00000009LAx)
+16:33:34.206 (206237082)|FLOW_CREATE_INTERVIEW_BEGIN|00DO00000054ynj|300O0000000092g|301O00000000yUz
+16:33:34.206 (208373470)|FLOW_CREATE_INTERVIEW_END|40080817b023da084ca6695723ff15b133ee0b9-4f9a|Apply synch default Bonding / Securities v5
+16:33:34.0 (208746289)|WF_FLOW_ACTION_DETAIL|Param Name: myVariable_current, Param Value: ENCODED:{![treatNullAsNull]{!ID:this}}, Evaluated Param Value: {Entity type: Opportunity, id: 006O0000008l3xRIAQ}|Param Name: myVariable_old, Param Value: {!old}, Evaluated Param Value: {Entity type: Opportunity, id: 006O0000008l3xRIAQ}|Param Name: RecursiveCountVariable, Param Value: {!triggerRecurseCount}, Evaluated Param Value: 0
+16:33:34.208 (208806955)|FLOW_START_INTERVIEWS_BEGIN|1
+16:33:34.208 (209654598)|FLOW_START_INTERVIEW_BEGIN|40080817b023da084ca6695723ff15b133ee0b9-4f9a|Apply synch default Bonding / Securities v5
+16:33:34.208 (209688178)|FLOW_VALUE_ASSIGNMENT|40080817b023da084ca6695723ff15b133ee0b9-4f9a|myVariable_old|moduleapi.interaction.SObjectRowWithSavePoint@26b28154
+16:33:34.208 (212802724)|FLOW_VALUE_ASSIGNMENT|40080817b023da084ca6695723ff15b133ee0b9-4f9a|myVariable_current|{Id=006O0000008l3xRIAQ, IsDeleted=false, AccountId=001O0000017RQomIAG, RecordTypeId=012O0000000DDB4IAO, IsPrivate=false, Name=RL Test Opp 2017-03-28 16:05:11, Description=null, StageName=Gate 5, StageSortOrder=6, Amount=100000.0, Probability=90, ExpectedRevenue=90000.0, TotalOpportunityQuantity=null, CloseDate=2017-03-28 00:00:00, Type=null, NextStep=null, LeadSource=null, IsClosed=false, IsWon=false, ForecastCategory=Pipeline, ForecastCategoryName=Pipeline, CampaignId=null, HasOpportunityLineItem=false, PricebookId=null, Pricebook2Id=null, OwnerId=005O0000003t7anIAA, CreatedDate=2017-03-28 05:05:11, CreatedById=005O0000003t7anIAA, LastModifiedDate=2017-03-28 05:33:34, LastModifiedById=005O0000003t7anIAA, SystemModstamp=2017-03-28 05:33:34, LastActivityDate=null, LastStageChangeDate=2017-03-28 05:31:20, FiscalYear=null, FiscalQuarter=null, ContactId=null, PrimaryPartnerAccountId=null, LastViewedDate=null, LastReferencedDate=null, ConnectionReceivedDate=null, ConnectionSentDate=null, SyncedQuoteId=null, ContractId=null, HasOpenActivity=false, HasOverdueTask=false, Budget_Confirmed__c=false, Discovery_Completed__c=false, ROI_Analysis_Completed__c=false, Loss_Reason__c=null, Business_Group__c=a0BO000000F4Di8MAF, Data_Quality_Description__c=Missing: Type, Lead Source, Next Steps, Data_Quality_Score__c=40.0, EOI_Tender_Date__c=null, Prospect_Code__c=null, Prospect_Manager__c=null, Regional_Business__c=a0BO000000F4DiNMAV, CANDY_Tender_Number__c=null, Also_Known_As__c=null, Prospect_Priority__c=1, Prospect_Number__c=PRS-0000054, Win_Probability__c=10.0, Project_Probability__c=10.0, Project_Duration_Months__c=24.0, Scope__c=null, Payment_Mechanism__c=null, Discipline__c=null, D_I_Involvement__c=false, D_I_Involvement_Guidance_Note__c=This box should be checked if JH D&I are directly involved in providing financial advice, direction or lead of SPV for the prospect. It should not be checked if there is no D&I requirement to be involved, Client_Probity__c=false, Restrict_Access__c=false, Prospect_Status__c=Tender Submitted, Industry_Sector_GM__c=null, Project_Development_Manager__c=null, Detailed_Description__c=test, Non_Binding_Proposal_Required__c=false, EOI_PQ_Start_Date__c=null, EOI_PQ_Close_Date__c=null, Announcement_of_Pre_Qualified_Bidders__c=null, Strategy_Bid_Development_Meeting_Date__c=null, Tender_Start_Date__c=2017-03-28 00:00:00, Tender_Close_Date__c=2017-03-28 00:00:00, Anticipated_Revenue_Start_Date__c=2017-03-28 00:00:00, Interim_Review__c=null, Preliminary_Final_Review__c=null, Final_Tender_Review__c=null, Tender_Collaboration_Pack_Aconex_DB_URL__c=null, Country__c=Australia, State__c=Victoria, Nearest_City__c=null, District__c=Northern Melbourne, Reason_For_Performing_Work__c=test, Client_Drivers__c=test, Relationship__c=null, Client_Relationship_Management__c=test, Financial_Viability_Exposure__c=null, Independent_Credit_Check_Required__c=false, Client_Supplied_Materials__c=null, Value_of_Managed_Works__c=1000000.0, Overall_Prospect_Value__c=100000.0, Managing_Contractor_Time_Risk__c=false, Proposed_Margin_on_Revenue__c=10.0, PPP_or_Third_Party_Funded_Project__c=false, Payment_Variation_Terms__c=null, Finance_Prospect_Comments__c=null, Defect_Liability_Duration_Months__c=12.0, Minimum_Credit_Rating_Required__c=null, Request_For_Special_Wording_In_The_Bond__c=false, A_PCG_Is_Required_From__c=null, PCG_Comments__c=null, Proposed_FA__c=null, Funding_Strategy__c=null, Target_Gearing_Ratio__c=null, Total_Indicative__c=null, JH_Target_Equity__c=null, JH_Target_Equity_Amount__c=null, Timing_for_Contribution__c=null, Equity_Residual_Risk__c=null, Target_IRR_and_or_D_I_Revenues__c=null, Intended_Exit_Strategy__c=null, JH_Accounting_Tax_Considerations__c=null, Relationship_Agreements__c=null, Is_this_project_a_JV_or_Alliance__c=false, Proposed_form_of_Relationship__c=null, Is_internal_BG_collaboration__c=false, Major_Risks__c=null, Nature_of_technology_design_proposed__c=null, Intentions_to_Resource_Project_Team__c=null, Is_internal_Regional_Bus_collaboration__c=false, Contract_Risk__c=Client-side risk: Construction Management, Client_Relationship_Manager__c=null, Other_Custom_Heading__c=null, Business_Development_Manager__c=null, Procurement_Process__c=null, Alignment_with_Business_Plan__c=null, Competitor_Analysis_General_Comments__c=null, Intentions_to_Resource_Bid_Team__c=null, Conversion_Budget_Comments__c=null, Specific_KCRA_Approvals_Comments__c=null, Design__c=null, Cost__c=null, Time__c=null, Relationships__c=null, People__c=null, Technology__c=null, Methodology__c=null, Innovation__c=null, Other__c=null, Key_Points__c=null, Alignment_with_Core_Competencies__c=null, Executive_Summary__c=Test, Prospect_Location_Heading__c= , Parent_Company_Guarantee_PCG__c= , Winning_Strategy_Header__c= , Bonding_Security_Header__c= , Sponsor_Details_Header__c= , Tender_Dates_Header__c= , JH_Revenue_Share__c=null, JH_Margin_Value__c=0.0, Total_Budget_EOI_PQ__c=0.0, Total_Budget_Tender__c=0.0, Total_Budget_Post_Tender__c=0.0, Less_Cost_Recoveries_EOI_PQ__c=0.0, Less_Cost_Recoveries_Tender__c=0.0, Less_Cost_Recoveries_Post_Tender__c=0.0, Total_Budget_AUD__c=0.0, Total_Less_Recoveries__c=0.0, Net_Budget_Amount__c=0.0, Net_Budget_EOI_PQ__c=0.0, Net_Budget_Tender__c=0.0, Net_Budget_Post_Tender__c=0.0, JH_Bid_Cost_of_JH_Revenue__c=null, Location__c=, Victoria, Australia, Delivery_End_Date__c=2019-03-28 00:00:00, Prospect_Duration_Yrs__c=2.0, Conga_Other_Heading_Field__c=Other:, Apply_Default_Bonding__c=false, Notes_Doc_ID__c=null, Delivery_End_Defect_Liability_Duration__c=2020-03-27 00:00:00, EOI_PQ_Submitted_Date__c=null, Tender_Submitted_Date__c=null, Count_of_EOI_Lessons_Learnt_Reports__c=null, Count_of_Tender_Lessons_Learnt_Reports__c=null, Gate_Status__c=Not Applicable, TSF_Gate_Status__c=Approved, CRA_Gate_Status__c=Not Started, Number_of_PRA_Critical_Items_Rated_3__c=1.0, Are_there_any_critical_risks__c=Yes, Has_TSF_changed_since_last_approval__c=Yes, Has_CRA_changed_since_last_approval__c=Yes, Sync_Date_Fields__c=false, Is_Gate_1_To_3__c=false, Is_Gate_4_To_5__c=true, D_I_Involvement_Text__c=No, Reason_for_Status__c=null, Key_Account_Manager__c=System Partners}
+16:33:34.208 (212833073)|FLOW_VALUE_ASSIGNMENT|40080817b023da084ca6695723ff15b133ee0b9-4f9a|RecursiveCountVariable|0
+16:33:34.208 (212898813)|FLOW_ELEMENT_BEGIN|40080817b023da084ca6695723ff15b133ee0b9-4f9a|FlowAssignment|myVariable_waitStartTimeAssignment
+16:33:34.208 (212966658)|FLOW_ASSIGNMENT_DETAIL|40080817b023da084ca6695723ff15b133ee0b9-4f9a|myVariable_waitStartTimeVariable|ASSIGN|28/03/2017 4:33 PM
+16:33:34.208 (212978381)|FLOW_VALUE_ASSIGNMENT|40080817b023da084ca6695723ff15b133ee0b9-4f9a|myVariable_waitStartTimeVariable|2017-03-28T05:33:34Z
+16:33:34.208 (212986271)|FLOW_ELEMENT_END|40080817b023da084ca6695723ff15b133ee0b9-4f9a|FlowAssignment|myVariable_waitStartTimeAssignment
+16:33:34.208 (212996428)|FLOW_ELEMENT_BEGIN|40080817b023da084ca6695723ff15b133ee0b9-4f9a|FlowDecision|isChangedDecision2_myRule_1_CloseDate
+16:33:34.208 (213223481)|FLOW_RULE_DETAIL|40080817b023da084ca6695723ff15b133ee0b9-4f9a|isChangedRule_2_myRule_1_CloseDate|false
+16:33:34.208 (213231194)|FLOW_VALUE_ASSIGNMENT|40080817b023da084ca6695723ff15b133ee0b9-4f9a|isChangedRule_2_myRule_1_CloseDate|false
+16:33:34.208 (213237942)|FLOW_ELEMENT_END|40080817b023da084ca6695723ff15b133ee0b9-4f9a|FlowDecision|isChangedDecision2_myRule_1_CloseDate
+16:33:34.208 (213244033)|FLOW_ELEMENT_BEGIN|40080817b023da084ca6695723ff15b133ee0b9-4f9a|FlowDecision|myDecision
+16:33:34.208 (213267270)|FLOW_RULE_DETAIL|40080817b023da084ca6695723ff15b133ee0b9-4f9a|myRule_1|false
+16:33:34.208 (213271460)|FLOW_VALUE_ASSIGNMENT|40080817b023da084ca6695723ff15b133ee0b9-4f9a|myRule_1|false
+16:33:34.208 (213275607)|FLOW_ELEMENT_END|40080817b023da084ca6695723ff15b133ee0b9-4f9a|FlowDecision|myDecision
+16:33:34.208 (213368400)|FLOW_START_INTERVIEW_END|40080817b023da084ca6695723ff15b133ee0b9-4f9a|Apply synch default Bonding / Securities v5
+16:33:34.208 (213375949)|FLOW_START_INTERVIEWS_END|1
+16:33:34.0 (214662106)|WF_FLOW_ACTION_END|09LO0000000ClS6
+16:33:34.0 (214681607)|WF_FLOW_ACTION_BEGIN|09LO0000000Clat
+16:33:34.0 (214720433)|WF_FLOW_ACTION_DETAIL|09LO0000000Clat|[Opportunity: RL Test Opp 2017-03-28 16:05:11 006O0000008l3xR]|Id=09LO0000000Clat|CurrentRule:Gate 3 (Id=01QO00000009LAx)
+16:33:34.214 (214779107)|FLOW_CREATE_INTERVIEW_BEGIN|00DO00000054ynj|300O000000007lj|301O00000000zLF
+16:33:34.214 (216701689)|FLOW_CREATE_INTERVIEW_END|40090817b023da084ca6695723ff15b133ee0b9-4f9b|Create Default Performance & defect Liability Bonds v5
+16:33:34.0 (217079645)|WF_FLOW_ACTION_DETAIL|Param Name: myVariable_current, Param Value: ENCODED:{![treatNullAsNull]{!ID:this}}, Evaluated Param Value: {Entity type: Opportunity, id: 006O0000008l3xRIAQ}|Param Name: myVariable_old, Param Value: {!old}, Evaluated Param Value: {Entity type: Opportunity, id: 006O0000008l3xRIAQ}|Param Name: RecursiveCountVariable, Param Value: {!triggerRecurseCount}, Evaluated Param Value: 0
+16:33:34.217 (217131036)|FLOW_START_INTERVIEWS_BEGIN|1
+16:33:34.217 (218613100)|FLOW_START_INTERVIEW_BEGIN|40090817b023da084ca6695723ff15b133ee0b9-4f9b|Create Default Performance & defect Liability Bonds v5
+16:33:34.217 (218641009)|FLOW_VALUE_ASSIGNMENT|40090817b023da084ca6695723ff15b133ee0b9-4f9b|myVariable_old|moduleapi.interaction.SObjectRowWithSavePoint@3a60b7eb
+16:33:34.217 (221682040)|FLOW_VALUE_ASSIGNMENT|40090817b023da084ca6695723ff15b133ee0b9-4f9b|myVariable_current|{Id=006O0000008l3xRIAQ, IsDeleted=false, AccountId=001O0000017RQomIAG, RecordTypeId=012O0000000DDB4IAO, IsPrivate=false, Name=RL Test Opp 2017-03-28 16:05:11, Description=null, StageName=Gate 5, StageSortOrder=6, Amount=100000.0, Probability=90, ExpectedRevenue=90000.0, TotalOpportunityQuantity=null, CloseDate=2017-03-28 00:00:00, Type=null, NextStep=null, LeadSource=null, IsClosed=false, IsWon=false, ForecastCategory=Pipeline, ForecastCategoryName=Pipeline, CampaignId=null, HasOpportunityLineItem=false, PricebookId=null, Pricebook2Id=null, OwnerId=005O0000003t7anIAA, CreatedDate=2017-03-28 05:05:11, CreatedById=005O0000003t7anIAA, LastModifiedDate=2017-03-28 05:33:34, LastModifiedById=005O0000003t7anIAA, SystemModstamp=2017-03-28 05:33:34, LastActivityDate=null, LastStageChangeDate=2017-03-28 05:31:20, FiscalYear=null, FiscalQuarter=null, ContactId=null, PrimaryPartnerAccountId=null, LastViewedDate=null, LastReferencedDate=null, ConnectionReceivedDate=null, ConnectionSentDate=null, SyncedQuoteId=null, ContractId=null, HasOpenActivity=false, HasOverdueTask=false, Budget_Confirmed__c=false, Discovery_Completed__c=false, ROI_Analysis_Completed__c=false, Loss_Reason__c=null, Business_Group__c=a0BO000000F4Di8MAF, Data_Quality_Description__c=Missing: Type, Lead Source, Next Steps, Data_Quality_Score__c=40.0, EOI_Tender_Date__c=null, Prospect_Code__c=null, Prospect_Manager__c=null, Regional_Business__c=a0BO000000F4DiNMAV, CANDY_Tender_Number__c=null, Also_Known_As__c=null, Prospect_Priority__c=1, Prospect_Number__c=PRS-0000054, Win_Probability__c=10.0, Project_Probability__c=10.0, Project_Duration_Months__c=24.0, Scope__c=null, Payment_Mechanism__c=null, Discipline__c=null, D_I_Involvement__c=false, D_I_Involvement_Guidance_Note__c=This box should be checked if JH D&I are directly involved in providing financial advice, direction or lead of SPV for the prospect. It should not be checked if there is no D&I requirement to be involved, Client_Probity__c=false, Restrict_Access__c=false, Prospect_Status__c=Tender Submitted, Industry_Sector_GM__c=null, Project_Development_Manager__c=null, Detailed_Description__c=test, Non_Binding_Proposal_Required__c=false, EOI_PQ_Start_Date__c=null, EOI_PQ_Close_Date__c=null, Announcement_of_Pre_Qualified_Bidders__c=null, Strategy_Bid_Development_Meeting_Date__c=null, Tender_Start_Date__c=2017-03-28 00:00:00, Tender_Close_Date__c=2017-03-28 00:00:00, Anticipated_Revenue_Start_Date__c=2017-03-28 00:00:00, Interim_Review__c=null, Preliminary_Final_Review__c=null, Final_Tender_Review__c=null, Tender_Collaboration_Pack_Aconex_DB_URL__c=null, Country__c=Australia, State__c=Victoria, Nearest_City__c=null, District__c=Northern Melbourne, Reason_For_Performing_Work__c=test, Client_Drivers__c=test, Relationship__c=null, Client_Relationship_Management__c=test, Financial_Viability_Exposure__c=null, Independent_Credit_Check_Required__c=false, Client_Supplied_Materials__c=null, Value_of_Managed_Works__c=1000000.0, Overall_Prospect_Value__c=100000.0, Managing_Contractor_Time_Risk__c=false, Proposed_Margin_on_Revenue__c=10.0, PPP_or_Third_Party_Funded_Project__c=false, Payment_Variation_Terms__c=null, Finance_Prospect_Comments__c=null, Defect_Liability_Duration_Months__c=12.0, Minimum_Credit_Rating_Required__c=null, Request_For_Special_Wording_In_The_Bond__c=false, A_PCG_Is_Required_From__c=null, PCG_Comments__c=null, Proposed_FA__c=null, Funding_Strategy__c=null, Target_Gearing_Ratio__c=null, Total_Indicative__c=null, JH_Target_Equity__c=null, JH_Target_Equity_Amount__c=null, Timing_for_Contribution__c=null, Equity_Residual_Risk__c=null, Target_IRR_and_or_D_I_Revenues__c=null, Intended_Exit_Strategy__c=null, JH_Accounting_Tax_Considerations__c=null, Relationship_Agreements__c=null, Is_this_project_a_JV_or_Alliance__c=false, Proposed_form_of_Relationship__c=null, Is_internal_BG_collaboration__c=false, Major_Risks__c=null, Nature_of_technology_design_proposed__c=null, Intentions_to_Resource_Project_Team__c=null, Is_internal_Regional_Bus_collaboration__c=false, Contract_Risk__c=Client-side risk: Construction Management, Client_Relationship_Manager__c=null, Other_Custom_Heading__c=null, Business_Development_Manager__c=null, Procurement_Process__c=null, Alignment_with_Business_Plan__c=null, Competitor_Analysis_General_Comments__c=null, Intentions_to_Resource_Bid_Team__c=null, Conversion_Budget_Comments__c=null, Specific_KCRA_Approvals_Comments__c=null, Design__c=null, Cost__c=null, Time__c=null, Relationships__c=null, People__c=null, Technology__c=null, Methodology__c=null, Innovation__c=null, Other__c=null, Key_Points__c=null, Alignment_with_Core_Competencies__c=null, Executive_Summary__c=Test, Prospect_Location_Heading__c= , Parent_Company_Guarantee_PCG__c= , Winning_Strategy_Header__c= , Bonding_Security_Header__c= , Sponsor_Details_Header__c= , Tender_Dates_Header__c= , JH_Revenue_Share__c=null, JH_Margin_Value__c=0.0, Total_Budget_EOI_PQ__c=0.0, Total_Budget_Tender__c=0.0, Total_Budget_Post_Tender__c=0.0, Less_Cost_Recoveries_EOI_PQ__c=0.0, Less_Cost_Recoveries_Tender__c=0.0, Less_Cost_Recoveries_Post_Tender__c=0.0, Total_Budget_AUD__c=0.0, Total_Less_Recoveries__c=0.0, Net_Budget_Amount__c=0.0, Net_Budget_EOI_PQ__c=0.0, Net_Budget_Tender__c=0.0, Net_Budget_Post_Tender__c=0.0, JH_Bid_Cost_of_JH_Revenue__c=null, Location__c=, Victoria, Australia, Delivery_End_Date__c=2019-03-28 00:00:00, Prospect_Duration_Yrs__c=2.0, Conga_Other_Heading_Field__c=Other:, Apply_Default_Bonding__c=false, Notes_Doc_ID__c=null, Delivery_End_Defect_Liability_Duration__c=2020-03-27 00:00:00, EOI_PQ_Submitted_Date__c=null, Tender_Submitted_Date__c=null, Count_of_EOI_Lessons_Learnt_Reports__c=null, Count_of_Tender_Lessons_Learnt_Reports__c=null, Gate_Status__c=Not Applicable, TSF_Gate_Status__c=Approved, CRA_Gate_Status__c=Not Started, Number_of_PRA_Critical_Items_Rated_3__c=1.0, Are_there_any_critical_risks__c=Yes, Has_TSF_changed_since_last_approval__c=Yes, Has_CRA_changed_since_last_approval__c=Yes, Sync_Date_Fields__c=false, Is_Gate_1_To_3__c=false, Is_Gate_4_To_5__c=true, D_I_Involvement_Text__c=No, Reason_for_Status__c=null, Key_Account_Manager__c=System Partners}
+16:33:34.217 (221711638)|FLOW_VALUE_ASSIGNMENT|40090817b023da084ca6695723ff15b133ee0b9-4f9b|RecursiveCountVariable|0
+16:33:34.217 (221763910)|FLOW_ELEMENT_BEGIN|40090817b023da084ca6695723ff15b133ee0b9-4f9b|FlowAssignment|myVariable_waitStartTimeAssignment
+16:33:34.217 (221793714)|FLOW_ASSIGNMENT_DETAIL|40090817b023da084ca6695723ff15b133ee0b9-4f9b|myVariable_waitStartTimeVariable|ASSIGN|28/03/2017 4:33 PM
+16:33:34.217 (221804268)|FLOW_VALUE_ASSIGNMENT|40090817b023da084ca6695723ff15b133ee0b9-4f9b|myVariable_waitStartTimeVariable|2017-03-28T05:33:34Z
+16:33:34.217 (221810366)|FLOW_ELEMENT_END|40090817b023da084ca6695723ff15b133ee0b9-4f9b|FlowAssignment|myVariable_waitStartTimeAssignment
+16:33:34.217 (221819286)|FLOW_ELEMENT_BEGIN|40090817b023da084ca6695723ff15b133ee0b9-4f9b|FlowDecision|myDecision
+16:33:34.217 (221956529)|FLOW_RULE_DETAIL|40090817b023da084ca6695723ff15b133ee0b9-4f9b|myRule_1|false
+16:33:34.217 (221963286)|FLOW_VALUE_ASSIGNMENT|40090817b023da084ca6695723ff15b133ee0b9-4f9b|myRule_1|false
+16:33:34.217 (221969592)|FLOW_ELEMENT_END|40090817b023da084ca6695723ff15b133ee0b9-4f9b|FlowDecision|myDecision
+16:33:34.217 (222042103)|FLOW_START_INTERVIEW_END|40090817b023da084ca6695723ff15b133ee0b9-4f9b|Create Default Performance & defect Liability Bonds v5
+16:33:34.217 (222048790)|FLOW_START_INTERVIEWS_END|1
+16:33:34.0 (222772859)|WF_FLOW_ACTION_END|09LO0000000Clat
+16:33:34.0 (222793756)|WF_FLOW_ACTION_BEGIN|09LO0000000ClaP
+16:33:34.0 (222830357)|WF_FLOW_ACTION_DETAIL|09LO0000000ClaP|[Opportunity: RL Test Opp 2017-03-28 16:05:11 006O0000008l3xR]|Id=09LO0000000ClaP|CurrentRule:Gate 3 (Id=01QO00000009LAx)
+16:33:34.222 (222869456)|FLOW_CREATE_INTERVIEW_BEGIN|00DO00000054ynj|300O000000009Tr|301O00000000zJx
+16:33:34.222 (224732554)|FLOW_CREATE_INTERVIEW_END|40100817b023da084ca6695723ff15b133ee0b9-4f9c|Apply Date Sync with all key date fields
+16:33:34.0 (225006082)|WF_FLOW_ACTION_DETAIL|Param Name: myVariable_current, Param Value: ENCODED:{![treatNullAsNull]{!ID:this}}, Evaluated Param Value: {Entity type: Opportunity, id: 006O0000008l3xRIAQ}|Param Name: myVariable_old, Param Value: {!old}, Evaluated Param Value: {Entity type: Opportunity, id: 006O0000008l3xRIAQ}
+16:33:34.225 (225066447)|FLOW_START_INTERVIEWS_BEGIN|1
+16:33:34.225 (226153552)|FLOW_START_INTERVIEW_BEGIN|40100817b023da084ca6695723ff15b133ee0b9-4f9c|Apply Date Sync with all key date fields
+16:33:34.225 (226184710)|FLOW_VALUE_ASSIGNMENT|40100817b023da084ca6695723ff15b133ee0b9-4f9c|myVariable_old|moduleapi.interaction.SObjectRowWithSavePoint@6ff585ca
+16:33:34.225 (229609052)|FLOW_VALUE_ASSIGNMENT|40100817b023da084ca6695723ff15b133ee0b9-4f9c|myVariable_current|{Id=006O0000008l3xRIAQ, IsDeleted=false, AccountId=001O0000017RQomIAG, RecordTypeId=012O0000000DDB4IAO, IsPrivate=false, Name=RL Test Opp 2017-03-28 16:05:11, Description=null, StageName=Gate 5, StageSortOrder=6, Amount=100000.0, Probability=90, ExpectedRevenue=90000.0, TotalOpportunityQuantity=null, CloseDate=2017-03-28 00:00:00, Type=null, NextStep=null, LeadSource=null, IsClosed=false, IsWon=false, ForecastCategory=Pipeline, ForecastCategoryName=Pipeline, CampaignId=null, HasOpportunityLineItem=false, PricebookId=null, Pricebook2Id=null, OwnerId=005O0000003t7anIAA, CreatedDate=2017-03-28 05:05:11, CreatedById=005O0000003t7anIAA, LastModifiedDate=2017-03-28 05:33:34, LastModifiedById=005O0000003t7anIAA, SystemModstamp=2017-03-28 05:33:34, LastActivityDate=null, LastStageChangeDate=2017-03-28 05:31:20, FiscalYear=null, FiscalQuarter=null, ContactId=null, PrimaryPartnerAccountId=null, LastViewedDate=null, LastReferencedDate=null, ConnectionReceivedDate=null, ConnectionSentDate=null, SyncedQuoteId=null, ContractId=null, HasOpenActivity=false, HasOverdueTask=false, Budget_Confirmed__c=false, Discovery_Completed__c=false, ROI_Analysis_Completed__c=false, Loss_Reason__c=null, Business_Group__c=a0BO000000F4Di8MAF, Data_Quality_Description__c=Missing: Type, Lead Source, Next Steps, Data_Quality_Score__c=40.0, EOI_Tender_Date__c=null, Prospect_Code__c=null, Prospect_Manager__c=null, Regional_Business__c=a0BO000000F4DiNMAV, CANDY_Tender_Number__c=null, Also_Known_As__c=null, Prospect_Priority__c=1, Prospect_Number__c=PRS-0000054, Win_Probability__c=10.0, Project_Probability__c=10.0, Project_Duration_Months__c=24.0, Scope__c=null, Payment_Mechanism__c=null, Discipline__c=null, D_I_Involvement__c=false, D_I_Involvement_Guidance_Note__c=This box should be checked if JH D&I are directly involved in providing financial advice, direction or lead of SPV for the prospect. It should not be checked if there is no D&I requirement to be involved, Client_Probity__c=false, Restrict_Access__c=false, Prospect_Status__c=Tender Submitted, Industry_Sector_GM__c=null, Project_Development_Manager__c=null, Detailed_Description__c=test, Non_Binding_Proposal_Required__c=false, EOI_PQ_Start_Date__c=null, EOI_PQ_Close_Date__c=null, Announcement_of_Pre_Qualified_Bidders__c=null, Strategy_Bid_Development_Meeting_Date__c=null, Tender_Start_Date__c=2017-03-28 00:00:00, Tender_Close_Date__c=2017-03-28 00:00:00, Anticipated_Revenue_Start_Date__c=2017-03-28 00:00:00, Interim_Review__c=null, Preliminary_Final_Review__c=null, Final_Tender_Review__c=null, Tender_Collaboration_Pack_Aconex_DB_URL__c=null, Country__c=Australia, State__c=Victoria, Nearest_City__c=null, District__c=Northern Melbourne, Reason_For_Performing_Work__c=test, Client_Drivers__c=test, Relationship__c=null, Client_Relationship_Management__c=test, Financial_Viability_Exposure__c=null, Independent_Credit_Check_Required__c=false, Client_Supplied_Materials__c=null, Value_of_Managed_Works__c=1000000.0, Overall_Prospect_Value__c=100000.0, Managing_Contractor_Time_Risk__c=false, Proposed_Margin_on_Revenue__c=10.0, PPP_or_Third_Party_Funded_Project__c=false, Payment_Variation_Terms__c=null, Finance_Prospect_Comments__c=null, Defect_Liability_Duration_Months__c=12.0, Minimum_Credit_Rating_Required__c=null, Request_For_Special_Wording_In_The_Bond__c=false, A_PCG_Is_Required_From__c=null, PCG_Comments__c=null, Proposed_FA__c=null, Funding_Strategy__c=null, Target_Gearing_Ratio__c=null, Total_Indicative__c=null, JH_Target_Equity__c=null, JH_Target_Equity_Amount__c=null, Timing_for_Contribution__c=null, Equity_Residual_Risk__c=null, Target_IRR_and_or_D_I_Revenues__c=null, Intended_Exit_Strategy__c=null, JH_Accounting_Tax_Considerations__c=null, Relationship_Agreements__c=null, Is_this_project_a_JV_or_Alliance__c=false, Proposed_form_of_Relationship__c=null, Is_internal_BG_collaboration__c=false, Major_Risks__c=null, Nature_of_technology_design_proposed__c=null, Intentions_to_Resource_Project_Team__c=null, Is_internal_Regional_Bus_collaboration__c=false, Contract_Risk__c=Client-side risk: Construction Management, Client_Relationship_Manager__c=null, Other_Custom_Heading__c=null, Business_Development_Manager__c=null, Procurement_Process__c=null, Alignment_with_Business_Plan__c=null, Competitor_Analysis_General_Comments__c=null, Intentions_to_Resource_Bid_Team__c=null, Conversion_Budget_Comments__c=null, Specific_KCRA_Approvals_Comments__c=null, Design__c=null, Cost__c=null, Time__c=null, Relationships__c=null, People__c=null, Technology__c=null, Methodology__c=null, Innovation__c=null, Other__c=null, Key_Points__c=null, Alignment_with_Core_Competencies__c=null, Executive_Summary__c=Test, Prospect_Location_Heading__c= , Parent_Company_Guarantee_PCG__c= , Winning_Strategy_Header__c= , Bonding_Security_Header__c= , Sponsor_Details_Header__c= , Tender_Dates_Header__c= , JH_Revenue_Share__c=null, JH_Margin_Value__c=0.0, Total_Budget_EOI_PQ__c=0.0, Total_Budget_Tender__c=0.0, Total_Budget_Post_Tender__c=0.0, Less_Cost_Recoveries_EOI_PQ__c=0.0, Less_Cost_Recoveries_Tender__c=0.0, Less_Cost_Recoveries_Post_Tender__c=0.0, Total_Budget_AUD__c=0.0, Total_Less_Recoveries__c=0.0, Net_Budget_Amount__c=0.0, Net_Budget_EOI_PQ__c=0.0, Net_Budget_Tender__c=0.0, Net_Budget_Post_Tender__c=0.0, JH_Bid_Cost_of_JH_Revenue__c=null, Location__c=, Victoria, Australia, Delivery_End_Date__c=2019-03-28 00:00:00, Prospect_Duration_Yrs__c=2.0, Conga_Other_Heading_Field__c=Other:, Apply_Default_Bonding__c=false, Notes_Doc_ID__c=null, Delivery_End_Defect_Liability_Duration__c=2020-03-27 00:00:00, EOI_PQ_Submitted_Date__c=null, Tender_Submitted_Date__c=null, Count_of_EOI_Lessons_Learnt_Reports__c=null, Count_of_Tender_Lessons_Learnt_Reports__c=null, Gate_Status__c=Not Applicable, TSF_Gate_Status__c=Approved, CRA_Gate_Status__c=Not Started, Number_of_PRA_Critical_Items_Rated_3__c=1.0, Are_there_any_critical_risks__c=Yes, Has_TSF_changed_since_last_approval__c=Yes, Has_CRA_changed_since_last_approval__c=Yes, Sync_Date_Fields__c=false, Is_Gate_1_To_3__c=false, Is_Gate_4_To_5__c=true, D_I_Involvement_Text__c=No, Reason_for_Status__c=null, Key_Account_Manager__c=System Partners}
+16:33:34.225 (229699790)|FLOW_ELEMENT_BEGIN|40100817b023da084ca6695723ff15b133ee0b9-4f9c|FlowAssignment|myVariable_waitStartTimeAssignment
+16:33:34.225 (229740825)|FLOW_ASSIGNMENT_DETAIL|40100817b023da084ca6695723ff15b133ee0b9-4f9c|myVariable_waitStartTimeVariable|ASSIGN|28/03/2017 4:33 PM
+16:33:34.225 (229753263)|FLOW_VALUE_ASSIGNMENT|40100817b023da084ca6695723ff15b133ee0b9-4f9c|myVariable_waitStartTimeVariable|2017-03-28T05:33:34Z
+16:33:34.225 (229760704)|FLOW_ELEMENT_END|40100817b023da084ca6695723ff15b133ee0b9-4f9c|FlowAssignment|myVariable_waitStartTimeAssignment
+16:33:34.225 (229770753)|FLOW_ELEMENT_BEGIN|40100817b023da084ca6695723ff15b133ee0b9-4f9c|FlowDecision|isChangedDecision2_myRule_1_Tender_Close_Date_c
+16:33:34.225 (230005195)|FLOW_RULE_DETAIL|40100817b023da084ca6695723ff15b133ee0b9-4f9c|isChangedRule_2_myRule_1_Tender_Close_Date_c|false
+16:33:34.225 (230013072)|FLOW_VALUE_ASSIGNMENT|40100817b023da084ca6695723ff15b133ee0b9-4f9c|isChangedRule_2_myRule_1_Tender_Close_Date_c|false
+16:33:34.225 (230020489)|FLOW_ELEMENT_END|40100817b023da084ca6695723ff15b133ee0b9-4f9c|FlowDecision|isChangedDecision2_myRule_1_Tender_Close_Date_c
+16:33:34.225 (230026705)|FLOW_ELEMENT_BEGIN|40100817b023da084ca6695723ff15b133ee0b9-4f9c|FlowDecision|myDecision
+16:33:34.225 (230114119)|FLOW_RULE_DETAIL|40100817b023da084ca6695723ff15b133ee0b9-4f9c|myRule_1|false
+16:33:34.225 (230120207)|FLOW_VALUE_ASSIGNMENT|40100817b023da084ca6695723ff15b133ee0b9-4f9c|myRule_1|false
+16:33:34.225 (230126027)|FLOW_ELEMENT_END|40100817b023da084ca6695723ff15b133ee0b9-4f9c|FlowDecision|myDecision
+16:33:34.225 (230208263)|FLOW_START_INTERVIEW_END|40100817b023da084ca6695723ff15b133ee0b9-4f9c|Apply Date Sync with all key date fields
+16:33:34.225 (230218694)|FLOW_START_INTERVIEWS_END|1
+16:33:34.0 (230991446)|WF_FLOW_ACTION_END|09LO0000000ClaP
+16:33:34.0 (231112240)|WF_ACTIONS_END| Outbound Message: 1; Flow Trigger: 3;
+16:33:34.0 (231119851)|CODE_UNIT_FINISHED|Workflow:Opportunity
+16:33:34.0 (266896136)|CODE_UNIT_FINISHED|TRIGGERS
+16:33:34.0 (266908175)|EXECUTION_FINISHED
+16:33:34.272 (272390063)|CUMULATIVE_PROFILING_BEGIN
+16:33:34.272 (272390063)|CUMULATIVE_PROFILING|SOQL operations|
+Class.opportunityService.getOpportunitiesAndInitiatedGates: line 78, column 1: [SELECT ID,stageName, Gate_Status__c,CRA_Gate_Status__c,TSF_Gate_Status__c, 
+                    (SELECT ID, Gate_Number__c, Gate_Type__c 
+                    FROM Gates__r 
+                    WHERE status__c = 'Initiated' 
+                    ORDER BY CreatedDate desc) 
+                FROM Opportunity 
+                WHERE ID IN : OppsToStartApprovalProcess]: executed 1 time in 4 ms
+
+16:33:34.272 (272390063)|CUMULATIVE_PROFILING|No profiling information for SOSL operations
+16:33:34.272 (272390063)|CUMULATIVE_PROFILING|DML operations|
+Class.opportunityTriggerHandler.ApprovalProcessOrchestrator: line 334, column 1: Upsert: List<Gate__c>: executed 1 time in 0 ms
+
+16:33:34.272 (272390063)|CUMULATIVE_PROFILING|method invocations|
+Trigger.opportunityTrigger: line 4, column 1: public opportunityTriggerHandler(): executed 4 times in 73 ms
+Class.TriggerHandler.run: line 41, column 1: public void beforeUpdate(): executed 1 time in 47 ms
+Class.opportunityTriggerHandler.beforeUpdate: line 39, column 1: private void determineGate(): executed 1 time in 47 ms
+External entry point: public void invoke(): executed 1 time in 24 ms
+Class.TriggerHandler.run: line 47, column 1: public void afterUpdate(): executed 1 time in 22 ms
+Class.opportunityTriggerHandler.afterUpdate: line 44, column 1: private void ApprovalProcessOrchestrator(): executed 1 time in 22 ms
+Class.opportunityTriggerHandler.ApprovalProcessOrchestrator: line 295, column 1: public static List<Opportunity> getOpportunitiesAndInitiatedGates(Set<Id>): executed 3 times in 5 ms
+Class.opportunityTriggerHandler.determineGate: line 151, column 1: public static String valueOf(Object): executed 2 times in 3 ms
+Class.opportunityTriggerHandler.ApprovalProcessOrchestrator: line 258, column 1: public static String valueOf(Object): executed 2 times in 2 ms
+Class.opportunityTriggerHandler.determineGate: line 237, column 1: public static String valueOf(Object): executed 2 times in 2 ms
+Class.TriggerHandler.run: line 35, column 1: private void addToLoopCount(): executed 2 times in 1 ms
+
+16:33:34.272 (272390063)|CUMULATIVE_PROFILING_END

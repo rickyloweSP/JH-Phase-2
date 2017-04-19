@@ -1,0 +1,148 @@
+34.0 APEX_CODE,FINEST;APEX_PROFILING,FINEST;CALLOUT,NONE;DB,FINEST;SYSTEM,FINE;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,FINER
+Execute Anonymous: System.debug(loggingLevel.Error, '*** object: ' + Util.ConcatanateStringLength(null, 80));
+Execute Anonymous: System.debug(loggingLevel.Error, '*** object: ' + Util.returnRandomString());
+Execute Anonymous: 
+Execute Anonymous: 
+Execute Anonymous: 
+Execute Anonymous: 
+12:07:57.2 (2117819)|USER_INFO|[EXTERNAL]|005O0000003t7an|ricky.lowe@jhg.com.au.pcphase2|Australian Eastern Standard Time|GMT+10:00
+12:07:57.2 (2130404)|EXECUTION_STARTED
+12:07:57.2 (2134518)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+12:07:57.2 (2360370)|HEAP_ALLOCATE|[72]|Bytes:3
+12:07:57.2 (2426604)|HEAP_ALLOCATE|[77]|Bytes:152
+12:07:57.2 (2441848)|HEAP_ALLOCATE|[342]|Bytes:408
+12:07:57.2 (2457761)|HEAP_ALLOCATE|[355]|Bytes:408
+12:07:57.2 (2472920)|HEAP_ALLOCATE|[467]|Bytes:48
+12:07:57.2 (2538889)|HEAP_ALLOCATE|[139]|Bytes:6
+12:07:57.2 (2569436)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:3
+12:07:57.2 (2686967)|STATEMENT_EXECUTE|[1]
+12:07:57.2 (2690002)|STATEMENT_EXECUTE|[1]
+12:07:57.2 (2889482)|HEAP_ALLOCATE|[1]|Bytes:12
+12:07:57.2 (2929118)|HEAP_ALLOCATE|[50]|Bytes:5
+12:07:57.2 (2943610)|HEAP_ALLOCATE|[56]|Bytes:5
+12:07:57.2 (2950996)|HEAP_ALLOCATE|[64]|Bytes:7
+12:07:57.2 (2969224)|SYSTEM_MODE_ENTER|false
+12:07:57.2 (3084444)|HEAP_ALLOCATE|[1]|Bytes:5
+12:07:57.2 (16714484)|HEAP_ALLOCATE|[1]|Bytes:4
+12:07:57.2 (16787772)|METHOD_ENTRY|[1]|01pO00000003bay|Util.Util()
+12:07:57.2 (16792292)|STATEMENT_EXECUTE|[1]
+12:07:57.2 (16799376)|STATEMENT_EXECUTE|[1]
+12:07:57.2 (16809111)|HEAP_ALLOCATE|[1]|Bytes:5
+12:07:57.2 (16837796)|METHOD_EXIT|[1]|Util
+12:07:57.2 (16881409)|METHOD_ENTRY|[1]|01pO00000003bay|Util.ConcatanateStringLength(String, Integer)
+12:07:57.2 (16912321)|VARIABLE_SCOPE_BEGIN|[6]|stringIn|String|false|false
+12:07:57.2 (17056368)|VARIABLE_ASSIGNMENT|[6]|stringIn|null
+12:07:57.2 (17062775)|VARIABLE_SCOPE_BEGIN|[6]|length|Integer|false|false
+12:07:57.2 (17068144)|VARIABLE_ASSIGNMENT|[6]|length|80
+12:07:57.2 (17079594)|HEAP_ALLOCATE|[7]|Bytes:5
+12:07:57.2 (17083583)|STATEMENT_EXECUTE|[6]
+12:07:57.2 (17087379)|STATEMENT_EXECUTE|[10]
+12:07:57.2 (17088658)|STATEMENT_EXECUTE|[11]
+12:07:57.2 (17099856)|METHOD_EXIT|[1]|01pO00000003bay|Util.ConcatanateStringLength(String, Integer)
+12:07:57.2 (17105735)|SYSTEM_MODE_EXIT|false
+12:07:57.2 (17126692)|HEAP_ALLOCATE|[1]|Bytes:16
+12:07:57.2 (17155222)|SYSTEM_METHOD_ENTRY|[1]|System.debug(APEX_OBJECT, ANY)
+12:07:57.2 (17191523)|USER_DEBUG|[1]|ERROR|*** object: null
+12:07:57.2 (17198956)|SYSTEM_METHOD_EXIT|[1]|System.debug(APEX_OBJECT, ANY)
+12:07:57.2 (17202818)|STATEMENT_EXECUTE|[2]
+12:07:57.2 (17231422)|SYSTEM_MODE_ENTER|false
+12:07:57.2 (17243030)|HEAP_ALLOCATE|[2]|Bytes:5
+12:07:57.2 (17260156)|METHOD_ENTRY|[2]|01pO00000003bay|Util.returnRandomString()
+12:07:57.2 (17281124)|HEAP_ALLOCATE|[20]|Bytes:5
+12:07:57.2 (17284425)|STATEMENT_EXECUTE|[19]
+12:07:57.2 (17285589)|STATEMENT_EXECUTE|[20]
+12:07:57.2 (17321541)|VARIABLE_SCOPE_BEGIN|[2]|Math.E|Double|false|true
+12:07:57.2 (17325935)|VARIABLE_SCOPE_BEGIN|[3]|Math.PI|Double|false|true
+12:07:57.2 (17336169)|HEAP_ALLOCATE|[20]|Bytes:206
+12:07:57.2 (17345814)|SYSTEM_METHOD_ENTRY|[1]|Math.Math()
+12:07:57.2 (17347737)|STATEMENT_EXECUTE|[1]
+12:07:57.2 (17421501)|SYSTEM_METHOD_EXIT|[1]|Math
+12:07:57.2 (17432054)|METHOD_ENTRY|[20]||System.Math.random()
+12:07:57.2 (17478865)|METHOD_EXIT|[20]||System.Math.random()
+12:07:57.2 (17517055)|SYSTEM_METHOD_ENTRY|[20]|String.valueOf(Double)
+12:07:57.2 (17528932)|HEAP_ALLOCATE|[20]|Bytes:19
+12:07:57.2 (17539340)|SYSTEM_METHOD_EXIT|[20]|String.valueOf(Double)
+12:07:57.2 (17548037)|METHOD_ENTRY|[20]|01pO00000003bay|Util.ConcatanateStringLength(String, Integer)
+12:07:57.2 (17552212)|VARIABLE_SCOPE_BEGIN|[6]|stringIn|String|false|false
+12:07:57.2 (17561701)|VARIABLE_ASSIGNMENT|[6]|stringIn|"6.400737018735234E8"
+12:07:57.2 (17564246)|VARIABLE_SCOPE_BEGIN|[6]|length|Integer|false|false
+12:07:57.2 (17567586)|VARIABLE_ASSIGNMENT|[6]|length|10
+12:07:57.2 (17575424)|HEAP_ALLOCATE|[7]|Bytes:5
+12:07:57.2 (17579277)|STATEMENT_EXECUTE|[6]
+12:07:57.2 (17593928)|SYSTEM_METHOD_ENTRY|[7]|String.length()
+12:07:57.2 (17615447)|SYSTEM_METHOD_EXIT|[7]|String.length()
+12:07:57.2 (17621415)|STATEMENT_EXECUTE|[7]
+12:07:57.2 (17622665)|STATEMENT_EXECUTE|[8]
+12:07:57.2 (17635477)|SYSTEM_METHOD_ENTRY|[8]|String.left(Integer)
+12:07:57.2 (17647815)|HEAP_ALLOCATE|[8]|Bytes:10
+12:07:57.2 (17657730)|SYSTEM_METHOD_EXIT|[8]|String.left(Integer)
+12:07:57.2 (17666295)|METHOD_EXIT|[20]|01pO00000003bay|Util.ConcatanateStringLength(String, Integer)
+12:07:57.2 (17671811)|METHOD_EXIT|[2]|01pO00000003bay|Util.returnRandomString()
+12:07:57.2 (17674930)|SYSTEM_MODE_EXIT|false
+12:07:57.2 (17684310)|HEAP_ALLOCATE|[2]|Bytes:22
+12:07:57.2 (17695122)|SYSTEM_METHOD_ENTRY|[2]|System.debug(APEX_OBJECT, ANY)
+12:07:57.2 (17702918)|USER_DEBUG|[2]|ERROR|*** object: 6.40073701
+12:07:57.2 (17707053)|SYSTEM_METHOD_EXIT|[2]|System.debug(APEX_OBJECT, ANY)
+12:07:57.17 (17760576)|CUMULATIVE_LIMIT_USAGE
+12:07:57.17 (17760576)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+12:07:57.17 (17760576)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+12:07:57.17 (17760576)|STATIC_VARIABLE_LIST|
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  String:_sfdcSuppressedCodeLocations:0
+  long:serialVersionUID:0
+  double:MAX_VALUE:0
+  Boolean:FALSE:0
+  long:serialVersionUID:0
+  double:MIN_VALUE:0
+  int:SIZE:0
+  double:NEGATIVE_INFINITY:0
+  int:MAX_VALUE:0
+  char[]:digits:0
+  double:NaN:0
+  Boolean:TRUE:0
+  int:MIN_VALUE:0
+  char[]:DigitOnes:0
+  int:BYTES:0
+  Double:_static_PI:0
+  int:MIN_EXPONENT:0
+  int[]:sizeTable:0
+  int:MAX_EXPONENT:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  String:_sfdcAdditionalCodeLocations:0
+  Double:_static_E:0
+  double:MIN_NORMAL:0
+  String:_sfdcAdditionalCodeLocations:0
+  int:BYTES:0
+
+12:07:57.17 (17760576)|CUMULATIVE_LIMIT_USAGE_END
+
+12:07:57.2 (17927256)|CODE_UNIT_FINISHED|execute_anonymous_apex
+12:07:57.2 (19641625)|EXECUTION_FINISHED
+12:07:57.20 (20744624)|CUMULATIVE_PROFILING_BEGIN
+12:07:57.20 (20744624)|CUMULATIVE_PROFILING|No profiling information for SOQL operations
+12:07:57.20 (20744624)|CUMULATIVE_PROFILING|No profiling information for SOSL operations
+12:07:57.20 (20744624)|CUMULATIVE_PROFILING|No profiling information for DML operations
+12:07:57.20 (20744624)|CUMULATIVE_PROFILING|method invocations|
+External entry point: public static void execute(): executed 1 time in 15 ms
+AnonymousBlock: line 1, column 1: public static String ConcatanateStringLength(String, Integer): executed 2 times in 1 ms
+AnonymousBlock: line 2, column 1: public static String returnRandomString(): executed 2 times in 0 ms
+Class.Util.returnRandomString: line 20, column 1: global static Double random(): executed 3 times in 0 ms
+Class.Util.ConcatanateStringLength: line 7, column 1: public Integer length(): executed 1 time in 0 ms
+Class.Util.ConcatanateStringLength: line 8, column 1: public String left(Integer): executed 1 time in 0 ms
+
+12:07:57.20 (20744624)|CUMULATIVE_PROFILING_END

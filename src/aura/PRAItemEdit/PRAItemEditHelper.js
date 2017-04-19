@@ -2,50 +2,29 @@
     save : function(component) { 
         //console.log("SOEdit inside edit component - Save");
         var PRA = component.get("v.PRA");
-        //var soStatusBefore = component.get("v.opp.Status__c");	// retrieve status before
-        //var soStatusAfter = soStatusBefore;	// default the status after to be the same as status before
         var oppId = component.get("v.PRA.Opportunity__c");
-        
-        //console.log("SOEdit so before " + so.Name);                              
+                            
         component.find("edit").get("e.recordSave").fire();
 
-		// requery the so to retrieve all the fields and update so object.
-		// This will trigger the change event on so        
+		// requery the PRA to retrieve all the fields and update so object.
+		// This will trigger the change event on PRA        
         var action = component.get("c.getPRA");
-        action.setParams({	// requery to update so
+        action.setParams({	// requery to update PRA
             "PRAId" : PRA.Id
-        });
- 
-        //console.log("SOEdit inside edit component - Save - before callback");
+        }); 
 
         //Set up the callback
         action.setCallback(this, function(response) { 
-            var newRecordSaved = component.get("v.newRecordSaved");
+            //var newRecordSaved = component.get("v.newRecordSaved");
             var mode = component.get("v.mode");
             var state = response.getState();
-            //console.log('SOEdit inside setCallback');
-            //console.log('SOEdit state = ' + state);
             
             if (state == "SUCCESS") {
            		var returnVal =response.getReturnValue();     
-            	//console.log('SOEdit returnVal Length = ' + returnVal.length);            
-                //console.log("SOEdit query for so is successful");                
-                //console.log(returnVal);
-                component.set('v.opp',returnVal);
-        		//soStatusAfter = component.get("v.so.Status__c"); // retrieve the status after           
-                
-                if (mode == "editNew") {
-                	component.set("v.newRecordSaved","true");   
-                }
-
-                //console.log("SOEdit soStatusBefore = " + soStatusBefore + " soStatusAfter = " + soStatusAfter);                
-                //if (soStatusBefore != soStatusAfter) {
-	                //console.log("SOEdit soStatusBefore != soStatusAfter");                                    
+                component.set('v.PRA',returnVal);                              
                     var evt = $A.get("e.c:KCRAEvent");
                     evt.setParams({ "recordId": oppId});
-                    evt.fire();                 	   
-                //}
-  
+                    evt.fire();                 	  
 		        component.destroy();                
             }
             else if (state == "ERROR") {
@@ -54,6 +33,7 @@
         });
         $A.enqueueAction(action);      
     },
+    
     
     displayActionError : function (response) {
         var errors = response.getError();
@@ -73,8 +53,24 @@
     showEndOfListToast : function(component, event, helper) {
         var toastEvent = $A.get("e.force:showToast");
         toastEvent.setParams({
-            "title": "End of Record List!",
-            "message": "This is the last record in the list."
+            "title": "End of PRA Records List!",
+            "message": "This is the last record in the list of PRA Items."
+        });
+        toastEvent.fire();
+	},  
+    showStartOfListToast : function(component, event, helper) {
+        var toastEvent = $A.get("e.force:showToast");
+        toastEvent.setParams({
+            "title": "Start of PRA Records List!",
+            "message": "This is the first record in the list of PRA Items."
+        });
+        toastEvent.fire();
+	}, 
+    showSuccessToast : function(component, event, helper) {
+        var toastEvent = $A.get("e.force:showToast");
+        toastEvent.setParams({
+            "title": "Success!",
+            "message": "The record has been updated successfully."
         });
         toastEvent.fire();
 	},   

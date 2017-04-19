@@ -1,0 +1,518 @@
+39.0 APEX_CODE,FINEST;APEX_PROFILING,FINEST;CALLOUT,NONE;DB,FINEST;SYSTEM,FINE;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,FINER
+14:35:22.0 (455733)|USER_INFO|[EXTERNAL]|005O0000003t7an|ricky.lowe@jhg.com.au.pcphase2|Australian Eastern Standard Time|GMT+11:00
+14:35:22.0 (481258)|EXECUTION_STARTED
+14:35:22.0 (486239)|CODE_UNIT_STARTED|[EXTERNAL]|TRIGGERS
+14:35:22.0 (2111881)|CODE_UNIT_STARTED|[EXTERNAL]|01qO00000000SDP|opportunityTrigger on Opportunity trigger event BeforeDelete for [006O0000008l2S0]
+14:35:22.0 (2175063)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:35:22.0 (2767341)|HEAP_ALLOCATE|[72]|Bytes:3
+14:35:22.0 (2810639)|HEAP_ALLOCATE|[77]|Bytes:152
+14:35:22.0 (2830039)|HEAP_ALLOCATE|[342]|Bytes:408
+14:35:22.0 (2851057)|HEAP_ALLOCATE|[355]|Bytes:408
+14:35:22.0 (2869696)|HEAP_ALLOCATE|[467]|Bytes:48
+14:35:22.0 (2899430)|HEAP_ALLOCATE|[139]|Bytes:6
+14:35:22.0 (2928596)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:35:22.0 (2937632)|VARIABLE_SCOPE_BEGIN|[1]|this|opportunityTrigger|true|false
+14:35:22.0 (2979360)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x76b436b0
+14:35:22.0 (3024848)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:35:22.0 (3033158)|VARIABLE_SCOPE_BEGIN|[1]|this|opportunityTrigger|true|false
+14:35:22.0 (3043245)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x76b436b0
+14:35:22.0 (3049438)|STATEMENT_EXECUTE|[1]
+14:35:22.0 (3051095)|STATEMENT_EXECUTE|[4]
+14:35:22.0 (20684055)|VARIABLE_SCOPE_BEGIN|[16]|opportunityTriggerHandler.KCRARecordTypeID|String|false|true
+14:35:22.0 (20694517)|VARIABLE_SCOPE_BEGIN|[15]|opportunityTriggerHandler.KCRATemplateRecordTypeID|String|false|true
+14:35:22.0 (20699450)|VARIABLE_SCOPE_BEGIN|[18]|opportunityTriggerHandler.PRARecordTypeID|String|false|true
+14:35:22.0 (20703356)|VARIABLE_SCOPE_BEGIN|[17]|opportunityTriggerHandler.PRATemplateRecordTypeID|String|false|true
+14:35:22.0 (20712161)|VARIABLE_SCOPE_BEGIN|[20]|opportunityTriggerHandler.isTest|Boolean|false|true
+14:35:22.0 (20716439)|VARIABLE_SCOPE_BEGIN|[19]|opportunityTriggerHandler.recursion|Boolean|false|true
+14:35:22.0 (20720115)|VARIABLE_SCOPE_BEGIN|[14]|opportunityTriggerHandler.runOnce|Boolean|false|true
+14:35:22.0 (35932806)|VARIABLE_SCOPE_BEGIN|[5]|TriggerHandler.bypassedHandlers|Set<String>|true|true
+14:35:22.0 (36168657)|VARIABLE_SCOPE_BEGIN|[4]|TriggerHandler.loopCountMap|Map<String,TriggerHandler.LoopCount>|true|true
+14:35:22.0 (36208260)|HEAP_ALLOCATE|[4]|Bytes:40
+14:35:22.0 (36222239)|HEAP_ALLOCATE|[4]|Bytes:47
+14:35:22.0 (36255350)|METHOD_ENTRY|[13]|01pO0000000371i|opportunityTriggerHandler.opportunityTriggerHandler()
+14:35:22.0 (36259136)|STATEMENT_EXECUTE|[13]
+14:35:22.0 (36264091)|STATEMENT_EXECUTE|[13]
+14:35:22.0 (36265601)|STATEMENT_EXECUTE|[14]
+14:35:22.0 (36294317)|HEAP_ALLOCATE|[50]|Bytes:5
+14:35:22.0 (36318307)|HEAP_ALLOCATE|[56]|Bytes:5
+14:35:22.0 (36327611)|HEAP_ALLOCATE|[64]|Bytes:7
+14:35:22.0 (36351979)|HEAP_ALLOCATE|[14]|Bytes:5
+14:35:22.0 (36372357)|VARIABLE_ASSIGNMENT|[14]|opportunityTriggerHandler.runOnce|true
+14:35:22.0 (36375565)|STATEMENT_EXECUTE|[15]
+14:35:22.0 (36378825)|HEAP_ALLOCATE|[15]|Bytes:33
+14:35:22.0 (36432628)|SYSTEM_METHOD_ENTRY|[15]|Schema.SObjectType.getDescribe()
+14:35:22.0 (36667593)|HEAP_ALLOCATE|[15]|Bytes:4
+14:35:22.0 (36677347)|SYSTEM_METHOD_EXIT|[15]|Schema.SObjectType.getDescribe()
+14:35:22.0 (36697073)|LIMIT_USAGE|[15]|RECORD_TYPE_DESCRIBES|1|100
+14:35:22.0 (38534775)|HEAP_ALLOCATE|[15]|Bytes:16
+14:35:22.0 (38548534)|HEAP_ALLOCATE|[15]|Bytes:13
+14:35:22.0 (38590168)|SYSTEM_METHOD_ENTRY|[15]|Map<String,Schema.RecordTypeInfo>.get(Object)
+14:35:22.0 (38677548)|SYSTEM_METHOD_EXIT|[15]|Map<String,Schema.RecordTypeInfo>.get(Object)
+14:35:22.0 (38709697)|HEAP_ALLOCATE|[15]|Bytes:4
+14:35:22.0 (38730051)|HEAP_ALLOCATE|[15]|Bytes:18
+14:35:22.0 (38747206)|VARIABLE_ASSIGNMENT|[15]|opportunityTriggerHandler.KCRATemplateRecordTypeID|"012O0000000DCgLIAW"
+14:35:22.0 (38750335)|STATEMENT_EXECUTE|[16]
+14:35:22.0 (38785094)|SYSTEM_METHOD_ENTRY|[16]|Schema.SObjectType.getDescribe()
+14:35:22.0 (38807891)|HEAP_ALLOCATE|[16]|Bytes:4
+14:35:22.0 (38814035)|SYSTEM_METHOD_EXIT|[16]|Schema.SObjectType.getDescribe()
+14:35:22.0 (38826614)|LIMIT_USAGE|[16]|RECORD_TYPE_DESCRIBES|2|100
+14:35:22.0 (38840777)|HEAP_ALLOCATE|[16]|Bytes:16
+14:35:22.0 (38846710)|HEAP_ALLOCATE|[16]|Bytes:4
+14:35:22.0 (38863859)|SYSTEM_METHOD_ENTRY|[16]|Map<String,Schema.RecordTypeInfo>.get(Object)
+14:35:22.0 (38879545)|SYSTEM_METHOD_EXIT|[16]|Map<String,Schema.RecordTypeInfo>.get(Object)
+14:35:22.0 (38899175)|HEAP_ALLOCATE|[16]|Bytes:4
+14:35:22.0 (38907330)|HEAP_ALLOCATE|[16]|Bytes:18
+14:35:22.0 (38919737)|VARIABLE_ASSIGNMENT|[16]|opportunityTriggerHandler.KCRARecordTypeID|"012O0000000DCgGIAW"
+14:35:22.0 (38922625)|STATEMENT_EXECUTE|[17]
+14:35:22.0 (38925783)|HEAP_ALLOCATE|[17]|Bytes:26
+14:35:22.0 (38963595)|SYSTEM_METHOD_ENTRY|[17]|Schema.SObjectType.getDescribe()
+14:35:22.0 (39081472)|HEAP_ALLOCATE|[17]|Bytes:4
+14:35:22.0 (39090510)|SYSTEM_METHOD_EXIT|[17]|Schema.SObjectType.getDescribe()
+14:35:22.0 (39104197)|LIMIT_USAGE|[17]|RECORD_TYPE_DESCRIBES|3|100
+14:35:22.0 (40111084)|HEAP_ALLOCATE|[17]|Bytes:16
+14:35:22.0 (40120170)|HEAP_ALLOCATE|[17]|Bytes:12
+14:35:22.0 (40138947)|SYSTEM_METHOD_ENTRY|[17]|Map<String,Schema.RecordTypeInfo>.get(Object)
+14:35:22.0 (40155495)|SYSTEM_METHOD_EXIT|[17]|Map<String,Schema.RecordTypeInfo>.get(Object)
+14:35:22.0 (40175783)|HEAP_ALLOCATE|[17]|Bytes:4
+14:35:22.0 (40184317)|HEAP_ALLOCATE|[17]|Bytes:18
+14:35:22.0 (40197418)|VARIABLE_ASSIGNMENT|[17]|opportunityTriggerHandler.PRATemplateRecordTypeID|"012O0000000DDVTIA4"
+14:35:22.0 (40200529)|STATEMENT_EXECUTE|[18]
+14:35:22.0 (40234339)|SYSTEM_METHOD_ENTRY|[18]|Schema.SObjectType.getDescribe()
+14:35:22.0 (40256551)|HEAP_ALLOCATE|[18]|Bytes:4
+14:35:22.0 (40262515)|SYSTEM_METHOD_EXIT|[18]|Schema.SObjectType.getDescribe()
+14:35:22.0 (40275015)|LIMIT_USAGE|[18]|RECORD_TYPE_DESCRIBES|4|100
+14:35:22.0 (40288911)|HEAP_ALLOCATE|[18]|Bytes:16
+14:35:22.0 (40294492)|HEAP_ALLOCATE|[18]|Bytes:3
+14:35:22.0 (40310637)|SYSTEM_METHOD_ENTRY|[18]|Map<String,Schema.RecordTypeInfo>.get(Object)
+14:35:22.0 (40325941)|SYSTEM_METHOD_EXIT|[18]|Map<String,Schema.RecordTypeInfo>.get(Object)
+14:35:22.0 (40345264)|HEAP_ALLOCATE|[18]|Bytes:4
+14:35:22.0 (40353430)|HEAP_ALLOCATE|[18]|Bytes:18
+14:35:22.0 (40365778)|VARIABLE_ASSIGNMENT|[18]|opportunityTriggerHandler.PRARecordTypeID|"012O0000000DDVOIA4"
+14:35:22.0 (40368742)|STATEMENT_EXECUTE|[19]
+14:35:22.0 (40374746)|HEAP_ALLOCATE|[19]|Bytes:5
+14:35:22.0 (40381592)|VARIABLE_ASSIGNMENT|[19]|opportunityTriggerHandler.recursion|false
+14:35:22.0 (40383478)|STATEMENT_EXECUTE|[20]
+14:35:22.0 (40387226)|HEAP_ALLOCATE|[20]|Bytes:5
+14:35:22.0 (40392269)|VARIABLE_ASSIGNMENT|[20]|opportunityTriggerHandler.isTest|false
+14:35:22.0 (40399983)|METHOD_EXIT|[13]|opportunityTriggerHandler
+14:35:22.0 (40613349)|HEAP_ALLOCATE|[4]|Bytes:12
+14:35:22.0 (40628781)|CONSTRUCTOR_ENTRY|[4]|01pO0000000371i|<init>()
+14:35:22.0 (40650301)|VARIABLE_SCOPE_BEGIN|[22]|this|opportunityTriggerHandler|true|false
+14:35:22.0 (40684601)|VARIABLE_ASSIGNMENT|[22]|this|{}|0x4d1ae063
+14:35:22.0 (40689304)|STATEMENT_EXECUTE|[13]
+14:35:22.0 (40697729)|HEAP_ALLOCATE|[22]|Bytes:48
+14:35:22.0 (40703079)|HEAP_ALLOCATE|[22]|Bytes:69
+14:35:22.0 (40714169)|METHOD_ENTRY|[1]|01pO00000003AAn|TriggerHandler.TriggerHandler()
+14:35:22.0 (40716572)|STATEMENT_EXECUTE|[1]
+14:35:22.0 (40719382)|STATEMENT_EXECUTE|[1]
+14:35:22.0 (40720592)|STATEMENT_EXECUTE|[16]
+14:35:22.0 (40721694)|STATEMENT_EXECUTE|[17]
+14:35:22.0 (40726074)|HEAP_ALLOCATE|[17]|Bytes:4
+14:35:22.0 (40759154)|VARIABLE_ASSIGNMENT|[17]|TriggerHandler.loopCountMap|{}|0x1014e0bf
+14:35:22.0 (40762634)|STATEMENT_EXECUTE|[18]
+14:35:22.0 (40770355)|HEAP_ALLOCATE|[18]|Bytes:4
+14:35:22.0 (40785512)|SYSTEM_CONSTRUCTOR_ENTRY|[18]|<init>(Integer)
+14:35:22.0 (40801385)|SYSTEM_CONSTRUCTOR_EXIT|[18]|<init>(Integer)
+14:35:22.0 (40831626)|VARIABLE_ASSIGNMENT|[18]|TriggerHandler.bypassedHandlers|[]|0x4e64c9b0
+14:35:22.0 (40834915)|STATEMENT_EXECUTE|[187]
+14:35:22.0 (40836235)|STATEMENT_EXECUTE|[236]
+14:35:22.0 (40842035)|METHOD_EXIT|[1]|TriggerHandler
+14:35:22.0 (40848757)|CONSTRUCTOR_ENTRY|[22]|01pO00000003AAn|<init>()
+14:35:22.0 (40991205)|VARIABLE_SCOPE_BEGIN|[22]|this|TriggerHandler|true|false
+14:35:22.0 (41008289)|VARIABLE_ASSIGNMENT|[22]|this|{}|0x4d1ae063
+14:35:22.0 (41012858)|STATEMENT_EXECUTE|[1]
+14:35:22.0 (41014183)|STATEMENT_EXECUTE|[9]
+14:35:22.0 (41015423)|STATEMENT_EXECUTE|[13]
+14:35:22.0 (41023091)|HEAP_ALLOCATE|[23]|Bytes:6
+14:35:22.0 (41045698)|STATEMENT_EXECUTE|[22]
+14:35:22.0 (41047515)|STATEMENT_EXECUTE|[23]
+14:35:22.0 (41086724)|METHOD_ENTRY|[23]|01pO00000003AAn|TriggerHandler.setTriggerContext()
+14:35:22.0 (41121013)|VARIABLE_SCOPE_BEGIN|[94]|this|TriggerHandler|true|false
+14:35:22.0 (41138583)|VARIABLE_ASSIGNMENT|[94]|this|{}|0x4d1ae063
+14:35:22.0 (41144045)|STATEMENT_EXECUTE|[94]
+14:35:22.0 (41145370)|STATEMENT_EXECUTE|[95]
+14:35:22.0 (41160895)|METHOD_ENTRY|[95]|01pO00000003AAn|TriggerHandler.setTriggerContext(String, Boolean)
+14:35:22.0 (41179905)|VARIABLE_SCOPE_BEGIN|[99]|this|TriggerHandler|true|false
+14:35:22.0 (41193390)|VARIABLE_ASSIGNMENT|[99]|this|{}|0x4d1ae063
+14:35:22.0 (41196892)|VARIABLE_SCOPE_BEGIN|[99]|ctx|String|false|false
+14:35:22.0 (41200441)|VARIABLE_ASSIGNMENT|[99]|ctx|null
+14:35:22.0 (41205027)|VARIABLE_SCOPE_BEGIN|[99]|testMode|Boolean|false|false
+14:35:22.0 (41208296)|VARIABLE_ASSIGNMENT|[99]|testMode|false
+14:35:22.0 (41212181)|STATEMENT_EXECUTE|[99]
+14:35:22.0 (41227023)|STATEMENT_EXECUTE|[103]
+14:35:22.0 (41228666)|STATEMENT_EXECUTE|[104]
+14:35:22.0 (41233888)|HEAP_ALLOCATE|[104]|Bytes:5
+14:35:22.0 (41285883)|STATEMENT_EXECUTE|[114]
+14:35:22.0 (41288600)|STATEMENT_EXECUTE|[115]
+14:35:22.0 (41312200)|HEAP_ALLOCATE|[115]|Bytes:12
+14:35:22.0 (41317906)|HEAP_ALLOCATE|[115]|Bytes:13
+14:35:22.0 (41403163)|HEAP_ALLOCATE|[115]|Bytes:12
+14:35:22.0 (41409050)|HEAP_ALLOCATE|[115]|Bytes:13
+14:35:22.0 (41423524)|HEAP_ALLOCATE|[115]|Bytes:12
+14:35:22.0 (41426917)|HEAP_ALLOCATE|[115]|Bytes:13
+14:35:22.0 (41437662)|HEAP_ALLOCATE|[115]|Bytes:12
+14:35:22.0 (41440984)|HEAP_ALLOCATE|[115]|Bytes:12
+14:35:22.0 (41451472)|HEAP_ALLOCATE|[115]|Bytes:12
+14:35:22.0 (41454744)|HEAP_ALLOCATE|[115]|Bytes:12
+14:35:22.0 (41464972)|HEAP_ALLOCATE|[115]|Bytes:12
+14:35:22.0 (41468145)|HEAP_ALLOCATE|[115]|Bytes:12
+14:35:22.0 (41478544)|HEAP_ALLOCATE|[115]|Bytes:12
+14:35:22.0 (41481697)|HEAP_ALLOCATE|[115]|Bytes:14
+14:35:22.0 (41503272)|METHOD_EXIT|[95]|01pO00000003AAn|TriggerHandler.setTriggerContext(String, Boolean)
+14:35:22.0 (41509327)|METHOD_EXIT|[23]|01pO00000003AAn|TriggerHandler.setTriggerContext()
+14:35:22.0 (41513952)|CONSTRUCTOR_EXIT|[22]|01pO00000003AAn|<init>()
+14:35:22.0 (41516932)|STATEMENT_EXECUTE|[22]
+14:35:22.0 (41520156)|CONSTRUCTOR_EXIT|[4]|01pO0000000371i|<init>()
+14:35:22.0 (41529155)|METHOD_ENTRY|[4]|01pO00000003AAn|TriggerHandler.run()
+14:35:22.0 (41534507)|VARIABLE_SCOPE_BEGIN|[31]|this|TriggerHandler|true|false
+14:35:22.0 (41573073)|VARIABLE_ASSIGNMENT|[31]|this|{"context":"0x702c2ce1","isTriggerExecuting":true}|0x4d1ae063
+14:35:22.0 (41581303)|STATEMENT_EXECUTE|[31]
+14:35:22.0 (41597041)|METHOD_ENTRY|[33]|01pO00000003AAn|TriggerHandler.validateRun()
+14:35:22.0 (41620114)|VARIABLE_SCOPE_BEGIN|[146]|this|TriggerHandler|true|false
+14:35:22.0 (41641032)|VARIABLE_ASSIGNMENT|[146]|this|{"context":"0x702c2ce1","isTriggerExecuting":true}|0x4d1ae063
+14:35:22.0 (41646014)|STATEMENT_EXECUTE|[146]
+14:35:22.0 (41653349)|STATEMENT_EXECUTE|[147]
+14:35:22.0 (41664616)|METHOD_ENTRY|[150]|01pO00000003AAn|TriggerHandler.getHandlerName()
+14:35:22.0 (41680244)|VARIABLE_SCOPE_BEGIN|[157]|this|TriggerHandler|true|false
+14:35:22.0 (41695549)|VARIABLE_ASSIGNMENT|[157]|this|{"context":"0x702c2ce1","isTriggerExecuting":true}|0x4d1ae063
+14:35:22.0 (41699869)|STATEMENT_EXECUTE|[157]
+14:35:22.0 (41701142)|STATEMENT_EXECUTE|[158]
+14:35:22.0 (41727602)|SYSTEM_METHOD_ENTRY|[158]|String.valueOf(Object)
+14:35:22.0 (41810225)|HEAP_ALLOCATE|[158]|Bytes:379
+14:35:22.0 (41828238)|SYSTEM_METHOD_EXIT|[158]|String.valueOf(Object)
+14:35:22.0 (41845675)|SYSTEM_METHOD_ENTRY|[158]|String.valueOf(Object)
+14:35:22.0 (41885183)|HEAP_ALLOCATE|[158]|Bytes:379
+14:35:22.0 (41899771)|SYSTEM_METHOD_EXIT|[158]|String.valueOf(Object)
+14:35:22.0 (41915606)|HEAP_ALLOCATE|[158]|Bytes:1
+14:35:22.0 (41942839)|SYSTEM_METHOD_ENTRY|[158]|String.indexOf(String)
+14:35:22.0 (41958407)|SYSTEM_METHOD_EXIT|[158]|String.indexOf(String)
+14:35:22.0 (41973835)|SYSTEM_METHOD_ENTRY|[158]|String.substring(Integer, Integer)
+14:35:22.0 (41979052)|HEAP_ALLOCATE|[158]|Bytes:25
+14:35:22.0 (41988132)|SYSTEM_METHOD_EXIT|[158]|String.substring(Integer, Integer)
+14:35:22.0 (41994011)|METHOD_EXIT|[150]|01pO00000003AAn|TriggerHandler.getHandlerName()
+14:35:22.0 (42008351)|SYSTEM_METHOD_ENTRY|[150]|Set<String>.contains(Object)
+14:35:22.0 (42020037)|SYSTEM_METHOD_EXIT|[150]|Set<String>.contains(Object)
+14:35:22.0 (42024806)|STATEMENT_EXECUTE|[150]
+14:35:22.0 (42026399)|STATEMENT_EXECUTE|[153]
+14:35:22.0 (42030574)|METHOD_EXIT|[33]|01pO00000003AAn|TriggerHandler.validateRun()
+14:35:22.0 (42033646)|STATEMENT_EXECUTE|[33]
+14:35:22.0 (42035021)|STATEMENT_EXECUTE|[35]
+14:35:22.0 (42042719)|METHOD_ENTRY|[35]|01pO00000003AAn|TriggerHandler.addToLoopCount()
+14:35:22.0 (42061466)|VARIABLE_SCOPE_BEGIN|[133]|this|TriggerHandler|true|false
+14:35:22.0 (42080253)|VARIABLE_ASSIGNMENT|[133]|this|{"context":"0x702c2ce1","isTriggerExecuting":true}|0x4d1ae063
+14:35:22.0 (42085083)|STATEMENT_EXECUTE|[133]
+14:35:22.0 (42086306)|STATEMENT_EXECUTE|[134]
+14:35:22.0 (42094808)|METHOD_ENTRY|[134]|01pO00000003AAn|TriggerHandler.getHandlerName()
+14:35:22.0 (42105425)|VARIABLE_SCOPE_BEGIN|[157]|this|TriggerHandler|true|false
+14:35:22.0 (42120238)|VARIABLE_ASSIGNMENT|[157]|this|{"context":"0x702c2ce1","isTriggerExecuting":true}|0x4d1ae063
+14:35:22.0 (42124068)|STATEMENT_EXECUTE|[157]
+14:35:22.0 (42125276)|STATEMENT_EXECUTE|[158]
+14:35:22.0 (42141886)|SYSTEM_METHOD_ENTRY|[158]|String.valueOf(Object)
+14:35:22.0 (42184016)|HEAP_ALLOCATE|[158]|Bytes:379
+14:35:22.0 (42199046)|SYSTEM_METHOD_EXIT|[158]|String.valueOf(Object)
+14:35:22.0 (42224921)|SYSTEM_METHOD_ENTRY|[158]|String.valueOf(Object)
+14:35:22.0 (42281771)|HEAP_ALLOCATE|[158]|Bytes:379
+14:35:22.0 (42298976)|SYSTEM_METHOD_EXIT|[158]|String.valueOf(Object)
+14:35:22.0 (42310994)|SYSTEM_METHOD_ENTRY|[158]|String.indexOf(String)
+14:35:22.0 (42319979)|SYSTEM_METHOD_EXIT|[158]|String.indexOf(String)
+14:35:22.0 (42330112)|SYSTEM_METHOD_ENTRY|[158]|String.substring(Integer, Integer)
+14:35:22.0 (42334720)|HEAP_ALLOCATE|[158]|Bytes:25
+14:35:22.0 (42343095)|SYSTEM_METHOD_EXIT|[158]|String.substring(Integer, Integer)
+14:35:22.0 (42348640)|METHOD_EXIT|[134]|01pO00000003AAn|TriggerHandler.getHandlerName()
+14:35:22.0 (42352716)|VARIABLE_SCOPE_BEGIN|[134]|handlerName|String|false|false
+14:35:22.0 (42363433)|VARIABLE_ASSIGNMENT|[134]|handlerName|"opportunityTriggerHa (5 more) ..."
+14:35:22.0 (42382002)|SYSTEM_METHOD_ENTRY|[135]|Map<String,TriggerHandler.LoopCount>.containsKey(Object)
+14:35:22.0 (42404460)|SYSTEM_METHOD_EXIT|[135]|Map<String,TriggerHandler.LoopCount>.containsKey(Object)
+14:35:22.0 (42410096)|STATEMENT_EXECUTE|[135]
+14:35:22.0 (42414778)|METHOD_EXIT|[35]|01pO00000003AAn|TriggerHandler.addToLoopCount()
+14:35:22.0 (42451904)|SYSTEM_METHOD_ENTRY|[38]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+14:35:22.0 (42513946)|SYSTEM_METHOD_EXIT|[38]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+14:35:22.0 (42552118)|SYSTEM_METHOD_ENTRY|[40]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+14:35:22.0 (42590375)|SYSTEM_METHOD_EXIT|[40]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+14:35:22.0 (42609624)|SYSTEM_METHOD_ENTRY|[42]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+14:35:22.0 (42634680)|SYSTEM_METHOD_EXIT|[42]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+14:35:22.0 (42639420)|STATEMENT_EXECUTE|[42]
+14:35:22.0 (42640721)|STATEMENT_EXECUTE|[43]
+14:35:22.0 (42649180)|METHOD_ENTRY|[43]|01pO00000003AAn|TriggerHandler.beforeDelete()
+14:35:22.0 (42667580)|VARIABLE_SCOPE_BEGIN|[171]|this|TriggerHandler|true|false
+14:35:22.0 (42686541)|VARIABLE_ASSIGNMENT|[171]|this|{"context":"0x702c2ce1","isTriggerExecuting":true}|0x4d1ae063
+14:35:22.0 (42691339)|STATEMENT_EXECUTE|[171]
+14:35:22.0 (42717985)|METHOD_EXIT|[43]|01pO00000003AAn|TriggerHandler.beforeDelete()
+14:35:22.0 (42728178)|METHOD_EXIT|[4]|01pO00000003AAn|TriggerHandler.run()
+14:35:22.42 (42740041)|CUMULATIVE_LIMIT_USAGE
+14:35:22.42 (42740041)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:35:22.42 (42740041)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+14:35:22.42 (42740041)|STATIC_VARIABLE_LIST|
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MAX_VALUE:0
+  Boolean:FALSE:0
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_static_PRATemplateRecordTypeID:0
+  Boolean:_static_runOnce:0
+  double:MIN_VALUE:0
+  int:SIZE:0
+  TriggerHandler.TriggerContext:BEFORE_INSERT:0
+  double:NEGATIVE_INFINITY:0
+  int:MAX_VALUE:0
+  TriggerHandler.TriggerContext:AFTER_UNDELETE:0
+  char[]:digits:0
+  double:NaN:0
+  Boolean:TRUE:0
+  TriggerHandler.TriggerContext:AFTER_INSERT:0
+  Boolean:_static_isTest:0
+  Boolean:_static_recursion:0
+  TriggerHandler.TriggerContext:AFTER_DELETE:0
+  int:MIN_VALUE:0
+  char[]:DigitOnes:0
+  String:_static_KCRATemplateRecordTypeID:0
+  TriggerHandler.TriggerContext:AFTER_UPDATE:0
+  String:__sfdcInnerTypes:0
+  int:BYTES:0
+  Map<String,TriggerHandler.LoopCount>:_static_loopCountMap:0
+  Set<String>:_static_bypassedHandlers:0
+  int:MIN_EXPONENT:0
+  int[]:sizeTable:0
+  TriggerHandler.TriggerContext:BEFORE_DELETE:0
+  String:_sfdcSuppressedCodeLocations:0
+  int:MAX_EXPONENT:0
+  String:_static_PRARecordTypeID:0
+  TriggerHandler.TriggerContext:BEFORE_UPDATE:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  double:MIN_NORMAL:0
+  String:_static_KCRARecordTypeID:0
+  int:BYTES:0
+
+14:35:22.42 (42740041)|CUMULATIVE_LIMIT_USAGE_END
+
+14:35:22.0 (44328139)|CODE_UNIT_FINISHED|opportunityTrigger on Opportunity trigger event BeforeDelete for [006O0000008l2S0]
+14:35:22.0 (493914851)|CODE_UNIT_STARTED|[EXTERNAL]|01qO00000000SDP|opportunityTrigger on Opportunity trigger event AfterDelete for [006O0000008l2S0]
+14:35:22.0 (493949103)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:35:22.0 (494049219)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:35:22.0 (494061904)|VARIABLE_SCOPE_BEGIN|[1]|this|opportunityTrigger|true|false
+14:35:22.0 (494094800)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x6a8fd4f6
+14:35:22.0 (494124536)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:35:22.0 (494130266)|VARIABLE_SCOPE_BEGIN|[1]|this|opportunityTrigger|true|false
+14:35:22.0 (494138444)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x6a8fd4f6
+14:35:22.0 (494143639)|STATEMENT_EXECUTE|[1]
+14:35:22.0 (494145420)|STATEMENT_EXECUTE|[4]
+14:35:22.0 (494151961)|HEAP_ALLOCATE|[4]|Bytes:12
+14:35:22.0 (494167283)|CONSTRUCTOR_ENTRY|[4]|01pO0000000371i|<init>()
+14:35:22.0 (494173958)|VARIABLE_SCOPE_BEGIN|[22]|this|opportunityTriggerHandler|true|false
+14:35:22.0 (494194603)|VARIABLE_ASSIGNMENT|[22]|this|{}|0x71c0e72a
+14:35:22.0 (494198815)|STATEMENT_EXECUTE|[13]
+14:35:22.0 (494204517)|CONSTRUCTOR_ENTRY|[22]|01pO00000003AAn|<init>()
+14:35:22.0 (494208789)|VARIABLE_SCOPE_BEGIN|[22]|this|TriggerHandler|true|false
+14:35:22.0 (494219058)|VARIABLE_ASSIGNMENT|[22]|this|{}|0x71c0e72a
+14:35:22.0 (494222042)|STATEMENT_EXECUTE|[1]
+14:35:22.0 (494223350)|STATEMENT_EXECUTE|[9]
+14:35:22.0 (494224764)|STATEMENT_EXECUTE|[13]
+14:35:22.0 (494244496)|STATEMENT_EXECUTE|[22]
+14:35:22.0 (494246136)|STATEMENT_EXECUTE|[23]
+14:35:22.0 (494258045)|METHOD_ENTRY|[23]|01pO00000003AAn|TriggerHandler.setTriggerContext()
+14:35:22.0 (494262503)|VARIABLE_SCOPE_BEGIN|[94]|this|TriggerHandler|true|false
+14:35:22.0 (494273168)|VARIABLE_ASSIGNMENT|[94]|this|{}|0x71c0e72a
+14:35:22.0 (494277549)|STATEMENT_EXECUTE|[94]
+14:35:22.0 (494278807)|STATEMENT_EXECUTE|[95]
+14:35:22.0 (494288593)|METHOD_ENTRY|[95]|01pO00000003AAn|TriggerHandler.setTriggerContext(String, Boolean)
+14:35:22.0 (494293042)|VARIABLE_SCOPE_BEGIN|[99]|this|TriggerHandler|true|false
+14:35:22.0 (494303061)|VARIABLE_ASSIGNMENT|[99]|this|{}|0x71c0e72a
+14:35:22.0 (494305607)|VARIABLE_SCOPE_BEGIN|[99]|ctx|String|false|false
+14:35:22.0 (494310482)|VARIABLE_ASSIGNMENT|[99]|ctx|null
+14:35:22.0 (494317332)|VARIABLE_SCOPE_BEGIN|[99]|testMode|Boolean|false|false
+14:35:22.0 (494321590)|VARIABLE_ASSIGNMENT|[99]|testMode|false
+14:35:22.0 (494324882)|STATEMENT_EXECUTE|[99]
+14:35:22.0 (494337690)|STATEMENT_EXECUTE|[103]
+14:35:22.0 (494339266)|STATEMENT_EXECUTE|[104]
+14:35:22.0 (494345093)|HEAP_ALLOCATE|[104]|Bytes:5
+14:35:22.0 (494398468)|STATEMENT_EXECUTE|[123]
+14:35:22.0 (494400527)|STATEMENT_EXECUTE|[124]
+14:35:22.0 (494418684)|METHOD_EXIT|[95]|01pO00000003AAn|TriggerHandler.setTriggerContext(String, Boolean)
+14:35:22.0 (494425266)|METHOD_EXIT|[23]|01pO00000003AAn|TriggerHandler.setTriggerContext()
+14:35:22.0 (494430050)|CONSTRUCTOR_EXIT|[22]|01pO00000003AAn|<init>()
+14:35:22.0 (494432401)|STATEMENT_EXECUTE|[22]
+14:35:22.0 (494435168)|CONSTRUCTOR_EXIT|[4]|01pO0000000371i|<init>()
+14:35:22.0 (494440629)|METHOD_ENTRY|[4]|01pO00000003AAn|TriggerHandler.run()
+14:35:22.0 (494444688)|VARIABLE_SCOPE_BEGIN|[31]|this|TriggerHandler|true|false
+14:35:22.0 (494467294)|VARIABLE_ASSIGNMENT|[31]|this|{"context":"0x36143b05","isTriggerExecuting":true}|0x71c0e72a
+14:35:22.0 (494471864)|STATEMENT_EXECUTE|[31]
+14:35:22.0 (494478282)|METHOD_ENTRY|[33]|01pO00000003AAn|TriggerHandler.validateRun()
+14:35:22.0 (494482413)|VARIABLE_SCOPE_BEGIN|[146]|this|TriggerHandler|true|false
+14:35:22.0 (494495323)|VARIABLE_ASSIGNMENT|[146]|this|{"context":"0x36143b05","isTriggerExecuting":true}|0x71c0e72a
+14:35:22.0 (494499226)|STATEMENT_EXECUTE|[146]
+14:35:22.0 (494504954)|STATEMENT_EXECUTE|[147]
+14:35:22.0 (494512808)|METHOD_ENTRY|[150]|01pO00000003AAn|TriggerHandler.getHandlerName()
+14:35:22.0 (494517110)|VARIABLE_SCOPE_BEGIN|[157]|this|TriggerHandler|true|false
+14:35:22.0 (494529652)|VARIABLE_ASSIGNMENT|[157]|this|{"context":"0x36143b05","isTriggerExecuting":true}|0x71c0e72a
+14:35:22.0 (494533249)|STATEMENT_EXECUTE|[157]
+14:35:22.0 (494534455)|STATEMENT_EXECUTE|[158]
+14:35:22.0 (494570125)|SYSTEM_METHOD_ENTRY|[158]|String.valueOf(Object)
+14:35:22.0 (494648188)|HEAP_ALLOCATE|[158]|Bytes:378
+14:35:22.0 (494665608)|SYSTEM_METHOD_EXIT|[158]|String.valueOf(Object)
+14:35:22.0 (494681909)|SYSTEM_METHOD_ENTRY|[158]|String.valueOf(Object)
+14:35:22.0 (494720432)|HEAP_ALLOCATE|[158]|Bytes:378
+14:35:22.0 (494735273)|SYSTEM_METHOD_EXIT|[158]|String.valueOf(Object)
+14:35:22.0 (494749336)|SYSTEM_METHOD_ENTRY|[158]|String.indexOf(String)
+14:35:22.0 (494759972)|SYSTEM_METHOD_EXIT|[158]|String.indexOf(String)
+14:35:22.0 (494771843)|SYSTEM_METHOD_ENTRY|[158]|String.substring(Integer, Integer)
+14:35:22.0 (494778239)|HEAP_ALLOCATE|[158]|Bytes:25
+14:35:22.0 (494787344)|SYSTEM_METHOD_EXIT|[158]|String.substring(Integer, Integer)
+14:35:22.0 (494793396)|METHOD_EXIT|[150]|01pO00000003AAn|TriggerHandler.getHandlerName()
+14:35:22.0 (494809166)|SYSTEM_METHOD_ENTRY|[150]|Set<String>.contains(Object)
+14:35:22.0 (494820185)|SYSTEM_METHOD_EXIT|[150]|Set<String>.contains(Object)
+14:35:22.0 (494824818)|STATEMENT_EXECUTE|[150]
+14:35:22.0 (494826423)|STATEMENT_EXECUTE|[153]
+14:35:22.0 (494830627)|METHOD_EXIT|[33]|01pO00000003AAn|TriggerHandler.validateRun()
+14:35:22.0 (494833742)|STATEMENT_EXECUTE|[33]
+14:35:22.0 (494835346)|STATEMENT_EXECUTE|[35]
+14:35:22.0 (494840567)|METHOD_ENTRY|[35]|01pO00000003AAn|TriggerHandler.addToLoopCount()
+14:35:22.0 (494844837)|VARIABLE_SCOPE_BEGIN|[133]|this|TriggerHandler|true|false
+14:35:22.0 (494862888)|VARIABLE_ASSIGNMENT|[133]|this|{"context":"0x36143b05","isTriggerExecuting":true}|0x71c0e72a
+14:35:22.0 (494867518)|STATEMENT_EXECUTE|[133]
+14:35:22.0 (494868825)|STATEMENT_EXECUTE|[134]
+14:35:22.0 (494874528)|METHOD_ENTRY|[134]|01pO00000003AAn|TriggerHandler.getHandlerName()
+14:35:22.0 (494878155)|VARIABLE_SCOPE_BEGIN|[157]|this|TriggerHandler|true|false
+14:35:22.0 (494890414)|VARIABLE_ASSIGNMENT|[157]|this|{"context":"0x36143b05","isTriggerExecuting":true}|0x71c0e72a
+14:35:22.0 (494893808)|STATEMENT_EXECUTE|[157]
+14:35:22.0 (494895053)|STATEMENT_EXECUTE|[158]
+14:35:22.0 (494910483)|SYSTEM_METHOD_ENTRY|[158]|String.valueOf(Object)
+14:35:22.0 (494950251)|HEAP_ALLOCATE|[158]|Bytes:378
+14:35:22.0 (494965281)|SYSTEM_METHOD_EXIT|[158]|String.valueOf(Object)
+14:35:22.0 (494979491)|SYSTEM_METHOD_ENTRY|[158]|String.valueOf(Object)
+14:35:22.0 (495015165)|HEAP_ALLOCATE|[158]|Bytes:378
+14:35:22.0 (495030227)|SYSTEM_METHOD_EXIT|[158]|String.valueOf(Object)
+14:35:22.0 (495041412)|SYSTEM_METHOD_ENTRY|[158]|String.indexOf(String)
+14:35:22.0 (495050820)|SYSTEM_METHOD_EXIT|[158]|String.indexOf(String)
+14:35:22.0 (495060990)|SYSTEM_METHOD_ENTRY|[158]|String.substring(Integer, Integer)
+14:35:22.0 (495065336)|HEAP_ALLOCATE|[158]|Bytes:25
+14:35:22.0 (495073742)|SYSTEM_METHOD_EXIT|[158]|String.substring(Integer, Integer)
+14:35:22.0 (495079049)|METHOD_EXIT|[134]|01pO00000003AAn|TriggerHandler.getHandlerName()
+14:35:22.0 (495083210)|VARIABLE_SCOPE_BEGIN|[134]|handlerName|String|false|false
+14:35:22.0 (495093860)|VARIABLE_ASSIGNMENT|[134]|handlerName|"opportunityTriggerHa (5 more) ..."
+14:35:22.0 (495109792)|SYSTEM_METHOD_ENTRY|[135]|Map<String,TriggerHandler.LoopCount>.containsKey(Object)
+14:35:22.0 (495121508)|SYSTEM_METHOD_EXIT|[135]|Map<String,TriggerHandler.LoopCount>.containsKey(Object)
+14:35:22.0 (495126111)|STATEMENT_EXECUTE|[135]
+14:35:22.0 (495130455)|METHOD_EXIT|[35]|01pO00000003AAn|TriggerHandler.addToLoopCount()
+14:35:22.0 (495152535)|SYSTEM_METHOD_ENTRY|[38]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+14:35:22.0 (495200654)|SYSTEM_METHOD_EXIT|[38]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+14:35:22.0 (495217965)|SYSTEM_METHOD_ENTRY|[40]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+14:35:22.0 (495243592)|SYSTEM_METHOD_EXIT|[40]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+14:35:22.0 (495259215)|SYSTEM_METHOD_ENTRY|[42]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+14:35:22.0 (495283113)|SYSTEM_METHOD_EXIT|[42]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+14:35:22.0 (495303279)|SYSTEM_METHOD_ENTRY|[44]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+14:35:22.0 (495347259)|SYSTEM_METHOD_EXIT|[44]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+14:35:22.0 (495366147)|SYSTEM_METHOD_ENTRY|[46]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+14:35:22.0 (495400309)|SYSTEM_METHOD_EXIT|[46]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+14:35:22.0 (495419074)|SYSTEM_METHOD_ENTRY|[48]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+14:35:22.0 (495443952)|SYSTEM_METHOD_EXIT|[48]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+14:35:22.0 (495449026)|STATEMENT_EXECUTE|[48]
+14:35:22.0 (495450514)|STATEMENT_EXECUTE|[49]
+14:35:22.0 (495461499)|METHOD_ENTRY|[49]|01pO00000003AAn|TriggerHandler.afterDelete()
+14:35:22.0 (495482096)|VARIABLE_SCOPE_BEGIN|[177]|this|TriggerHandler|true|false
+14:35:22.0 (495499740)|VARIABLE_ASSIGNMENT|[177]|this|{"context":"0x36143b05","isTriggerExecuting":true}|0x71c0e72a
+14:35:22.0 (495505036)|STATEMENT_EXECUTE|[177]
+14:35:22.0 (495510563)|METHOD_EXIT|[49]|01pO00000003AAn|TriggerHandler.afterDelete()
+14:35:22.0 (495515298)|METHOD_EXIT|[4]|01pO00000003AAn|TriggerHandler.run()
+14:35:22.495 (495520981)|CUMULATIVE_LIMIT_USAGE
+14:35:22.495 (495520981)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:35:22.495 (495520981)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+14:35:22.495 (495520981)|STATIC_VARIABLE_LIST|
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MAX_VALUE:0
+  Boolean:FALSE:0
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_static_PRATemplateRecordTypeID:0
+  Boolean:_static_runOnce:0
+  double:MIN_VALUE:0
+  int:SIZE:0
+  TriggerHandler.TriggerContext:BEFORE_INSERT:0
+  double:NEGATIVE_INFINITY:0
+  int:MAX_VALUE:0
+  TriggerHandler.TriggerContext:AFTER_UNDELETE:0
+  char[]:digits:0
+  double:NaN:0
+  Boolean:TRUE:0
+  TriggerHandler.TriggerContext:AFTER_INSERT:0
+  Boolean:_static_isTest:0
+  Boolean:_static_recursion:0
+  TriggerHandler.TriggerContext:AFTER_DELETE:0
+  int:MIN_VALUE:0
+  char[]:DigitOnes:0
+  String:_static_KCRATemplateRecordTypeID:0
+  TriggerHandler.TriggerContext:AFTER_UPDATE:0
+  String:__sfdcInnerTypes:0
+  int:BYTES:0
+  Map<String,TriggerHandler.LoopCount>:_static_loopCountMap:0
+  Set<String>:_static_bypassedHandlers:0
+  int:MIN_EXPONENT:0
+  int[]:sizeTable:0
+  TriggerHandler.TriggerContext:BEFORE_DELETE:0
+  String:_sfdcSuppressedCodeLocations:0
+  int:MAX_EXPONENT:0
+  String:_static_PRARecordTypeID:0
+  TriggerHandler.TriggerContext:BEFORE_UPDATE:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  double:MIN_NORMAL:0
+  String:_static_KCRARecordTypeID:0
+  int:BYTES:0
+
+14:35:22.495 (495520981)|CUMULATIVE_LIMIT_USAGE_END
+
+14:35:22.0 (496683096)|CODE_UNIT_FINISHED|opportunityTrigger on Opportunity trigger event AfterDelete for [006O0000008l2S0]
+14:35:22.0 (543400987)|CODE_UNIT_FINISHED|TRIGGERS
+14:35:22.0 (543411849)|EXECUTION_FINISHED
+14:35:22.549 (549352203)|CUMULATIVE_PROFILING_BEGIN
+14:35:22.549 (549352203)|CUMULATIVE_PROFILING|No profiling information for SOQL operations
+14:35:22.549 (549352203)|CUMULATIVE_PROFILING|No profiling information for SOSL operations
+14:35:22.549 (549352203)|CUMULATIVE_PROFILING|No profiling information for DML operations
+14:35:22.549 (549352203)|CUMULATIVE_PROFILING|method invocations|
+Trigger.opportunityTrigger: line 4, column 1: public opportunityTriggerHandler(): executed 4 times in 3 ms
+Class.opportunityTriggerHandler: line 15, column 1: global Schema.DescribeSObjectResult getDescribe(): executed 2 times in 2 ms
+Class.TriggerHandler.run: line 33, column 1: private Boolean validateRun(): executed 2 times in 1 ms
+Class.TriggerHandler.validateRun: line 150, column 1: private String getHandlerName(): executed 4 times in 1 ms
+Class.TriggerHandler.getHandlerName: line 158, column 1: public static String valueOf(Object): executed 16 times in 1 ms
+External entry point: public void invoke(): executed 1 time in 1 ms
+Class.TriggerHandler.run: line 35, column 1: private void addToLoopCount(): executed 2 times in 0 ms
+Class.TriggerHandler.addToLoopCount: line 134, column 1: private String getHandlerName(): executed 2 times in 0 ms
+Class.TriggerHandler.run: line 38, column 1: public static Integer compareObjects(Object, Object): executed 2 times in 0 ms
+Class.TriggerHandler.addToLoopCount: line 135, column 1: global public Boolean containsKey(Object): executed 2 times in 0 ms
+Class.TriggerHandler.run: line 40, column 1: public static Integer compareObjects(Object, Object): executed 2 times in 0 ms
+
+14:35:22.549 (549352203)|CUMULATIVE_PROFILING_END

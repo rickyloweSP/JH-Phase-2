@@ -1,0 +1,117 @@
+39.0 APEX_CODE,FINEST;APEX_PROFILING,FINEST;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+10:23:26.0 (519853)|USER_INFO|[EXTERNAL]|00528000006B07F|dev@systempartners.com.prod.pcphase2|Australian Eastern Standard Time|GMT+11:00
+10:23:26.0 (555496)|EXECUTION_STARTED
+10:23:26.0 (559585)|CODE_UNIT_STARTED|[EXTERNAL]|aura
+10:23:26.0 (913571)|HEAP_ALLOCATE|[72]|Bytes:3
+10:23:26.0 (950320)|HEAP_ALLOCATE|[77]|Bytes:152
+10:23:26.0 (966209)|HEAP_ALLOCATE|[342]|Bytes:408
+10:23:26.0 (986430)|HEAP_ALLOCATE|[355]|Bytes:408
+10:23:26.0 (1003959)|HEAP_ALLOCATE|[467]|Bytes:48
+10:23:26.0 (1028814)|HEAP_ALLOCATE|[139]|Bytes:6
+10:23:26.0 (1052192)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+10:23:26.0 (1065103)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+10:23:26.0 (2320275)|CODE_UNIT_STARTED|[EXTERNAL]|01pO00000003MVy|ApprovalController.getOpportunityRecord
+10:23:26.0 (2426292)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+10:23:26.0 (2431750)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+10:23:26.0 (2440691)|METHOD_ENTRY|[1]|01pO00000003MVy|ApprovalController.ApprovalController()
+10:23:26.0 (2445023)|STATEMENT_EXECUTE|[1]
+10:23:26.0 (2450959)|STATEMENT_EXECUTE|[1]
+10:23:26.0 (2456355)|METHOD_EXIT|[1]|ApprovalController
+10:23:26.0 (2460247)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+10:23:26.0 (2468750)|SYSTEM_MODE_ENTER|false
+10:23:26.0 (2477094)|VARIABLE_SCOPE_BEGIN|[15]|opportunityId|String|false|false
+10:23:26.0 (2499860)|VARIABLE_ASSIGNMENT|[15]|opportunityId|"006O0000008kRsJIAU"
+10:23:26.0 (2505984)|STATEMENT_EXECUTE|[15]
+10:23:26.0 (2507464)|STATEMENT_EXECUTE|[18]
+10:23:26.0 (2511332)|HEAP_ALLOCATE|[18]|Bytes:589
+10:23:26.0 (2519861)|HEAP_ALLOCATE|[18]|Bytes:4
+10:23:26.0 (2530070)|HEAP_ALLOCATE|[18]|Bytes:7
+10:23:26.0 (2569610)|HEAP_ALLOCATE|[50]|Bytes:5
+10:23:26.0 (2587610)|HEAP_ALLOCATE|[56]|Bytes:5
+10:23:26.0 (2595748)|HEAP_ALLOCATE|[64]|Bytes:7
+10:23:26.0 (3404785)|SOQL_EXECUTE_BEGIN|[18]|Aggregations:0|SELECT Id, name, Gate_Status__c, TSF_Gate_Status__c, CRA_Gate_Status__c, StageName, Competitor_Analysis_General_Comments__c, Are_there_any_critical_risks__c, Has_CRA_changed_since_last_approval__c, Has_TSF_changed_since_last_approval__c, Apply_Default_Bonding__c, Conversion_Budget_Comments__c, Is_Gate_1_To_3__c, Is_Gate_4_To_5__c, Net_Budget_EOI_PQ__c, Net_Budget_Post_Tender__c, Net_Budget_Tender__c, Net_Budget_Amount__c, Total_Budget_EOI_PQ__c, Total_Budget_Tender__c, Total_Budget_AUD__c, Total_Budget_Post_Tender__c, JH_Bid_Cost_of_JH_Revenue__c FROM Opportunity WHERE Id = :tmpVar1
+10:23:26.0 (3419004)|LIMIT_USAGE|[18]|SOQL|1|100
+10:23:26.0 (3428652)|LIMIT_USAGE|[18]|AGGS|0|300
+10:23:26.0 (31227475)|SOQL_EXECUTE_END|[18]|Rows:1
+10:23:26.0 (31241038)|LIMIT_USAGE|[18]|SOQL_ROWS|1|50000
+10:23:26.0 (31263237)|HEAP_ALLOCATE|[18]|Bytes:8
+10:23:26.0 (31275280)|HEAP_ALLOCATE|[18]|Bytes:775
+10:23:26.0 (31327380)|HEAP_ALLOCATE|[18]|Bytes:8
+10:23:26.0 (31345017)|VARIABLE_SCOPE_BEGIN|[18]|allOpps|List<Opportunity>|true|false
+10:23:26.0 (31395284)|VARIABLE_ASSIGNMENT|[18]|allOpps|[{"Id":"006O0000008kRsJIAU","Name":"Test Alex 15 Mar 124 (3 more) ...","Gate_Status__c":"Reviewing Approvers","StageName":"Gate 1","Are_there_any_critic (11 more) ...":"No","Has_CRA_changed_sinc (18 more) ...":"Yes","Apply_Default_Bondin (4 more) ...":true,"Is_Gate_1_To_3__c":true,"Is_Gate_4_To_5__c":false,"Net_Budget_EOI_PQ__c":0,"Net_Budget_Post_Tend (5 more) ...":0,"Net_Budget_Tender__c":0,"Net_Budget_Amount__c":0,"Total_Budget_EOI_PQ_ (2 more) ...":0,"Total_Budget_Tender_ (2 more) ...":0,"Total_Budget_AUD__c":0,"Total_Budget_Post_Te (7 more) ...":0}]|0x2bc0ee43
+10:23:26.0 (31403699)|STATEMENT_EXECUTE|[38]
+10:23:26.0 (31413780)|SYSTEM_MODE_EXIT|false
+10:23:26.31 (31442906)|CUMULATIVE_LIMIT_USAGE
+10:23:26.31 (31442906)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+10:23:26.31 (31442906)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+10:23:26.31 (31442906)|STATIC_VARIABLE_LIST|
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  double:MAX_VALUE:0
+  Boolean:FALSE:0
+  long:serialVersionUID:0
+  double:MIN_VALUE:0
+  int:SIZE:0
+  double:NEGATIVE_INFINITY:0
+  int:MAX_VALUE:0
+  String:_sfdcSuppressedCodeLocations:0
+  char[]:digits:0
+  double:NaN:0
+  Boolean:TRUE:0
+  int:MIN_VALUE:0
+  char[]:DigitOnes:0
+  int:BYTES:0
+  int:MIN_EXPONENT:0
+  int[]:sizeTable:0
+  int:MAX_EXPONENT:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MIN_NORMAL:0
+  int:BYTES:0
+
+10:23:26.31 (31442906)|CUMULATIVE_LIMIT_USAGE_END
+
+10:23:26.0 (31568107)|CODE_UNIT_FINISHED|ApprovalController.getOpportunityRecord
+10:23:26.108 (108141001)|CUMULATIVE_PROFILING_BEGIN
+10:23:26.108 (108141001)|CUMULATIVE_PROFILING|SOQL operations|
+Class.ApprovalController.getOpportunityRecord: line 18, column 1: [SELECT   Id,name,
+                                                           			Gate_Status__c,
+                                                           			TSF_Gate_Status__c,
+                                                           			CRA_Gate_Status__c,
+                                                           			StageName,
+                                    								Competitor_Analysis_General_Comments__c,
+                                    								Are_there_any_critical_risks__c,
+                                    								Has_CRA_changed_since_last_approval__c,
+                                    								Has_TSF_changed_since_last_approval__c,
+                                    								Apply_Default_Bonding__c,
+                                    								Conversion_Budget_Comments__c,
+                                    								Is_Gate_1_To_3__c, Is_Gate_4_To_5__c,
+                                    								Net_Budget_EOI_PQ__c, Net_Budget_Post_Tender__c, 
+                                    								Net_Budget_Tender__c, Net_Budget_Amount__c,
+                                    								Total_Budget_EOI_PQ__c, Total_Budget_Tender__c, 
+                                    								Total_Budget_AUD__c, Total_Budget_Post_Tender__c, 
+                                    								JH_Bid_Cost_of_JH_Revenue__c
+                                 							FROM     Opportunity
+                                 							WHERE    Id = :opportunityId]: executed 1 time in 29 ms
+
+10:23:26.108 (108141001)|CUMULATIVE_PROFILING|No profiling information for SOSL operations
+10:23:26.108 (108141001)|CUMULATIVE_PROFILING|No profiling information for DML operations
+10:23:26.108 (108141001)|CUMULATIVE_PROFILING|method invocations|
+External entry point: public static List<Opportunity> getOpportunityRecord(String): executed 1 time in 29 ms
+
+10:23:26.108 (108141001)|CUMULATIVE_PROFILING_END

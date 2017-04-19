@@ -1,0 +1,92 @@
+34.0 APEX_CODE,FINEST;APEX_PROFILING,FINEST;CALLOUT,NONE;DB,FINEST;SYSTEM,FINE;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,FINER
+15:23:37.0 (690114)|USER_INFO|[EXTERNAL]|005O0000003t7an|ricky.lowe@jhg.com.au.pcphase2|Australian Eastern Standard Time|GMT+10:00
+15:23:37.0 (726172)|EXECUTION_STARTED
+15:23:37.0 (731786)|CODE_UNIT_STARTED|[EXTERNAL]|01pO00000003mlO|Email_Reminder_Batch
+15:23:37.0 (3350876)|HEAP_ALLOCATE|[72]|Bytes:3
+15:23:37.0 (3408194)|HEAP_ALLOCATE|[77]|Bytes:152
+15:23:37.0 (3440205)|HEAP_ALLOCATE|[342]|Bytes:408
+15:23:37.0 (3474819)|HEAP_ALLOCATE|[355]|Bytes:408
+15:23:37.0 (3495762)|HEAP_ALLOCATE|[467]|Bytes:48
+15:23:37.0 (3527722)|HEAP_ALLOCATE|[139]|Bytes:6
+15:23:37.0 (4708641)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:373
+15:23:37.0 (4845584)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:11
+15:23:37.0 (4857985)|SYSTEM_METHOD_ENTRY|[15]|BatchableContextImpl.BatchableContextImpl()
+15:23:37.0 (4861512)|STATEMENT_EXECUTE|[15]
+15:23:37.0 (4872087)|SYSTEM_METHOD_EXIT|[15]|BatchableContextImpl
+15:23:37.0 (4879189)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+15:23:37.0 (4883067)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+15:23:37.0 (4887592)|VARIABLE_SCOPE_BEGIN|[31]|this|Database.BatchableContextImpl|true|false
+15:23:37.0 (4928468)|VARIABLE_ASSIGNMENT|[31]|this|{}|0x348d744
+15:23:37.0 (4932714)|VARIABLE_SCOPE_BEGIN|[31]|jobId|Id|false|false
+15:23:37.0 (5000315)|VARIABLE_ASSIGNMENT|[31]|jobId|"707O000000qyRCKIA2"
+15:23:37.0 (5006256)|VARIABLE_SCOPE_BEGIN|[31]|childJobId|Id|false|false
+15:23:37.0 (5012172)|VARIABLE_ASSIGNMENT|[31]|childJobId|null
+15:23:37.0 (29010686)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:52
+15:23:37.0 (29031549)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:10
+15:23:37.0 (29035325)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+15:23:37.0 (29049373)|METHOD_ENTRY|[1]|01pO00000003mlO|Email_Reminder_Batch.Email_Reminder_Batch()
+15:23:37.0 (29053658)|STATEMENT_EXECUTE|[1]
+15:23:37.0 (29060335)|STATEMENT_EXECUTE|[1]
+15:23:37.0 (29070709)|METHOD_EXIT|[1]|Email_Reminder_Batch
+15:23:37.0 (29078549)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+15:23:37.0 (29081494)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+15:23:37.0 (29089361)|VARIABLE_SCOPE_BEGIN|[23]|this|Email_Reminder_Batch|true|false
+15:23:37.0 (29185475)|VARIABLE_ASSIGNMENT|[23]|this|{"query":"SELECT Approval_Leve (337 more) ...","theDate":"2017-04-08T00:00:00.000Z"}|0x433c428
+15:23:37.0 (29192382)|VARIABLE_SCOPE_BEGIN|[23]|BC|Database.BatchableContext|true|false
+15:23:37.0 (29282504)|VARIABLE_ASSIGNMENT|[23]|BC|{"jobId":"707O000000qyRCKIA2"}|0x348d744
+15:23:37.0 (29300440)|STATEMENT_EXECUTE|[23]
+15:23:37.73 (73483197)|CUMULATIVE_LIMIT_USAGE
+15:23:37.73 (73483197)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+15:23:37.73 (73483197)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+15:23:37.73 (73483197)|STATIC_VARIABLE_LIST|
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MAX_VALUE:0
+  long:serialVersionUID:0
+  double:MIN_VALUE:0
+  int:SIZE:0
+  String:__sfdcParameterizedTypes:0
+  double:NEGATIVE_INFINITY:0
+  int:MAX_VALUE:0
+  String:_sfdcSuppressedCodeLocations:0
+  char[]:digits:0
+  double:NaN:0
+  String:_sfdcAdditionalCodeLocations:0
+  int:MIN_VALUE:0
+  char[]:DigitOnes:0
+  int:BYTES:0
+  int:MIN_EXPONENT:0
+  int[]:sizeTable:0
+  int:MAX_EXPONENT:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MIN_NORMAL:0
+  int:BYTES:0
+
+15:23:37.73 (73483197)|CUMULATIVE_LIMIT_USAGE_END
+
+15:23:37.0 (73716235)|CODE_UNIT_FINISHED|Email_Reminder_Batch
+15:23:37.0 (75557903)|EXECUTION_FINISHED
+15:23:37.101 (101669347)|CUMULATIVE_PROFILING_BEGIN
+15:23:37.101 (101669347)|CUMULATIVE_PROFILING|No profiling information for SOQL operations
+15:23:37.101 (101669347)|CUMULATIVE_PROFILING|No profiling information for SOSL operations
+15:23:37.101 (101669347)|CUMULATIVE_PROFILING|No profiling information for DML operations
+15:23:37.101 (101669347)|CUMULATIVE_PROFILING|method invocations|
+External entry point: global void finish(Database.BatchableContext): executed 1 time in 1 ms
+
+15:23:37.101 (101669347)|CUMULATIVE_PROFILING_END

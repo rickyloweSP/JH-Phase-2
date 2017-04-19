@@ -1,0 +1,43 @@
+<messaging:emailTemplate subject="Internal Contact with associated User has been disabled: {!relatedTo.FirstName} {!relatedTo.LastName}" recipientType="User" relatedToType="Contact">
+<messaging:plainTextEmailBody >
+</messaging:plainTextEmailBody>
+
+<messaging:htmlEmailBody >
+<html>
+<body style="font-family: 'arial'">
+<style>
+table {
+    font-family: ariel, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+</style>
+The following internal Contact/User has been disabled in AD:
+<br/><br/>
+<table>
+<tr>
+<td>Name:</td>
+<td>{!relatedTo.FirstName} {!relatedTo.LastName}</td>
+</tr>
+<tr>
+<td>Email:</td>
+<td>{!relatedTo.Email}</td>
+</tr>
+<tr>
+<td>Link:</td>
+<td><apex:outputtext value="{!LEFT($Api.Partner_Server_URL_140,FIND('.com',$Api.Partner_Server_URL_140)+4)+relatedTo.Id}"/></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+</messaging:htmlEmailBody>
+
+</messaging:emailTemplate>

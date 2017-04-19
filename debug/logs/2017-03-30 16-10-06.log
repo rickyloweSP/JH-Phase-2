@@ -1,0 +1,105 @@
+39.0 APEX_CODE,FINEST;APEX_PROFILING,FINEST;CALLOUT,NONE;DB,FINEST;SYSTEM,FINE;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,FINER
+16:10:05.0 (76378)|USER_INFO|[EXTERNAL]|00528000006B07F|dev@systempartners.com.prod.pcphase2|Australian Eastern Standard Time|GMT+11:00
+16:10:05.0 (105780)|EXECUTION_STARTED
+16:10:05.0 (110186)|CODE_UNIT_STARTED|[EXTERNAL]|aura
+16:10:05.0 (406258)|HEAP_ALLOCATE|[72]|Bytes:3
+16:10:05.0 (436526)|HEAP_ALLOCATE|[77]|Bytes:152
+16:10:05.0 (450776)|HEAP_ALLOCATE|[342]|Bytes:408
+16:10:05.0 (467536)|HEAP_ALLOCATE|[355]|Bytes:408
+16:10:05.0 (483752)|HEAP_ALLOCATE|[467]|Bytes:48
+16:10:05.0 (507649)|HEAP_ALLOCATE|[139]|Bytes:6
+16:10:05.0 (530791)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+16:10:05.0 (542937)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+16:10:05.0 (2343253)|CODE_UNIT_STARTED|[EXTERNAL]|01pO00000003Dck|PRAController.getAllPRARecords
+16:10:05.0 (2416006)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:11
+16:10:05.0 (2421948)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:11
+16:10:05.0 (2433803)|METHOD_ENTRY|[1]|01pO00000003Dck|PRAController.PRAController()
+16:10:05.0 (2437698)|STATEMENT_EXECUTE|[1]
+16:10:05.0 (2442560)|STATEMENT_EXECUTE|[1]
+16:10:05.0 (2448108)|METHOD_EXIT|[1]|PRAController
+16:10:05.0 (2452104)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+16:10:05.0 (2462252)|SYSTEM_MODE_ENTER|false
+16:10:05.0 (2471425)|VARIABLE_SCOPE_BEGIN|[15]|opportunityId|String|false|false
+16:10:05.0 (2491403)|VARIABLE_ASSIGNMENT|[15]|opportunityId|"006O0000008j3sIIAQ"
+16:10:05.0 (2498456)|STATEMENT_EXECUTE|[15]
+16:10:05.0 (2499975)|STATEMENT_EXECUTE|[18]
+16:10:05.0 (2502620)|HEAP_ALLOCATE|[18]|Bytes:508
+16:10:05.0 (2510704)|HEAP_ALLOCATE|[18]|Bytes:4
+16:10:05.0 (2519146)|HEAP_ALLOCATE|[18]|Bytes:7
+16:10:05.0 (2559245)|HEAP_ALLOCATE|[50]|Bytes:5
+16:10:05.0 (2577605)|HEAP_ALLOCATE|[56]|Bytes:5
+16:10:05.0 (2585773)|HEAP_ALLOCATE|[64]|Bytes:7
+16:10:05.0 (3188242)|SOQL_EXECUTE_BEGIN|[18]|Aggregations:0|SELECT Id, name, Category__c, Is_Critical_Risk__c, ItemNo__c, Mitigation_Strategy__c, Rating__c, Risk_Item__c, description__c, Help_Text_0A__c, Help_Text_0B__c, Help_Text_0C__c, Help_Text_1A__c, Help_Text_1B__c, Help_Text_1C__c, Help_Text_2A__c, Help_Text_2B__c, Help_Text_2C__c, Help_Text_3A__c, Help_Text_3B__c, Help_Text_3C__c, Mitigation_Advice__c, Selected_Indicators__c, Selected_Indicators_With_Text__c FROM Project_Risk_Assessment__c WHERE Opportunity__c = :tmpVar1 ORDER BY ItemNo__c ASC NULLS FIRST
+16:10:05.0 (3200378)|LIMIT_USAGE|[18]|SOQL|1|100
+16:10:05.0 (3207982)|LIMIT_USAGE|[18]|AGGS|0|300
+16:10:05.0 (15580443)|SOQL_EXECUTE_END|[18]|Rows:2
+16:10:05.0 (15593007)|LIMIT_USAGE|[18]|SOQL_ROWS|2|50000
+16:10:05.0 (15622189)|HEAP_ALLOCATE|[18]|Bytes:12
+16:10:05.0 (15641077)|HEAP_ALLOCATE|[18]|Bytes:1072
+16:10:05.0 (15794085)|HEAP_ALLOCATE|[18]|Bytes:12
+16:10:05.0 (15820801)|VARIABLE_SCOPE_BEGIN|[18]|allPRAs|List<Project_Risk_Assessment__c>|true|false
+16:10:05.0 (15883327)|VARIABLE_ASSIGNMENT|[18]|allPRAs|[{"Id":"a0hO0000004pUaJIAU","Name":"PRA-00000001","Category__c":"Client Risks","Is_Critical_Risk__c":false,"ItemNo__c":1.1,"Mitigation_Strategy_ (2 more) ...":"Lorem ipsum dolor si (235 more) ...","Rating__c":"2","Risk_Item__c":"Client Financial Sta (5 more) ...","Selected_Indicators_ (2 more) ...":"A;B","Selected_Indicators_ (12 more) ...":"A: . B:"},{"Id":"a0hO0000004pUaOIAU","Name":"PRA-00000002","Category__c":"Strategic Approach R (4 more) ...","Is_Critical_Risk__c":true,"ItemNo__c":2.1,"Mitigation_Strategy_ (2 more) ...":"Lorem ipsum dolor si (235 more) ...","Rating__c":"2","Risk_Item__c":"Alignment with Appro (17 more) ..."}]|0x2cfa0c6f
+16:10:05.0 (15893924)|STATEMENT_EXECUTE|[26]
+16:10:05.0 (15911651)|SYSTEM_MODE_EXIT|false
+16:10:05.15 (15940251)|CUMULATIVE_LIMIT_USAGE
+16:10:05.15 (15940251)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+16:10:05.15 (15940251)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+16:10:05.15 (15940251)|STATIC_VARIABLE_LIST|
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  double:MAX_VALUE:0
+  Boolean:FALSE:0
+  long:serialVersionUID:0
+  double:MIN_VALUE:0
+  int:SIZE:0
+  double:NEGATIVE_INFINITY:0
+  int:MAX_VALUE:0
+  char[]:digits:0
+  double:NaN:0
+  Boolean:TRUE:0
+  int:MIN_VALUE:0
+  String:_sfdcSuppressedCodeLocations:0
+  char[]:DigitOnes:0
+  int:BYTES:0
+  int:MIN_EXPONENT:0
+  int[]:sizeTable:0
+  int:MAX_EXPONENT:0
+  String:_sfdcAdditionalCodeLocations:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  double:MIN_NORMAL:0
+  int:BYTES:0
+
+16:10:05.15 (15940251)|CUMULATIVE_LIMIT_USAGE_END
+
+16:10:05.0 (16088311)|CODE_UNIT_FINISHED|PRAController.getAllPRARecords
+16:10:05.188 (188955439)|CUMULATIVE_PROFILING_BEGIN
+16:10:05.188 (188955439)|CUMULATIVE_PROFILING|SOQL operations|
+Class.PRAController.getAllPRARecords: line 18, column 1: [SELECT Id,name,Category__c,Is_Critical_Risk__c,ItemNo__c,Mitigation_Strategy__c,Rating__c,Risk_Item__c,
+                                                             		description__c,Help_Text_0A__c,Help_Text_0B__c,Help_Text_0C__c,Help_Text_1A__c,Help_Text_1B__c, 
+                                                             		Help_Text_1C__c,Help_Text_2A__c,Help_Text_2B__c,Help_Text_2C__c,Help_Text_3A__c,Help_Text_3B__c,
+                                                             		Help_Text_3C__c,Mitigation_Advice__c,Selected_Indicators__c,Selected_Indicators_With_Text__c
+												   FROM Project_Risk_Assessment__c
+                                                   WHERE Opportunity__c = :opportunityId
+                                                   ORDER BY ItemNo__c]: executed 1 time in 13 ms
+
+16:10:05.188 (188955439)|CUMULATIVE_PROFILING|No profiling information for SOSL operations
+16:10:05.188 (188955439)|CUMULATIVE_PROFILING|No profiling information for DML operations
+16:10:05.188 (188955439)|CUMULATIVE_PROFILING|method invocations|
+External entry point: public static List<Project_Risk_Assessment__c> getAllPRARecords(String): executed 1 time in 13 ms
+
+16:10:05.188 (188955439)|CUMULATIVE_PROFILING_END

@@ -1,0 +1,423 @@
+34.0 APEX_CODE,FINEST;APEX_PROFILING,FINEST;CALLOUT,NONE;DB,FINEST;SYSTEM,FINE;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,FINER
+Execute Anonymous: Email_Reminder_Batch batch = new Email_Reminder_Batch();
+Execute Anonymous: database.executeBatch(batch);
+15:23:33.3 (3914474)|USER_INFO|[EXTERNAL]|005O0000003t7an|ricky.lowe@jhg.com.au.pcphase2|Australian Eastern Standard Time|GMT+10:00
+15:23:33.3 (3927389)|EXECUTION_STARTED
+15:23:33.3 (3931698)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+15:23:33.3 (44389943)|VARIABLE_SCOPE_BEGIN|[1]|batch|Email_Reminder_Batch|true|false
+15:23:33.3 (44537773)|HEAP_ALLOCATE|[72]|Bytes:3
+15:23:33.3 (44591467)|HEAP_ALLOCATE|[77]|Bytes:152
+15:23:33.3 (44610121)|HEAP_ALLOCATE|[342]|Bytes:408
+15:23:33.3 (44629740)|HEAP_ALLOCATE|[355]|Bytes:408
+15:23:33.3 (44647863)|HEAP_ALLOCATE|[467]|Bytes:48
+15:23:33.3 (44678341)|HEAP_ALLOCATE|[139]|Bytes:6
+15:23:33.3 (44705145)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:3
+15:23:33.3 (44740927)|STATEMENT_EXECUTE|[1]
+15:23:33.3 (44743864)|STATEMENT_EXECUTE|[1]
+15:23:33.3 (44748405)|HEAP_ALLOCATE|[1]|Bytes:52
+15:23:33.3 (44753026)|HEAP_ALLOCATE|[1]|Bytes:10
+15:23:33.3 (44755878)|HEAP_ALLOCATE|[1]|Bytes:5
+15:23:33.3 (44785802)|METHOD_ENTRY|[1]|01pO00000003mlO|Email_Reminder_Batch.Email_Reminder_Batch()
+15:23:33.3 (44790273)|STATEMENT_EXECUTE|[1]
+15:23:33.3 (44794640)|STATEMENT_EXECUTE|[1]
+15:23:33.3 (44800713)|METHOD_EXIT|[1]|Email_Reminder_Batch
+15:23:33.3 (44830992)|HEAP_ALLOCATE|[1]|Bytes:12
+15:23:33.3 (44872409)|HEAP_ALLOCATE|[50]|Bytes:5
+15:23:33.3 (44899669)|HEAP_ALLOCATE|[56]|Bytes:5
+15:23:33.3 (44909311)|HEAP_ALLOCATE|[64]|Bytes:7
+15:23:33.3 (44929504)|SYSTEM_MODE_ENTER|false
+15:23:33.3 (44949174)|HEAP_ALLOCATE|[1]|Bytes:5
+15:23:33.3 (44968633)|CONSTRUCTOR_ENTRY|[1]|01pO00000003mlO|<init>()
+15:23:33.3 (44995683)|VARIABLE_SCOPE_BEGIN|[7]|this|Email_Reminder_Batch|true|false
+15:23:33.3 (45054389)|VARIABLE_ASSIGNMENT|[7]|this|{}|0x4c38f4cc
+15:23:33.3 (45060651)|STATEMENT_EXECUTE|[1]
+15:23:33.3 (45061869)|STATEMENT_EXECUTE|[3]
+15:23:33.3 (45062949)|STATEMENT_EXECUTE|[4]
+15:23:33.3 (45070405)|HEAP_ALLOCATE|[8]|Bytes:6
+15:23:33.3 (45093094)|STATEMENT_EXECUTE|[7]
+15:23:33.3 (45094534)|STATEMENT_EXECUTE|[8]
+15:23:33.3 (76750869)|HEAP_ALLOCATE|[8]|Bytes:4
+15:23:33.3 (76777223)|METHOD_ENTRY|[1]|01pO00000003oEH|Assigned_Approver_Helper.Assigned_Approver_Helper()
+15:23:33.3 (76781710)|STATEMENT_EXECUTE|[1]
+15:23:33.3 (76788171)|STATEMENT_EXECUTE|[1]
+15:23:33.3 (76794458)|SYSTEM_MODE_ENTER|true
+15:23:33.3 (76805711)|HEAP_ALLOCATE|[8]|Bytes:5
+15:23:33.3 (76813330)|SYSTEM_MODE_EXIT|true
+15:23:33.3 (76824442)|METHOD_EXIT|[1]|Assigned_Approver_Helper
+15:23:33.3 (76857017)|METHOD_ENTRY|[8]|01pO00000003oEH|Assigned_Approver_Helper.getDateForReminders()
+15:23:33.3 (76927548)|SYSTEM_MODE_ENTER|true
+15:23:33.3 (76933372)|HEAP_ALLOCATE|[22]|Bytes:5
+15:23:33.3 (76938108)|STATEMENT_EXECUTE|[21]
+15:23:33.3 (76939314)|STATEMENT_EXECUTE|[22]
+15:23:33.3 (76964298)|SYSTEM_METHOD_ENTRY|[22]|com.salesforce.api.interop.apex.bcl.DateMethods.today()
+15:23:33.3 (77012946)|HEAP_ALLOCATE|[22]|Bytes:4
+15:23:33.3 (77023608)|SYSTEM_METHOD_EXIT|[22]|com.salesforce.api.interop.apex.bcl.DateMethods.today()
+15:23:33.3 (119407510)|VARIABLE_SCOPE_BEGIN|[78]|Constants.ApprovalOutcomeNotificationEmail|String|false|true
+15:23:33.3 (119419608)|VARIABLE_SCOPE_BEGIN|[80]|Constants.ApprovalSubmissionEmail|String|false|true
+15:23:33.3 (119423172)|VARIABLE_SCOPE_BEGIN|[53]|Constants.ApprovedStatus|String|false|true
+15:23:33.3 (119484099)|VARIABLE_SCOPE_BEGIN|[6]|Constants.Approvers|Approvers__c|true|true
+15:23:33.3 (119490761)|VARIABLE_SCOPE_BEGIN|[84]|Constants.CRA_ApprovalOutcomeNotificationEmail|String|false|true
+15:23:33.3 (119494860)|VARIABLE_SCOPE_BEGIN|[86]|Constants.CRA_ApprovalSubmissionEmail|String|false|true
+15:23:33.3 (119498544)|VARIABLE_SCOPE_BEGIN|[85]|Constants.CRA_DecisionRequiredEmail|String|false|true
+15:23:33.3 (119501683)|VARIABLE_SCOPE_BEGIN|[75]|Constants.ClosedWonStage|String|false|true
+15:23:33.3 (119505802)|VARIABLE_SCOPE_BEGIN|[54]|Constants.ConditionallyApprovedStatus|String|false|true
+15:23:33.3 (119509405)|VARIABLE_SCOPE_BEGIN|[79]|Constants.DecisionRequiredEmail|String|false|true
+15:23:33.3 (119512941)|VARIABLE_SCOPE_BEGIN|[55]|Constants.DeclinedStatus|String|false|true
+15:23:33.3 (119516136)|VARIABLE_SCOPE_BEGIN|[70]|Constants.Gate1Stage|String|false|true
+15:23:33.3 (119519404)|VARIABLE_SCOPE_BEGIN|[71]|Constants.Gate2Stage|String|false|true
+15:23:33.3 (119522591)|VARIABLE_SCOPE_BEGIN|[72]|Constants.Gate3Stage|String|false|true
+15:23:33.3 (119525826)|VARIABLE_SCOPE_BEGIN|[73]|Constants.Gate4Stage|String|false|true
+15:23:33.3 (119528975)|VARIABLE_SCOPE_BEGIN|[74]|Constants.Gate5Stage|String|false|true
+15:23:33.3 (119532405)|VARIABLE_SCOPE_BEGIN|[52]|Constants.InProgressStatus|String|false|true
+15:23:33.3 (119535824)|VARIABLE_SCOPE_BEGIN|[51]|Constants.InitiatedStatus|String|false|true
+15:23:33.3 (119539403)|VARIABLE_SCOPE_BEGIN|[91]|Constants.KCRARecordTypeID|String|false|true
+15:23:33.3 (119543569)|VARIABLE_SCOPE_BEGIN|[90]|Constants.KCRATemplateRecordTypeID|String|false|true
+15:23:33.3 (119547353)|VARIABLE_SCOPE_BEGIN|[69]|Constants.NewDandCStage|String|false|true
+15:23:33.3 (119551086)|VARIABLE_SCOPE_BEGIN|[58]|Constants.NotApplicableStatus|String|false|true
+15:23:33.3 (119555017)|VARIABLE_SCOPE_BEGIN|[50]|Constants.NotStartedStatus|String|false|true
+15:23:33.3 (119570396)|VARIABLE_SCOPE_BEGIN|[28]|Constants.OppRecordTypeMap|Map<String,Id>|true|true
+15:23:33.3 (119575848)|VARIABLE_SCOPE_BEGIN|[93]|Constants.PRARecordTypeID|String|false|true
+15:23:33.3 (119580174)|VARIABLE_SCOPE_BEGIN|[92]|Constants.PRATemplateRecordTypeID|String|false|true
+15:23:33.3 (119584147)|VARIABLE_SCOPE_BEGIN|[61]|Constants.PendingApprovalStatus|String|false|true
+15:23:33.3 (119588182)|VARIABLE_SCOPE_BEGIN|[57]|Constants.RestartedStatus|String|false|true
+15:23:33.3 (119592274)|VARIABLE_SCOPE_BEGIN|[56]|Constants.ResubmittedStatus|String|false|true
+15:23:33.3 (119597164)|VARIABLE_SCOPE_BEGIN|[81]|Constants.TSF_ApprovalOutcomeNotificationEmail|String|false|true
+15:23:33.3 (119602170)|VARIABLE_SCOPE_BEGIN|[83]|Constants.TSF_ApprovalSubmissionEmail|String|false|true
+15:23:33.3 (119607066)|VARIABLE_SCOPE_BEGIN|[82]|Constants.TSF_DecisionRequiredEmail|String|false|true
+15:23:33.3 (119611334)|VARIABLE_SCOPE_BEGIN|[65]|Constants.TenderInPreperationStatus|String|false|true
+15:23:33.3 (119615565)|VARIABLE_SCOPE_BEGIN|[66]|Constants.TenderSubmittedStatus|String|false|true
+15:23:33.3 (119619983)|VARIABLE_SCOPE_BEGIN|[87]|Constants.TenderWonEmail|String|false|true
+15:23:33.3 (119624117)|VARIABLE_SCOPE_BEGIN|[64]|Constants.TenderWonStatus|String|false|true
+15:23:33.3 (119650511)|HEAP_ALLOCATE|[22]|Bytes:28
+15:23:33.3 (119668486)|HEAP_ALLOCATE|[22]|Bytes:136
+15:23:33.3 (119674030)|HEAP_ALLOCATE|[22]|Bytes:7
+15:23:33.3 (119678588)|HEAP_ALLOCATE|[22]|Bytes:34
+15:23:33.3 (119697785)|VARIABLE_ASSIGNMENT|[22]|Constants.ApprovalOutcomeNotificationEmail|"Gate_Approval_Outcom (14 more) ..."
+15:23:33.3 (119700894)|HEAP_ALLOCATE|[22]|Bytes:32
+15:23:33.3 (119707057)|VARIABLE_ASSIGNMENT|[22]|Constants.ApprovalSubmissionEmail|"Approval_Submission_ (12 more) ..."
+15:23:33.3 (119709210)|HEAP_ALLOCATE|[22]|Bytes:8
+15:23:33.3 (119713377)|VARIABLE_ASSIGNMENT|[22]|Constants.ApprovedStatus|"Approved"
+15:23:33.3 (119716207)|HEAP_ALLOCATE|[22]|Bytes:33
+15:23:33.3 (119721389)|VARIABLE_ASSIGNMENT|[22]|Constants.CRA_ApprovalOutcomeNotificationEmail|"CRA_Approval_Outcome (13 more) ..."
+15:23:33.3 (119723329)|HEAP_ALLOCATE|[22]|Bytes:36
+15:23:33.3 (119728256)|VARIABLE_ASSIGNMENT|[22]|Constants.CRA_ApprovalSubmissionEmail|"CRA_Approval_Submiss (16 more) ..."
+15:23:33.3 (119730063)|HEAP_ALLOCATE|[22]|Bytes:29
+15:23:33.3 (119735120)|VARIABLE_ASSIGNMENT|[22]|Constants.CRA_DecisionRequiredEmail|"CRA_Approval_Decsion (9 more) ..."
+15:23:33.3 (119736975)|HEAP_ALLOCATE|[22]|Bytes:10
+15:23:33.3 (119740987)|VARIABLE_ASSIGNMENT|[22]|Constants.ClosedWonStage|"Closed Won"
+15:23:33.3 (119742801)|HEAP_ALLOCATE|[22]|Bytes:22
+15:23:33.3 (119747810)|VARIABLE_ASSIGNMENT|[22]|Constants.ConditionallyApprovedStatus|"Conditionally Approv (2 more) ..."
+15:23:33.3 (119750132)|HEAP_ALLOCATE|[22]|Bytes:38
+15:23:33.3 (119755196)|VARIABLE_ASSIGNMENT|[22]|Constants.DecisionRequiredEmail|"Approval_Decsion_Req (18 more) ..."
+15:23:33.3 (119757090)|HEAP_ALLOCATE|[22]|Bytes:8
+15:23:33.3 (119761823)|VARIABLE_ASSIGNMENT|[22]|Constants.DeclinedStatus|"Declined"
+15:23:33.3 (119763456)|HEAP_ALLOCATE|[22]|Bytes:6
+15:23:33.3 (119767735)|VARIABLE_ASSIGNMENT|[22]|Constants.Gate1Stage|"Gate 1"
+15:23:33.3 (119769613)|HEAP_ALLOCATE|[22]|Bytes:6
+15:23:33.3 (119773615)|VARIABLE_ASSIGNMENT|[22]|Constants.Gate2Stage|"Gate 2"
+15:23:33.3 (119775211)|HEAP_ALLOCATE|[22]|Bytes:6
+15:23:33.3 (119779450)|VARIABLE_ASSIGNMENT|[22]|Constants.Gate3Stage|"Gate 3"
+15:23:33.3 (119781022)|HEAP_ALLOCATE|[22]|Bytes:6
+15:23:33.3 (119787465)|VARIABLE_ASSIGNMENT|[22]|Constants.Gate4Stage|"Gate 4"
+15:23:33.3 (119789190)|HEAP_ALLOCATE|[22]|Bytes:6
+15:23:33.3 (119793436)|VARIABLE_ASSIGNMENT|[22]|Constants.Gate5Stage|"Gate 5"
+15:23:33.3 (119795545)|HEAP_ALLOCATE|[22]|Bytes:11
+15:23:33.3 (119800441)|VARIABLE_ASSIGNMENT|[22]|Constants.InProgressStatus|"In Progress"
+15:23:33.3 (119802257)|HEAP_ALLOCATE|[22]|Bytes:9
+15:23:33.3 (119806692)|VARIABLE_ASSIGNMENT|[22]|Constants.InitiatedStatus|"Initiated"
+15:23:33.3 (119808915)|HEAP_ALLOCATE|[22]|Bytes:3
+15:23:33.3 (119813695)|VARIABLE_ASSIGNMENT|[22]|Constants.NewDandCStage|"New"
+15:23:33.3 (119815459)|HEAP_ALLOCATE|[22]|Bytes:14
+15:23:33.3 (119820428)|VARIABLE_ASSIGNMENT|[22]|Constants.NotApplicableStatus|"Not Applicable"
+15:23:33.3 (119822403)|HEAP_ALLOCATE|[22]|Bytes:11
+15:23:33.3 (119827156)|VARIABLE_ASSIGNMENT|[22]|Constants.NotStartedStatus|"Not Started"
+15:23:33.3 (119829523)|HEAP_ALLOCATE|[22]|Bytes:16
+15:23:33.3 (119835081)|VARIABLE_ASSIGNMENT|[22]|Constants.PendingApprovalStatus|"Pending Approval"
+15:23:33.3 (119836863)|HEAP_ALLOCATE|[22]|Bytes:9
+15:23:33.3 (119842177)|VARIABLE_ASSIGNMENT|[22]|Constants.RestartedStatus|"Restarted"
+15:23:33.3 (119843876)|HEAP_ALLOCATE|[22]|Bytes:11
+15:23:33.3 (119849318)|VARIABLE_ASSIGNMENT|[22]|Constants.ResubmittedStatus|"Resubmitted"
+15:23:33.3 (119851110)|HEAP_ALLOCATE|[22]|Bytes:33
+15:23:33.3 (119863236)|VARIABLE_ASSIGNMENT|[22]|Constants.TSF_ApprovalOutcomeNotificationEmail|"TSF_Approval_Outcome (13 more) ..."
+15:23:33.3 (119866093)|HEAP_ALLOCATE|[22]|Bytes:36
+15:23:33.3 (119873212)|VARIABLE_ASSIGNMENT|[22]|Constants.TSF_ApprovalSubmissionEmail|"TSF_Approval_Submiss (16 more) ..."
+15:23:33.3 (119875230)|HEAP_ALLOCATE|[22]|Bytes:29
+15:23:33.3 (119881913)|VARIABLE_ASSIGNMENT|[22]|Constants.TSF_DecisionRequiredEmail|"TSF_Approval_Decsion (9 more) ..."
+15:23:33.3 (119883765)|HEAP_ALLOCATE|[22]|Bytes:21
+15:23:33.3 (119890052)|VARIABLE_ASSIGNMENT|[22]|Constants.TenderInPreperationStatus|"Tender in Preparatio (1 more) ..."
+15:23:33.3 (119891977)|HEAP_ALLOCATE|[22]|Bytes:16
+15:23:33.3 (119897635)|VARIABLE_ASSIGNMENT|[22]|Constants.TenderSubmittedStatus|"Tender Submitted"
+15:23:33.3 (119899466)|HEAP_ALLOCATE|[22]|Bytes:23
+15:23:33.3 (119906231)|VARIABLE_ASSIGNMENT|[22]|Constants.TenderWonEmail|"Tender_Won_Notificat (3 more) ..."
+15:23:33.3 (119908137)|HEAP_ALLOCATE|[22]|Bytes:10
+15:23:33.3 (119913642)|VARIABLE_ASSIGNMENT|[22]|Constants.TenderWonStatus|"Tender Won"
+15:23:33.3 (119938428)|METHOD_ENTRY|[1]|01pO00000003RXf|Constants.Constants()
+15:23:33.3 (119943295)|STATEMENT_EXECUTE|[1]
+15:23:33.3 (119951589)|STATEMENT_EXECUTE|[1]
+15:23:33.3 (120712316)|SYSTEM_MODE_ENTER|false
+15:23:33.3 (120729448)|HEAP_ALLOCATE|[90]|Bytes:5
+15:23:33.3 (120734981)|STATEMENT_EXECUTE|[3]
+15:23:33.3 (120736281)|STATEMENT_EXECUTE|[90]
+15:23:33.3 (120740734)|HEAP_ALLOCATE|[90]|Bytes:33
+15:23:33.3 (120836468)|SYSTEM_METHOD_ENTRY|[90]|Schema.SObjectType.getDescribe()
+15:23:33.3 (121554311)|HEAP_ALLOCATE|[90]|Bytes:4
+15:23:33.3 (121566481)|SYSTEM_METHOD_EXIT|[90]|Schema.SObjectType.getDescribe()
+15:23:33.3 (121599992)|LIMIT_USAGE|[90]|RECORD_TYPE_DESCRIBES|1|100
+15:23:33.3 (123432418)|HEAP_ALLOCATE|[90]|Bytes:16
+15:23:33.3 (123443899)|HEAP_ALLOCATE|[90]|Bytes:13
+15:23:33.3 (123505404)|SYSTEM_METHOD_ENTRY|[90]|Map<String,Schema.RecordTypeInfo>.get(Object)
+15:23:33.3 (123639736)|SYSTEM_METHOD_EXIT|[90]|Map<String,Schema.RecordTypeInfo>.get(Object)
+15:23:33.3 (123676987)|HEAP_ALLOCATE|[90]|Bytes:4
+15:23:33.3 (123701120)|HEAP_ALLOCATE|[90]|Bytes:18
+15:23:33.3 (123718938)|VARIABLE_ASSIGNMENT|[90]|Constants.KCRATemplateRecordTypeID|"012O0000000DCgLIAW"
+15:23:33.3 (123721823)|STATEMENT_EXECUTE|[91]
+15:23:33.3 (123755028)|SYSTEM_METHOD_ENTRY|[91]|Schema.SObjectType.getDescribe()
+15:23:33.3 (123778175)|HEAP_ALLOCATE|[91]|Bytes:4
+15:23:33.3 (123784377)|SYSTEM_METHOD_EXIT|[91]|Schema.SObjectType.getDescribe()
+15:23:33.3 (123796571)|LIMIT_USAGE|[91]|RECORD_TYPE_DESCRIBES|2|100
+15:23:33.3 (123810011)|HEAP_ALLOCATE|[91]|Bytes:16
+15:23:33.3 (123815290)|HEAP_ALLOCATE|[91]|Bytes:4
+15:23:33.3 (123830103)|SYSTEM_METHOD_ENTRY|[91]|Map<String,Schema.RecordTypeInfo>.get(Object)
+15:23:33.3 (123844676)|SYSTEM_METHOD_EXIT|[91]|Map<String,Schema.RecordTypeInfo>.get(Object)
+15:23:33.3 (123863752)|HEAP_ALLOCATE|[91]|Bytes:4
+15:23:33.3 (123871340)|HEAP_ALLOCATE|[91]|Bytes:18
+15:23:33.3 (123885452)|VARIABLE_ASSIGNMENT|[91]|Constants.KCRARecordTypeID|"012O0000000DCgGIAW"
+15:23:33.3 (123888047)|STATEMENT_EXECUTE|[92]
+15:23:33.3 (123890520)|HEAP_ALLOCATE|[92]|Bytes:26
+15:23:33.3 (123925312)|SYSTEM_METHOD_ENTRY|[92]|Schema.SObjectType.getDescribe()
+15:23:33.3 (124229716)|HEAP_ALLOCATE|[92]|Bytes:4
+15:23:33.3 (124240989)|SYSTEM_METHOD_EXIT|[92]|Schema.SObjectType.getDescribe()
+15:23:33.3 (124256206)|LIMIT_USAGE|[92]|RECORD_TYPE_DESCRIBES|3|100
+15:23:33.3 (126040507)|HEAP_ALLOCATE|[92]|Bytes:16
+15:23:33.3 (126049627)|HEAP_ALLOCATE|[92]|Bytes:12
+15:23:33.3 (126067514)|SYSTEM_METHOD_ENTRY|[92]|Map<String,Schema.RecordTypeInfo>.get(Object)
+15:23:33.3 (126083205)|SYSTEM_METHOD_EXIT|[92]|Map<String,Schema.RecordTypeInfo>.get(Object)
+15:23:33.3 (126103971)|HEAP_ALLOCATE|[92]|Bytes:4
+15:23:33.3 (126112200)|HEAP_ALLOCATE|[92]|Bytes:18
+15:23:33.3 (126128210)|VARIABLE_ASSIGNMENT|[92]|Constants.PRATemplateRecordTypeID|"012O0000000DDVTIA4"
+15:23:33.3 (126130874)|STATEMENT_EXECUTE|[93]
+15:23:33.3 (126163383)|SYSTEM_METHOD_ENTRY|[93]|Schema.SObjectType.getDescribe()
+15:23:33.3 (126190527)|HEAP_ALLOCATE|[93]|Bytes:4
+15:23:33.3 (126197150)|SYSTEM_METHOD_EXIT|[93]|Schema.SObjectType.getDescribe()
+15:23:33.3 (126209676)|LIMIT_USAGE|[93]|RECORD_TYPE_DESCRIBES|4|100
+15:23:33.3 (126222461)|HEAP_ALLOCATE|[93]|Bytes:16
+15:23:33.3 (126227553)|HEAP_ALLOCATE|[93]|Bytes:3
+15:23:33.3 (126242422)|SYSTEM_METHOD_ENTRY|[93]|Map<String,Schema.RecordTypeInfo>.get(Object)
+15:23:33.3 (126256125)|SYSTEM_METHOD_EXIT|[93]|Map<String,Schema.RecordTypeInfo>.get(Object)
+15:23:33.3 (126274728)|HEAP_ALLOCATE|[93]|Bytes:4
+15:23:33.3 (126282200)|HEAP_ALLOCATE|[93]|Bytes:18
+15:23:33.3 (126296503)|VARIABLE_ASSIGNMENT|[93]|Constants.PRARecordTypeID|"012O0000000DDVOIA4"
+15:23:33.3 (126307017)|SYSTEM_MODE_EXIT|false
+15:23:33.3 (126320546)|METHOD_EXIT|[1]|Constants
+15:23:33.3 (126337106)|SYSTEM_METHOD_ENTRY|[22]|Constants.__sfdc_Approvers()
+15:23:33.3 (126347918)|SYSTEM_MODE_ENTER|false
+15:23:33.3 (126354028)|HEAP_ALLOCATE|[8]|Bytes:5
+15:23:33.3 (126357778)|STATEMENT_EXECUTE|[7]
+15:23:33.3 (126364891)|STATEMENT_EXECUTE|[8]
+15:23:33.3 (126366061)|STATEMENT_EXECUTE|[9]
+15:23:33.3 (126461530)|SYSTEM_METHOD_ENTRY|[9]|Approvers__c.getInstance()
+15:23:33.3 (127726218)|HEAP_ALLOCATE|[9]|Bytes:52
+15:23:33.3 (127738694)|SYSTEM_METHOD_EXIT|[9]|Approvers__c.getInstance()
+15:23:33.3 (127776685)|VARIABLE_ASSIGNMENT|[9]|Constants.Approvers|{"IsDeleted":false,"Name":"a0qO0000007lg39","SetupOwnerId":"005O0000003t7anIAA","COO_User_ID__c":"005O0000003t7an","CEO_User_ID__c":"005O0000003t7an","Lower_Threshold__c":2.0E8,"Higher_Threshold__c":5.0E8,"Gate_1_Entry_Thresho (5 more) ...":1.0E7,"Enable_Detailed_Logg (6 more) ...":true,"Turn_Off_Triggers__c":false,"Number_of_Reminder_E (19 more) ...":1.0,"Number_of_Days_Betwe (21 more) ...":10.0}|0x7b6d0727
+15:23:33.3 (127833198)|STATEMENT_EXECUTE|[10]
+15:23:33.3 (127900361)|STATEMENT_EXECUTE|[14]
+15:23:33.3 (127930860)|STATEMENT_EXECUTE|[18]
+15:23:33.3 (127932759)|STATEMENT_EXECUTE|[22]
+15:23:33.3 (127937739)|SYSTEM_MODE_EXIT|false
+15:23:33.3 (127945775)|SYSTEM_METHOD_EXIT|[22]|Constants.__sfdc_Approvers()
+15:23:33.3 (127987890)|SYSTEM_METHOD_ENTRY|[22]|Integer.valueOf(Object)
+15:23:33.3 (128003614)|SYSTEM_METHOD_EXIT|[22]|Integer.valueOf(Object)
+15:23:33.3 (128031391)|SYSTEM_METHOD_ENTRY|[22]|com.salesforce.api.interop.apex.bcl.DateMethods.addDays(Integer)
+15:23:33.3 (128041594)|HEAP_ALLOCATE|[22]|Bytes:4
+15:23:33.3 (128050789)|SYSTEM_METHOD_EXIT|[22]|com.salesforce.api.interop.apex.bcl.DateMethods.addDays(Integer)
+15:23:33.3 (128072650)|VARIABLE_SCOPE_BEGIN|[22]|d|Date|false|false
+15:23:33.3 (128107544)|VARIABLE_ASSIGNMENT|[22]|d|"2017-04-08T00:00:00.000Z"
+15:23:33.3 (128110612)|STATEMENT_EXECUTE|[23]
+15:23:33.3 (128115545)|SYSTEM_MODE_EXIT|true
+15:23:33.3 (128123297)|METHOD_EXIT|[8]|01pO00000003oEH|Assigned_Approver_Helper.getDateForReminders()
+15:23:33.3 (128147666)|VARIABLE_ASSIGNMENT|[8]|this.theDate|"2017-04-08T00:00:00.000Z"|0x4c38f4cc
+15:23:33.3 (128150285)|STATEMENT_EXECUTE|[9]
+15:23:33.3 (128161314)|METHOD_ENTRY|[9]|01pO00000003oEH|Assigned_Approver_Helper.getQueryForReminders()
+15:23:33.3 (128190879)|SYSTEM_MODE_ENTER|true
+15:23:33.3 (128196775)|HEAP_ALLOCATE|[7]|Bytes:5
+15:23:33.3 (128201453)|STATEMENT_EXECUTE|[6]
+15:23:33.3 (128202678)|STATEMENT_EXECUTE|[7]
+15:23:33.3 (128206977)|VARIABLE_SCOPE_BEGIN|[7]|query|String|false|false
+15:23:33.3 (128213142)|VARIABLE_ASSIGNMENT|[7]|query|null
+15:23:33.3 (128214744)|STATEMENT_EXECUTE|[8]
+15:23:33.3 (128218776)|HEAP_ALLOCATE|[8]|Bytes:175
+15:23:33.3 (128226626)|VARIABLE_ASSIGNMENT|[8]|query|"SELECT Approval_Leve (155 more) ..."
+15:23:33.3 (128228612)|STATEMENT_EXECUTE|[9]
+15:23:33.3 (128231068)|HEAP_ALLOCATE|[9]|Bytes:26
+15:23:33.3 (128243772)|HEAP_ALLOCATE|[9]|Bytes:201
+15:23:33.3 (128250707)|VARIABLE_ASSIGNMENT|[9]|query|"SELECT Approval_Leve (181 more) ..."
+15:23:33.3 (128252499)|STATEMENT_EXECUTE|[10]
+15:23:33.3 (128254696)|HEAP_ALLOCATE|[10]|Bytes:43
+15:23:33.3 (128261302)|SYSTEM_METHOD_ENTRY|[10]|Constants.__sfdc_Approvers()
+15:23:33.3 (128280189)|SYSTEM_MODE_ENTER|false
+15:23:33.3 (128285413)|HEAP_ALLOCATE|[8]|Bytes:5
+15:23:33.3 (128288944)|STATEMENT_EXECUTE|[7]
+15:23:33.3 (128291080)|STATEMENT_EXECUTE|[8]
+15:23:33.3 (128292194)|STATEMENT_EXECUTE|[22]
+15:23:33.3 (128294999)|SYSTEM_MODE_EXIT|false
+15:23:33.3 (128300359)|SYSTEM_METHOD_EXIT|[10]|Constants.__sfdc_Approvers()
+15:23:33.3 (128332224)|SYSTEM_METHOD_ENTRY|[10]|String.valueOf(Object)
+15:23:33.3 (128342440)|HEAP_ALLOCATE|[10]|Bytes:3
+15:23:33.3 (128353102)|SYSTEM_METHOD_EXIT|[10]|String.valueOf(Object)
+15:23:33.3 (128359188)|HEAP_ALLOCATE|[10]|Bytes:46
+15:23:33.3 (128363592)|HEAP_ALLOCATE|[10]|Bytes:247
+15:23:33.3 (128372838)|VARIABLE_ASSIGNMENT|[10]|query|"SELECT Approval_Leve (227 more) ..."
+15:23:33.3 (128375277)|STATEMENT_EXECUTE|[11]
+15:23:33.3 (128378156)|HEAP_ALLOCATE|[11]|Bytes:35
+15:23:33.3 (128382544)|HEAP_ALLOCATE|[11]|Bytes:282
+15:23:33.3 (128388732)|VARIABLE_ASSIGNMENT|[11]|query|"SELECT Approval_Leve (262 more) ..."
+15:23:33.3 (128390445)|STATEMENT_EXECUTE|[12]
+15:23:33.3 (128392721)|HEAP_ALLOCATE|[12]|Bytes:31
+15:23:33.3 (128396677)|HEAP_ALLOCATE|[12]|Bytes:313
+15:23:33.3 (128402514)|VARIABLE_ASSIGNMENT|[12]|query|"SELECT Approval_Leve (293 more) ..."
+15:23:33.3 (128404204)|STATEMENT_EXECUTE|[13]
+15:23:33.3 (128406282)|HEAP_ALLOCATE|[13]|Bytes:27
+15:23:33.3 (128411402)|HEAP_ALLOCATE|[13]|Bytes:1
+15:23:33.3 (128421899)|HEAP_ALLOCATE|[13]|Bytes:44
+15:23:33.3 (128425875)|HEAP_ALLOCATE|[13]|Bytes:357
+15:23:33.3 (128432202)|VARIABLE_ASSIGNMENT|[13]|query|"SELECT Approval_Leve (337 more) ..."
+15:23:33.3 (128433922)|STATEMENT_EXECUTE|[14]
+15:23:33.3 (128437748)|SYSTEM_MODE_EXIT|true
+15:23:33.3 (128444539)|METHOD_EXIT|[9]|01pO00000003oEH|Assigned_Approver_Helper.getQueryForReminders()
+15:23:33.3 (128455460)|VARIABLE_ASSIGNMENT|[9]|this.query|"SELECT Approval_Leve (337 more) ..."|0x4c38f4cc
+15:23:33.3 (128457522)|STATEMENT_EXECUTE|[10]
+15:23:33.3 (128641747)|HEAP_ALLOCATE|[10]|Bytes:14
+15:23:33.3 (128650148)|SYSTEM_METHOD_ENTRY|[10]|Constants.__sfdc_Approvers()
+15:23:33.3 (128668060)|HEAP_ALLOCATE|[8]|Bytes:5
+15:23:33.3 (128671784)|STATEMENT_EXECUTE|[7]
+15:23:33.3 (128673947)|STATEMENT_EXECUTE|[8]
+15:23:33.3 (128675037)|STATEMENT_EXECUTE|[22]
+15:23:33.3 (128680792)|SYSTEM_METHOD_EXIT|[10]|Constants.__sfdc_Approvers()
+15:23:33.3 (128705831)|SYSTEM_METHOD_ENTRY|[10]|String.valueOf(Object)
+15:23:33.3 (128712064)|HEAP_ALLOCATE|[10]|Bytes:3
+15:23:33.3 (128722431)|SYSTEM_METHOD_EXIT|[10]|String.valueOf(Object)
+15:23:33.3 (128728732)|HEAP_ALLOCATE|[10]|Bytes:17
+15:23:33.3 (128753046)|SYSTEM_METHOD_ENTRY|[10]|System.debug(APEX_OBJECT, ANY)
+15:23:33.3 (128772534)|USER_DEBUG|[10]|ERROR|*** constant: 1.0
+15:23:33.3 (128777648)|SYSTEM_METHOD_EXIT|[10]|System.debug(APEX_OBJECT, ANY)
+15:23:33.3 (128780868)|STATEMENT_EXECUTE|[12]
+15:23:33.3 (128786171)|HEAP_ALLOCATE|[12]|Bytes:11
+15:23:33.3 (128795590)|HEAP_ALLOCATE|[12]|Bytes:368
+15:23:33.3 (128803365)|SYSTEM_METHOD_ENTRY|[12]|System.debug(APEX_OBJECT, ANY)
+15:23:33.3 (128818202)|USER_DEBUG|[12]|ERROR|*** query: SELECT Approval_Level__c,Approval_Status__c,Current_Approver__c,Date_Time_Assigned_as_Current_Approver__c,Decision_Date__c,Number_of_Reminder_Emails_Sent__c,Last_Email_Sent__c FROM Assigned_Approver__c WHERE Number_of_Reminder_Emails_Sent__c < 1.0 AND Last_Email_Sent__c <= :theDate AND Current_Approver__c = true AND Approval_Status__c = 'Pending Approval'
+15:23:33.3 (128823955)|SYSTEM_METHOD_EXIT|[12]|System.debug(APEX_OBJECT, ANY)
+15:23:33.3 (128837416)|CONSTRUCTOR_EXIT|[1]|01pO00000003mlO|<init>()
+15:23:33.3 (128843987)|SYSTEM_MODE_EXIT|false
+15:23:33.3 (128885575)|VARIABLE_ASSIGNMENT|[1]|batch|{"query":"SELECT Approval_Leve (337 more) ...","theDate":"2017-04-08T00:00:00.000Z"}|0x4c38f4cc
+15:23:33.3 (128889475)|STATEMENT_EXECUTE|[2]
+15:23:33.3 (128906161)|SYSTEM_METHOD_ENTRY|[2]|Database.executeBatch(APEX_OBJECT)
+15:23:33.3 (201138210)|LIMIT_USAGE|[2]|MAX_ASYNC|1|200
+15:23:33.3 (235219085)|SYSTEM_METHOD_EXIT|[2]|Database.executeBatch(APEX_OBJECT)
+15:23:33.244 (244195051)|CUMULATIVE_LIMIT_USAGE
+15:23:33.244 (244195051)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+15:23:33.244 (244195051)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+15:23:33.244 (244195051)|STATIC_VARIABLE_LIST|
+  String:_sfdcSuppressedCodeLocations:0
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MAX_VALUE:0
+  long:serialVersionUID:0
+  String:_static_InProgressStatus:0
+  int:SIZE:0
+  String:__sfdcParameterizedTypes:0
+  String:_static_TenderWonEmail:0
+  String:_static_ApprovedStatus:0
+  int:MAX_VALUE:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_static_InitiatedStatus:0
+  String:_static_PRATemplateRecordTypeID:0
+  String:_static_ClosedWonStage:0
+  String:_static_Gate5Stage:0
+  String:_static_Gate4Stage:0
+  int:MIN_VALUE:0
+  String:_static_Gate1Stage:0
+  String:_static_Gate3Stage:0
+  String:_static_NotStartedStatus:0
+  char[]:DigitOnes:0
+  String:_static_NotApplicableStatus:0
+  String:__sfdcProperties:0
+  String:_static_CRA_DecisionRequiredEmail:0
+  int:MIN_EXPONENT:0
+  String:_static_DecisionRequiredEmail:0
+  String:_static_ApprovalOutcomeNotificationEmail:0
+  String:_static_PendingApprovalStatus:0
+  String:_static_RestartedStatus:0
+  int:MAX_EXPONENT:0
+  String:_static_ApprovalSubmissionEmail:0
+  String:_static_TenderWonStatus:0
+  String:_static_PRARecordTypeID:0
+  int:BYTES:0
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  Boolean:FALSE:0
+  String:_static_KCRATemplateRecordTypeID:0
+  String:_static_DeclinedStatus:0
+  String:_static_TSF_ApprovalSubmissionEmail:0
+  double:MIN_VALUE:0
+  double:NEGATIVE_INFINITY:0
+  String:_static_ResubmittedStatus:0
+  char[]:digits:0
+  double:NaN:0
+  Boolean:TRUE:0
+  Approvers__c:_static_Approvers:0
+  String:__sfdcInnerTypes:0
+  String:_static_CRA_ApprovalOutcomeNotificationEmail:0
+  String:_static_Gate2Stage:0
+  String:_static_TenderSubmittedStatus:0
+  String:_static_NewDandCStage:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_static_TSF_DecisionRequiredEmail:0
+  String:_static_ConditionallyApprovedStatus:0
+  String:_static_KCRARecordTypeID:0
+  String:_static_TSF_ApprovalOutcomeNotificationEmail:0
+  int:BYTES:0
+  int[]:sizeTable:0
+  String:_static_TenderInPreperationStatus:0
+  Email_Reminder_Batch:_static_batch:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MIN_NORMAL:0
+  String:_static_CRA_ApprovalSubmissionEmail:0
+
+15:23:33.244 (244195051)|CUMULATIVE_LIMIT_USAGE_END
+
+15:23:33.3 (244447548)|CODE_UNIT_FINISHED|execute_anonymous_apex
+15:23:33.3 (246213981)|EXECUTION_FINISHED
+15:23:33.247 (247763304)|CUMULATIVE_PROFILING_BEGIN
+15:23:33.247 (247763304)|CUMULATIVE_PROFILING|No profiling information for SOQL operations
+15:23:33.247 (247763304)|CUMULATIVE_PROFILING|No profiling information for SOSL operations
+15:23:33.247 (247763304)|CUMULATIVE_PROFILING|No profiling information for DML operations
+15:23:33.247 (247763304)|CUMULATIVE_PROFILING|method invocations|
+External entry point: public static void execute(): executed 1 time in 191 ms
+AnonymousBlock: line 2, column 1: global public static String executeBatch(APEX_OBJECT): executed 1 time in 107 ms
+AnonymousBlock: line 1, column 1: global Email_Reminder_Batch(): executed 1 time in 84 ms
+Class.Email_Reminder_Batch.<init>: line 8, column 1: public static Date getDateForReminders(): executed 1 time in 51 ms
+Class.Assigned_Approver_Helper.getDateForReminders: line 22, column 1: public static Date today(): executed 4 times in 1 ms
+Class.Constants.__sfdc_Approvers: line 9, column 1: global public static Approvers__c getInstance(): executed 1 time in 1 ms
+Class.Constants: line 90, column 1: global Schema.DescribeSObjectResult getDescribe(): executed 2 times in 1 ms
+Class.Constants: line 92, column 1: global Schema.DescribeSObjectResult getDescribe(): executed 2 times in 1 ms
+Class.Email_Reminder_Batch.<init>: line 9, column 1: public static String getQueryForReminders(): executed 1 time in 0 ms
+Class.Email_Reminder_Batch.<init>: line 10, column 1: public static Approvers__c __sfdc_Approvers(): executed 3 times in 0 ms
+Class.Email_Reminder_Batch.<init>: line 12, column 1: global public static void debug(APEX_OBJECT, ANY): executed 1 time in 0 ms
+
+15:23:33.247 (247763304)|CUMULATIVE_PROFILING_END

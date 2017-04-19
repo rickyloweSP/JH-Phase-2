@@ -1,0 +1,35 @@
+<aura:component >
+	<!-- This component should NOT be used as standalone component.
+		It must be used within SuccessFactorListComponent.
+		The component display a Successfactor  record. Instead of stars with tr, it starts with th.
+		tr element is provided in aura:iteration in SuccessFactorListComponent.
+  		This is due to error (Cannot read property 'childNodes' of null) when re rendering / refreshing the list.
+	-->    
+    <aura:attribute name="Score" type="String[]" default="N/A,1,2,3,4,5"/>
+    <aura:attribute name="SuccessFactor" type="Success_Factor__c" />
+      
+
+                <td class="no-text-overflow slds-cell-wrap">{!v.SuccessFactor.Item__c}</td>
+                <td class="no-text-overflow slds-cell-wrap">{!v.SuccessFactor.Success_Factor__c}</td>
+                <td class="no-text-overflow slds-cell-wrap">{!v.SuccessFactor.Category__c}</td>
+                <td class="no-text-overflow slds-cell-wrap">
+                    <ui:inputSelect aura:id="score" disabled="false" value="{!v.SuccessFactor.Score__c}">
+                              <aura:iteration items="{!v.Score}" var="sco">
+                                 <ui:inputSelectOption text="{!sco}" label="{!sco}"/>
+                              </aura:iteration>
+                    </ui:inputSelect>
+
+
+                </td>
+                <td class="no-text-overflow slds-cell-wrap">
+                    <ui:inputTextArea aura:id="inputDescription2" disabled="false" value="{!v.SuccessFactor.Comments__c}" rows="3"/>
+
+                </td>
+                <td class="no-text-overflow slds-cell-wrap">{!v.SuccessFactor.Scoring_Help__c}</td>
+
+    			
+  
+    <div aura:id="body">
+    </div> 
+      
+</aura:component>

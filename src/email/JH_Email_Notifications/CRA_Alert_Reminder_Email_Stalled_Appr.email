@@ -1,0 +1,5 @@
+<messaging:emailTemplate subject="REMINDER: Approval decision required: CRA for {!relatedTo.StageName} for {!relatedTo.Name}" recipientType="User" relatedToType="Opportunity">
+    <messaging:htmlEmailBody >            
+        <c:Decision_Required_VF recipientUser="{!recipient}" relatedToOpp="{!relatedTo}" EmailType="CRA"/>       
+    </messaging:htmlEmailBody>  
+</messaging:emailTemplate>

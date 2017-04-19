@@ -1,0 +1,107 @@
+39.0 APEX_CODE,FINEST;APEX_PROFILING,FINEST;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+14:54:31.0 (391069)|USER_INFO|[EXTERNAL]|00528000006B07F|dev@systempartners.com.prod.pcphase2|Australian Eastern Standard Time|GMT+11:00
+14:54:31.0 (422952)|EXECUTION_STARTED
+14:54:31.0 (429070)|CODE_UNIT_STARTED|[EXTERNAL]|aura
+14:54:31.0 (1190326)|HEAP_ALLOCATE|[72]|Bytes:3
+14:54:31.0 (1237539)|HEAP_ALLOCATE|[77]|Bytes:152
+14:54:31.0 (1258867)|HEAP_ALLOCATE|[342]|Bytes:408
+14:54:31.0 (1286481)|HEAP_ALLOCATE|[355]|Bytes:408
+14:54:31.0 (1313838)|HEAP_ALLOCATE|[467]|Bytes:48
+14:54:31.0 (1352019)|HEAP_ALLOCATE|[139]|Bytes:6
+14:54:31.0 (1387575)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+14:54:31.0 (1397391)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+14:54:31.0 (2780992)|CODE_UNIT_STARTED|[EXTERNAL]|01pO0000000372v|KCRAController.getAllKCRARecords
+14:54:31.0 (2985512)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+14:54:31.0 (2991868)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:14
+14:54:31.0 (3002723)|METHOD_ENTRY|[11]|01pO0000000372v|KCRAController.KCRAController()
+14:54:31.0 (3007155)|STATEMENT_EXECUTE|[11]
+14:54:31.0 (3011837)|STATEMENT_EXECUTE|[11]
+14:54:31.0 (3016246)|METHOD_EXIT|[11]|KCRAController
+14:54:31.0 (3019765)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+14:54:31.0 (3026394)|SYSTEM_MODE_ENTER|false
+14:54:31.0 (3034350)|VARIABLE_SCOPE_BEGIN|[14]|opportunityId|String|false|false
+14:54:31.0 (3054454)|VARIABLE_ASSIGNMENT|[14]|opportunityId|"006O0000008j3sIIAQ"
+14:54:31.0 (3060307)|STATEMENT_EXECUTE|[14]
+14:54:31.0 (3061550)|STATEMENT_EXECUTE|[17]
+14:54:31.0 (3065027)|HEAP_ALLOCATE|[17]|Bytes:204
+14:54:31.0 (3077967)|HEAP_ALLOCATE|[17]|Bytes:4
+14:54:31.0 (3090466)|HEAP_ALLOCATE|[17]|Bytes:7
+14:54:31.0 (3131717)|HEAP_ALLOCATE|[50]|Bytes:5
+14:54:31.0 (3149617)|HEAP_ALLOCATE|[56]|Bytes:5
+14:54:31.0 (3157381)|HEAP_ALLOCATE|[64]|Bytes:7
+14:54:31.0 (3595833)|SOQL_EXECUTE_BEGIN|[17]|Aggregations:0|SELECT Id, name, recordtypeId, applicable__c, approved__c, itemno__c, KCRA_Item__c, Opportunity__c FROM Key_Commercial_Risks_Approvals__c WHERE Opportunity__c = :tmpVar1 ORDER BY itemno__c ASC NULLS FIRST
+14:54:31.0 (3607973)|LIMIT_USAGE|[17]|SOQL|1|100
+14:54:31.0 (3616770)|LIMIT_USAGE|[17]|AGGS|0|300
+14:54:31.0 (7907111)|SOQL_EXECUTE_END|[17]|Rows:1
+14:54:31.0 (7916462)|LIMIT_USAGE|[17]|SOQL_ROWS|1|50000
+14:54:31.0 (7932912)|HEAP_ALLOCATE|[17]|Bytes:8
+14:54:31.0 (7951834)|HEAP_ALLOCATE|[17]|Bytes:248
+14:54:31.0 (7988266)|HEAP_ALLOCATE|[17]|Bytes:8
+14:54:31.0 (7998691)|VARIABLE_SCOPE_BEGIN|[17]|allKCRAs|List<Key_Commercial_Risks_Approvals__c>|true|false
+14:54:31.0 (8031974)|VARIABLE_ASSIGNMENT|[17]|allKCRAs|[{"Id":"a0gO000001LxM3ZIAV","Name":"KCRA-00000004","Applicable__c":"Yes","Approved__c":false,"ItemNo__c":2,"KCRA_Item__c":"Operate in a country (38 more) ...","Opportunity__c":"006O0000008j3sIIAQ"}]|0x19212d1c
+14:54:31.0 (8037124)|STATEMENT_EXECUTE|[27]
+14:54:31.0 (8045255)|SYSTEM_MODE_EXIT|false
+14:54:31.8 (8067975)|CUMULATIVE_LIMIT_USAGE
+14:54:31.8 (8067975)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:54:31.8 (8067975)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+14:54:31.8 (8067975)|STATIC_VARIABLE_LIST|
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  double:MAX_VALUE:0
+  Boolean:FALSE:0
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MIN_VALUE:0
+  int:SIZE:0
+  double:NEGATIVE_INFINITY:0
+  int:MAX_VALUE:0
+  char[]:digits:0
+  double:NaN:0
+  Boolean:TRUE:0
+  int:MIN_VALUE:0
+  char[]:DigitOnes:0
+  int:BYTES:0
+  int:MIN_EXPONENT:0
+  int[]:sizeTable:0
+  int:MAX_EXPONENT:0
+  String:_sfdcSuppressedCodeLocations:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  double:MIN_NORMAL:0
+  int:BYTES:0
+
+14:54:31.8 (8067975)|CUMULATIVE_LIMIT_USAGE_END
+
+14:54:31.0 (8177380)|CODE_UNIT_FINISHED|KCRAController.getAllKCRARecords
+14:54:31.16 (16017669)|CUMULATIVE_PROFILING_BEGIN
+14:54:31.16 (16017669)|CUMULATIVE_PROFILING|SOQL operations|
+Class.KCRAController.getAllKCRARecords: line 17, column 1: [SELECT   Id,name,
+                                                           			recordtypeId,
+                                                           			applicable__c,
+                                                           			approved__c,
+                                                           			itemno__c,
+                                                           			KCRA_Item__c,Opportunity__c 
+                                 							FROM     Key_Commercial_Risks_Approvals__c 
+                                 							WHERE    Opportunity__c = :opportunityId
+                                                           	ORDER BY itemno__c]: executed 1 time in 4 ms
+
+14:54:31.16 (16017669)|CUMULATIVE_PROFILING|No profiling information for SOSL operations
+14:54:31.16 (16017669)|CUMULATIVE_PROFILING|No profiling information for DML operations
+14:54:31.16 (16017669)|CUMULATIVE_PROFILING|method invocations|
+External entry point: public static List<Key_Commercial_Risks_Approvals__c> getAllKCRARecords(String): executed 1 time in 5 ms
+
+14:54:31.16 (16017669)|CUMULATIVE_PROFILING_END

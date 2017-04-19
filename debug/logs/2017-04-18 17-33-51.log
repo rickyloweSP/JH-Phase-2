@@ -1,0 +1,95 @@
+39.0 APEX_CODE,FINEST;APEX_PROFILING,FINEST;CALLOUT,NONE;DB,FINEST;SYSTEM,FINE;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,FINER
+Execute Anonymous: system.debug(Util.incrementNumber(null));
+17:33:50.2 (2022363)|USER_INFO|[EXTERNAL]|005O0000003t7an|ricky.lowe@jhg.com.au.pcphase2|Australian Eastern Standard Time|GMT+10:00
+17:33:50.2 (2034501)|EXECUTION_STARTED
+17:33:50.2 (2038194)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+17:33:50.2 (2207946)|HEAP_ALLOCATE|[72]|Bytes:3
+17:33:50.2 (2239148)|HEAP_ALLOCATE|[77]|Bytes:152
+17:33:50.2 (2259808)|HEAP_ALLOCATE|[342]|Bytes:408
+17:33:50.2 (2288163)|HEAP_ALLOCATE|[355]|Bytes:408
+17:33:50.2 (2328461)|HEAP_ALLOCATE|[467]|Bytes:48
+17:33:50.2 (2377048)|HEAP_ALLOCATE|[139]|Bytes:6
+17:33:50.2 (2409228)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:1
+17:33:50.2 (2483268)|STATEMENT_EXECUTE|[1]
+17:33:50.2 (2485546)|STATEMENT_EXECUTE|[1]
+17:33:50.2 (2537494)|HEAP_ALLOCATE|[50]|Bytes:5
+17:33:50.2 (2556188)|HEAP_ALLOCATE|[56]|Bytes:5
+17:33:50.2 (2564620)|HEAP_ALLOCATE|[64]|Bytes:7
+17:33:50.2 (2584481)|SYSTEM_MODE_ENTER|false
+17:33:50.2 (2597977)|HEAP_ALLOCATE|[1]|Bytes:5
+17:33:50.2 (4461173)|HEAP_ALLOCATE|[1]|Bytes:7
+17:33:50.2 (4489453)|METHOD_ENTRY|[1]|01pO00000003bay|Util.Util()
+17:33:50.2 (4494799)|STATEMENT_EXECUTE|[1]
+17:33:50.2 (4501486)|STATEMENT_EXECUTE|[1]
+17:33:50.2 (4510851)|HEAP_ALLOCATE|[1]|Bytes:5
+17:33:50.2 (4526301)|METHOD_EXIT|[1]|Util
+17:33:50.2 (4619120)|METHOD_ENTRY|[1]|01pO00000003bay|Util.incrementNumber(Integer)
+17:33:50.2 (4649204)|VARIABLE_SCOPE_BEGIN|[27]|numberToIncrement|Integer|false|false
+17:33:50.2 (4663451)|VARIABLE_ASSIGNMENT|[27]|numberToIncrement|null
+17:33:50.2 (4680840)|HEAP_ALLOCATE|[28]|Bytes:5
+17:33:50.2 (4688443)|STATEMENT_EXECUTE|[27]
+17:33:50.2 (4690974)|STATEMENT_EXECUTE|[28]
+17:33:50.2 (4692448)|STATEMENT_EXECUTE|[29]
+17:33:50.2 (4697877)|HEAP_ALLOCATE|[29]|Bytes:4
+17:33:50.2 (4711628)|METHOD_EXIT|[1]|01pO00000003bay|Util.incrementNumber(Integer)
+17:33:50.2 (4719074)|HEAP_ALLOCATE|[1]|Bytes:4
+17:33:50.2 (4726188)|SYSTEM_MODE_EXIT|false
+17:33:50.2 (4780500)|SYSTEM_METHOD_ENTRY|[1]|System.debug(ANY)
+17:33:50.2 (4795168)|USER_DEBUG|[1]|DEBUG|1
+17:33:50.2 (4804084)|SYSTEM_METHOD_EXIT|[1]|System.debug(ANY)
+17:33:50.4 (4869630)|CUMULATIVE_LIMIT_USAGE
+17:33:50.4 (4869630)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+17:33:50.4 (4869630)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+17:33:50.4 (4869630)|STATIC_VARIABLE_LIST|
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  String:_sfdcSuppressedCodeLocations:0
+  long:serialVersionUID:0
+  double:MAX_VALUE:0
+  Boolean:FALSE:0
+  long:serialVersionUID:0
+  double:MIN_VALUE:0
+  int:SIZE:0
+  double:NEGATIVE_INFINITY:0
+  int:MAX_VALUE:0
+  char[]:digits:0
+  double:NaN:0
+  Boolean:TRUE:0
+  int:MIN_VALUE:0
+  char[]:DigitOnes:0
+  int:BYTES:0
+  int:MIN_EXPONENT:0
+  int[]:sizeTable:0
+  int:MAX_EXPONENT:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MIN_NORMAL:0
+  int:BYTES:0
+
+17:33:50.4 (4869630)|CUMULATIVE_LIMIT_USAGE_END
+
+17:33:50.2 (5020333)|CODE_UNIT_FINISHED|execute_anonymous_apex
+17:33:50.2 (6553459)|EXECUTION_FINISHED
+17:33:50.7 (7752272)|CUMULATIVE_PROFILING_BEGIN
+17:33:50.7 (7752272)|CUMULATIVE_PROFILING|No profiling information for SOQL operations
+17:33:50.7 (7752272)|CUMULATIVE_PROFILING|No profiling information for SOSL operations
+17:33:50.7 (7752272)|CUMULATIVE_PROFILING|No profiling information for DML operations
+17:33:50.7 (7752272)|CUMULATIVE_PROFILING|method invocations|
+External entry point: public static void execute(): executed 1 time in 3 ms
+AnonymousBlock: line 1, column 1: public static Integer incrementNumber(Integer): executed 2 times in 0 ms
+
+17:33:50.7 (7752272)|CUMULATIVE_PROFILING_END

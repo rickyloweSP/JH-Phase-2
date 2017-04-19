@@ -1,0 +1,32 @@
+<aura:component >
+    <!-- This component should NOT be used as standalone component.
+		It must be used within ViewApproversListComponent.
+		The component display an Approver  record. Instead of stars with tr, it starts with th.
+		tr element is provided in aura:iteration in PRAListComponent.
+  		This is due to error (Cannot read property 'childNodes' of null) when re rendering / refreshing the list.
+	-->    
+    <aura:attribute name="sldsVer" type="String" default="/resource/SLDS" description="the current version of slds resource" />
+    <aura:attribute name="AssignedApprover" type="Assigned_Approver__c" />
+    <aura:attribute name="AssignedApproverList" type="List" />
+    <aura:attribute name="Opp" type="Opportunity" />
+
+    			
+                <td><div>
+                    <ui:button class="uiEditButton" label="Edit" press="{!c.editMode}" /> </div>
+                </td>
+                <td><div><a onclick="{!c.navigateToAssignedApprover}">{!v.AssignedApprover.Approver__r.Name}</a></div></td>
+                <td><div>{!v.AssignedApprover.Proxy_Approver__r.Name}</div></td>
+                <td><div>{!v.AssignedApprover.Approval_Level__c}</div></td>
+                <td><div>{!v.AssignedApprover.Approval_Status__c}</div></td>
+                <td><div><ui:inputCheckbox disabled="true" value="{!v.AssignedApprover.Current_Approver__c}"/></div></td> 
+
+                <td><div><ui:inputCheckbox value="{!v.AssignedApprover.Wet_Signature_Received__c}" disabled="{!v.Opp.Is_Gate_1_To_3__c}" /></div></td>    
+        		<td><div><ui:inputDate value="{!v.AssignedApprover.Wet_Signature_Date__c}" disabled="{!v.Opp.Is_Gate_1_To_3__c}"  displayDatePicker="true" class="slds-input"/>
+                </div></td>  
+
+    			<td><div>{!v.AssignedApprover.Approval_Comments__c}</div></td>  
+
+    <div aura:id="body">
+    </div> 
+  
+</aura:component>

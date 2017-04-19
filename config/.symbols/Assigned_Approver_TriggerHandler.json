@@ -1,0 +1,204 @@
+{
+    "constructors": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 16
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "Assigned_Approver_TriggerHandler",
+            "parameters": [],
+            "references": [],
+            "type": null
+        }
+    ],
+    "externalReferences": [],
+    "id": "01pO00000003SemIAE",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01pO00000003SemIAE",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 20
+            },
+            "modifiers": [
+                "public",
+                "override"
+            ],
+            "name": "beforeUpdate",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 27
+            },
+            "modifiers": [
+                "public",
+                "override"
+            ],
+            "name": "afterUpdate",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 40
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "findCurrentApproversThatHaveApproved",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 80
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "sendEmailToCurrentApprover",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        }
+    ],
+    "name": "Assigned_Approver_TriggerHandler",
+    "namespace": null,
+    "parentClass": "TriggerHandler",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 13
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "recursionBefore",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 14
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "recursionAfter",
+            "references": [],
+            "type": "Boolean"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 30,
+            "line": 12
+        },
+        "modifiers": [
+            "public",
+            "without sharing"
+        ],
+        "name": "Assigned_Approver_TriggerHandler",
+        "references": [],
+        "type": "Assigned_Approver_TriggerHandler"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 14,
+                "line": 43
+            },
+            "modifiers": [],
+            "name": "gatesToFindNextApprover",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 34,
+                "line": 44
+            },
+            "modifiers": [],
+            "name": "AA",
+            "references": [],
+            "type": "Assigned_Approver__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 34,
+                "line": 45
+            },
+            "modifiers": [],
+            "name": "oldApprover",
+            "references": [],
+            "type": "Assigned_Approver__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 81
+            },
+            "modifiers": [],
+            "name": "EA",
+            "references": [],
+            "type": "Email_Alert_Class"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 34,
+                "line": 83
+            },
+            "modifiers": [],
+            "name": "AA",
+            "references": [],
+            "type": "Assigned_Approver__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 34,
+                "line": 84
+            },
+            "modifiers": [],
+            "name": "oldApprover",
+            "references": [],
+            "type": "Assigned_Approver__c"
+        }
+    ]
+}

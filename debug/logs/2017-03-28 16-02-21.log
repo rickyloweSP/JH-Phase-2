@@ -1,0 +1,267 @@
+34.0 APEX_CODE,FINEST;APEX_PROFILING,FINEST;CALLOUT,NONE;DB,FINEST;SYSTEM,FINE;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,FINER
+Execute Anonymous: list<opportunity> opp = Test_Data_Factory.createProspect(1);
+16:02:20.1 (1942537)|USER_INFO|[EXTERNAL]|005O0000003t7an|ricky.lowe@jhg.com.au.pcphase2|Australian Eastern Standard Time|GMT+11:00
+16:02:20.1 (1955661)|EXECUTION_STARTED
+16:02:20.1 (1959142)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+16:02:20.1 (2148809)|VARIABLE_SCOPE_BEGIN|[1]|opp|List<Opportunity>|true|false
+16:02:20.1 (2271324)|HEAP_ALLOCATE|[72]|Bytes:3
+16:02:20.1 (2299842)|HEAP_ALLOCATE|[77]|Bytes:152
+16:02:20.1 (2323786)|HEAP_ALLOCATE|[342]|Bytes:408
+16:02:20.1 (2366635)|HEAP_ALLOCATE|[355]|Bytes:408
+16:02:20.1 (2396064)|HEAP_ALLOCATE|[467]|Bytes:48
+16:02:20.1 (2442271)|HEAP_ALLOCATE|[139]|Bytes:6
+16:02:20.1 (2489475)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:1
+16:02:20.1 (2591945)|STATEMENT_EXECUTE|[1]
+16:02:20.1 (2595329)|STATEMENT_EXECUTE|[1]
+16:02:20.1 (2647968)|HEAP_ALLOCATE|[50]|Bytes:5
+16:02:20.1 (2665253)|HEAP_ALLOCATE|[56]|Bytes:5
+16:02:20.1 (2674087)|HEAP_ALLOCATE|[64]|Bytes:7
+16:02:20.1 (2710707)|SYSTEM_MODE_ENTER|false
+16:02:20.1 (2741413)|HEAP_ALLOCATE|[1]|Bytes:5
+16:02:20.1 (4339934)|HEAP_ALLOCATE|[1]|Bytes:4
+16:02:20.1 (4382551)|METHOD_ENTRY|[1]|01pO00000003YVv|Test_Data_Factory.Test_Data_Factory()
+16:02:20.1 (4388406)|STATEMENT_EXECUTE|[1]
+16:02:20.1 (4396646)|STATEMENT_EXECUTE|[1]
+16:02:20.1 (4407886)|HEAP_ALLOCATE|[1]|Bytes:5
+16:02:20.1 (4422920)|METHOD_EXIT|[1]|Test_Data_Factory
+16:02:20.1 (4459719)|METHOD_ENTRY|[1]|01pO00000003YVv|Test_Data_Factory.createProspect(Integer)
+16:02:20.1 (4484113)|VARIABLE_SCOPE_BEGIN|[8]|noOfProspects|Integer|false|false
+16:02:20.1 (4504678)|VARIABLE_ASSIGNMENT|[8]|noOfProspects|1
+16:02:20.1 (4514941)|HEAP_ALLOCATE|[9]|Bytes:5
+16:02:20.1 (4519582)|STATEMENT_EXECUTE|[8]
+16:02:20.1 (4520815)|STATEMENT_EXECUTE|[9]
+16:02:20.1 (4525144)|HEAP_ALLOCATE|[9]|Bytes:4
+16:02:20.1 (4565026)|SYSTEM_CONSTRUCTOR_ENTRY|[9]|<init>()
+16:02:20.1 (4606340)|SYSTEM_CONSTRUCTOR_EXIT|[9]|<init>()
+16:02:20.1 (4611342)|VARIABLE_SCOPE_BEGIN|[9]|prospects|List<Opportunity>|true|false
+16:02:20.1 (4620021)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+16:02:20.1 (4633146)|VARIABLE_ASSIGNMENT|[9]|prospects|[]|0x3a431779
+16:02:20.1 (4636787)|STATEMENT_EXECUTE|[11]
+16:02:20.1 (4640300)|VARIABLE_SCOPE_BEGIN|[11]|i|Integer|false|false
+16:02:20.1 (4643840)|HEAP_ALLOCATE|[11]|Bytes:4
+16:02:20.1 (4648657)|VARIABLE_ASSIGNMENT|[11]|i|0
+16:02:20.1 (4653958)|STATEMENT_EXECUTE|[11]
+16:02:20.1 (4655144)|STATEMENT_EXECUTE|[12]
+16:02:20.1 (4673601)|HEAP_ALLOCATE|[12]|Bytes:4
+16:02:20.1 (4753662)|VARIABLE_SCOPE_BEGIN|[12]|opp|Opportunity|true|false
+16:02:20.1 (4768032)|VARIABLE_ASSIGNMENT|[12]|opp|{}|0x1ad4d19a
+16:02:20.1 (4770857)|STATEMENT_EXECUTE|[13]
+16:02:20.1 (4774458)|HEAP_ALLOCATE|[13]|Bytes:18
+16:02:20.1 (4791064)|HEAP_ALLOCATE|[13]|Bytes:4
+16:02:20.1 (4892069)|VARIABLE_ASSIGNMENT|[13]|this.AccountId|"001O0000017RQomIAG"|0x1ad4d19a
+16:02:20.1 (4896034)|STATEMENT_EXECUTE|[14]
+16:02:20.1 (4921677)|HEAP_ALLOCATE|[14]|Bytes:28
+16:02:20.1 (4999384)|VARIABLE_ASSIGNMENT|[14]|this.Amount|100000|0x1ad4d19a
+16:02:20.1 (5010834)|STATEMENT_EXECUTE|[15]
+16:02:20.1 (5037637)|SYSTEM_METHOD_ENTRY|[15]|com.salesforce.api.interop.apex.bcl.DateMethods.today()
+16:02:20.1 (5089700)|HEAP_ALLOCATE|[15]|Bytes:4
+16:02:20.1 (5099510)|SYSTEM_METHOD_EXIT|[15]|com.salesforce.api.interop.apex.bcl.DateMethods.today()
+16:02:20.1 (5178580)|VARIABLE_ASSIGNMENT|[15]|this.Anticipated_Revenue_Start_Date__c|"2017-03-28T00:00:00.000Z"|0x1ad4d19a
+16:02:20.1 (5182602)|STATEMENT_EXECUTE|[16]
+16:02:20.1 (5225100)|VARIABLE_ASSIGNMENT|[16]|this.Apply_Default_Bonding__c|false|0x1ad4d19a
+16:02:20.1 (5228705)|STATEMENT_EXECUTE|[17]
+16:02:20.1 (5264065)|VARIABLE_ASSIGNMENT|[17]|this.Budget_Confirmed__c|false|0x1ad4d19a
+16:02:20.1 (5267150)|STATEMENT_EXECUTE|[18]
+16:02:20.1 (5321377)|VARIABLE_ASSIGNMENT|[18]|this.Business_Development_Manager__c|null|0x1ad4d19a
+16:02:20.1 (5324888)|STATEMENT_EXECUTE|[19]
+16:02:20.1 (5328435)|HEAP_ALLOCATE|[19]|Bytes:18
+16:02:20.1 (5335924)|HEAP_ALLOCATE|[19]|Bytes:4
+16:02:20.1 (5411460)|VARIABLE_ASSIGNMENT|[19]|this.Business_Group__c|"a0BO000000F4Di8MAF"|0x1ad4d19a
+16:02:20.1 (5415236)|STATEMENT_EXECUTE|[20]
+16:02:20.1 (5418272)|HEAP_ALLOCATE|[20]|Bytes:4
+16:02:20.1 (5460182)|VARIABLE_ASSIGNMENT|[20]|this.Client_Drivers__c|"test"|0x1ad4d19a
+16:02:20.1 (5463319)|STATEMENT_EXECUTE|[21]
+16:02:20.1 (5498446)|VARIABLE_ASSIGNMENT|[21]|this.Client_Probity__c|false|0x1ad4d19a
+16:02:20.1 (5501587)|STATEMENT_EXECUTE|[22]
+16:02:20.1 (5538231)|VARIABLE_ASSIGNMENT|[22]|this.Client_Relationship_Management__c|"test"|0x1ad4d19a
+16:02:20.1 (5541316)|STATEMENT_EXECUTE|[23]
+16:02:20.1 (5552958)|SYSTEM_METHOD_ENTRY|[23]|com.salesforce.api.interop.apex.bcl.DateMethods.today()
+16:02:20.1 (5579603)|HEAP_ALLOCATE|[23]|Bytes:4
+16:02:20.1 (5587813)|SYSTEM_METHOD_EXIT|[23]|com.salesforce.api.interop.apex.bcl.DateMethods.today()
+16:02:20.1 (5642600)|VARIABLE_ASSIGNMENT|[23]|this.CloseDate|"2017-03-28T00:00:00.000Z"|0x1ad4d19a
+16:02:20.1 (5646349)|STATEMENT_EXECUTE|[24]
+16:02:20.1 (5649778)|HEAP_ALLOCATE|[24]|Bytes:19
+16:02:20.1 (5693849)|VARIABLE_ASSIGNMENT|[24]|this.Contract_Risk__c|"Managing Contractor"|0x1ad4d19a
+16:02:20.1 (5697139)|STATEMENT_EXECUTE|[25]
+16:02:20.1 (5736727)|VARIABLE_ASSIGNMENT|[25]|this.Conversion_Budget_Comments__c|""|0x1ad4d19a
+16:02:20.1 (5739730)|STATEMENT_EXECUTE|[26]
+16:02:20.1 (5742608)|HEAP_ALLOCATE|[26]|Bytes:9
+16:02:20.1 (5781339)|VARIABLE_ASSIGNMENT|[26]|this.Country__c|"Australia"|0x1ad4d19a
+16:02:20.1 (5784298)|STATEMENT_EXECUTE|[28]
+16:02:20.1 (5794511)|HEAP_ALLOCATE|[28]|Bytes:28
+16:02:20.1 (5882477)|VARIABLE_ASSIGNMENT|[28]|this.Defect_Liability_Duration_Months__c|12|0x1ad4d19a
+16:02:20.1 (5888426)|STATEMENT_EXECUTE|[29]
+16:02:20.1 (5943256)|VARIABLE_ASSIGNMENT|[29]|this.Detailed_Description__c|"test"|0x1ad4d19a
+16:02:20.1 (5946867)|STATEMENT_EXECUTE|[30]
+16:02:20.1 (5986035)|VARIABLE_ASSIGNMENT|[30]|this.Discovery_Completed__c|false|0x1ad4d19a
+16:02:20.1 (5989090)|STATEMENT_EXECUTE|[31]
+16:02:20.1 (5992412)|HEAP_ALLOCATE|[31]|Bytes:18
+16:02:20.1 (6039062)|VARIABLE_ASSIGNMENT|[31]|this.District__c|"Northern Melbourne"|0x1ad4d19a
+16:02:20.1 (6042974)|STATEMENT_EXECUTE|[32]
+16:02:20.1 (6080744)|VARIABLE_ASSIGNMENT|[32]|this.D_I_Involvement__c|false|0x1ad4d19a
+16:02:20.1 (6083742)|STATEMENT_EXECUTE|[33]
+16:02:20.1 (6086805)|HEAP_ALLOCATE|[33]|Bytes:4
+16:02:20.1 (6126855)|VARIABLE_ASSIGNMENT|[33]|this.Executive_Summary__c|"Test"|0x1ad4d19a
+16:02:20.1 (6129803)|STATEMENT_EXECUTE|[34]
+16:02:20.1 (6132852)|HEAP_ALLOCATE|[34]|Bytes:11
+16:02:20.1 (6173734)|VARIABLE_ASSIGNMENT|[34]|this.Gate_Status__c|"Not Started"|0x1ad4d19a
+16:02:20.1 (6177092)|STATEMENT_EXECUTE|[35]
+16:02:20.1 (6214868)|VARIABLE_ASSIGNMENT|[35]|this.Independent_Credit_Check_Required__c|false|0x1ad4d19a
+16:02:20.1 (6217969)|STATEMENT_EXECUTE|[36]
+16:02:20.1 (6254854)|VARIABLE_ASSIGNMENT|[36]|this.Managing_Contractor_Time_Risk__c|false|0x1ad4d19a
+16:02:20.1 (6257778)|STATEMENT_EXECUTE|[37]
+16:02:20.1 (6260734)|HEAP_ALLOCATE|[37]|Bytes:12
+16:02:20.1 (6278565)|SYSTEM_METHOD_ENTRY|[37]|com.salesforce.api.interop.apex.bcl.DatetimeMethods.now()
+16:02:20.1 (6306547)|HEAP_ALLOCATE|[37]|Bytes:56
+16:02:20.1 (6314015)|SYSTEM_METHOD_EXIT|[37]|com.salesforce.api.interop.apex.bcl.DatetimeMethods.now()
+16:02:20.1 (6340695)|SYSTEM_METHOD_ENTRY|[37]|String.valueOf(Datetime)
+16:02:20.1 (6354731)|HEAP_ALLOCATE|[37]|Bytes:19
+16:02:20.1 (6366216)|SYSTEM_METHOD_EXIT|[37]|String.valueOf(Datetime)
+16:02:20.1 (6378936)|HEAP_ALLOCATE|[37]|Bytes:31
+16:02:20.1 (6443993)|VARIABLE_ASSIGNMENT|[37]|this.Name|"RL Test Opp 2017-03- (11 more) ..."|0x1ad4d19a
+16:02:20.1 (6449372)|STATEMENT_EXECUTE|[38]
+16:02:20.1 (6524253)|VARIABLE_ASSIGNMENT|[38]|this.Non_Binding_Proposal_Required__c|false|0x1ad4d19a
+16:02:20.1 (6529745)|STATEMENT_EXECUTE|[39]
+16:02:20.1 (6540456)|HEAP_ALLOCATE|[39]|Bytes:28
+16:02:20.1 (6591275)|VARIABLE_ASSIGNMENT|[39]|this.Probability|60|0x1ad4d19a
+16:02:20.1 (6594882)|STATEMENT_EXECUTE|[40]
+16:02:20.1 (6651237)|VARIABLE_ASSIGNMENT|[40]|this.Project_Development_Manager__c|null|0x1ad4d19a
+16:02:20.1 (6654799)|STATEMENT_EXECUTE|[41]
+16:02:20.1 (6663515)|HEAP_ALLOCATE|[41]|Bytes:28
+16:02:20.1 (6710306)|VARIABLE_ASSIGNMENT|[41]|this.Project_Duration_Months__c|24|0x1ad4d19a
+16:02:20.1 (6713665)|STATEMENT_EXECUTE|[42]
+16:02:20.1 (6730679)|HEAP_ALLOCATE|[42]|Bytes:28
+16:02:20.1 (6733922)|HEAP_ALLOCATE|[42]|Bytes:28
+16:02:20.1 (6780407)|VARIABLE_ASSIGNMENT|[42]|this.Project_Probability__c|10|0x1ad4d19a
+16:02:20.1 (6786876)|STATEMENT_EXECUTE|[43]
+16:02:20.1 (6798690)|HEAP_ALLOCATE|[43]|Bytes:28
+16:02:20.1 (6803037)|HEAP_ALLOCATE|[43]|Bytes:28
+16:02:20.1 (6850963)|VARIABLE_ASSIGNMENT|[43]|this.Proposed_Margin_on_Revenue__c|10|0x1ad4d19a
+16:02:20.1 (6854729)|STATEMENT_EXECUTE|[44]
+16:02:20.1 (6858219)|HEAP_ALLOCATE|[44]|Bytes:1
+16:02:20.1 (6901468)|VARIABLE_ASSIGNMENT|[44]|this.Prospect_Priority__c|"1"|0x1ad4d19a
+16:02:20.1 (6904691)|STATEMENT_EXECUTE|[45]
+16:02:20.1 (6907407)|HEAP_ALLOCATE|[45]|Bytes:8
+16:02:20.1 (6950764)|VARIABLE_ASSIGNMENT|[45]|this.Prospect_Status__c|"Prospect"|0x1ad4d19a
+16:02:20.1 (6953923)|STATEMENT_EXECUTE|[46]
+16:02:20.1 (6994534)|VARIABLE_ASSIGNMENT|[46]|this.Reason_For_Performing_Work__c|"test"|0x1ad4d19a
+16:02:20.1 (6997767)|STATEMENT_EXECUTE|[47]
+16:02:20.1 (7005564)|HEAP_ALLOCATE|[47]|Bytes:18
+16:02:20.1 (7014076)|HEAP_ALLOCATE|[47]|Bytes:4
+16:02:20.1 (7060762)|VARIABLE_ASSIGNMENT|[47]|this.RecordTypeId|"012O0000000DD8PIAW"|0x1ad4d19a
+16:02:20.1 (7064605)|STATEMENT_EXECUTE|[48]
+16:02:20.1 (7067626)|HEAP_ALLOCATE|[48]|Bytes:18
+16:02:20.1 (7084836)|HEAP_ALLOCATE|[48]|Bytes:4
+16:02:20.1 (7179847)|VARIABLE_ASSIGNMENT|[48]|this.Regional_Business__c|"a0BO000000F4DiNMAV"|0x1ad4d19a
+16:02:20.1 (7184326)|STATEMENT_EXECUTE|[49]
+16:02:20.1 (7187748)|HEAP_ALLOCATE|[49]|Bytes:3
+16:02:20.1 (7236285)|VARIABLE_ASSIGNMENT|[49]|this.StageName|"New"|0x1ad4d19a
+16:02:20.1 (7239675)|STATEMENT_EXECUTE|[50]
+16:02:20.1 (7242422)|HEAP_ALLOCATE|[50]|Bytes:8
+16:02:20.1 (7286844)|VARIABLE_ASSIGNMENT|[50]|this.State__c|"Victoria"|0x1ad4d19a
+16:02:20.1 (7290033)|STATEMENT_EXECUTE|[51]
+16:02:20.1 (7301576)|SYSTEM_METHOD_ENTRY|[51]|com.salesforce.api.interop.apex.bcl.DateMethods.today()
+16:02:20.1 (7328139)|HEAP_ALLOCATE|[51]|Bytes:4
+16:02:20.1 (7336201)|SYSTEM_METHOD_EXIT|[51]|com.salesforce.api.interop.apex.bcl.DateMethods.today()
+16:02:20.1 (7395324)|VARIABLE_ASSIGNMENT|[51]|this.Tender_Close_Date__c|"2017-03-28T00:00:00.000Z"|0x1ad4d19a
+16:02:20.1 (7399185)|STATEMENT_EXECUTE|[52]
+16:02:20.1 (7410186)|SYSTEM_METHOD_ENTRY|[52]|com.salesforce.api.interop.apex.bcl.DateMethods.today()
+16:02:20.1 (7434443)|HEAP_ALLOCATE|[52]|Bytes:4
+16:02:20.1 (7442027)|SYSTEM_METHOD_EXIT|[52]|com.salesforce.api.interop.apex.bcl.DateMethods.today()
+16:02:20.1 (7500291)|VARIABLE_ASSIGNMENT|[52]|this.Tender_Start_Date__c|"2017-03-28T00:00:00.000Z"|0x1ad4d19a
+16:02:20.1 (7504046)|STATEMENT_EXECUTE|[54]
+16:02:20.1 (7549205)|VARIABLE_ASSIGNMENT|[54]|this.Type|""|0x1ad4d19a
+16:02:20.1 (7552468)|STATEMENT_EXECUTE|[55]
+16:02:20.1 (7562090)|HEAP_ALLOCATE|[55]|Bytes:28
+16:02:20.1 (7626977)|VARIABLE_ASSIGNMENT|[55]|this.Value_of_Managed_Works__c|1000000|0x1ad4d19a
+16:02:20.1 (7632251)|STATEMENT_EXECUTE|[56]
+16:02:20.1 (7647681)|HEAP_ALLOCATE|[56]|Bytes:28
+16:02:20.1 (7653098)|HEAP_ALLOCATE|[56]|Bytes:28
+16:02:20.1 (7722059)|VARIABLE_ASSIGNMENT|[56]|this.Win_Probability__c|10|0x1ad4d19a
+16:02:20.1 (7726117)|STATEMENT_EXECUTE|[57]
+16:02:20.1 (7749475)|SYSTEM_METHOD_ENTRY|[57]|List<Opportunity>.add(Object)
+16:02:20.1 (7767305)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+16:02:20.1 (7777826)|SYSTEM_METHOD_EXIT|[57]|List<Opportunity>.add(Object)
+16:02:20.1 (7782569)|HEAP_ALLOCATE|[11]|Bytes:4
+16:02:20.1 (7789958)|VARIABLE_ASSIGNMENT|[11]|i|1
+16:02:20.1 (7795875)|STATEMENT_EXECUTE|[59]
+16:02:20.1 (7850612)|DML_BEGIN|[59]|Op:Insert|Type:Opportunity|Rows:1
+16:02:20.1 (7860096)|LIMIT_USAGE|[59]|DML|1|150
+16:02:20.1 (7868350)|LIMIT_USAGE|[59]|DML_ROWS|1|10000
+16:02:20.1 (7883439)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+16:02:20.1 (33156117)|DML_END|[59]
+16:02:20.1 (33277862)|VF_PAGE_MESSAGE|Contract Risk: bad value for restricted picklist field: Managing Contractor
+16:02:20.1 (33345221)|EXCEPTION_THROWN|[59]|System.DmlException: Insert failed. First exception on row 0; first error: INVALID_OR_NULL_FOR_RESTRICTED_PICKLIST, Contract Risk: bad value for restricted picklist field: Managing Contractor: [Contract_Risk__c]
+16:02:20.1 (33923989)|HEAP_ALLOCATE|[59]|Bytes:194
+16:02:20.1 (33965842)|METHOD_EXIT|[1]|01pO00000003YVv|Test_Data_Factory.createProspect(Integer)
+16:02:20.1 (33977038)|SYSTEM_MODE_EXIT|false
+16:02:20.1 (34079030)|FATAL_ERROR|System.DmlException: Insert failed. First exception on row 0; first error: INVALID_OR_NULL_FOR_RESTRICTED_PICKLIST, Contract Risk: bad value for restricted picklist field: Managing Contractor: [Contract_Risk__c]
+
+Class.Test_Data_Factory.createProspect: line 59, column 1
+AnonymousBlock: line 1, column 1
+AnonymousBlock: line 1, column 1
+16:02:20.34 (34096590)|CUMULATIVE_LIMIT_USAGE
+16:02:20.34 (34096590)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+16:02:20.34 (34096590)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+16:02:20.34 (34096590)|STATIC_VARIABLE_LIST|
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  String:_sfdcSuppressedCodeLocations:0
+  long:serialVersionUID:0
+  double:MAX_VALUE:0
+  Boolean:FALSE:0
+  long:serialVersionUID:0
+  double:MIN_VALUE:0
+  int:SIZE:0
+  double:NEGATIVE_INFINITY:0
+  int:MAX_VALUE:0
+  char[]:digits:0
+  double:NaN:0
+  Boolean:TRUE:0
+  int:MIN_VALUE:0
+  char[]:DigitOnes:0
+  int:BYTES:0
+  int:MIN_EXPONENT:0
+  int[]:sizeTable:0
+  int:MAX_EXPONENT:0
+  String:_sfdcAdditionalCodeLocations:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  double:MIN_NORMAL:0
+  int:BYTES:0
+
+16:02:20.34 (34096590)|CUMULATIVE_LIMIT_USAGE_END
+
+16:02:20.1 (34223674)|CODE_UNIT_FINISHED|execute_anonymous_apex
+16:02:20.1 (36884302)|EXECUTION_FINISHED
+16:02:20.38 (38055096)|CUMULATIVE_PROFILING_BEGIN
+16:02:20.38 (38055096)|CUMULATIVE_PROFILING|No profiling information for SOQL operations
+16:02:20.38 (38055096)|CUMULATIVE_PROFILING|No profiling information for SOSL operations
+16:02:20.38 (38055096)|CUMULATIVE_PROFILING|DML operations|
+Class.Test_Data_Factory.createProspect: line 59, column 1: Insert: List<Opportunity>: executed 1 time in 26 ms
+
+16:02:20.38 (38055096)|CUMULATIVE_PROFILING|method invocations|
+External entry point: public static void execute(): executed 1 time in 32 ms
+AnonymousBlock: line 1, column 1: public static List<Opportunity> createProspect(Integer): executed 1 time in 29 ms
+Class.Test_Data_Factory.createProspect: line 51, column 1: public static Date today(): executed 1 time in 0 ms
+Class.Test_Data_Factory.createProspect: line 52, column 1: public static Date today(): executed 1 time in 0 ms
+Class.Test_Data_Factory.createProspect: line 37, column 1: public static Datetime now(): executed 2 times in 0 ms
+Class.Test_Data_Factory.createProspect: line 23, column 1: public static Date today(): executed 1 time in 0 ms
+Class.Test_Data_Factory.createProspect: line 9, column 1: global public List<Opportunity>(): executed 1 time in 0 ms
+Class.Test_Data_Factory.createProspect: line 57, column 1: global public Object add(Object): executed 1 time in 0 ms
+Class.Test_Data_Factory.createProspect: line 15, column 1: public static Date today(): executed 1 time in 0 ms
+
+16:02:20.38 (38055096)|CUMULATIVE_PROFILING_END

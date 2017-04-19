@@ -3,8 +3,8 @@
         {
             "annotations": [],
             "location": {
-                "column": 9,
-                "line": 14
+                "column": 12,
+                "line": 22
             },
             "modifiers": [
                 "public"
@@ -24,8 +24,8 @@
         {
             "annotations": [],
             "location": {
-                "column": 23,
-                "line": 18
+                "column": 26,
+                "line": 26
             },
             "modifiers": [
                 "public",
@@ -41,7 +41,7 @@
             "annotations": [],
             "location": {
                 "column": 26,
-                "line": 22
+                "line": 30
             },
             "modifiers": [
                 "public",
@@ -56,8 +56,155 @@
         {
             "annotations": [],
             "location": {
+                "column": 18,
+                "line": 247
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "getApprovers",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 374
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "reevaluateOppTeamMembers",
+            "parameters": [
+                {
+                    "name": "Assigned_Approvers_ToInsert",
+                    "type": "LIST"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 404
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "addApprovers",
+            "parameters": [
+                {
+                    "name": "CEO_or_COO",
+                    "type": "String"
+                },
+                {
+                    "name": "gate",
+                    "type": "Gate__c"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 430
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "cloneAndAddApprovers",
+            "parameters": [
+                {
+                    "name": "gate",
+                    "type": "Gate__c"
+                },
+                {
+                    "name": "AA",
+                    "type": "Assigned_Approver__c"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 448
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "addPDMandBDM_GateShare",
+            "parameters": [
+                {
+                    "name": "gate",
+                    "type": "Gate__c"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 468
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "addToGateShareList",
+            "parameters": [
+                {
+                    "name": "gateID",
+                    "type": "Id"
+                },
+                {
+                    "name": "userID",
+                    "type": "Id"
+                },
+                {
+                    "name": "shareType",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 42
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "findGatesSetToInProgressOrRestarted",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
                 "column": 24,
-                "line": 31
+                "line": 65
             },
             "modifiers": [
                 "static",
@@ -73,37 +220,627 @@
             "references": [],
             "returnType": "void",
             "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 195
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "addToOppMap",
+            "parameters": [
+                {
+                    "name": "OppMapToBeUpdated",
+                    "type": "Map"
+                },
+                {
+                    "name": "oppStatus",
+                    "type": "String"
+                },
+                {
+                    "name": "G",
+                    "type": "Gate__c"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
         }
     ],
-    "name": "gateTriggerHandler",
+    "name": "GateTriggerHandler",
     "namespace": null,
     "parentClass": "TriggerHandler",
-    "properties": [],
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 39,
+                "line": 16
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "Assigned_Approvers_ToInsert",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 30,
+                "line": 17
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "GateShareList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 18
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "recursionBefore",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 19
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "recursionAfter",
+            "references": [],
+            "type": "Boolean"
+        }
+    ],
     "tableDeclaration": {
         "annotations": [],
         "location": {
             "column": 27,
-            "line": 13
+            "line": 15
         },
         "modifiers": [
             "public",
             "with sharing"
         ],
-        "name": "gateTriggerHandler",
+        "name": "GateTriggerHandler",
         "references": [],
-        "type": "gateTriggerHandler"
+        "type": "GateTriggerHandler"
     },
     "variables": [
         {
             "annotations": [],
             "location": {
+                "column": 17,
+                "line": 248
+            },
+            "modifiers": [],
+            "name": "Business_Unit_Ids",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 249
+            },
+            "modifiers": [],
+            "name": "gateToOppfields",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 252
+            },
+            "modifiers": [],
+            "name": "gate",
+            "references": [],
+            "type": "Gate__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 45,
+                "line": 263
+            },
+            "modifiers": [],
+            "name": "BusinessUnitToApproverMap",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 266
+            },
+            "modifiers": [],
+            "name": "gate",
+            "references": [],
+            "type": "Gate__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 267
+            },
+            "modifiers": [],
+            "name": "gateWithOppFields",
+            "references": [],
+            "type": "Gate__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 268
+            },
+            "modifiers": [],
+            "name": "theBusinessUnit",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 46,
+                "line": 293
+            },
+            "modifiers": [],
+            "name": "AA",
+            "references": [],
+            "type": "Assigned_Approver__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 46,
+                "line": 307
+            },
+            "modifiers": [],
+            "name": "AA",
+            "references": [],
+            "type": "Assigned_Approver__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 70,
+                "line": 374
+            },
+            "modifiers": [],
+            "name": "Assigned_Approvers_ToInsert",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 376
+            },
+            "modifiers": [],
+            "name": "OppIDs",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 34,
+                "line": 377
+            },
+            "modifiers": [],
+            "name": "AA",
+            "references": [],
+            "type": "Assigned_Approver__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 387
+            },
+            "modifiers": [],
+            "name": "oppTeamToInsert",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 34,
+                "line": 388
+            },
+            "modifiers": [],
+            "name": "AA",
+            "references": [],
+            "type": "Assigned_Approver__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 35,
+                "line": 389
+            },
+            "modifiers": [],
+            "name": "OTM",
+            "references": [],
+            "type": "OpportunityTeamMember"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 38,
+                "line": 404
+            },
+            "modifiers": [],
+            "name": "CEO_or_COO",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 58,
+                "line": 404
+            },
+            "modifiers": [],
+            "name": "gate",
+            "references": [],
+            "type": "Gate__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 30,
+                "line": 405
+            },
+            "modifiers": [],
+            "name": "AA",
+            "references": [],
+            "type": "Assigned_Approver__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 47,
+                "line": 430
+            },
+            "modifiers": [],
+            "name": "gate",
+            "references": [],
+            "type": "Gate__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 74,
+                "line": 430
+            },
+            "modifiers": [],
+            "name": "AA",
+            "references": [],
+            "type": "Assigned_Approver__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 30,
+                "line": 432
+            },
+            "modifiers": [],
+            "name": "AAClone",
+            "references": [],
+            "type": "Assigned_Approver__c"
+        },
+        {
+            "annotations": [],
+            "location": {
                 "column": 49,
-                "line": 31
+                "line": 448
+            },
+            "modifiers": [],
+            "name": "gate",
+            "references": [],
+            "type": "Gate__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 40,
+                "line": 468
+            },
+            "modifiers": [],
+            "name": "gateID",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 51,
+                "line": 468
+            },
+            "modifiers": [],
+            "name": "userID",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 66,
+                "line": 468
+            },
+            "modifiers": [],
+            "name": "shareType",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 473
+            },
+            "modifiers": [],
+            "name": "gs",
+            "references": [],
+            "type": "Gate__Share"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 43
+            },
+            "modifiers": [],
+            "name": "gatesInProgress",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 44
+            },
+            "modifiers": [],
+            "name": "G",
+            "references": [],
+            "type": "Gate__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 45
+            },
+            "modifiers": [],
+            "name": "oldGate",
+            "references": [],
+            "type": "Gate__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 49,
+                "line": 65
             },
             "modifiers": [],
             "name": "gateIds",
             "references": [],
             "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 40,
+                "line": 67
+            },
+            "modifiers": [],
+            "name": "approversToUpdate",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 68
+            },
+            "modifiers": [],
+            "name": "gatesToUpdate",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 34,
+                "line": 69
+            },
+            "modifiers": [],
+            "name": "OppMapToBeUpdated",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 74
+            },
+            "modifiers": [],
+            "name": "G",
+            "references": [],
+            "type": "Gate__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 44,
+                "line": 76
+            },
+            "modifiers": [],
+            "name": "AAs",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 80
+            },
+            "modifiers": [],
+            "name": "updateGate",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 81
+            },
+            "modifiers": [],
+            "name": "updateOpp",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 82
+            },
+            "modifiers": [],
+            "name": "gateStatus",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 83
+            },
+            "modifiers": [],
+            "name": "oppStatus",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 46,
+                "line": 93
+            },
+            "modifiers": [],
+            "name": "AA",
+            "references": [],
+            "type": "Assigned_Approver__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 50,
+                "line": 143
+            },
+            "modifiers": [],
+            "name": "AA",
+            "references": [],
+            "type": "Assigned_Approver__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 58,
+                "line": 195
+            },
+            "modifiers": [],
+            "name": "OppMapToBeUpdated",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 84,
+                "line": 195
+            },
+            "modifiers": [],
+            "name": "oppStatus",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 103,
+                "line": 195
+            },
+            "modifiers": [],
+            "name": "G",
+            "references": [],
+            "type": "Gate__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 197
+            },
+            "modifiers": [],
+            "name": "oppToBeUpdated",
+            "references": [],
+            "type": "Opportunity"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 201
+            },
+            "modifiers": [],
+            "name": "statusField",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 221
+            },
+            "modifiers": [],
+            "name": "Opp",
+            "references": [],
+            "type": "Opportunity"
         }
     ]
 }

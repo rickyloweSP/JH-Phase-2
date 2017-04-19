@@ -1,0 +1,253 @@
+39.0 APEX_CODE,FINEST;APEX_PROFILING,FINEST;CALLOUT,NONE;DB,FINEST;SYSTEM,FINE;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,FINER
+15:00:04.3 (3312886)|USER_INFO|[EXTERNAL]|00528000006B07F|dev@systempartners.com.prod.pcphase2|Australian Eastern Standard Time|GMT+10:00
+15:00:04.3 (3333996)|EXECUTION_STARTED
+15:00:04.3 (3336887)|CODE_UNIT_STARTED|[EXTERNAL]|aura
+15:00:04.3 (19111690)|HEAP_ALLOCATE|[72]|Bytes:3
+15:00:04.3 (19162298)|HEAP_ALLOCATE|[77]|Bytes:152
+15:00:04.3 (19180478)|HEAP_ALLOCATE|[342]|Bytes:408
+15:00:04.3 (19207841)|HEAP_ALLOCATE|[355]|Bytes:408
+15:00:04.3 (19233366)|HEAP_ALLOCATE|[467]|Bytes:48
+15:00:04.3 (19262860)|HEAP_ALLOCATE|[139]|Bytes:6
+15:00:04.3 (19295855)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+15:00:04.3 (19311252)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+15:00:04.3 (21016064)|CODE_UNIT_STARTED|[EXTERNAL]|01pO00000003MVy|ApprovalController.getOpportunityRecord
+15:00:04.3 (21121339)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:11
+15:00:04.3 (21126542)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:27
+15:00:04.3 (21135521)|METHOD_ENTRY|[1]|01pO00000003MVy|ApprovalController.ApprovalController()
+15:00:04.3 (21139021)|STATEMENT_EXECUTE|[1]
+15:00:04.3 (21144888)|STATEMENT_EXECUTE|[1]
+15:00:04.3 (21149722)|METHOD_EXIT|[1]|ApprovalController
+15:00:04.3 (21153694)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+15:00:04.3 (21167410)|SYSTEM_MODE_ENTER|false
+15:00:04.3 (21174937)|VARIABLE_SCOPE_BEGIN|[15]|opportunityId|String|false|false
+15:00:04.3 (21196439)|VARIABLE_ASSIGNMENT|[15]|opportunityId|"006O0000009HErlIAG"
+15:00:04.3 (21205037)|STATEMENT_EXECUTE|[15]
+15:00:04.3 (21206652)|STATEMENT_EXECUTE|[18]
+15:00:04.3 (21209857)|HEAP_ALLOCATE|[18]|Bytes:589
+15:00:04.3 (21222616)|HEAP_ALLOCATE|[18]|Bytes:4
+15:00:04.3 (21236318)|HEAP_ALLOCATE|[18]|Bytes:7
+15:00:04.3 (21283340)|HEAP_ALLOCATE|[50]|Bytes:5
+15:00:04.3 (21307696)|HEAP_ALLOCATE|[56]|Bytes:5
+15:00:04.3 (21315661)|HEAP_ALLOCATE|[64]|Bytes:7
+15:00:04.3 (22258625)|SOQL_EXECUTE_BEGIN|[18]|Aggregations:0|SELECT Id, name, Gate_Status__c, TSF_Gate_Status__c, CRA_Gate_Status__c, StageName, Competitor_Analysis_General_Comments__c, Are_there_any_critical_risks__c, Has_CRA_changed_since_last_approval__c, Has_TSF_changed_since_last_approval__c, Apply_Default_Bonding__c, Conversion_Budget_Comments__c, Is_Gate_1_To_3__c, Is_Gate_4_To_5__c, Net_Budget_EOI_PQ__c, Net_Budget_Post_Tender__c, Net_Budget_Tender__c, Net_Budget_Amount__c, Total_Budget_EOI_PQ__c, Total_Budget_Tender__c, Total_Budget_AUD__c, Total_Budget_Post_Tender__c, JH_Bid_Cost_of_JH_Revenue__c FROM Opportunity WHERE Id = :tmpVar1
+15:00:04.3 (22271668)|LIMIT_USAGE|[18]|SOQL|1|100
+15:00:04.3 (22281300)|LIMIT_USAGE|[18]|AGGS|0|300
+15:00:04.3 (66360047)|SOQL_EXECUTE_END|[18]|Rows:1
+15:00:04.3 (66377507)|LIMIT_USAGE|[18]|SOQL_ROWS|1|50000
+15:00:04.3 (66405282)|HEAP_ALLOCATE|[18]|Bytes:8
+15:00:04.3 (66427906)|HEAP_ALLOCATE|[18]|Bytes:972
+15:00:04.3 (66583459)|HEAP_ALLOCATE|[18]|Bytes:8
+15:00:04.3 (66606828)|VARIABLE_SCOPE_BEGIN|[18]|allOpps|List<Opportunity>|true|false
+15:00:04.3 (66663674)|VARIABLE_ASSIGNMENT|[18]|allOpps|[{"Id":"006O0000009HErlIAG","Name":"Lismore Base Hospita (15 more) ...","Gate_Status__c":"Not Started","TSF_Gate_Status__c":"Not Applicable","CRA_Gate_Status__c":"Not Applicable","StageName":"Gate 3","Competitor_Analysis_ (19 more) ...":"Competitor analysis  (16 more) ...","Apply_Default_Bondin (4 more) ...":false,"Conversion_Budget_Co (9 more) ...":"Conversion Budget No (3 more) ...","Is_Gate_1_To_3__c":true,"Is_Gate_4_To_5__c":false,"Net_Budget_EOI_PQ__c":449000,"Net_Budget_Post_Tend (5 more) ...":449000,"Net_Budget_Tender__c":449000,"Net_Budget_Amount__c":1347000,"Total_Budget_EOI_PQ_ (2 more) ...":450000,"Total_Budget_Tender_ (2 more) ...":450000,"Total_Budget_AUD__c":1350000,"Total_Budget_Post_Te (7 more) ...":450000,"JH_Bid_Cost_of_JH_Re (8 more) ...":18.0}]|0x1e5336df
+15:00:04.3 (66673066)|STATEMENT_EXECUTE|[38]
+15:00:04.3 (66690488)|SYSTEM_MODE_EXIT|false
+15:00:04.66 (66721535)|CUMULATIVE_LIMIT_USAGE
+15:00:04.66 (66721535)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+15:00:04.66 (66721535)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+15:00:04.66 (66721535)|STATIC_VARIABLE_LIST|
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  double:MAX_VALUE:0
+  Boolean:FALSE:0
+  long:serialVersionUID:0
+  double:MIN_VALUE:0
+  int:SIZE:0
+  double:NEGATIVE_INFINITY:0
+  int:MAX_VALUE:0
+  String:_sfdcSuppressedCodeLocations:0
+  char[]:digits:0
+  double:NaN:0
+  Boolean:TRUE:0
+  int:MIN_VALUE:0
+  char[]:DigitOnes:0
+  int:BYTES:0
+  int:MIN_EXPONENT:0
+  int[]:sizeTable:0
+  int:MAX_EXPONENT:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MIN_NORMAL:0
+  int:BYTES:0
+
+15:00:04.66 (66721535)|CUMULATIVE_LIMIT_USAGE_END
+
+15:00:04.3 (66861042)|CODE_UNIT_FINISHED|ApprovalController.getOpportunityRecord
+15:00:04.3 (284343199)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+15:00:04.3 (284365928)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+15:00:04.3 (285781284)|CODE_UNIT_STARTED|[EXTERNAL]|01pO00000003MVy|ApprovalController.getOpportunityRecord
+15:00:04.3 (285823562)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+15:00:04.3 (285834992)|SYSTEM_MODE_ENTER|false
+15:00:04.3 (285843606)|VARIABLE_SCOPE_BEGIN|[15]|opportunityId|String|false|false
+15:00:04.3 (285851858)|VARIABLE_ASSIGNMENT|[15]|opportunityId|"006O0000009HErlIAG"
+15:00:04.3 (285858635)|STATEMENT_EXECUTE|[15]
+15:00:04.3 (285860302)|STATEMENT_EXECUTE|[18]
+15:00:04.3 (285870393)|HEAP_ALLOCATE|[18]|Bytes:4
+15:00:04.3 (286645418)|SOQL_EXECUTE_BEGIN|[18]|Aggregations:0|SELECT Id, name, Gate_Status__c, TSF_Gate_Status__c, CRA_Gate_Status__c, StageName, Competitor_Analysis_General_Comments__c, Are_there_any_critical_risks__c, Has_CRA_changed_since_last_approval__c, Has_TSF_changed_since_last_approval__c, Apply_Default_Bonding__c, Conversion_Budget_Comments__c, Is_Gate_1_To_3__c, Is_Gate_4_To_5__c, Net_Budget_EOI_PQ__c, Net_Budget_Post_Tender__c, Net_Budget_Tender__c, Net_Budget_Amount__c, Total_Budget_EOI_PQ__c, Total_Budget_Tender__c, Total_Budget_AUD__c, Total_Budget_Post_Tender__c, JH_Bid_Cost_of_JH_Revenue__c FROM Opportunity WHERE Id = :tmpVar1
+15:00:04.3 (286673784)|LIMIT_USAGE|[18]|SOQL|2|100
+15:00:04.3 (286693982)|LIMIT_USAGE|[18]|AGGS|0|300
+15:00:04.3 (306899254)|SOQL_EXECUTE_END|[18]|Rows:1
+15:00:04.3 (306913703)|LIMIT_USAGE|[18]|SOQL_ROWS|2|50000
+15:00:04.3 (306936108)|HEAP_ALLOCATE|[18]|Bytes:8
+15:00:04.3 (306952420)|HEAP_ALLOCATE|[18]|Bytes:972
+15:00:04.3 (306983950)|HEAP_ALLOCATE|[18]|Bytes:8
+15:00:04.3 (307004936)|VARIABLE_SCOPE_BEGIN|[18]|allOpps|List<Opportunity>|true|false
+15:00:04.3 (307060349)|VARIABLE_ASSIGNMENT|[18]|allOpps|[{"Id":"006O0000009HErlIAG","Name":"Lismore Base Hospita (15 more) ...","Gate_Status__c":"Not Started","TSF_Gate_Status__c":"Not Applicable","CRA_Gate_Status__c":"Not Applicable","StageName":"Gate 3","Competitor_Analysis_ (19 more) ...":"Competitor analysis  (16 more) ...","Apply_Default_Bondin (4 more) ...":false,"Conversion_Budget_Co (9 more) ...":"Conversion Budget No (3 more) ...","Is_Gate_1_To_3__c":true,"Is_Gate_4_To_5__c":false,"Net_Budget_EOI_PQ__c":449000,"Net_Budget_Post_Tend (5 more) ...":449000,"Net_Budget_Tender__c":449000,"Net_Budget_Amount__c":1347000,"Total_Budget_EOI_PQ_ (2 more) ...":450000,"Total_Budget_Tender_ (2 more) ...":450000,"Total_Budget_AUD__c":1350000,"Total_Budget_Post_Te (7 more) ...":450000,"JH_Bid_Cost_of_JH_Re (8 more) ...":18.0}]|0x64d2e583
+15:00:04.3 (307069755)|STATEMENT_EXECUTE|[38]
+15:00:04.3 (307086660)|SYSTEM_MODE_EXIT|false
+15:00:04.307 (307109906)|CUMULATIVE_LIMIT_USAGE
+15:00:04.307 (307109906)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+15:00:04.307 (307109906)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+15:00:04.307 (307109906)|STATIC_VARIABLE_LIST|
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  double:MAX_VALUE:0
+  Boolean:FALSE:0
+  long:serialVersionUID:0
+  double:MIN_VALUE:0
+  int:SIZE:0
+  double:NEGATIVE_INFINITY:0
+  int:MAX_VALUE:0
+  String:_sfdcSuppressedCodeLocations:0
+  char[]:digits:0
+  double:NaN:0
+  Boolean:TRUE:0
+  int:MIN_VALUE:0
+  char[]:DigitOnes:0
+  int:BYTES:0
+  int:MIN_EXPONENT:0
+  int[]:sizeTable:0
+  int:MAX_EXPONENT:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MIN_NORMAL:0
+  int:BYTES:0
+
+15:00:04.307 (307109906)|CUMULATIVE_LIMIT_USAGE_END
+
+15:00:04.3 (307225445)|CODE_UNIT_FINISHED|ApprovalController.getOpportunityRecord
+15:00:04.3 (340817285)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+15:00:04.3 (340846278)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+15:00:04.3 (342549984)|CODE_UNIT_STARTED|[EXTERNAL]|01pO00000003MVy|ApprovalController.getOpportunityRecord
+15:00:04.3 (342628760)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+15:00:04.3 (342646154)|SYSTEM_MODE_ENTER|false
+15:00:04.3 (342656853)|VARIABLE_SCOPE_BEGIN|[15]|opportunityId|String|false|false
+15:00:04.3 (342667535)|VARIABLE_ASSIGNMENT|[15]|opportunityId|"006O0000009HErlIAG"
+15:00:04.3 (342680103)|STATEMENT_EXECUTE|[15]
+15:00:04.3 (342683053)|STATEMENT_EXECUTE|[18]
+15:00:04.3 (342692897)|HEAP_ALLOCATE|[18]|Bytes:4
+15:00:04.3 (343322409)|SOQL_EXECUTE_BEGIN|[18]|Aggregations:0|SELECT Id, name, Gate_Status__c, TSF_Gate_Status__c, CRA_Gate_Status__c, StageName, Competitor_Analysis_General_Comments__c, Are_there_any_critical_risks__c, Has_CRA_changed_since_last_approval__c, Has_TSF_changed_since_last_approval__c, Apply_Default_Bonding__c, Conversion_Budget_Comments__c, Is_Gate_1_To_3__c, Is_Gate_4_To_5__c, Net_Budget_EOI_PQ__c, Net_Budget_Post_Tender__c, Net_Budget_Tender__c, Net_Budget_Amount__c, Total_Budget_EOI_PQ__c, Total_Budget_Tender__c, Total_Budget_AUD__c, Total_Budget_Post_Tender__c, JH_Bid_Cost_of_JH_Revenue__c FROM Opportunity WHERE Id = :tmpVar1
+15:00:04.3 (343336705)|LIMIT_USAGE|[18]|SOQL|3|100
+15:00:04.3 (343351499)|LIMIT_USAGE|[18]|AGGS|0|300
+15:00:04.3 (356342815)|SOQL_EXECUTE_END|[18]|Rows:1
+15:00:04.3 (356355766)|LIMIT_USAGE|[18]|SOQL_ROWS|3|50000
+15:00:04.3 (356376119)|HEAP_ALLOCATE|[18]|Bytes:8
+15:00:04.3 (356391181)|HEAP_ALLOCATE|[18]|Bytes:972
+15:00:04.3 (356418087)|HEAP_ALLOCATE|[18]|Bytes:8
+15:00:04.3 (356432593)|VARIABLE_SCOPE_BEGIN|[18]|allOpps|List<Opportunity>|true|false
+15:00:04.3 (356484328)|VARIABLE_ASSIGNMENT|[18]|allOpps|[{"Id":"006O0000009HErlIAG","Name":"Lismore Base Hospita (15 more) ...","Gate_Status__c":"Not Started","TSF_Gate_Status__c":"Not Applicable","CRA_Gate_Status__c":"Not Applicable","StageName":"Gate 3","Competitor_Analysis_ (19 more) ...":"Competitor analysis  (16 more) ...","Apply_Default_Bondin (4 more) ...":false,"Conversion_Budget_Co (9 more) ...":"Conversion Budget No (3 more) ...","Is_Gate_1_To_3__c":true,"Is_Gate_4_To_5__c":false,"Net_Budget_EOI_PQ__c":449000,"Net_Budget_Post_Tend (5 more) ...":449000,"Net_Budget_Tender__c":449000,"Net_Budget_Amount__c":1347000,"Total_Budget_EOI_PQ_ (2 more) ...":450000,"Total_Budget_Tender_ (2 more) ...":450000,"Total_Budget_AUD__c":1350000,"Total_Budget_Post_Te (7 more) ...":450000,"JH_Bid_Cost_of_JH_Re (8 more) ...":18.0}]|0x5818d2f8
+15:00:04.3 (356493998)|STATEMENT_EXECUTE|[38]
+15:00:04.3 (356506221)|SYSTEM_MODE_EXIT|false
+15:00:04.356 (356531598)|CUMULATIVE_LIMIT_USAGE
+15:00:04.356 (356531598)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 3 out of 100
+  Number of query rows: 3 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+15:00:04.356 (356531598)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+15:00:04.356 (356531598)|STATIC_VARIABLE_LIST|
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  double:MAX_VALUE:0
+  Boolean:FALSE:0
+  long:serialVersionUID:0
+  double:MIN_VALUE:0
+  int:SIZE:0
+  double:NEGATIVE_INFINITY:0
+  int:MAX_VALUE:0
+  String:_sfdcSuppressedCodeLocations:0
+  char[]:digits:0
+  double:NaN:0
+  Boolean:TRUE:0
+  int:MIN_VALUE:0
+  char[]:DigitOnes:0
+  int:BYTES:0
+  int:MIN_EXPONENT:0
+  int[]:sizeTable:0
+  int:MAX_EXPONENT:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MIN_NORMAL:0
+  int:BYTES:0
+
+15:00:04.356 (356531598)|CUMULATIVE_LIMIT_USAGE_END
+
+15:00:04.3 (356664196)|CODE_UNIT_FINISHED|ApprovalController.getOpportunityRecord
+15:00:04.536 (536897141)|CUMULATIVE_PROFILING_BEGIN
+15:00:04.536 (536897141)|CUMULATIVE_PROFILING|SOQL operations|
+Class.ApprovalController.getOpportunityRecord: line 18, column 1: [SELECT   Id,name,
+                                                           			Gate_Status__c,
+                                                           			TSF_Gate_Status__c,
+                                                           			CRA_Gate_Status__c,
+                                                           			StageName,
+                                    								Competitor_Analysis_General_Comments__c,
+                                    								Are_there_any_critical_risks__c,
+                                    								Has_CRA_changed_since_last_approval__c,
+                                    								Has_TSF_changed_since_last_approval__c,
+                                    								Apply_Default_Bonding__c,
+                                    								Conversion_Budget_Comments__c,
+                                    								Is_Gate_1_To_3__c, Is_Gate_4_To_5__c,
+                                    								Net_Budget_EOI_PQ__c, Net_Budget_Post_Tender__c, 
+                                    								Net_Budget_Tender__c, Net_Budget_Amount__c,
+                                    								Total_Budget_EOI_PQ__c, Total_Budget_Tender__c, 
+                                    								Total_Budget_AUD__c, Total_Budget_Post_Tender__c, 
+                                    								JH_Bid_Cost_of_JH_Revenue__c
+                                 							FROM     Opportunity
+                                 							WHERE    Id = :opportunityId]: executed 3 times in 80 ms
+
+15:00:04.536 (536897141)|CUMULATIVE_PROFILING|No profiling information for SOSL operations
+15:00:04.536 (536897141)|CUMULATIVE_PROFILING|No profiling information for DML operations
+15:00:04.536 (536897141)|CUMULATIVE_PROFILING|method invocations|
+External entry point: public static List<Opportunity> getOpportunityRecord(String): executed 1 time in 14 ms
+
+15:00:04.536 (536897141)|CUMULATIVE_PROFILING_END

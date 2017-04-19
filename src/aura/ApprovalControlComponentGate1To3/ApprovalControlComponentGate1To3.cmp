@@ -1,0 +1,114 @@
+<aura:component controller="ApprovalController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName" access="global">
+<aura:attribute name="Opp" type="Opportunity" />
+<aura:attribute name="IsGate1To3" type="boolean" default="true"/>
+<aura:attribute name="IsGate4To5" type="boolean" default="true"/>
+<aura:attribute name="DisableInitiateApproval" type="boolean" default="true"/>
+<aura:attribute name="DisableSubmitForApproval" type="boolean" default="true"/>
+<aura:attribute name="DisableViewApprovers" type="boolean" default="false"/>
+<aura:attribute name="DisableInitiateApprovalCRA" type="boolean" default="true"/>
+<aura:attribute name="DisableSubmitForApprovalCRA" type="boolean" default="true"/>
+<aura:attribute name="DisableViewApproversCRA" type="boolean" default="false"/>
+<aura:attribute name="DisableInitiateApprovalTSF" type="boolean" default="true"/>
+<aura:attribute name="DisableSubmitForApprovalTSF" type="boolean" default="true"/>
+<aura:attribute name="DisableViewApproversTSF" type="boolean" default="false"/>
+<aura:attribute name="recordId" type="Id" required="true" access="PUBLIC" default="" description="The current record Id to display" />
+<aura:attribute name="YesNoOptions" type="String[]" default=",Yes,No"/>
+<aura:attribute name="buttonInActive" type="string" default="uiButton"/>
+<aura:attribute name="buttonStyleSubmitApproval" type="string" default="uiButton"/>
+<aura:attribute name="buttonStyleInitiateApproval" type="string" default="uiButton"/>
+<aura:attribute name="buttonStyleViewApprovers" type="string" default="uiButton"/>
+<aura:attribute name="buttonStyleSubmitApprovalCRA" type="string" default="uiButton"/>
+<aura:attribute name="buttonStyleInitiateApprovalCRA" type="string" default="uiButton"/>
+<aura:attribute name="buttonStyleViewApproversCRA" type="string" default="uiButton"/>
+<aura:attribute name="buttonStyleSubmitApprovalTSF" type="string" default="uiButton"/>
+<aura:attribute name="buttonStyleInitiateApprovalTSF" type="string" default="uiButton"/>
+<aura:attribute name="buttonStyleViewApproversTSF" type="string" default="uiButton"/>
+<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+<div class="slds-grid">
+
+  <aura:if isTrue="{!v.Opp.Is_Gate_1_To_3__c}">
+    <div style="display:block; width:100%; border-style: solid; border-radius: 10px; border-color: #EE3124; height: 110px;">
+      <div style="width:100%;margin-left:30%;float: left;"><b>
+          <ui:outputTextArea value="{!v.Opp.StageName}" class="slds-text-heading--medium"></ui:outputTextArea>&nbsp;&nbsp;&nbsp;
+          <ui:outputTextArea value="Approval Status :" class="slds-text-heading--medium"></ui:outputTextArea>&nbsp;
+          <ui:outputTextArea value="{!v.Opp.Gate_Status__c}" class="slds-text-heading--medium"></ui:outputTextArea></b>
+      </div><br/><br/>
+      <div style="width:100%;margin-left:30%;float: left;">
+          <div class="slds-p-horizontal--large" style="display: block;float: left;"><ui:button class="{!v.buttonStyleInitiateApproval}"  aura:id="InitiateApproval" label="Initiate Approval Process" press="{!c.initiateOrSubmitApproval}" disabled="{!v.DisableInitiateApproval}"  /> </div>&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="slds-p-horizontal--large" style="display: block;float: left;"><ui:button class="{!v.buttonStyleViewApprovers}" aura:id="ViewApprovers" label="View Approvers" press="{!c.viewApprovers}" disabled="{!v.DisableViewApprovers}"/> </div>&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="slds-p-horizontal--large" style="display: block;float: left;"><ui:button class="{!v.buttonStyleSubmitApproval}"  aura:id="SubmitApproval"  label="Submit For Approval" press="{!c.initiateOrSubmitApproval}" disabled="{!v.DisableSubmitForApproval}"/> </div>
+          <div><br/></div><div><br/></div>
+      </div>
+    </div>
+
+  </aura:if>
+    
+
+  <aura:if isTrue="{!v.Opp.Is_Gate_4_To_5__c}">
+    <div style="display:block; width:100%; border-style: solid; border-radius: 10px; border-color: #EE3124; height: 250px;">
+      <div style="width:100%;margin-left:30%;float: left;"><b>
+          <ui:outputTextArea value="{!v.Opp.StageName}" class="slds-text-heading--medium"></ui:outputTextArea>&nbsp;
+          <ui:outputTextArea value="CRA Approval Status :" class="slds-text-heading--medium"></ui:outputTextArea>&nbsp;
+          <ui:outputTextArea value="{!v.Opp.CRA_Gate_Status__c}" class="slds-text-heading--medium"></ui:outputTextArea></b><br/>
+      </div>
+      <div><br/></div>
+      <div class="slds-grid" style="width:100%;margin-left:30%;float: left;">
+          <div> Are there any CRA Critical Risks ?&nbsp;&nbsp;</div>
+          <div>
+           <ui:inputSelect aura:id="CRACriticalRisks" value="{!v.Opp.Are_there_any_critical_risks__c}">
+                              <aura:iteration items="{!v.YesNoOptions}" var="level">
+                                 <ui:inputSelectOption text="{!level}" label="{!level}"/>
+                              </aura:iteration>
+           </ui:inputSelect>&nbsp;&nbsp;
+          </div>
+          <div> &nbsp;&nbsp;Has the CRA Changed since the last approval ?&nbsp;&nbsp;</div>
+          <div>
+           <ui:inputSelect aura:id="CRAChanged" value="{!v.Opp.Has_CRA_changed_since_last_approval__c}">
+                              <aura:iteration items="{!v.YesNoOptions}" var="level">
+                                 <ui:inputSelectOption text="{!level}" label="{!level}"/>
+                              </aura:iteration>
+           </ui:inputSelect>&nbsp;&nbsp;
+          </div>
+           
+      </div>
+      <div style="width:100%;margin-left:30%;float: left;">
+              <div class="slds-p-horizontal--large" style="display: block;float: left;"><ui:button aura:id="InitiateApprovalCRA" class="{!v.buttonStyleInitiateApprovalCRA}" label="Initiate CRA Approval Process" press="{!c.initiateOrSubmitApprovalCRA}" disabled="{!v.DisableInitiateApprovalCRA}"/> </div>&nbsp;&nbsp;
+              <div style="display: block;float: left;"><ui:button class="{!v.buttonStyleViewApproversCRA}" aura:id="ViewApproversCRA" label="View CRA Approvers" press="{!c.viewApprovers}" disabled="{!v.DisableViewApproversCRA}"/> </div>&nbsp;&nbsp;
+              <div class="slds-p-horizontal--large" style="display: block;float: left;"><ui:button aura:id="SubmitApprovalCRA" class="{!v.buttonStyleSubmitApprovalCRA}" label="Submit For CRA Approval" press="{!c.initiateOrSubmitApprovalCRA}" disabled="{!v.DisableSubmitForApprovalCRA}"/> </div><br/><br/>&nbsp;&nbsp;
+      </div>  
+          
+      <div style="width:100%;margin-left:30%;float: left;"><b>
+          <ui:outputTextArea value="{!v.Opp.StageName}" class="slds-text-heading--medium"></ui:outputTextArea>&nbsp;
+          <ui:outputTextArea value="TSF Approval Status :" class="slds-text-heading--medium"></ui:outputTextArea>&nbsp;
+          <ui:outputTextArea value="{!v.Opp.TSF_Gate_Status__c}" class="slds-text-heading--medium"></ui:outputTextArea></b><br/>
+      </div>
+	   <div class="slds-grid" style="width:100%;margin-left:30%;float: left;">
+          
+          <div> Has the TSF Changed since the last approval ?&nbsp;&nbsp;</div>
+          <div>
+           <ui:inputSelect aura:id="TSFChanged" value="{!v.Opp.Has_TSF_changed_since_last_approval__c}">
+                              <aura:iteration items="{!v.YesNoOptions}" var="level">
+                                 <ui:inputSelectOption text="{!level}" label="{!level}"/>
+                              </aura:iteration>
+           </ui:inputSelect>&nbsp;&nbsp;
+          </div>
+           
+      </div>
+      <div style="width:100%;margin-left:30%;float: left;">
+          <div class="slds-p-horizontal--large" style="display: block;float: left;"><ui:button class="{!v.buttonStyleInitiateApprovalTSF}" aura:id="InitiateApprovalTSF" label="Initiate TSF Approval Process" press="{!c.initiateOrSubmitApprovalTSF}" disabled="{!v.DisableInitiateApprovalTSF}"/> </div>&nbsp;&nbsp;&nbsp;&nbsp;
+          <div style="display: block;float: left;"><ui:button class="{!v.buttonStyleViewApproversTSF}" aura:id="ViewApproversTSF" label="View TSF Approvers" press="{!c.viewApprovers}" disabled="{!v.DisableViewApproversTSF}"/> </div>&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="slds-p-horizontal--large" style="display: block;float: left;"><ui:button aura:id="SubmitApprovalTSF" label="Submit For TSF Approval" class="{!v.buttonStyleSubmitApprovalTSF}" press="{!c.initiateOrSubmitApprovalTSF}" disabled="{!v.DisableSubmitForApprovalTSF}"/> </div>&nbsp;&nbsp;&nbsp;&nbsp;
+          <div><br/></div><div><br/></div>
+      </div>
+    </div>
+      
+  </aura:if>
+
+  <div aura:id="body"></div>
+
+
+
+</div>
+
+</aura:component>

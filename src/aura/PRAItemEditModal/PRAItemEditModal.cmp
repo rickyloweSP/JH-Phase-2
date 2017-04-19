@@ -1,0 +1,351 @@
+<aura:component controller="PRAController" implements="force:hasRecordId,flexipage:availableForAllPageTypes">
+    <aura:attribute name="newRecordSaved" type="Boolean" default="false" />
+    <aura:attribute name="defaultHeader" type="String" default="Edit PRA Item" />
+    <aura:attribute name="Categories" type="String[]" default=",Client Risks,Strategic Approach Risks,Contract Terms Risks,Financial Limits Risks,Prospect Delivery Risks"/>
+	<aura:attribute name="Ratings" type="String[]" default=",0,1,2,3"/>
+    <aura:attribute name="Indicators" type="String[]" default="A,B,C"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="PRAItemId" type="Id" required="true" access="PUBLIC" default="" />
+    <aura:attribute name="cssStyle" type="String" default="margin-top:1cm;position:relative;top:0px;"/>
+    
+    <aura:attribute name="PRA" type="Project_Risk_Assessment__c" />
+    <aura:attribute name="PRAList" type="List" />
+    <aura:registerEvent name="updatePRAEvent" type="c:PRAEvent"/>  <!-- Register the event to refresh the pra list-->
+    <div aria-hidden="false" role="dialog" class="slds-modal slds-fade-in-open slds-modal--large modalPositioning">
+       <div class="slds-modal__container">
+           
+           
+        <div class="slds-modal__header" >
+            <button class="slds-button slds-modal__close slds-button--icon-inverse" 
+                                      onclick="{!c.close}">
+                <lightning:icon iconName="utility:close" size="medium" />
+                <span class="slds-assistive-text">Close</span>
+            </button>            
+
+            <h2 class="slds-text-heading--medium">{!v.defaultHeader}</h2>
+        </div>
+        <div class="slds-modal__content slds-p-around--medium xcs-fix-max-height">
+            <div class="slds-grid slds-wrap slds-grid--pull-padded slds-grid--align-left">
+                <span class="slds-badge slds-size--2-of-2 slds-text-heading--small slds-m-bottom--large">Details</span>
+                <div class="slds-col slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-4">
+                    <ui:outputText class="uiLabel-left form-element__label uiLabel" value="Item # "/>
+                    <ui:outputText class="uiLabel-left form-element__label uiLabel" value="{!v.PRA.ItemNo__c}"/>
+                </div>
+                
+                 <div class="slds-col slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-4">
+                    <ui:inputCheckbox value="{!v.PRA.Is_Critical_Risk__c}" disabled="true" label="Is Critical Risk " />
+                </div>
+             
+
+                <div class="slds-col slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-4">
+                    <ui:outputText class="uiLabel-left form-element__label uiLabel" value="Risk Item : "/>
+                    <ui:outputText class="uiLabel-left form-element__label uiLabel" value="{!v.PRA.Risk_Item__c}"/>
+                </div>
+                <div class="slds-col slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-4">
+                    <ui:outputText class="uiLabel-left form-element__label uiLabel" value="Category "/>
+
+                     <ui:inputSelect aura:id="CRAChanged" disabled="true" value="{!v.PRA.Category__c}" class="categorySize">
+                              <aura:iteration items="{!v.Categories}" var="cat">
+                                 <ui:inputSelectOption text="{!cat}" label="{!cat}"/>
+                              </aura:iteration>
+           			</ui:inputSelect>
+                </div>
+            </div>
+            <div class="slds-grid slds-m-vertical--x-small">            
+
+                <div class="uiInput uiInputTextArea uiInput--default uiInput--textarea slds-size--2-of-2">
+                        
+                        <ui:inputTextArea aura:id="inputDescription2" label="Description" disabled="true" value="{!v.PRA.Description__c}" rows="4"/>
+                      
+                </div>
+        	</div>
+     
+			<div class="slds-grid slds-wrap slds-grid--pull-padded slds-grid--align-left">
+          <span class="slds-badge slds-size--2-of-2 slds-text-heading--small slds-m-bottom--large">Rating and Mitigation</span>
+
+
+                 <div class="slds-col slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-5">
+                 
+                    <ui:outputText class="uiLabel-left form-element__label uiLabel" value="Rating "/>
+
+                     <ui:inputSelect aura:id="rating" disabled="false" value="{!v.PRA.Rating__c}">
+                              <aura:iteration items="{!v.Ratings}" var="rat">
+                                 <ui:inputSelectOption text="{!rat}" label="{!rat}"/>
+                              </aura:iteration>
+           			</ui:inputSelect>
+                </div>
+                <div class="slds-col slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-5">
+                    <ui:outputText class="uiLabel-left form-element__label uiLabel" value="Indicator "/>
+
+                     <ui:inputSelect aura:id="indicators" disabled="false" value="{!v.PRA.Selected_Indicators__c}" multiple="true" class="uiInputSelectCSS">
+                              <aura:iteration items="{!v.Indicators}" var="indi">
+                                 <ui:inputSelectOption text="{!indi}" label="{!indi}"/>
+                              </aura:iteration>
+           			</ui:inputSelect>
+                </div>                
+            </div>
+            
+            <div class="slds-grid slds-m-vertical--x-small">   
+            
+            <table class="slds-table slds-table--bordered slds-table--cell-buffer slds-table--striped slds-table--col-bordered">
+              <thead>
+                <tr class="slds-text-title--caps" style="background-color:silver">
+                  <th scope="col" width="25%">
+                    <div title="0">0</div>
+                  </th>
+                  <th scope="col" width="25%">
+                    <div title="1">1</div>
+                  </th>
+                  <th scope="col" width="25%">
+                    <div title="2">2</div>
+                  </th>
+                  <th scope="col" width="25%">
+                    <div title="3">3</div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="slds-cell-wrap" width="25%">
+                    <div>A: {!v.PRA.Help_Text_0A__c}</div>
+                  </td>
+                  <td class="slds-cell-wrap" width="25%">
+                    <div>A: {!v.PRA.Help_Text_1A__c}</div>
+                  </td>
+                  <td class="slds-cell-wrap" width="25%">
+                    <div>A: {!v.PRA.Help_Text_2A__c}</div>
+                  </td>
+                  <td class="slds-cell-wrap" width="25%">
+                    <div>A: {!v.PRA.Help_Text_3A__c}</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>B: {!v.PRA.Help_Text_0B__c}</div>
+                  </td>
+                  <td>
+                    <div>B: {!v.PRA.Help_Text_1B__c}</div>
+                  </td>
+                  <td>
+                    <div>B: {!v.PRA.Help_Text_2B__c}</div>
+                  </td>
+                  <td >
+                    <div>B: {!v.PRA.Help_Text_3B__c}</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>C: {!v.PRA.Help_Text_0C__c}</div>
+                  </td>
+                  <td>
+                    <div>C: {!v.PRA.Help_Text_1C__c}</div>
+                  </td>
+                  <td>
+                    <div>C: {!v.PRA.Help_Text_2C__c}</div>
+                  </td>
+                  <td>
+                    <div>C: {!v.PRA.Help_Text_3C__c}</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>D: {!v.PRA.Help_Text_0D__c}</div>
+                  </td>
+                  <td>
+                    <div>D: {!v.PRA.Help_Text_1D__c}</div>
+                  </td>
+                  <td>
+                    <div>D: {!v.PRA.Help_Text_2D__c}</div>
+                  </td>
+                  <td>
+                    <div>D: {!v.PRA.Help_Text_3D__c}</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>E: {!v.PRA.Help_Text_0E__c}</div>
+                  </td>
+                  <td>
+                    <div>E: {!v.PRA.Help_Text_1E__c}</div>
+                  </td>
+                  <td>
+                    <div>E: {!v.PRA.Help_Text_2E__c}</div>
+                  </td>
+                  <td >
+                    <div>E: {!v.PRA.Help_Text_3E__c}</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>F: {!v.PRA.Help_Text_0F__c}</div>
+                  </td>
+                  <td>
+                    <div>F: {!v.PRA.Help_Text_1F__c}</div>
+                  </td>
+                  <td>
+                    <div>F: {!v.PRA.Help_Text_2F__c}</div>
+                  </td>
+                  <td>
+                    <div>F: {!v.PRA.Help_Text_3F__c}</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>G: {!v.PRA.Help_Text_0G__c}</div>
+                  </td>
+                  <td>
+                    <div>G: {!v.PRA.Help_Text_1G__c}</div>
+                  </td>
+                  <td>
+                    <div>G: {!v.PRA.Help_Text_2G__c}</div>
+                  </td>
+                  <td >
+                    <div>G: {!v.PRA.Help_Text_3G__c}</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>H: {!v.PRA.Help_Text_0H__c}</div>
+                  </td>
+                  <td>
+                    <div>H: {!v.PRA.Help_Text_1H__c}</div>
+                  </td>
+                  <td>
+                    <div>H: {!v.PRA.Help_Text_2H__c}</div>
+                  </td>
+                  <td>
+                    <div>H: {!v.PRA.Help_Text_3H__c}</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>I: {!v.PRA.Help_Text_0I__c}</div>
+                  </td>
+                  <td>
+                    <div>I: {!v.PRA.Help_Text_1I__c}</div>
+                  </td>
+                  <td>
+                    <div>I: {!v.PRA.Help_Text_2I__c}</div>
+                  </td>
+                  <td>
+                    <div>I: {!v.PRA.Help_Text_3I__c}</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>J: {!v.PRA.Help_Text_0J__c}</div>
+                  </td>
+                  <td>
+                    <div>J: {!v.PRA.Help_Text_1J__c}</div>
+                  </td>
+                  <td>
+                    <div>J: {!v.PRA.Help_Text_2J__c}</div>
+                  </td>
+                  <td >
+                    <div>J: {!v.PRA.Help_Text_3J__c}</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>K: {!v.PRA.Help_Text_0K__c}</div>
+                  </td>
+                  <td>
+                    <div>K: {!v.PRA.Help_Text_1K__c}</div>
+                  </td>
+                  <td>
+                    <div>K: {!v.PRA.Help_Text_2K__c}</div>
+                  </td>
+                  <td>
+                    <div>K: {!v.PRA.Help_Text_3K__c}</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>L: {!v.PRA.Help_Text_0L__c}</div>
+                  </td>
+                  <td>
+                    <div>L: {!v.PRA.Help_Text_1L__c}</div>
+                  </td>
+                  <td>
+                    <div>L: {!v.PRA.Help_Text_2L__c}</div>
+                  </td>
+                  <td>
+                    <div>L: {!v.PRA.Help_Text_3L__c}</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>M: {!v.PRA.Help_Text_0M__c}</div>
+                  </td>
+                  <td>
+                    <div>M: {!v.PRA.Help_Text_1M__c}</div>
+                  </td>
+                  <td>
+                    <div>M: {!v.PRA.Help_Text_2M__c}</div>
+                  </td>
+                  <td>
+                    <div>M: {!v.PRA.Help_Text_3M__c}</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>N: {!v.PRA.Help_Text_0N__c}</div>
+                  </td>
+                  <td>
+                    <div>N: {!v.PRA.Help_Text_1N__c}</div>
+                  </td>
+                  <td>
+                    <div>N: {!v.PRA.Help_Text_2N__c}</div>
+                  </td>
+                  <td >
+                    <div>N: {!v.PRA.Help_Text_3N__c}</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>O: {!v.PRA.Help_Text_0O__c}</div>
+                  </td>
+                  <td>
+                    <div>O: {!v.PRA.Help_Text_1O__c}</div>
+                  </td>
+                  <td>
+                    <div>O: {!v.PRA.Help_Text_2O__c}</div>
+                  </td>
+                  <td>
+                    <div>O: {!v.PRA.Help_Text_3O__c}</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+           </div>
+            
+           <div><br/></div> 
+            
+            <div class="slds-grid slds-m-vertical--x-small">            
+                    <div class="uiInput uiInputTextArea uiInput--default uiInput--textarea slds-size--2-of-2">
+                        <ui:inputTextArea aura:id="inputMitigationStrategy" label="Mitigation Strategy" value="{!v.PRA.Mitigation_Strategy__c}" rows="4" class="textarea" />
+                    </div>
+        	</div>
+            <div class="slds-grid slds-m-vertical--x-small">           
+                
+                <div class="slds-size--2-of-2">
+                    <ui:outputText class="uiLabel-left form-element__label uiLabel" value="Mitigation Advice "/><br/>
+                    <ui:outputTextArea aura:id="outputMitigationAdvice" value="{!v.PRA.Mitigation_Advice__c}" class="textarea" />
+                </div>
+        	</div>            
+        </div>
+        <div class="slds-modal__footer">
+          <div class="slds-x-small-buttons--horizontal">
+              <button class="slds-button slds-button--neutral" onclick="{!c.movePrevious}">Save and Previous</button>
+              <button class="slds-button slds-button--neutral" onclick="{!c.moveNext}">Save and Next</button>
+             <button class="slds-button slds-button--neutral" onclick="{!c.close}">Close</button>
+             <button class="slds-button slds-button--neutral slds-button--brand" onclick="{!c.save}">Save and Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+     <div class="slds-backdrop slds-backdrop--open" id="backGroundSection"></div>   
+	
+</aura:component>

@@ -1,0 +1,66 @@
+<aura:component controller="Revenue_Percentage_Controller" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName" access="global">
+    
+    <aura:attribute name="RevList" type="List" description="Percentage Revenue Items"/>
+    <aura:attribute name="recordId" type="Id" required="true" access="PUBLIC" default="" description="The current record Id to display" />  
+     <aura:attribute name="opp" type="Opportunity"  description="The current opportunity to display" />
+	<aura:attribute name="total" type="Integer"  description="Total of allocated" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+ 
+    <div class="slds-card">
+        <div class="slds-card__header slds-grid">
+            <div class="slds-media slds-media--center slds-has-flexi-truncate">
+                <!-- placeholder for icon if required -->
+                <div class="slds-media__body  slds-truncate">
+                    <span class="slds-text-heading--small slds-truncate">Percentage Revenue Component
+                     <ui:button aura:id="savebtn" label="Save" class="slds-button slds-button--neutral slds-button--brand slds-float--right" disabled="false" press="{!c.doSave}"/>
+                    </span>
+                </div>
+            </div>
+        </div>
+		 <ui:inputDate label="Anticipated Revenue Start Date" value="{!v.opp.Anticipated_Revenue_Start_Date__c}" displayDatePicker="true"/>
+        <ui:inputNumber label="Project Duration Months" value="{!v.opp.Project_Duration_Months__c}"/>
+        <div class="slds-card__body slds-scrollable--x">            
+                <table class="slds-table slds-wrap slds-table--bordered slds-no-row-hover slds-table--cell-buffer">
+                    <thead>
+                       <tr>
+                           <th scope="col"><span class="slds-truncate">Period</span></th>
+                           <th scope="col"><span class="slds-truncate">%</span></th>
+                           <th scope="col"><span class="slds-truncate">Date</span></th>
+                       </tr>
+                    </thead>
+                    <tbody>     
+                        <aura:iteration items="{!v.RevList}" var="rev">  
+                            <!-- to avoid "Cannot read property 'childNodes' of null " error while rerendering
+                                must encapulate calling of component in div/ span
+                                (not working properly in table)
+                                Encapsulate using tr element instead
+                            -->
+                            <!--<tr class="slds-hint-parent">
+                               <c:RevenuePercentageItem revItem="{!rev}"/>  
+
+                            </tr>         -->
+
+                            <tr>
+                                <td class="slds-cell-wrap"> <ui:outputText value="{!rev.Period__c}" /> </td>
+                                <td class="slds-cell-wrap"> <ui:inputNumber aura:id="num" value="{!rev.Allocated__c}"/> </td>
+                                <td class="slds-cell-wrap"> <ui:outputText value="{!rev.Period_Date__c}" /> </td>
+                            </tr>
+
+                        </aura:iteration>
+                    </tbody>
+                </table>
+        </div>     
+        <div>
+            <h3>total</h3>
+        	<h3>{!v.total}</h3>
+        </div>
+        
+        <div aura:id="body"> <!-- dynamic component -->
+        </div>           
+    </div>    
+    
+    
+    
+</aura:component>

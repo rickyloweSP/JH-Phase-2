@@ -1,0 +1,5 @@
+<messaging:emailTemplate subject="Notification Only. {!relatedTo.StageName} CRA submission for {!relatedTo.Name}" recipientType="User" relatedToType="Opportunity">
+    <messaging:htmlEmailBody >            
+        <c:Approval_Submission_VF recipientUser="{!recipient}" relatedToOpp="{!relatedTo}" EmailType="CRA"/>        
+    </messaging:htmlEmailBody>  
+</messaging:emailTemplate>

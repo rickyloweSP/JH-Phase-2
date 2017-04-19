@@ -1,0 +1,5 @@
+<messaging:emailTemplate subject="Approval decision required: {!relatedTo.StageName} for {!relatedTo.Name}" recipientType="User" relatedToType="Opportunity">
+    <messaging:htmlEmailBody >            
+        <c:Decision_Required_VF recipientUser="{!recipient}" relatedToOpp="{!relatedTo}" EmailType="Normal"/>  
+    </messaging:htmlEmailBody>  
+</messaging:emailTemplate>

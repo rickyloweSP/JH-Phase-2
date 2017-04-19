@@ -1,0 +1,1469 @@
+39.0 APEX_CODE,FINEST;APEX_PROFILING,FINEST;CALLOUT,NONE;DB,FINEST;SYSTEM,FINE;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,FINER
+11:01:27.0 (436665)|USER_INFO|[EXTERNAL]|00528000006B07F|dev@systempartners.com.prod.pcphase2|Australian Eastern Standard Time|GMT+10:00
+11:01:27.0 (470807)|EXECUTION_STARTED
+11:01:27.0 (474604)|CODE_UNIT_STARTED|[EXTERNAL]|TRIGGERS
+11:01:27.0 (2112290)|CODE_UNIT_STARTED|[EXTERNAL]|01qO00000000SDP|OpportunityTrigger on Opportunity trigger event BeforeUpdate for [006O0000009HAXh]
+11:01:27.0 (2157024)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+11:01:27.0 (2197639)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+11:01:27.0 (2742369)|HEAP_ALLOCATE|[72]|Bytes:3
+11:01:27.0 (2783978)|HEAP_ALLOCATE|[77]|Bytes:152
+11:01:27.0 (2798904)|HEAP_ALLOCATE|[342]|Bytes:408
+11:01:27.0 (2813860)|HEAP_ALLOCATE|[355]|Bytes:408
+11:01:27.0 (2829084)|HEAP_ALLOCATE|[467]|Bytes:48
+11:01:27.0 (2858241)|HEAP_ALLOCATE|[139]|Bytes:6
+11:01:27.0 (2884174)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+11:01:27.0 (2891339)|VARIABLE_SCOPE_BEGIN|[1]|this|OpportunityTrigger|true|false
+11:01:27.0 (2935206)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x234088ba
+11:01:27.0 (2963062)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+11:01:27.0 (2967881)|VARIABLE_SCOPE_BEGIN|[1]|this|OpportunityTrigger|true|false
+11:01:27.0 (2977036)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x234088ba
+11:01:27.0 (2982555)|STATEMENT_EXECUTE|[1]
+11:01:27.0 (4428228)|VARIABLE_SCOPE_BEGIN|[75]|Constants.ApprovalOutcomeNotificationEmail|String|false|true
+11:01:27.0 (4433666)|VARIABLE_SCOPE_BEGIN|[77]|Constants.ApprovalSubmissionEmail|String|false|true
+11:01:27.0 (4436281)|VARIABLE_SCOPE_BEGIN|[49]|Constants.ApprovedStatus|String|false|true
+11:01:27.0 (4441020)|VARIABLE_SCOPE_BEGIN|[6]|Constants.Approvers|Approvers__c|true|true
+11:01:27.0 (4443696)|VARIABLE_SCOPE_BEGIN|[81]|Constants.CRA_ApprovalOutcomeNotificationEmail|String|false|true
+11:01:27.0 (4446229)|VARIABLE_SCOPE_BEGIN|[83]|Constants.CRA_ApprovalSubmissionEmail|String|false|true
+11:01:27.0 (4448705)|VARIABLE_SCOPE_BEGIN|[82]|Constants.CRA_DecisionRequiredEmail|String|false|true
+11:01:27.0 (4450738)|VARIABLE_SCOPE_BEGIN|[71]|Constants.ClosedWonStage|String|false|true
+11:01:27.0 (4453067)|VARIABLE_SCOPE_BEGIN|[50]|Constants.ConditionallyApprovedStatus|String|false|true
+11:01:27.0 (4455168)|VARIABLE_SCOPE_BEGIN|[76]|Constants.DecisionRequiredEmail|String|false|true
+11:01:27.0 (4457404)|VARIABLE_SCOPE_BEGIN|[51]|Constants.DeclinedStatus|String|false|true
+11:01:27.0 (4459439)|VARIABLE_SCOPE_BEGIN|[66]|Constants.Gate1Stage|String|false|true
+11:01:27.0 (4461715)|VARIABLE_SCOPE_BEGIN|[67]|Constants.Gate2Stage|String|false|true
+11:01:27.0 (4464148)|VARIABLE_SCOPE_BEGIN|[68]|Constants.Gate3Stage|String|false|true
+11:01:27.0 (4466684)|VARIABLE_SCOPE_BEGIN|[69]|Constants.Gate4Stage|String|false|true
+11:01:27.0 (4468923)|VARIABLE_SCOPE_BEGIN|[70]|Constants.Gate5Stage|String|false|true
+11:01:27.0 (4471152)|VARIABLE_SCOPE_BEGIN|[48]|Constants.InProgressStatus|String|false|true
+11:01:27.0 (4473598)|VARIABLE_SCOPE_BEGIN|[47]|Constants.InitiatedStatus|String|false|true
+11:01:27.0 (4476190)|VARIABLE_SCOPE_BEGIN|[65]|Constants.NewDandCStage|String|false|true
+11:01:27.0 (4478777)|VARIABLE_SCOPE_BEGIN|[54]|Constants.NotApplicableStatus|String|false|true
+11:01:27.0 (4481346)|VARIABLE_SCOPE_BEGIN|[46]|Constants.NotStartedStatus|String|false|true
+11:01:27.0 (4485168)|VARIABLE_SCOPE_BEGIN|[24]|Constants.OppRecordTypeMap|Map<String,Id>|true|true
+11:01:27.0 (4488480)|VARIABLE_SCOPE_BEGIN|[57]|Constants.PendingApprovalStatus|String|false|true
+11:01:27.0 (4491143)|VARIABLE_SCOPE_BEGIN|[53]|Constants.RestartedStatus|String|false|true
+11:01:27.0 (4494304)|VARIABLE_SCOPE_BEGIN|[52]|Constants.ResubmittedStatus|String|false|true
+11:01:27.0 (4497424)|VARIABLE_SCOPE_BEGIN|[78]|Constants.TSF_ApprovalOutcomeNotificationEmail|String|false|true
+11:01:27.0 (4500672)|VARIABLE_SCOPE_BEGIN|[80]|Constants.TSF_ApprovalSubmissionEmail|String|false|true
+11:01:27.0 (4503703)|VARIABLE_SCOPE_BEGIN|[79]|Constants.TSF_DecisionRequiredEmail|String|false|true
+11:01:27.0 (4506617)|VARIABLE_SCOPE_BEGIN|[61]|Constants.TenderInPreperationStatus|String|false|true
+11:01:27.0 (4509486)|VARIABLE_SCOPE_BEGIN|[62]|Constants.TenderSubmittedStatus|String|false|true
+11:01:27.0 (4512397)|VARIABLE_SCOPE_BEGIN|[84]|Constants.TenderWonEmail|String|false|true
+11:01:27.0 (4515190)|VARIABLE_SCOPE_BEGIN|[60]|Constants.TenderWonStatus|String|false|true
+11:01:27.0 (4561769)|HEAP_ALLOCATE|[3]|Bytes:28
+11:01:27.0 (4570527)|HEAP_ALLOCATE|[3]|Bytes:136
+11:01:27.0 (4574612)|HEAP_ALLOCATE|[3]|Bytes:7
+11:01:27.0 (4579369)|HEAP_ALLOCATE|[3]|Bytes:34
+11:01:27.0 (4594398)|VARIABLE_ASSIGNMENT|[3]|Constants.ApprovalOutcomeNotificationEmail|"Gate_Approval_Outcom (14 more) ..."
+11:01:27.0 (4597273)|HEAP_ALLOCATE|[3]|Bytes:32
+11:01:27.0 (4602652)|VARIABLE_ASSIGNMENT|[3]|Constants.ApprovalSubmissionEmail|"Approval_Submission_ (12 more) ..."
+11:01:27.0 (4605031)|HEAP_ALLOCATE|[3]|Bytes:8
+11:01:27.0 (4609154)|VARIABLE_ASSIGNMENT|[3]|Constants.ApprovedStatus|"Approved"
+11:01:27.0 (4660574)|HEAP_ALLOCATE|[3]|Bytes:33
+11:01:27.0 (4671123)|VARIABLE_ASSIGNMENT|[3]|Constants.CRA_ApprovalOutcomeNotificationEmail|"CRA_Approval_Outcome (13 more) ..."
+11:01:27.0 (4673731)|HEAP_ALLOCATE|[3]|Bytes:36
+11:01:27.0 (4678878)|VARIABLE_ASSIGNMENT|[3]|Constants.CRA_ApprovalSubmissionEmail|"CRA_Approval_Submiss (16 more) ..."
+11:01:27.0 (4681330)|HEAP_ALLOCATE|[3]|Bytes:29
+11:01:27.0 (4686474)|VARIABLE_ASSIGNMENT|[3]|Constants.CRA_DecisionRequiredEmail|"CRA_Approval_Decsion (9 more) ..."
+11:01:27.0 (4688512)|HEAP_ALLOCATE|[3]|Bytes:10
+11:01:27.0 (4692550)|VARIABLE_ASSIGNMENT|[3]|Constants.ClosedWonStage|"Closed Won"
+11:01:27.0 (4694723)|HEAP_ALLOCATE|[3]|Bytes:22
+11:01:27.0 (4699650)|VARIABLE_ASSIGNMENT|[3]|Constants.ConditionallyApprovedStatus|"Conditionally Approv (2 more) ..."
+11:01:27.0 (4701794)|HEAP_ALLOCATE|[3]|Bytes:38
+11:01:27.0 (4706548)|VARIABLE_ASSIGNMENT|[3]|Constants.DecisionRequiredEmail|"Approval_Decsion_Req (18 more) ..."
+11:01:27.0 (4708666)|HEAP_ALLOCATE|[3]|Bytes:8
+11:01:27.0 (4713055)|VARIABLE_ASSIGNMENT|[3]|Constants.DeclinedStatus|"Declined"
+11:01:27.0 (4714912)|HEAP_ALLOCATE|[3]|Bytes:6
+11:01:27.0 (4719064)|VARIABLE_ASSIGNMENT|[3]|Constants.Gate1Stage|"Gate 1"
+11:01:27.0 (4720921)|HEAP_ALLOCATE|[3]|Bytes:6
+11:01:27.0 (4724946)|VARIABLE_ASSIGNMENT|[3]|Constants.Gate2Stage|"Gate 2"
+11:01:27.0 (4726734)|HEAP_ALLOCATE|[3]|Bytes:6
+11:01:27.0 (4730871)|VARIABLE_ASSIGNMENT|[3]|Constants.Gate3Stage|"Gate 3"
+11:01:27.0 (4732614)|HEAP_ALLOCATE|[3]|Bytes:6
+11:01:27.0 (4736631)|VARIABLE_ASSIGNMENT|[3]|Constants.Gate4Stage|"Gate 4"
+11:01:27.0 (4738277)|HEAP_ALLOCATE|[3]|Bytes:6
+11:01:27.0 (4742344)|VARIABLE_ASSIGNMENT|[3]|Constants.Gate5Stage|"Gate 5"
+11:01:27.0 (4744241)|HEAP_ALLOCATE|[3]|Bytes:11
+11:01:27.0 (4748916)|VARIABLE_ASSIGNMENT|[3]|Constants.InProgressStatus|"In Progress"
+11:01:27.0 (4750837)|HEAP_ALLOCATE|[3]|Bytes:9
+11:01:27.0 (4755309)|VARIABLE_ASSIGNMENT|[3]|Constants.InitiatedStatus|"Initiated"
+11:01:27.0 (4757245)|HEAP_ALLOCATE|[3]|Bytes:3
+11:01:27.0 (4761511)|VARIABLE_ASSIGNMENT|[3]|Constants.NewDandCStage|"New"
+11:01:27.0 (4763400)|HEAP_ALLOCATE|[3]|Bytes:14
+11:01:27.0 (4768135)|VARIABLE_ASSIGNMENT|[3]|Constants.NotApplicableStatus|"Not Applicable"
+11:01:27.0 (4770239)|HEAP_ALLOCATE|[3]|Bytes:11
+11:01:27.0 (4774752)|VARIABLE_ASSIGNMENT|[3]|Constants.NotStartedStatus|"Not Started"
+11:01:27.0 (4780188)|HEAP_ALLOCATE|[3]|Bytes:16
+11:01:27.0 (4785646)|VARIABLE_ASSIGNMENT|[3]|Constants.PendingApprovalStatus|"Pending Approval"
+11:01:27.0 (4787881)|HEAP_ALLOCATE|[3]|Bytes:9
+11:01:27.0 (4792512)|VARIABLE_ASSIGNMENT|[3]|Constants.RestartedStatus|"Restarted"
+11:01:27.0 (4794366)|HEAP_ALLOCATE|[3]|Bytes:11
+11:01:27.0 (4799307)|VARIABLE_ASSIGNMENT|[3]|Constants.ResubmittedStatus|"Resubmitted"
+11:01:27.0 (4801217)|HEAP_ALLOCATE|[3]|Bytes:33
+11:01:27.0 (4808524)|VARIABLE_ASSIGNMENT|[3]|Constants.TSF_ApprovalOutcomeNotificationEmail|"TSF_Approval_Outcome (13 more) ..."
+11:01:27.0 (4810684)|HEAP_ALLOCATE|[3]|Bytes:36
+11:01:27.0 (4816658)|VARIABLE_ASSIGNMENT|[3]|Constants.TSF_ApprovalSubmissionEmail|"TSF_Approval_Submiss (16 more) ..."
+11:01:27.0 (4818812)|HEAP_ALLOCATE|[3]|Bytes:29
+11:01:27.0 (4824528)|VARIABLE_ASSIGNMENT|[3]|Constants.TSF_DecisionRequiredEmail|"TSF_Approval_Decsion (9 more) ..."
+11:01:27.0 (4826486)|HEAP_ALLOCATE|[3]|Bytes:21
+11:01:27.0 (4831962)|VARIABLE_ASSIGNMENT|[3]|Constants.TenderInPreperationStatus|"Tender in Preparatio (1 more) ..."
+11:01:27.0 (4833894)|HEAP_ALLOCATE|[3]|Bytes:16
+11:01:27.0 (4839234)|VARIABLE_ASSIGNMENT|[3]|Constants.TenderSubmittedStatus|"Tender Submitted"
+11:01:27.0 (4841133)|HEAP_ALLOCATE|[3]|Bytes:23
+11:01:27.0 (4846643)|VARIABLE_ASSIGNMENT|[3]|Constants.TenderWonEmail|"Tender_Won_Notificat (3 more) ..."
+11:01:27.0 (4849271)|HEAP_ALLOCATE|[3]|Bytes:10
+11:01:27.0 (4854267)|VARIABLE_ASSIGNMENT|[3]|Constants.TenderWonStatus|"Tender Won"
+11:01:27.0 (4877030)|METHOD_ENTRY|[1]|01pO00000003RXf|Constants.Constants()
+11:01:27.0 (4879527)|STATEMENT_EXECUTE|[1]
+11:01:27.0 (4882913)|STATEMENT_EXECUTE|[1]
+11:01:27.0 (4917316)|HEAP_ALLOCATE|[50]|Bytes:5
+11:01:27.0 (4946125)|HEAP_ALLOCATE|[56]|Bytes:5
+11:01:27.0 (4954728)|HEAP_ALLOCATE|[64]|Bytes:7
+11:01:27.0 (5621800)|SYSTEM_MODE_ENTER|false
+11:01:27.0 (5638745)|HEAP_ALLOCATE|[3]|Bytes:5
+11:01:27.0 (5644441)|STATEMENT_EXECUTE|[3]
+11:01:27.0 (5651184)|SYSTEM_MODE_EXIT|false
+11:01:27.0 (5661112)|METHOD_EXIT|[1]|Constants
+11:01:27.0 (5674270)|SYSTEM_METHOD_ENTRY|[3]|Constants.__sfdc_Approvers()
+11:01:27.0 (5698024)|SYSTEM_MODE_ENTER|false
+11:01:27.0 (5702917)|HEAP_ALLOCATE|[8]|Bytes:5
+11:01:27.0 (5706475)|STATEMENT_EXECUTE|[7]
+11:01:27.0 (5710971)|STATEMENT_EXECUTE|[8]
+11:01:27.0 (5711914)|STATEMENT_EXECUTE|[9]
+11:01:27.0 (5811656)|SYSTEM_METHOD_ENTRY|[9]|Approvers__c.getInstance()
+11:01:27.0 (7596295)|HEAP_ALLOCATE|[9]|Bytes:44
+11:01:27.0 (7608088)|SYSTEM_METHOD_EXIT|[9]|Approvers__c.getInstance()
+11:01:27.0 (7641362)|VARIABLE_ASSIGNMENT|[9]|Constants.Approvers|{"IsDeleted":false,"Name":"a0qO0000007lg39","SetupOwnerId":"00528000006B07FAAS","COO_User_ID__c":"005O0000003t7an","CEO_User_ID__c":"005O0000003t7an","Lower_Threshold__c":2.0E8,"Higher_Threshold__c":5.0E8,"Gate_1_Entry_Thresho (5 more) ...":1.0E7,"Enable_Detailed_Logg (6 more) ...":true,"Turn_Off_Triggers__c":false}|0x7a85c3c9
+11:01:27.0 (7703410)|STATEMENT_EXECUTE|[10]
+11:01:27.0 (7765076)|STATEMENT_EXECUTE|[14]
+11:01:27.0 (7767393)|STATEMENT_EXECUTE|[18]
+11:01:27.0 (7772370)|SYSTEM_MODE_EXIT|false
+11:01:27.0 (7781473)|SYSTEM_METHOD_EXIT|[3]|Constants.__sfdc_Approvers()
+11:01:27.0 (7806661)|STATEMENT_EXECUTE|[3]
+11:01:27.0 (7808533)|STATEMENT_EXECUTE|[4]
+11:01:27.0 (8892440)|VARIABLE_SCOPE_BEGIN|[16]|OpportunityTriggerHandler.KCRARecordTypeID|String|false|true
+11:01:27.0 (8897916)|VARIABLE_SCOPE_BEGIN|[15]|OpportunityTriggerHandler.KCRATemplateRecordTypeID|String|false|true
+11:01:27.0 (8900543)|VARIABLE_SCOPE_BEGIN|[18]|OpportunityTriggerHandler.PRARecordTypeID|String|false|true
+11:01:27.0 (8903084)|VARIABLE_SCOPE_BEGIN|[17]|OpportunityTriggerHandler.PRATemplateRecordTypeID|String|false|true
+11:01:27.0 (8905502)|VARIABLE_SCOPE_BEGIN|[21]|OpportunityTriggerHandler.isTest|Boolean|false|true
+11:01:27.0 (8908128)|VARIABLE_SCOPE_BEGIN|[20]|OpportunityTriggerHandler.recursionAfter|Boolean|false|true
+11:01:27.0 (8910403)|VARIABLE_SCOPE_BEGIN|[19]|OpportunityTriggerHandler.recursionBefore|Boolean|false|true
+11:01:27.0 (8912614)|VARIABLE_SCOPE_BEGIN|[14]|OpportunityTriggerHandler.runOnce|Boolean|false|true
+11:01:27.0 (9859719)|VARIABLE_SCOPE_BEGIN|[5]|TriggerHandler.bypassedHandlers|Set<String>|true|true
+11:01:27.0 (9865176)|VARIABLE_SCOPE_BEGIN|[4]|TriggerHandler.loopCountMap|Map<String,TriggerHandler.LoopCount>|true|true
+11:01:27.0 (9873433)|HEAP_ALLOCATE|[4]|Bytes:69
+11:01:27.0 (9880201)|HEAP_ALLOCATE|[4]|Bytes:55
+11:01:27.0 (9888631)|METHOD_ENTRY|[13]|01pO0000000371i|OpportunityTriggerHandler.OpportunityTriggerHandler()
+11:01:27.0 (9891094)|STATEMENT_EXECUTE|[13]
+11:01:27.0 (9894504)|STATEMENT_EXECUTE|[13]
+11:01:27.0 (9896067)|STATEMENT_EXECUTE|[14]
+11:01:27.0 (9902095)|HEAP_ALLOCATE|[14]|Bytes:5
+11:01:27.0 (9910612)|VARIABLE_ASSIGNMENT|[14]|OpportunityTriggerHandler.runOnce|true
+11:01:27.0 (9912638)|STATEMENT_EXECUTE|[15]
+11:01:27.0 (9915391)|HEAP_ALLOCATE|[15]|Bytes:33
+11:01:27.0 (9989935)|SYSTEM_METHOD_ENTRY|[15]|Schema.SObjectType.getDescribe()
+11:01:27.0 (10264309)|HEAP_ALLOCATE|[15]|Bytes:4
+11:01:27.0 (10275810)|SYSTEM_METHOD_EXIT|[15]|Schema.SObjectType.getDescribe()
+11:01:27.0 (10304823)|LIMIT_USAGE|[15]|RECORD_TYPE_DESCRIBES|1|100
+11:01:27.0 (13297721)|HEAP_ALLOCATE|[15]|Bytes:16
+11:01:27.0 (13307816)|HEAP_ALLOCATE|[15]|Bytes:13
+11:01:27.0 (13362906)|SYSTEM_METHOD_ENTRY|[15]|Map<String,Schema.RecordTypeInfo>.get(Object)
+11:01:27.0 (13421237)|SYSTEM_METHOD_EXIT|[15]|Map<String,Schema.RecordTypeInfo>.get(Object)
+11:01:27.0 (13454359)|HEAP_ALLOCATE|[15]|Bytes:4
+11:01:27.0 (13475133)|HEAP_ALLOCATE|[15]|Bytes:18
+11:01:27.0 (13489639)|VARIABLE_ASSIGNMENT|[15]|OpportunityTriggerHandler.KCRATemplateRecordTypeID|"012O0000000DCgLIAW"
+11:01:27.0 (13493015)|STATEMENT_EXECUTE|[16]
+11:01:27.0 (13526243)|SYSTEM_METHOD_ENTRY|[16]|Schema.SObjectType.getDescribe()
+11:01:27.0 (13547956)|HEAP_ALLOCATE|[16]|Bytes:4
+11:01:27.0 (13553983)|SYSTEM_METHOD_EXIT|[16]|Schema.SObjectType.getDescribe()
+11:01:27.0 (13566903)|LIMIT_USAGE|[16]|RECORD_TYPE_DESCRIBES|2|100
+11:01:27.0 (13580906)|HEAP_ALLOCATE|[16]|Bytes:16
+11:01:27.0 (13586097)|HEAP_ALLOCATE|[16]|Bytes:4
+11:01:27.0 (13602638)|SYSTEM_METHOD_ENTRY|[16]|Map<String,Schema.RecordTypeInfo>.get(Object)
+11:01:27.0 (13617600)|SYSTEM_METHOD_EXIT|[16]|Map<String,Schema.RecordTypeInfo>.get(Object)
+11:01:27.0 (13636361)|HEAP_ALLOCATE|[16]|Bytes:4
+11:01:27.0 (13644080)|HEAP_ALLOCATE|[16]|Bytes:18
+11:01:27.0 (13654478)|VARIABLE_ASSIGNMENT|[16]|OpportunityTriggerHandler.KCRARecordTypeID|"012O0000000DCgGIAW"
+11:01:27.0 (13657200)|STATEMENT_EXECUTE|[17]
+11:01:27.0 (13660097)|HEAP_ALLOCATE|[17]|Bytes:26
+11:01:27.0 (13698292)|SYSTEM_METHOD_ENTRY|[17]|Schema.SObjectType.getDescribe()
+11:01:27.0 (13811611)|HEAP_ALLOCATE|[17]|Bytes:4
+11:01:27.0 (13820362)|SYSTEM_METHOD_EXIT|[17]|Schema.SObjectType.getDescribe()
+11:01:27.0 (13834163)|LIMIT_USAGE|[17]|RECORD_TYPE_DESCRIBES|3|100
+11:01:27.0 (15000890)|HEAP_ALLOCATE|[17]|Bytes:16
+11:01:27.0 (15009852)|HEAP_ALLOCATE|[17]|Bytes:12
+11:01:27.0 (15028338)|SYSTEM_METHOD_ENTRY|[17]|Map<String,Schema.RecordTypeInfo>.get(Object)
+11:01:27.0 (15044716)|SYSTEM_METHOD_EXIT|[17]|Map<String,Schema.RecordTypeInfo>.get(Object)
+11:01:27.0 (15065171)|HEAP_ALLOCATE|[17]|Bytes:4
+11:01:27.0 (15073168)|HEAP_ALLOCATE|[17]|Bytes:18
+11:01:27.0 (15085046)|VARIABLE_ASSIGNMENT|[17]|OpportunityTriggerHandler.PRATemplateRecordTypeID|"012O0000000DDVTIA4"
+11:01:27.0 (15087858)|STATEMENT_EXECUTE|[18]
+11:01:27.0 (15119322)|SYSTEM_METHOD_ENTRY|[18]|Schema.SObjectType.getDescribe()
+11:01:27.0 (15139982)|HEAP_ALLOCATE|[18]|Bytes:4
+11:01:27.0 (15145624)|SYSTEM_METHOD_EXIT|[18]|Schema.SObjectType.getDescribe()
+11:01:27.0 (15158049)|LIMIT_USAGE|[18]|RECORD_TYPE_DESCRIBES|4|100
+11:01:27.0 (15171284)|HEAP_ALLOCATE|[18]|Bytes:16
+11:01:27.0 (15176899)|HEAP_ALLOCATE|[18]|Bytes:3
+11:01:27.0 (15192941)|SYSTEM_METHOD_ENTRY|[18]|Map<String,Schema.RecordTypeInfo>.get(Object)
+11:01:27.0 (15208081)|SYSTEM_METHOD_EXIT|[18]|Map<String,Schema.RecordTypeInfo>.get(Object)
+11:01:27.0 (15226622)|HEAP_ALLOCATE|[18]|Bytes:4
+11:01:27.0 (15234100)|HEAP_ALLOCATE|[18]|Bytes:18
+11:01:27.0 (15244960)|VARIABLE_ASSIGNMENT|[18]|OpportunityTriggerHandler.PRARecordTypeID|"012O0000000DDVOIA4"
+11:01:27.0 (15247850)|STATEMENT_EXECUTE|[19]
+11:01:27.0 (15253620)|HEAP_ALLOCATE|[19]|Bytes:5
+11:01:27.0 (15260260)|VARIABLE_ASSIGNMENT|[19]|OpportunityTriggerHandler.recursionBefore|false
+11:01:27.0 (15261933)|STATEMENT_EXECUTE|[20]
+11:01:27.0 (15264807)|HEAP_ALLOCATE|[20]|Bytes:5
+11:01:27.0 (15269065)|VARIABLE_ASSIGNMENT|[20]|OpportunityTriggerHandler.recursionAfter|false
+11:01:27.0 (15270662)|STATEMENT_EXECUTE|[21]
+11:01:27.0 (15273322)|HEAP_ALLOCATE|[21]|Bytes:5
+11:01:27.0 (15277214)|VARIABLE_ASSIGNMENT|[21]|OpportunityTriggerHandler.isTest|false
+11:01:27.0 (15285383)|METHOD_EXIT|[13]|OpportunityTriggerHandler
+11:01:27.0 (15293648)|HEAP_ALLOCATE|[4]|Bytes:16
+11:01:27.0 (15308531)|CONSTRUCTOR_ENTRY|[4]|01pO0000000371i|<init>()
+11:01:27.0 (15327514)|VARIABLE_SCOPE_BEGIN|[24]|this|OpportunityTriggerHandler|true|false
+11:01:27.0 (15365777)|VARIABLE_ASSIGNMENT|[24]|this|{}|0xb684abd
+11:01:27.0 (15370697)|STATEMENT_EXECUTE|[13]
+11:01:27.0 (15371962)|STATEMENT_EXECUTE|[22]
+11:01:27.0 (15457724)|HEAP_ALLOCATE|[22]|Bytes:4
+11:01:27.0 (15497139)|SYSTEM_CONSTRUCTOR_ENTRY|[22]|<init>()
+11:01:27.0 (15521550)|SYSTEM_CONSTRUCTOR_EXIT|[22]|<init>()
+11:01:27.0 (15532797)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+11:01:27.0 (15545421)|VARIABLE_ASSIGNMENT|[22]|this.OppTeamMembers|[]|0xb684abd
+11:01:27.0 (15555987)|HEAP_ALLOCATE|[24]|Bytes:48
+11:01:27.0 (15561149)|HEAP_ALLOCATE|[24]|Bytes:69
+11:01:27.0 (15645742)|METHOD_ENTRY|[1]|01pO00000003AAn|TriggerHandler.TriggerHandler()
+11:01:27.0 (15649042)|STATEMENT_EXECUTE|[1]
+11:01:27.0 (15652484)|STATEMENT_EXECUTE|[1]
+11:01:27.0 (15653892)|STATEMENT_EXECUTE|[16]
+11:01:27.0 (15654940)|STATEMENT_EXECUTE|[17]
+11:01:27.0 (15661093)|HEAP_ALLOCATE|[17]|Bytes:4
+11:01:27.0 (15696148)|VARIABLE_ASSIGNMENT|[17]|TriggerHandler.loopCountMap|{}|0x65e5821c
+11:01:27.0 (15699375)|STATEMENT_EXECUTE|[18]
+11:01:27.0 (15707147)|HEAP_ALLOCATE|[18]|Bytes:4
+11:01:27.0 (15722709)|SYSTEM_CONSTRUCTOR_ENTRY|[18]|<init>(Integer)
+11:01:27.0 (15738307)|SYSTEM_CONSTRUCTOR_EXIT|[18]|<init>(Integer)
+11:01:27.0 (15768937)|VARIABLE_ASSIGNMENT|[18]|TriggerHandler.bypassedHandlers|[]|0x2763cdc5
+11:01:27.0 (15771922)|STATEMENT_EXECUTE|[187]
+11:01:27.0 (15773299)|STATEMENT_EXECUTE|[236]
+11:01:27.0 (15778349)|METHOD_EXIT|[1]|TriggerHandler
+11:01:27.0 (15784322)|CONSTRUCTOR_ENTRY|[24]|01pO00000003AAn|<init>()
+11:01:27.0 (15796567)|VARIABLE_SCOPE_BEGIN|[22]|this|TriggerHandler|true|false
+11:01:27.0 (15818695)|VARIABLE_ASSIGNMENT|[22]|this|{"OppTeamMembers":"0x4fec7f2e"}|0xb684abd
+11:01:27.0 (15822537)|STATEMENT_EXECUTE|[1]
+11:01:27.0 (15823788)|STATEMENT_EXECUTE|[9]
+11:01:27.0 (15824896)|STATEMENT_EXECUTE|[13]
+11:01:27.0 (15834675)|HEAP_ALLOCATE|[23]|Bytes:6
+11:01:27.0 (15860899)|STATEMENT_EXECUTE|[22]
+11:01:27.0 (15862711)|STATEMENT_EXECUTE|[23]
+11:01:27.0 (15881507)|METHOD_ENTRY|[23]|01pO00000003AAn|TriggerHandler.setTriggerContext()
+11:01:27.0 (15896743)|VARIABLE_SCOPE_BEGIN|[94]|this|TriggerHandler|true|false
+11:01:27.0 (15914834)|VARIABLE_ASSIGNMENT|[94]|this|{"OppTeamMembers":"0x4fec7f2e"}|0xb684abd
+11:01:27.0 (15921441)|STATEMENT_EXECUTE|[94]
+11:01:27.0 (15922661)|STATEMENT_EXECUTE|[95]
+11:01:27.0 (15939424)|METHOD_ENTRY|[95]|01pO00000003AAn|TriggerHandler.setTriggerContext(String, Boolean)
+11:01:27.0 (15951389)|VARIABLE_SCOPE_BEGIN|[99]|this|TriggerHandler|true|false
+11:01:27.0 (15968225)|VARIABLE_ASSIGNMENT|[99]|this|{"OppTeamMembers":"0x4fec7f2e"}|0xb684abd
+11:01:27.0 (15971080)|VARIABLE_SCOPE_BEGIN|[99]|ctx|String|false|false
+11:01:27.0 (15974838)|VARIABLE_ASSIGNMENT|[99]|ctx|null
+11:01:27.0 (15978881)|VARIABLE_SCOPE_BEGIN|[99]|testMode|Boolean|false|false
+11:01:27.0 (15982070)|VARIABLE_ASSIGNMENT|[99]|testMode|false
+11:01:27.0 (15985944)|STATEMENT_EXECUTE|[99]
+11:01:27.0 (16003038)|STATEMENT_EXECUTE|[103]
+11:01:27.0 (16005221)|STATEMENT_EXECUTE|[104]
+11:01:27.0 (16010353)|HEAP_ALLOCATE|[104]|Bytes:5
+11:01:27.0 (16037572)|STATEMENT_EXECUTE|[111]
+11:01:27.0 (16039085)|STATEMENT_EXECUTE|[112]
+11:01:27.0 (16097649)|HEAP_ALLOCATE|[112]|Bytes:12
+11:01:27.0 (16103622)|HEAP_ALLOCATE|[112]|Bytes:13
+11:01:27.0 (16127143)|HEAP_ALLOCATE|[112]|Bytes:12
+11:01:27.0 (16130395)|HEAP_ALLOCATE|[112]|Bytes:13
+11:01:27.0 (16141158)|HEAP_ALLOCATE|[112]|Bytes:12
+11:01:27.0 (16144078)|HEAP_ALLOCATE|[112]|Bytes:13
+11:01:27.0 (16153506)|HEAP_ALLOCATE|[112]|Bytes:12
+11:01:27.0 (16156319)|HEAP_ALLOCATE|[112]|Bytes:12
+11:01:27.0 (16165968)|HEAP_ALLOCATE|[112]|Bytes:12
+11:01:27.0 (16168646)|HEAP_ALLOCATE|[112]|Bytes:12
+11:01:27.0 (16177838)|HEAP_ALLOCATE|[112]|Bytes:12
+11:01:27.0 (16180978)|HEAP_ALLOCATE|[112]|Bytes:12
+11:01:27.0 (16190364)|HEAP_ALLOCATE|[112]|Bytes:12
+11:01:27.0 (16193209)|HEAP_ALLOCATE|[112]|Bytes:14
+11:01:27.0 (16213633)|METHOD_EXIT|[95]|01pO00000003AAn|TriggerHandler.setTriggerContext(String, Boolean)
+11:01:27.0 (16218790)|METHOD_EXIT|[23]|01pO00000003AAn|TriggerHandler.setTriggerContext()
+11:01:27.0 (16222892)|CONSTRUCTOR_EXIT|[24]|01pO00000003AAn|<init>()
+11:01:27.0 (16225473)|STATEMENT_EXECUTE|[24]
+11:01:27.0 (16228189)|CONSTRUCTOR_EXIT|[4]|01pO0000000371i|<init>()
+11:01:27.0 (16236258)|METHOD_ENTRY|[4]|01pO00000003AAn|TriggerHandler.run()
+11:01:27.0 (16239924)|VARIABLE_SCOPE_BEGIN|[31]|this|TriggerHandler|true|false
+11:01:27.0 (16264131)|VARIABLE_ASSIGNMENT|[31]|this|{"OppTeamMembers":"0x4fec7f2e","context":"0x698e9cc","isTriggerExecuting":true}|0xb684abd
+11:01:27.0 (16269160)|STATEMENT_EXECUTE|[31]
+11:01:27.0 (16277446)|METHOD_ENTRY|[33]|01pO00000003AAn|TriggerHandler.validateRun()
+11:01:27.0 (16289101)|VARIABLE_SCOPE_BEGIN|[146]|this|TriggerHandler|true|false
+11:01:27.0 (16307056)|VARIABLE_ASSIGNMENT|[146]|this|{"OppTeamMembers":"0x4fec7f2e","context":"0x698e9cc","isTriggerExecuting":true}|0xb684abd
+11:01:27.0 (16312011)|STATEMENT_EXECUTE|[146]
+11:01:27.0 (16318262)|STATEMENT_EXECUTE|[147]
+11:01:27.0 (16327621)|METHOD_ENTRY|[150]|01pO00000003AAn|TriggerHandler.getHandlerName()
+11:01:27.0 (16340111)|VARIABLE_SCOPE_BEGIN|[157]|this|TriggerHandler|true|false
+11:01:27.0 (16358009)|VARIABLE_ASSIGNMENT|[157]|this|{"OppTeamMembers":"0x4fec7f2e","context":"0x698e9cc","isTriggerExecuting":true}|0xb684abd
+11:01:27.0 (16362634)|STATEMENT_EXECUTE|[157]
+11:01:27.0 (16363930)|STATEMENT_EXECUTE|[158]
+11:01:27.0 (16394362)|SYSTEM_METHOD_ENTRY|[158]|String.valueOf(Object)
+11:01:27.0 (16477586)|HEAP_ALLOCATE|[158]|Bytes:426
+11:01:27.0 (16494608)|SYSTEM_METHOD_EXIT|[158]|String.valueOf(Object)
+11:01:27.0 (16512154)|SYSTEM_METHOD_ENTRY|[158]|String.valueOf(Object)
+11:01:27.0 (16557320)|HEAP_ALLOCATE|[158]|Bytes:426
+11:01:27.0 (16571942)|SYSTEM_METHOD_EXIT|[158]|String.valueOf(Object)
+11:01:27.0 (16576439)|HEAP_ALLOCATE|[158]|Bytes:1
+11:01:27.0 (16592373)|SYSTEM_METHOD_ENTRY|[158]|String.indexOf(String)
+11:01:27.0 (16603050)|SYSTEM_METHOD_EXIT|[158]|String.indexOf(String)
+11:01:27.0 (16622087)|SYSTEM_METHOD_ENTRY|[158]|String.substring(Integer, Integer)
+11:01:27.0 (16629124)|HEAP_ALLOCATE|[158]|Bytes:25
+11:01:27.0 (16639379)|SYSTEM_METHOD_EXIT|[158]|String.substring(Integer, Integer)
+11:01:27.0 (16644767)|METHOD_EXIT|[150]|01pO00000003AAn|TriggerHandler.getHandlerName()
+11:01:27.0 (16659990)|SYSTEM_METHOD_ENTRY|[150]|Set<String>.contains(Object)
+11:01:27.0 (16670266)|SYSTEM_METHOD_EXIT|[150]|Set<String>.contains(Object)
+11:01:27.0 (16674655)|STATEMENT_EXECUTE|[150]
+11:01:27.0 (16676107)|STATEMENT_EXECUTE|[153]
+11:01:27.0 (16679967)|METHOD_EXIT|[33]|01pO00000003AAn|TriggerHandler.validateRun()
+11:01:27.0 (16682721)|STATEMENT_EXECUTE|[33]
+11:01:27.0 (16683863)|STATEMENT_EXECUTE|[35]
+11:01:27.0 (16690760)|METHOD_ENTRY|[35]|01pO00000003AAn|TriggerHandler.addToLoopCount()
+11:01:27.0 (16702615)|VARIABLE_SCOPE_BEGIN|[133]|this|TriggerHandler|true|false
+11:01:27.0 (16724172)|VARIABLE_ASSIGNMENT|[133]|this|{"OppTeamMembers":"0x4fec7f2e","context":"0x698e9cc","isTriggerExecuting":true}|0xb684abd
+11:01:27.0 (16729087)|STATEMENT_EXECUTE|[133]
+11:01:27.0 (16730440)|STATEMENT_EXECUTE|[134]
+11:01:27.0 (16738523)|METHOD_ENTRY|[134]|01pO00000003AAn|TriggerHandler.getHandlerName()
+11:01:27.0 (16748709)|VARIABLE_SCOPE_BEGIN|[157]|this|TriggerHandler|true|false
+11:01:27.0 (16765985)|VARIABLE_ASSIGNMENT|[157]|this|{"OppTeamMembers":"0x4fec7f2e","context":"0x698e9cc","isTriggerExecuting":true}|0xb684abd
+11:01:27.0 (16770011)|STATEMENT_EXECUTE|[157]
+11:01:27.0 (16771178)|STATEMENT_EXECUTE|[158]
+11:01:27.0 (16788542)|SYSTEM_METHOD_ENTRY|[158]|String.valueOf(Object)
+11:01:27.0 (16835829)|HEAP_ALLOCATE|[158]|Bytes:426
+11:01:27.0 (16850836)|SYSTEM_METHOD_EXIT|[158]|String.valueOf(Object)
+11:01:27.0 (16866171)|SYSTEM_METHOD_ENTRY|[158]|String.valueOf(Object)
+11:01:27.0 (16907768)|HEAP_ALLOCATE|[158]|Bytes:426
+11:01:27.0 (16921781)|SYSTEM_METHOD_EXIT|[158]|String.valueOf(Object)
+11:01:27.0 (16937655)|SYSTEM_METHOD_ENTRY|[158]|String.indexOf(String)
+11:01:27.0 (16946515)|SYSTEM_METHOD_EXIT|[158]|String.indexOf(String)
+11:01:27.0 (16956223)|SYSTEM_METHOD_ENTRY|[158]|String.substring(Integer, Integer)
+11:01:27.0 (16960137)|HEAP_ALLOCATE|[158]|Bytes:25
+11:01:27.0 (16968559)|SYSTEM_METHOD_EXIT|[158]|String.substring(Integer, Integer)
+11:01:27.0 (16973222)|METHOD_EXIT|[134]|01pO00000003AAn|TriggerHandler.getHandlerName()
+11:01:27.0 (16976268)|VARIABLE_SCOPE_BEGIN|[134]|handlerName|String|false|false
+11:01:27.0 (16985608)|VARIABLE_ASSIGNMENT|[134]|handlerName|"OpportunityTriggerHa (5 more) ..."
+11:01:27.0 (17003829)|SYSTEM_METHOD_ENTRY|[135]|Map<String,TriggerHandler.LoopCount>.containsKey(Object)
+11:01:27.0 (17026701)|SYSTEM_METHOD_EXIT|[135]|Map<String,TriggerHandler.LoopCount>.containsKey(Object)
+11:01:27.0 (17031715)|STATEMENT_EXECUTE|[135]
+11:01:27.0 (17035613)|METHOD_EXIT|[35]|01pO00000003AAn|TriggerHandler.addToLoopCount()
+11:01:27.0 (17069683)|SYSTEM_METHOD_ENTRY|[38]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+11:01:27.0 (17120477)|SYSTEM_METHOD_EXIT|[38]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+11:01:27.0 (17140314)|SYSTEM_METHOD_ENTRY|[40]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+11:01:27.0 (17165252)|SYSTEM_METHOD_EXIT|[40]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+11:01:27.0 (17169283)|STATEMENT_EXECUTE|[40]
+11:01:27.0 (17170603)|STATEMENT_EXECUTE|[41]
+11:01:27.0 (17180966)|METHOD_ENTRY|[41]|01pO0000000371i|OpportunityTriggerHandler.beforeUpdate()
+11:01:27.0 (17191539)|VARIABLE_SCOPE_BEGIN|[40]|this|OpportunityTriggerHandler|true|false
+11:01:27.0 (17212671)|VARIABLE_ASSIGNMENT|[40]|this|{"OppTeamMembers":"0x4fec7f2e","context":"0x698e9cc","isTriggerExecuting":true}|0xb684abd
+11:01:27.0 (17217590)|STATEMENT_EXECUTE|[40]
+11:01:27.0 (17218735)|STATEMENT_EXECUTE|[41]
+11:01:27.0 (17352326)|HEAP_ALLOCATE|[41]|Bytes:20
+11:01:27.0 (17376990)|SYSTEM_METHOD_ENTRY|[41]|System.debug(APEX_OBJECT, ANY)
+11:01:27.0 (17399355)|USER_DEBUG|[41]|ERROR|*** BEFORE UPDATE **
+11:01:27.0 (17404692)|SYSTEM_METHOD_EXIT|[41]|System.debug(APEX_OBJECT, ANY)
+11:01:27.0 (17411449)|STATEMENT_EXECUTE|[42]
+11:01:27.0 (17412679)|STATEMENT_EXECUTE|[43]
+11:01:27.0 (17424250)|METHOD_ENTRY|[43]|01pO0000000371i|OpportunityTriggerHandler.onBeforeUpdateMethods()
+11:01:27.0 (17435182)|VARIABLE_SCOPE_BEGIN|[313]|this|OpportunityTriggerHandler|true|false
+11:01:27.0 (17456902)|VARIABLE_ASSIGNMENT|[313]|this|{"OppTeamMembers":"0x4fec7f2e","context":"0x698e9cc","isTriggerExecuting":true}|0xb684abd
+11:01:27.0 (17461802)|STATEMENT_EXECUTE|[313]
+11:01:27.0 (17548956)|SYSTEM_METHOD_ENTRY|[314]|List<Opportunity>.iterator()
+11:01:27.0 (17665731)|SYSTEM_METHOD_EXIT|[314]|List<Opportunity>.iterator()
+11:01:27.0 (17686749)|SYSTEM_METHOD_ENTRY|[314]|system.ListIterator.hasNext()
+11:01:27.0 (17696253)|HEAP_ALLOCATE|[314]|Bytes:5
+11:01:27.0 (17703431)|SYSTEM_METHOD_EXIT|[314]|system.ListIterator.hasNext()
+11:01:27.0 (17733097)|HEAP_ALLOCATE|[314]|Bytes:4
+11:01:27.0 (17743849)|VARIABLE_SCOPE_BEGIN|[314]|opp|Opportunity|true|false
+11:01:27.0 (43715284)|VARIABLE_ASSIGNMENT|[314]|opp|{"LastModifiedDate":"2017-04-12T01:00:18.000Z","Regional_Business__c":"a0BO000000F5hL5MAJ","TSF_Gate_Status__c":"Not Applicable","Contract_Risk__c":"Client-side risk: Co (23 more) ...","CloseDate":"2017-08-01T00:00:00.000Z","HasOpenActivity":false,"Budget_Confirmed__c":false,"Overall_Prospect_Val (5 more) ...":9999999,"Less_Cost_Recoveries (10 more) ...":0,"District__c":"Northern Rivers","State__c":"New South Wales","D_I_Involvement__c":false,"IsDeleted":false,"Non_Binding_Proposal (12 more) ...":false,"Net_Budget_Post_Tend (5 more) ...":0,"Parent_Company_Guara (11 more) ...":" ","Previous_Gate_TSF_St (7 more) ...":"Not Applicable","Detailed_Description (3 more) ...":"Desc","ROI_Analysis_Complet (5 more) ...":false,"PPP_or_Third_Party_F (16 more) ...":false,"Executive_Summary__c":"Desc","CRA_Gate_Status__c":"Not Applicable","Tender_Dates_Header_ (2 more) ...":" ","Less_Cost_Recoveries (10 more) ...":0,"Is_internal_BG_colla (11 more) ...":false,"Prospect_Status__c":"Prospect","Id":"006O0000009HAXhIAO","Proposed_Margin_on_R (9 more) ...":30,"Client_Drivers__c":"Test","Primary_Business_Uni (4 more) ...":"NSW/ACT","IsClosed":false,"Delivery_End_Date__c":"2020-07-31T00:00:00.000Z","OwnerId":"00528000006B07FAAS","Prospect_Duration_Yr (4 more) ...":3.0,"Reason_For_Performin (9 more) ...":"Test","RecordTypeId":"012O0000000DD8PIAW","Key_Account_Manager_ (2 more) ...":"System Partners","Country__c":"Australia","Total_Budget_AUD__c":0,"StageName":"Gate 3","Amount":9999999.00,"Probability":60.0,"EOI_PQ_Close_Date__c":"2017-05-01T00:00:00.000Z","Independent_Credit_C (16 more) ...":false,"SystemModstamp":"2017-04-12T01:00:18.000Z","Total_Less_Recoverie (4 more) ...":0,"Business_Development (11 more) ...":"00528000004d3msAAA","AccountId":"001O0000018AKplIAG","HasOpportunityLineIt (2 more) ...":false,"Prospect_Number__c":"PRS-00148","ForecastCategory":"Pipeline","Net_Budget_EOI_PQ__c":0,"Client_Relationship_ (13 more) ...":"Test","Number_of_PRA_Critic (19 more) ...":0,"Name":"Test AMcF 12-04 #1","Prospect_Priority__c":"3","CreatedById":"00528000006B07FAAS","A_PCG_Is_Required_Fr (5 more) ...":"JHG","Project_Development_ (10 more) ...":"00528000006BYTIAA4","Tender_Close_Date__c":"2017-07-01T00:00:00.000Z","JH_Margin_Value__c":0,"Defect_Liability_Dur (15 more) ...":12,"Sync_Date_Fields__c":true,"Is_this_project_a_JV (15 more) ...":false,"Project_Duration_Mon (6 more) ...":36,"Delivery_End_Defect_ (21 more) ...":"2021-07-31T00:00:00.000Z","Is_Gate_1_To_3__c":true,"Bonding_Security_Hea (6 more) ...":" ","Net_Budget_Tender__c":0,"CreatedDate":"2017-04-12T01:00:17.000Z","HasOverdueTask":false,"Discovery_Completed_ (2 more) ...":false,"Data_Quality_Score__ (1 more) ...":40,"Project_Probability_ (2 more) ...":90,"ForecastCategoryName":"Pipeline","Client_Probity__c":false,"Total_Budget_EOI_PQ_ (2 more) ...":0,"Managing_Contractor_ (12 more) ...":false,"Business_Group__c":"a0BO000000F5hL0MAJ","Anticipated_Revenue_ (13 more) ...":"2017-09-01T00:00:00.000Z","Is_Gate_4_To_5__c":false,"Data_Quality_Descrip (7 more) ...":"Missing: Type, Lead  (18 more) ...","ExpectedRevenue":5999999.399999999,"Net_Budget_Amount__c":0,"Probity_Override__c":false,"IsWon":false,"EOI_PQ_Start_Date__c":"2017-04-01T00:00:00.000Z","Location__c":"Lismore, New South W (15 more) ...","D_I_Involvement_Text (3 more) ...":"No","Less_Cost_Recoveries (15 more) ...":0,"Previous_Gate_CRA_St (7 more) ...":"Not Applicable","Previous_Gate_Status (3 more) ...":"Not Applicable","Request_For_Special_ (22 more) ...":false,"Conga_Other_Heading_ (8 more) ...":"Other:","Apply_Default_Bondin (4 more) ...":false,"Gate_Status__c":"Not Started","Win_Probability__c":90,"D_I_Involvement_Guid (12 more) ...":"This box should be c (183 more) ...","Total_Budget_Tender_ (2 more) ...":0,"Total_Budget_Post_Te (7 more) ...":0,"Restrict_Access__c":false,"Nearest_City__c":"Lismore","Tender_Start_Date__c":"2017-06-01T00:00:00.000Z","IsPrivate":false,"LastModifiedById":"00528000006B07FAAS","Is_internal_Regional (21 more) ...":false}|0x306f1967
+11:01:27.0 (43753175)|STATEMENT_EXECUTE|[314]
+11:01:27.0 (43755575)|STATEMENT_EXECUTE|[315]
+11:01:27.0 (43800462)|METHOD_ENTRY|[315]|01pO0000000371i|OpportunityTriggerHandler.validationRuleOnStageChange(Opportunity)
+11:01:27.0 (43832061)|VARIABLE_SCOPE_BEGIN|[327]|this|OpportunityTriggerHandler|true|false
+11:01:27.0 (43881984)|VARIABLE_ASSIGNMENT|[327]|this|{"OppTeamMembers":"0x4fec7f2e","context":"0x698e9cc","isTriggerExecuting":true}|0xb684abd
+11:01:27.0 (43885611)|VARIABLE_SCOPE_BEGIN|[327]|opp|Opportunity|true|false
+11:01:27.0 (45134896)|VARIABLE_ASSIGNMENT|[327]|opp|{"LastModifiedDate":"2017-04-12T01:00:18.000Z","Regional_Business__c":"a0BO000000F5hL5MAJ","TSF_Gate_Status__c":"Not Applicable","Contract_Risk__c":"Client-side risk: Co (23 more) ...","CloseDate":"2017-08-01T00:00:00.000Z","HasOpenActivity":false,"Budget_Confirmed__c":false,"Overall_Prospect_Val (5 more) ...":9999999,"Less_Cost_Recoveries (10 more) ...":0,"District__c":"Northern Rivers","State__c":"New South Wales","D_I_Involvement__c":false,"IsDeleted":false,"Non_Binding_Proposal (12 more) ...":false,"Net_Budget_Post_Tend (5 more) ...":0,"Parent_Company_Guara (11 more) ...":" ","Previous_Gate_TSF_St (7 more) ...":"Not Applicable","Detailed_Description (3 more) ...":"Desc","ROI_Analysis_Complet (5 more) ...":false,"PPP_or_Third_Party_F (16 more) ...":false,"Executive_Summary__c":"Desc","CRA_Gate_Status__c":"Not Applicable","Tender_Dates_Header_ (2 more) ...":" ","Less_Cost_Recoveries (10 more) ...":0,"Is_internal_BG_colla (11 more) ...":false,"Prospect_Status__c":"Prospect","Id":"006O0000009HAXhIAO","Proposed_Margin_on_R (9 more) ...":30,"Client_Drivers__c":"Test","Primary_Business_Uni (4 more) ...":"NSW/ACT","IsClosed":false,"Delivery_End_Date__c":"2020-07-31T00:00:00.000Z","OwnerId":"00528000006B07FAAS","Prospect_Duration_Yr (4 more) ...":3.0,"Reason_For_Performin (9 more) ...":"Test","RecordTypeId":"012O0000000DD8PIAW","Key_Account_Manager_ (2 more) ...":"System Partners","Country__c":"Australia","Total_Budget_AUD__c":0,"StageName":"Gate 3","Amount":9999999.00,"Probability":60.0,"EOI_PQ_Close_Date__c":"2017-05-01T00:00:00.000Z","Independent_Credit_C (16 more) ...":false,"SystemModstamp":"2017-04-12T01:00:18.000Z","Total_Less_Recoverie (4 more) ...":0,"Business_Development (11 more) ...":"00528000004d3msAAA","AccountId":"001O0000018AKplIAG","HasOpportunityLineIt (2 more) ...":false,"Prospect_Number__c":"PRS-00148","ForecastCategory":"Pipeline","Net_Budget_EOI_PQ__c":0,"Client_Relationship_ (13 more) ...":"Test","Number_of_PRA_Critic (19 more) ...":0,"Name":"Test AMcF 12-04 #1","Prospect_Priority__c":"3","CreatedById":"00528000006B07FAAS","A_PCG_Is_Required_Fr (5 more) ...":"JHG","Project_Development_ (10 more) ...":"00528000006BYTIAA4","Tender_Close_Date__c":"2017-07-01T00:00:00.000Z","JH_Margin_Value__c":0,"Defect_Liability_Dur (15 more) ...":12,"Sync_Date_Fields__c":true,"Is_this_project_a_JV (15 more) ...":false,"Project_Duration_Mon (6 more) ...":36,"Delivery_End_Defect_ (21 more) ...":"2021-07-31T00:00:00.000Z","Is_Gate_1_To_3__c":true,"Bonding_Security_Hea (6 more) ...":" ","Net_Budget_Tender__c":0,"CreatedDate":"2017-04-12T01:00:17.000Z","HasOverdueTask":false,"Discovery_Completed_ (2 more) ...":false,"Data_Quality_Score__ (1 more) ...":40,"Project_Probability_ (2 more) ...":90,"ForecastCategoryName":"Pipeline","Client_Probity__c":false,"Total_Budget_EOI_PQ_ (2 more) ...":0,"Managing_Contractor_ (12 more) ...":false,"Business_Group__c":"a0BO000000F5hL0MAJ","Anticipated_Revenue_ (13 more) ...":"2017-09-01T00:00:00.000Z","Is_Gate_4_To_5__c":false,"Data_Quality_Descrip (7 more) ...":"Missing: Type, Lead  (18 more) ...","ExpectedRevenue":5999999.399999999,"Net_Budget_Amount__c":0,"Probity_Override__c":false,"IsWon":false,"EOI_PQ_Start_Date__c":"2017-04-01T00:00:00.000Z","Location__c":"Lismore, New South W (15 more) ...","D_I_Involvement_Text (3 more) ...":"No","Less_Cost_Recoveries (15 more) ...":0,"Previous_Gate_CRA_St (7 more) ...":"Not Applicable","Previous_Gate_Status (3 more) ...":"Not Applicable","Request_For_Special_ (22 more) ...":false,"Conga_Other_Heading_ (8 more) ...":"Other:","Apply_Default_Bondin (4 more) ...":false,"Gate_Status__c":"Not Started","Win_Probability__c":90,"D_I_Involvement_Guid (12 more) ...":"This box should be c (183 more) ...","Total_Budget_Tender_ (2 more) ...":0,"Total_Budget_Post_Te (7 more) ...":0,"Restrict_Access__c":false,"Nearest_City__c":"Lismore","Tender_Start_Date__c":"2017-06-01T00:00:00.000Z","IsPrivate":false,"LastModifiedById":"00528000006B07FAAS","Is_internal_Regional (21 more) ...":false}|0x306f1967
+11:01:27.0 (45161204)|STATEMENT_EXECUTE|[327]
+11:01:27.0 (45163498)|STATEMENT_EXECUTE|[328]
+11:01:27.0 (45339727)|SYSTEM_METHOD_ENTRY|[328]|Map<Id,Opportunity>.get(Object)
+11:01:27.0 (45375397)|SYSTEM_METHOD_EXIT|[328]|Map<Id,Opportunity>.get(Object)
+11:01:27.0 (45395634)|VARIABLE_SCOPE_BEGIN|[328]|oldOpp|Opportunity|true|false
+11:01:27.0 (48852093)|VARIABLE_ASSIGNMENT|[328]|oldOpp|{"LastModifiedDate":"2017-04-12T01:00:18.000Z","Regional_Business__c":"a0BO000000F5hL5MAJ","TSF_Gate_Status__c":"Not Applicable","Contract_Risk__c":"Client-side risk: Co (23 more) ...","CloseDate":"2017-08-01T00:00:00.000Z","HasOpenActivity":false,"Budget_Confirmed__c":false,"Overall_Prospect_Val (5 more) ...":9999999,"Less_Cost_Recoveries (10 more) ...":0,"District__c":"Northern Rivers","State__c":"New South Wales","D_I_Involvement__c":false,"IsDeleted":false,"Non_Binding_Proposal (12 more) ...":false,"Net_Budget_Post_Tend (5 more) ...":0,"Parent_Company_Guara (11 more) ...":" ","Previous_Gate_TSF_St (7 more) ...":"Not Applicable","Detailed_Description (3 more) ...":"Desc","ROI_Analysis_Complet (5 more) ...":false,"PPP_or_Third_Party_F (16 more) ...":false,"Executive_Summary__c":"Desc","CRA_Gate_Status__c":"Not Applicable","Tender_Dates_Header_ (2 more) ...":" ","Less_Cost_Recoveries (10 more) ...":0,"Is_internal_BG_colla (11 more) ...":false,"Prospect_Status__c":"Prospect","Id":"006O0000009HAXhIAO","Proposed_Margin_on_R (9 more) ...":30,"Client_Drivers__c":"Test","Primary_Business_Uni (4 more) ...":"NSW/ACT","IsClosed":false,"Delivery_End_Date__c":"2020-07-31T00:00:00.000Z","OwnerId":"00528000006B07FAAS","Prospect_Duration_Yr (4 more) ...":3.0,"Reason_For_Performin (9 more) ...":"Test","RecordTypeId":"012O0000000DD8PIAW","Key_Account_Manager_ (2 more) ...":"System Partners","Country__c":"Australia","Total_Budget_AUD__c":0,"StageName":"Gate 3","Amount":9999999.00,"Probability":60,"EOI_PQ_Close_Date__c":"2017-05-01T00:00:00.000Z","Independent_Credit_C (16 more) ...":false,"SystemModstamp":"2017-04-12T01:00:18.000Z","Total_Less_Recoverie (4 more) ...":0,"Business_Development (11 more) ...":"00528000004d3msAAA","AccountId":"001O0000018AKplIAG","HasOpportunityLineIt (2 more) ...":false,"Prospect_Number__c":"PRS-00148","ForecastCategory":"Pipeline","Net_Budget_EOI_PQ__c":0,"Client_Relationship_ (13 more) ...":"Test","Number_of_PRA_Critic (19 more) ...":0,"Name":"Test AMcF 12-04 #1","Prospect_Priority__c":"3","CreatedById":"00528000006B07FAAS","Tender_Close_Date__c":"2017-07-01T00:00:00.000Z","JH_Margin_Value__c":0,"Defect_Liability_Dur (15 more) ...":12,"Sync_Date_Fields__c":false,"Is_this_project_a_JV (15 more) ...":false,"Project_Duration_Mon (6 more) ...":36,"Delivery_End_Defect_ (21 more) ...":"2021-07-31T00:00:00.000Z","Is_Gate_1_To_3__c":true,"Bonding_Security_Hea (6 more) ...":" ","Net_Budget_Tender__c":0,"CreatedDate":"2017-04-12T01:00:17.000Z","HasOverdueTask":false,"Discovery_Completed_ (2 more) ...":false,"Data_Quality_Score__ (1 more) ...":40,"Project_Probability_ (2 more) ...":90,"ForecastCategoryName":"Pipeline","Client_Probity__c":false,"Total_Budget_EOI_PQ_ (2 more) ...":0,"Managing_Contractor_ (12 more) ...":false,"Business_Group__c":"a0BO000000F5hL0MAJ","Anticipated_Revenue_ (13 more) ...":"2017-09-01T00:00:00.000Z","Is_Gate_4_To_5__c":false,"Data_Quality_Descrip (7 more) ...":"Missing: Type, Lead  (18 more) ...","ExpectedRevenue":5999999.399999999,"Net_Budget_Amount__c":0,"Probity_Override__c":false,"IsWon":false,"EOI_PQ_Start_Date__c":"2017-04-01T00:00:00.000Z","Location__c":"Lismore, New South W (15 more) ...","D_I_Involvement_Text (3 more) ...":"No","Less_Cost_Recoveries (15 more) ...":0,"Previous_Gate_CRA_St (7 more) ...":"Not Applicable","Previous_Gate_Status (3 more) ...":"Not Applicable","Request_For_Special_ (22 more) ...":false,"Conga_Other_Heading_ (8 more) ...":"Other:","Apply_Default_Bondin (4 more) ...":false,"Gate_Status__c":"Not Started","Win_Probability__c":90,"D_I_Involvement_Guid (12 more) ...":"This box should be c (183 more) ...","Total_Budget_Tender_ (2 more) ...":0,"Total_Budget_Post_Te (7 more) ...":0,"Restrict_Access__c":false,"Nearest_City__c":"Lismore","Tender_Start_Date__c":"2017-06-01T00:00:00.000Z","IsPrivate":false,"LastModifiedById":"00528000006B07FAAS","Is_internal_Regional (21 more) ...":false}|0x43841229
+11:01:27.0 (48932905)|STATEMENT_EXECUTE|[331]
+11:01:27.0 (48943091)|METHOD_EXIT|[315]|01pO0000000371i|OpportunityTriggerHandler.validationRuleOnStageChange(Opportunity)
+11:01:27.0 (48947193)|STATEMENT_EXECUTE|[316]
+11:01:27.0 (48959806)|METHOD_ENTRY|[316]|01pO0000000371i|OpportunityTriggerHandler.determineGate(Opportunity)
+11:01:27.0 (48976148)|VARIABLE_SCOPE_BEGIN|[345]|this|OpportunityTriggerHandler|true|false
+11:01:27.0 (49006168)|VARIABLE_ASSIGNMENT|[345]|this|{"OppTeamMembers":"0x4fec7f2e","context":"0x698e9cc","isTriggerExecuting":true}|0xb684abd
+11:01:27.0 (49010410)|VARIABLE_SCOPE_BEGIN|[345]|opp|Opportunity|true|false
+11:01:27.0 (50141380)|VARIABLE_ASSIGNMENT|[345]|opp|{"LastModifiedDate":"2017-04-12T01:00:18.000Z","Regional_Business__c":"a0BO000000F5hL5MAJ","TSF_Gate_Status__c":"Not Applicable","Contract_Risk__c":"Client-side risk: Co (23 more) ...","CloseDate":"2017-08-01T00:00:00.000Z","HasOpenActivity":false,"Budget_Confirmed__c":false,"Overall_Prospect_Val (5 more) ...":9999999,"Less_Cost_Recoveries (10 more) ...":0,"District__c":"Northern Rivers","State__c":"New South Wales","D_I_Involvement__c":false,"IsDeleted":false,"Non_Binding_Proposal (12 more) ...":false,"Net_Budget_Post_Tend (5 more) ...":0,"Parent_Company_Guara (11 more) ...":" ","Previous_Gate_TSF_St (7 more) ...":"Not Applicable","Detailed_Description (3 more) ...":"Desc","ROI_Analysis_Complet (5 more) ...":false,"PPP_or_Third_Party_F (16 more) ...":false,"Executive_Summary__c":"Desc","CRA_Gate_Status__c":"Not Applicable","Tender_Dates_Header_ (2 more) ...":" ","Less_Cost_Recoveries (10 more) ...":0,"Is_internal_BG_colla (11 more) ...":false,"Prospect_Status__c":"Prospect","Id":"006O0000009HAXhIAO","Proposed_Margin_on_R (9 more) ...":30,"Client_Drivers__c":"Test","Primary_Business_Uni (4 more) ...":"NSW/ACT","IsClosed":false,"Delivery_End_Date__c":"2020-07-31T00:00:00.000Z","OwnerId":"00528000006B07FAAS","Prospect_Duration_Yr (4 more) ...":3.0,"Reason_For_Performin (9 more) ...":"Test","RecordTypeId":"012O0000000DD8PIAW","Key_Account_Manager_ (2 more) ...":"System Partners","Country__c":"Australia","Total_Budget_AUD__c":0,"StageName":"Gate 3","Amount":9999999.00,"Probability":60.0,"EOI_PQ_Close_Date__c":"2017-05-01T00:00:00.000Z","Independent_Credit_C (16 more) ...":false,"SystemModstamp":"2017-04-12T01:00:18.000Z","Total_Less_Recoverie (4 more) ...":0,"Business_Development (11 more) ...":"00528000004d3msAAA","AccountId":"001O0000018AKplIAG","HasOpportunityLineIt (2 more) ...":false,"Prospect_Number__c":"PRS-00148","ForecastCategory":"Pipeline","Net_Budget_EOI_PQ__c":0,"Client_Relationship_ (13 more) ...":"Test","Number_of_PRA_Critic (19 more) ...":0,"Name":"Test AMcF 12-04 #1","Prospect_Priority__c":"3","CreatedById":"00528000006B07FAAS","A_PCG_Is_Required_Fr (5 more) ...":"JHG","Project_Development_ (10 more) ...":"00528000006BYTIAA4","Tender_Close_Date__c":"2017-07-01T00:00:00.000Z","JH_Margin_Value__c":0,"Defect_Liability_Dur (15 more) ...":12,"Sync_Date_Fields__c":true,"Is_this_project_a_JV (15 more) ...":false,"Project_Duration_Mon (6 more) ...":36,"Delivery_End_Defect_ (21 more) ...":"2021-07-31T00:00:00.000Z","Is_Gate_1_To_3__c":true,"Bonding_Security_Hea (6 more) ...":" ","Net_Budget_Tender__c":0,"CreatedDate":"2017-04-12T01:00:17.000Z","HasOverdueTask":false,"Discovery_Completed_ (2 more) ...":false,"Data_Quality_Score__ (1 more) ...":40,"Project_Probability_ (2 more) ...":90,"ForecastCategoryName":"Pipeline","Client_Probity__c":false,"Total_Budget_EOI_PQ_ (2 more) ...":0,"Managing_Contractor_ (12 more) ...":false,"Business_Group__c":"a0BO000000F5hL0MAJ","Anticipated_Revenue_ (13 more) ...":"2017-09-01T00:00:00.000Z","Is_Gate_4_To_5__c":false,"Data_Quality_Descrip (7 more) ...":"Missing: Type, Lead  (18 more) ...","ExpectedRevenue":5999999.399999999,"Net_Budget_Amount__c":0,"Probity_Override__c":false,"IsWon":false,"EOI_PQ_Start_Date__c":"2017-04-01T00:00:00.000Z","Location__c":"Lismore, New South W (15 more) ...","D_I_Involvement_Text (3 more) ...":"No","Less_Cost_Recoveries (15 more) ...":0,"Previous_Gate_CRA_St (7 more) ...":"Not Applicable","Previous_Gate_Status (3 more) ...":"Not Applicable","Request_For_Special_ (22 more) ...":false,"Conga_Other_Heading_ (8 more) ...":"Other:","Apply_Default_Bondin (4 more) ...":false,"Gate_Status__c":"Not Started","Win_Probability__c":90,"D_I_Involvement_Guid (12 more) ...":"This box should be c (183 more) ...","Total_Budget_Tender_ (2 more) ...":0,"Total_Budget_Post_Te (7 more) ...":0,"Restrict_Access__c":false,"Nearest_City__c":"Lismore","Tender_Start_Date__c":"2017-06-01T00:00:00.000Z","IsPrivate":false,"LastModifiedById":"00528000006B07FAAS","Is_internal_Regional (21 more) ...":false}|0x306f1967
+11:01:27.0 (50165364)|STATEMENT_EXECUTE|[345]
+11:01:27.0 (50167582)|STATEMENT_EXECUTE|[346]
+11:01:27.0 (50209410)|SYSTEM_METHOD_ENTRY|[346]|Map<Id,Opportunity>.get(Object)
+11:01:27.0 (50238792)|SYSTEM_METHOD_EXIT|[346]|Map<Id,Opportunity>.get(Object)
+11:01:27.0 (50253934)|VARIABLE_SCOPE_BEGIN|[346]|oldOpp|Opportunity|true|false
+11:01:27.0 (51356026)|VARIABLE_ASSIGNMENT|[346]|oldOpp|{"LastModifiedDate":"2017-04-12T01:00:18.000Z","Regional_Business__c":"a0BO000000F5hL5MAJ","TSF_Gate_Status__c":"Not Applicable","Contract_Risk__c":"Client-side risk: Co (23 more) ...","CloseDate":"2017-08-01T00:00:00.000Z","HasOpenActivity":false,"Budget_Confirmed__c":false,"Overall_Prospect_Val (5 more) ...":9999999,"Less_Cost_Recoveries (10 more) ...":0,"District__c":"Northern Rivers","State__c":"New South Wales","D_I_Involvement__c":false,"IsDeleted":false,"Non_Binding_Proposal (12 more) ...":false,"Net_Budget_Post_Tend (5 more) ...":0,"Parent_Company_Guara (11 more) ...":" ","Previous_Gate_TSF_St (7 more) ...":"Not Applicable","Detailed_Description (3 more) ...":"Desc","ROI_Analysis_Complet (5 more) ...":false,"PPP_or_Third_Party_F (16 more) ...":false,"Executive_Summary__c":"Desc","CRA_Gate_Status__c":"Not Applicable","Tender_Dates_Header_ (2 more) ...":" ","Less_Cost_Recoveries (10 more) ...":0,"Is_internal_BG_colla (11 more) ...":false,"Prospect_Status__c":"Prospect","Id":"006O0000009HAXhIAO","Proposed_Margin_on_R (9 more) ...":30,"Client_Drivers__c":"Test","Primary_Business_Uni (4 more) ...":"NSW/ACT","IsClosed":false,"Delivery_End_Date__c":"2020-07-31T00:00:00.000Z","OwnerId":"00528000006B07FAAS","Prospect_Duration_Yr (4 more) ...":3.0,"Reason_For_Performin (9 more) ...":"Test","RecordTypeId":"012O0000000DD8PIAW","Key_Account_Manager_ (2 more) ...":"System Partners","Country__c":"Australia","Total_Budget_AUD__c":0,"StageName":"Gate 3","Amount":9999999.00,"Probability":60,"EOI_PQ_Close_Date__c":"2017-05-01T00:00:00.000Z","Independent_Credit_C (16 more) ...":false,"SystemModstamp":"2017-04-12T01:00:18.000Z","Total_Less_Recoverie (4 more) ...":0,"Business_Development (11 more) ...":"00528000004d3msAAA","AccountId":"001O0000018AKplIAG","HasOpportunityLineIt (2 more) ...":false,"Prospect_Number__c":"PRS-00148","ForecastCategory":"Pipeline","Net_Budget_EOI_PQ__c":0,"Client_Relationship_ (13 more) ...":"Test","Number_of_PRA_Critic (19 more) ...":0,"Name":"Test AMcF 12-04 #1","Prospect_Priority__c":"3","CreatedById":"00528000006B07FAAS","Tender_Close_Date__c":"2017-07-01T00:00:00.000Z","JH_Margin_Value__c":0,"Defect_Liability_Dur (15 more) ...":12,"Sync_Date_Fields__c":false,"Is_this_project_a_JV (15 more) ...":false,"Project_Duration_Mon (6 more) ...":36,"Delivery_End_Defect_ (21 more) ...":"2021-07-31T00:00:00.000Z","Is_Gate_1_To_3__c":true,"Bonding_Security_Hea (6 more) ...":" ","Net_Budget_Tender__c":0,"CreatedDate":"2017-04-12T01:00:17.000Z","HasOverdueTask":false,"Discovery_Completed_ (2 more) ...":false,"Data_Quality_Score__ (1 more) ...":40,"Project_Probability_ (2 more) ...":90,"ForecastCategoryName":"Pipeline","Client_Probity__c":false,"Total_Budget_EOI_PQ_ (2 more) ...":0,"Managing_Contractor_ (12 more) ...":false,"Business_Group__c":"a0BO000000F5hL0MAJ","Anticipated_Revenue_ (13 more) ...":"2017-09-01T00:00:00.000Z","Is_Gate_4_To_5__c":false,"Data_Quality_Descrip (7 more) ...":"Missing: Type, Lead  (18 more) ...","ExpectedRevenue":5999999.399999999,"Net_Budget_Amount__c":0,"Probity_Override__c":false,"IsWon":false,"EOI_PQ_Start_Date__c":"2017-04-01T00:00:00.000Z","Location__c":"Lismore, New South W (15 more) ...","D_I_Involvement_Text (3 more) ...":"No","Less_Cost_Recoveries (15 more) ...":0,"Previous_Gate_CRA_St (7 more) ...":"Not Applicable","Previous_Gate_Status (3 more) ...":"Not Applicable","Request_For_Special_ (22 more) ...":false,"Conga_Other_Heading_ (8 more) ...":"Other:","Apply_Default_Bondin (4 more) ...":false,"Gate_Status__c":"Not Started","Win_Probability__c":90,"D_I_Involvement_Guid (12 more) ...":"This box should be c (183 more) ...","Total_Budget_Tender_ (2 more) ...":0,"Total_Budget_Post_Te (7 more) ...":0,"Restrict_Access__c":false,"Nearest_City__c":"Lismore","Tender_Start_Date__c":"2017-06-01T00:00:00.000Z","IsPrivate":false,"LastModifiedById":"00528000006B07FAAS","Is_internal_Regional (21 more) ...":false}|0x43841229
+11:01:27.0 (51378141)|STATEMENT_EXECUTE|[348]
+11:01:27.0 (51390111)|HEAP_ALLOCATE|[348]|Bytes:29
+11:01:27.0 (51420308)|SYSTEM_METHOD_ENTRY|[348]|String.valueOf(Object)
+11:01:27.0 (53183956)|HEAP_ALLOCATE|[348]|Bytes:6165
+11:01:27.0 (53208119)|SYSTEM_METHOD_EXIT|[348]|String.valueOf(Object)
+11:01:27.0 (53223550)|HEAP_ALLOCATE|[348]|Bytes:6194
+11:01:27.0 (53242720)|SYSTEM_METHOD_ENTRY|[348]|System.debug(APEX_OBJECT, ANY)
+11:01:27.0 (53258986)|USER_DEBUG|[348]|ERROR|*** TEST Determine Gate opp: Opportunity:{Id=006O0000009HAXhIAO, IsDeleted=false, AccountId=001O0000018AKplIAG, RecordTypeId=012O0000000DD8PIAW, IsPrivate=false, Name=Test AMcF 12-04 #1, Description=null, StageName=Gate 3, Amount=9999999.00, Probability=60.0, ExpectedRevenue=5999999.399999999, TotalOpportunityQuantity=null, CloseDate=2017-08-01 00:00:00, Type=null, NextStep=null, LeadSource=null, IsClosed=false, IsWon=false, ForecastCategory=Pipeline, ForecastCategoryName=Pipeline, CampaignId=null, HasOpportunityLineItem=false, Pricebook2Id=null, OwnerId=00528000006B07FAAS, CreatedDate=2017-04-12 01:00:17, CreatedById=00528000006B07FAAS, LastModifiedDate=2017-04-12 01:00:18, LastModifiedById=00528000006B07FAAS, SystemModstamp=2017-04-12 01:00:18, LastActivityDate=null, FiscalYear=null, FiscalQuarter=null, LastViewedDate=null, LastReferencedDate=null, SyncedQuoteId=null, ContractId=null, HasOpenActivity=false, HasOverdueTask=false, Budget_Confirmed__c=false, Discovery_Completed__c=false, ROI_Analysis_Completed__c=false, Loss_Reason__c=null, Business_Group__c=a0BO000000F5hL0MAJ, Data_Quality_Description__c=Missing: Type, Lead Source, Next Steps, Data_Quality_Score__c=40, EOI_Tender_Date__c=null, Prospect_Code__c=null, Prospect_Manager__c=null, Regional_Business__c=a0BO000000F5hL5MAJ, CANDY_Tender_Number__c=null, Also_Known_As__c=null, Prospect_Priority__c=3, Prospect_Number__c=PRS-00148, Win_Probability__c=90, Project_Probability__c=90, Project_Duration_Months__c=36, Scope__c=null, Payment_Mechanism__c=null, Discipline__c=null, D_I_Involvement__c=false, D_I_Involvement_Guidance_Note__c=This box should be checked if JH D&I are directly involved in providing financial advice, direction or lead of SPV for the prospect. It should not be checked if there is no D&I requirement to be involved, Client_Probity__c=false, Restrict_Access__c=false, Prospect_Status__c=Prospect, Industry_Sector_GM__c=null, Project_Development_Manager__c=00528000006BYTIAA4, Detailed_Description__c=Desc, Non_Binding_Proposal_Required__c=false, EOI_PQ_Start_Date__c=2017-04-01 00:00:00, EOI_PQ_Close_Date__c=2017-05-01 00:00:00, Announcement_of_Pre_Qualified_Bidders__c=null, Strategy_Bid_Development_Meeting_Date__c=null, Tender_Start_Date__c=2017-06-01 00:00:00, Tender_Close_Date__c=2017-07-01 00:00:00, Anticipated_Revenue_Start_Date__c=2017-09-01 00:00:00, Interim_Review__c=null, Preliminary_Final_Review__c=null, Final_Tender_Review__c=null, Tender_Collaboration_Pack_Aconex_DB_URL__c=null, Country__c=Australia, State__c=New South Wales, Nearest_City__c=Lismore, District__c=Northern Rivers, Reason_For_Performing_Work__c=Test, Client_Drivers__c=Test, Relationship__c=null, Client_Relationship_Management__c=Test, Financial_Viability_Exposure__c=null, Independent_Credit_Check_Required__c=false, Client_Supplied_Materials__c=null, Value_of_Managed_Works__c=null, Overall_Prospect_Value__c=9999999, Managing_Contractor_Time_Risk__c=false, Proposed_Margin_on_Revenue__c=30, PPP_or_Third_Party_Funded_Project__c=false, Payment_Variation_Terms__c=null, Finance_Prospect_Comments__c=null, Defect_Liability_Duration_Months__c=12, Minimum_Credit_Rating_Required__c=null, Request_For_Special_Wording_In_The_Bond__c=false, A_PCG_Is_Required_From__c=JHG, PCG_Comments__c=null, Proposed_FA__c=null, Funding_Strategy__c=null, Target_Gearing_Ratio__c=null, Total_Indicative_Equity__c=null, JH_Target_Equity__c=null, JH_Target_Equity_Amount__c=null, Timing_for_Contribution__c=null, Equity_Residual_Risk__c=null, Target_IRR_and_or_D_I_Revenues__c=null, Intended_Exit_Strategy__c=null, JH_Accounting_Tax_Considerations__c=null, Relationship_Agreements__c=null, Is_this_project_a_JV_or_Alliance__c=false, Proposed_form_of_Relationship__c=null, Is_internal_BG_collaboration__c=false, Major_Risks__c=null, Nature_of_technology_design_proposed__c=null, Intentions_to_Resource_Project_Team__c=null, Is_internal_Regional_Bus_collaboration__c=false, Contract_Risk__c=Client-side risk: Cost plus margin contract, Client_Relationship_Manager__c=null, Other_Custom_Heading__c=null, Business_Development_Manager__c=00528000004d3msAAA, Procurement_Process__c=null, Alignment_with_Business_Plan__c=null, Competitor_Analysis_General_Comments__c=null, Intentions_to_Resource_Bid_Team__c=null, Conversion_Budget_Comments__c=null, Specific_KCRA_Approvals_Comments__c=null, Design__c=null, Cost__c=null, Time__c=null, Relationships__c=null, People__c=null, Technology__c=null, Methodology__c=null, Innovation__c=null, Other__c=null, Key_Points__c=null, Alignment_with_Core_Competencies__c=null, Executive_Summary__c=Desc, Parent_Company_Guarantee_PCG__c= , Bonding_Security_Header__c= , Tender_Dates_Header__c= , JH_Revenue_Share__c=null, JH_Margin_Value__c=0, Total_Budget_EOI_PQ__c=0, Total_Budget_Tender__c=0, Total_Budget_Post_Tender__c=0, Less_Cost_Recoveries_EOI_PQ__c=0, Less_Cost_Recoveries_Tender__c=0, Less_Cost_Recoveries_Post_Tender__c=0, Total_Budget_AUD__c=0, Total_Less_Recoveries__c=0, Net_Budget_Amount__c=0, Net_Budget_EOI_PQ__c=0, Net_Budget_Tender__c=0, Net_Budget_Post_Tender__c=0, JH_Bid_Cost_of_JH_Revenue__c=null, Location__c=Lismore, New South Wales, Australia, Delivery_End_Date__c=2020-07-31 00:00:00, Prospect_Duration_Yrs__c=3.0, Conga_Other_Heading_Field__c=Other:, Apply_Default_Bonding__c=false, Notes_Doc_ID__c=null, Delivery_End_Defect_Liability_Duration__c=2021-07-31 00:00:00, EOI_PQ_Submitted_Date__c=null, Tender_Submitted_Date__c=null, Count_of_EOI_Lessons_Learnt_Reports__c=null, Count_of_Tender_Lessons_Learnt_Reports__c=null, Gate_Status__c=Not Started, TSF_Gate_Status__c=Not Applicable, CRA_Gate_Status__c=Not Applicable, Number_of_PRA_Critical_Items_Rated_3__c=0, Are_there_any_critical_risks__c=null, Has_TSF_changed_since_last_approval__c=null, Has_CRA_changed_since_last_approval__c=null, Sync_Date_Fields__c=true, Is_Gate_1_To_3__c=true, Is_Gate_4_To_5__c=false, D_I_Involvement_Text__c=No, Reason_for_Status__c=null, Key_Account_Manager__c=System Partners, Primary_Business_Unit__c=NSW/ACT, Previous_Gate_Status__c=Not Applicable, Previous_Gate_CRA_Status__c=Not Applicable, Previous_Gate_TSF_Status__c=Not Applicable, Probity_Override__c=false, Previous_Stage__c=null}
+11:01:27.0 (53290572)|SYSTEM_METHOD_EXIT|[348]|System.debug(APEX_OBJECT, ANY)
+11:01:27.0 (53293851)|STATEMENT_EXECUTE|[349]
+11:01:27.0 (53299874)|HEAP_ALLOCATE|[349]|Bytes:39
+11:01:27.0 (53311509)|HEAP_ALLOCATE|[349]|Bytes:45
+11:01:27.0 (53320972)|SYSTEM_METHOD_ENTRY|[349]|System.debug(APEX_OBJECT, ANY)
+11:01:27.0 (53336315)|USER_DEBUG|[349]|ERROR|*** TEST Determine Gate OLD opp Stage: Gate 3
+11:01:27.0 (53341313)|SYSTEM_METHOD_EXIT|[349]|System.debug(APEX_OBJECT, ANY)
+11:01:27.0 (53344279)|STATEMENT_EXECUTE|[350]
+11:01:27.0 (53348954)|HEAP_ALLOCATE|[350]|Bytes:35
+11:01:27.0 (53357605)|HEAP_ALLOCATE|[350]|Bytes:41
+11:01:27.0 (53366228)|SYSTEM_METHOD_ENTRY|[350]|System.debug(APEX_OBJECT, ANY)
+11:01:27.0 (53376884)|USER_DEBUG|[350]|ERROR|*** TEST Determine Gate opp Stage: Gate 3
+11:01:27.0 (53381309)|SYSTEM_METHOD_EXIT|[350]|System.debug(APEX_OBJECT, ANY)
+11:01:27.0 (53384046)|STATEMENT_EXECUTE|[351]
+11:01:27.0 (53388336)|HEAP_ALLOCATE|[351]|Bytes:44
+11:01:27.0 (53416286)|HEAP_ALLOCATE|[351]|Bytes:55
+11:01:27.0 (53428342)|SYSTEM_METHOD_ENTRY|[351]|System.debug(APEX_OBJECT, ANY)
+11:01:27.0 (53440833)|USER_DEBUG|[351]|ERROR|*** TEST Determine Gate OLD oppGate Status: Not Started
+11:01:27.0 (53445654)|SYSTEM_METHOD_EXIT|[351]|System.debug(APEX_OBJECT, ANY)
+11:01:27.0 (53448558)|STATEMENT_EXECUTE|[352]
+11:01:27.0 (53453036)|HEAP_ALLOCATE|[352]|Bytes:40
+11:01:27.0 (53461887)|HEAP_ALLOCATE|[352]|Bytes:51
+11:01:27.0 (53470351)|SYSTEM_METHOD_ENTRY|[352]|System.debug(APEX_OBJECT, ANY)
+11:01:27.0 (53480463)|USER_DEBUG|[352]|ERROR|*** TEST Determine Gate oppGate Status: Not Started
+11:01:27.0 (53484887)|SYSTEM_METHOD_EXIT|[352]|System.debug(APEX_OBJECT, ANY)
+11:01:27.0 (53523489)|STATEMENT_EXECUTE|[393]
+11:01:27.0 (53556113)|STATEMENT_EXECUTE|[394]
+11:01:27.0 (53562821)|METHOD_EXIT|[316]|01pO0000000371i|OpportunityTriggerHandler.determineGate(Opportunity)
+11:01:27.0 (53566303)|STATEMENT_EXECUTE|[317]
+11:01:27.0 (53579676)|METHOD_ENTRY|[317]|01pO0000000371i|OpportunityTriggerHandler.BDM_PDM_Owner_Manager(Opportunity)
+11:01:27.0 (53594411)|VARIABLE_SCOPE_BEGIN|[235]|this|OpportunityTriggerHandler|true|false
+11:01:27.0 (53628747)|VARIABLE_ASSIGNMENT|[235]|this|{"OppTeamMembers":"0x4fec7f2e","context":"0x698e9cc","isTriggerExecuting":true}|0xb684abd
+11:01:27.0 (53632370)|VARIABLE_SCOPE_BEGIN|[235]|opp|Opportunity|true|false
+11:01:27.0 (54772651)|VARIABLE_ASSIGNMENT|[235]|opp|{"LastModifiedDate":"2017-04-12T01:00:18.000Z","Regional_Business__c":"a0BO000000F5hL5MAJ","TSF_Gate_Status__c":"Not Applicable","Contract_Risk__c":"Client-side risk: Co (23 more) ...","CloseDate":"2017-08-01T00:00:00.000Z","HasOpenActivity":false,"Budget_Confirmed__c":false,"Overall_Prospect_Val (5 more) ...":9999999,"Less_Cost_Recoveries (10 more) ...":0,"District__c":"Northern Rivers","State__c":"New South Wales","D_I_Involvement__c":false,"IsDeleted":false,"Non_Binding_Proposal (12 more) ...":false,"Net_Budget_Post_Tend (5 more) ...":0,"Parent_Company_Guara (11 more) ...":" ","Previous_Gate_TSF_St (7 more) ...":"Not Applicable","Detailed_Description (3 more) ...":"Desc","ROI_Analysis_Complet (5 more) ...":false,"PPP_or_Third_Party_F (16 more) ...":false,"Executive_Summary__c":"Desc","CRA_Gate_Status__c":"Not Applicable","Tender_Dates_Header_ (2 more) ...":" ","Less_Cost_Recoveries (10 more) ...":0,"Is_internal_BG_colla (11 more) ...":false,"Prospect_Status__c":"Prospect","Id":"006O0000009HAXhIAO","Proposed_Margin_on_R (9 more) ...":30,"Client_Drivers__c":"Test","Primary_Business_Uni (4 more) ...":"NSW/ACT","IsClosed":false,"Delivery_End_Date__c":"2020-07-31T00:00:00.000Z","OwnerId":"00528000006B07FAAS","Prospect_Duration_Yr (4 more) ...":3.0,"Reason_For_Performin (9 more) ...":"Test","RecordTypeId":"012O0000000DD8PIAW","Key_Account_Manager_ (2 more) ...":"System Partners","Country__c":"Australia","Total_Budget_AUD__c":0,"StageName":"Gate 3","Amount":9999999.00,"Probability":60.0,"EOI_PQ_Close_Date__c":"2017-05-01T00:00:00.000Z","Independent_Credit_C (16 more) ...":false,"SystemModstamp":"2017-04-12T01:00:18.000Z","Total_Less_Recoverie (4 more) ...":0,"Business_Development (11 more) ...":"00528000004d3msAAA","AccountId":"001O0000018AKplIAG","HasOpportunityLineIt (2 more) ...":false,"Prospect_Number__c":"PRS-00148","ForecastCategory":"Pipeline","Net_Budget_EOI_PQ__c":0,"Client_Relationship_ (13 more) ...":"Test","Number_of_PRA_Critic (19 more) ...":0,"Name":"Test AMcF 12-04 #1","Prospect_Priority__c":"3","CreatedById":"00528000006B07FAAS","A_PCG_Is_Required_Fr (5 more) ...":"JHG","Project_Development_ (10 more) ...":"00528000006BYTIAA4","Tender_Close_Date__c":"2017-07-01T00:00:00.000Z","JH_Margin_Value__c":0,"Defect_Liability_Dur (15 more) ...":12,"Sync_Date_Fields__c":true,"Is_this_project_a_JV (15 more) ...":false,"Project_Duration_Mon (6 more) ...":36,"Delivery_End_Defect_ (21 more) ...":"2021-07-31T00:00:00.000Z","Is_Gate_1_To_3__c":true,"Bonding_Security_Hea (6 more) ...":" ","Net_Budget_Tender__c":0,"CreatedDate":"2017-04-12T01:00:17.000Z","HasOverdueTask":false,"Discovery_Completed_ (2 more) ...":false,"Data_Quality_Score__ (1 more) ...":40,"Project_Probability_ (2 more) ...":90,"ForecastCategoryName":"Pipeline","Client_Probity__c":false,"Total_Budget_EOI_PQ_ (2 more) ...":0,"Managing_Contractor_ (12 more) ...":false,"Business_Group__c":"a0BO000000F5hL0MAJ","Anticipated_Revenue_ (13 more) ...":"2017-09-01T00:00:00.000Z","Is_Gate_4_To_5__c":false,"Data_Quality_Descrip (7 more) ...":"Missing: Type, Lead  (18 more) ...","ExpectedRevenue":5999999.399999999,"Net_Budget_Amount__c":0,"Probity_Override__c":false,"IsWon":false,"EOI_PQ_Start_Date__c":"2017-04-01T00:00:00.000Z","Location__c":"Lismore, New South W (15 more) ...","D_I_Involvement_Text (3 more) ...":"No","Less_Cost_Recoveries (15 more) ...":0,"Previous_Gate_CRA_St (7 more) ...":"Not Applicable","Previous_Gate_Status (3 more) ...":"Not Applicable","Request_For_Special_ (22 more) ...":false,"Conga_Other_Heading_ (8 more) ...":"Other:","Apply_Default_Bondin (4 more) ...":false,"Gate_Status__c":"Not Started","Win_Probability__c":90,"D_I_Involvement_Guid (12 more) ...":"This box should be c (183 more) ...","Total_Budget_Tender_ (2 more) ...":0,"Total_Budget_Post_Te (7 more) ...":0,"Restrict_Access__c":false,"Nearest_City__c":"Lismore","Tender_Start_Date__c":"2017-06-01T00:00:00.000Z","IsPrivate":false,"LastModifiedById":"00528000006B07FAAS","Is_internal_Regional (21 more) ...":false}|0x306f1967
+11:01:27.0 (54795822)|STATEMENT_EXECUTE|[235]
+11:01:27.0 (54830676)|STATEMENT_EXECUTE|[241]
+11:01:27.0 (54853861)|STATEMENT_EXECUTE|[242]
+11:01:27.0 (54855563)|STATEMENT_EXECUTE|[243]
+11:01:27.0 (55936450)|VARIABLE_ASSIGNMENT|[243]|this.OwnerId|"00528000006BYTIAA4"|0x306f1967
+11:01:27.0 (55949159)|METHOD_EXIT|[317]|01pO0000000371i|OpportunityTriggerHandler.BDM_PDM_Owner_Manager(Opportunity)
+11:01:27.0 (55953650)|STATEMENT_EXECUTE|[318]
+11:01:27.0 (55965468)|METHOD_ENTRY|[318]|01pO0000000371i|OpportunityTriggerHandler.ResetPreviousGateValues(Opportunity)
+11:01:27.0 (55980160)|VARIABLE_SCOPE_BEGIN|[440]|this|OpportunityTriggerHandler|true|false
+11:01:27.0 (56004437)|VARIABLE_ASSIGNMENT|[440]|this|{"OppTeamMembers":"0x4fec7f2e","context":"0x698e9cc","isTriggerExecuting":true}|0xb684abd
+11:01:27.0 (56008765)|VARIABLE_SCOPE_BEGIN|[440]|opp|Opportunity|true|false
+11:01:27.0 (57228404)|VARIABLE_ASSIGNMENT|[440]|opp|{"LastModifiedDate":"2017-04-12T01:00:18.000Z","Regional_Business__c":"a0BO000000F5hL5MAJ","TSF_Gate_Status__c":"Not Applicable","Contract_Risk__c":"Client-side risk: Co (23 more) ...","CloseDate":"2017-08-01T00:00:00.000Z","HasOpenActivity":false,"Budget_Confirmed__c":false,"Overall_Prospect_Val (5 more) ...":9999999,"Less_Cost_Recoveries (10 more) ...":0,"District__c":"Northern Rivers","State__c":"New South Wales","D_I_Involvement__c":false,"IsDeleted":false,"Non_Binding_Proposal (12 more) ...":false,"Net_Budget_Post_Tend (5 more) ...":0,"Parent_Company_Guara (11 more) ...":" ","Previous_Gate_TSF_St (7 more) ...":"Not Applicable","Detailed_Description (3 more) ...":"Desc","ROI_Analysis_Complet (5 more) ...":false,"PPP_or_Third_Party_F (16 more) ...":false,"Executive_Summary__c":"Desc","CRA_Gate_Status__c":"Not Applicable","Tender_Dates_Header_ (2 more) ...":" ","Less_Cost_Recoveries (10 more) ...":0,"Is_internal_BG_colla (11 more) ...":false,"Prospect_Status__c":"Prospect","Id":"006O0000009HAXhIAO","Proposed_Margin_on_R (9 more) ...":30,"Client_Drivers__c":"Test","Primary_Business_Uni (4 more) ...":"NSW/ACT","IsClosed":false,"Delivery_End_Date__c":"2020-07-31T00:00:00.000Z","OwnerId":"00528000006BYTIAA4","Prospect_Duration_Yr (4 more) ...":3.0,"Reason_For_Performin (9 more) ...":"Test","RecordTypeId":"012O0000000DD8PIAW","Key_Account_Manager_ (2 more) ...":"System Partners","Country__c":"Australia","Total_Budget_AUD__c":0,"StageName":"Gate 3","Amount":9999999.00,"Probability":60.0,"EOI_PQ_Close_Date__c":"2017-05-01T00:00:00.000Z","Independent_Credit_C (16 more) ...":false,"SystemModstamp":"2017-04-12T01:00:18.000Z","Total_Less_Recoverie (4 more) ...":0,"Business_Development (11 more) ...":"00528000004d3msAAA","AccountId":"001O0000018AKplIAG","HasOpportunityLineIt (2 more) ...":false,"Prospect_Number__c":"PRS-00148","ForecastCategory":"Pipeline","Net_Budget_EOI_PQ__c":0,"Client_Relationship_ (13 more) ...":"Test","Number_of_PRA_Critic (19 more) ...":0,"Name":"Test AMcF 12-04 #1","Prospect_Priority__c":"3","CreatedById":"00528000006B07FAAS","A_PCG_Is_Required_Fr (5 more) ...":"JHG","Project_Development_ (10 more) ...":"00528000006BYTIAA4","Tender_Close_Date__c":"2017-07-01T00:00:00.000Z","JH_Margin_Value__c":0,"Defect_Liability_Dur (15 more) ...":12,"Sync_Date_Fields__c":true,"Is_this_project_a_JV (15 more) ...":false,"Project_Duration_Mon (6 more) ...":36,"Delivery_End_Defect_ (21 more) ...":"2021-07-31T00:00:00.000Z","Is_Gate_1_To_3__c":true,"Bonding_Security_Hea (6 more) ...":" ","Net_Budget_Tender__c":0,"CreatedDate":"2017-04-12T01:00:17.000Z","HasOverdueTask":false,"Discovery_Completed_ (2 more) ...":false,"Data_Quality_Score__ (1 more) ...":40,"Project_Probability_ (2 more) ...":90,"ForecastCategoryName":"Pipeline","Client_Probity__c":false,"Total_Budget_EOI_PQ_ (2 more) ...":0,"Managing_Contractor_ (12 more) ...":false,"Business_Group__c":"a0BO000000F5hL0MAJ","Anticipated_Revenue_ (13 more) ...":"2017-09-01T00:00:00.000Z","Is_Gate_4_To_5__c":false,"Data_Quality_Descrip (7 more) ...":"Missing: Type, Lead  (18 more) ...","ExpectedRevenue":5999999.399999999,"Net_Budget_Amount__c":0,"Probity_Override__c":false,"IsWon":false,"EOI_PQ_Start_Date__c":"2017-04-01T00:00:00.000Z","Location__c":"Lismore, New South W (15 more) ...","D_I_Involvement_Text (3 more) ...":"No","Less_Cost_Recoveries (15 more) ...":0,"Previous_Gate_CRA_St (7 more) ...":"Not Applicable","Previous_Gate_Status (3 more) ...":"Not Applicable","Request_For_Special_ (22 more) ...":false,"Conga_Other_Heading_ (8 more) ...":"Other:","Apply_Default_Bondin (4 more) ...":false,"Gate_Status__c":"Not Started","Win_Probability__c":90,"D_I_Involvement_Guid (12 more) ...":"This box should be c (183 more) ...","Total_Budget_Tender_ (2 more) ...":0,"Total_Budget_Post_Te (7 more) ...":0,"Restrict_Access__c":false,"Nearest_City__c":"Lismore","Tender_Start_Date__c":"2017-06-01T00:00:00.000Z","IsPrivate":false,"LastModifiedById":"00528000006B07FAAS","Is_internal_Regional (21 more) ...":false}|0x306f1967
+11:01:27.0 (57253972)|STATEMENT_EXECUTE|[440]
+11:01:27.0 (57255964)|STATEMENT_EXECUTE|[441]
+11:01:27.0 (57299601)|SYSTEM_METHOD_ENTRY|[441]|Map<Id,Opportunity>.get(Object)
+11:01:27.0 (57330169)|SYSTEM_METHOD_EXIT|[441]|Map<Id,Opportunity>.get(Object)
+11:01:27.0 (57347076)|VARIABLE_SCOPE_BEGIN|[441]|oldOpp|Opportunity|true|false
+11:01:27.0 (58708398)|VARIABLE_ASSIGNMENT|[441]|oldOpp|{"LastModifiedDate":"2017-04-12T01:00:18.000Z","Regional_Business__c":"a0BO000000F5hL5MAJ","TSF_Gate_Status__c":"Not Applicable","Contract_Risk__c":"Client-side risk: Co (23 more) ...","CloseDate":"2017-08-01T00:00:00.000Z","HasOpenActivity":false,"Budget_Confirmed__c":false,"Overall_Prospect_Val (5 more) ...":9999999,"Less_Cost_Recoveries (10 more) ...":0,"District__c":"Northern Rivers","State__c":"New South Wales","D_I_Involvement__c":false,"IsDeleted":false,"Non_Binding_Proposal (12 more) ...":false,"Net_Budget_Post_Tend (5 more) ...":0,"Parent_Company_Guara (11 more) ...":" ","Previous_Gate_TSF_St (7 more) ...":"Not Applicable","Detailed_Description (3 more) ...":"Desc","ROI_Analysis_Complet (5 more) ...":false,"PPP_or_Third_Party_F (16 more) ...":false,"Executive_Summary__c":"Desc","CRA_Gate_Status__c":"Not Applicable","Tender_Dates_Header_ (2 more) ...":" ","Less_Cost_Recoveries (10 more) ...":0,"Is_internal_BG_colla (11 more) ...":false,"Prospect_Status__c":"Prospect","Id":"006O0000009HAXhIAO","Proposed_Margin_on_R (9 more) ...":30,"Client_Drivers__c":"Test","Primary_Business_Uni (4 more) ...":"NSW/ACT","IsClosed":false,"Delivery_End_Date__c":"2020-07-31T00:00:00.000Z","OwnerId":"00528000006B07FAAS","Prospect_Duration_Yr (4 more) ...":3.0,"Reason_For_Performin (9 more) ...":"Test","RecordTypeId":"012O0000000DD8PIAW","Key_Account_Manager_ (2 more) ...":"System Partners","Country__c":"Australia","Total_Budget_AUD__c":0,"StageName":"Gate 3","Amount":9999999.00,"Probability":60,"EOI_PQ_Close_Date__c":"2017-05-01T00:00:00.000Z","Independent_Credit_C (16 more) ...":false,"SystemModstamp":"2017-04-12T01:00:18.000Z","Total_Less_Recoverie (4 more) ...":0,"Business_Development (11 more) ...":"00528000004d3msAAA","AccountId":"001O0000018AKplIAG","HasOpportunityLineIt (2 more) ...":false,"Prospect_Number__c":"PRS-00148","ForecastCategory":"Pipeline","Net_Budget_EOI_PQ__c":0,"Client_Relationship_ (13 more) ...":"Test","Number_of_PRA_Critic (19 more) ...":0,"Name":"Test AMcF 12-04 #1","Prospect_Priority__c":"3","CreatedById":"00528000006B07FAAS","Tender_Close_Date__c":"2017-07-01T00:00:00.000Z","JH_Margin_Value__c":0,"Defect_Liability_Dur (15 more) ...":12,"Sync_Date_Fields__c":false,"Is_this_project_a_JV (15 more) ...":false,"Project_Duration_Mon (6 more) ...":36,"Delivery_End_Defect_ (21 more) ...":"2021-07-31T00:00:00.000Z","Is_Gate_1_To_3__c":true,"Bonding_Security_Hea (6 more) ...":" ","Net_Budget_Tender__c":0,"CreatedDate":"2017-04-12T01:00:17.000Z","HasOverdueTask":false,"Discovery_Completed_ (2 more) ...":false,"Data_Quality_Score__ (1 more) ...":40,"Project_Probability_ (2 more) ...":90,"ForecastCategoryName":"Pipeline","Client_Probity__c":false,"Total_Budget_EOI_PQ_ (2 more) ...":0,"Managing_Contractor_ (12 more) ...":false,"Business_Group__c":"a0BO000000F5hL0MAJ","Anticipated_Revenue_ (13 more) ...":"2017-09-01T00:00:00.000Z","Is_Gate_4_To_5__c":false,"Data_Quality_Descrip (7 more) ...":"Missing: Type, Lead  (18 more) ...","ExpectedRevenue":5999999.399999999,"Net_Budget_Amount__c":0,"Probity_Override__c":false,"IsWon":false,"EOI_PQ_Start_Date__c":"2017-04-01T00:00:00.000Z","Location__c":"Lismore, New South W (15 more) ...","D_I_Involvement_Text (3 more) ...":"No","Less_Cost_Recoveries (15 more) ...":0,"Previous_Gate_CRA_St (7 more) ...":"Not Applicable","Previous_Gate_Status (3 more) ...":"Not Applicable","Request_For_Special_ (22 more) ...":false,"Conga_Other_Heading_ (8 more) ...":"Other:","Apply_Default_Bondin (4 more) ...":false,"Gate_Status__c":"Not Started","Win_Probability__c":90,"D_I_Involvement_Guid (12 more) ...":"This box should be c (183 more) ...","Total_Budget_Tender_ (2 more) ...":0,"Total_Budget_Post_Te (7 more) ...":0,"Restrict_Access__c":false,"Nearest_City__c":"Lismore","Tender_Start_Date__c":"2017-06-01T00:00:00.000Z","IsPrivate":false,"LastModifiedById":"00528000006B07FAAS","Is_internal_Regional (21 more) ...":false}|0x43841229
+11:01:27.0 (58769734)|STATEMENT_EXECUTE|[444]
+11:01:27.0 (58816023)|STATEMENT_EXECUTE|[448]
+11:01:27.0 (58856106)|STATEMENT_EXECUTE|[452]
+11:01:27.0 (58865866)|METHOD_EXIT|[318]|01pO0000000371i|OpportunityTriggerHandler.ResetPreviousGateValues(Opportunity)
+11:01:27.0 (58881704)|SYSTEM_METHOD_ENTRY|[314]|system.ListIterator.hasNext()
+11:01:27.0 (58894595)|HEAP_ALLOCATE|[314]|Bytes:5
+11:01:27.0 (58904494)|SYSTEM_METHOD_EXIT|[314]|system.ListIterator.hasNext()
+11:01:27.0 (58917206)|VARIABLE_ASSIGNMENT|[314]|opp|null|
+11:01:27.0 (58931125)|METHOD_EXIT|[43]|01pO0000000371i|OpportunityTriggerHandler.onBeforeUpdateMethods()
+11:01:27.0 (58939850)|STATEMENT_EXECUTE|[44]
+11:01:27.0 (58954229)|HEAP_ALLOCATE|[44]|Bytes:5
+11:01:27.0 (58973720)|VARIABLE_ASSIGNMENT|[44]|OpportunityTriggerHandler.recursionBefore|true
+11:01:27.0 (58982940)|METHOD_EXIT|[41]|01pO0000000371i|OpportunityTriggerHandler.beforeUpdate()
+11:01:27.0 (58992485)|METHOD_EXIT|[4]|01pO00000003AAn|TriggerHandler.run()
+11:01:27.59 (59006800)|CUMULATIVE_LIMIT_USAGE
+11:01:27.59 (59006800)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+11:01:27.59 (59006800)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+11:01:27.59 (59006800)|STATIC_VARIABLE_LIST|
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MAX_VALUE:0
+  long:serialVersionUID:0
+  String:_static_InProgressStatus:0
+  int:SIZE:0
+  String:_static_TenderWonEmail:0
+  String:_static_ApprovedStatus:0
+  TriggerHandler.TriggerContext:BEFORE_INSERT:0
+  int:MAX_VALUE:0
+  TriggerHandler.TriggerContext:AFTER_UNDELETE:0
+  String:_static_InitiatedStatus:0
+  String:_static_ClosedWonStage:0
+  String:_static_Gate5Stage:0
+  String:_static_Gate4Stage:0
+  Boolean:_static_isTest:0
+  int:MIN_VALUE:0
+  String:_static_Gate1Stage:0
+  String:_static_Gate3Stage:0
+  String:_static_NotStartedStatus:0
+  char[]:DigitOnes:0
+  String:_static_NotApplicableStatus:0
+  String:__sfdcProperties:0
+  String:_static_KCRATemplateRecordTypeID:0
+  String:_static_CRA_DecisionRequiredEmail:0
+  int:MIN_EXPONENT:0
+  String:_static_DecisionRequiredEmail:0
+  String:_static_ApprovalOutcomeNotificationEmail:0
+  String:_static_PendingApprovalStatus:0
+  String:_static_RestartedStatus:0
+  int:MAX_EXPONENT:0
+  String:_static_ApprovalSubmissionEmail:0
+  String:_static_PRATemplateRecordTypeID:0
+  String:_static_TenderWonStatus:0
+  String:_sfdcSuppressedCodeLocations:0
+  int:BYTES:0
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  Boolean:FALSE:0
+  String:_static_DeclinedStatus:0
+  String:_static_KCRARecordTypeID:0
+  String:_static_PRARecordTypeID:0
+  String:_static_TSF_ApprovalSubmissionEmail:0
+  double:MIN_VALUE:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:NEGATIVE_INFINITY:0
+  String:_static_ResubmittedStatus:0
+  char[]:digits:0
+  double:NaN:0
+  Boolean:TRUE:0
+  Approvers__c:_static_Approvers:0
+  TriggerHandler.TriggerContext:AFTER_INSERT:0
+  String:__sfdcInnerTypes:0
+  String:_static_CRA_ApprovalOutcomeNotificationEmail:0
+  Boolean:_static_recursionBefore:0
+  TriggerHandler.TriggerContext:AFTER_DELETE:0
+  String:_static_Gate2Stage:0
+  String:_static_TenderSubmittedStatus:0
+  String:_static_NewDandCStage:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_static_TSF_DecisionRequiredEmail:0
+  String:_static_ConditionallyApprovedStatus:0
+  TriggerHandler.TriggerContext:AFTER_UPDATE:0
+  String:_static_TSF_ApprovalOutcomeNotificationEmail:0
+  String:__sfdcInnerTypes:0
+  int:BYTES:0
+  Map<String,TriggerHandler.LoopCount>:_static_loopCountMap:0
+  Set<String>:_static_bypassedHandlers:0
+  int[]:sizeTable:0
+  TriggerHandler.TriggerContext:BEFORE_DELETE:0
+  String:_static_TenderInPreperationStatus:0
+  TriggerHandler.TriggerContext:BEFORE_UPDATE:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  double:MIN_NORMAL:0
+  String:_static_CRA_ApprovalSubmissionEmail:0
+  Boolean:_static_recursionAfter:0
+  Boolean:_static_runOnce:0
+
+11:01:27.59 (59006800)|CUMULATIVE_LIMIT_USAGE_END
+
+11:01:27.0 (61362708)|CODE_UNIT_FINISHED|OpportunityTrigger on Opportunity trigger event BeforeUpdate for [006O0000009HAXh]
+11:01:27.0 (89861787)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Opportunity:006O0000009HAXh
+11:01:27.0 (89882628)|VALIDATION_RULE|03dO00000000vWR|CANDY_Tender_No_mandatory_at_Gate_4
+11:01:27.0 (95205548)|VALIDATION_FORMULA|AND(
+
+ISBLANK( CANDY_Tender_Number__c ), 
+ISPICKVAL(StageName, "Gate 4"),
+OR(
+   AND(
+     ISPICKVAL(TSF_Gate_Status__c , 'Initiated'),
+     ISCHANGED(TSF_Gate_Status__c)
+   ),
+   AND(
+     ISPICKVAL(CRA_Gate_Status__c , 'Initiated'),
+     ISCHANGED(CRA_Gate_Status__c)
+   )
+)
+)
+&&
+$Profile.Name <> "System Administrator"|$Profile.Name=System Administrator , StageName=Gate 3 , TSF_Gate_Status__c=Not Applicable , CRA_Gate_Status__c=Not Applicable , CANDY_Tender_Number__c=null
+11:01:27.0 (95220954)|VALIDATION_PASS
+11:01:27.0 (95225384)|VALIDATION_RULE|03dO00000000vKk|Enforce_EOI_AND_PQ_Dates
+11:01:27.0 (95628191)|VALIDATION_FORMULA|AND( 
+Non_Binding_Proposal_Required__c = TRUE, 
+OR(
+ISBLANK( EOI_PQ_Start_Date__c),
+ISBLANK( EOI_PQ_Close_Date__c)))
+&&
+$Profile.Name <> "System Administrator"|EOI_PQ_Close_Date__c=2017-05-01 00:00:00 , $Profile.Name=System Administrator , Non_Binding_Proposal_Required__c=0 , EOI_PQ_Start_Date__c=2017-04-01 00:00:00
+11:01:27.0 (95636743)|VALIDATION_PASS
+11:01:27.0 (95639484)|VALIDATION_RULE|03dO00000000vWW|Make_PCG_mandatory_at_Gate_2
+11:01:27.0 (95971015)|VALIDATION_FORMULA|AND( 
+ISPICKVAL(StageName, "Gate 2"), 
+ISBLANK(TEXT(A_PCG_Is_Required_From__c)),
+ISPICKVAL(Gate_Status__c, "Initiated")
+)
+&&
+$Profile.Name <> "System Administrator"|A_PCG_Is_Required_From__c=JHG , $Profile.Name=System Administrator , StageName=Gate 3 , Gate_Status__c=Not Started
+11:01:27.0 (95979002)|VALIDATION_PASS
+11:01:27.0 (95981643)|VALIDATION_RULE|03dO000000011W3|Must_enter_a_Reason_for_Status_if_Dead
+11:01:27.0 (96312681)|VALIDATION_FORMULA|AND(OR(ISPICKVAL(Prospect_Status__c, 'Dead - Prequalified but Declined'), ISPICKVAL(Prospect_Status__c, 'Dead - Unsuitable for JH')), ISBLANK( Reason_for_Status__c))
+&&
+$Profile.Name <> "System Administrator"|$Profile.Name=System Administrator , Prospect_Status__c=Prospect , Reason_for_Status__c=null
+11:01:27.0 (96321115)|VALIDATION_PASS
+11:01:27.0 (96324405)|VALIDATION_RULE|03dO00000000vKz|Populate_District_if_Country_is_Aust
+11:01:27.0 (96612323)|VALIDATION_FORMULA|AND(
+ISPICKVAL( Country__c, "Australia"),
+ISBLANK(TEXT( District__c )))
+&&
+$Profile.Name <> "System Administrator"|Country__c=Australia , District__c=Northern Rivers , $Profile.Name=System Administrator
+11:01:27.0 (96620187)|VALIDATION_PASS
+11:01:27.0 (96623307)|VALIDATION_RULE|03dO00000000vKp|Populate_State_if_Country_is_Australia
+11:01:27.0 (96906111)|VALIDATION_FORMULA|AND(
+ISPICKVAL( Country__c, "Australia"),
+ISBLANK(TEXT(State__c)))
+&&
+$Profile.Name <> "System Administrator"|Country__c=Australia , $Profile.Name=System Administrator , State__c=New South Wales
+11:01:27.0 (96913173)|VALIDATION_PASS
+11:01:27.0 (96916079)|VALIDATION_RULE|03dO00000000vL9|Populate_value_of_managed_works
+11:01:27.0 (97298013)|VALIDATION_FORMULA|AND(ISBLANK( Value_of_Managed_Works__c ),
+OR(
+ISPICKVAL( Contract_Risk__c, "Shared Risk: Managing Contractor"),
+ISPICKVAL( Contract_Risk__c, "Client-side risk: Construction Management")))
+&&
+$Profile.Name <> "System Administrator"|Value_of_Managed_Works__c=null , $Profile.Name=System Administrator , Contract_Risk__c=Client-side risk: Cost plus margin contract
+11:01:27.0 (97307880)|VALIDATION_PASS
+11:01:27.0 (97310769)|VALIDATION_RULE|03dO00000000vLT|Winning_Strategy_Other_Custom_Heading
+11:01:27.0 (97658998)|VALIDATION_FORMULA|AND(LEN( Other__c )  > 0,
+ISBLANK( Other_Custom_Heading__c ))
+&&
+$Profile.Name <> "System Administrator"|$Profile.Name=System Administrator , Other__c= , Other_Custom_Heading__c=null
+11:01:27.0 (97666462)|VALIDATION_PASS
+11:01:27.0 (97717282)|CODE_UNIT_FINISHED|Validation:Opportunity:006O0000009HAXh
+11:01:27.0 (205323674)|CODE_UNIT_STARTED|[EXTERNAL]|01qO00000000SDP|OpportunityTrigger on Opportunity trigger event AfterUpdate for [006O0000009HAXh]
+11:01:27.0 (205347397)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+11:01:27.0 (205372884)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+11:01:27.0 (205430516)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+11:01:27.0 (205439754)|VARIABLE_SCOPE_BEGIN|[1]|this|OpportunityTrigger|true|false
+11:01:27.0 (205468076)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x2bf6bc3
+11:01:27.0 (205491263)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+11:01:27.0 (205495439)|VARIABLE_SCOPE_BEGIN|[1]|this|OpportunityTrigger|true|false
+11:01:27.0 (205504553)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x2bf6bc3
+11:01:27.0 (205509273)|STATEMENT_EXECUTE|[1]
+11:01:27.0 (205522413)|SYSTEM_METHOD_ENTRY|[3]|Constants.__sfdc_Approvers()
+11:01:27.0 (206008179)|SYSTEM_MODE_ENTER|false
+11:01:27.0 (206017626)|HEAP_ALLOCATE|[8]|Bytes:5
+11:01:27.0 (206023057)|STATEMENT_EXECUTE|[7]
+11:01:27.0 (206027501)|STATEMENT_EXECUTE|[8]
+11:01:27.0 (206028604)|STATEMENT_EXECUTE|[18]
+11:01:27.0 (206032860)|SYSTEM_MODE_EXIT|false
+11:01:27.0 (206042285)|SYSTEM_METHOD_EXIT|[3]|Constants.__sfdc_Approvers()
+11:01:27.0 (206054262)|STATEMENT_EXECUTE|[3]
+11:01:27.0 (206055573)|STATEMENT_EXECUTE|[4]
+11:01:27.0 (206061146)|HEAP_ALLOCATE|[4]|Bytes:16
+11:01:27.0 (206070347)|CONSTRUCTOR_ENTRY|[4]|01pO0000000371i|<init>()
+11:01:27.0 (206075516)|VARIABLE_SCOPE_BEGIN|[24]|this|OpportunityTriggerHandler|true|false
+11:01:27.0 (206104347)|VARIABLE_ASSIGNMENT|[24]|this|{}|0xf4c8012
+11:01:27.0 (206108438)|STATEMENT_EXECUTE|[13]
+11:01:27.0 (206109626)|STATEMENT_EXECUTE|[22]
+11:01:27.0 (206114181)|HEAP_ALLOCATE|[22]|Bytes:4
+11:01:27.0 (206122970)|SYSTEM_CONSTRUCTOR_ENTRY|[22]|<init>()
+11:01:27.0 (206129599)|SYSTEM_CONSTRUCTOR_EXIT|[22]|<init>()
+11:01:27.0 (206139017)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+11:01:27.0 (206149964)|VARIABLE_ASSIGNMENT|[22]|this.OppTeamMembers|[]|0xf4c8012
+11:01:27.0 (206155466)|CONSTRUCTOR_ENTRY|[24]|01pO00000003AAn|<init>()
+11:01:27.0 (206159970)|VARIABLE_SCOPE_BEGIN|[22]|this|TriggerHandler|true|false
+11:01:27.0 (206180364)|VARIABLE_ASSIGNMENT|[22]|this|{"OppTeamMembers":"0x7558a65"}|0xf4c8012
+11:01:27.0 (206184261)|STATEMENT_EXECUTE|[1]
+11:01:27.0 (206185391)|STATEMENT_EXECUTE|[9]
+11:01:27.0 (206186406)|STATEMENT_EXECUTE|[13]
+11:01:27.0 (206202690)|STATEMENT_EXECUTE|[22]
+11:01:27.0 (206204095)|STATEMENT_EXECUTE|[23]
+11:01:27.0 (206212441)|METHOD_ENTRY|[23]|01pO00000003AAn|TriggerHandler.setTriggerContext()
+11:01:27.0 (206216665)|VARIABLE_SCOPE_BEGIN|[94]|this|TriggerHandler|true|false
+11:01:27.0 (206231211)|VARIABLE_ASSIGNMENT|[94]|this|{"OppTeamMembers":"0x7558a65"}|0xf4c8012
+11:01:27.0 (206235239)|STATEMENT_EXECUTE|[94]
+11:01:27.0 (206236410)|STATEMENT_EXECUTE|[95]
+11:01:27.0 (206245682)|METHOD_ENTRY|[95]|01pO00000003AAn|TriggerHandler.setTriggerContext(String, Boolean)
+11:01:27.0 (206249705)|VARIABLE_SCOPE_BEGIN|[99]|this|TriggerHandler|true|false
+11:01:27.0 (206263840)|VARIABLE_ASSIGNMENT|[99]|this|{"OppTeamMembers":"0x7558a65"}|0xf4c8012
+11:01:27.0 (206266430)|VARIABLE_SCOPE_BEGIN|[99]|ctx|String|false|false
+11:01:27.0 (206271184)|VARIABLE_ASSIGNMENT|[99]|ctx|null
+11:01:27.0 (206275069)|VARIABLE_SCOPE_BEGIN|[99]|testMode|Boolean|false|false
+11:01:27.0 (206278137)|VARIABLE_ASSIGNMENT|[99]|testMode|false
+11:01:27.0 (206281616)|STATEMENT_EXECUTE|[99]
+11:01:27.0 (206289232)|STATEMENT_EXECUTE|[103]
+11:01:27.0 (206290620)|STATEMENT_EXECUTE|[104]
+11:01:27.0 (206294814)|HEAP_ALLOCATE|[104]|Bytes:5
+11:01:27.0 (206331340)|STATEMENT_EXECUTE|[120]
+11:01:27.0 (206332981)|STATEMENT_EXECUTE|[121]
+11:01:27.0 (206343687)|METHOD_EXIT|[95]|01pO00000003AAn|TriggerHandler.setTriggerContext(String, Boolean)
+11:01:27.0 (206348749)|METHOD_EXIT|[23]|01pO00000003AAn|TriggerHandler.setTriggerContext()
+11:01:27.0 (206352768)|CONSTRUCTOR_EXIT|[24]|01pO00000003AAn|<init>()
+11:01:27.0 (206354867)|STATEMENT_EXECUTE|[24]
+11:01:27.0 (206357422)|CONSTRUCTOR_EXIT|[4]|01pO0000000371i|<init>()
+11:01:27.0 (206362654)|METHOD_ENTRY|[4]|01pO00000003AAn|TriggerHandler.run()
+11:01:27.0 (206366050)|VARIABLE_SCOPE_BEGIN|[31]|this|TriggerHandler|true|false
+11:01:27.0 (206387750)|VARIABLE_ASSIGNMENT|[31]|this|{"OppTeamMembers":"0x7558a65","context":"0x4916801e","isTriggerExecuting":true}|0xf4c8012
+11:01:27.0 (206392937)|STATEMENT_EXECUTE|[31]
+11:01:27.0 (206400045)|METHOD_ENTRY|[33]|01pO00000003AAn|TriggerHandler.validateRun()
+11:01:27.0 (206403912)|VARIABLE_SCOPE_BEGIN|[146]|this|TriggerHandler|true|false
+11:01:27.0 (206419609)|VARIABLE_ASSIGNMENT|[146]|this|{"OppTeamMembers":"0x7558a65","context":"0x4916801e","isTriggerExecuting":true}|0xf4c8012
+11:01:27.0 (206423465)|STATEMENT_EXECUTE|[146]
+11:01:27.0 (206427746)|STATEMENT_EXECUTE|[147]
+11:01:27.0 (206435142)|METHOD_ENTRY|[150]|01pO00000003AAn|TriggerHandler.getHandlerName()
+11:01:27.0 (206439497)|VARIABLE_SCOPE_BEGIN|[157]|this|TriggerHandler|true|false
+11:01:27.0 (206454614)|VARIABLE_ASSIGNMENT|[157]|this|{"OppTeamMembers":"0x7558a65","context":"0x4916801e","isTriggerExecuting":true}|0xf4c8012
+11:01:27.0 (206458399)|STATEMENT_EXECUTE|[157]
+11:01:27.0 (206459507)|STATEMENT_EXECUTE|[158]
+11:01:27.0 (206487104)|SYSTEM_METHOD_ENTRY|[158]|String.valueOf(Object)
+11:01:27.0 (206553002)|HEAP_ALLOCATE|[158]|Bytes:424
+11:01:27.0 (206569895)|SYSTEM_METHOD_EXIT|[158]|String.valueOf(Object)
+11:01:27.0 (206586275)|SYSTEM_METHOD_ENTRY|[158]|String.valueOf(Object)
+11:01:27.0 (206637872)|HEAP_ALLOCATE|[158]|Bytes:424
+11:01:27.0 (206654266)|SYSTEM_METHOD_EXIT|[158]|String.valueOf(Object)
+11:01:27.0 (206668295)|SYSTEM_METHOD_ENTRY|[158]|String.indexOf(String)
+11:01:27.0 (206677455)|SYSTEM_METHOD_EXIT|[158]|String.indexOf(String)
+11:01:27.0 (206688965)|SYSTEM_METHOD_ENTRY|[158]|String.substring(Integer, Integer)
+11:01:27.0 (206692835)|HEAP_ALLOCATE|[158]|Bytes:25
+11:01:27.0 (206701585)|SYSTEM_METHOD_EXIT|[158]|String.substring(Integer, Integer)
+11:01:27.0 (206706277)|METHOD_EXIT|[150]|01pO00000003AAn|TriggerHandler.getHandlerName()
+11:01:27.0 (206719719)|SYSTEM_METHOD_ENTRY|[150]|Set<String>.contains(Object)
+11:01:27.0 (206729124)|SYSTEM_METHOD_EXIT|[150]|Set<String>.contains(Object)
+11:01:27.0 (206733433)|STATEMENT_EXECUTE|[150]
+11:01:27.0 (206734916)|STATEMENT_EXECUTE|[153]
+11:01:27.0 (206738950)|METHOD_EXIT|[33]|01pO00000003AAn|TriggerHandler.validateRun()
+11:01:27.0 (206741718)|STATEMENT_EXECUTE|[33]
+11:01:27.0 (206742854)|STATEMENT_EXECUTE|[35]
+11:01:27.0 (206747886)|METHOD_ENTRY|[35]|01pO00000003AAn|TriggerHandler.addToLoopCount()
+11:01:27.0 (206751523)|VARIABLE_SCOPE_BEGIN|[133]|this|TriggerHandler|true|false
+11:01:27.0 (206772124)|VARIABLE_ASSIGNMENT|[133]|this|{"OppTeamMembers":"0x7558a65","context":"0x4916801e","isTriggerExecuting":true}|0xf4c8012
+11:01:27.0 (206777311)|STATEMENT_EXECUTE|[133]
+11:01:27.0 (206778557)|STATEMENT_EXECUTE|[134]
+11:01:27.0 (206784248)|METHOD_ENTRY|[134]|01pO00000003AAn|TriggerHandler.getHandlerName()
+11:01:27.0 (206787779)|VARIABLE_SCOPE_BEGIN|[157]|this|TriggerHandler|true|false
+11:01:27.0 (206803207)|VARIABLE_ASSIGNMENT|[157]|this|{"OppTeamMembers":"0x7558a65","context":"0x4916801e","isTriggerExecuting":true}|0xf4c8012
+11:01:27.0 (206806577)|STATEMENT_EXECUTE|[157]
+11:01:27.0 (206807641)|STATEMENT_EXECUTE|[158]
+11:01:27.0 (206824259)|SYSTEM_METHOD_ENTRY|[158]|String.valueOf(Object)
+11:01:27.0 (206871832)|HEAP_ALLOCATE|[158]|Bytes:424
+11:01:27.0 (206887007)|SYSTEM_METHOD_EXIT|[158]|String.valueOf(Object)
+11:01:27.0 (206902245)|SYSTEM_METHOD_ENTRY|[158]|String.valueOf(Object)
+11:01:27.0 (206952643)|HEAP_ALLOCATE|[158]|Bytes:424
+11:01:27.0 (206967903)|SYSTEM_METHOD_EXIT|[158]|String.valueOf(Object)
+11:01:27.0 (206979611)|SYSTEM_METHOD_ENTRY|[158]|String.indexOf(String)
+11:01:27.0 (206988175)|SYSTEM_METHOD_EXIT|[158]|String.indexOf(String)
+11:01:27.0 (206997648)|SYSTEM_METHOD_ENTRY|[158]|String.substring(Integer, Integer)
+11:01:27.0 (207001321)|HEAP_ALLOCATE|[158]|Bytes:25
+11:01:27.0 (207010769)|SYSTEM_METHOD_EXIT|[158]|String.substring(Integer, Integer)
+11:01:27.0 (207015365)|METHOD_EXIT|[134]|01pO00000003AAn|TriggerHandler.getHandlerName()
+11:01:27.0 (207018879)|VARIABLE_SCOPE_BEGIN|[134]|handlerName|String|false|false
+11:01:27.0 (207028866)|VARIABLE_ASSIGNMENT|[134]|handlerName|"OpportunityTriggerHa (5 more) ..."
+11:01:27.0 (207044481)|SYSTEM_METHOD_ENTRY|[135]|Map<String,TriggerHandler.LoopCount>.containsKey(Object)
+11:01:27.0 (207054687)|SYSTEM_METHOD_EXIT|[135]|Map<String,TriggerHandler.LoopCount>.containsKey(Object)
+11:01:27.0 (207058936)|STATEMENT_EXECUTE|[135]
+11:01:27.0 (207062960)|METHOD_EXIT|[35]|01pO00000003AAn|TriggerHandler.addToLoopCount()
+11:01:27.0 (207082801)|SYSTEM_METHOD_ENTRY|[38]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+11:01:27.0 (207124411)|SYSTEM_METHOD_EXIT|[38]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+11:01:27.0 (207141476)|SYSTEM_METHOD_ENTRY|[40]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+11:01:27.0 (207165470)|SYSTEM_METHOD_EXIT|[40]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+11:01:27.0 (207182791)|SYSTEM_METHOD_ENTRY|[42]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+11:01:27.0 (207226372)|SYSTEM_METHOD_EXIT|[42]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+11:01:27.0 (207244736)|SYSTEM_METHOD_ENTRY|[44]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+11:01:27.0 (207277766)|SYSTEM_METHOD_EXIT|[44]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+11:01:27.0 (207295364)|SYSTEM_METHOD_ENTRY|[46]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+11:01:27.0 (207319073)|SYSTEM_METHOD_EXIT|[46]|com.salesforce.api.fast.System.compareObjects(Object, Object)
+11:01:27.0 (207323139)|STATEMENT_EXECUTE|[46]
+11:01:27.0 (207324411)|STATEMENT_EXECUTE|[47]
+11:01:27.0 (207334336)|METHOD_ENTRY|[47]|01pO0000000371i|OpportunityTriggerHandler.afterUpdate()
+11:01:27.0 (207345351)|VARIABLE_SCOPE_BEGIN|[48]|this|OpportunityTriggerHandler|true|false
+11:01:27.0 (207366225)|VARIABLE_ASSIGNMENT|[48]|this|{"OppTeamMembers":"0x7558a65","context":"0x4916801e","isTriggerExecuting":true}|0xf4c8012
+11:01:27.0 (207370886)|STATEMENT_EXECUTE|[48]
+11:01:27.0 (207372126)|STATEMENT_EXECUTE|[49]
+11:01:27.0 (207378456)|HEAP_ALLOCATE|[49]|Bytes:19
+11:01:27.0 (207396328)|SYSTEM_METHOD_ENTRY|[49]|System.debug(APEX_OBJECT, ANY)
+11:01:27.0 (207422294)|USER_DEBUG|[49]|ERROR|*** AFTER UPDATE **
+11:01:27.0 (207428095)|SYSTEM_METHOD_EXIT|[49]|System.debug(APEX_OBJECT, ANY)
+11:01:27.0 (207434357)|STATEMENT_EXECUTE|[50]
+11:01:27.0 (207435602)|STATEMENT_EXECUTE|[51]
+11:01:27.0 (207445054)|METHOD_ENTRY|[51]|01pO0000000371i|OpportunityTriggerHandler.ApprovalProcessOrchestrator()
+11:01:27.0 (207458019)|VARIABLE_SCOPE_BEGIN|[464]|this|OpportunityTriggerHandler|true|false
+11:01:27.0 (207478628)|VARIABLE_ASSIGNMENT|[464]|this|{"OppTeamMembers":"0x7558a65","context":"0x4916801e","isTriggerExecuting":true}|0xf4c8012
+11:01:27.0 (207483519)|STATEMENT_EXECUTE|[464]
+11:01:27.0 (207484741)|STATEMENT_EXECUTE|[465]
+11:01:27.0 (207558626)|HEAP_ALLOCATE|[465]|Bytes:4
+11:01:27.0 (207599622)|SYSTEM_CONSTRUCTOR_ENTRY|[465]|<init>()
+11:01:27.0 (207617586)|SYSTEM_CONSTRUCTOR_EXIT|[465]|<init>()
+11:01:27.0 (207621053)|VARIABLE_SCOPE_BEGIN|[465]|gatesToUpsert|List<Gate__c>|true|false
+11:01:27.0 (207626521)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+11:01:27.0 (207632891)|VARIABLE_ASSIGNMENT|[465]|gatesToUpsert|[]|0x300e0b8c
+11:01:27.0 (207635623)|STATEMENT_EXECUTE|[466]
+11:01:27.0 (207643889)|HEAP_ALLOCATE|[466]|Bytes:4
+11:01:27.0 (207657297)|SYSTEM_CONSTRUCTOR_ENTRY|[466]|<init>(Integer)
+11:01:27.0 (207674984)|SYSTEM_CONSTRUCTOR_EXIT|[466]|<init>(Integer)
+11:01:27.0 (207678405)|VARIABLE_SCOPE_BEGIN|[466]|OppsToStartApprovalProcess|Set<Id>|true|false
+11:01:27.0 (207705542)|VARIABLE_ASSIGNMENT|[466]|OppsToStartApprovalProcess|[]|0x5ba9518f
+11:01:27.0 (207732964)|SYSTEM_METHOD_ENTRY|[468]|List<Opportunity>.iterator()
+11:01:27.0 (207751781)|SYSTEM_METHOD_EXIT|[468]|List<Opportunity>.iterator()
+11:01:27.0 (207761010)|SYSTEM_METHOD_ENTRY|[468]|system.ListIterator.hasNext()
+11:01:27.0 (207768173)|HEAP_ALLOCATE|[468]|Bytes:5
+11:01:27.0 (207773549)|SYSTEM_METHOD_EXIT|[468]|system.ListIterator.hasNext()
+11:01:27.0 (207788303)|VARIABLE_SCOPE_BEGIN|[468]|opp|Opportunity|true|false
+11:01:27.0 (211730248)|VARIABLE_ASSIGNMENT|[468]|opp|{"LastModifiedDate":"2017-04-12T01:01:27.000Z","Regional_Business__c":"a0BO000000F5hL5MAJ","TSF_Gate_Status__c":"Not Applicable","Contract_Risk__c":"Client-side risk: Co (23 more) ...","CloseDate":"2017-08-01T00:00:00.000Z","HasOpenActivity":false,"Budget_Confirmed__c":false,"Overall_Prospect_Val (5 more) ...":9999999,"Less_Cost_Recoveries (10 more) ...":0,"District__c":"Northern Rivers","State__c":"New South Wales","D_I_Involvement__c":false,"IsDeleted":false,"Non_Binding_Proposal (12 more) ...":false,"Net_Budget_Post_Tend (5 more) ...":0,"Parent_Company_Guara (11 more) ...":" ","Previous_Gate_TSF_St (7 more) ...":"Not Applicable","Detailed_Description (3 more) ...":"Desc","ROI_Analysis_Complet (5 more) ...":false,"PPP_or_Third_Party_F (16 more) ...":false,"Executive_Summary__c":"Desc","CRA_Gate_Status__c":"Not Applicable","Tender_Dates_Header_ (2 more) ...":" ","Less_Cost_Recoveries (10 more) ...":0,"Is_internal_BG_colla (11 more) ...":false,"Prospect_Status__c":"Prospect","Id":"006O0000009HAXhIAO","Proposed_Margin_on_R (9 more) ...":30,"Client_Drivers__c":"Test","Primary_Business_Uni (4 more) ...":"NSW/ACT","IsClosed":false,"Delivery_End_Date__c":"2020-07-31T00:00:00.000Z","OwnerId":"00528000006BYTIAA4","Prospect_Duration_Yr (4 more) ...":3.0,"Reason_For_Performin (9 more) ...":"Test","RecordTypeId":"012O0000000DD8PIAW","Key_Account_Manager_ (2 more) ...":"System Partners","Country__c":"Australia","Total_Budget_AUD__c":0,"StageName":"Gate 3","Amount":9999999.00,"Probability":60,"EOI_PQ_Close_Date__c":"2017-05-01T00:00:00.000Z","Independent_Credit_C (16 more) ...":false,"SystemModstamp":"2017-04-12T01:01:27.000Z","Total_Less_Recoverie (4 more) ...":0,"Business_Development (11 more) ...":"00528000004d3msAAA","AccountId":"001O0000018AKplIAG","HasOpportunityLineIt (2 more) ...":false,"Prospect_Number__c":"PRS-00148","ForecastCategory":"Pipeline","Net_Budget_EOI_PQ__c":0,"Client_Relationship_ (13 more) ...":"Test","Number_of_PRA_Critic (19 more) ...":0,"Name":"Test AMcF 12-04 #1","Prospect_Priority__c":"3","CreatedById":"00528000006B07FAAS","A_PCG_Is_Required_Fr (5 more) ...":"JHG","Project_Development_ (10 more) ...":"00528000006BYTIAA4","Tender_Close_Date__c":"2017-07-01T00:00:00.000Z","JH_Margin_Value__c":0,"Defect_Liability_Dur (15 more) ...":12,"Sync_Date_Fields__c":true,"Is_this_project_a_JV (15 more) ...":false,"Project_Duration_Mon (6 more) ...":36,"Delivery_End_Defect_ (21 more) ...":"2021-07-31T00:00:00.000Z","Is_Gate_1_To_3__c":true,"Bonding_Security_Hea (6 more) ...":" ","Net_Budget_Tender__c":0,"CreatedDate":"2017-04-12T01:00:17.000Z","HasOverdueTask":false,"Discovery_Completed_ (2 more) ...":false,"Data_Quality_Score__ (1 more) ...":40,"Project_Probability_ (2 more) ...":90,"ForecastCategoryName":"Pipeline","Client_Probity__c":false,"Total_Budget_EOI_PQ_ (2 more) ...":0,"Managing_Contractor_ (12 more) ...":false,"Business_Group__c":"a0BO000000F5hL0MAJ","Anticipated_Revenue_ (13 more) ...":"2017-09-01T00:00:00.000Z","Is_Gate_4_To_5__c":false,"Data_Quality_Descrip (7 more) ...":"Missing: Type, Lead  (18 more) ...","ExpectedRevenue":5999999.399999999,"Net_Budget_Amount__c":0,"Probity_Override__c":false,"IsWon":false,"EOI_PQ_Start_Date__c":"2017-04-01T00:00:00.000Z","Location__c":"Lismore, New South W (15 more) ...","D_I_Involvement_Text (3 more) ...":"No","Less_Cost_Recoveries (15 more) ...":0,"Previous_Gate_CRA_St (7 more) ...":"Not Applicable","Previous_Gate_Status (3 more) ...":"Not Applicable","Request_For_Special_ (22 more) ...":false,"Conga_Other_Heading_ (8 more) ...":"Other:","Apply_Default_Bondin (4 more) ...":false,"Gate_Status__c":"Not Started","Win_Probability__c":90,"D_I_Involvement_Guid (12 more) ...":"This box should be c (183 more) ...","Total_Budget_Tender_ (2 more) ...":0,"Total_Budget_Post_Te (7 more) ...":0,"Restrict_Access__c":false,"Nearest_City__c":"Lismore","Tender_Start_Date__c":"2017-06-01T00:00:00.000Z","IsPrivate":false,"LastModifiedById":"00528000006B07FAAS","Is_internal_Regional (21 more) ...":false}|0x7004ee3d
+11:01:27.0 (211754401)|STATEMENT_EXECUTE|[468]
+11:01:27.0 (211756723)|STATEMENT_EXECUTE|[469]
+11:01:27.0 (211803864)|SYSTEM_METHOD_ENTRY|[469]|Map<Id,Opportunity>.get(Object)
+11:01:27.0 (211833021)|SYSTEM_METHOD_EXIT|[469]|Map<Id,Opportunity>.get(Object)
+11:01:27.0 (211851294)|VARIABLE_SCOPE_BEGIN|[469]|oldOpp|Opportunity|true|false
+11:01:27.0 (215187531)|VARIABLE_ASSIGNMENT|[469]|oldOpp|{"LastModifiedDate":"2017-04-12T01:00:18.000Z","Regional_Business__c":"a0BO000000F5hL5MAJ","TSF_Gate_Status__c":"Not Applicable","Contract_Risk__c":"Client-side risk: Co (23 more) ...","CloseDate":"2017-08-01T00:00:00.000Z","HasOpenActivity":false,"Budget_Confirmed__c":false,"Overall_Prospect_Val (5 more) ...":9999999,"Less_Cost_Recoveries (10 more) ...":0,"District__c":"Northern Rivers","State__c":"New South Wales","D_I_Involvement__c":false,"IsDeleted":false,"Non_Binding_Proposal (12 more) ...":false,"Net_Budget_Post_Tend (5 more) ...":0,"Parent_Company_Guara (11 more) ...":" ","Previous_Gate_TSF_St (7 more) ...":"Not Applicable","Detailed_Description (3 more) ...":"Desc","ROI_Analysis_Complet (5 more) ...":false,"PPP_or_Third_Party_F (16 more) ...":false,"Executive_Summary__c":"Desc","CRA_Gate_Status__c":"Not Applicable","Tender_Dates_Header_ (2 more) ...":" ","Less_Cost_Recoveries (10 more) ...":0,"Is_internal_BG_colla (11 more) ...":false,"Prospect_Status__c":"Prospect","Id":"006O0000009HAXhIAO","Proposed_Margin_on_R (9 more) ...":30,"Client_Drivers__c":"Test","Primary_Business_Uni (4 more) ...":"NSW/ACT","IsClosed":false,"Delivery_End_Date__c":"2020-07-31T00:00:00.000Z","OwnerId":"00528000006B07FAAS","Prospect_Duration_Yr (4 more) ...":3.0,"Reason_For_Performin (9 more) ...":"Test","RecordTypeId":"012O0000000DD8PIAW","Key_Account_Manager_ (2 more) ...":"System Partners","Country__c":"Australia","Total_Budget_AUD__c":0,"StageName":"Gate 3","Amount":9999999.00,"Probability":60,"EOI_PQ_Close_Date__c":"2017-05-01T00:00:00.000Z","Independent_Credit_C (16 more) ...":false,"SystemModstamp":"2017-04-12T01:00:18.000Z","Total_Less_Recoverie (4 more) ...":0,"Business_Development (11 more) ...":"00528000004d3msAAA","AccountId":"001O0000018AKplIAG","HasOpportunityLineIt (2 more) ...":false,"Prospect_Number__c":"PRS-00148","ForecastCategory":"Pipeline","Net_Budget_EOI_PQ__c":0,"Client_Relationship_ (13 more) ...":"Test","Number_of_PRA_Critic (19 more) ...":0,"Name":"Test AMcF 12-04 #1","Prospect_Priority__c":"3","CreatedById":"00528000006B07FAAS","Tender_Close_Date__c":"2017-07-01T00:00:00.000Z","JH_Margin_Value__c":0,"Defect_Liability_Dur (15 more) ...":12,"Sync_Date_Fields__c":false,"Is_this_project_a_JV (15 more) ...":false,"Project_Duration_Mon (6 more) ...":36,"Delivery_End_Defect_ (21 more) ...":"2021-07-31T00:00:00.000Z","Is_Gate_1_To_3__c":true,"Bonding_Security_Hea (6 more) ...":" ","Net_Budget_Tender__c":0,"CreatedDate":"2017-04-12T01:00:17.000Z","HasOverdueTask":false,"Discovery_Completed_ (2 more) ...":false,"Data_Quality_Score__ (1 more) ...":40,"Project_Probability_ (2 more) ...":90,"ForecastCategoryName":"Pipeline","Client_Probity__c":false,"Total_Budget_EOI_PQ_ (2 more) ...":0,"Managing_Contractor_ (12 more) ...":false,"Business_Group__c":"a0BO000000F5hL0MAJ","Anticipated_Revenue_ (13 more) ...":"2017-09-01T00:00:00.000Z","Is_Gate_4_To_5__c":false,"Data_Quality_Descrip (7 more) ...":"Missing: Type, Lead  (18 more) ...","ExpectedRevenue":5999999.399999999,"Net_Budget_Amount__c":0,"Probity_Override__c":false,"IsWon":false,"EOI_PQ_Start_Date__c":"2017-04-01T00:00:00.000Z","Location__c":"Lismore, New South W (15 more) ...","D_I_Involvement_Text (3 more) ...":"No","Less_Cost_Recoveries (15 more) ...":0,"Previous_Gate_CRA_St (7 more) ...":"Not Applicable","Previous_Gate_Status (3 more) ...":"Not Applicable","Request_For_Special_ (22 more) ...":false,"Conga_Other_Heading_ (8 more) ...":"Other:","Apply_Default_Bondin (4 more) ...":false,"Gate_Status__c":"Not Started","Win_Probability__c":90,"D_I_Involvement_Guid (12 more) ...":"This box should be c (183 more) ...","Total_Budget_Tender_ (2 more) ...":0,"Total_Budget_Post_Te (7 more) ...":0,"Restrict_Access__c":false,"Nearest_City__c":"Lismore","Tender_Start_Date__c":"2017-06-01T00:00:00.000Z","IsPrivate":false,"LastModifiedById":"00528000006B07FAAS","Is_internal_Regional (21 more) ...":false}|0xd6f8653
+11:01:27.0 (215212285)|STATEMENT_EXECUTE|[471]
+11:01:27.0 (216385262)|VARIABLE_SCOPE_BEGIN|[3]|OpportunityService.KCRARecordTypeID|String|false|true
+11:01:27.0 (216390787)|VARIABLE_SCOPE_BEGIN|[2]|OpportunityService.KCRATemplateRecordTypeID|String|false|true
+11:01:27.0 (216407890)|HEAP_ALLOCATE|[471]|Bytes:43
+11:01:27.0 (216422343)|METHOD_ENTRY|[1]|01pO00000003HOS|OpportunityService.OpportunityService()
+11:01:27.0 (216425061)|STATEMENT_EXECUTE|[1]
+11:01:27.0 (216428627)|STATEMENT_EXECUTE|[1]
+11:01:27.0 (216435846)|SYSTEM_MODE_ENTER|false
+11:01:27.0 (216442219)|HEAP_ALLOCATE|[2]|Bytes:5
+11:01:27.0 (216445517)|STATEMENT_EXECUTE|[2]
+11:01:27.0 (216505011)|SYSTEM_METHOD_ENTRY|[2]|Schema.SObjectType.getDescribe()
+11:01:27.0 (216549789)|HEAP_ALLOCATE|[2]|Bytes:4
+11:01:27.0 (216558348)|SYSTEM_METHOD_EXIT|[2]|Schema.SObjectType.getDescribe()
+11:01:27.0 (216587950)|LIMIT_USAGE|[2]|RECORD_TYPE_DESCRIBES|5|100
+11:01:27.0 (216613420)|HEAP_ALLOCATE|[2]|Bytes:16
+11:01:27.0 (216637075)|SYSTEM_METHOD_ENTRY|[2]|Map<String,Schema.RecordTypeInfo>.get(Object)
+11:01:27.0 (216655419)|SYSTEM_METHOD_EXIT|[2]|Map<String,Schema.RecordTypeInfo>.get(Object)
+11:01:27.0 (216684103)|HEAP_ALLOCATE|[2]|Bytes:4
+11:01:27.0 (216695677)|HEAP_ALLOCATE|[2]|Bytes:18
+11:01:27.0 (216710183)|VARIABLE_ASSIGNMENT|[2]|OpportunityService.KCRATemplateRecordTypeID|"012O0000000DCgLIAW"
+11:01:27.0 (216712901)|STATEMENT_EXECUTE|[3]
+11:01:27.0 (216743454)|SYSTEM_METHOD_ENTRY|[3]|Schema.SObjectType.getDescribe()
+11:01:27.0 (216772735)|HEAP_ALLOCATE|[3]|Bytes:4
+11:01:27.0 (216782065)|SYSTEM_METHOD_EXIT|[3]|Schema.SObjectType.getDescribe()
+11:01:27.0 (216795201)|LIMIT_USAGE|[3]|RECORD_TYPE_DESCRIBES|6|100
+11:01:27.0 (216808399)|HEAP_ALLOCATE|[3]|Bytes:16
+11:01:27.0 (216827927)|SYSTEM_METHOD_ENTRY|[3]|Map<String,Schema.RecordTypeInfo>.get(Object)
+11:01:27.0 (216843641)|SYSTEM_METHOD_EXIT|[3]|Map<String,Schema.RecordTypeInfo>.get(Object)
+11:01:27.0 (216861700)|HEAP_ALLOCATE|[3]|Bytes:4
+11:01:27.0 (216869186)|HEAP_ALLOCATE|[3]|Bytes:18
+11:01:27.0 (216879836)|VARIABLE_ASSIGNMENT|[3]|OpportunityService.KCRARecordTypeID|"012O0000000DCgGIAW"
+11:01:27.0 (216886793)|SYSTEM_MODE_EXIT|false
+11:01:27.0 (216896869)|METHOD_EXIT|[1]|OpportunityService
+11:01:27.0 (216909704)|METHOD_ENTRY|[471]|01pO00000003HOS|OpportunityService.getGateNumber(String)
+11:01:27.0 (216928671)|VARIABLE_SCOPE_BEGIN|[196]|stage|String|false|false
+11:01:27.0 (216935171)|VARIABLE_ASSIGNMENT|[196]|stage|"Gate 3"
+11:01:27.0 (216943084)|SYSTEM_MODE_ENTER|false
+11:01:27.0 (216948494)|HEAP_ALLOCATE|[197]|Bytes:5
+11:01:27.0 (216951993)|STATEMENT_EXECUTE|[196]
+11:01:27.0 (216986041)|STATEMENT_EXECUTE|[199]
+11:01:27.0 (216989363)|HEAP_ALLOCATE|[199]|Bytes:1
+11:01:27.0 (216993850)|SYSTEM_MODE_EXIT|false
+11:01:27.0 (217001041)|METHOD_EXIT|[471]|01pO00000003HOS|OpportunityService.getGateNumber(String)
+11:01:27.0 (217006243)|VARIABLE_SCOPE_BEGIN|[471]|gateNumber|String|false|false
+11:01:27.0 (217012214)|VARIABLE_ASSIGNMENT|[471]|gateNumber|"3"
+11:01:27.0 (217014214)|STATEMENT_EXECUTE|[473]
+11:01:27.0 (217019463)|HEAP_ALLOCATE|[473]|Bytes:42
+11:01:27.0 (217041550)|SYSTEM_METHOD_ENTRY|[473]|String.valueOf(Object)
+11:01:27.0 (218705485)|HEAP_ALLOCATE|[473]|Bytes:6163
+11:01:27.0 (218728199)|SYSTEM_METHOD_EXIT|[473]|String.valueOf(Object)
+11:01:27.0 (218742537)|HEAP_ALLOCATE|[473]|Bytes:6205
+11:01:27.0 (218759097)|SYSTEM_METHOD_ENTRY|[473]|System.debug(APEX_OBJECT, ANY)
+11:01:27.0 (218772695)|USER_DEBUG|[473]|ERROR|*** TEST ApprovalProcessOrchestrator opp: Opportunity:{Id=006O0000009HAXhIAO, IsDeleted=false, AccountId=001O0000018AKplIAG, RecordTypeId=012O0000000DD8PIAW, IsPrivate=false, Name=Test AMcF 12-04 #1, Description=null, StageName=Gate 3, Amount=9999999.00, Probability=60, ExpectedRevenue=5999999.399999999, TotalOpportunityQuantity=null, CloseDate=2017-08-01 00:00:00, Type=null, NextStep=null, LeadSource=null, IsClosed=false, IsWon=false, ForecastCategory=Pipeline, ForecastCategoryName=Pipeline, CampaignId=null, HasOpportunityLineItem=false, Pricebook2Id=null, OwnerId=00528000006BYTIAA4, CreatedDate=2017-04-12 01:00:17, CreatedById=00528000006B07FAAS, LastModifiedDate=2017-04-12 01:01:27, LastModifiedById=00528000006B07FAAS, SystemModstamp=2017-04-12 01:01:27, LastActivityDate=null, FiscalYear=null, FiscalQuarter=null, LastViewedDate=null, LastReferencedDate=null, SyncedQuoteId=null, ContractId=null, HasOpenActivity=false, HasOverdueTask=false, Budget_Confirmed__c=false, Discovery_Completed__c=false, ROI_Analysis_Completed__c=false, Loss_Reason__c=null, Business_Group__c=a0BO000000F5hL0MAJ, Data_Quality_Description__c=Missing: Type, Lead Source, Next Steps, Data_Quality_Score__c=40, EOI_Tender_Date__c=null, Prospect_Code__c=null, Prospect_Manager__c=null, Regional_Business__c=a0BO000000F5hL5MAJ, CANDY_Tender_Number__c=null, Also_Known_As__c=null, Prospect_Priority__c=3, Prospect_Number__c=PRS-00148, Win_Probability__c=90, Project_Probability__c=90, Project_Duration_Months__c=36, Scope__c=null, Payment_Mechanism__c=null, Discipline__c=null, D_I_Involvement__c=false, D_I_Involvement_Guidance_Note__c=This box should be checked if JH D&I are directly involved in providing financial advice, direction or lead of SPV for the prospect. It should not be checked if there is no D&I requirement to be involved, Client_Probity__c=false, Restrict_Access__c=false, Prospect_Status__c=Prospect, Industry_Sector_GM__c=null, Project_Development_Manager__c=00528000006BYTIAA4, Detailed_Description__c=Desc, Non_Binding_Proposal_Required__c=false, EOI_PQ_Start_Date__c=2017-04-01 00:00:00, EOI_PQ_Close_Date__c=2017-05-01 00:00:00, Announcement_of_Pre_Qualified_Bidders__c=null, Strategy_Bid_Development_Meeting_Date__c=null, Tender_Start_Date__c=2017-06-01 00:00:00, Tender_Close_Date__c=2017-07-01 00:00:00, Anticipated_Revenue_Start_Date__c=2017-09-01 00:00:00, Interim_Review__c=null, Preliminary_Final_Review__c=null, Final_Tender_Review__c=null, Tender_Collaboration_Pack_Aconex_DB_URL__c=null, Country__c=Australia, State__c=New South Wales, Nearest_City__c=Lismore, District__c=Northern Rivers, Reason_For_Performing_Work__c=Test, Client_Drivers__c=Test, Relationship__c=null, Client_Relationship_Management__c=Test, Financial_Viability_Exposure__c=null, Independent_Credit_Check_Required__c=false, Client_Supplied_Materials__c=null, Value_of_Managed_Works__c=null, Overall_Prospect_Value__c=9999999, Managing_Contractor_Time_Risk__c=false, Proposed_Margin_on_Revenue__c=30, PPP_or_Third_Party_Funded_Project__c=false, Payment_Variation_Terms__c=null, Finance_Prospect_Comments__c=null, Defect_Liability_Duration_Months__c=12, Minimum_Credit_Rating_Required__c=null, Request_For_Special_Wording_In_The_Bond__c=false, A_PCG_Is_Required_From__c=JHG, PCG_Comments__c=null, Proposed_FA__c=null, Funding_Strategy__c=null, Target_Gearing_Ratio__c=null, Total_Indicative_Equity__c=null, JH_Target_Equity__c=null, JH_Target_Equity_Amount__c=null, Timing_for_Contribution__c=null, Equity_Residual_Risk__c=null, Target_IRR_and_or_D_I_Revenues__c=null, Intended_Exit_Strategy__c=null, JH_Accounting_Tax_Considerations__c=null, Relationship_Agreements__c=null, Is_this_project_a_JV_or_Alliance__c=false, Proposed_form_of_Relationship__c=null, Is_internal_BG_collaboration__c=false, Major_Risks__c=null, Nature_of_technology_design_proposed__c=null, Intentions_to_Resource_Project_Team__c=null, Is_internal_Regional_Bus_collaboration__c=false, Contract_Risk__c=Client-side risk: Cost plus margin contract, Client_Relationship_Manager__c=null, Other_Custom_Heading__c=null, Business_Development_Manager__c=00528000004d3msAAA, Procurement_Process__c=null, Alignment_with_Business_Plan__c=null, Competitor_Analysis_General_Comments__c=null, Intentions_to_Resource_Bid_Team__c=null, Conversion_Budget_Comments__c=null, Specific_KCRA_Approvals_Comments__c=null, Design__c=null, Cost__c=null, Time__c=null, Relationships__c=null, People__c=null, Technology__c=null, Methodology__c=null, Innovation__c=null, Other__c=null, Key_Points__c=null, Alignment_with_Core_Competencies__c=null, Executive_Summary__c=Desc, Parent_Company_Guarantee_PCG__c= , Bonding_Security_Header__c= , Tender_Dates_Header__c= , JH_Revenue_Share__c=null, JH_Margin_Value__c=0, Total_Budget_EOI_PQ__c=0, Total_Budget_Tender__c=0, Total_Budget_Post_Tender__c=0, Less_Cost_Recoveries_EOI_PQ__c=0, Less_Cost_Recoveries_Tender__c=0, Less_Cost_Recoveries_Post_Tender__c=0, Total_Budget_AUD__c=0, Total_Less_Recoveries__c=0, Net_Budget_Amount__c=0, Net_Budget_EOI_PQ__c=0, Net_Budget_Tender__c=0, Net_Budget_Post_Tender__c=0, JH_Bid_Cost_of_JH_Revenue__c=null, Location__c=Lismore, New South Wales, Australia, Delivery_End_Date__c=2020-07-31 00:00:00, Prospect_Duration_Yrs__c=3.0, Conga_Other_Heading_Field__c=Other:, Apply_Default_Bonding__c=false, Notes_Doc_ID__c=null, Delivery_End_Defect_Liability_Duration__c=2021-07-31 00:00:00, EOI_PQ_Submitted_Date__c=null, Tender_Submitted_Date__c=null, Count_of_EOI_Lessons_Learnt_Reports__c=null, Count_of_Tender_Lessons_Learnt_Reports__c=null, Gate_Status__c=Not Started, TSF_Gate_Status__c=Not Applicable, CRA_Gate_Status__c=Not Applicable, Number_of_PRA_Critical_Items_Rated_3__c=0, Are_there_any_critical_risks__c=null, Has_TSF_changed_since_last_approval__c=null, Has_CRA_changed_since_last_approval__c=null, Sync_Date_Fields__c=true, Is_Gate_1_To_3__c=true, Is_Gate_4_To_5__c=false, D_I_Involvement_Text__c=No, Reason_for_Status__c=null, Key_Account_Manager__c=System Partners, Primary_Business_Unit__c=NSW/ACT, Previous_Gate_Status__c=Not Applicable, Previous_Gate_CRA_Status__c=Not Applicable, Previous_Gate_TSF_Status__c=Not Applicable, Probity_Override__c=false, Previous_Stage__c=null}
+11:01:27.0 (218805200)|SYSTEM_METHOD_EXIT|[473]|System.debug(APEX_OBJECT, ANY)
+11:01:27.0 (218808738)|STATEMENT_EXECUTE|[474]
+11:01:27.0 (218814408)|HEAP_ALLOCATE|[474]|Bytes:48
+11:01:27.0 (218825346)|HEAP_ALLOCATE|[474]|Bytes:54
+11:01:27.0 (218835011)|SYSTEM_METHOD_ENTRY|[474]|System.debug(APEX_OBJECT, ANY)
+11:01:27.0 (218849453)|USER_DEBUG|[474]|ERROR|*** TEST ApprovalProcessOrchestrator opp Stage: Gate 3
+11:01:27.0 (218854475)|SYSTEM_METHOD_EXIT|[474]|System.debug(APEX_OBJECT, ANY)
+11:01:27.0 (218857455)|STATEMENT_EXECUTE|[475]
+11:01:27.0 (218862133)|HEAP_ALLOCATE|[475]|Bytes:52
+11:01:27.0 (218874302)|HEAP_ALLOCATE|[475]|Bytes:58
+11:01:27.0 (218883172)|SYSTEM_METHOD_ENTRY|[475]|System.debug(APEX_OBJECT, ANY)
+11:01:27.0 (218893936)|USER_DEBUG|[475]|ERROR|*** TEST ApprovalProcessOrchestrator old opp Stage: Gate 3
+11:01:27.0 (218898461)|SYSTEM_METHOD_EXIT|[475]|System.debug(APEX_OBJECT, ANY)
+11:01:27.0 (218901362)|STATEMENT_EXECUTE|[476]
+11:01:27.0 (218905705)|HEAP_ALLOCATE|[476]|Bytes:53
+11:01:27.0 (218914896)|HEAP_ALLOCATE|[476]|Bytes:64
+11:01:27.0 (218923949)|SYSTEM_METHOD_ENTRY|[476]|System.debug(APEX_OBJECT, ANY)
+11:01:27.0 (218938930)|USER_DEBUG|[476]|ERROR|*** TEST ApprovalProcessOrchestrator oppGate Status: Not Started
+11:01:27.0 (218943769)|SYSTEM_METHOD_EXIT|[476]|System.debug(APEX_OBJECT, ANY)
+11:01:27.0 (218946651)|STATEMENT_EXECUTE|[477]
+11:01:27.0 (218950999)|HEAP_ALLOCATE|[477]|Bytes:57
+11:01:27.0 (218959424)|HEAP_ALLOCATE|[477]|Bytes:68
+11:01:27.0 (218968220)|SYSTEM_METHOD_ENTRY|[477]|System.debug(APEX_OBJECT, ANY)
+11:01:27.0 (218978402)|USER_DEBUG|[477]|ERROR|*** TEST ApprovalProcessOrchestrator OLD oppGate Status: Not Started
+11:01:27.0 (218982828)|SYSTEM_METHOD_EXIT|[477]|System.debug(APEX_OBJECT, ANY)
+11:01:27.0 (219014992)|STATEMENT_EXECUTE|[479]
+11:01:27.0 (219041188)|STATEMENT_EXECUTE|[481]
+11:01:27.0 (219043261)|STATEMENT_EXECUTE|[509]
+11:01:27.0 (219057775)|METHOD_ENTRY|[509]|01pO0000000371i|OpportunityTriggerHandler.BDM_PDM_Opp_Team_Manager(Opportunity)
+11:01:27.0 (219070761)|VARIABLE_SCOPE_BEGIN|[203]|this|OpportunityTriggerHandler|true|false
+11:01:27.0 (219104751)|VARIABLE_ASSIGNMENT|[203]|this|{"OppTeamMembers":"0x7558a65","context":"0x4916801e","isTriggerExecuting":true}|0xf4c8012
+11:01:27.0 (219108534)|VARIABLE_SCOPE_BEGIN|[203]|opp|Opportunity|true|false
+11:01:27.0 (220232867)|VARIABLE_ASSIGNMENT|[203]|opp|{"LastModifiedDate":"2017-04-12T01:01:27.000Z","Regional_Business__c":"a0BO000000F5hL5MAJ","TSF_Gate_Status__c":"Not Applicable","Contract_Risk__c":"Client-side risk: Co (23 more) ...","CloseDate":"2017-08-01T00:00:00.000Z","HasOpenActivity":false,"Budget_Confirmed__c":false,"Overall_Prospect_Val (5 more) ...":9999999,"Less_Cost_Recoveries (10 more) ...":0,"District__c":"Northern Rivers","State__c":"New South Wales","D_I_Involvement__c":false,"IsDeleted":false,"Non_Binding_Proposal (12 more) ...":false,"Net_Budget_Post_Tend (5 more) ...":0,"Parent_Company_Guara (11 more) ...":" ","Previous_Gate_TSF_St (7 more) ...":"Not Applicable","Detailed_Description (3 more) ...":"Desc","ROI_Analysis_Complet (5 more) ...":false,"PPP_or_Third_Party_F (16 more) ...":false,"Executive_Summary__c":"Desc","CRA_Gate_Status__c":"Not Applicable","Tender_Dates_Header_ (2 more) ...":" ","Less_Cost_Recoveries (10 more) ...":0,"Is_internal_BG_colla (11 more) ...":false,"Prospect_Status__c":"Prospect","Id":"006O0000009HAXhIAO","Proposed_Margin_on_R (9 more) ...":30,"Client_Drivers__c":"Test","Primary_Business_Uni (4 more) ...":"NSW/ACT","IsClosed":false,"Delivery_End_Date__c":"2020-07-31T00:00:00.000Z","OwnerId":"00528000006BYTIAA4","Prospect_Duration_Yr (4 more) ...":3.0,"Reason_For_Performin (9 more) ...":"Test","RecordTypeId":"012O0000000DD8PIAW","Key_Account_Manager_ (2 more) ...":"System Partners","Country__c":"Australia","Total_Budget_AUD__c":0,"StageName":"Gate 3","Amount":9999999.00,"Probability":60,"EOI_PQ_Close_Date__c":"2017-05-01T00:00:00.000Z","Independent_Credit_C (16 more) ...":false,"SystemModstamp":"2017-04-12T01:01:27.000Z","Total_Less_Recoverie (4 more) ...":0,"Business_Development (11 more) ...":"00528000004d3msAAA","AccountId":"001O0000018AKplIAG","HasOpportunityLineIt (2 more) ...":false,"Prospect_Number__c":"PRS-00148","ForecastCategory":"Pipeline","Net_Budget_EOI_PQ__c":0,"Client_Relationship_ (13 more) ...":"Test","Number_of_PRA_Critic (19 more) ...":0,"Name":"Test AMcF 12-04 #1","Prospect_Priority__c":"3","CreatedById":"00528000006B07FAAS","A_PCG_Is_Required_Fr (5 more) ...":"JHG","Project_Development_ (10 more) ...":"00528000006BYTIAA4","Tender_Close_Date__c":"2017-07-01T00:00:00.000Z","JH_Margin_Value__c":0,"Defect_Liability_Dur (15 more) ...":12,"Sync_Date_Fields__c":true,"Is_this_project_a_JV (15 more) ...":false,"Project_Duration_Mon (6 more) ...":36,"Delivery_End_Defect_ (21 more) ...":"2021-07-31T00:00:00.000Z","Is_Gate_1_To_3__c":true,"Bonding_Security_Hea (6 more) ...":" ","Net_Budget_Tender__c":0,"CreatedDate":"2017-04-12T01:00:17.000Z","HasOverdueTask":false,"Discovery_Completed_ (2 more) ...":false,"Data_Quality_Score__ (1 more) ...":40,"Project_Probability_ (2 more) ...":90,"ForecastCategoryName":"Pipeline","Client_Probity__c":false,"Total_Budget_EOI_PQ_ (2 more) ...":0,"Managing_Contractor_ (12 more) ...":false,"Business_Group__c":"a0BO000000F5hL0MAJ","Anticipated_Revenue_ (13 more) ...":"2017-09-01T00:00:00.000Z","Is_Gate_4_To_5__c":false,"Data_Quality_Descrip (7 more) ...":"Missing: Type, Lead  (18 more) ...","ExpectedRevenue":5999999.399999999,"Net_Budget_Amount__c":0,"Probity_Override__c":false,"IsWon":false,"EOI_PQ_Start_Date__c":"2017-04-01T00:00:00.000Z","Location__c":"Lismore, New South W (15 more) ...","D_I_Involvement_Text (3 more) ...":"No","Less_Cost_Recoveries (15 more) ...":0,"Previous_Gate_CRA_St (7 more) ...":"Not Applicable","Previous_Gate_Status (3 more) ...":"Not Applicable","Request_For_Special_ (22 more) ...":false,"Conga_Other_Heading_ (8 more) ...":"Other:","Apply_Default_Bondin (4 more) ...":false,"Gate_Status__c":"Not Started","Win_Probability__c":90,"D_I_Involvement_Guid (12 more) ...":"This box should be c (183 more) ...","Total_Budget_Tender_ (2 more) ...":0,"Total_Budget_Post_Te (7 more) ...":0,"Restrict_Access__c":false,"Nearest_City__c":"Lismore","Tender_Start_Date__c":"2017-06-01T00:00:00.000Z","IsPrivate":false,"LastModifiedById":"00528000006B07FAAS","Is_internal_Regional (21 more) ...":false}|0x7004ee3d
+11:01:27.0 (220257245)|STATEMENT_EXECUTE|[203]
+11:01:27.0 (220259045)|STATEMENT_EXECUTE|[204]
+11:01:27.0 (220264919)|VARIABLE_SCOPE_BEGIN|[204]|BDMChange|Boolean|false|false
+11:01:27.0 (220271421)|HEAP_ALLOCATE|[204]|Bytes:5
+11:01:27.0 (220277082)|VARIABLE_ASSIGNMENT|[204]|BDMChange|false
+11:01:27.0 (220278925)|STATEMENT_EXECUTE|[205]
+11:01:27.0 (220281178)|VARIABLE_SCOPE_BEGIN|[205]|PDMChange|Boolean|false|false
+11:01:27.0 (220283934)|HEAP_ALLOCATE|[205]|Bytes:5
+11:01:27.0 (220287257)|VARIABLE_ASSIGNMENT|[205]|PDMChange|false
+11:01:27.0 (220301279)|STATEMENT_EXECUTE|[211]
+11:01:27.0 (220302775)|STATEMENT_EXECUTE|[212]
+11:01:27.0 (220334539)|SYSTEM_METHOD_ENTRY|[212]|Map<Id,Opportunity>.get(Object)
+11:01:27.0 (220361658)|SYSTEM_METHOD_EXIT|[212]|Map<Id,Opportunity>.get(Object)
+11:01:27.0 (220376502)|VARIABLE_SCOPE_BEGIN|[212]|oldOpp|Opportunity|true|false
+11:01:27.0 (221484607)|VARIABLE_ASSIGNMENT|[212]|oldOpp|{"LastModifiedDate":"2017-04-12T01:00:18.000Z","Regional_Business__c":"a0BO000000F5hL5MAJ","TSF_Gate_Status__c":"Not Applicable","Contract_Risk__c":"Client-side risk: Co (23 more) ...","CloseDate":"2017-08-01T00:00:00.000Z","HasOpenActivity":false,"Budget_Confirmed__c":false,"Overall_Prospect_Val (5 more) ...":9999999,"Less_Cost_Recoveries (10 more) ...":0,"District__c":"Northern Rivers","State__c":"New South Wales","D_I_Involvement__c":false,"IsDeleted":false,"Non_Binding_Proposal (12 more) ...":false,"Net_Budget_Post_Tend (5 more) ...":0,"Parent_Company_Guara (11 more) ...":" ","Previous_Gate_TSF_St (7 more) ...":"Not Applicable","Detailed_Description (3 more) ...":"Desc","ROI_Analysis_Complet (5 more) ...":false,"PPP_or_Third_Party_F (16 more) ...":false,"Executive_Summary__c":"Desc","CRA_Gate_Status__c":"Not Applicable","Tender_Dates_Header_ (2 more) ...":" ","Less_Cost_Recoveries (10 more) ...":0,"Is_internal_BG_colla (11 more) ...":false,"Prospect_Status__c":"Prospect","Id":"006O0000009HAXhIAO","Proposed_Margin_on_R (9 more) ...":30,"Client_Drivers__c":"Test","Primary_Business_Uni (4 more) ...":"NSW/ACT","IsClosed":false,"Delivery_End_Date__c":"2020-07-31T00:00:00.000Z","OwnerId":"00528000006B07FAAS","Prospect_Duration_Yr (4 more) ...":3.0,"Reason_For_Performin (9 more) ...":"Test","RecordTypeId":"012O0000000DD8PIAW","Key_Account_Manager_ (2 more) ...":"System Partners","Country__c":"Australia","Total_Budget_AUD__c":0,"StageName":"Gate 3","Amount":9999999.00,"Probability":60,"EOI_PQ_Close_Date__c":"2017-05-01T00:00:00.000Z","Independent_Credit_C (16 more) ...":false,"SystemModstamp":"2017-04-12T01:00:18.000Z","Total_Less_Recoverie (4 more) ...":0,"Business_Development (11 more) ...":"00528000004d3msAAA","AccountId":"001O0000018AKplIAG","HasOpportunityLineIt (2 more) ...":false,"Prospect_Number__c":"PRS-00148","ForecastCategory":"Pipeline","Net_Budget_EOI_PQ__c":0,"Client_Relationship_ (13 more) ...":"Test","Number_of_PRA_Critic (19 more) ...":0,"Name":"Test AMcF 12-04 #1","Prospect_Priority__c":"3","CreatedById":"00528000006B07FAAS","Tender_Close_Date__c":"2017-07-01T00:00:00.000Z","JH_Margin_Value__c":0,"Defect_Liability_Dur (15 more) ...":12,"Sync_Date_Fields__c":false,"Is_this_project_a_JV (15 more) ...":false,"Project_Duration_Mon (6 more) ...":36,"Delivery_End_Defect_ (21 more) ...":"2021-07-31T00:00:00.000Z","Is_Gate_1_To_3__c":true,"Bonding_Security_Hea (6 more) ...":" ","Net_Budget_Tender__c":0,"CreatedDate":"2017-04-12T01:00:17.000Z","HasOverdueTask":false,"Discovery_Completed_ (2 more) ...":false,"Data_Quality_Score__ (1 more) ...":40,"Project_Probability_ (2 more) ...":90,"ForecastCategoryName":"Pipeline","Client_Probity__c":false,"Total_Budget_EOI_PQ_ (2 more) ...":0,"Managing_Contractor_ (12 more) ...":false,"Business_Group__c":"a0BO000000F5hL0MAJ","Anticipated_Revenue_ (13 more) ...":"2017-09-01T00:00:00.000Z","Is_Gate_4_To_5__c":false,"Data_Quality_Descrip (7 more) ...":"Missing: Type, Lead  (18 more) ...","ExpectedRevenue":5999999.399999999,"Net_Budget_Amount__c":0,"Probity_Override__c":false,"IsWon":false,"EOI_PQ_Start_Date__c":"2017-04-01T00:00:00.000Z","Location__c":"Lismore, New South W (15 more) ...","D_I_Involvement_Text (3 more) ...":"No","Less_Cost_Recoveries (15 more) ...":0,"Previous_Gate_CRA_St (7 more) ...":"Not Applicable","Previous_Gate_Status (3 more) ...":"Not Applicable","Request_For_Special_ (22 more) ...":false,"Conga_Other_Heading_ (8 more) ...":"Other:","Apply_Default_Bondin (4 more) ...":false,"Gate_Status__c":"Not Started","Win_Probability__c":90,"D_I_Involvement_Guid (12 more) ...":"This box should be c (183 more) ...","Total_Budget_Tender_ (2 more) ...":0,"Total_Budget_Post_Te (7 more) ...":0,"Restrict_Access__c":false,"Nearest_City__c":"Lismore","Tender_Start_Date__c":"2017-06-01T00:00:00.000Z","IsPrivate":false,"LastModifiedById":"00528000006B07FAAS","Is_internal_Regional (21 more) ...":false}|0xd6f8653
+11:01:27.0 (221534978)|STATEMENT_EXECUTE|[213]
+11:01:27.0 (221537804)|STATEMENT_EXECUTE|[214]
+11:01:27.0 (221543832)|HEAP_ALLOCATE|[214]|Bytes:5
+11:01:27.0 (221551941)|VARIABLE_ASSIGNMENT|[214]|PDMChange|true
+11:01:27.0 (221605824)|SYSTEM_METHOD_ENTRY|[216]|Id.compareTo(Id, Id, Boolean)
+11:01:27.0 (221632474)|SYSTEM_METHOD_EXIT|[216]|Id.compareTo(Id, Id, Boolean)
+11:01:27.0 (221636856)|STATEMENT_EXECUTE|[216]
+11:01:27.0 (221645079)|STATEMENT_EXECUTE|[221]
+11:01:27.0 (221646211)|STATEMENT_EXECUTE|[222]
+11:01:27.0 (221672132)|HEAP_ALLOCATE|[222]|Bytes:4
+11:01:27.0 (222481657)|VARIABLE_ASSIGNMENT|[222]|this.OpportunityId|"006O0000009HAXhIAO"|0x74a5a7ba
+11:01:27.0 (222551202)|VARIABLE_ASSIGNMENT|[222]|this.UserId|"00528000006BYTIAA4"|0x74a5a7ba
+11:01:27.0 (222558202)|HEAP_ALLOCATE|[222]|Bytes:3
+11:01:27.0 (222590491)|VARIABLE_ASSIGNMENT|[222]|this.TeamMemberRole|"PDM"|0x74a5a7ba
+11:01:27.0 (222620526)|VARIABLE_SCOPE_BEGIN|[222]|PDM|OpportunityTeamMember|true|false
+11:01:27.0 (222633104)|VARIABLE_ASSIGNMENT|[222]|PDM|{"OpportunityId":"006O0000009HAXhIAO","UserId":"00528000006BYTIAA4","TeamMemberRole":"PDM"}|0x74a5a7ba
+11:01:27.0 (222636438)|STATEMENT_EXECUTE|[223]
+11:01:27.0 (222664265)|SYSTEM_METHOD_ENTRY|[223]|List<OpportunityTeamMember>.add(Object)
+11:01:27.0 (222683789)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+11:01:27.0 (222694971)|SYSTEM_METHOD_EXIT|[223]|List<OpportunityTeamMember>.add(Object)
+11:01:27.0 (222705397)|STATEMENT_EXECUTE|[225]
+11:01:27.0 (222711490)|METHOD_EXIT|[509]|01pO0000000371i|OpportunityTriggerHandler.BDM_PDM_Opp_Team_Manager(Opportunity)
+11:01:27.0 (222722009)|SYSTEM_METHOD_ENTRY|[468]|system.ListIterator.hasNext()
+11:01:27.0 (222729936)|HEAP_ALLOCATE|[468]|Bytes:5
+11:01:27.0 (222735953)|SYSTEM_METHOD_EXIT|[468]|system.ListIterator.hasNext()
+11:01:27.0 (222744876)|VARIABLE_ASSIGNMENT|[468]|opp|null|
+11:01:27.0 (222758334)|METHOD_ENTRY|[512]|01pO00000003HOS|OpportunityService.getOpportunitiesAndInitiatedGates(Set<Id>)
+11:01:27.0 (222771657)|VARIABLE_SCOPE_BEGIN|[76]|OppsToStartApprovalProcess|Set<Id>|true|false
+11:01:27.0 (222781393)|VARIABLE_ASSIGNMENT|[76]|OppsToStartApprovalProcess|[]|0x5ba9518f
+11:01:27.0 (222790389)|SYSTEM_MODE_ENTER|false
+11:01:27.0 (222795568)|HEAP_ALLOCATE|[78]|Bytes:5
+11:01:27.0 (222799258)|STATEMENT_EXECUTE|[76]
+11:01:27.0 (222800978)|STATEMENT_EXECUTE|[78]
+11:01:27.0 (222803627)|HEAP_ALLOCATE|[78]|Bytes:235
+11:01:27.0 (222813848)|HEAP_ALLOCATE|[78]|Bytes:4
+11:01:27.0 (222824980)|HEAP_ALLOCATE|[78]|Bytes:7
+11:01:27.0 (222842149)|HEAP_ALLOCATE|[78]|Bytes:7
+11:01:27.0 (222875351)|HEAP_ALLOCATE|[78]|Bytes:4
+11:01:27.0 (222885317)|HEAP_ALLOCATE|[78]|Bytes:4
+11:01:27.0 (225085571)|SOQL_EXECUTE_BEGIN|[78]|Aggregations:1|SELECT ID, stageName, Gate_Status__c, CRA_Gate_Status__c, TSF_Gate_Status__c, (SELECT ID, Gate_Number__c, Gate_Type__c FROM Gates__r WHERE status__c = :tmpVar1 ORDER BY CreatedDate DESC NULLS FIRST) FROM Opportunity WHERE ID = :tmpVar2
+11:01:27.0 (225095042)|LIMIT_USAGE|[78]|SOQL|1|100
+11:01:27.0 (225102185)|LIMIT_USAGE|[78]|AGGS|1|300
+11:01:27.0 (227031430)|SOQL_EXECUTE_END|[78]|Rows:0
+11:01:27.0 (227039695)|LIMIT_USAGE|[78]|SOQL_ROWS|0|50000
+11:01:27.0 (227052875)|HEAP_ALLOCATE|[78]|Bytes:4
+11:01:27.0 (227065775)|HEAP_ALLOCATE|[78]|Bytes:0
+11:01:27.0 (227083160)|HEAP_ALLOCATE|[78]|Bytes:4
+11:01:27.0 (227094275)|SYSTEM_MODE_EXIT|false
+11:01:27.0 (227102734)|METHOD_EXIT|[512]|01pO00000003HOS|OpportunityService.getOpportunitiesAndInitiatedGates(Set<Id>)
+11:01:27.0 (227114193)|SYSTEM_METHOD_ENTRY|[512]|List<Opportunity>.iterator()
+11:01:27.0 (227121378)|SYSTEM_METHOD_EXIT|[512]|List<Opportunity>.iterator()
+11:01:27.0 (227130272)|SYSTEM_METHOD_ENTRY|[512]|system.ListIterator.hasNext()
+11:01:27.0 (227137211)|HEAP_ALLOCATE|[512]|Bytes:5
+11:01:27.0 (227142413)|SYSTEM_METHOD_EXIT|[512]|system.ListIterator.hasNext()
+11:01:27.0 (227152163)|VARIABLE_ASSIGNMENT|[512]|Opp|null|
+11:01:27.0 (227155714)|STATEMENT_EXECUTE|[512]
+11:01:27.0 (227157354)|STATEMENT_EXECUTE|[550]
+11:01:27.0 (227158318)|STATEMENT_EXECUTE|[550]
+11:01:27.0 (227159364)|STATEMENT_EXECUTE|[551]
+11:01:27.0 (227271351)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+11:01:27.0 (227282879)|METHOD_EXIT|[51]|01pO0000000371i|OpportunityTriggerHandler.ApprovalProcessOrchestrator()
+11:01:27.0 (227287582)|STATEMENT_EXECUTE|[52]
+11:01:27.0 (227300832)|METHOD_ENTRY|[52]|01pO0000000371i|OpportunityTriggerHandler.manageSharingForOppTeamMembers()
+11:01:27.0 (227314976)|VARIABLE_SCOPE_BEGIN|[252]|this|OpportunityTriggerHandler|true|false
+11:01:27.0 (227341912)|VARIABLE_ASSIGNMENT|[252]|this|{"OppTeamMembers":"0x7558a65","context":"0x4916801e","isTriggerExecuting":true}|0xf4c8012
+11:01:27.0 (227347328)|STATEMENT_EXECUTE|[252]
+11:01:27.0 (227357722)|SYSTEM_METHOD_ENTRY|[253]|List<OpportunityTeamMember>.size()
+11:01:27.0 (227374240)|SYSTEM_METHOD_EXIT|[253]|List<OpportunityTeamMember>.size()
+11:01:27.0 (227379574)|STATEMENT_EXECUTE|[253]
+11:01:27.0 (227380879)|STATEMENT_EXECUTE|[254]
+11:01:27.0 (227428721)|DML_BEGIN|[254]|Op:Insert|Type:OpportunityTeamMember|Rows:1
+11:01:27.0 (227436383)|LIMIT_USAGE|[254]|DML|1|150
+11:01:27.0 (227442853)|LIMIT_USAGE|[254]|DML_ROWS|1|10000
+11:01:27.0 (227456306)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+11:01:27.0 (258973697)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:OpportunityTeamMember
+11:01:27.0 (266804220)|WF_RULE_EVAL_BEGIN|Workflow
+11:01:27.0 (266830254)|WF_CRITERIA_BEGIN|[Additional Authorised User:  00qO0000000p1Yg]|Outbound Message - Opportunity Team Member|01QO00000009M7L|ON_ALL_CHANGES|0
+11:01:27.0 (267949835)|WF_RULE_FILTER|[Additional Authorised User : User not equal to ]
+11:01:27.0 (267967982)|WF_RULE_EVAL_VALUE|00528000006BYTI
+11:01:27.0 (267972399)|WF_CRITERIA_END|true
+11:01:27.0 (268350716)|WF_SPOOL_ACTION_BEGIN|Workflow
+11:01:27.0 (268387527)|WF_RULE_INVOCATION|[Additional Authorised User:  00qO0000000p1Yg]
+11:01:27.0 (268399054)|WF_OUTBOUND_MSG|[Additional Authorised User:  00qO0000000p1Yg]|Id=04kO00000004D8B|CurrentRule:Outbound Message - Opportunity Team Member (Id=01QO00000009M7L)
+11:01:27.0 (268414511)|WF_ACTION| Outbound Message: 1;
+11:01:27.0 (268417116)|WF_RULE_EVAL_END
+11:01:27.0 (275863729)|WF_ACTIONS_END| Outbound Message: 1;
+11:01:27.0 (275871779)|CODE_UNIT_FINISHED|Workflow:OpportunityTeamMember
+11:01:27.0 (280874793)|DML_END|[254]
+11:01:27.0 (280978584)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+11:01:27.0 (281000958)|STATEMENT_EXECUTE|[257]
+11:01:27.0 (281021110)|HEAP_ALLOCATE|[257]|Bytes:4
+11:01:27.0 (281051915)|SYSTEM_CONSTRUCTOR_ENTRY|[257]|<init>(Integer)
+11:01:27.0 (281085743)|SYSTEM_CONSTRUCTOR_EXIT|[257]|<init>(Integer)
+11:01:27.0 (281092034)|VARIABLE_SCOPE_BEGIN|[257]|oppIDs|Set<Id>|true|false
+11:01:27.0 (281121028)|VARIABLE_ASSIGNMENT|[257]|oppIDs|[]|0x5686c
+11:01:27.0 (281123789)|STATEMENT_EXECUTE|[258]
+11:01:27.0 (281128170)|HEAP_ALLOCATE|[258]|Bytes:4
+11:01:27.0 (281137367)|SYSTEM_CONSTRUCTOR_ENTRY|[258]|<init>(Integer)
+11:01:27.0 (281150072)|SYSTEM_CONSTRUCTOR_EXIT|[258]|<init>(Integer)
+11:01:27.0 (281153201)|VARIABLE_SCOPE_BEGIN|[258]|UserIds|Set<Id>|true|false
+11:01:27.0 (281162853)|VARIABLE_ASSIGNMENT|[258]|UserIds|[]|0xfa85e7e
+11:01:27.0 (281188565)|SYSTEM_METHOD_ENTRY|[259]|List<OpportunityTeamMember>.iterator()
+11:01:27.0 (281304319)|SYSTEM_METHOD_EXIT|[259]|List<OpportunityTeamMember>.iterator()
+11:01:27.0 (281332768)|SYSTEM_METHOD_ENTRY|[259]|system.ListIterator.hasNext()
+11:01:27.0 (281352469)|HEAP_ALLOCATE|[259]|Bytes:5
+11:01:27.0 (281360085)|SYSTEM_METHOD_EXIT|[259]|system.ListIterator.hasNext()
+11:01:27.0 (281378750)|HEAP_ALLOCATE|[259]|Bytes:20
+11:01:27.0 (281390611)|VARIABLE_SCOPE_BEGIN|[259]|OTM|OpportunityTeamMember|true|false
+11:01:27.0 (281412201)|VARIABLE_ASSIGNMENT|[259]|OTM|{"OpportunityId":"006O0000009HAXhIAO","UserId":"00528000006BYTIAA4","TeamMemberRole":"PDM","Id":"00qO0000000p1YgIAI"}|0x74a5a7ba
+11:01:27.0 (281416351)|STATEMENT_EXECUTE|[259]
+11:01:27.0 (281417610)|STATEMENT_EXECUTE|[260]
+11:01:27.0 (281473992)|SYSTEM_METHOD_ENTRY|[260]|Set<Id>.add(Object)
+11:01:27.0 (281490264)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+11:01:27.0 (281500616)|SYSTEM_METHOD_EXIT|[260]|Set<Id>.add(Object)
+11:01:27.0 (281504133)|STATEMENT_EXECUTE|[261]
+11:01:27.0 (281537074)|SYSTEM_METHOD_ENTRY|[261]|Set<Id>.add(Object)
+11:01:27.0 (281547812)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+11:01:27.0 (281556923)|SYSTEM_METHOD_EXIT|[261]|Set<Id>.add(Object)
+11:01:27.0 (281564755)|SYSTEM_METHOD_ENTRY|[259]|system.ListIterator.hasNext()
+11:01:27.0 (281571597)|HEAP_ALLOCATE|[259]|Bytes:5
+11:01:27.0 (281576742)|SYSTEM_METHOD_EXIT|[259]|system.ListIterator.hasNext()
+11:01:27.0 (281587275)|VARIABLE_ASSIGNMENT|[259]|OTM|null|
+11:01:27.0 (281591379)|STATEMENT_EXECUTE|[265]
+11:01:27.0 (281642238)|HEAP_ALLOCATE|[265]|Bytes:4
+11:01:27.0 (281681298)|SYSTEM_CONSTRUCTOR_ENTRY|[265]|<init>()
+11:01:27.0 (281703665)|SYSTEM_CONSTRUCTOR_EXIT|[265]|<init>()
+11:01:27.0 (281707169)|VARIABLE_SCOPE_BEGIN|[265]|shares|List<OpportunityShare>|true|false
+11:01:27.0 (281715361)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+11:01:27.0 (281722859)|VARIABLE_ASSIGNMENT|[265]|shares|[]|0x6edbf316
+11:01:27.0 (281745772)|METHOD_ENTRY|[266]|01pO00000003HOS|OpportunityService.getTheOppTeamShareRules(Set<Id>, Set<Id>)
+11:01:27.0 (281771896)|VARIABLE_SCOPE_BEGIN|[141]|oppIDs|Set<Id>|true|false
+11:01:27.0 (281780307)|VARIABLE_ASSIGNMENT|[141]|oppIDs|["006O0000009HAXhIAO"]|0x5686c
+11:01:27.0 (281782605)|VARIABLE_SCOPE_BEGIN|[141]|UserIds|Set<Id>|true|false
+11:01:27.0 (281786364)|VARIABLE_ASSIGNMENT|[141]|UserIds|["00528000006BYTIAA4"]|0xfa85e7e
+11:01:27.0 (282716489)|SYSTEM_MODE_ENTER|false
+11:01:27.0 (282726859)|HEAP_ALLOCATE|[143]|Bytes:5
+11:01:27.0 (282731962)|STATEMENT_EXECUTE|[141]
+11:01:27.0 (282733538)|STATEMENT_EXECUTE|[143]
+11:01:27.0 (282737964)|HEAP_ALLOCATE|[143]|Bytes:164
+11:01:27.0 (282748100)|HEAP_ALLOCATE|[143]|Bytes:4
+11:01:27.0 (282800220)|HEAP_ALLOCATE|[143]|Bytes:8
+11:01:27.0 (282807054)|HEAP_ALLOCATE|[143]|Bytes:8
+11:01:27.0 (282810686)|HEAP_ALLOCATE|[143]|Bytes:8
+11:01:27.0 (282813971)|HEAP_ALLOCATE|[143]|Bytes:8
+11:01:27.0 (283255292)|SOQL_EXECUTE_BEGIN|[143]|Aggregations:0|SELECT Id, OpportunityAccessLevel, RowCause, UserOrGroupId FROM OpportunityShare WHERE (OpportunityId = :tmpVar1 AND RowCause = 'Team' AND UserOrGroupId = :tmpVar2)
+11:01:27.0 (283265981)|LIMIT_USAGE|[143]|SOQL|2|100
+11:01:27.0 (283278696)|LIMIT_USAGE|[143]|AGGS|1|300
+11:01:27.0 (288858730)|SOQL_EXECUTE_END|[143]|Rows:1
+11:01:27.0 (288865940)|LIMIT_USAGE|[143]|SOQL_ROWS|1|50000
+11:01:27.0 (288879480)|HEAP_ALLOCATE|[143]|Bytes:8
+11:01:27.0 (288895702)|HEAP_ALLOCATE|[143]|Bytes:110
+11:01:27.0 (288928563)|HEAP_ALLOCATE|[143]|Bytes:8
+11:01:27.0 (288942124)|SYSTEM_MODE_EXIT|false
+11:01:27.0 (288952691)|METHOD_EXIT|[266]|01pO00000003HOS|OpportunityService.getTheOppTeamShareRules(Set<Id>, Set<Id>)
+11:01:27.0 (288964455)|SYSTEM_METHOD_ENTRY|[266]|List<OpportunityShare>.iterator()
+11:01:27.0 (289016700)|SYSTEM_METHOD_EXIT|[266]|List<OpportunityShare>.iterator()
+11:01:27.0 (289033139)|SYSTEM_METHOD_ENTRY|[266]|system.ListIterator.hasNext()
+11:01:27.0 (289042221)|HEAP_ALLOCATE|[266]|Bytes:5
+11:01:27.0 (289048290)|SYSTEM_METHOD_EXIT|[266]|system.ListIterator.hasNext()
+11:01:27.0 (289087530)|HEAP_ALLOCATE|[266]|Bytes:20
+11:01:27.0 (289097839)|VARIABLE_SCOPE_BEGIN|[266]|OS|OpportunityShare|true|false
+11:01:27.0 (289114702)|VARIABLE_ASSIGNMENT|[266]|OS|{"Id":"00tO000000UZEV2IAP","OpportunityAccessLev (2 more) ...":"Read","RowCause":"Team","UserOrGroupId":"00528000006BYTIAA4"}|0x646f952e
+11:01:27.0 (289118581)|STATEMENT_EXECUTE|[266]
+11:01:27.0 (289120026)|STATEMENT_EXECUTE|[267]
+11:01:27.0 (289123357)|HEAP_ALLOCATE|[267]|Bytes:4
+11:01:27.0 (289197065)|VARIABLE_ASSIGNMENT|[267]|this.OpportunityAccessLevel|"Edit"|0x646f952e
+11:01:27.0 (289200860)|STATEMENT_EXECUTE|[268]
+11:01:27.0 (289220872)|SYSTEM_METHOD_ENTRY|[268]|List<OpportunityShare>.add(Object)
+11:01:27.0 (289240221)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+11:01:27.0 (289251324)|SYSTEM_METHOD_EXIT|[268]|List<OpportunityShare>.add(Object)
+11:01:27.0 (289258959)|SYSTEM_METHOD_ENTRY|[266]|system.ListIterator.hasNext()
+11:01:27.0 (289266043)|HEAP_ALLOCATE|[266]|Bytes:5
+11:01:27.0 (289271177)|SYSTEM_METHOD_EXIT|[266]|system.ListIterator.hasNext()
+11:01:27.0 (289279786)|VARIABLE_ASSIGNMENT|[266]|OS|null|
+11:01:27.0 (289282922)|STATEMENT_EXECUTE|[271]
+11:01:27.0 (289325615)|DML_BEGIN|[271]|Op:Update|Type:OpportunityShare|Rows:1
+11:01:27.0 (289333240)|LIMIT_USAGE|[271]|DML|2|150
+11:01:27.0 (289339893)|LIMIT_USAGE|[271]|DML_ROWS|2|10000
+11:01:27.0 (289353722)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+11:01:27.0 (302433359)|DML_END|[271]
+11:01:27.0 (302453092)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+11:01:27.0 (302466905)|METHOD_EXIT|[52]|01pO0000000371i|OpportunityTriggerHandler.manageSharingForOppTeamMembers()
+11:01:27.0 (302471753)|STATEMENT_EXECUTE|[53]
+11:01:27.0 (302485128)|METHOD_ENTRY|[53]|01pO0000000371i|OpportunityTriggerHandler.sendEmails()
+11:01:27.0 (302502492)|STATEMENT_EXECUTE|[62]
+11:01:27.0 (302504050)|STATEMENT_EXECUTE|[63]
+11:01:27.0 (303370874)|HEAP_ALLOCATE|[63]|Bytes:33
+11:01:27.0 (303380006)|HEAP_ALLOCATE|[63]|Bytes:32
+11:01:27.0 (303390972)|METHOD_ENTRY|[1]|01pO00000003HJI|Email_Alert_Class.Email_Alert_Class()
+11:01:27.0 (303393506)|STATEMENT_EXECUTE|[1]
+11:01:27.0 (303397147)|STATEMENT_EXECUTE|[1]
+11:01:27.0 (304141452)|SYSTEM_MODE_ENTER|false
+11:01:27.0 (304150523)|HEAP_ALLOCATE|[63]|Bytes:5
+11:01:27.0 (304155353)|STATEMENT_EXECUTE|[2]
+11:01:27.0 (304156781)|STATEMENT_EXECUTE|[86]
+11:01:27.0 (304161057)|SYSTEM_MODE_EXIT|false
+11:01:27.0 (304170180)|METHOD_EXIT|[1]|Email_Alert_Class
+11:01:27.0 (304179374)|HEAP_ALLOCATE|[63]|Bytes:48
+11:01:27.0 (304191109)|CONSTRUCTOR_ENTRY|[63]|01pO00000003HJI|<init>()
+11:01:27.0 (304210734)|VARIABLE_SCOPE_BEGIN|[16]|this|Email_Alert_Class|true|false
+11:01:27.0 (304248448)|VARIABLE_ASSIGNMENT|[16]|this|{}|0x72a36a4f
+11:01:27.0 (304256641)|SYSTEM_MODE_ENTER|false
+11:01:27.0 (304262099)|HEAP_ALLOCATE|[5]|Bytes:5
+11:01:27.0 (304265504)|STATEMENT_EXECUTE|[1]
+11:01:27.0 (304268057)|HEAP_ALLOCATE|[5]|Bytes:5
+11:01:27.0 (304269698)|STATEMENT_EXECUTE|[4]
+11:01:27.0 (304270960)|STATEMENT_EXECUTE|[5]
+11:01:27.0 (304273571)|HEAP_ALLOCATE|[5]|Bytes:22
+11:01:27.0 (304287866)|VARIABLE_ASSIGNMENT|[5]|this.CentralEmailAddress|"ricky.lowe@yopmail.c (2 more) ..."|0x72a36a4f
+11:01:27.0 (304290095)|STATEMENT_EXECUTE|[6]
+11:01:27.0 (304291256)|STATEMENT_EXECUTE|[7]
+11:01:27.0 (304292181)|STATEMENT_EXECUTE|[8]
+11:01:27.0 (304297983)|HEAP_ALLOCATE|[8]|Bytes:4
+11:01:27.0 (304310166)|SYSTEM_CONSTRUCTOR_ENTRY|[8]|<init>(Integer)
+11:01:27.0 (304327569)|SYSTEM_CONSTRUCTOR_EXIT|[8]|<init>(Integer)
+11:01:27.0 (304343583)|VARIABLE_ASSIGNMENT|[8]|this.OppIds|[]|0x72a36a4f
+11:01:27.0 (304346387)|STATEMENT_EXECUTE|[9]
+11:01:27.0 (304351627)|HEAP_ALLOCATE|[9]|Bytes:4
+11:01:27.0 (304360594)|SYSTEM_CONSTRUCTOR_ENTRY|[9]|<init>(Integer)
+11:01:27.0 (304373658)|SYSTEM_CONSTRUCTOR_EXIT|[9]|<init>(Integer)
+11:01:27.0 (304384319)|VARIABLE_ASSIGNMENT|[9]|this.EmailTemplateDevNames|[]|0x72a36a4f
+11:01:27.0 (304386729)|STATEMENT_EXECUTE|[10]
+11:01:27.0 (304388036)|STATEMENT_EXECUTE|[11]
+11:01:27.0 (304388924)|STATEMENT_EXECUTE|[12]
+11:01:27.0 (304389772)|STATEMENT_EXECUTE|[13]
+11:01:27.0 (304390813)|STATEMENT_EXECUTE|[14]
+11:01:27.0 (304414244)|STATEMENT_EXECUTE|[16]
+11:01:27.0 (304415957)|STATEMENT_EXECUTE|[17]
+11:01:27.0 (304462654)|HEAP_ALLOCATE|[17]|Bytes:4
+11:01:27.0 (304493398)|SYSTEM_CONSTRUCTOR_ENTRY|[17]|<init>()
+11:01:27.0 (304510253)|SYSTEM_CONSTRUCTOR_EXIT|[17]|<init>()
+11:01:27.0 (304538493)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+11:01:27.0 (304548445)|VARIABLE_ASSIGNMENT|[17]|this.messages|[]|0x72a36a4f
+11:01:27.0 (304551103)|STATEMENT_EXECUTE|[18]
+11:01:27.0 (304613505)|HEAP_ALLOCATE|[18]|Bytes:4
+11:01:27.0 (304636234)|SYSTEM_CONSTRUCTOR_ENTRY|[18]|<init>()
+11:01:27.0 (304650260)|SYSTEM_CONSTRUCTOR_EXIT|[18]|<init>()
+11:01:27.0 (304669124)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+11:01:27.0 (304676415)|VARIABLE_ASSIGNMENT|[18]|this.EmailMessages|[]|0x72a36a4f
+11:01:27.0 (304681951)|SYSTEM_MODE_EXIT|false
+11:01:27.0 (304688864)|CONSTRUCTOR_EXIT|[63]|01pO00000003HJI|<init>()
+11:01:27.0 (304692388)|VARIABLE_SCOPE_BEGIN|[63]|EA|Email_Alert_Class|true|false
+11:01:27.0 (304720627)|VARIABLE_ASSIGNMENT|[63]|EA|{"CentralEmailAddress":"ricky.lowe@yopmail.c (2 more) ...","EmailMessages":"0x1e24e813","EmailTemplateDevName (1 more) ...":"0x283ffaa3","messages":"0x260e9faf","OppIds":"0x4f966833"}|0x72a36a4f
+11:01:27.0 (304755693)|SYSTEM_METHOD_ENTRY|[65]|List<Opportunity>.iterator()
+11:01:27.0 (304774267)|SYSTEM_METHOD_EXIT|[65]|List<Opportunity>.iterator()
+11:01:27.0 (304783783)|SYSTEM_METHOD_ENTRY|[65]|system.ListIterator.hasNext()
+11:01:27.0 (304791092)|HEAP_ALLOCATE|[65]|Bytes:5
+11:01:27.0 (304796462)|SYSTEM_METHOD_EXIT|[65]|system.ListIterator.hasNext()
+11:01:27.0 (304812529)|VARIABLE_SCOPE_BEGIN|[65]|Opp|Opportunity|true|false
+11:01:27.0 (306384683)|VARIABLE_ASSIGNMENT|[65]|Opp|{"LastModifiedDate":"2017-04-12T01:01:27.000Z","Regional_Business__c":"a0BO000000F5hL5MAJ","TSF_Gate_Status__c":"Not Applicable","Contract_Risk__c":"Client-side risk: Co (23 more) ...","CloseDate":"2017-08-01T00:00:00.000Z","HasOpenActivity":false,"Budget_Confirmed__c":false,"Overall_Prospect_Val (5 more) ...":9999999,"Less_Cost_Recoveries (10 more) ...":0,"District__c":"Northern Rivers","State__c":"New South Wales","D_I_Involvement__c":false,"IsDeleted":false,"Non_Binding_Proposal (12 more) ...":false,"Net_Budget_Post_Tend (5 more) ...":0,"Parent_Company_Guara (11 more) ...":" ","Previous_Gate_TSF_St (7 more) ...":"Not Applicable","Detailed_Description (3 more) ...":"Desc","ROI_Analysis_Complet (5 more) ...":false,"PPP_or_Third_Party_F (16 more) ...":false,"Executive_Summary__c":"Desc","CRA_Gate_Status__c":"Not Applicable","Tender_Dates_Header_ (2 more) ...":" ","Less_Cost_Recoveries (10 more) ...":0,"Is_internal_BG_colla (11 more) ...":false,"Prospect_Status__c":"Prospect","Id":"006O0000009HAXhIAO","Proposed_Margin_on_R (9 more) ...":30,"Client_Drivers__c":"Test","Primary_Business_Uni (4 more) ...":"NSW/ACT","IsClosed":false,"Delivery_End_Date__c":"2020-07-31T00:00:00.000Z","OwnerId":"00528000006BYTIAA4","Prospect_Duration_Yr (4 more) ...":3.0,"Reason_For_Performin (9 more) ...":"Test","RecordTypeId":"012O0000000DD8PIAW","Key_Account_Manager_ (2 more) ...":"System Partners","Country__c":"Australia","Total_Budget_AUD__c":0,"StageName":"Gate 3","Amount":9999999.00,"Probability":60,"EOI_PQ_Close_Date__c":"2017-05-01T00:00:00.000Z","Independent_Credit_C (16 more) ...":false,"SystemModstamp":"2017-04-12T01:01:27.000Z","Total_Less_Recoverie (4 more) ...":0,"Business_Development (11 more) ...":"00528000004d3msAAA","AccountId":"001O0000018AKplIAG","HasOpportunityLineIt (2 more) ...":false,"Prospect_Number__c":"PRS-00148","ForecastCategory":"Pipeline","Net_Budget_EOI_PQ__c":0,"Client_Relationship_ (13 more) ...":"Test","Number_of_PRA_Critic (19 more) ...":0,"Name":"Test AMcF 12-04 #1","Prospect_Priority__c":"3","CreatedById":"00528000006B07FAAS","A_PCG_Is_Required_Fr (5 more) ...":"JHG","Project_Development_ (10 more) ...":"00528000006BYTIAA4","Tender_Close_Date__c":"2017-07-01T00:00:00.000Z","JH_Margin_Value__c":0,"Defect_Liability_Dur (15 more) ...":12,"Sync_Date_Fields__c":true,"Is_this_project_a_JV (15 more) ...":false,"Project_Duration_Mon (6 more) ...":36,"Delivery_End_Defect_ (21 more) ...":"2021-07-31T00:00:00.000Z","Is_Gate_1_To_3__c":true,"Bonding_Security_Hea (6 more) ...":" ","Net_Budget_Tender__c":0,"CreatedDate":"2017-04-12T01:00:17.000Z","HasOverdueTask":false,"Discovery_Completed_ (2 more) ...":false,"Data_Quality_Score__ (1 more) ...":40,"Project_Probability_ (2 more) ...":90,"ForecastCategoryName":"Pipeline","Client_Probity__c":false,"Total_Budget_EOI_PQ_ (2 more) ...":0,"Managing_Contractor_ (12 more) ...":false,"Business_Group__c":"a0BO000000F5hL0MAJ","Anticipated_Revenue_ (13 more) ...":"2017-09-01T00:00:00.000Z","Is_Gate_4_To_5__c":false,"Data_Quality_Descrip (7 more) ...":"Missing: Type, Lead  (18 more) ...","ExpectedRevenue":5999999.399999999,"Net_Budget_Amount__c":0,"Probity_Override__c":false,"IsWon":false,"EOI_PQ_Start_Date__c":"2017-04-01T00:00:00.000Z","Location__c":"Lismore, New South W (15 more) ...","D_I_Involvement_Text (3 more) ...":"No","Less_Cost_Recoveries (15 more) ...":0,"Previous_Gate_CRA_St (7 more) ...":"Not Applicable","Previous_Gate_Status (3 more) ...":"Not Applicable","Request_For_Special_ (22 more) ...":false,"Conga_Other_Heading_ (8 more) ...":"Other:","Apply_Default_Bondin (4 more) ...":false,"Gate_Status__c":"Not Started","Win_Probability__c":90,"D_I_Involvement_Guid (12 more) ...":"This box should be c (183 more) ...","Total_Budget_Tender_ (2 more) ...":0,"Total_Budget_Post_Te (7 more) ...":0,"Restrict_Access__c":false,"Nearest_City__c":"Lismore","Tender_Start_Date__c":"2017-06-01T00:00:00.000Z","IsPrivate":false,"LastModifiedById":"00528000006B07FAAS","Is_internal_Regional (21 more) ...":false}|0x7004ee3d
+11:01:27.0 (306407852)|STATEMENT_EXECUTE|[65]
+11:01:27.0 (306409668)|STATEMENT_EXECUTE|[66]
+11:01:27.0 (306457886)|SYSTEM_METHOD_ENTRY|[66]|Map<Id,Opportunity>.get(Object)
+11:01:27.0 (306486795)|SYSTEM_METHOD_EXIT|[66]|Map<Id,Opportunity>.get(Object)
+11:01:27.0 (306502882)|VARIABLE_SCOPE_BEGIN|[66]|oldOpp|Opportunity|true|false
+11:01:27.0 (307659835)|VARIABLE_ASSIGNMENT|[66]|oldOpp|{"LastModifiedDate":"2017-04-12T01:00:18.000Z","Regional_Business__c":"a0BO000000F5hL5MAJ","TSF_Gate_Status__c":"Not Applicable","Contract_Risk__c":"Client-side risk: Co (23 more) ...","CloseDate":"2017-08-01T00:00:00.000Z","HasOpenActivity":false,"Budget_Confirmed__c":false,"Overall_Prospect_Val (5 more) ...":9999999,"Less_Cost_Recoveries (10 more) ...":0,"District__c":"Northern Rivers","State__c":"New South Wales","D_I_Involvement__c":false,"IsDeleted":false,"Non_Binding_Proposal (12 more) ...":false,"Net_Budget_Post_Tend (5 more) ...":0,"Parent_Company_Guara (11 more) ...":" ","Previous_Gate_TSF_St (7 more) ...":"Not Applicable","Detailed_Description (3 more) ...":"Desc","ROI_Analysis_Complet (5 more) ...":false,"PPP_or_Third_Party_F (16 more) ...":false,"Executive_Summary__c":"Desc","CRA_Gate_Status__c":"Not Applicable","Tender_Dates_Header_ (2 more) ...":" ","Less_Cost_Recoveries (10 more) ...":0,"Is_internal_BG_colla (11 more) ...":false,"Prospect_Status__c":"Prospect","Id":"006O0000009HAXhIAO","Proposed_Margin_on_R (9 more) ...":30,"Client_Drivers__c":"Test","Primary_Business_Uni (4 more) ...":"NSW/ACT","IsClosed":false,"Delivery_End_Date__c":"2020-07-31T00:00:00.000Z","OwnerId":"00528000006B07FAAS","Prospect_Duration_Yr (4 more) ...":3.0,"Reason_For_Performin (9 more) ...":"Test","RecordTypeId":"012O0000000DD8PIAW","Key_Account_Manager_ (2 more) ...":"System Partners","Country__c":"Australia","Total_Budget_AUD__c":0,"StageName":"Gate 3","Amount":9999999.00,"Probability":60,"EOI_PQ_Close_Date__c":"2017-05-01T00:00:00.000Z","Independent_Credit_C (16 more) ...":false,"SystemModstamp":"2017-04-12T01:00:18.000Z","Total_Less_Recoverie (4 more) ...":0,"Business_Development (11 more) ...":"00528000004d3msAAA","AccountId":"001O0000018AKplIAG","HasOpportunityLineIt (2 more) ...":false,"Prospect_Number__c":"PRS-00148","ForecastCategory":"Pipeline","Net_Budget_EOI_PQ__c":0,"Client_Relationship_ (13 more) ...":"Test","Number_of_PRA_Critic (19 more) ...":0,"Name":"Test AMcF 12-04 #1","Prospect_Priority__c":"3","CreatedById":"00528000006B07FAAS","Tender_Close_Date__c":"2017-07-01T00:00:00.000Z","JH_Margin_Value__c":0,"Defect_Liability_Dur (15 more) ...":12,"Sync_Date_Fields__c":false,"Is_this_project_a_JV (15 more) ...":false,"Project_Duration_Mon (6 more) ...":36,"Delivery_End_Defect_ (21 more) ...":"2021-07-31T00:00:00.000Z","Is_Gate_1_To_3__c":true,"Bonding_Security_Hea (6 more) ...":" ","Net_Budget_Tender__c":0,"CreatedDate":"2017-04-12T01:00:17.000Z","HasOverdueTask":false,"Discovery_Completed_ (2 more) ...":false,"Data_Quality_Score__ (1 more) ...":40,"Project_Probability_ (2 more) ...":90,"ForecastCategoryName":"Pipeline","Client_Probity__c":false,"Total_Budget_EOI_PQ_ (2 more) ...":0,"Managing_Contractor_ (12 more) ...":false,"Business_Group__c":"a0BO000000F5hL0MAJ","Anticipated_Revenue_ (13 more) ...":"2017-09-01T00:00:00.000Z","Is_Gate_4_To_5__c":false,"Data_Quality_Descrip (7 more) ...":"Missing: Type, Lead  (18 more) ...","ExpectedRevenue":5999999.399999999,"Net_Budget_Amount__c":0,"Probity_Override__c":false,"IsWon":false,"EOI_PQ_Start_Date__c":"2017-04-01T00:00:00.000Z","Location__c":"Lismore, New South W (15 more) ...","D_I_Involvement_Text (3 more) ...":"No","Less_Cost_Recoveries (15 more) ...":0,"Previous_Gate_CRA_St (7 more) ...":"Not Applicable","Previous_Gate_Status (3 more) ...":"Not Applicable","Request_For_Special_ (22 more) ...":false,"Conga_Other_Heading_ (8 more) ...":"Other:","Apply_Default_Bondin (4 more) ...":false,"Gate_Status__c":"Not Started","Win_Probability__c":90,"D_I_Involvement_Guid (12 more) ...":"This box should be c (183 more) ...","Total_Budget_Tender_ (2 more) ...":0,"Total_Budget_Post_Te (7 more) ...":0,"Restrict_Access__c":false,"Nearest_City__c":"Lismore","Tender_Start_Date__c":"2017-06-01T00:00:00.000Z","IsPrivate":false,"LastModifiedById":"00528000006B07FAAS","Is_internal_Regional (21 more) ...":false}|0xd6f8653
+11:01:27.0 (307725500)|STATEMENT_EXECUTE|[69]
+11:01:27.0 (307859607)|STATEMENT_EXECUTE|[83]
+11:01:27.0 (307884178)|STATEMENT_EXECUTE|[101]
+11:01:27.0 (307894108)|SYSTEM_METHOD_ENTRY|[65]|system.ListIterator.hasNext()
+11:01:27.0 (307902108)|HEAP_ALLOCATE|[65]|Bytes:5
+11:01:27.0 (307908059)|SYSTEM_METHOD_EXIT|[65]|system.ListIterator.hasNext()
+11:01:27.0 (307917403)|VARIABLE_ASSIGNMENT|[65]|Opp|null|
+11:01:27.0 (307920257)|STATEMENT_EXECUTE|[109]
+11:01:27.0 (307940421)|METHOD_ENTRY|[109]|01pO00000003HJI|Email_Alert_Class.sendEmails()
+11:01:27.0 (307954525)|VARIABLE_SCOPE_BEGIN|[98]|this|Email_Alert_Class|true|false
+11:01:27.0 (307982127)|VARIABLE_ASSIGNMENT|[98]|this|{"CentralEmailAddress":"ricky.lowe@yopmail.c (2 more) ...","EmailMessages":"0x1e24e813","EmailTemplateDevName (1 more) ...":"0x283ffaa3","messages":"0x260e9faf","OppIds":"0x4f966833"}|0x72a36a4f
+11:01:27.0 (307992345)|SYSTEM_MODE_ENTER|false
+11:01:27.0 (307997898)|HEAP_ALLOCATE|[100]|Bytes:5
+11:01:27.0 (308002378)|STATEMENT_EXECUTE|[98]
+11:01:27.0 (308016245)|SYSTEM_METHOD_ENTRY|[100]|List<Email_Alert_Class.EmailMessage>.size()
+11:01:27.0 (308034348)|SYSTEM_METHOD_EXIT|[100]|List<Email_Alert_Class.EmailMessage>.size()
+11:01:27.0 (308040763)|STATEMENT_EXECUTE|[100]
+11:01:27.0 (308045100)|SYSTEM_MODE_EXIT|false
+11:01:27.0 (308051841)|METHOD_EXIT|[109]|01pO00000003HJI|Email_Alert_Class.sendEmails()
+11:01:27.0 (308055598)|METHOD_EXIT|[53]|01pO0000000371i|OpportunityTriggerHandler.sendEmails()
+11:01:27.0 (308057756)|STATEMENT_EXECUTE|[54]
+11:01:27.0 (308064424)|HEAP_ALLOCATE|[54]|Bytes:5
+11:01:27.0 (308079533)|VARIABLE_ASSIGNMENT|[54]|OpportunityTriggerHandler.recursionAfter|true
+11:01:27.0 (308085380)|METHOD_EXIT|[47]|01pO0000000371i|OpportunityTriggerHandler.afterUpdate()
+11:01:27.0 (308090909)|METHOD_EXIT|[4]|01pO00000003AAn|TriggerHandler.run()
+11:01:27.308 (308101667)|CUMULATIVE_LIMIT_USAGE
+11:01:27.308 (308101667)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of DML rows: 2 out of 10000
+  Maximum CPU time: 4 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+11:01:27.308 (308101667)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+11:01:27.308 (308101667)|STATIC_VARIABLE_LIST|
+  String:_static_KCRATemplateRecordTypeID:0
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MAX_VALUE:0
+  long:serialVersionUID:0
+  String:_static_InProgressStatus:0
+  int:SIZE:0
+  String:_static_TenderWonEmail:0
+  String:_static_ApprovedStatus:0
+  TriggerHandler.TriggerContext:BEFORE_INSERT:0
+  int:MAX_VALUE:0
+  TriggerHandler.TriggerContext:AFTER_UNDELETE:0
+  String:__sfdcInnerTypes:0
+  String:_static_InitiatedStatus:0
+  String:_static_ClosedWonStage:0
+  String:_static_Gate5Stage:0
+  String:_static_Gate4Stage:0
+  Boolean:_static_isTest:0
+  int:MIN_VALUE:0
+  String:_static_Gate1Stage:0
+  String:_static_Gate3Stage:0
+  String:_static_NotStartedStatus:0
+  char[]:DigitOnes:0
+  String:_static_NotApplicableStatus:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:__sfdcProperties:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_static_KCRATemplateRecordTypeID:0
+  String:_static_CRA_DecisionRequiredEmail:0
+  int:MIN_EXPONENT:0
+  String:_static_DecisionRequiredEmail:0
+  String:_static_ApprovalOutcomeNotificationEmail:0
+  String:_static_PendingApprovalStatus:0
+  String:_static_RestartedStatus:0
+  int:MAX_EXPONENT:0
+  String:_static_ApprovalSubmissionEmail:0
+  String:_static_PRATemplateRecordTypeID:0
+  String:_static_TenderWonStatus:0
+  String:_sfdcSuppressedCodeLocations:0
+  int:BYTES:0
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  Boolean:FALSE:0
+  String:_static_DeclinedStatus:0
+  String:_static_KCRARecordTypeID:0
+  String:_static_PRARecordTypeID:0
+  String:_static_TSF_ApprovalSubmissionEmail:0
+  double:MIN_VALUE:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:NEGATIVE_INFINITY:0
+  String:_static_ResubmittedStatus:0
+  char[]:digits:0
+  double:NaN:0
+  Boolean:TRUE:0
+  Approvers__c:_static_Approvers:0
+  TriggerHandler.TriggerContext:AFTER_INSERT:0
+  String:__sfdcInnerTypes:0
+  String:_static_CRA_ApprovalOutcomeNotificationEmail:0
+  Boolean:_static_recursionBefore:0
+  TriggerHandler.TriggerContext:AFTER_DELETE:0
+  String:_static_Gate2Stage:0
+  String:_static_TenderSubmittedStatus:0
+  String:_static_NewDandCStage:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_static_KCRARecordTypeID:0
+  String:_static_TSF_DecisionRequiredEmail:0
+  String:_static_ConditionallyApprovedStatus:0
+  TriggerHandler.TriggerContext:AFTER_UPDATE:0
+  String:_static_TSF_ApprovalOutcomeNotificationEmail:0
+  String:__sfdcInnerTypes:0
+  int:BYTES:0
+  Map<String,TriggerHandler.LoopCount>:_static_loopCountMap:0
+  Set<String>:_static_bypassedHandlers:0
+  int[]:sizeTable:0
+  TriggerHandler.TriggerContext:BEFORE_DELETE:0
+  String:_static_TenderInPreperationStatus:0
+  TriggerHandler.TriggerContext:BEFORE_UPDATE:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  double:MIN_NORMAL:0
+  String:_static_CRA_ApprovalSubmissionEmail:0
+  Boolean:_static_recursionAfter:0
+  Boolean:_static_runOnce:0
+
+11:01:27.308 (308101667)|CUMULATIVE_LIMIT_USAGE_END
+
+11:01:27.0 (310235052)|CODE_UNIT_FINISHED|OpportunityTrigger on Opportunity trigger event AfterUpdate for [006O0000009HAXh]
+11:01:27.0 (313324665)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Opportunity
+11:01:27.0 (324737276)|WF_RULE_EVAL_BEGIN|Workflow
+11:01:27.0 (324770973)|WF_CRITERIA_BEGIN|[Opportunity: Test AMcF 12-04 #1 006O0000009HAXh]|Gate 1|01QO00000009L9k|ON_CREATE_OR_TRIGGERING_UPDATE|0
+11:01:27.0 (330408140)|WF_RULE_FILTER|[Opportunity : Stage equals Gate 1]
+11:01:27.0 (330423976)|WF_RULE_EVAL_VALUE|Gate 3
+11:01:27.0 (330428300)|WF_CRITERIA_END|false
+11:01:27.0 (330440111)|WF_CRITERIA_BEGIN|[Opportunity: Test AMcF 12-04 #1 006O0000009HAXh]|Gate 4|01QO00000009LEa|ON_CREATE_OR_TRIGGERING_UPDATE|0
+11:01:27.0 (330484031)|WF_RULE_FILTER|[Opportunity : Stage equals Gate 4]
+11:01:27.0 (330495197)|WF_RULE_EVAL_VALUE|Gate 3
+11:01:27.0 (330497453)|WF_CRITERIA_END|false
+11:01:27.0 (330507490)|WF_CRITERIA_BEGIN|[Opportunity: Test AMcF 12-04 #1 006O0000009HAXh]|Apply_Date_Sync301O00000000zJx|01QO00000009S4h|ON_ALL_CHANGES|0
+11:01:27.0 (330618279)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+11:01:27.0 (330622218)|WF_CRITERIA_END|true
+11:01:27.0 (331559412)|WF_CRITERIA_BEGIN|[Opportunity: Test AMcF 12-04 #1 006O0000009HAXh]|Gate 5|01QO00000009LEp|ON_CREATE_OR_TRIGGERING_UPDATE|0
+11:01:27.0 (331611769)|WF_RULE_FILTER|[Opportunity : Stage equals Gate 5]
+11:01:27.0 (331623976)|WF_RULE_EVAL_VALUE|Gate 3
+11:01:27.0 (331626548)|WF_CRITERIA_END|false
+11:01:27.0 (331636361)|WF_CRITERIA_BEGIN|[Opportunity: Test AMcF 12-04 #1 006O0000009HAXh]|Create_Default_Performance_defect_Liability_Bonds301O00000000zLF|01QO00000009S69|ON_RECURSIVE_UPDATE|0
+11:01:27.0 (331674073)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+11:01:27.0 (331677272)|WF_CRITERIA_END|true
+11:01:27.0 (331694978)|WF_CRITERIA_BEGIN|[Opportunity: Test AMcF 12-04 #1 006O0000009HAXh]|Apply_synch_default_Bonding_Securities301O00000000yUz|01QO00000009RRa|ON_RECURSIVE_UPDATE|0
+11:01:27.0 (331726037)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+11:01:27.0 (331728929)|WF_CRITERIA_END|true
+11:01:27.0 (331745130)|WF_CRITERIA_BEGIN|[Opportunity: Test AMcF 12-04 #1 006O0000009HAXh]|Outbound Message - Opportunity|01QO00000009Msg|ON_ALL_CHANGES|0
+11:01:27.0 (331771745)|WF_RULE_FILTER|[Opportunity : Created Date not equal to ]
+11:01:27.0 (331787959)|WF_RULE_EVAL_VALUE|2017-04-12 01:00:17
+11:01:27.0 (331790279)|WF_CRITERIA_END|true
+11:01:27.0 (331804970)|WF_CRITERIA_BEGIN|[Opportunity: Test AMcF 12-04 #1 006O0000009HAXh]|Gate 2|01QO00000009L9p|ON_CREATE_OR_TRIGGERING_UPDATE|0
+11:01:27.0 (331849010)|WF_RULE_FILTER|[Opportunity : Stage equals Gate 2]
+11:01:27.0 (331860055)|WF_RULE_EVAL_VALUE|Gate 3
+11:01:27.0 (331862528)|WF_CRITERIA_END|false
+11:01:27.0 (331871653)|WF_CRITERIA_BEGIN|[Opportunity: Test AMcF 12-04 #1 006O0000009HAXh]|Gate 3|01QO00000009LAx|ON_CREATE_OR_TRIGGERING_UPDATE|0
+11:01:27.0 (331895130)|WF_RULE_NOT_EVALUATED
+11:01:27.0 (331905747)|WF_SPOOL_ACTION_BEGIN|Workflow
+11:01:27.0 (331949703)|WF_RULE_INVOCATION|[Opportunity: Test AMcF 12-04 #1 006O0000009HAXh]
+11:01:27.0 (331964339)|WF_OUTBOUND_MSG|[Opportunity: Test AMcF 12-04 #1 006O0000009HAXh]|Id=04kO00000004DUg|CurrentRule:Outbound Message - Opportunity (Id=01QO00000009Msg)
+11:01:27.0 (331987751)|WF_ACTION| Outbound Message: 1; Flow Trigger: 3;
+11:01:27.0 (331990572)|WF_RULE_EVAL_END
+11:01:27.0 (334892580)|WF_FLOW_ACTION_BEGIN|09LO0000000ClS6
+11:01:27.0 (334958641)|WF_FLOW_ACTION_DETAIL|09LO0000000ClS6|[Opportunity: Test AMcF 12-04 #1 006O0000009HAXh]|Id=09LO0000000ClS6|CurrentRule:Gate 3 (Id=01QO00000009LAx)
+11:01:27.336 (336144328)|FLOW_CREATE_INTERVIEW_BEGIN|00DO00000054ynj|300O0000000092g|301O00000000yUz
+11:01:27.336 (337472707)|FLOW_CREATE_INTERVIEW_END|3941e755ae5b278d810a26102a7815b5fa15560-4157|Apply synch default Bonding / Securities v5
+11:01:27.0 (337852444)|WF_FLOW_ACTION_DETAIL|Param Name: myVariable_current, Param Value: ENCODED:{![treatNullAsNull]{!ID:this}}, Evaluated Param Value: {Entity type: Opportunity, id: 006O0000009HAXhIAO}|Param Name: myVariable_old, Param Value: {!old}, Evaluated Param Value: {Entity type: Opportunity, id: 006O0000009HAXhIAO}|Param Name: RecursiveCountVariable, Param Value: {!triggerRecurseCount}, Evaluated Param Value: 0
+11:01:27.339 (339461765)|FLOW_START_INTERVIEWS_BEGIN|1
+11:01:27.339 (340231303)|FLOW_START_INTERVIEW_BEGIN|3941e755ae5b278d810a26102a7815b5fa15560-4157|Apply synch default Bonding / Securities v5
+11:01:27.339 (340284025)|FLOW_VALUE_ASSIGNMENT|3941e755ae5b278d810a26102a7815b5fa15560-4157|myVariable_old|moduleapi.interaction.SObjectRowWithSavePoint@4056b90f
+11:01:27.339 (344325092)|FLOW_VALUE_ASSIGNMENT|3941e755ae5b278d810a26102a7815b5fa15560-4157|myVariable_current|{Id=006O0000009HAXhIAO, IsDeleted=false, AccountId=001O0000018AKplIAG, RecordTypeId=012O0000000DD8PIAW, IsPrivate=false, Name=Test AMcF 12-04 #1, Description=null, StageName=Gate 3, Amount=9999999.0, Probability=60.0, ExpectedRevenue=5999999.399999999, TotalOpportunityQuantity=null, CloseDate=2017-08-01 00:00:00, Type=null, NextStep=null, LeadSource=null, IsClosed=false, IsWon=false, ForecastCategory=Pipeline, ForecastCategoryName=Pipeline, CampaignId=null, HasOpportunityLineItem=false, Pricebook2Id=null, OwnerId=00528000006BYTIAA4, CreatedDate=2017-04-12 01:00:17, CreatedById=00528000006B07FAAS, LastModifiedDate=2017-04-12 01:01:27, LastModifiedById=00528000006B07FAAS, SystemModstamp=2017-04-12 01:01:27, LastActivityDate=null, FiscalYear=null, FiscalQuarter=null, LastViewedDate=null, LastReferencedDate=null, SyncedQuoteId=null, ContractId=null, HasOpenActivity=false, HasOverdueTask=false, Budget_Confirmed__c=false, Discovery_Completed__c=false, ROI_Analysis_Completed__c=false, Loss_Reason__c=null, Business_Group__c=a0BO000000F5hL0MAJ, Data_Quality_Description__c=Missing: Type, Lead Source, Next Steps, Data_Quality_Score__c=40.0, EOI_Tender_Date__c=null, Prospect_Code__c=null, Prospect_Manager__c=null, Regional_Business__c=a0BO000000F5hL5MAJ, CANDY_Tender_Number__c=null, Also_Known_As__c=null, Prospect_Priority__c=3, Prospect_Number__c=PRS-00148, Win_Probability__c=90.0, Project_Probability__c=90.0, Project_Duration_Months__c=36.0, Scope__c=null, Payment_Mechanism__c=null, Discipline__c=null, D_I_Involvement__c=false, D_I_Involvement_Guidance_Note__c=This box should be checked if JH D&I are directly involved in providing financial advice, direction or lead of SPV for the prospect. It should not be checked if there is no D&I requirement to be involved, Client_Probity__c=false, Restrict_Access__c=false, Prospect_Status__c=Prospect, Industry_Sector_GM__c=null, Project_Development_Manager__c=00528000006BYTIAA4, Detailed_Description__c=Desc, Non_Binding_Proposal_Required__c=false, EOI_PQ_Start_Date__c=2017-04-01 00:00:00, EOI_PQ_Close_Date__c=2017-05-01 00:00:00, Announcement_of_Pre_Qualified_Bidders__c=null, Strategy_Bid_Development_Meeting_Date__c=null, Tender_Start_Date__c=2017-06-01 00:00:00, Tender_Close_Date__c=2017-07-01 00:00:00, Anticipated_Revenue_Start_Date__c=2017-09-01 00:00:00, Interim_Review__c=null, Preliminary_Final_Review__c=null, Final_Tender_Review__c=null, Tender_Collaboration_Pack_Aconex_DB_URL__c=null, Country__c=Australia, State__c=New South Wales, Nearest_City__c=Lismore, District__c=Northern Rivers, Reason_For_Performing_Work__c=Test, Client_Drivers__c=Test, Relationship__c=null, Client_Relationship_Management__c=Test, Financial_Viability_Exposure__c=null, Independent_Credit_Check_Required__c=false, Client_Supplied_Materials__c=null, Value_of_Managed_Works__c=null, Overall_Prospect_Value__c=9999999.0, Managing_Contractor_Time_Risk__c=false, Proposed_Margin_on_Revenue__c=30.0, PPP_or_Third_Party_Funded_Project__c=false, Payment_Variation_Terms__c=null, Finance_Prospect_Comments__c=null, Defect_Liability_Duration_Months__c=12.0, Minimum_Credit_Rating_Required__c=null, Request_For_Special_Wording_In_The_Bond__c=false, A_PCG_Is_Required_From__c=JHG, PCG_Comments__c=null, Proposed_FA__c=null, Funding_Strategy__c=null, Target_Gearing_Ratio__c=null, Total_Indicative_Equity__c=null, JH_Target_Equity__c=null, JH_Target_Equity_Amount__c=null, Timing_for_Contribution__c=null, Equity_Residual_Risk__c=null, Target_IRR_and_or_D_I_Revenues__c=null, Intended_Exit_Strategy__c=null, JH_Accounting_Tax_Considerations__c=null, Relationship_Agreements__c=null, Is_this_project_a_JV_or_Alliance__c=false, Proposed_form_of_Relationship__c=null, Is_internal_BG_collaboration__c=false, Major_Risks__c=null, Nature_of_technology_design_proposed__c=null, Intentions_to_Resource_Project_Team__c=null, Is_internal_Regional_Bus_collaboration__c=false, Contract_Risk__c=Client-side risk: Cost plus margin contract, Client_Relationship_Manager__c=null, Other_Custom_Heading__c=null, Business_Development_Manager__c=00528000004d3msAAA, Procurement_Process__c=null, Alignment_with_Business_Plan__c=null, Competitor_Analysis_General_Comments__c=null, Intentions_to_Resource_Bid_Team__c=null, Conversion_Budget_Comments__c=null, Specific_KCRA_Approvals_Comments__c=null, Design__c=null, Cost__c=null, Time__c=null, Relationships__c=null, People__c=null, Technology__c=null, Methodology__c=null, Innovation__c=null, Other__c=null, Key_Points__c=null, Alignment_with_Core_Competencies__c=null, Executive_Summary__c=Desc, Parent_Company_Guarantee_PCG__c= , Bonding_Security_Header__c= , Tender_Dates_Header__c= , JH_Revenue_Share__c=null, JH_Margin_Value__c=0.0, Total_Budget_EOI_PQ__c=0.0, Total_Budget_Tender__c=0.0, Total_Budget_Post_Tender__c=0.0, Less_Cost_Recoveries_EOI_PQ__c=0.0, Less_Cost_Recoveries_Tender__c=0.0, Less_Cost_Recoveries_Post_Tender__c=0.0, Total_Budget_AUD__c=0.0, Total_Less_Recoveries__c=0.0, Net_Budget_Amount__c=0.0, Net_Budget_EOI_PQ__c=0.0, Net_Budget_Tender__c=0.0, Net_Budget_Post_Tender__c=0.0, JH_Bid_Cost_of_JH_Revenue__c=null, Location__c=Lismore, New South Wales, Australia, Delivery_End_Date__c=2020-07-31 00:00:00, Prospect_Duration_Yrs__c=3.0, Conga_Other_Heading_Field__c=Other:, Apply_Default_Bonding__c=false, Notes_Doc_ID__c=null, Delivery_End_Defect_Liability_Duration__c=2021-07-31 00:00:00, EOI_PQ_Submitted_Date__c=null, Tender_Submitted_Date__c=null, Count_of_EOI_Lessons_Learnt_Reports__c=null, Count_of_Tender_Lessons_Learnt_Reports__c=null, Gate_Status__c=Not Started, TSF_Gate_Status__c=Not Applicable, CRA_Gate_Status__c=Not Applicable, Number_of_PRA_Critical_Items_Rated_3__c=0.0, Are_there_any_critical_risks__c=null, Has_TSF_changed_since_last_approval__c=null, Has_CRA_changed_since_last_approval__c=null, Sync_Date_Fields__c=true, Is_Gate_1_To_3__c=true, Is_Gate_4_To_5__c=false, D_I_Involvement_Text__c=No, Reason_for_Status__c=null, Key_Account_Manager__c=System Partners, Primary_Business_Unit__c=NSW/ACT, Previous_Gate_Status__c=Not Applicable, Previous_Gate_CRA_Status__c=Not Applicable, Previous_Gate_TSF_Status__c=Not Applicable, Probity_Override__c=false, Previous_Stage__c=null}
+11:01:27.339 (344360019)|FLOW_VALUE_ASSIGNMENT|3941e755ae5b278d810a26102a7815b5fa15560-4157|RecursiveCountVariable|0
+11:01:27.339 (344441066)|FLOW_ELEMENT_BEGIN|3941e755ae5b278d810a26102a7815b5fa15560-4157|FlowAssignment|myVariable_waitStartTimeAssignment
+11:01:27.339 (344524017)|FLOW_ASSIGNMENT_DETAIL|3941e755ae5b278d810a26102a7815b5fa15560-4157|myVariable_waitStartTimeVariable|ASSIGN|12/04/2017 11:01 AM
+11:01:27.339 (344538386)|FLOW_VALUE_ASSIGNMENT|3941e755ae5b278d810a26102a7815b5fa15560-4157|myVariable_waitStartTimeVariable|2017-04-12T01:01:27Z
+11:01:27.339 (344561016)|FLOW_ELEMENT_END|3941e755ae5b278d810a26102a7815b5fa15560-4157|FlowAssignment|myVariable_waitStartTimeAssignment
+11:01:27.339 (344574576)|FLOW_ELEMENT_BEGIN|3941e755ae5b278d810a26102a7815b5fa15560-4157|FlowDecision|isChangedDecision2_myRule_1_CloseDate
+11:01:27.339 (344965976)|FLOW_RULE_DETAIL|3941e755ae5b278d810a26102a7815b5fa15560-4157|isChangedRule_2_myRule_1_CloseDate|false
+11:01:27.339 (344975455)|FLOW_VALUE_ASSIGNMENT|3941e755ae5b278d810a26102a7815b5fa15560-4157|isChangedRule_2_myRule_1_CloseDate|false
+11:01:27.339 (344985314)|FLOW_ELEMENT_END|3941e755ae5b278d810a26102a7815b5fa15560-4157|FlowDecision|isChangedDecision2_myRule_1_CloseDate
+11:01:27.339 (344993024)|FLOW_ELEMENT_BEGIN|3941e755ae5b278d810a26102a7815b5fa15560-4157|FlowDecision|myDecision
+11:01:27.339 (345020522)|FLOW_RULE_DETAIL|3941e755ae5b278d810a26102a7815b5fa15560-4157|myRule_1|false
+11:01:27.339 (345026887)|FLOW_VALUE_ASSIGNMENT|3941e755ae5b278d810a26102a7815b5fa15560-4157|myRule_1|false
+11:01:27.339 (345032598)|FLOW_ELEMENT_END|3941e755ae5b278d810a26102a7815b5fa15560-4157|FlowDecision|myDecision
+11:01:27.339 (345109124)|FLOW_START_INTERVIEW_END|3941e755ae5b278d810a26102a7815b5fa15560-4157|Apply synch default Bonding / Securities v5
+11:01:27.339 (345119553)|FLOW_START_INTERVIEWS_END|1
+11:01:27.0 (346830511)|WF_FLOW_ACTION_END|09LO0000000ClS6
+11:01:27.0 (346843399)|WF_FLOW_ACTION_BEGIN|09LO0000000Clat
+11:01:27.0 (346865124)|WF_FLOW_ACTION_DETAIL|09LO0000000Clat|[Opportunity: Test AMcF 12-04 #1 006O0000009HAXh]|Id=09LO0000000Clat|CurrentRule:Gate 3 (Id=01QO00000009LAx)
+11:01:27.348 (348206476)|FLOW_CREATE_INTERVIEW_BEGIN|00DO00000054ynj|300O000000007lj|301O00000000zLF
+11:01:27.348 (349337591)|FLOW_CREATE_INTERVIEW_END|3942e755ae5b278d810a26102a7815b5fa15560-4156|Create Default Performance & defect Liability Bonds v5
+11:01:27.0 (349527315)|WF_FLOW_ACTION_DETAIL|Param Name: myVariable_current, Param Value: ENCODED:{![treatNullAsNull]{!ID:this}}, Evaluated Param Value: {Entity type: Opportunity, id: 006O0000009HAXhIAO}|Param Name: myVariable_old, Param Value: {!old}, Evaluated Param Value: {Entity type: Opportunity, id: 006O0000009HAXhIAO}|Param Name: RecursiveCountVariable, Param Value: {!triggerRecurseCount}, Evaluated Param Value: 0
+11:01:27.351 (351624419)|FLOW_START_INTERVIEWS_BEGIN|1
+11:01:27.351 (352557806)|FLOW_START_INTERVIEW_BEGIN|3942e755ae5b278d810a26102a7815b5fa15560-4156|Create Default Performance & defect Liability Bonds v5
+11:01:27.351 (352584952)|FLOW_VALUE_ASSIGNMENT|3942e755ae5b278d810a26102a7815b5fa15560-4156|myVariable_old|moduleapi.interaction.SObjectRowWithSavePoint@1637edb8
+11:01:27.351 (356350995)|FLOW_VALUE_ASSIGNMENT|3942e755ae5b278d810a26102a7815b5fa15560-4156|myVariable_current|{Id=006O0000009HAXhIAO, IsDeleted=false, AccountId=001O0000018AKplIAG, RecordTypeId=012O0000000DD8PIAW, IsPrivate=false, Name=Test AMcF 12-04 #1, Description=null, StageName=Gate 3, Amount=9999999.0, Probability=60.0, ExpectedRevenue=5999999.399999999, TotalOpportunityQuantity=null, CloseDate=2017-08-01 00:00:00, Type=null, NextStep=null, LeadSource=null, IsClosed=false, IsWon=false, ForecastCategory=Pipeline, ForecastCategoryName=Pipeline, CampaignId=null, HasOpportunityLineItem=false, Pricebook2Id=null, OwnerId=00528000006BYTIAA4, CreatedDate=2017-04-12 01:00:17, CreatedById=00528000006B07FAAS, LastModifiedDate=2017-04-12 01:01:27, LastModifiedById=00528000006B07FAAS, SystemModstamp=2017-04-12 01:01:27, LastActivityDate=null, FiscalYear=null, FiscalQuarter=null, LastViewedDate=null, LastReferencedDate=null, SyncedQuoteId=null, ContractId=null, HasOpenActivity=false, HasOverdueTask=false, Budget_Confirmed__c=false, Discovery_Completed__c=false, ROI_Analysis_Completed__c=false, Loss_Reason__c=null, Business_Group__c=a0BO000000F5hL0MAJ, Data_Quality_Description__c=Missing: Type, Lead Source, Next Steps, Data_Quality_Score__c=40.0, EOI_Tender_Date__c=null, Prospect_Code__c=null, Prospect_Manager__c=null, Regional_Business__c=a0BO000000F5hL5MAJ, CANDY_Tender_Number__c=null, Also_Known_As__c=null, Prospect_Priority__c=3, Prospect_Number__c=PRS-00148, Win_Probability__c=90.0, Project_Probability__c=90.0, Project_Duration_Months__c=36.0, Scope__c=null, Payment_Mechanism__c=null, Discipline__c=null, D_I_Involvement__c=false, D_I_Involvement_Guidance_Note__c=This box should be checked if JH D&I are directly involved in providing financial advice, direction or lead of SPV for the prospect. It should not be checked if there is no D&I requirement to be involved, Client_Probity__c=false, Restrict_Access__c=false, Prospect_Status__c=Prospect, Industry_Sector_GM__c=null, Project_Development_Manager__c=00528000006BYTIAA4, Detailed_Description__c=Desc, Non_Binding_Proposal_Required__c=false, EOI_PQ_Start_Date__c=2017-04-01 00:00:00, EOI_PQ_Close_Date__c=2017-05-01 00:00:00, Announcement_of_Pre_Qualified_Bidders__c=null, Strategy_Bid_Development_Meeting_Date__c=null, Tender_Start_Date__c=2017-06-01 00:00:00, Tender_Close_Date__c=2017-07-01 00:00:00, Anticipated_Revenue_Start_Date__c=2017-09-01 00:00:00, Interim_Review__c=null, Preliminary_Final_Review__c=null, Final_Tender_Review__c=null, Tender_Collaboration_Pack_Aconex_DB_URL__c=null, Country__c=Australia, State__c=New South Wales, Nearest_City__c=Lismore, District__c=Northern Rivers, Reason_For_Performing_Work__c=Test, Client_Drivers__c=Test, Relationship__c=null, Client_Relationship_Management__c=Test, Financial_Viability_Exposure__c=null, Independent_Credit_Check_Required__c=false, Client_Supplied_Materials__c=null, Value_of_Managed_Works__c=null, Overall_Prospect_Value__c=9999999.0, Managing_Contractor_Time_Risk__c=false, Proposed_Margin_on_Revenue__c=30.0, PPP_or_Third_Party_Funded_Project__c=false, Payment_Variation_Terms__c=null, Finance_Prospect_Comments__c=null, Defect_Liability_Duration_Months__c=12.0, Minimum_Credit_Rating_Required__c=null, Request_For_Special_Wording_In_The_Bond__c=false, A_PCG_Is_Required_From__c=JHG, PCG_Comments__c=null, Proposed_FA__c=null, Funding_Strategy__c=null, Target_Gearing_Ratio__c=null, Total_Indicative_Equity__c=null, JH_Target_Equity__c=null, JH_Target_Equity_Amount__c=null, Timing_for_Contribution__c=null, Equity_Residual_Risk__c=null, Target_IRR_and_or_D_I_Revenues__c=null, Intended_Exit_Strategy__c=null, JH_Accounting_Tax_Considerations__c=null, Relationship_Agreements__c=null, Is_this_project_a_JV_or_Alliance__c=false, Proposed_form_of_Relationship__c=null, Is_internal_BG_collaboration__c=false, Major_Risks__c=null, Nature_of_technology_design_proposed__c=null, Intentions_to_Resource_Project_Team__c=null, Is_internal_Regional_Bus_collaboration__c=false, Contract_Risk__c=Client-side risk: Cost plus margin contract, Client_Relationship_Manager__c=null, Other_Custom_Heading__c=null, Business_Development_Manager__c=00528000004d3msAAA, Procurement_Process__c=null, Alignment_with_Business_Plan__c=null, Competitor_Analysis_General_Comments__c=null, Intentions_to_Resource_Bid_Team__c=null, Conversion_Budget_Comments__c=null, Specific_KCRA_Approvals_Comments__c=null, Design__c=null, Cost__c=null, Time__c=null, Relationships__c=null, People__c=null, Technology__c=null, Methodology__c=null, Innovation__c=null, Other__c=null, Key_Points__c=null, Alignment_with_Core_Competencies__c=null, Executive_Summary__c=Desc, Parent_Company_Guarantee_PCG__c= , Bonding_Security_Header__c= , Tender_Dates_Header__c= , JH_Revenue_Share__c=null, JH_Margin_Value__c=0.0, Total_Budget_EOI_PQ__c=0.0, Total_Budget_Tender__c=0.0, Total_Budget_Post_Tender__c=0.0, Less_Cost_Recoveries_EOI_PQ__c=0.0, Less_Cost_Recoveries_Tender__c=0.0, Less_Cost_Recoveries_Post_Tender__c=0.0, Total_Budget_AUD__c=0.0, Total_Less_Recoveries__c=0.0, Net_Budget_Amount__c=0.0, Net_Budget_EOI_PQ__c=0.0, Net_Budget_Tender__c=0.0, Net_Budget_Post_Tender__c=0.0, JH_Bid_Cost_of_JH_Revenue__c=null, Location__c=Lismore, New South Wales, Australia, Delivery_End_Date__c=2020-07-31 00:00:00, Prospect_Duration_Yrs__c=3.0, Conga_Other_Heading_Field__c=Other:, Apply_Default_Bonding__c=false, Notes_Doc_ID__c=null, Delivery_End_Defect_Liability_Duration__c=2021-07-31 00:00:00, EOI_PQ_Submitted_Date__c=null, Tender_Submitted_Date__c=null, Count_of_EOI_Lessons_Learnt_Reports__c=null, Count_of_Tender_Lessons_Learnt_Reports__c=null, Gate_Status__c=Not Started, TSF_Gate_Status__c=Not Applicable, CRA_Gate_Status__c=Not Applicable, Number_of_PRA_Critical_Items_Rated_3__c=0.0, Are_there_any_critical_risks__c=null, Has_TSF_changed_since_last_approval__c=null, Has_CRA_changed_since_last_approval__c=null, Sync_Date_Fields__c=true, Is_Gate_1_To_3__c=true, Is_Gate_4_To_5__c=false, D_I_Involvement_Text__c=No, Reason_for_Status__c=null, Key_Account_Manager__c=System Partners, Primary_Business_Unit__c=NSW/ACT, Previous_Gate_Status__c=Not Applicable, Previous_Gate_CRA_Status__c=Not Applicable, Previous_Gate_TSF_Status__c=Not Applicable, Probity_Override__c=false, Previous_Stage__c=null}
+11:01:27.351 (356385999)|FLOW_VALUE_ASSIGNMENT|3942e755ae5b278d810a26102a7815b5fa15560-4156|RecursiveCountVariable|0
+11:01:27.351 (356440108)|FLOW_ELEMENT_BEGIN|3942e755ae5b278d810a26102a7815b5fa15560-4156|FlowAssignment|myVariable_waitStartTimeAssignment
+11:01:27.351 (356469638)|FLOW_ASSIGNMENT_DETAIL|3942e755ae5b278d810a26102a7815b5fa15560-4156|myVariable_waitStartTimeVariable|ASSIGN|12/04/2017 11:01 AM
+11:01:27.351 (356481260)|FLOW_VALUE_ASSIGNMENT|3942e755ae5b278d810a26102a7815b5fa15560-4156|myVariable_waitStartTimeVariable|2017-04-12T01:01:27Z
+11:01:27.351 (356491098)|FLOW_ELEMENT_END|3942e755ae5b278d810a26102a7815b5fa15560-4156|FlowAssignment|myVariable_waitStartTimeAssignment
+11:01:27.351 (356499757)|FLOW_ELEMENT_BEGIN|3942e755ae5b278d810a26102a7815b5fa15560-4156|FlowDecision|myDecision
+11:01:27.351 (356638052)|FLOW_RULE_DETAIL|3942e755ae5b278d810a26102a7815b5fa15560-4156|myRule_1|false
+11:01:27.351 (356646166)|FLOW_VALUE_ASSIGNMENT|3942e755ae5b278d810a26102a7815b5fa15560-4156|myRule_1|false
+11:01:27.351 (356653828)|FLOW_ELEMENT_END|3942e755ae5b278d810a26102a7815b5fa15560-4156|FlowDecision|myDecision
+11:01:27.351 (356725120)|FLOW_START_INTERVIEW_END|3942e755ae5b278d810a26102a7815b5fa15560-4156|Create Default Performance & defect Liability Bonds v5
+11:01:27.351 (356733360)|FLOW_START_INTERVIEWS_END|1
+11:01:27.0 (357685438)|WF_FLOW_ACTION_END|09LO0000000Clat
+11:01:27.0 (357699654)|WF_FLOW_ACTION_BEGIN|09LO0000000ClaP
+11:01:27.0 (357726326)|WF_FLOW_ACTION_DETAIL|09LO0000000ClaP|[Opportunity: Test AMcF 12-04 #1 006O0000009HAXh]|Id=09LO0000000ClaP|CurrentRule:Gate 3 (Id=01QO00000009LAx)
+11:01:27.359 (359046138)|FLOW_CREATE_INTERVIEW_BEGIN|00DO00000054ynj|300O000000009Tr|301O00000000zJx
+11:01:27.359 (361287882)|FLOW_CREATE_INTERVIEW_END|3943e755ae5b278d810a26102a7815b5fa15560-4155|Apply Date Sync with all key date fields
+11:01:27.0 (361497745)|WF_FLOW_ACTION_DETAIL|Param Name: myVariable_current, Param Value: ENCODED:{![treatNullAsNull]{!ID:this}}, Evaluated Param Value: {Entity type: Opportunity, id: 006O0000009HAXhIAO}|Param Name: myVariable_old, Param Value: {!old}, Evaluated Param Value: {Entity type: Opportunity, id: 006O0000009HAXhIAO}
+11:01:27.362 (362971224)|FLOW_START_INTERVIEWS_BEGIN|1
+11:01:27.362 (363682571)|FLOW_START_INTERVIEW_BEGIN|3943e755ae5b278d810a26102a7815b5fa15560-4155|Apply Date Sync with all key date fields
+11:01:27.362 (363708403)|FLOW_VALUE_ASSIGNMENT|3943e755ae5b278d810a26102a7815b5fa15560-4155|myVariable_old|moduleapi.interaction.SObjectRowWithSavePoint@7d120247
+11:01:27.362 (367508127)|FLOW_VALUE_ASSIGNMENT|3943e755ae5b278d810a26102a7815b5fa15560-4155|myVariable_current|{Id=006O0000009HAXhIAO, IsDeleted=false, AccountId=001O0000018AKplIAG, RecordTypeId=012O0000000DD8PIAW, IsPrivate=false, Name=Test AMcF 12-04 #1, Description=null, StageName=Gate 3, Amount=9999999.0, Probability=60.0, ExpectedRevenue=5999999.399999999, TotalOpportunityQuantity=null, CloseDate=2017-08-01 00:00:00, Type=null, NextStep=null, LeadSource=null, IsClosed=false, IsWon=false, ForecastCategory=Pipeline, ForecastCategoryName=Pipeline, CampaignId=null, HasOpportunityLineItem=false, Pricebook2Id=null, OwnerId=00528000006BYTIAA4, CreatedDate=2017-04-12 01:00:17, CreatedById=00528000006B07FAAS, LastModifiedDate=2017-04-12 01:01:27, LastModifiedById=00528000006B07FAAS, SystemModstamp=2017-04-12 01:01:27, LastActivityDate=null, FiscalYear=null, FiscalQuarter=null, LastViewedDate=null, LastReferencedDate=null, SyncedQuoteId=null, ContractId=null, HasOpenActivity=false, HasOverdueTask=false, Budget_Confirmed__c=false, Discovery_Completed__c=false, ROI_Analysis_Completed__c=false, Loss_Reason__c=null, Business_Group__c=a0BO000000F5hL0MAJ, Data_Quality_Description__c=Missing: Type, Lead Source, Next Steps, Data_Quality_Score__c=40.0, EOI_Tender_Date__c=null, Prospect_Code__c=null, Prospect_Manager__c=null, Regional_Business__c=a0BO000000F5hL5MAJ, CANDY_Tender_Number__c=null, Also_Known_As__c=null, Prospect_Priority__c=3, Prospect_Number__c=PRS-00148, Win_Probability__c=90.0, Project_Probability__c=90.0, Project_Duration_Months__c=36.0, Scope__c=null, Payment_Mechanism__c=null, Discipline__c=null, D_I_Involvement__c=false, D_I_Involvement_Guidance_Note__c=This box should be checked if JH D&I are directly involved in providing financial advice, direction or lead of SPV for the prospect. It should not be checked if there is no D&I requirement to be involved, Client_Probity__c=false, Restrict_Access__c=false, Prospect_Status__c=Prospect, Industry_Sector_GM__c=null, Project_Development_Manager__c=00528000006BYTIAA4, Detailed_Description__c=Desc, Non_Binding_Proposal_Required__c=false, EOI_PQ_Start_Date__c=2017-04-01 00:00:00, EOI_PQ_Close_Date__c=2017-05-01 00:00:00, Announcement_of_Pre_Qualified_Bidders__c=null, Strategy_Bid_Development_Meeting_Date__c=null, Tender_Start_Date__c=2017-06-01 00:00:00, Tender_Close_Date__c=2017-07-01 00:00:00, Anticipated_Revenue_Start_Date__c=2017-09-01 00:00:00, Interim_Review__c=null, Preliminary_Final_Review__c=null, Final_Tender_Review__c=null, Tender_Collaboration_Pack_Aconex_DB_URL__c=null, Country__c=Australia, State__c=New South Wales, Nearest_City__c=Lismore, District__c=Northern Rivers, Reason_For_Performing_Work__c=Test, Client_Drivers__c=Test, Relationship__c=null, Client_Relationship_Management__c=Test, Financial_Viability_Exposure__c=null, Independent_Credit_Check_Required__c=false, Client_Supplied_Materials__c=null, Value_of_Managed_Works__c=null, Overall_Prospect_Value__c=9999999.0, Managing_Contractor_Time_Risk__c=false, Proposed_Margin_on_Revenue__c=30.0, PPP_or_Third_Party_Funded_Project__c=false, Payment_Variation_Terms__c=null, Finance_Prospect_Comments__c=null, Defect_Liability_Duration_Months__c=12.0, Minimum_Credit_Rating_Required__c=null, Request_For_Special_Wording_In_The_Bond__c=false, A_PCG_Is_Required_From__c=JHG, PCG_Comments__c=null, Proposed_FA__c=null, Funding_Strategy__c=null, Target_Gearing_Ratio__c=null, Total_Indicative_Equity__c=null, JH_Target_Equity__c=null, JH_Target_Equity_Amount__c=null, Timing_for_Contribution__c=null, Equity_Residual_Risk__c=null, Target_IRR_and_or_D_I_Revenues__c=null, Intended_Exit_Strategy__c=null, JH_Accounting_Tax_Considerations__c=null, Relationship_Agreements__c=null, Is_this_project_a_JV_or_Alliance__c=false, Proposed_form_of_Relationship__c=null, Is_internal_BG_collaboration__c=false, Major_Risks__c=null, Nature_of_technology_design_proposed__c=null, Intentions_to_Resource_Project_Team__c=null, Is_internal_Regional_Bus_collaboration__c=false, Contract_Risk__c=Client-side risk: Cost plus margin contract, Client_Relationship_Manager__c=null, Other_Custom_Heading__c=null, Business_Development_Manager__c=00528000004d3msAAA, Procurement_Process__c=null, Alignment_with_Business_Plan__c=null, Competitor_Analysis_General_Comments__c=null, Intentions_to_Resource_Bid_Team__c=null, Conversion_Budget_Comments__c=null, Specific_KCRA_Approvals_Comments__c=null, Design__c=null, Cost__c=null, Time__c=null, Relationships__c=null, People__c=null, Technology__c=null, Methodology__c=null, Innovation__c=null, Other__c=null, Key_Points__c=null, Alignment_with_Core_Competencies__c=null, Executive_Summary__c=Desc, Parent_Company_Guarantee_PCG__c= , Bonding_Security_Header__c= , Tender_Dates_Header__c= , JH_Revenue_Share__c=null, JH_Margin_Value__c=0.0, Total_Budget_EOI_PQ__c=0.0, Total_Budget_Tender__c=0.0, Total_Budget_Post_Tender__c=0.0, Less_Cost_Recoveries_EOI_PQ__c=0.0, Less_Cost_Recoveries_Tender__c=0.0, Less_Cost_Recoveries_Post_Tender__c=0.0, Total_Budget_AUD__c=0.0, Total_Less_Recoveries__c=0.0, Net_Budget_Amount__c=0.0, Net_Budget_EOI_PQ__c=0.0, Net_Budget_Tender__c=0.0, Net_Budget_Post_Tender__c=0.0, JH_Bid_Cost_of_JH_Revenue__c=null, Location__c=Lismore, New South Wales, Australia, Delivery_End_Date__c=2020-07-31 00:00:00, Prospect_Duration_Yrs__c=3.0, Conga_Other_Heading_Field__c=Other:, Apply_Default_Bonding__c=false, Notes_Doc_ID__c=null, Delivery_End_Defect_Liability_Duration__c=2021-07-31 00:00:00, EOI_PQ_Submitted_Date__c=null, Tender_Submitted_Date__c=null, Count_of_EOI_Lessons_Learnt_Reports__c=null, Count_of_Tender_Lessons_Learnt_Reports__c=null, Gate_Status__c=Not Started, TSF_Gate_Status__c=Not Applicable, CRA_Gate_Status__c=Not Applicable, Number_of_PRA_Critical_Items_Rated_3__c=0.0, Are_there_any_critical_risks__c=null, Has_TSF_changed_since_last_approval__c=null, Has_CRA_changed_since_last_approval__c=null, Sync_Date_Fields__c=true, Is_Gate_1_To_3__c=true, Is_Gate_4_To_5__c=false, D_I_Involvement_Text__c=No, Reason_for_Status__c=null, Key_Account_Manager__c=System Partners, Primary_Business_Unit__c=NSW/ACT, Previous_Gate_Status__c=Not Applicable, Previous_Gate_CRA_Status__c=Not Applicable, Previous_Gate_TSF_Status__c=Not Applicable, Probity_Override__c=false, Previous_Stage__c=null}
+11:01:27.362 (367599011)|FLOW_ELEMENT_BEGIN|3943e755ae5b278d810a26102a7815b5fa15560-4155|FlowAssignment|myVariable_waitStartTimeAssignment
+11:01:27.362 (367632895)|FLOW_ASSIGNMENT_DETAIL|3943e755ae5b278d810a26102a7815b5fa15560-4155|myVariable_waitStartTimeVariable|ASSIGN|12/04/2017 11:01 AM
+11:01:27.362 (367645445)|FLOW_VALUE_ASSIGNMENT|3943e755ae5b278d810a26102a7815b5fa15560-4155|myVariable_waitStartTimeVariable|2017-04-12T01:01:27Z
+11:01:27.362 (367655837)|FLOW_ELEMENT_END|3943e755ae5b278d810a26102a7815b5fa15560-4155|FlowAssignment|myVariable_waitStartTimeAssignment
+11:01:27.362 (367666110)|FLOW_ELEMENT_BEGIN|3943e755ae5b278d810a26102a7815b5fa15560-4155|FlowDecision|isChangedDecision2_myRule_1_Tender_Close_Date_c
+11:01:27.362 (367945521)|FLOW_RULE_DETAIL|3943e755ae5b278d810a26102a7815b5fa15560-4155|isChangedRule_2_myRule_1_Tender_Close_Date_c|false
+11:01:27.362 (367954635)|FLOW_VALUE_ASSIGNMENT|3943e755ae5b278d810a26102a7815b5fa15560-4155|isChangedRule_2_myRule_1_Tender_Close_Date_c|false
+11:01:27.362 (367964637)|FLOW_ELEMENT_END|3943e755ae5b278d810a26102a7815b5fa15560-4155|FlowDecision|isChangedDecision2_myRule_1_Tender_Close_Date_c
+11:01:27.362 (367972347)|FLOW_ELEMENT_BEGIN|3943e755ae5b278d810a26102a7815b5fa15560-4155|FlowDecision|myDecision
+11:01:27.362 (368089054)|FLOW_RULE_DETAIL|3943e755ae5b278d810a26102a7815b5fa15560-4155|myRule_1|false
+11:01:27.362 (368097319)|FLOW_VALUE_ASSIGNMENT|3943e755ae5b278d810a26102a7815b5fa15560-4155|myRule_1|false
+11:01:27.362 (368104755)|FLOW_ELEMENT_END|3943e755ae5b278d810a26102a7815b5fa15560-4155|FlowDecision|myDecision
+11:01:27.362 (368177287)|FLOW_START_INTERVIEW_END|3943e755ae5b278d810a26102a7815b5fa15560-4155|Apply Date Sync with all key date fields
+11:01:27.362 (368185594)|FLOW_START_INTERVIEWS_END|1
+11:01:27.0 (369320834)|WF_FLOW_ACTION_END|09LO0000000ClaP
+11:01:27.0 (369433261)|WF_ACTIONS_END| Outbound Message: 1; Flow Trigger: 3;
+11:01:27.0 (369439567)|CODE_UNIT_FINISHED|Workflow:Opportunity
+11:01:27.0 (568818596)|CODE_UNIT_FINISHED|TRIGGERS
+11:01:27.0 (568830286)|EXECUTION_FINISHED
+11:01:27.573 (573299385)|CUMULATIVE_PROFILING_BEGIN
+11:01:27.573 (573299385)|CUMULATIVE_PROFILING|SOQL operations|
+Class.OpportunityService.getTheOppTeamShareRules: line 143, column 1: [SELECT Id, OpportunityAccessLevel,RowCause,UserOrGroupId 
+                FROM OpportunityShare 
+                WHERE OpportunityId IN :oppIDs 
+                AND RowCause = 'Team' 
+                AND UserOrGroupId IN :UserIds]: executed 1 time in 7 ms
+Class.OpportunityService.getOpportunitiesAndInitiatedGates: line 78, column 1: [SELECT ID,stageName, Gate_Status__c,CRA_Gate_Status__c,TSF_Gate_Status__c, 
+                    (SELECT ID, Gate_Number__c, Gate_Type__c 
+                    FROM Gates__r 
+                    WHERE status__c = :Constants.InitiatedStatus 
+                    ORDER BY CreatedDate desc) 
+                FROM Opportunity 
+                WHERE ID IN : OppsToStartApprovalProcess]: executed 1 time in 5 ms
+
+11:01:27.573 (573299385)|CUMULATIVE_PROFILING|No profiling information for SOSL operations
+11:01:27.573 (573299385)|CUMULATIVE_PROFILING|DML operations|
+Class.OpportunityTriggerHandler.manageSharingForOppTeamMembers: line 254, column 1: Insert: List<OpportunityTeamMember>: executed 1 time in 54 ms
+Class.OpportunityTriggerHandler.manageSharingForOppTeamMembers: line 271, column 1: Update: List<OpportunityShare>: executed 1 time in 13 ms
+Class.OpportunityTriggerHandler.ApprovalProcessOrchestrator: line 551, column 1: Upsert: List<Gate__c>: executed 1 time in 0 ms
+
+11:01:27.573 (573299385)|CUMULATIVE_PROFILING|method invocations|
+Trigger.OpportunityTrigger: line 4, column 1: public OpportunityTriggerHandler(): executed 4 times in 146 ms
+External entry point: public void invoke(): executed 1 time in 103 ms
+Class.TriggerHandler.run: line 47, column 1: public void afterUpdate(): executed 1 time in 101 ms
+Class.OpportunityTriggerHandler.afterUpdate: line 52, column 1: private void manageSharingForOppTeamMembers(): executed 1 time in 75 ms
+Class.OpportunityTriggerHandler.beforeUpdate: line 43, column 1: private void onBeforeUpdateMethods(): executed 1 time in 42 ms
+Class.TriggerHandler.run: line 41, column 1: public void beforeUpdate(): executed 1 time in 42 ms
+Class.OpportunityTriggerHandler.afterUpdate: line 51, column 1: private void ApprovalProcessOrchestrator(): executed 1 time in 20 ms
+Class.OpportunityTriggerHandler.manageSharingForOppTeamMembers: line 266, column 1: public static List<OpportunityShare> getTheOppTeamShareRules(Set<Id>, Set<Id>): executed 4 times in 8 ms
+Class.OpportunityTriggerHandler.afterUpdate: line 53, column 1: private static void sendEmails(): executed 1 time in 6 ms
+Class.OpportunityTriggerHandler.onBeforeUpdateMethods: line 315, column 1: private void validationRuleOnStageChange(Opportunity): executed 1 time in 6 ms
+Class.OpportunityTriggerHandler.ApprovalProcessOrchestrator: line 512, column 1: public static List<Opportunity> getOpportunitiesAndInitiatedGates(Set<Id>): executed 3 times in 5 ms
+
+11:01:27.573 (573299385)|CUMULATIVE_PROFILING_END

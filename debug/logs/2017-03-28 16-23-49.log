@@ -1,0 +1,132 @@
+34.0 APEX_CODE,FINEST;APEX_PROFILING,FINEST;CALLOUT,NONE;DB,FINEST;SYSTEM,FINE;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,FINER
+Execute Anonymous: System.debug(loggingLevel.Error, '*** object: ' + opportunityService.ConcatanateStringLength('ab', 3));
+16:23:48.1 (1521842)|USER_INFO|[EXTERNAL]|005O0000003t7an|ricky.lowe@jhg.com.au.pcphase2|Australian Eastern Standard Time|GMT+11:00
+16:23:48.1 (1538409)|EXECUTION_STARTED
+16:23:48.1 (1542666)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+16:23:48.1 (1710957)|HEAP_ALLOCATE|[72]|Bytes:3
+16:23:48.1 (1742000)|HEAP_ALLOCATE|[77]|Bytes:152
+16:23:48.1 (1759175)|HEAP_ALLOCATE|[342]|Bytes:408
+16:23:48.1 (1780599)|HEAP_ALLOCATE|[355]|Bytes:408
+16:23:48.1 (1799291)|HEAP_ALLOCATE|[467]|Bytes:48
+16:23:48.1 (1825727)|HEAP_ALLOCATE|[139]|Bytes:6
+16:23:48.1 (1849386)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:1
+16:23:48.1 (1931780)|STATEMENT_EXECUTE|[1]
+16:23:48.1 (1934651)|STATEMENT_EXECUTE|[1]
+16:23:48.1 (2147406)|HEAP_ALLOCATE|[1]|Bytes:12
+16:23:48.1 (2152949)|HEAP_ALLOCATE|[1]|Bytes:2
+16:23:48.1 (2192723)|HEAP_ALLOCATE|[50]|Bytes:5
+16:23:48.1 (2207515)|HEAP_ALLOCATE|[56]|Bytes:5
+16:23:48.1 (2215915)|HEAP_ALLOCATE|[64]|Bytes:7
+16:23:48.1 (2234947)|SYSTEM_MODE_ENTER|false
+16:23:48.1 (2253108)|HEAP_ALLOCATE|[1]|Bytes:5
+16:23:48.1 (3892063)|VARIABLE_SCOPE_BEGIN|[3]|opportunityService.KCRARecordTypeID|String|false|true
+16:23:48.1 (3899672)|VARIABLE_SCOPE_BEGIN|[2]|opportunityService.KCRATemplateRecordTypeID|String|false|true
+16:23:48.1 (3937321)|HEAP_ALLOCATE|[1]|Bytes:22
+16:23:48.1 (3953049)|METHOD_ENTRY|[1]|01pO00000003HOS|opportunityService.opportunityService()
+16:23:48.1 (3956036)|STATEMENT_EXECUTE|[1]
+16:23:48.1 (3960104)|STATEMENT_EXECUTE|[1]
+16:23:48.1 (3968168)|HEAP_ALLOCATE|[2]|Bytes:5
+16:23:48.1 (3971436)|STATEMENT_EXECUTE|[2]
+16:23:48.1 (3974398)|HEAP_ALLOCATE|[2]|Bytes:33
+16:23:48.1 (4039606)|SYSTEM_METHOD_ENTRY|[2]|Schema.SObjectType.getDescribe()
+16:23:48.1 (4572888)|HEAP_ALLOCATE|[2]|Bytes:4
+16:23:48.1 (4583865)|SYSTEM_METHOD_EXIT|[2]|Schema.SObjectType.getDescribe()
+16:23:48.1 (4609917)|LIMIT_USAGE|[2]|RECORD_TYPE_DESCRIBES|1|100
+16:23:48.1 (6577236)|HEAP_ALLOCATE|[2]|Bytes:16
+16:23:48.1 (6586787)|HEAP_ALLOCATE|[2]|Bytes:13
+16:23:48.1 (6625270)|SYSTEM_METHOD_ENTRY|[2]|Map<String,Schema.RecordTypeInfo>.get(Object)
+16:23:48.1 (6712434)|SYSTEM_METHOD_EXIT|[2]|Map<String,Schema.RecordTypeInfo>.get(Object)
+16:23:48.1 (6739400)|HEAP_ALLOCATE|[2]|Bytes:4
+16:23:48.1 (6754581)|HEAP_ALLOCATE|[2]|Bytes:18
+16:23:48.1 (6783548)|VARIABLE_ASSIGNMENT|[2]|opportunityService.KCRATemplateRecordTypeID|"012O0000000DCgLIAW"
+16:23:48.1 (6786958)|STATEMENT_EXECUTE|[3]
+16:23:48.1 (6820476)|SYSTEM_METHOD_ENTRY|[3]|Schema.SObjectType.getDescribe()
+16:23:48.1 (6843568)|HEAP_ALLOCATE|[3]|Bytes:4
+16:23:48.1 (6849647)|SYSTEM_METHOD_EXIT|[3]|Schema.SObjectType.getDescribe()
+16:23:48.1 (6862202)|LIMIT_USAGE|[3]|RECORD_TYPE_DESCRIBES|2|100
+16:23:48.1 (6876875)|HEAP_ALLOCATE|[3]|Bytes:16
+16:23:48.1 (6882535)|HEAP_ALLOCATE|[3]|Bytes:4
+16:23:48.1 (6898569)|SYSTEM_METHOD_ENTRY|[3]|Map<String,Schema.RecordTypeInfo>.get(Object)
+16:23:48.1 (6913914)|SYSTEM_METHOD_EXIT|[3]|Map<String,Schema.RecordTypeInfo>.get(Object)
+16:23:48.1 (6933239)|HEAP_ALLOCATE|[3]|Bytes:4
+16:23:48.1 (6941253)|HEAP_ALLOCATE|[3]|Bytes:18
+16:23:48.1 (6953486)|VARIABLE_ASSIGNMENT|[3]|opportunityService.KCRARecordTypeID|"012O0000000DCgGIAW"
+16:23:48.1 (6965435)|METHOD_EXIT|[1]|opportunityService
+16:23:48.1 (6989874)|METHOD_ENTRY|[1]|01pO00000003HOS|opportunityService.ConcatanateStringLength(String, Integer)
+16:23:48.1 (7008288)|VARIABLE_SCOPE_BEGIN|[97]|stringIn|String|false|false
+16:23:48.1 (7015897)|VARIABLE_ASSIGNMENT|[97]|stringIn|"ab"
+16:23:48.1 (7019552)|VARIABLE_SCOPE_BEGIN|[97]|length|Integer|false|false
+16:23:48.1 (7024388)|VARIABLE_ASSIGNMENT|[97]|length|3
+16:23:48.1 (7034099)|HEAP_ALLOCATE|[98]|Bytes:5
+16:23:48.1 (7037869)|STATEMENT_EXECUTE|[97]
+16:23:48.1 (7059451)|SYSTEM_METHOD_ENTRY|[98]|String.length()
+16:23:48.1 (7124038)|SYSTEM_METHOD_EXIT|[98]|String.length()
+16:23:48.1 (7133400)|STATEMENT_EXECUTE|[101]
+16:23:48.1 (7134888)|STATEMENT_EXECUTE|[102]
+16:23:48.1 (7143391)|METHOD_EXIT|[1]|01pO00000003HOS|opportunityService.ConcatanateStringLength(String, Integer)
+16:23:48.1 (7147664)|SYSTEM_MODE_EXIT|false
+16:23:48.1 (7162825)|HEAP_ALLOCATE|[1]|Bytes:14
+16:23:48.1 (7184076)|SYSTEM_METHOD_ENTRY|[1]|System.debug(APEX_OBJECT, ANY)
+16:23:48.1 (7200698)|USER_DEBUG|[1]|ERROR|*** object: ab
+16:23:48.1 (7205694)|SYSTEM_METHOD_EXIT|[1]|System.debug(APEX_OBJECT, ANY)
+16:23:48.7 (7236743)|CUMULATIVE_LIMIT_USAGE
+16:23:48.7 (7236743)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+16:23:48.7 (7236743)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+16:23:48.7 (7236743)|STATIC_VARIABLE_LIST|
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  String:_sfdcSuppressedCodeLocations:0
+  long:serialVersionUID:0
+  double:MAX_VALUE:0
+  Boolean:FALSE:0
+  long:serialVersionUID:0
+  double:MIN_VALUE:0
+  int:SIZE:0
+  double:NEGATIVE_INFINITY:0
+  String:_static_KCRARecordTypeID:0
+  int:MAX_VALUE:0
+  char[]:digits:0
+  double:NaN:0
+  Boolean:TRUE:0
+  String:_static_KCRATemplateRecordTypeID:0
+  int:MIN_VALUE:0
+  char[]:DigitOnes:0
+  int:BYTES:0
+  int:MIN_EXPONENT:0
+  int[]:sizeTable:0
+  String:_sfdcAdditionalCodeLocations:0
+  int:MAX_EXPONENT:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  double:MIN_NORMAL:0
+  int:BYTES:0
+
+16:23:48.7 (7236743)|CUMULATIVE_LIMIT_USAGE_END
+
+16:23:48.1 (7347359)|CODE_UNIT_FINISHED|execute_anonymous_apex
+16:23:48.1 (9109770)|EXECUTION_FINISHED
+16:23:48.10 (10458212)|CUMULATIVE_PROFILING_BEGIN
+16:23:48.10 (10458212)|CUMULATIVE_PROFILING|No profiling information for SOQL operations
+16:23:48.10 (10458212)|CUMULATIVE_PROFILING|No profiling information for SOSL operations
+16:23:48.10 (10458212)|CUMULATIVE_PROFILING|No profiling information for DML operations
+16:23:48.10 (10458212)|CUMULATIVE_PROFILING|method invocations|
+External entry point: public static void execute(): executed 1 time in 6 ms
+Class.opportunityService: line 2, column 1: global Schema.DescribeSObjectResult getDescribe(): executed 2 times in 1 ms
+AnonymousBlock: line 1, column 1: public static String ConcatanateStringLength(String, Integer): executed 2 times in 0 ms
+Class.opportunityService.ConcatanateStringLength: line 98, column 1: public Integer length(): executed 1 time in 0 ms
+Class.opportunityService: line 3, column 1: global Schema.DescribeSObjectResult getDescribe(): executed 2 times in 0 ms
+
+16:23:48.10 (10458212)|CUMULATIVE_PROFILING_END

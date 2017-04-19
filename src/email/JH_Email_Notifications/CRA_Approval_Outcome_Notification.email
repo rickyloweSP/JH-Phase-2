@@ -1,0 +1,5 @@
+<messaging:emailTemplate subject="CRA for {!relatedTo.Previous_Stage__c} for {!relatedTo.Name} has been {!relatedTo.Previous_Gate_CRA_Status__c}" recipientType="User" relatedToType="Opportunity">
+    <messaging:htmlEmailBody >            
+         <c:Approval_Outcome_Notification_VF recipientUser="{!recipient}" relatedToOpp="{!relatedTo}" EmailType="CRA"/>       
+    </messaging:htmlEmailBody>  
+</messaging:emailTemplate>

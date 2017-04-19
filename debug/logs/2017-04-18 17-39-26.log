@@ -1,0 +1,83 @@
+34.0 APEX_CODE,FINEST;APEX_PROFILING,FINEST;CALLOUT,NONE;DB,FINEST;SYSTEM,FINE;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,FINER
+17:39:23.0 (387972)|USER_INFO|[EXTERNAL]|005O0000003t7an|ricky.lowe@jhg.com.au.pcphase2|Australian Eastern Standard Time|GMT+10:00
+17:39:23.0 (417296)|EXECUTION_STARTED
+17:39:23.0 (423088)|CODE_UNIT_STARTED|[EXTERNAL]|01pO00000003mlO|Email_Reminder_Batch
+17:39:23.0 (7913829)|HEAP_ALLOCATE|[72]|Bytes:3
+17:39:23.0 (7958932)|HEAP_ALLOCATE|[77]|Bytes:152
+17:39:23.0 (7975641)|HEAP_ALLOCATE|[342]|Bytes:408
+17:39:23.0 (7996033)|HEAP_ALLOCATE|[355]|Bytes:408
+17:39:23.0 (8014885)|HEAP_ALLOCATE|[467]|Bytes:48
+17:39:23.0 (8045836)|HEAP_ALLOCATE|[139]|Bytes:6
+17:39:23.0 (11154826)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:929
+17:39:23.0 (20153015)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:11
+17:39:23.0 (20179930)|SYSTEM_METHOD_ENTRY|[15]|BatchableContextImpl.BatchableContextImpl()
+17:39:23.0 (20184758)|STATEMENT_EXECUTE|[15]
+17:39:23.0 (20199205)|SYSTEM_METHOD_EXIT|[15]|BatchableContextImpl
+17:39:23.0 (20206531)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+17:39:23.0 (20211006)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+17:39:23.0 (20212960)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+17:39:23.0 (20219106)|VARIABLE_SCOPE_BEGIN|[31]|this|Database.BatchableContextImpl|true|false
+17:39:23.0 (20268999)|VARIABLE_ASSIGNMENT|[31]|this|{}|0x574f9b16
+17:39:23.0 (20272696)|VARIABLE_SCOPE_BEGIN|[31]|jobId|Id|false|false
+17:39:23.0 (20362561)|VARIABLE_ASSIGNMENT|[31]|jobId|"707O000000qyajcIAA"
+17:39:23.0 (20367725)|VARIABLE_SCOPE_BEGIN|[31]|childJobId|Id|false|false
+17:39:23.0 (20391922)|VARIABLE_ASSIGNMENT|[31]|childJobId|"707O000000qycE4IAI"
+17:39:23.0 (32850938)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+17:39:24.815 (1815734918)|CUMULATIVE_LIMIT_USAGE
+17:39:24.815 (1815734918)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+17:39:24.815 (1815734918)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+17:39:24.815 (1815734918)|CUMULATIVE_LIMIT_USAGE_END
+
+17:39:24.815 (1815804586)|CODE_UNIT_FINISHED|Email_Reminder_Batch
+17:39:24.815 (1818045158)|EXECUTION_FINISHED
+17:39:24.874 (1874931505)|CUMULATIVE_PROFILING_BEGIN
+17:39:24.874 (1874931505)|CUMULATIVE_PROFILING|SOQL operations|
+Class.OpportunityHelper.getTheCurrentApprover: line 145, column 1: [SELECT Approval_Status__c,Approver__c,Current_Approver__c,Gate__c,Id,Gate__r.Gate_Type__c,Gate__r.Opportunity__c,Gate__r.Status__c
+                FROM Assigned_Approver__c 
+                WHERE Current_Approver__c = true
+                AND Gate__r.Opportunity__c IN : OppsToFindCurrentApproverFor
+                ORDER BY CreatedDate DESC]: executed 3 times in 39 ms
+Trigger.APXTConga4.ReassignWhatId2: line 46, column 1: [SELECT id, APXTConga4__WhatId__c FROM APXTConga4__Conga_Email_Staging__c WHERE Id = :taskWhatIds]: executed 3 times in 9 ms
+Class.Email_Alert_Class.getTemplateIDs: line 222, column 1: [SELECT DeveloperName,Id,Name FROM EmailTemplate WHERE DeveloperName IN : EmailTemplateDevNames AND IsActive = true]: executed 5 times in 8 ms
+Class.GateService.getGateAndApprovers: line 57, column 1: [SELECT ID,Status__c,Gate_Type__c,opportunity__c,opportunity__r.CRA_Gate_Status__c, opportunity__r.TSF_Gate_Status__c, opportunity__r.Gate_Status__c,opportunity__r.Prospect_Status__c,   
+                   (SELECT Approval_Level__c,Approval_Status__c,Approver__c,Current_Approver__c,Gate__c,Id,Wet_Signature_Received__c,Approver__r.Name,Approver_Role__c,Decision_Date__c,Approval_Comments__c,Approval_Conditions__c
+                    FROM Assigned_Approvers__r 
+                    ORDER BY Approval_Level__c ASC) 
+                FROM Gate__c 
+                WHERE ID IN: gateIds]: executed 2 times in 7 ms
+Class.Email_Alert_Class.setRandomContact: line 243, column 1: [Select ID, Email FROM Contact WHERE Email <> null LIMIT 1]: executed 1 time in 6 ms
+Class.OpportunityHelper.getOppTeamMembers: line 173, column 1: [SELECT Id,OpportunityAccessLevel,OpportunityId,TeamMemberRole,UserId FROM OpportunityTeamMember WHERE OpportunityId = :OppIds]: executed 9 times in 6 ms
+Class.Email_Alert_Class.getPreContractGroupMembers: line 230, column 1: [SELECT DeveloperName,Id FROM Group WHERE DeveloperName = 'Pre_Contracts_Group' LIMIT 1]: executed 1 time in 4 ms
+
+17:39:24.874 (1874931505)|CUMULATIVE_PROFILING|No profiling information for SOSL operations
+17:39:24.874 (1874931505)|CUMULATIVE_PROFILING|DML operations|
+Class.Assigned_Approver_Service.sendReminderEmails: line 127, column 1: Update: List<Assigned_Approver__c>: executed 1 time in 1135 ms
+Class.Debug_Log_Service.finishLogging: line 23, column 1: Insert: Debug_Log__c: executed 2 times in 50 ms
+
+17:39:24.874 (1874931505)|CUMULATIVE_PROFILING|method invocations|
+External entry point: global void execute(Database.BatchableContext, List<SObject>): executed 1 time in 1354 ms
+Class.Email_Reminder_Batch.execute: line 22, column 1: public static void sendReminderEmails(List<Assigned_Approver__c>): executed 1 time in 1153 ms
+Trigger.AssignedApproverTrigger: line 4, column 1: public Assigned_Approver_TriggerHandler(): executed 4 times in 989 ms
+External entry point: public void invoke(): executed 1 time in 980 ms
+Class.TriggerHandler.run: line 47, column 1: public void afterUpdate(): executed 1 time in 977 ms
+Class.Assigned_Approver_TriggerHandler.afterUpdate: line 30, column 1: public static void sendEmailToCurrentApprover(List<Assigned_Approver__c>, Map<Id,Assigned_Approver__c>): executed 1 time in 974 ms
+Class.Assigned_Approver_Service.sendEmailToCurrentApprover: line 70, column 1: public void sendEmails(): executed 1 time in 931 ms
+Class.Email_Alert_Class.sendEmails: line 188, column 1: global public static List<Messaging.SendEmailResult> sendEmail(List<Messaging.Email>): executed 1 time in 537 ms
+Class.Email_Alert_Class.sendEmails: line 204, column 1: global public static List<Messaging.SendEmailResult> sendEmail(List<Messaging.Email>): executed 1 time in 288 ms
+Class.OpportunityHelper.getTheCurrentApprover: line 136, column 1: public Set<Id>(Integer): executed 9 times in 39 ms
+Class.Approval_VF_Controller.getAssignedApprover: line 18, column 1: public Opportunity __sfdc_oppRecord(): executed 14 times in 39 ms
+
+17:39:24.874 (1874931505)|CUMULATIVE_PROFILING_END

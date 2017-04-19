@@ -1,0 +1,88 @@
+<aura:component controller="ApprovalController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName" access="global">
+    
+    <aura:attribute name="AssignedApprovalList" type="List" description="Assigned Approver Items"/>
+    <aura:attribute name="Opp" type="Opportunity" /> 
+    <aura:attribute name="recordId" type="Id" required="true" access="PUBLIC" default="" description="The current record Id to display" />
+    <aura:attribute name="newApprover" type="Assigned_Approver__c" />
+    <aura:attribute name="newRecordSaved" type="Boolean" default="false" />
+    <aura:attribute name="updatedItems" type="List" />
+    
+    <!-- variables that can be changed in the design -->    
+    <aura:attribute name="headerName" type="String" default="View Approvers"/>
+
+
+    <aura:attribute name="enableNewRecord" type="Boolean" default="true" description="Set if New record is enabled for this component"/>    
+        
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="change" value="{!v.newRecordSaved}" action="{!c.doInit}" />      
+    <!-- Events -->
+    <aura:handler event="c:AssignedApproversEvent" action="{!c.doInit}"/>
+
+	<div aria-hidden="false" role="dialog" class="slds-modal slds-fade-in-open slds-modal--large modalPositioning">
+	    <div class="slds-modal__container">
+	           
+	           
+	        <div class="slds-modal__header" >
+	            <button class="slds-button slds-modal__close slds-button--icon-inverse" 
+	                                      onclick="{!c.close}">
+	                <lightning:icon iconName="utility:close" size="medium" />
+	                <span class="slds-assistive-text">Close</span>
+	            </button>            
+
+		        	 <h2 class="slds-text-heading--medium">{!v.headerName}</h2>
+                     <ui:button aura:id="savebtn" label="Save" class="slds-button slds-button--neutral slds-button--brand slds-float--right" disabled="false" press="{!c.doSave}"/>
+	        </div>
+
+		    <div class="slds-card">
+		        
+		        <div class="slds-card__body slds-scrollable--x">            
+		                <table class="slds-table slds-wrap slds-table--bordered slds-no-row-hover slds-table--cell-buffer">
+		                    <thead>
+		                        <tr class="slds-text-heading--label">
+		                        	<th></th> <!-- Place holder for the Edit button in the body -->      
+		                            <th>Name</th>
+		                            <th>Proxy Approver</th>
+		                            <th>Approver Level</th>
+		                            <th>Status</th>
+		                            <th>Current Approver</th>
+			                            <th>Wet Signature Provided</th>
+			                            <th>Signature Date</th>
+		                            <th>Approval Comments</th>   
+		                                 
+		                        </tr>
+		                    </thead>
+		                    <tbody>     
+		                        <aura:iteration items="{!v.AssignedApprovalList}" var="AA" >  
+		                            <!-- to avoid "Cannot read property 'childNodes' of null " error while rerendering
+		                                must encapulate calling of component in div/ span
+		                                (not working properly in table)
+		                                Encapsulate using tr element instead
+		                            -->
+		                            <tr class="slds-hint-parent">
+		                               <c:ViewApproversItem AssignedApprover="{!AA}" AssignedApproverList="{!v.AssignedApprovalList}" Opp="{!v.Opp}"/>    
+		                            </tr>                      
+		                        </aura:iteration>
+		                    </tbody>
+		                </table>
+		        </div>     
+		        
+		        
+		        <div aura:id="body"> <!-- dynamic component -->
+			        </div>          
+			        <div class="slds-card__footer slds-grid">
+		            	<div class="slds-no-flex">
+		                    <button id="newButton" class="slds-button slds-button--neutral" onclick="{!c.createNewRecord}">Add Recommender</button>
+		                </div>
+		                <div class="slds-no-flex">
+		                    <button id="newButton" class="slds-button slds-button--neutral" onclick="{!c.close}">Close</button>
+		                </div>
+		        </div>   
+		    </div>  
+		 </div>
+
+	</div>  
+	<div class="slds-backdrop slds-backdrop--open" id="backGroundSection"></div>   
+   
+    
+    
+</aura:component>

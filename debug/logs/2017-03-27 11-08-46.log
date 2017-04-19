@@ -1,0 +1,340 @@
+39.0 APEX_CODE,FINEST;APEX_PROFILING,FINEST;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+11:08:43.0 (524388)|USER_INFO|[EXTERNAL]|00528000006B07F|dev@systempartners.com.prod.pcphase2|Australian Eastern Standard Time|GMT+11:00
+11:08:43.0 (563257)|EXECUTION_STARTED
+11:08:43.0 (567250)|CODE_UNIT_STARTED|[EXTERNAL]|aura
+11:08:43.0 (999375)|HEAP_ALLOCATE|[72]|Bytes:3
+11:08:43.0 (1036419)|HEAP_ALLOCATE|[77]|Bytes:152
+11:08:43.0 (1057256)|HEAP_ALLOCATE|[342]|Bytes:408
+11:08:43.0 (1079423)|HEAP_ALLOCATE|[355]|Bytes:408
+11:08:43.0 (1100024)|HEAP_ALLOCATE|[467]|Bytes:48
+11:08:43.0 (1132440)|HEAP_ALLOCATE|[139]|Bytes:6
+11:08:43.0 (1157909)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+11:08:43.0 (1172542)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+11:08:43.0 (2380794)|CODE_UNIT_STARTED|[EXTERNAL]|01pO00000003MVy|ApprovalController.getOpportunityRecord
+11:08:43.0 (2470711)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+11:08:43.0 (2475927)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+11:08:43.0 (2485884)|METHOD_ENTRY|[1]|01pO00000003MVy|ApprovalController.ApprovalController()
+11:08:43.0 (2490201)|STATEMENT_EXECUTE|[1]
+11:08:43.0 (2495927)|STATEMENT_EXECUTE|[1]
+11:08:43.0 (2501204)|METHOD_EXIT|[1]|ApprovalController
+11:08:43.0 (2504982)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+11:08:43.0 (2514302)|SYSTEM_MODE_ENTER|false
+11:08:43.0 (2522753)|VARIABLE_SCOPE_BEGIN|[15]|opportunityId|String|false|false
+11:08:43.0 (2546296)|VARIABLE_ASSIGNMENT|[15]|opportunityId|"006O0000008j3sIIAQ"
+11:08:43.0 (2553471)|STATEMENT_EXECUTE|[15]
+11:08:43.0 (2554993)|STATEMENT_EXECUTE|[18]
+11:08:43.0 (2558843)|HEAP_ALLOCATE|[18]|Bytes:589
+11:08:43.0 (2568035)|HEAP_ALLOCATE|[18]|Bytes:4
+11:08:43.0 (2578282)|HEAP_ALLOCATE|[18]|Bytes:7
+11:08:43.0 (2615947)|HEAP_ALLOCATE|[50]|Bytes:5
+11:08:43.0 (2636782)|HEAP_ALLOCATE|[56]|Bytes:5
+11:08:43.0 (2645904)|HEAP_ALLOCATE|[64]|Bytes:7
+11:08:43.0 (3368026)|SOQL_EXECUTE_BEGIN|[18]|Aggregations:0|SELECT Id, name, Gate_Status__c, TSF_Gate_Status__c, CRA_Gate_Status__c, StageName, Competitor_Analysis_General_Comments__c, Are_there_any_critical_risks__c, Has_CRA_changed_since_last_approval__c, Has_TSF_changed_since_last_approval__c, Apply_Default_Bonding__c, Conversion_Budget_Comments__c, Is_Gate_1_To_3__c, Is_Gate_4_To_5__c, Net_Budget_EOI_PQ__c, Net_Budget_Post_Tender__c, Net_Budget_Tender__c, Net_Budget_Amount__c, Total_Budget_EOI_PQ__c, Total_Budget_Tender__c, Total_Budget_AUD__c, Total_Budget_Post_Tender__c, JH_Bid_Cost_of_JH_Revenue__c FROM Opportunity WHERE Id = :tmpVar1
+11:08:43.0 (3379591)|LIMIT_USAGE|[18]|SOQL|1|100
+11:08:43.0 (3387912)|LIMIT_USAGE|[18]|AGGS|0|300
+11:08:43.0 (32623079)|SOQL_EXECUTE_END|[18]|Rows:1
+11:08:43.0 (32635192)|LIMIT_USAGE|[18]|SOQL_ROWS|1|50000
+11:08:43.0 (32658762)|HEAP_ALLOCATE|[18]|Bytes:8
+11:08:43.0 (32675725)|HEAP_ALLOCATE|[18]|Bytes:1141
+11:08:43.0 (32780361)|HEAP_ALLOCATE|[18]|Bytes:8
+11:08:43.0 (32802102)|VARIABLE_SCOPE_BEGIN|[18]|allOpps|List<Opportunity>|true|false
+11:08:43.0 (32863411)|VARIABLE_ASSIGNMENT|[18]|allOpps|[{"Id":"006O0000008j3sIIAQ","Name":"Mernda Rail Bypass","Gate_Status__c":"Approved","TSF_Gate_Status__c":"Rejected","CRA_Gate_Status__c":"Approved","StageName":"Gate 4","Competitor_Analysis_ (19 more) ...":"this is a test for J (83 more) ...","Are_there_any_critic (11 more) ...":"No","Has_CRA_changed_sinc (18 more) ...":"No","Has_TSF_changed_sinc (18 more) ...":"No","Apply_Default_Bondin (4 more) ...":true,"Conversion_Budget_Co (9 more) ...":"This is a test for J (12 more) ...","Is_Gate_1_To_3__c":false,"Is_Gate_4_To_5__c":true,"Net_Budget_EOI_PQ__c":1000001,"Net_Budget_Post_Tend (5 more) ...":9000009,"Net_Budget_Tender__c":5000008,"Net_Budget_Amount__c":15000018,"Total_Budget_EOI_PQ_ (2 more) ...":1000005,"Total_Budget_Tender_ (2 more) ...":5000013,"Total_Budget_AUD__c":15000036,"Total_Budget_Post_Te (7 more) ...":9000018,"JH_Bid_Cost_of_JH_Re (8 more) ...":23.8}]|0x1b7d5a68
+11:08:43.0 (32874138)|STATEMENT_EXECUTE|[38]
+11:08:43.0 (32888218)|SYSTEM_MODE_EXIT|false
+11:08:43.32 (32910768)|CUMULATIVE_LIMIT_USAGE
+11:08:43.32 (32910768)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+11:08:43.32 (32910768)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+11:08:43.32 (32910768)|STATIC_VARIABLE_LIST|
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  double:MAX_VALUE:0
+  Boolean:FALSE:0
+  long:serialVersionUID:0
+  double:MIN_VALUE:0
+  int:SIZE:0
+  double:NEGATIVE_INFINITY:0
+  int:MAX_VALUE:0
+  String:_sfdcSuppressedCodeLocations:0
+  char[]:digits:0
+  double:NaN:0
+  Boolean:TRUE:0
+  int:MIN_VALUE:0
+  char[]:DigitOnes:0
+  int:BYTES:0
+  int:MIN_EXPONENT:0
+  int[]:sizeTable:0
+  int:MAX_EXPONENT:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MIN_NORMAL:0
+  int:BYTES:0
+
+11:08:43.32 (32910768)|CUMULATIVE_LIMIT_USAGE_END
+
+11:08:43.0 (33039421)|CODE_UNIT_FINISHED|ApprovalController.getOpportunityRecord
+11:08:43.0 (52681225)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+11:08:43.0 (52701321)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+11:08:43.0 (54121028)|CODE_UNIT_STARTED|[EXTERNAL]|01pO00000003MVy|ApprovalController.getOpportunityRecord
+11:08:43.0 (54155754)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+11:08:43.0 (54166693)|SYSTEM_MODE_ENTER|false
+11:08:43.0 (54175045)|VARIABLE_SCOPE_BEGIN|[15]|opportunityId|String|false|false
+11:08:43.0 (54183264)|VARIABLE_ASSIGNMENT|[15]|opportunityId|"006O0000008j3sIIAQ"
+11:08:43.0 (54191924)|STATEMENT_EXECUTE|[15]
+11:08:43.0 (54193531)|STATEMENT_EXECUTE|[18]
+11:08:43.0 (54203513)|HEAP_ALLOCATE|[18]|Bytes:4
+11:08:43.0 (54758636)|SOQL_EXECUTE_BEGIN|[18]|Aggregations:0|SELECT Id, name, Gate_Status__c, TSF_Gate_Status__c, CRA_Gate_Status__c, StageName, Competitor_Analysis_General_Comments__c, Are_there_any_critical_risks__c, Has_CRA_changed_since_last_approval__c, Has_TSF_changed_since_last_approval__c, Apply_Default_Bonding__c, Conversion_Budget_Comments__c, Is_Gate_1_To_3__c, Is_Gate_4_To_5__c, Net_Budget_EOI_PQ__c, Net_Budget_Post_Tender__c, Net_Budget_Tender__c, Net_Budget_Amount__c, Total_Budget_EOI_PQ__c, Total_Budget_Tender__c, Total_Budget_AUD__c, Total_Budget_Post_Tender__c, JH_Bid_Cost_of_JH_Revenue__c FROM Opportunity WHERE Id = :tmpVar1
+11:08:43.0 (54768851)|LIMIT_USAGE|[18]|SOQL|2|100
+11:08:43.0 (54777647)|LIMIT_USAGE|[18]|AGGS|0|300
+11:08:43.0 (65544049)|SOQL_EXECUTE_END|[18]|Rows:1
+11:08:43.0 (65552407)|LIMIT_USAGE|[18]|SOQL_ROWS|2|50000
+11:08:43.0 (65566701)|HEAP_ALLOCATE|[18]|Bytes:8
+11:08:43.0 (65579969)|HEAP_ALLOCATE|[18]|Bytes:1141
+11:08:43.0 (65604725)|HEAP_ALLOCATE|[18]|Bytes:8
+11:08:43.0 (65616451)|VARIABLE_SCOPE_BEGIN|[18]|allOpps|List<Opportunity>|true|false
+11:08:43.0 (65664832)|VARIABLE_ASSIGNMENT|[18]|allOpps|[{"Id":"006O0000008j3sIIAQ","Name":"Mernda Rail Bypass","Gate_Status__c":"Approved","TSF_Gate_Status__c":"Rejected","CRA_Gate_Status__c":"Approved","StageName":"Gate 4","Competitor_Analysis_ (19 more) ...":"this is a test for J (83 more) ...","Are_there_any_critic (11 more) ...":"No","Has_CRA_changed_sinc (18 more) ...":"No","Has_TSF_changed_sinc (18 more) ...":"No","Apply_Default_Bondin (4 more) ...":true,"Conversion_Budget_Co (9 more) ...":"This is a test for J (12 more) ...","Is_Gate_1_To_3__c":false,"Is_Gate_4_To_5__c":true,"Net_Budget_EOI_PQ__c":1000001,"Net_Budget_Post_Tend (5 more) ...":9000009,"Net_Budget_Tender__c":5000008,"Net_Budget_Amount__c":15000018,"Total_Budget_EOI_PQ_ (2 more) ...":1000005,"Total_Budget_Tender_ (2 more) ...":5000013,"Total_Budget_AUD__c":15000036,"Total_Budget_Post_Te (7 more) ...":9000018,"JH_Bid_Cost_of_JH_Re (8 more) ...":23.8}]|0x146aa7be
+11:08:43.0 (65675735)|STATEMENT_EXECUTE|[38]
+11:08:43.0 (65686671)|SYSTEM_MODE_EXIT|false
+11:08:43.65 (65706293)|CUMULATIVE_LIMIT_USAGE
+11:08:43.65 (65706293)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+11:08:43.65 (65706293)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+11:08:43.65 (65706293)|STATIC_VARIABLE_LIST|
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  double:MAX_VALUE:0
+  Boolean:FALSE:0
+  long:serialVersionUID:0
+  double:MIN_VALUE:0
+  int:SIZE:0
+  double:NEGATIVE_INFINITY:0
+  int:MAX_VALUE:0
+  String:_sfdcSuppressedCodeLocations:0
+  char[]:digits:0
+  double:NaN:0
+  Boolean:TRUE:0
+  int:MIN_VALUE:0
+  char[]:DigitOnes:0
+  int:BYTES:0
+  int:MIN_EXPONENT:0
+  int[]:sizeTable:0
+  int:MAX_EXPONENT:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MIN_NORMAL:0
+  int:BYTES:0
+
+11:08:43.65 (65706293)|CUMULATIVE_LIMIT_USAGE_END
+
+11:08:43.0 (65811802)|CODE_UNIT_FINISHED|ApprovalController.getOpportunityRecord
+11:08:43.0 (90064103)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+11:08:43.0 (90089954)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+11:08:43.0 (91712590)|CODE_UNIT_STARTED|[EXTERNAL]|01pO00000003MVy|ApprovalController.getOpportunityRecord
+11:08:43.0 (91750110)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+11:08:43.0 (91763998)|SYSTEM_MODE_ENTER|false
+11:08:43.0 (91774845)|VARIABLE_SCOPE_BEGIN|[15]|opportunityId|String|false|false
+11:08:43.0 (91788924)|VARIABLE_ASSIGNMENT|[15]|opportunityId|"006O0000008j3sIIAQ"
+11:08:43.0 (91802692)|STATEMENT_EXECUTE|[15]
+11:08:43.0 (91804583)|STATEMENT_EXECUTE|[18]
+11:08:43.0 (91817456)|HEAP_ALLOCATE|[18]|Bytes:4
+11:08:43.0 (92338428)|SOQL_EXECUTE_BEGIN|[18]|Aggregations:0|SELECT Id, name, Gate_Status__c, TSF_Gate_Status__c, CRA_Gate_Status__c, StageName, Competitor_Analysis_General_Comments__c, Are_there_any_critical_risks__c, Has_CRA_changed_since_last_approval__c, Has_TSF_changed_since_last_approval__c, Apply_Default_Bonding__c, Conversion_Budget_Comments__c, Is_Gate_1_To_3__c, Is_Gate_4_To_5__c, Net_Budget_EOI_PQ__c, Net_Budget_Post_Tender__c, Net_Budget_Tender__c, Net_Budget_Amount__c, Total_Budget_EOI_PQ__c, Total_Budget_Tender__c, Total_Budget_AUD__c, Total_Budget_Post_Tender__c, JH_Bid_Cost_of_JH_Revenue__c FROM Opportunity WHERE Id = :tmpVar1
+11:08:43.0 (92350883)|LIMIT_USAGE|[18]|SOQL|3|100
+11:08:43.0 (92361721)|LIMIT_USAGE|[18]|AGGS|0|300
+11:08:43.0 (102003140)|SOQL_EXECUTE_END|[18]|Rows:1
+11:08:43.0 (102017106)|LIMIT_USAGE|[18]|SOQL_ROWS|3|50000
+11:08:43.0 (102036589)|HEAP_ALLOCATE|[18]|Bytes:8
+11:08:43.0 (102051720)|HEAP_ALLOCATE|[18]|Bytes:1141
+11:08:43.0 (102085263)|HEAP_ALLOCATE|[18]|Bytes:8
+11:08:43.0 (102104910)|VARIABLE_SCOPE_BEGIN|[18]|allOpps|List<Opportunity>|true|false
+11:08:43.0 (102165510)|VARIABLE_ASSIGNMENT|[18]|allOpps|[{"Id":"006O0000008j3sIIAQ","Name":"Mernda Rail Bypass","Gate_Status__c":"Approved","TSF_Gate_Status__c":"Rejected","CRA_Gate_Status__c":"Approved","StageName":"Gate 4","Competitor_Analysis_ (19 more) ...":"this is a test for J (83 more) ...","Are_there_any_critic (11 more) ...":"No","Has_CRA_changed_sinc (18 more) ...":"No","Has_TSF_changed_sinc (18 more) ...":"No","Apply_Default_Bondin (4 more) ...":true,"Conversion_Budget_Co (9 more) ...":"This is a test for J (12 more) ...","Is_Gate_1_To_3__c":false,"Is_Gate_4_To_5__c":true,"Net_Budget_EOI_PQ__c":1000001,"Net_Budget_Post_Tend (5 more) ...":9000009,"Net_Budget_Tender__c":5000008,"Net_Budget_Amount__c":15000018,"Total_Budget_EOI_PQ_ (2 more) ...":1000005,"Total_Budget_Tender_ (2 more) ...":5000013,"Total_Budget_AUD__c":15000036,"Total_Budget_Post_Te (7 more) ...":9000018,"JH_Bid_Cost_of_JH_Re (8 more) ...":23.8}]|0x6bc806ee
+11:08:43.0 (102174448)|STATEMENT_EXECUTE|[38]
+11:08:43.0 (102191124)|SYSTEM_MODE_EXIT|false
+11:08:43.102 (102212490)|CUMULATIVE_LIMIT_USAGE
+11:08:43.102 (102212490)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 3 out of 100
+  Number of query rows: 3 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+11:08:43.102 (102212490)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+11:08:43.102 (102212490)|STATIC_VARIABLE_LIST|
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  double:MAX_VALUE:0
+  Boolean:FALSE:0
+  long:serialVersionUID:0
+  double:MIN_VALUE:0
+  int:SIZE:0
+  double:NEGATIVE_INFINITY:0
+  int:MAX_VALUE:0
+  String:_sfdcSuppressedCodeLocations:0
+  char[]:digits:0
+  double:NaN:0
+  Boolean:TRUE:0
+  int:MIN_VALUE:0
+  char[]:DigitOnes:0
+  int:BYTES:0
+  int:MIN_EXPONENT:0
+  int[]:sizeTable:0
+  int:MAX_EXPONENT:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MIN_NORMAL:0
+  int:BYTES:0
+
+11:08:43.102 (102212490)|CUMULATIVE_LIMIT_USAGE_END
+
+11:08:43.0 (102338533)|CODE_UNIT_FINISHED|ApprovalController.getOpportunityRecord
+11:08:43.0 (128878135)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+11:08:43.0 (128903903)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+11:08:43.0 (130149439)|CODE_UNIT_STARTED|[EXTERNAL]|01pO0000000372v|KCRAController.getAllKCRARecords
+11:08:43.0 (130261138)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+11:08:43.0 (130269453)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:14
+11:08:43.0 (130283707)|METHOD_ENTRY|[11]|01pO0000000372v|KCRAController.KCRAController()
+11:08:43.0 (130287823)|STATEMENT_EXECUTE|[11]
+11:08:43.0 (130295160)|STATEMENT_EXECUTE|[11]
+11:08:43.0 (130303477)|METHOD_EXIT|[11]|KCRAController
+11:08:43.0 (130313360)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+11:08:43.0 (130324393)|SYSTEM_MODE_ENTER|false
+11:08:43.0 (130333546)|VARIABLE_SCOPE_BEGIN|[14]|opportunityId|String|false|false
+11:08:43.0 (130348298)|VARIABLE_ASSIGNMENT|[14]|opportunityId|"006O0000008j3sIIAQ"
+11:08:43.0 (130356708)|STATEMENT_EXECUTE|[14]
+11:08:43.0 (130358234)|STATEMENT_EXECUTE|[17]
+11:08:43.0 (130363379)|HEAP_ALLOCATE|[17]|Bytes:204
+11:08:43.0 (130379067)|HEAP_ALLOCATE|[17]|Bytes:4
+11:08:43.0 (130877693)|SOQL_EXECUTE_BEGIN|[17]|Aggregations:0|SELECT Id, name, recordtypeId, applicable__c, approved__c, itemno__c, KCRA_Item__c, Opportunity__c FROM Key_Commercial_Risks_Approvals__c WHERE Opportunity__c = :tmpVar1 ORDER BY itemno__c ASC NULLS FIRST
+11:08:43.0 (130888813)|LIMIT_USAGE|[17]|SOQL|4|100
+11:08:43.0 (130904272)|LIMIT_USAGE|[17]|AGGS|0|300
+11:08:43.0 (135266236)|SOQL_EXECUTE_END|[17]|Rows:1
+11:08:43.0 (135273731)|LIMIT_USAGE|[17]|SOQL_ROWS|4|50000
+11:08:43.0 (135289376)|HEAP_ALLOCATE|[17]|Bytes:8
+11:08:43.0 (135315769)|HEAP_ALLOCATE|[17]|Bytes:248
+11:08:43.0 (135354430)|HEAP_ALLOCATE|[17]|Bytes:8
+11:08:43.0 (135364084)|VARIABLE_SCOPE_BEGIN|[17]|allKCRAs|List<Key_Commercial_Risks_Approvals__c>|true|false
+11:08:43.0 (135397305)|VARIABLE_ASSIGNMENT|[17]|allKCRAs|[{"Id":"a0gO000001LxM3ZIAV","Name":"KCRA-00000004","Applicable__c":"Yes","Approved__c":false,"ItemNo__c":2,"KCRA_Item__c":"Operate in a country (38 more) ...","Opportunity__c":"006O0000008j3sIIAQ"}]|0x199f9d1b
+11:08:43.0 (135401709)|STATEMENT_EXECUTE|[27]
+11:08:43.0 (135412795)|SYSTEM_MODE_EXIT|false
+11:08:43.135 (135431743)|CUMULATIVE_LIMIT_USAGE
+11:08:43.135 (135431743)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 4 out of 100
+  Number of query rows: 4 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+11:08:43.135 (135431743)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+11:08:43.135 (135431743)|STATIC_VARIABLE_LIST|
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  double:MAX_VALUE:0
+  Boolean:FALSE:0
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MIN_VALUE:0
+  int:SIZE:0
+  double:NEGATIVE_INFINITY:0
+  int:MAX_VALUE:0
+  String:_sfdcSuppressedCodeLocations:0
+  char[]:digits:0
+  double:NaN:0
+  Boolean:TRUE:0
+  int:MIN_VALUE:0
+  char[]:DigitOnes:0
+  int:BYTES:0
+  int:MIN_EXPONENT:0
+  int[]:sizeTable:0
+  int:MAX_EXPONENT:0
+  String:_sfdcSuppressedCodeLocations:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MIN_NORMAL:0
+  int:BYTES:0
+
+11:08:43.135 (135431743)|CUMULATIVE_LIMIT_USAGE_END
+
+11:08:43.0 (135545299)|CODE_UNIT_FINISHED|KCRAController.getAllKCRARecords
+11:08:43.674 (674567405)|CUMULATIVE_PROFILING_BEGIN
+11:08:43.674 (674567405)|CUMULATIVE_PROFILING|SOQL operations|
+Class.ApprovalController.getOpportunityRecord: line 18, column 1: [SELECT   Id,name,
+                                                           			Gate_Status__c,
+                                                           			TSF_Gate_Status__c,
+                                                           			CRA_Gate_Status__c,
+                                                           			StageName,
+                                    								Competitor_Analysis_General_Comments__c,
+                                    								Are_there_any_critical_risks__c,
+                                    								Has_CRA_changed_since_last_approval__c,
+                                    								Has_TSF_changed_since_last_approval__c,
+                                    								Apply_Default_Bonding__c,
+                                    								Conversion_Budget_Comments__c,
+                                    								Is_Gate_1_To_3__c, Is_Gate_4_To_5__c,
+                                    								Net_Budget_EOI_PQ__c, Net_Budget_Post_Tender__c, 
+                                    								Net_Budget_Tender__c, Net_Budget_Amount__c,
+                                    								Total_Budget_EOI_PQ__c, Total_Budget_Tender__c, 
+                                    								Total_Budget_AUD__c, Total_Budget_Post_Tender__c, 
+                                    								JH_Bid_Cost_of_JH_Revenue__c
+                                 							FROM     Opportunity
+                                 							WHERE    Id = :opportunityId]: executed 3 times in 52 ms
+Class.KCRAController.getAllKCRARecords: line 17, column 1: [SELECT   Id,name,
+                                                           			recordtypeId,
+                                                           			applicable__c,
+                                                           			approved__c,
+                                                           			itemno__c,
+                                                           			KCRA_Item__c,Opportunity__c 
+                                 							FROM     Key_Commercial_Risks_Approvals__c 
+                                 							WHERE    Opportunity__c = :opportunityId
+                                                           	ORDER BY itemno__c]: executed 1 time in 4 ms
+
+11:08:43.674 (674567405)|CUMULATIVE_PROFILING|No profiling information for SOSL operations
+11:08:43.674 (674567405)|CUMULATIVE_PROFILING|No profiling information for DML operations
+11:08:43.674 (674567405)|CUMULATIVE_PROFILING|method invocations|
+External entry point: public static List<Opportunity> getOpportunityRecord(String): executed 1 time in 10 ms
+External entry point: public static List<Key_Commercial_Risks_Approvals__c> getAllKCRARecords(String): executed 1 time in 5 ms
+
+11:08:43.674 (674567405)|CUMULATIVE_PROFILING_END

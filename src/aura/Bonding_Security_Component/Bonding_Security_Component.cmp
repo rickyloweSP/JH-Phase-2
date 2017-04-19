@@ -1,0 +1,50 @@
+<aura:component controller="ApprovalController"  implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName" access="global">
+
+<aura:attribute name="Opp" type="Opportunity" />
+<aura:attribute name="check" type="boolean" default="{!v.Opp.Apply_Default_Bonding__c}" />
+<aura:attribute name="OppToUpdate" type="Opportunity" default="{'sobjectType': 'Opportunity'}"/>
+
+<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <div class="slds-page-header" style="border: 1px solid rgb(216, 221, 230);border-radius: .25rem;">
+        <div class="slds-grid">
+            <div class="slds-col slds-has-flexi-truncate">      
+                <h1 class="slds-page-header__title slds-truncate" title="Default_Bonding_Security">Default Bonding/Security</h1>
+            </div>
+            <div class="slds-col slds-no-flex slds-grid slds-align-top">
+                <div class="slds-button-group">
+                    <ui:button label="Apply changes to default bonding" press="{!c.updateOpp}"/>        
+                </div>
+            </div>
+        </div>
+        <div class="slds-grid"> 
+            <div class="uiInput uiInputCheckbox uiInput--default uiInput--checkbox">
+                <div class="slds-form-element">
+                    <div class="slds-form-element__icon slds-align-middle" onmouseover="{!c.display}" onmouseout="{!c.displayOut}">
+                        <button class="slds-button slds-button slds-button--icon" aria-describedby="help" title="Help" >
+                            <lightning:icon iconName="utility:info" size="xx-small" alternativeText="Help"/>
+                            <span class="slds-assistive-text">Help</span>
+                        </button>
+                    </div>
+
+                   <ui:inputCheckbox aura:id="checkBox" label="Apply Default Bonding and sync bond/contract award dates?" value="{!v.check}" />
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="slds-popover slds-popover--tooltip slds-nubbin--bottom-left toggle" role="tooltip" id="help" style="position:absolute;top:-4px;left:20px;" aura:id="tooltip">
+        <div class="slds-popover__body">When this checkbox is applied the default Performance (5%) and Defects Liability (2.5%) bonds are automatically created and synchronised with the Contract Award Date (i.e. when Contract Award Date is changed these 2 bond dates will be updated to reflect the change). If the checkbox is unchecked then date synchronising is deactivated but the Performance and Defects Liability bond records will remain. 
+
+        Please note that re-applying the checkbox will re-create the 2 records again, and will require you to delete the duplicates.
+
+        Ensure that you click the “Apply” button on the right hand side.</div>
+    </div> 
+
+   
+
+	
+</aura:component>

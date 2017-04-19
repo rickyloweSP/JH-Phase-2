@@ -4,7 +4,7 @@
             "annotations": [],
             "location": {
                 "column": 12,
-                "line": 20
+                "line": 24
             },
             "modifiers": [
                 "public"
@@ -25,7 +25,23 @@
             "annotations": [],
             "location": {
                 "column": 26,
-                "line": 24
+                "line": 27
+            },
+            "modifiers": [
+                "public",
+                "override"
+            ],
+            "name": "beforeInsert",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 32
             },
             "modifiers": [
                 "public",
@@ -41,7 +57,7 @@
             "annotations": [],
             "location": {
                 "column": 26,
-                "line": 30
+                "line": 40
             },
             "modifiers": [
                 "public",
@@ -57,7 +73,7 @@
             "annotations": [],
             "location": {
                 "column": 26,
-                "line": 34
+                "line": 48
             },
             "modifiers": [
                 "public",
@@ -73,7 +89,7 @@
             "annotations": [],
             "location": {
                 "column": 18,
-                "line": 43
+                "line": 117
             },
             "modifiers": [
                 "private"
@@ -88,7 +104,7 @@
             "annotations": [],
             "location": {
                 "column": 18,
-                "line": 67
+                "line": 141
             },
             "modifiers": [
                 "private"
@@ -98,12 +114,237 @@
             "references": [],
             "returnType": "void",
             "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 179
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "onBeforeInsertMethods",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 191
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "onAfterInsertMethods",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 202
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "BDM_PDM_Opp_Team_Manager",
+            "parameters": [
+                {
+                    "name": "opp",
+                    "type": "Opportunity"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 234
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "BDM_PDM_Owner_Manager",
+            "parameters": [
+                {
+                    "name": "opp",
+                    "type": "Opportunity"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 251
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "manageSharingForOppTeamMembers",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 290
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "onBeforeUpdateMethods",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 304
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "validationRuleOnStageChange",
+            "parameters": [
+                {
+                    "name": "opp",
+                    "type": "Opportunity"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 322
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "determineGate",
+            "parameters": [
+                {
+                    "name": "opp",
+                    "type": "Opportunity"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 417
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "ResetPreviousGateValues",
+            "parameters": [
+                {
+                    "name": "opp",
+                    "type": "Opportunity"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 441
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "ApprovalProcessOrchestrator",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 62
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "sendEmails",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 261
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "determineGateOneOrThree",
+            "parameters": [
+                {
+                    "name": "opp",
+                    "type": "Opportunity"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
         }
     ],
-    "name": "opportunityTriggerHandler",
+    "name": "OpportunityTriggerHandler",
     "namespace": null,
     "parentClass": "TriggerHandler",
     "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 40,
+                "line": 22
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "OppTeamMembers",
+            "references": [],
+            "type": "LIST"
+        },
         {
             "annotations": [],
             "location": {
@@ -177,6 +418,48 @@
             "name": "PRARecordTypeID",
             "references": [],
             "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 19
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "recursionBefore",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 20
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "recursionAfter",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 21
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "isTest",
+            "references": [],
+            "type": "Boolean"
         }
     ],
     "tableDeclaration": {
@@ -188,16 +471,16 @@
         "modifiers": [
             "public"
         ],
-        "name": "opportunityTriggerHandler",
+        "name": "OpportunityTriggerHandler",
         "references": [],
-        "type": "opportunityTriggerHandler"
+        "type": "OpportunityTriggerHandler"
     },
     "variables": [
         {
             "annotations": [],
             "location": {
                 "column": 49,
-                "line": 44
+                "line": 118
             },
             "modifiers": [],
             "name": "KCRAItemsToCreate",
@@ -208,7 +491,7 @@
             "annotations": [],
             "location": {
                 "column": 49,
-                "line": 45
+                "line": 119
             },
             "modifiers": [],
             "name": "KCRATemplateItems",
@@ -219,7 +502,7 @@
             "annotations": [],
             "location": {
                 "column": 26,
-                "line": 48
+                "line": 122
             },
             "modifiers": [],
             "name": "opp",
@@ -230,7 +513,7 @@
             "annotations": [],
             "location": {
                 "column": 52,
-                "line": 49
+                "line": 123
             },
             "modifiers": [],
             "name": "KCRATemplateItem",
@@ -241,7 +524,7 @@
             "annotations": [],
             "location": {
                 "column": 52,
-                "line": 50
+                "line": 124
             },
             "modifiers": [],
             "name": "newKCRA",
@@ -252,7 +535,7 @@
             "annotations": [],
             "location": {
                 "column": 42,
-                "line": 68
+                "line": 142
             },
             "modifiers": [],
             "name": "PRAItemsToCreate",
@@ -263,7 +546,7 @@
             "annotations": [],
             "location": {
                 "column": 42,
-                "line": 69
+                "line": 143
             },
             "modifiers": [],
             "name": "PRATemplateItems",
@@ -274,7 +557,7 @@
             "annotations": [],
             "location": {
                 "column": 26,
-                "line": 75
+                "line": 149
             },
             "modifiers": [],
             "name": "opp",
@@ -285,7 +568,7 @@
             "annotations": [],
             "location": {
                 "column": 45,
-                "line": 76
+                "line": 150
             },
             "modifiers": [],
             "name": "PRATemplateItem",
@@ -296,12 +579,342 @@
             "annotations": [],
             "location": {
                 "column": 45,
-                "line": 77
+                "line": 151
             },
             "modifiers": [],
             "name": "newPRA",
             "references": [],
             "type": "Project_Risk_Assessment__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 180
+            },
+            "modifiers": [],
+            "name": "opp",
+            "references": [],
+            "type": "Opportunity"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 192
+            },
+            "modifiers": [],
+            "name": "opp",
+            "references": [],
+            "type": "Opportunity"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 55,
+                "line": 202
+            },
+            "modifiers": [],
+            "name": "opp",
+            "references": [],
+            "type": "Opportunity"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 203
+            },
+            "modifiers": [],
+            "name": "BDMChange",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 204
+            },
+            "modifiers": [],
+            "name": "PDMChange",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 211
+            },
+            "modifiers": [],
+            "name": "oldOpp",
+            "references": [],
+            "type": "Opportunity"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 35,
+                "line": 221
+            },
+            "modifiers": [],
+            "name": "PDM",
+            "references": [],
+            "type": "OpportunityTeamMember"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 35,
+                "line": 225
+            },
+            "modifiers": [],
+            "name": "BDM",
+            "references": [],
+            "type": "OpportunityTeamMember"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 52,
+                "line": 234
+            },
+            "modifiers": [],
+            "name": "opp",
+            "references": [],
+            "type": "Opportunity"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 291
+            },
+            "modifiers": [],
+            "name": "opp",
+            "references": [],
+            "type": "Opportunity"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 58,
+                "line": 304
+            },
+            "modifiers": [],
+            "name": "opp",
+            "references": [],
+            "type": "Opportunity"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 305
+            },
+            "modifiers": [],
+            "name": "oldOpp",
+            "references": [],
+            "type": "Opportunity"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 44,
+                "line": 322
+            },
+            "modifiers": [],
+            "name": "opp",
+            "references": [],
+            "type": "Opportunity"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 323
+            },
+            "modifiers": [],
+            "name": "oldOpp",
+            "references": [],
+            "type": "Opportunity"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 54,
+                "line": 417
+            },
+            "modifiers": [],
+            "name": "opp",
+            "references": [],
+            "type": "Opportunity"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 418
+            },
+            "modifiers": [],
+            "name": "oldOpp",
+            "references": [],
+            "type": "Opportunity"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 442
+            },
+            "modifiers": [],
+            "name": "gatesToUpsert",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 443
+            },
+            "modifiers": [],
+            "name": "OppsToStartApprovalProcess",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 445
+            },
+            "modifiers": [],
+            "name": "opp",
+            "references": [],
+            "type": "Opportunity"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 446
+            },
+            "modifiers": [],
+            "name": "oldOpp",
+            "references": [],
+            "type": "Opportunity"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 448
+            },
+            "modifiers": [],
+            "name": "gateNumber",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 489
+            },
+            "modifiers": [],
+            "name": "Opp",
+            "references": [],
+            "type": "Opportunity"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 491
+            },
+            "modifiers": [],
+            "name": "gates",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 33,
+                "line": 495
+            },
+            "modifiers": [],
+            "name": "gate",
+            "references": [],
+            "type": "Gate__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 505
+            },
+            "modifiers": [],
+            "name": "gate",
+            "references": [],
+            "type": "Gate__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 515
+            },
+            "modifiers": [],
+            "name": "gate",
+            "references": [],
+            "type": "Gate__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 63
+            },
+            "modifiers": [],
+            "name": "EA",
+            "references": [],
+            "type": "Email_Alert_Class"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 65
+            },
+            "modifiers": [],
+            "name": "Opp",
+            "references": [],
+            "type": "Opportunity"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 66
+            },
+            "modifiers": [],
+            "name": "oldOpp",
+            "references": [],
+            "type": "Opportunity"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 61,
+                "line": 261
+            },
+            "modifiers": [],
+            "name": "opp",
+            "references": [],
+            "type": "Opportunity"
         }
     ]
 }

@@ -1,0 +1,192 @@
+39.0 APEX_CODE,FINEST;APEX_PROFILING,FINEST;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+11:49:27.0 (614909)|USER_INFO|[EXTERNAL]|00528000006B07F|dev@systempartners.com.prod.pcphase2|Australian Eastern Standard Time|GMT+11:00
+11:49:27.0 (646747)|EXECUTION_STARTED
+11:49:27.0 (652182)|CODE_UNIT_STARTED|[EXTERNAL]|aura
+11:49:27.0 (1148936)|HEAP_ALLOCATE|[72]|Bytes:3
+11:49:27.0 (1247157)|HEAP_ALLOCATE|[77]|Bytes:152
+11:49:27.0 (1270089)|HEAP_ALLOCATE|[342]|Bytes:408
+11:49:27.0 (1292435)|HEAP_ALLOCATE|[355]|Bytes:408
+11:49:27.0 (1312195)|HEAP_ALLOCATE|[467]|Bytes:48
+11:49:27.0 (1373096)|HEAP_ALLOCATE|[139]|Bytes:6
+11:49:27.0 (1400575)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+11:49:27.0 (1437493)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+11:49:27.0 (3040780)|CODE_UNIT_STARTED|[EXTERNAL]|01pO0000000372v|KCRAController.getAllKCRARecords
+11:49:27.0 (3171339)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+11:49:27.0 (3177956)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:14
+11:49:27.0 (3203563)|METHOD_ENTRY|[11]|01pO0000000372v|KCRAController.KCRAController()
+11:49:27.0 (3208138)|STATEMENT_EXECUTE|[11]
+11:49:27.0 (3214838)|STATEMENT_EXECUTE|[11]
+11:49:27.0 (3237200)|METHOD_EXIT|[11]|KCRAController
+11:49:27.0 (3242845)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+11:49:27.0 (3255956)|SYSTEM_MODE_ENTER|false
+11:49:27.0 (3408862)|VARIABLE_SCOPE_BEGIN|[14]|opportunityId|String|false|false
+11:49:27.0 (3507619)|VARIABLE_ASSIGNMENT|[14]|opportunityId|"006O0000008kRsJIAU"
+11:49:27.0 (3517802)|STATEMENT_EXECUTE|[14]
+11:49:27.0 (3519357)|STATEMENT_EXECUTE|[17]
+11:49:27.0 (3523930)|HEAP_ALLOCATE|[17]|Bytes:204
+11:49:27.0 (3538387)|HEAP_ALLOCATE|[17]|Bytes:4
+11:49:27.0 (3565460)|HEAP_ALLOCATE|[17]|Bytes:7
+11:49:27.0 (3626671)|HEAP_ALLOCATE|[50]|Bytes:5
+11:49:27.0 (3655245)|HEAP_ALLOCATE|[56]|Bytes:5
+11:49:27.0 (3664504)|HEAP_ALLOCATE|[64]|Bytes:7
+11:49:27.0 (4113447)|SOQL_EXECUTE_BEGIN|[17]|Aggregations:0|SELECT Id, name, recordtypeId, applicable__c, approved__c, itemno__c, KCRA_Item__c, Opportunity__c FROM Key_Commercial_Risks_Approvals__c WHERE Opportunity__c = :tmpVar1 ORDER BY itemno__c ASC NULLS FIRST
+11:49:27.0 (4126610)|LIMIT_USAGE|[17]|SOQL|1|100
+11:49:27.0 (4138294)|LIMIT_USAGE|[17]|AGGS|0|300
+11:49:27.0 (11473598)|SOQL_EXECUTE_END|[17]|Rows:12
+11:49:27.0 (11485631)|LIMIT_USAGE|[17]|SOQL_ROWS|12|50000
+11:49:27.0 (11504578)|HEAP_ALLOCATE|[17]|Bytes:52
+11:49:27.0 (11578456)|HEAP_ALLOCATE|[17]|Bytes:3578
+11:49:27.0 (11708483)|HEAP_ALLOCATE|[17]|Bytes:52
+11:49:27.0 (11731772)|VARIABLE_SCOPE_BEGIN|[17]|allKCRAs|List<Key_Commercial_Risks_Approvals__c>|true|false
+11:49:27.0 (11760518)|VARIABLE_ASSIGNMENT|[17]|allKCRAs|"List of size 12 too large to display"|0x3198630
+11:49:27.0 (11765111)|STATEMENT_EXECUTE|[27]
+11:49:27.0 (11777544)|SYSTEM_MODE_EXIT|false
+11:49:27.11 (11798291)|CUMULATIVE_LIMIT_USAGE
+11:49:27.11 (11798291)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 12 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+11:49:27.11 (11798291)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+11:49:27.11 (11798291)|STATIC_VARIABLE_LIST|
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  double:MAX_VALUE:0
+  Boolean:FALSE:0
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MIN_VALUE:0
+  int:SIZE:0
+  double:NEGATIVE_INFINITY:0
+  int:MAX_VALUE:0
+  char[]:digits:0
+  double:NaN:0
+  Boolean:TRUE:0
+  int:MIN_VALUE:0
+  char[]:DigitOnes:0
+  int:BYTES:0
+  int:MIN_EXPONENT:0
+  int[]:sizeTable:0
+  int:MAX_EXPONENT:0
+  String:_sfdcSuppressedCodeLocations:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  double:MIN_NORMAL:0
+  int:BYTES:0
+
+11:49:27.11 (11798291)|CUMULATIVE_LIMIT_USAGE_END
+
+11:49:27.0 (11972714)|CODE_UNIT_FINISHED|KCRAController.getAllKCRARecords
+11:49:27.0 (12344099)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+11:49:27.0 (12362420)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+11:49:27.0 (14505075)|CODE_UNIT_STARTED|[EXTERNAL]|01pO00000003Dck|PRAController.getAllPRARecords
+11:49:27.0 (14555564)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+11:49:27.0 (14563156)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:2
+11:49:27.0 (14575771)|METHOD_ENTRY|[1]|01pO00000003Dck|PRAController.PRAController()
+11:49:27.0 (14578690)|STATEMENT_EXECUTE|[1]
+11:49:27.0 (14583165)|STATEMENT_EXECUTE|[1]
+11:49:27.0 (14591021)|METHOD_EXIT|[1]|PRAController
+11:49:27.0 (14595333)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+11:49:27.0 (14610354)|SYSTEM_MODE_ENTER|false
+11:49:27.0 (14616888)|VARIABLE_SCOPE_BEGIN|[15]|opportunityId|String|false|false
+11:49:27.0 (14625979)|VARIABLE_ASSIGNMENT|[15]|opportunityId|"006O0000008kRsJIAU"
+11:49:27.0 (14634598)|STATEMENT_EXECUTE|[15]
+11:49:27.0 (14636054)|STATEMENT_EXECUTE|[18]
+11:49:27.0 (14640498)|HEAP_ALLOCATE|[18]|Bytes:508
+11:49:27.0 (14653203)|HEAP_ALLOCATE|[18]|Bytes:4
+11:49:27.0 (16059104)|SOQL_EXECUTE_BEGIN|[18]|Aggregations:0|SELECT Id, name, Category__c, Is_Critical_Risk__c, ItemNo__c, Mitigation_Strategy__c, Rating__c, Risk_Item__c, description__c, Help_Text_0A__c, Help_Text_0B__c, Help_Text_0C__c, Help_Text_1A__c, Help_Text_1B__c, Help_Text_1C__c, Help_Text_2A__c, Help_Text_2B__c, Help_Text_2C__c, Help_Text_3A__c, Help_Text_3B__c, Help_Text_3C__c, Mitigation_Advice__c, Selected_Indicators__c, Selected_Indicators_With_Text__c FROM Project_Risk_Assessment__c WHERE Opportunity__c = :tmpVar1 ORDER BY ItemNo__c ASC NULLS FIRST
+11:49:27.0 (16077858)|LIMIT_USAGE|[18]|SOQL|2|100
+11:49:27.0 (16092834)|LIMIT_USAGE|[18]|AGGS|0|300
+11:49:27.0 (44009515)|SOQL_EXECUTE_END|[18]|Rows:25
+11:49:27.0 (44028111)|LIMIT_USAGE|[18]|SOQL_ROWS|37|50000
+11:49:27.0 (44064634)|HEAP_ALLOCATE|[18]|Bytes:104
+11:49:27.0 (44136273)|HEAP_ALLOCATE|[18]|Bytes:10109
+11:49:27.0 (44242023)|HEAP_ALLOCATE|[18]|Bytes:104
+11:49:27.0 (44269270)|VARIABLE_SCOPE_BEGIN|[18]|allPRAs|List<Project_Risk_Assessment__c>|true|false
+11:49:27.0 (44301033)|VARIABLE_ASSIGNMENT|[18]|allPRAs|"List of size 25 too large to display"|0x7d04702f
+11:49:27.0 (44307038)|STATEMENT_EXECUTE|[26]
+11:49:27.0 (44330137)|SYSTEM_MODE_EXIT|false
+11:49:27.44 (44354865)|CUMULATIVE_LIMIT_USAGE
+11:49:27.44 (44354865)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 37 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+11:49:27.44 (44354865)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+11:49:27.44 (44354865)|STATIC_VARIABLE_LIST|
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  double:MAX_VALUE:0
+  Boolean:FALSE:0
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MIN_VALUE:0
+  int:SIZE:0
+  double:NEGATIVE_INFINITY:0
+  int:MAX_VALUE:0
+  char[]:digits:0
+  double:NaN:0
+  Boolean:TRUE:0
+  int:MIN_VALUE:0
+  String:_sfdcSuppressedCodeLocations:0
+  char[]:DigitOnes:0
+  int:BYTES:0
+  int:MIN_EXPONENT:0
+  int[]:sizeTable:0
+  int:MAX_EXPONENT:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  double:MIN_NORMAL:0
+  int:BYTES:0
+
+11:49:27.44 (44354865)|CUMULATIVE_LIMIT_USAGE_END
+
+11:49:27.0 (44490200)|CODE_UNIT_FINISHED|PRAController.getAllPRARecords
+11:49:27.105 (105431041)|CUMULATIVE_PROFILING_BEGIN
+11:49:27.105 (105431041)|CUMULATIVE_PROFILING|SOQL operations|
+Class.PRAController.getAllPRARecords: line 18, column 1: [SELECT Id,name,Category__c,Is_Critical_Risk__c,ItemNo__c,Mitigation_Strategy__c,Rating__c,Risk_Item__c,
+                                                             		description__c,Help_Text_0A__c,Help_Text_0B__c,Help_Text_0C__c,Help_Text_1A__c,Help_Text_1B__c, 
+                                                             		Help_Text_1C__c,Help_Text_2A__c,Help_Text_2B__c,Help_Text_2C__c,Help_Text_3A__c,Help_Text_3B__c,
+                                                             		Help_Text_3C__c,Mitigation_Advice__c,Selected_Indicators__c,Selected_Indicators_With_Text__c
+												   FROM Project_Risk_Assessment__c
+                                                   WHERE Opportunity__c = :opportunityId
+                                                   ORDER BY ItemNo__c]: executed 1 time in 29 ms
+Class.KCRAController.getAllKCRARecords: line 17, column 1: [SELECT   Id,name,
+                                                           			recordtypeId,
+                                                           			applicable__c,
+                                                           			approved__c,
+                                                           			itemno__c,
+                                                           			KCRA_Item__c,Opportunity__c 
+                                 							FROM     Key_Commercial_Risks_Approvals__c 
+                                 							WHERE    Opportunity__c = :opportunityId
+                                                           	ORDER BY itemno__c]: executed 1 time in 8 ms
+
+11:49:27.105 (105431041)|CUMULATIVE_PROFILING|No profiling information for SOSL operations
+11:49:27.105 (105431041)|CUMULATIVE_PROFILING|No profiling information for DML operations
+11:49:27.105 (105431041)|CUMULATIVE_PROFILING|method invocations|
+External entry point: public static List<Project_Risk_Assessment__c> getAllPRARecords(String): executed 1 time in 29 ms
+External entry point: public static List<Key_Commercial_Risks_Approvals__c> getAllKCRARecords(String): executed 1 time in 9 ms
+
+11:49:27.105 (105431041)|CUMULATIVE_PROFILING_END

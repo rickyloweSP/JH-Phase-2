@@ -73,7 +73,7 @@
        var viewToggle = component.find('viewToggle');
        //console.log(viewToggle);
        //console.log(viewToggle.length);        
-       
+       var i=0;
        for (i = 0; i < viewToggle.length; i++) {  // toggle for each element contain "viewToggle"
           $A.util.toggleClass(viewToggle[i], "toggle");  
        }       

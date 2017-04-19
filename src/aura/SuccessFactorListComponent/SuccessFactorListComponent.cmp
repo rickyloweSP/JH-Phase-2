@@ -1,0 +1,84 @@
+<aura:component controller="SuccessFactorController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName" access="global">
+    
+    <aura:attribute name="SuccessFactorList" type="List" description="SuccessFactor Items"/>
+    <aura:attribute name="updatedSuccessFactorItems" type="List" />
+    <aura:attribute name="currentNumRecordDisplay" type="Integer" default="2" description="Variable to set the number of records viewable based on View All/ Less button"/>    
+    <aura:attribute name="maxNumRecordDisplay" type="Integer" default="2" description="Variable to set the MAX number of records viewable (all files based on the query retrieved via init)"/>        
+    <aura:attribute name="recordId" type="Id" required="true" access="PUBLIC" default="" description="The current record Id to display" />
+    <aura:attribute name="newSuccessFactor" type="Success_Factor__c" />
+    <aura:attribute name="newRecordSaved" type="Boolean" default="false" />
+    
+    <!-- variables that can be changed in the design -->    
+    <aura:attribute name="headerName" type="String" default="Success Factors"/>
+    <aura:attribute name="filterStatus" type="String" default="Open"/>    
+    <aura:attribute name="defaultNumRecordDisplay" type="Integer" default="2" description="Default the number of record viewable in compact view (View Less)"/>    
+    <aura:attribute name="enableNewRecord" type="Boolean" default="false" description="Set if New record is enabled for this component"/>    
+    
+
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <!--<aura:handler name="change" value="{!v.newRecordSaved}" action="{!c.doInit}" />   -->   
+    <!-- Events -->
+    <!--<aura:handler event="c:KCRAEvent" action="{!c.doInit}"/>-->
+
+ 
+    <div class="slds-card">
+        <div class="slds-card__header slds-grid">
+            <div class="slds-media slds-media--center slds-has-flexi-truncate">
+                <!-- placeholder for icon if required -->
+                <div class="slds-media__body  slds-truncate">
+                    <span class="slds-text-heading--small slds-truncate">{!v.headerName}
+                     <ui:button aura:id="savebtn" label="Save" class="slds-button slds-button--neutral slds-button--brand slds-float--right" disabled="false" press="{!c.doSave}"/>
+                    </span>
+                </div>
+            </div>
+            <aura:if isTrue="{!v.enableNewRecord}">
+                <div class="slds-no-flex">
+                    <button id="newButton" class="slds-button slds-button--neutral slds-col--bump-left" onclick="{!c.newRecord}">New</button>
+                </div>
+            </aura:if>   
+        </div>
+
+        <div class="slds-card__body slds-scrollable--x">            
+                <table class="slds-table slds-wrap slds-table--bordered slds-no-row-hover slds-table--cell-buffer">
+                    <thead>
+                       <tr>
+                           <th scope="col"><span class="slds-truncate">Item #</span></th>
+                           <th scope="col"><span class="slds-truncate">Success Factor Item</span></th>
+                           <th scope="col"><span class="slds-truncate">Category</span></th>
+                           <th scope="col"><span class="slds-truncate">Score</span></th>
+                           <th scope="col"><span class="slds-truncate">Comments</span></th>
+                           <th scope="col"><span class="slds-truncate">Scoring Help</span></th>
+                     
+                
+                       </tr>
+                    </thead>
+                    <tbody>     
+                        <aura:iteration items="{!v.SuccessFactorList}" var="SF" end="{!v.currentNumRecordDisplay}" indexVar="idx">  
+                            <!-- to avoid "Cannot read property 'childNodes' of null " error while rerendering
+                                must encapulate calling of component in div/ span
+                                (not working properly in table)
+                                Encapsulate using tr element instead
+                            -->
+                            <tr class="slds-hint-parent">
+                               <c:SuccessFactorItem SuccessFactor="{!SF}"/>    
+                            </tr>                      
+                        </aura:iteration>
+                    </tbody>
+                </table>
+        </div>     
+        
+        
+        <div aura:id="body"> <!-- dynamic component -->
+        </div>          
+        <div class="slds-card__footer">
+            <div aura:id="viewToggle"> <!-- by default View All is visible -->
+                <button id="viewAllButton" class="slds-button" onclick="{!c.viewToggle}">View All</button></div>
+            <div aura:id="viewToggle" class="toggle"><!-- by default View Less is NOT visible -->
+                <button id="viewLessButton" class="slds-button" onclick="{!c.viewToggle}">View Less</button></div>
+        </div>   
+    </div>    
+    
+    
+    
+</aura:component>

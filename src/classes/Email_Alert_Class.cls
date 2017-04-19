@@ -1,18 +1,71 @@
 public with sharing class Email_Alert_Class {
+	public class CustomEmailException extends Exception {}
 
 	private Set<String> toAddresses;
 	private string CentralEmailAddress = 'ricky.lowe@yopmail.com';
-	public Messaging.SingleEmailMessage[] messages;
-	public list<EmailMessage> EmailMessages;
-
+	private Messaging.SingleEmailMessage[] messages;
+	private list<EmailMessage> EmailMessages;
+	private Set<ID> OppIds = new Set<ID>();
+	private Set<String> EmailTemplateDevNames = new Set<String>();
+	private Contact randomContact;
+	private Set<String> PreContractUsers;
+	private Map<String, ID> EmailTemplatesDevNameToID;
+	private map<ID, map<String, Set<string>>> MapOppToOppTeamMemberGroupedByRole;
+	private EmailMessage EM;	//Current Email Message
 	
 	public Email_Alert_Class() {
 		messages = new List<Messaging.SingleEmailMessage>();
 		EmailMessages = new list<EmailMessage>();
 	}
 
-	public void registerNewEmail(string templateDevName, boolean sendToPreContractGroup, boolean sendToCentralEmailAddress, ID OppID, boolean sendToPDM, boolean sendToBDM, boolean sendToAllApprovers, ID currentApprover){
-		EmailMessage EM = new EmailMessage();
+	public void registerNewEmail(string templateDevName, ID OppID){
+		EM = new EmailMessage();
+		EM.templateDevName = templateDevName;
+		EM.OppID = OppID;
+		EM.objectForTemplateID = OppID;			//Default to Opportunity ID
+		EM.specificUserRecipient = null;		//Default to null
+		EM.sendToPreContractGroup = FALSE;		//default to TRUE
+		EM.sendToCentralEmailAddress = TRUE;	//default to TRUE
+		EM.sendToPDM = FALSE;					//Default to FALSE
+		EM.sendToBDM = FALSE;					//Default to FALSE
+		EM.sendToAllApprovers = FALSE;			//Default to FALSE
+		EmailMessages.add(EM);
+		
+		//add to the OppID Set + Email Template dev Set for querying the Opp Team members and Email Template IDs
+		if(EM.OppID != null){
+			OppIds.add(EM.OppID);
+		}
+
+		if(EM.templateDevName != null){
+			EmailTemplateDevNames.add(EM.templateDevName);
+		}
+	}
+
+
+	public void setCurrentEmailField_SpecificUserRecipient(ID specificUserRecipient){
+		EM.specificUserRecipient = specificUserRecipient;
+	}
+	
+	public void setCurrentEmailField_AddAdditionalRecipients(ID additionalRecipients){
+		EM.additionalRecipients.add(additionalRecipients);
+	}
+
+	public void setCurrentEmailField_sendToPDM(boolean sendToPDM){
+		//EM.sendToPDM = sendToPDM;
+	}
+
+	public void setCurrentEmailField_sendToBDM(boolean sendToBDM){
+		//EM.sendToBDM = sendToBDM;
+	}
+
+	public void setCurrentEmailField_sendToAllApprovers(boolean sendToAllApprovers){
+		//EM.sendToAllApprovers = sendToAllApprovers;
+	}
+	
+
+
+	/*public void registerNewEmail(string templateDevName, boolean sendToPreContractGroup, boolean sendToCentralEmailAddress, ID OppID, boolean sendToPDM, boolean sendToBDM, boolean sendToAllApprovers, ID specificUserRecipient, ID objectForTemplateID){
+		EM = new EmailMessage();
 		EM.templateDevName = templateDevName;
 		EM.sendToPreContractGroup = sendToPreContractGroup;
 		EM.sendToCentralEmailAddress = sendToCentralEmailAddress;
@@ -20,9 +73,19 @@ public with sharing class Email_Alert_Class {
 		EM.sendToPDM = sendToPDM;
 		EM.sendToBDM = sendToBDM;
 		EM.sendToAllApprovers = sendToAllApprovers;
-		EM.currentApprover = currentApprover;
+		EM.specificUserRecipient = specificUserRecipient;
+		EM.objectForTemplateID = objectForTemplateID;
 		EmailMessages.add(EM);
-	}
+		
+		//add to the OppID Set + Email Template dev Set for querying the Opp Team members and Email Template IDs
+		if(EM.OppID != null){
+			OppIds.add(EM.OppID);
+		}
+
+		if(EM.templateDevName != null){
+			EmailTemplateDevNames.add(EM.templateDevName);
+		}
+	}*/
 
 	public class EmailMessage{
 		public string templateDevName;
@@ -32,132 +95,131 @@ public with sharing class Email_Alert_Class {
 		public boolean sendToPDM;
 		public boolean sendToBDM;
 		public boolean sendToAllApprovers;
-		public ID currentApprover;
+		public ID specificUserRecipient;
+		public set<string> additionalRecipients = new set<string>();
+		public ID objectForTemplateID;
 	}
 
 	public void sendEmails(){
-		Set<ID> OppIds = new Set<ID>();
-		Set<String> EmailTemplateDevNames = new Set<String>();
-
-		for(EmailMessage EM: EmailMessages){
-			OppIds.add(EM.OppID);
-			EmailTemplateDevNames.add(EM.templateDevName);
-		}
-
-		Map<String, ID> EmailTemplatesDevNameToID = getTemplateIDs(EmailTemplateDevNames);
-		Set<String> PreContract = getPreContractGroupMembers();
-		map<ID, map<String, Set<string>>> MapOppToOppTeamMemberGroupedByRole = getOppTeamMembers(OppIds);
-		System.debug(loggingLevel.Error, '*** MapOppToOppTeamMemberGroupedByRole: ' + MapOppToOppTeamMemberGroupedByRole);
-
-		for(EmailMessage EM: EmailMessages){
-			Messaging.SingleEmailMessage message = new Messaging.SingleEmailMessage();
-			Set<String> toAddresses = new Set<String>();
-
-			//If Send To Pre Contract Group is set to true then find all the member of that public group
-			if(EM.sendToPreContractGroup){
-				toAddresses.addAll(PreContract);
-			} 
-
-			//If send to central email address is true then add to the recipient list
-			if(EM.sendToCentralEmailAddress){
-				toAddresses.add(CentralEmailAddress);
-			}
-
-			//Get the users grouped by role for the Opportunity
-			map<String, Set<string>> groupedByRole = MapOppToOppTeamMemberGroupedByRole.get(EM.OppID);
-			System.debug(loggingLevel.Error, '*** groupedByRole: ' + groupedByRole);
+		//if there are any messages to send
+		if(EmailMessages != null && EmailMessages.size() > 0){
+			Debug_Log_Service debug = new Debug_Log_Service('Send Email');
+			try{
+				getTemplateIDs(EmailTemplateDevNames);												//Get Template IDs
+				getPreContractGroupMembers();														//Get Precontract group Users
+				MapOppToOppTeamMemberGroupedByRole = OpportunityHelper.getOppTeamMembers(OppIds);	//Get Opp Team Members
+				setRandomContact();																	//Get a random Contact in the system - the email won't actually get sent to the contact
+				debug.updateLog('*** Map of Opportunity to Team Member - grouped by Role: ' + MapOppToOppTeamMemberGroupedByRole);
 			
-			//If send to PDM then add the PDM user
-			if(EM.sendToPDM){
-				if(groupedByRole.containsKey('Channel Manager')){
-					toAddresses.addAll(groupedByRole.get('Channel Manager'));
-				}
-			}
+				for(EmailMessage EM: EmailMessages){
+					Messaging.SingleEmailMessage message = new Messaging.SingleEmailMessage();
+					Set<String> toAddresses = new Set<String>();
 
-			if(EM.sendToBDM){
-				if(groupedByRole.containsKey('BDM')){
-					toAddresses.addAll(groupedByRole.get('BDM'));
+					//If Send To Pre Contract Group is set to true then find all the member of that public group
+					if(EM.sendToPreContractGroup){
+						toAddresses.addAll(PreContractUsers);
+					} 
+
+					//If send to central email address is true then add to the recipient list
+					if(EM.sendToCentralEmailAddress){
+						toAddresses.add(CentralEmailAddress);
+					}
+
+					//Get the users grouped by role for the Opportunity
+					map<String, Set<string>> groupedByRole = MapOppToOppTeamMemberGroupedByRole.get(EM.OppID);
+
+					//If send to PDM then add the PDM user
+					if(EM.sendToPDM){
+						if(groupedByRole.containsKey('PDM')){
+							toAddresses.addAll(groupedByRole.get('PDM'));
+						}
+					}
+					//If send to BDM then add the BDM user
+					if(EM.sendToBDM){
+						if(groupedByRole.containsKey('BDM')){
+							toAddresses.addAll(groupedByRole.get('BDM'));
+						}
+						
+					}
+
+					//If send to All approvers then get all approvers
+					if(EM.sendToAllApprovers){
+						if(groupedByRole.containsKey('Approver')){
+							toAddresses.addAll(groupedByRole.get('Approver'));
+						}
+					}
+
+					//If send to a specific user then add the user
+					if(EM.specificUserRecipient != null){
+						toAddresses.add(EM.specificUserRecipient);
+					}
+
+					//If addtional recipients then add to the toAddresses
+					if(EM.additionalRecipients != null && EM.additionalRecipients.size() >0){
+						toAddresses.addAll(EM.additionalRecipients);
+					}
+
+					debug.updateLog('*** toAddresses: ' + toAddresses);
+
+					//Set Email Fields
+					if(EM.templateDevName != null && toAddresses.size() > 0 && EM.OppID != null){
+						message.setTemplateId(EmailTemplatesDevNameToID.get(EM.templateDevName));
+						message.toAddresses = new List<String>(toAddresses);
+						message.setSaveAsActivity(false);
+						message.setWhatId(EM.OppID);
+						if(EM.specificUserRecipient != null){
+							message.setTargetObjectId(EM.specificUserRecipient);
+						}
+						else{
+							message.setTargetObjectId(randomContact.ID);
+						}
+						
+						
+						//add email message to list to send
+						messages.add(message);
+					}
+					else{
+						throw new CustomEmailException('Template, Recipients or Opportunity not defined');
+					}
 				}
+
+				//send email and roll back. This is to get the contents of the emails with the random contact set. Work around for not being able send an email template to a user and save as an email record
+				Savepoint sp = Database.setSavepoint();
+				Messaging.sendEmail(messages);
+				Database.rollback(sp);
+
+				// For each SingleEmailMessage that was just populated by the sendEmail() method, copy its
+				// contents to a new SingleEmailMessage. Then send those new messages.
+				List<Messaging.SingleEmailMessage> lstMsgsToSend = new List<Messaging.SingleEmailMessage>();
+				for (Messaging.SingleEmailMessage email : messages) {
+					Messaging.SingleEmailMessage emailToSend = new Messaging.SingleEmailMessage();
+					emailToSend.setToAddresses(email.getToAddresses());
+					emailToSend.setPlainTextBody(email.getPlainTextBody());
+					emailToSend.setHTMLBody(email.getHTMLBody());
+					emailToSend.setSubject(email.getSubject());
+					emailToSend.setWhatId(email.getWhatID());
+					emailToSend.setSaveAsActivity(true);
+					lstMsgsToSend.add(emailToSend);
+				}
+				Messaging.sendEmail(lstMsgsToSend);
+			}
+			catch (Exception E){
+				debug.logError(E);
 				
 			}
-
-			if(EM.sendToAllApprovers){
-				if(groupedByRole.containsKey('Approver')){
-					toAddresses.addAll(groupedByRole.get('Approver'));
+			finally{
+				if(Constants.Approvers.Enable_Detailed_Logging__c || debug.doesLogIncludeErrors()){
+					debug.finishLogging();
 				}
 			}
-
-			if(EM.currentApprover != null){
-				toAddresses.add(EM.currentApprover);
-			}
-
-			//toAddresses.add('005O0000003t7an');	//add my user for testing purposes
-			
-			//Set Fields
-			System.debug(loggingLevel.Error, '*** toAddresses: ' + toAddresses);
-			
-			message.toAddresses = new List<String>(toAddresses);
-			if(EM.templateDevName != null){
-				message.setTemplateId(EmailTemplatesDevNameToID.get(EM.templateDevName));
-			}
-			
-			message.setSaveAsActivity(true);
-			message.setWhatId(EM.OppID);
-			message.subject = 'Test 2';
-			message.plainTextBody = 'This is the message body.';
-			
-			//add email message to list to send
-			messages.add(message);
 		}
-
-		//send emails and debug
-		for(Messaging.SendEmailResult SendResult : Messaging.sendEmail(messages)){
-
-		}
-
-	}
-
-	private map<ID, map<String, Set<string>>> getOppTeamMembers(set<id> OppIds){
-		map<ID, map<String, Set<string>>> MapOppToOppTeamMemberGroupedByRole = new map<ID, map<String, Set<string>>>();
-
-		for(OpportunityTeamMember OTM : [SELECT Id,OpportunityAccessLevel,OpportunityId,TeamMemberRole,UserId FROM OpportunityTeamMember WHERE OpportunityId = :OppIds]){
-			Set<String> UserIds = new Set<String>();
-			map<String, Set<string>> groupedByRole = new map<String, Set<string>>();
-
-			//Have we processed a team member for this Opportunity ID? If yes then do this
-			if(MapOppToOppTeamMemberGroupedByRole.ContainsKey(OTM.OpportunityId)){
-				groupedByRole = MapOppToOppTeamMemberGroupedByRole.get(OTM.OpportunityId);
-				
-				//Have we processed a team member in this Role for this opportunity. If yes then add the user to the list
-				if(groupedByRole.containsKey(OTM.TeamMemberRole)){
-					UserIds = groupedByRole.get(OTM.TeamMemberRole);
-					UserIds.add(OTM.UserId);
-				}
-				//If no then create a new Role entry for the map
-				else{
-					Set<String> UserIdsNew = new Set<String>();
-					UserIdsNew.add(OTM.UserId);
-					groupedByRole.put(OTM.TeamMemberRole, UserIdsNew);
-				}
-			}
-			//Have we processed a team member for this Opportunity ID? If no then do this
-			else{
-				map<String, Set<string>> groupedByRoleNew = new map<String, Set<string>>();
-				Set<String> UserIdsNew2 = new Set<String>();
-				UserIdsNew2.add(OTM.UserId);
-				groupedByRoleNew.put(OTM.TeamMemberRole, UserIdsNew2);
-
-				MapOppToOppTeamMemberGroupedByRole.put(OTM.OpportunityId, groupedByRoleNew);
-			}
-		}
-		return MapOppToOppTeamMemberGroupedByRole;
 	}
 
 
 	private Map<String, ID> getTemplateIDs(Set<String> EmailTemplateDevNames){
-		Map<String, ID> EmailTemplatesDevNameToID = new Map<String, ID>();
+		EmailTemplatesDevNameToID = new Map<String, ID>();
 
-		for(EmailTemplate ET: [SELECT DeveloperName,Id,Name FROM EmailTemplate WHERE DeveloperName IN : EmailTemplateDevNames]){
+		for(EmailTemplate ET: [SELECT DeveloperName,Id,Name FROM EmailTemplate WHERE DeveloperName IN : EmailTemplateDevNames AND IsActive = true]){
 			EmailTemplatesDevNameToID.put(ET.DeveloperName, ET.ID);
 		}
 		return EmailTemplatesDevNameToID;
@@ -166,14 +228,26 @@ public with sharing class Email_Alert_Class {
 
 	public Set<String> getPreContractGroupMembers(){
 		List<Group> PreContract = [SELECT DeveloperName,Id FROM Group WHERE DeveloperName = 'Pre_Contracts_Group' LIMIT 1];
-		Set<String> PreContractUserIDs = new Set<String>();
+		PreContractUsers = new Set<String>();
 		if(PreContract != null && PreContract.size() == 0){
 			for(GroupMember gm : [SELECT GroupId,UserOrGroupId FROM GroupMember WHERE GroupId = :PreContract[0].ID]){
 				if(gm.UserOrGroupId != null && ((string) gm.UserOrGroupId).startsWith('005')){
-					PreContractUserIDs.add(gm.UserOrGroupId);
+					PreContractUsers.add(gm.UserOrGroupId);
 				}
 			}	
 		}
-		return PreContractUserIDs;
+		return PreContractUsers;
+	}
+
+	public Contact setRandomContact(){
+		list<contact> cons = [Select ID, Email FROM Contact WHERE Email <> null LIMIT 1];
+		if(cons != null && cons.size() > 0){
+			randomContact = cons[0];
+		}
+		else{
+			throw new CustomEmailException('There needs to be at least 1 Contact with an email address in the system. This is a workaround to populate the email contents - the email isnt sent to this contact');
+		}
+		
+		return randomContact;
 	}
 }

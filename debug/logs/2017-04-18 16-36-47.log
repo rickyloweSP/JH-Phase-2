@@ -1,0 +1,211 @@
+34.0 APEX_CODE,FINEST;APEX_PROFILING,FINEST;CALLOUT,NONE;DB,FINEST;SYSTEM,FINE;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,FINER
+16:36:46.0 (89298)|USER_INFO|[EXTERNAL]|005O0000003t7an|ricky.lowe@jhg.com.au.pcphase2|Australian Eastern Standard Time|GMT+10:00
+16:36:46.0 (127255)|EXECUTION_STARTED
+16:36:46.0 (132759)|CODE_UNIT_STARTED|[EXTERNAL]|01pO00000003mlO|Email_Reminder_Batch
+16:36:46.0 (3644266)|HEAP_ALLOCATE|[72]|Bytes:3
+16:36:46.0 (3676951)|HEAP_ALLOCATE|[77]|Bytes:152
+16:36:46.0 (3694431)|HEAP_ALLOCATE|[342]|Bytes:408
+16:36:46.0 (3722892)|HEAP_ALLOCATE|[355]|Bytes:408
+16:36:46.0 (3743808)|HEAP_ALLOCATE|[467]|Bytes:48
+16:36:46.0 (3773312)|HEAP_ALLOCATE|[139]|Bytes:6
+16:36:46.0 (4026699)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:929
+16:36:46.0 (4154162)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:11
+16:36:46.0 (4167719)|SYSTEM_METHOD_ENTRY|[15]|BatchableContextImpl.BatchableContextImpl()
+16:36:46.0 (4172097)|STATEMENT_EXECUTE|[15]
+16:36:46.0 (4181683)|SYSTEM_METHOD_EXIT|[15]|BatchableContextImpl
+16:36:46.0 (4186614)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+16:36:46.0 (4189510)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+16:36:46.0 (4195323)|VARIABLE_SCOPE_BEGIN|[31]|this|Database.BatchableContextImpl|true|false
+16:36:46.0 (4240932)|VARIABLE_ASSIGNMENT|[31]|this|{}|0x29c030ff
+16:36:46.0 (4245300)|VARIABLE_SCOPE_BEGIN|[31]|jobId|Id|false|false
+16:36:46.0 (4319459)|VARIABLE_ASSIGNMENT|[31]|jobId|"707O000000qyXB0IAM"
+16:36:46.0 (4324457)|VARIABLE_SCOPE_BEGIN|[31]|childJobId|Id|false|false
+16:36:46.0 (4329414)|VARIABLE_ASSIGNMENT|[31]|childJobId|null
+16:36:46.0 (20755113)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:71
+16:36:46.0 (20773707)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:10
+16:36:46.0 (20788199)|METHOD_ENTRY|[1]|01pO00000003mlO|Email_Reminder_Batch.Email_Reminder_Batch()
+16:36:46.0 (20793714)|STATEMENT_EXECUTE|[1]
+16:36:46.0 (20800729)|STATEMENT_EXECUTE|[1]
+16:36:46.0 (20808209)|METHOD_EXIT|[1]|Email_Reminder_Batch
+16:36:46.0 (20813846)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:20
+16:36:46.0 (20817280)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+16:36:46.0 (20826916)|VARIABLE_SCOPE_BEGIN|[25]|this|Email_Reminder_Batch|true|false
+16:36:46.0 (20902500)|VARIABLE_ASSIGNMENT|[25]|this|{"Debug":"0x4f67f239","Query":"SELECT Approval_Leve (337 more) ...","recordCount":0,"theDate":"2017-04-08T00:00:00.000Z"}|0x4597b42f
+16:36:46.0 (20908601)|VARIABLE_SCOPE_BEGIN|[25]|BC|Database.BatchableContext|true|false
+16:36:46.0 (20992970)|VARIABLE_ASSIGNMENT|[25]|BC|{"jobId":"707O000000qyXB0IAM"}|0x29c030ff
+16:36:46.0 (21003298)|STATEMENT_EXECUTE|[25]
+16:36:46.0 (21005363)|STATEMENT_EXECUTE|[26]
+16:36:46.0 (21014531)|HEAP_ALLOCATE|[26]|Bytes:13
+16:36:46.0 (21062230)|SYSTEM_METHOD_ENTRY|[26]|String.valueOf(Object)
+16:36:46.0 (21085004)|HEAP_ALLOCATE|[26]|Bytes:1
+16:36:46.0 (21100321)|SYSTEM_METHOD_EXIT|[26]|String.valueOf(Object)
+16:36:46.0 (21106058)|HEAP_ALLOCATE|[26]|Bytes:15
+16:36:46.0 (21114726)|HEAP_ALLOCATE|[26]|Bytes:29
+16:36:46.0 (21132652)|HEAP_ALLOCATE|[26]|Bytes:13
+16:36:46.0 (21137639)|HEAP_ALLOCATE|[26]|Bytes:2
+16:36:46.0 (21156645)|METHOD_ENTRY|[1]|01pO00000003eAP|Debug_Log_Service.Debug_Log_Service()
+16:36:46.0 (21159663)|STATEMENT_EXECUTE|[1]
+16:36:46.0 (21162657)|STATEMENT_EXECUTE|[1]
+16:36:46.0 (21166998)|METHOD_EXIT|[1]|Debug_Log_Service
+16:36:46.0 (21191755)|METHOD_ENTRY|[26]|01pO00000003eAP|Debug_Log_Service.updateLog(String)
+16:36:46.0 (21197762)|VARIABLE_SCOPE_BEGIN|[27]|this|Debug_Log_Service|true|false
+16:36:46.0 (21259256)|VARIABLE_ASSIGNMENT|[27]|this|{"log":"0x11464bf1"}|0x4f67f239
+16:36:46.0 (21265207)|VARIABLE_SCOPE_BEGIN|[27]|message|String|false|false
+16:36:46.0 (21271533)|VARIABLE_ASSIGNMENT|[27]|message|"*** Total of 0 Remin (9 more) ..."
+16:36:46.0 (21275945)|STATEMENT_EXECUTE|[27]
+16:36:46.0 (21277335)|STATEMENT_EXECUTE|[29]
+16:36:46.0 (22223017)|SYSTEM_METHOD_ENTRY|[29]|com.salesforce.api.interop.apex.bcl.DatetimeMethods.now()
+16:36:46.0 (22285758)|HEAP_ALLOCATE|[29]|Bytes:56
+16:36:46.0 (22295013)|SYSTEM_METHOD_EXIT|[29]|com.salesforce.api.interop.apex.bcl.DatetimeMethods.now()
+16:36:46.0 (22313743)|SYSTEM_METHOD_ENTRY|[29]|String.valueOf(Object)
+16:36:46.0 (22324648)|HEAP_ALLOCATE|[29]|Bytes:19
+16:36:46.0 (22335352)|SYSTEM_METHOD_EXIT|[29]|String.valueOf(Object)
+16:36:46.0 (22339656)|HEAP_ALLOCATE|[29]|Bytes:3
+16:36:46.0 (22342854)|HEAP_ALLOCATE|[29]|Bytes:1
+16:36:46.0 (22352396)|HEAP_ALLOCATE|[29]|Bytes:52
+16:36:46.0 (22358560)|HEAP_ALLOCATE|[29]|Bytes:518
+16:36:46.0 (22432494)|VARIABLE_ASSIGNMENT|[29]|this.Results__c|"2017-04-18 06:36:44  (498 more) ..."|0x11464bf1
+16:36:46.0 (22437022)|STATEMENT_EXECUTE|[30]
+16:36:46.0 (22613661)|HEAP_ALLOCATE|[30]|Bytes:15
+16:36:46.0 (22629625)|HEAP_ALLOCATE|[30]|Bytes:533
+16:36:46.0 (22647477)|HEAP_ALLOCATE|[50]|Bytes:5
+16:36:46.0 (22661214)|HEAP_ALLOCATE|[56]|Bytes:5
+16:36:46.0 (22668704)|HEAP_ALLOCATE|[64]|Bytes:7
+16:36:46.0 (22703457)|SYSTEM_METHOD_ENTRY|[30]|System.debug(APEX_OBJECT, ANY)
+16:36:46.0 (22737558)|USER_DEBUG|[30]|ERROR|*** updateLog: 2017-04-18 06:36:44 : start
+2017-04-18 06:36:45 : query: SELECT Approval_Level__c,Approval_Status__c,Current_Approver__c,Date_Time_Assigned_as_Current_Approver__c,Decision_Date__c,Number_of_Reminder_Emails_Sent__c,Last_Email_Sent__c FROM Assigned_Approver__c WHERE Number_of_Reminder_Emails_Sent__c < 1.0 AND Last_Email_Sent__c <= :theDate AND Current_Approver__c = true AND Approval_Status__c = 'Pending Approval'
+2017-04-18 06:36:45 : theDate: 2017-04-08 00:00:00
+2017-04-18 06:36:46 : *** Total of 0 Reminders Sent
+
+16:36:46.0 (22747593)|SYSTEM_METHOD_EXIT|[30]|System.debug(APEX_OBJECT, ANY)
+16:36:46.0 (22754260)|METHOD_EXIT|[26]|01pO00000003eAP|Debug_Log_Service.updateLog(String)
+16:36:46.0 (22757422)|STATEMENT_EXECUTE|[27]
+16:36:46.0 (22767305)|METHOD_ENTRY|[27]|01pO00000003eAP|Debug_Log_Service.finishLogging()
+16:36:46.0 (22787466)|VARIABLE_SCOPE_BEGIN|[14]|this|Debug_Log_Service|true|false
+16:36:46.0 (22806022)|VARIABLE_ASSIGNMENT|[14]|this|{"log":"0x11464bf1"}|0x4f67f239
+16:36:46.0 (22811045)|STATEMENT_EXECUTE|[14]
+16:36:46.0 (22812501)|STATEMENT_EXECUTE|[16]
+16:36:46.0 (22816214)|HEAP_ALLOCATE|[16]|Bytes:6
+16:36:46.0 (22825718)|METHOD_ENTRY|[16]|01pO00000003eAP|Debug_Log_Service.updateLog(String)
+16:36:46.0 (22843238)|VARIABLE_SCOPE_BEGIN|[27]|this|Debug_Log_Service|true|false
+16:36:46.0 (22858223)|VARIABLE_ASSIGNMENT|[27]|this|{"log":"0x11464bf1"}|0x4f67f239
+16:36:46.0 (22860655)|VARIABLE_SCOPE_BEGIN|[27]|message|String|false|false
+16:36:46.0 (22864178)|VARIABLE_ASSIGNMENT|[27]|message|"finish"
+16:36:46.0 (22867502)|STATEMENT_EXECUTE|[27]
+16:36:46.0 (22868646)|STATEMENT_EXECUTE|[29]
+16:36:46.0 (22882618)|SYSTEM_METHOD_ENTRY|[29]|com.salesforce.api.interop.apex.bcl.DatetimeMethods.now()
+16:36:46.0 (22891345)|HEAP_ALLOCATE|[29]|Bytes:56
+16:36:46.0 (22896649)|SYSTEM_METHOD_EXIT|[29]|com.salesforce.api.interop.apex.bcl.DatetimeMethods.now()
+16:36:46.0 (22911766)|SYSTEM_METHOD_ENTRY|[29]|String.valueOf(Object)
+16:36:46.0 (22920365)|HEAP_ALLOCATE|[29]|Bytes:19
+16:36:46.0 (22930678)|SYSTEM_METHOD_EXIT|[29]|String.valueOf(Object)
+16:36:46.0 (22937420)|HEAP_ALLOCATE|[29]|Bytes:29
+16:36:46.0 (22941698)|HEAP_ALLOCATE|[29]|Bytes:547
+16:36:46.0 (22987399)|VARIABLE_ASSIGNMENT|[29]|this.Results__c|"2017-04-18 06:36:44  (527 more) ..."|0x11464bf1
+16:36:46.0 (22991623)|STATEMENT_EXECUTE|[30]
+16:36:46.0 (23004209)|HEAP_ALLOCATE|[30]|Bytes:562
+16:36:46.0 (23016030)|SYSTEM_METHOD_ENTRY|[30]|System.debug(APEX_OBJECT, ANY)
+16:36:46.0 (23024460)|USER_DEBUG|[30]|ERROR|*** updateLog: 2017-04-18 06:36:44 : start
+2017-04-18 06:36:45 : query: SELECT Approval_Level__c,Approval_Status__c,Current_Approver__c,Date_Time_Assigned_as_Current_Approver__c,Decision_Date__c,Number_of_Reminder_Emails_Sent__c,Last_Email_Sent__c FROM Assigned_Approver__c WHERE Number_of_Reminder_Emails_Sent__c < 1.0 AND Last_Email_Sent__c <= :theDate AND Current_Approver__c = true AND Approval_Status__c = 'Pending Approval'
+2017-04-18 06:36:45 : theDate: 2017-04-08 00:00:00
+2017-04-18 06:36:46 : *** Total of 0 Reminders Sent
+2017-04-18 06:36:46 : finish
+
+16:36:46.0 (23032316)|SYSTEM_METHOD_EXIT|[30]|System.debug(APEX_OBJECT, ANY)
+16:36:46.0 (23037741)|METHOD_EXIT|[16]|01pO00000003eAP|Debug_Log_Service.updateLog(String)
+16:36:46.0 (23046087)|METHOD_ENTRY|[18]|01pO00000003eAP|Debug_Log_Service.doesLogIncludeErrors()
+16:36:46.0 (23061857)|VARIABLE_SCOPE_BEGIN|[41]|this|Debug_Log_Service|true|false
+16:36:46.0 (23078645)|VARIABLE_ASSIGNMENT|[41]|this|{"log":"0x11464bf1"}|0x4f67f239
+16:36:46.0 (23083425)|STATEMENT_EXECUTE|[41]
+16:36:46.0 (23113650)|HEAP_ALLOCATE|[42]|Bytes:7
+16:36:46.0 (23131123)|STATEMENT_EXECUTE|[45]
+16:36:46.0 (23132861)|STATEMENT_EXECUTE|[46]
+16:36:46.0 (23138635)|METHOD_EXIT|[18]|01pO00000003eAP|Debug_Log_Service.doesLogIncludeErrors()
+16:36:46.0 (23143549)|STATEMENT_EXECUTE|[18]
+16:36:46.0 (23144922)|STATEMENT_EXECUTE|[19]
+16:36:46.0 (23147458)|HEAP_ALLOCATE|[19]|Bytes:7
+16:36:46.0 (23191947)|VARIABLE_ASSIGNMENT|[19]|this.Status__c|"Success"|0x11464bf1
+16:36:46.0 (23233233)|HEAP_ALLOCATE|[22]|Bytes:63
+16:36:46.0 (23242474)|SYSTEM_METHOD_ENTRY|[1]|Test.Test()
+16:36:46.0 (23244594)|STATEMENT_EXECUTE|[1]
+16:36:46.0 (23250677)|SYSTEM_METHOD_EXIT|[1]|Test
+16:36:46.0 (23259660)|METHOD_ENTRY|[22]||System.Test.isRunningTest()
+16:36:46.0 (23290802)|METHOD_EXIT|[22]||System.Test.isRunningTest()
+16:36:46.0 (23296320)|STATEMENT_EXECUTE|[22]
+16:36:46.0 (23297730)|STATEMENT_EXECUTE|[23]
+16:36:46.0 (23328989)|HEAP_ALLOCATE|[23]|Bytes:8
+16:36:46.0 (23336197)|DML_BEGIN|[23]|Op:Insert|Type:Debug_Log__c|Rows:1
+16:36:46.0 (23349036)|LIMIT_USAGE|[23]|DML|1|150
+16:36:46.0 (23361522)|LIMIT_USAGE|[23]|DML_ROWS|1|10000
+16:36:46.0 (23370550)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+16:36:46.0 (62024879)|DML_END|[23]
+16:36:46.0 (62063726)|METHOD_EXIT|[27]|01pO00000003eAP|Debug_Log_Service.finishLogging()
+16:36:46.89 (89268493)|CUMULATIVE_LIMIT_USAGE
+16:36:46.89 (89268493)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+16:36:46.89 (89268493)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+16:36:46.89 (89268493)|STATIC_VARIABLE_LIST|
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MAX_VALUE:0
+  Boolean:FALSE:0
+  long:serialVersionUID:0
+  double:MIN_VALUE:0
+  int:SIZE:0
+  String:__sfdcParameterizedTypes:0
+  double:NEGATIVE_INFINITY:0
+  int:MAX_VALUE:0
+  char[]:digits:0
+  double:NaN:0
+  Boolean:TRUE:0
+  String:_sfdcAdditionalCodeLocations:0
+  int:MIN_VALUE:0
+  char[]:DigitOnes:0
+  int:BYTES:0
+  String:_sfdcAdditionalCodeLocations:0
+  int:MIN_EXPONENT:0
+  int[]:sizeTable:0
+  int:MAX_EXPONENT:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MIN_NORMAL:0
+  int:BYTES:0
+
+16:36:46.89 (89268493)|CUMULATIVE_LIMIT_USAGE_END
+
+16:36:46.0 (89417946)|CODE_UNIT_FINISHED|Email_Reminder_Batch
+16:36:46.0 (90935256)|EXECUTION_FINISHED
+16:36:46.120 (120267768)|CUMULATIVE_PROFILING_BEGIN
+16:36:46.120 (120267768)|CUMULATIVE_PROFILING|No profiling information for SOQL operations
+16:36:46.120 (120267768)|CUMULATIVE_PROFILING|No profiling information for SOSL operations
+16:36:46.120 (120267768)|CUMULATIVE_PROFILING|DML operations|
+Class.Debug_Log_Service.finishLogging: line 23, column 1: Insert: Debug_Log__c: executed 1 time in 39 ms
+
+16:36:46.120 (120267768)|CUMULATIVE_PROFILING|method invocations|
+External entry point: global void finish(Database.BatchableContext): executed 1 time in 42 ms
+Class.Email_Reminder_Batch.finish: line 27, column 1: public void finishLogging(): executed 1 time in 40 ms
+Class.Email_Reminder_Batch.finish: line 26, column 1: public static String valueOf(Object): executed 2 times in 1 ms
+Class.Debug_Log_Service.finishLogging: line 16, column 1: public void updateLog(String): executed 1 time in 1 ms
+Class.Debug_Log_Service.finishLogging: line 18, column 1: public Boolean doesLogIncludeErrors(): executed 1 time in 0 ms
+Class.Debug_Log_Service.finishLogging: line 22, column 1: global static Boolean isRunningTest(): executed 1 time in 0 ms
+Class.Debug_Log_Service.updateLog: line 29, column 1: public static Datetime now(): executed 4 times in 0 ms
+Class.Debug_Log_Service.updateLog: line 30, column 1: global public static void debug(APEX_OBJECT, ANY): executed 2 times in 0 ms
+
+16:36:46.120 (120267768)|CUMULATIVE_PROFILING_END

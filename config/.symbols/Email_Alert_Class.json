@@ -4,7 +4,7 @@
             "annotations": [],
             "location": {
                 "column": 9,
-                "line": 9
+                "line": 16
             },
             "modifiers": [
                 "public"
@@ -26,6 +26,33 @@
             "interfaces": [],
             "key": null,
             "methods": [],
+            "name": "CustomEmailException",
+            "namespace": null,
+            "parentClass": "Exception",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 15,
+                    "line": 2
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "CustomEmailException",
+                "references": [],
+                "type": "CustomEmailException"
+            },
+            "variables": []
+        },
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [],
+            "key": null,
+            "methods": [],
             "name": "EmailMessage",
             "namespace": null,
             "parentClass": "",
@@ -34,7 +61,7 @@
                     "annotations": [],
                     "location": {
                         "column": 17,
-                        "line": 28
+                        "line": 87
                     },
                     "modifiers": [
                         "public"
@@ -47,7 +74,7 @@
                     "annotations": [],
                     "location": {
                         "column": 18,
-                        "line": 29
+                        "line": 88
                     },
                     "modifiers": [
                         "public"
@@ -60,7 +87,7 @@
                     "annotations": [],
                     "location": {
                         "column": 18,
-                        "line": 30
+                        "line": 89
                     },
                     "modifiers": [
                         "public"
@@ -73,7 +100,7 @@
                     "annotations": [],
                     "location": {
                         "column": 13,
-                        "line": 31
+                        "line": 90
                     },
                     "modifiers": [
                         "public"
@@ -86,7 +113,7 @@
                     "annotations": [],
                     "location": {
                         "column": 18,
-                        "line": 32
+                        "line": 91
                     },
                     "modifiers": [
                         "public"
@@ -99,7 +126,7 @@
                     "annotations": [],
                     "location": {
                         "column": 18,
-                        "line": 33
+                        "line": 92
                     },
                     "modifiers": [
                         "public"
@@ -112,7 +139,7 @@
                     "annotations": [],
                     "location": {
                         "column": 18,
-                        "line": 34
+                        "line": 93
                     },
                     "modifiers": [
                         "public"
@@ -125,12 +152,25 @@
                     "annotations": [],
                     "location": {
                         "column": 13,
-                        "line": 35
+                        "line": 94
                     },
                     "modifiers": [
                         "public"
                     ],
-                    "name": "currentApprover",
+                    "name": "specificUserRecipient",
+                    "references": [],
+                    "type": "Id"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 13,
+                        "line": 95
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "objectForTemplateID",
                     "references": [],
                     "type": "Id"
                 }
@@ -139,7 +179,7 @@
                 "annotations": [],
                 "location": {
                     "column": 15,
-                    "line": 27
+                    "line": 86
                 },
                 "modifiers": [
                     "public"
@@ -158,7 +198,7 @@
             "annotations": [],
             "location": {
                 "column": 14,
-                "line": 14
+                "line": 21
             },
             "modifiers": [
                 "public"
@@ -170,31 +210,7 @@
                     "type": "String"
                 },
                 {
-                    "name": "sendToPreContractGroup",
-                    "type": "Boolean"
-                },
-                {
-                    "name": "sendToCentralEmailAddress",
-                    "type": "Boolean"
-                },
-                {
                     "name": "OppID",
-                    "type": "Id"
-                },
-                {
-                    "name": "sendToPDM",
-                    "type": "Boolean"
-                },
-                {
-                    "name": "sendToBDM",
-                    "type": "Boolean"
-                },
-                {
-                    "name": "sendToAllApprovers",
-                    "type": "Boolean"
-                },
-                {
-                    "name": "currentApprover",
                     "type": "Id"
                 }
             ],
@@ -206,7 +222,87 @@
             "annotations": [],
             "location": {
                 "column": 14,
-                "line": 38
+                "line": 45
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "setCurrentEmailField_SpecificUserRecipient",
+            "parameters": [
+                {
+                    "name": "specificUserRecipient",
+                    "type": "Id"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 14,
+                "line": 49
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "setCurrentEmailField_sendToPDM",
+            "parameters": [
+                {
+                    "name": "sendToPDM",
+                    "type": "Boolean"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 14,
+                "line": 53
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "setCurrentEmailField_sendToBDM",
+            "parameters": [
+                {
+                    "name": "sendToBDM",
+                    "type": "Boolean"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 14,
+                "line": 57
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "setCurrentEmailField_sendToAllApprovers",
+            "parameters": [
+                {
+                    "name": "sendToAllApprovers",
+                    "type": "Boolean"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 14,
+                "line": 98
             },
             "modifiers": [
                 "public"
@@ -220,28 +316,8 @@
         {
             "annotations": [],
             "location": {
-                "column": 44,
-                "line": 120
-            },
-            "modifiers": [
-                "private"
-            ],
-            "name": "getOppTeamMembers",
-            "parameters": [
-                {
-                    "name": "OppIds",
-                    "type": "Set"
-                }
-            ],
-            "references": [],
-            "returnType": "Map",
-            "type": null
-        },
-        {
-            "annotations": [],
-            "location": {
                 "column": 26,
-                "line": 157
+                "line": 205
             },
             "modifiers": [
                 "private"
@@ -261,7 +337,7 @@
             "annotations": [],
             "location": {
                 "column": 21,
-                "line": 167
+                "line": 215
             },
             "modifiers": [
                 "public"
@@ -270,6 +346,21 @@
             "parameters": [],
             "references": [],
             "returnType": "Set",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 228
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "setRandomContact",
+            "parameters": [],
+            "references": [],
+            "returnType": "Contact",
             "type": null
         }
     ],
@@ -281,7 +372,7 @@
             "annotations": [],
             "location": {
                 "column": 22,
-                "line": 3
+                "line": 4
             },
             "modifiers": [
                 "private"
@@ -294,7 +385,7 @@
             "annotations": [],
             "location": {
                 "column": 17,
-                "line": 4
+                "line": 5
             },
             "modifiers": [
                 "private"
@@ -306,11 +397,11 @@
         {
             "annotations": [],
             "location": {
-                "column": 40,
-                "line": 5
+                "column": 41,
+                "line": 6
             },
             "modifiers": [
-                "public"
+                "private"
             ],
             "name": "messages",
             "references": [],
@@ -319,15 +410,106 @@
         {
             "annotations": [],
             "location": {
-                "column": 28,
-                "line": 6
+                "column": 29,
+                "line": 7
             },
             "modifiers": [
-                "public"
+                "private"
             ],
             "name": "EmailMessages",
             "references": [],
             "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 8
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "OppIds",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 9
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "EmailTemplateDevNames",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 10
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "randomContact",
+            "references": [],
+            "type": "Contact"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 11
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "PreContractUsers",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 12
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "EmailTemplatesDevNameToID",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 44,
+                "line": 13
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "MapOppToOppTeamMemberGroupedByRole",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 14
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "EM",
+            "references": [],
+            "type": "EmailMessage"
         }
     ],
     "tableDeclaration": {
@@ -349,7 +531,7 @@
             "annotations": [],
             "location": {
                 "column": 38,
-                "line": 14
+                "line": 21
             },
             "modifiers": [],
             "name": "templateDevName",
@@ -359,30 +541,8 @@
         {
             "annotations": [],
             "location": {
-                "column": 63,
-                "line": 14
-            },
-            "modifiers": [],
-            "name": "sendToPreContractGroup",
-            "references": [],
-            "type": "Boolean"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 95,
-                "line": 14
-            },
-            "modifiers": [],
-            "name": "sendToCentralEmailAddress",
-            "references": [],
-            "type": "Boolean"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 125,
-                "line": 14
+                "column": 58,
+                "line": 21
             },
             "modifiers": [],
             "name": "OppID",
@@ -392,8 +552,19 @@
         {
             "annotations": [],
             "location": {
-                "column": 140,
-                "line": 14
+                "column": 60,
+                "line": 45
+            },
+            "modifiers": [],
+            "name": "specificUserRecipient",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 53,
+                "line": 49
             },
             "modifiers": [],
             "name": "sendToPDM",
@@ -403,8 +574,8 @@
         {
             "annotations": [],
             "location": {
-                "column": 159,
-                "line": 14
+                "column": 53,
+                "line": 53
             },
             "modifiers": [],
             "name": "sendToBDM",
@@ -414,8 +585,8 @@
         {
             "annotations": [],
             "location": {
-                "column": 178,
-                "line": 14
+                "column": 62,
+                "line": 57
             },
             "modifiers": [],
             "name": "sendToAllApprovers",
@@ -425,19 +596,8 @@
         {
             "annotations": [],
             "location": {
-                "column": 201,
-                "line": 14
-            },
-            "modifiers": [],
-            "name": "currentApprover",
-            "references": [],
-            "type": "Id"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 16,
-                "line": 15
+                "column": 22,
+                "line": 109
             },
             "modifiers": [],
             "name": "EM",
@@ -447,85 +607,8 @@
         {
             "annotations": [],
             "location": {
-                "column": 11,
-                "line": 39
-            },
-            "modifiers": [],
-            "name": "OppIds",
-            "references": [],
-            "type": "Set"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 15,
-                "line": 40
-            },
-            "modifiers": [],
-            "name": "EmailTemplateDevNames",
-            "references": [],
-            "type": "Set"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 20,
-                "line": 42
-            },
-            "modifiers": [],
-            "name": "EM",
-            "references": [],
-            "type": "EmailMessage"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 19,
-                "line": 47
-            },
-            "modifiers": [],
-            "name": "EmailTemplatesDevNameToID",
-            "references": [],
-            "type": "Map"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 15,
-                "line": 48
-            },
-            "modifiers": [],
-            "name": "PreContract",
-            "references": [],
-            "type": "Set"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 37,
-                "line": 49
-            },
-            "modifiers": [],
-            "name": "MapOppToOppTeamMemberGroupedByRole",
-            "references": [],
-            "type": "Map"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 20,
-                "line": 52
-            },
-            "modifiers": [],
-            "name": "EM",
-            "references": [],
-            "type": "EmailMessage"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 33,
-                "line": 53
+                "column": 35,
+                "line": 110
             },
             "modifiers": [],
             "name": "message",
@@ -535,8 +618,8 @@
         {
             "annotations": [],
             "location": {
-                "column": 16,
-                "line": 54
+                "column": 18,
+                "line": 111
             },
             "modifiers": [],
             "name": "toAddresses",
@@ -546,76 +629,10 @@
         {
             "annotations": [],
             "location": {
-                "column": 29,
-                "line": 67
-            },
-            "modifiers": [],
-            "name": "groupedByRole",
-            "references": [],
-            "type": "Map"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 33,
-                "line": 114
-            },
-            "modifiers": [],
-            "name": "SendResult",
-            "references": [],
-            "type": "SendEmailResult"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 70,
-                "line": 120
-            },
-            "modifiers": [],
-            "name": "OppIds",
-            "references": [],
-            "type": "Set"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 37,
-                "line": 121
-            },
-            "modifiers": [],
-            "name": "MapOppToOppTeamMemberGroupedByRole",
-            "references": [],
-            "type": "Map"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 29,
-                "line": 123
-            },
-            "modifiers": [],
-            "name": "OTM",
-            "references": [],
-            "type": "OpportunityTeamMember"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 16,
+                "column": 31,
                 "line": 124
             },
             "modifiers": [],
-            "name": "UserIds",
-            "references": [],
-            "type": "Set"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 29,
-                "line": 125
-            },
-            "modifiers": [],
             "name": "groupedByRole",
             "references": [],
             "type": "Map"
@@ -623,41 +640,52 @@
         {
             "annotations": [],
             "location": {
-                "column": 18,
-                "line": 138
+                "column": 15,
+                "line": 178
             },
             "modifiers": [],
-            "name": "UserIdsNew",
+            "name": "sp",
             "references": [],
-            "type": "Set"
+            "type": "Savepoint"
         },
         {
             "annotations": [],
             "location": {
-                "column": 30,
-                "line": 145
+                "column": 40,
+                "line": 184
             },
             "modifiers": [],
-            "name": "groupedByRoleNew",
+            "name": "lstMsgsToSend",
             "references": [],
-            "type": "Map"
+            "type": "LIST"
         },
         {
             "annotations": [],
             "location": {
-                "column": 17,
-                "line": 146
+                "column": 39,
+                "line": 185
             },
             "modifiers": [],
-            "name": "UserIdsNew2",
+            "name": "email",
             "references": [],
-            "type": "Set"
+            "type": "SingleEmailMessage"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 35,
+                "line": 186
+            },
+            "modifiers": [],
+            "name": "emailToSend",
+            "references": [],
+            "type": "SingleEmailMessage"
         },
         {
             "annotations": [],
             "location": {
                 "column": 53,
-                "line": 157
+                "line": 205
             },
             "modifiers": [],
             "name": "EmailTemplateDevNames",
@@ -667,19 +695,8 @@
         {
             "annotations": [],
             "location": {
-                "column": 19,
-                "line": 158
-            },
-            "modifiers": [],
-            "name": "EmailTemplatesDevNameToID",
-            "references": [],
-            "type": "Map"
-        },
-        {
-            "annotations": [],
-            "location": {
                 "column": 21,
-                "line": 160
+                "line": 208
             },
             "modifiers": [],
             "name": "ET",
@@ -690,7 +707,7 @@
             "annotations": [],
             "location": {
                 "column": 15,
-                "line": 168
+                "line": 216
             },
             "modifiers": [],
             "name": "PreContract",
@@ -700,19 +717,8 @@
         {
             "annotations": [],
             "location": {
-                "column": 15,
-                "line": 169
-            },
-            "modifiers": [],
-            "name": "PreContractUserIDs",
-            "references": [],
-            "type": "Set"
-        },
-        {
-            "annotations": [],
-            "location": {
                 "column": 20,
-                "line": 171
+                "line": 219
             },
             "modifiers": [],
             "name": "gm",

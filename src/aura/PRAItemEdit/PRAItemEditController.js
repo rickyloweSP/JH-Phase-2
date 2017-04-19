@@ -1,7 +1,10 @@
 ({
     doInit: function(component, event, helper) { // retrieve the attachments 
 
- 		 component.set("v.cssStyle", ".forceStyle .viewport.oneHeader.desktop {z-index:0} .forceStyle.desktop .viewport{overflow:hidden}");
+ 		 //component.set("v.cssStyle", ".forceStyle.viewport.oneHeader.desktop {z-index:0} .forceStyle.desktop.viewport{overflow:hidden}");
+ 		  //var styl = "height:600px;width:400px;margin-top:5cm;margin-left:6cm;";
+          //component.set("v.cssStyle", styl);
+          overrideHeaderStyle();
    }, 
     close : function(component, event, helper) {
         var newRecordSaved = component.get("v.newRecordSaved");
@@ -17,8 +20,8 @@
 		component.destroy();
     },    
     save : function(component, event, helper) {
-        //helper.save(component);
-        component.find("edit").get("e.recordSave").fire();
+        helper.save(component);
+        helper.showSuccessToast();
     },
     moveNext : function(component, event, helper) {
         var currentPRAItem = component.get("v.PRA");
@@ -30,8 +33,8 @@
         console.log('Next Index '  + nextIndex);
         if(nextIndex===allPRAItems.length){
             //component.destroy();
-			//helper.showEndOfListToast;
-			alert('This is the last record');
+			helper.showEndOfListToast();
+			//alert('This is the last record');
         }
         else
         	component.set("v.PRA",allPRAItems[nextIndex]);
@@ -46,8 +49,8 @@
          console.log('Previous Index '  + previousIndex);
         if(currentIndex===0){
             //component.destroy();
-			//helper.showEndOfListToast;
-			alert('This is the first record');
+			helper.showStartOfListToast();
+			//alert('This is the first record');
         }
         else
         	component.set("v.PRA",allPRAItems[previousIndex]);

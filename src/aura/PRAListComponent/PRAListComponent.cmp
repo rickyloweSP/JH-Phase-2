@@ -1,6 +1,7 @@
 <aura:component controller="PRAController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName" access="global">
     
     <aura:attribute name="PRAList" type="List" description="PRA Items"/>
+    <aura:attribute name="Opp" type="Opportunity" description="PRA Items"/>
     <aura:attribute name="currentNumRecordDisplay" type="Integer" default="2" description="Variable to set the number of records viewable based on View All/ Less button"/>    
     <aura:attribute name="maxNumRecordDisplay" type="Integer" default="2" description="Variable to set the MAX number of records viewable (all files based on the query retrieved via init)"/>        
     <aura:attribute name="recordId" type="Id" required="true" access="PUBLIC" default="" description="The current record Id to display" />
@@ -8,7 +9,7 @@
     <aura:attribute name="newRecordSaved" type="Boolean" default="false" />
     
     <!-- variables that can be changed in the design -->    
-    <aura:attribute name="headerName" type="String" default="Project Risk Assessment"/>
+    <aura:attribute name="headerName" type="String" default="Prospect Risk Assessment"/>
     <aura:attribute name="filterStatus" type="String" default="Open"/>    
     <aura:attribute name="defaultNumRecordDisplay" type="Integer" default="2" description="Default the number of record viewable in compact view (View Less)"/>    
     <aura:attribute name="enableNewRecord" type="Boolean" default="false" description="Set if New record is enabled for this component"/>    
@@ -18,8 +19,7 @@
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
     <aura:handler name="change" value="{!v.newRecordSaved}" action="{!c.doInit}" />      
     <!-- Events -->
-    <aura:handler event="c:PRAEvent" action="{!c.doInit}"/>
-
+    <aura:handler name="updatePRAEvent" event="c:PRAEvent" action="{!c.refreshList}"/>  <!-- Register the event handler to refresh the pra list - note the same name as the event handler from the PRAItemEditModal -->
 
  
     <div class="slds-card">
@@ -40,14 +40,14 @@
                 <table class="slds-table slds-wrap slds-table--bordered slds-no-row-hover slds-table--cell-buffer">
                     <thead>
                         <tr class="slds-text-heading--label">
-                            <th scope="col" class="slds-truncate">Item #</th>
-                            <th scope="col" class="slds-truncate">Is Critical Risk ?</th>
-                            <th scope="col" class="slds-truncate">Category</th>
-                            <th scope="col" class="slds-truncate">Rating</th>
-                            <th scope="col" class="slds-truncate">Risk Item Name</th>
-                            <th scope="col" class="slds-truncate">Selected Criteria</th>   
-                            <th scope="col" class="slds-truncate">Mitigation Strategy</th>  
-                            <th scope="col" class="slds-truncate"></th> <!-- Place holder for the Edit button in the body -->           
+                            <th class="slds-cell-wrap" width="5%">Item #</th>
+                            <th class="slds-cell-wrap" width="7%">Is Critical Risk ?</th>
+                            <th class="slds-cell-wrap" width="13%">Category</th>
+                            <th class="slds-cell-wrap" width="15%">Risk Item Name</th>
+                            <th class="slds-cell-wrap" width="3%">Rating</th>
+                            <th class="slds-cell-wrap" width="30%">Selected Criteria</th>   
+                            <th class="slds-cell-wrap" width="30%">Mitigation Strategy</th>  
+                            <th class="slds-cell-wrap" width="7%"></th> <!-- Place holder for the Edit button in the body -->           
                         </tr>
                     </thead>
                     <tbody>     

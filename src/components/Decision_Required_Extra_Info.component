@@ -1,0 +1,265 @@
+<apex:component access="global">
+	<apex:attribute name="relatedToOpp" description="This is the prospect." type="Opportunity"/>
+
+	<tr>&nbsp;&nbsp;</tr>
+	<tr>
+	    <td>
+	        <b>Executive Summary</b><br/>&nbsp;&nbsp;
+	    </td>
+	</tr>
+	<tr>
+	    <td>
+	        <apex:outputText escape="false" value="{!relatedToOpp.Executive_Summary__c}"/>
+	    </td>
+	</tr>
+	<tr>&nbsp;&nbsp;</tr>
+	<tr>
+	    <td>
+	        <b>Procurement Process</b><br/>&nbsp;&nbsp;  
+	    </td>
+	</tr>
+	<tr>
+	    <td>                                
+	       <apex:outputText escape="false" value="{!relatedToOpp.Procurement_Process__c}"/> 
+	    </td>
+	</tr>
+	<tr>&nbsp;&nbsp;</tr>
+	<tr>
+	    <td>
+	        <b>Internal Collaborative Structure</b><br/>&nbsp;&nbsp; 
+	    </td>
+	</tr>
+	<tr> 
+	    <td>
+	        Is this Project an internal Business Group Collaboration? -&nbsp;  
+	        <apex:outputtext value="{!if((relatedToOpp.Is_internal_BG_collaboration__c == true),"Yes","No")}"/><br/>                                
+	    </td>
+	</tr>
+	<tr> 
+	    <td>
+	        Is this Project an internal Regional Business Collaboration? -&nbsp; 
+	        <apex:outputtext value="{!if((relatedToOpp.Is_internal_Regional_Bus_collaboration__c == true),"Yes","No")}"/><br/>
+	    </td>
+	</tr>
+	<tr>&nbsp;&nbsp;</tr>
+	<tr>
+	    <td>
+	        <b>Competitors</b><br/>&nbsp;&nbsp;
+	    </td>
+	</tr>
+	<tr>
+	    <td>
+	        <apex:repeat var="c" value="{!relatedToOpp.Competitors__r}">
+	        <table width="100%" border="1" align="center" cellpadding="0" cellspacing="0">
+	            <tr>
+	                <td style="width:40%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+	                    {!c.Competitor__r.Name}</td>
+	                <td style="width:60%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+	                    <apex:outputtext value="{!if((c.Confirmed_Competitor__c == true),"Confirmed Competitor","Not Confirmed")}"/></td>
+	            </tr>
+	            <tr>
+	                <td style="width:40%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+	                    Workload: </td>
+	                <td style="width:60%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+	                    {!c.Workload__c}</td>
+	            </tr>
+	            <tr>
+	                <td style="width:40%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+	                    Strengths / Weaknesses: </td>
+	                <td style="width:60%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+	                    {!c.Strengths_Weaknesses__c}</td>
+	            </tr>
+	            <tr>
+	                <td style="width:40%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+	                    Strategic Partners: </td>
+	                <td style="width:60%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+	                    {!c.Strategic_Partner__c}</td>
+	            </tr>
+	            <tr>
+	                <td style="width:40%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+	                    Their Proposed Approach: </td>
+	                <td style="width:60%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+	                    {!c.Approach__c}</td>
+	            </tr>
+	            <tr>
+	                <td style="width:40%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+	                    How Will JH Beat them: </td>
+	                <td style="width:60%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+	                    {!c.How_will_JH_beat_them__c}</td>
+	            </tr>
+	        </table>
+	        </apex:repeat>                                
+	    </td>
+	</tr>
+	<tr>&nbsp;&nbsp;</tr>
+	<tr>
+	    <td>
+	        <b>Joint Venture Partners</b><br/>&nbsp;&nbsp;
+	        Is this project a joint venture or alliance? -&nbsp;
+	        <apex:outputtext value="{!if((relatedToOpp.Is_this_project_a_JV_or_Alliance__c == true),"Yes","No")}"/><br/>
+	    </td>
+	</tr>
+	<tr>&nbsp;&nbsp;</tr>
+	<tr>
+	    <td>
+	        <table width="100%" border="1" align="center" cellpadding="0" cellspacing="0">
+	            <tr>
+	                <td style="width:50%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+	                    Name</td>
+	                <td style="width:50%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+	                    % Split</td>
+	            </tr>
+	            <apex:repeat var="dp" value="{!relatedToOpp.Delivery_Partner__r}">
+	            <tr>
+	                <td style="width:50%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+	                    {!dp.Partner__r.Name}</td>
+	                <td style="width:50%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+	                    {!dp.Proposed_Split__c}%</td>
+	            </tr>
+	            </apex:repeat> 
+	        </table>
+	    </td>
+	</tr>
+	<tr>&nbsp;&nbsp;</tr>
+	<tr>
+	    <td>
+	        <b>Design / Technology Partners</b><br/>&nbsp;&nbsp;
+	    </td>
+	</tr>
+	<tr>
+	    <td>
+	        <table width="100%" border="1" align="center" cellpadding="0" cellspacing="0">
+	            <tr>
+	                <td style="width:50%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+	                    Name</td>
+	                <td style="width:50%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+	                    Discipline</td>
+	            </tr>
+	            <apex:repeat var="dt" value="{!relatedToOpp.Design_Tech_Partner__r}">
+	            <tr>
+	                <td style="width:50%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+	                    {!dt.Partner__r.Name}</td>
+	                <td style="width:50%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+	                    {!dt.Role__c}</td>
+	            </tr>
+	            </apex:repeat> 
+	        </table>
+	    </td>
+	</tr>
+	<tr>&nbsp;&nbsp;</tr>
+	<tr>
+	    <td>
+	        <b>Winning Strategy</b><br/>&nbsp;&nbsp;
+	    </td>
+	</tr>
+	<tr>
+	    <td>
+	        <table width="100%" border="1" align="center" cellpadding="0" cellspacing="0">
+	            <tr>
+	                <td style="width:20%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+	                    Design </td>
+	                <td style="width:80%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+	                    <apex:outputText escape="false" value="{!relatedToOpp.Design__c}"/></td>
+	            </tr>
+	            <tr>
+	                <td style="width:20%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+	                    Cost </td>
+	                <td style="width:80%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+	                    <apex:outputText escape="false" value="{!relatedToOpp.Cost__c}"/></td>
+	            </tr>
+	            <tr>
+	                <td style="width:20%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+	                    Time </td>
+	                <td style="width:80%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+	                    <apex:outputText escape="false" value="{!relatedToOpp.Time__c}"/></td>
+	            </tr>
+	            <tr>
+	                <td style="width:20%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+	                    People </td>
+	                <td style="width:80%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+	                    <apex:outputText escape="false" value="{!relatedToOpp.People__c}"/></td>
+	            </tr>
+	            <tr>
+	                <td style="width:20%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+	                    Relationship </td>
+	                <td style="width:80%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+	                    <apex:outputText escape="false" value="{!relatedToOpp.Relationships__c}"/></td>
+	            </tr>
+	            <tr>
+	                <td style="width:20%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+	                    Technology </td>
+	                <td style="width:80%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+	                    <apex:outputText escape="false" value="{!relatedToOpp.Technology__c}"/></td>
+	            </tr>
+	            <tr>
+	                <td style="width:20%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+	                    Methodology </td>
+	                <td style="width:80%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+	                    <apex:outputText escape="false" value="{!relatedToOpp.Methodology__c}"/></td>
+	            </tr>
+	            <tr>
+	                <td style="width:20%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+	                    Innovation </td>
+	                <td style="width:80%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+	                    <apex:outputText escape="false" value="{!relatedToOpp.Innovation__c}"/></td>
+	            </tr>
+	            <tr>
+	                <td style="width:20%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+	                    <apex:outputText escape="false" value="{!relatedToOpp.Conga_Other_Heading_Field__c}"/></td>
+	                <td style="width:80%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+	                    <apex:outputText escape="false" value="{!relatedToOpp.Other__c}"/></td>
+	            </tr>
+	        </table>
+	    </td>
+	</tr>
+	<tr>&nbsp;&nbsp;</tr>
+	<tr>
+	    <td>
+	        <table width="100%" border="1" align="center" cellpadding="0" cellspacing="0">
+	            <tr>
+	                <td style="width:12%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+	                    &nbsp;&nbsp; </td>
+	                <td style="width:22%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+	                    EOI/PQ </td>
+	                <td style="width:22%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+	                    Tender </td>
+	                <td style="width:22%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+	                    Post Tender </td>
+	                <td style="width:22%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+	                    Total </td>
+	            </tr>
+	            <tr>
+	                <td style="width:12%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+	                    Net Budget (AUD) </td>
+	                <td style="width:22%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+	                    <apex:outputText value="{0, number, 000,000.00}">
+	                       $<apex:param value="{!relatedToOpp.Net_Budget_EOI_PQ__c}"/>
+	                    </apex:outputText></td>
+	                <td style="width:22%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+	                    <apex:outputText value="{0, number, 000,000.00}">
+	                       $<apex:param value="{!relatedToOpp.Net_Budget_Tender__c}"/>
+	                    </apex:outputText></td>
+	                <td style="width:22%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+	                    <apex:outputText value="{0, number, 000,000.00}">
+	                       $<apex:param value="{!relatedToOpp.Net_Budget_Post_Tender__c}"/>
+	                    </apex:outputText></td>
+	                <td style="width:22%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+	                    <apex:outputText value="{0, number, 000,000.00}">
+	                       $<apex:param value="{!relatedToOpp.Net_Budget_Amount__c}" />
+	                    </apex:outputText></td>                                        
+	            </tr>
+	        </table>
+	    </td>
+	</tr>
+	<tr>&nbsp;&nbsp;</tr>
+	<tr>
+	    <td>
+	        <b>Major Risk</b>
+	    </td>
+	</tr>
+	<tr>
+	    <td>
+	        <apex:outputText escape="false" value="{!relatedToOpp.Major_Risks__c}"/>
+	    </td>
+	</tr>
+</apex:component>

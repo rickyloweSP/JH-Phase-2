@@ -8,25 +8,26 @@
     <aura:attribute name="sldsVer" type="String" default="/resource/SLDS" description="the current version of slds resource" />
     <aura:attribute name="PRA" type="Project_Risk_Assessment__c" />
     <aura:attribute name="PRAList" type="List" />
+    
 
 
-            <th scope="row">
+            <th class="slds-cell-wrap" width="5%" scope="row">
                 <div class="slds-truncate"><a onclick="{!c.navigateToPRA}">{!v.PRA.ItemNo__c}</a></div>
 		    </th>    
     			<aura:if isTrue="{!v.PRA.Is_Critical_Risk__c}">
-             	<td><img src="/resource/redsquare" height="9" width="10"/></td>
+             	<td class="slds-cell-wrap" width="7%"><img src="/resource/redsquare" height="9" width="10"/></td>
                 <aura:set attribute="else">
-      				<td><img src="/resource/greensquare" height="9" width="10"/></td>
+      				<td width="5%"><img src="/resource/greensquare" height="9" width="10"/></td>
                 </aura:set> 
   		 	   </aura:if> 
                
-                <td><div class="slds-truncate">{!v.PRA.Category__c}</div></td>
-                <td><div class="slds-truncate">{!v.PRA.Rating__c}</div></td>
-                <td><div class="slds-truncate">{!v.PRA.Risk_Item__c}</div></td>
-                <td><div class="slds-truncate">{!v.PRA.Selected_Indicators_With_Text__c}</div></td>    
-    			<td><div class="slds-truncate">{!v.PRA.Mitigation_Strategy__c}</div></td>    
-                <td class="btnCol"><div class="slds-truncate">
-                    <ui:button label="Edit" press="{!c.editMode}" /> </div>
+                <td class="slds-cell-wrap" width="13%"> {!v.PRA.Category__c}</td>
+                <td class="slds-cell-wrap" width="15%"> {!v.PRA.Risk_Item__c}</td>
+                <td class="slds-cell-wrap" width="3%"> {!v.PRA.Rating__c}</td>
+                <td class="slds-cell-wrap" width="30%"> {!v.PRA.Selected_Indicators_With_Text_Combined__c}</td>    
+    			<td class="slds-cell-wrap" width="30%"> {!v.PRA.Mitigation_Strategy__c}</td>    
+                <td class="btnCol" width="7%"> 
+                    <ui:button label="Edit" press="{!c.editMode}" />
                 </td>
     <div aura:id="body">
     </div> 

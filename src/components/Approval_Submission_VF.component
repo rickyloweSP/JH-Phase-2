@@ -1,0 +1,152 @@
+<apex:component access="global" controller="Approval_VF_Controller">
+	
+	<apex:attribute name="recipientUser" description="This is the recipient name for the Email." type="User" assignTo="{!userRecord}"/>
+	<apex:attribute name="relatedToOpp" description="This is the prospect." type="Opportunity" assignTo="{!oppRecord}"/>
+	<apex:attribute name="EmailType" description="This is either TSF, CRA or Normal." type="String" assignTo="{!emailTypeStr}"/>
+
+	<html>          
+        <body style="font-family:Courier; size:12pt;">
+            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>
+                        <p>	
+                        	<apex:outputText value="The CRA for " rendered="{!IF(EmailType == 'CRA', TRUE, FALSE)}"/>
+
+	                        <apex:outputText value="The TSF for " rendered="{!IF(EmailType == 'TSF', TRUE, FALSE)}"/> 
+
+                        	{!relatedToOpp.StageName} for {!relatedToOpp.Name} has been submitted for approval, and this email has been sent to you for <b>Information Purposes Only</b>.
+                    	</p> 
+
+                        <p>Click here to view the record in Salesforce: <apex:outputlink value="{!LEFT($Api.Partner_Server_URL_140,FIND('.com',$Api.Partner_Server_URL_140)+4)+relatedToOpp.Id}">{!relatedToOpp.Name}</apex:outputlink></p>
+
+                        <p><i>This is a system generated email, please do not reply.</i></p><br/>
+
+                    </td>
+                </tr>                        
+                <tr>
+                    <td>
+                        <b>Details of Submission</b><br/>&nbsp;&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td>                                
+                        <!-- Table for Submission Details --> 
+                        <table width="100%" border="1" align="center" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+                                    Sponsor Business Group</td>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+                                    {!relatedToOpp.Business_Group__r.Name}</td>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+                                    D&amp;I Involvement</td>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+                                    {!relatedToOpp.D_I_Involvement__c}</td>                                        
+                            </tr>
+                            <tr>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+                                    Sponsor Regional Business</td>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+                                    {!relatedToOpp.Regional_Business__r.Name}</td>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+                                    Overall Prospect Value</td>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+                                    <apex:outputText value="{0, number, 000,000.00}">
+                                       $<apex:param value="{!relatedToOpp.Overall_Prospect_Value__c}" />
+                                    </apex:outputText></td>
+                            </tr>
+                            <tr>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+                                    Prospect Duration (Yrs)</td>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+                                    {!relatedToOpp.Prospect_Duration_Yrs__c}</td>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+                                    Contract Type</td>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+                                    {!relatedToOpp.Contract_Responsibility__c}</td>
+                            </tr>
+                            <tr>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+                                    Client</td>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+                                    {!relatedToOpp.Account.Name}</td>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+                                    JH Share % / JV Partners %</td>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+                                    <apex:repeat var="dp" value="{!relatedToOpp.Delivery_Partner__r}">
+                                        {!dp.Partner__r.Name} - {!dp.Proposed_Split__c}% <br/>
+                                    </apex:repeat></td>
+                            </tr>
+                            <tr>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+                                    Project Margin</td>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+                                    <apex:outputText value="{0, number, 000,000.00}">
+                                       $<apex:param value="{!relatedToOpp.JH_Margin_Value__c}" />
+                                    </apex:outputText></td>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+                                    Contact Award Date</td>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+                                    <apex:outputText value="{0, date, dd-MM-yyyy}">
+                                        <apex:Param value="{!relatedToOpp.CloseDate}"/>
+                                    </apex:OutputText></td>
+                            </tr>
+                        </table>                                                 
+                    </td>
+                </tr>
+                <tr>&nbsp;&nbsp;</tr>
+                <tr>
+                    <td>
+                        <b>Key Dates</b><br/>&nbsp;&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Table for Key Dates Details -->
+                        <table width="100%" border="1" align="center" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+                                    Proposed Start Date</td>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+                                    <apex:outputText value="{0, date, dd-MM-yyyy}">
+                                        <apex:Param value="{!relatedToOpp.EOI_PQ_Start_Date__c}"/>
+                                    </apex:OutputText></td>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+                                    Proposed End Date</td>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+                                    <apex:outputText value="{0, date, dd-MM-yyyy}">
+                                        <apex:Param value="{!relatedToOpp.EOI_PQ_Close_Date__c}"/>
+                                    </apex:OutputText></td>
+                            </tr>
+                            <tr>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+                                    Tender Start Date</td>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+                                    <apex:outputText value="{0, date, dd-MM-yyyy}">
+                                        <apex:Param value="{!relatedToOpp.Tender_Start_Date__c}"/>
+                                    </apex:OutputText></td>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+                                    Tender End Date</td>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+                                    <apex:outputText value="{0, date, dd-MM-yyyy}">
+                                        <apex:Param value="{!relatedToOpp.Tender_Close_Date__c}"/>
+                                    </apex:OutputText></td>
+                            </tr>
+                            <tr>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+                                    Contract Award Date</td>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+                                    <apex:outputText value="{0, date, dd-MM-yyyy}">
+                                        <apex:Param value="{!relatedToOpp.CloseDate}"/>
+                                    </apex:OutputText></td>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+                                    &nbsp;</td>
+                                <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+                                    &nbsp;</td>
+                            </tr>
+                        </table>
+                        </td>
+                    </tr>
+                </table>
+        </body>
+    </html> 
+</apex:component>

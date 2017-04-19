@@ -1,0 +1,71 @@
+<aura:component controller="ApprovalController"  implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName" access="global">
+<aura:attribute name="Opp" type="Opportunity" />
+<aura:attribute name="OppToUpdate" type="Opportunity" default="{'sobjectType': 'Opportunity'}"/>
+
+<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    
+    <div class="slds-page-header" style="border: 1px solid rgb(216, 221, 230);border-radius: .25rem;">
+        <div class="slds-grid">
+            <div class="slds-col slds-has-flexi-truncate">      
+                <h1 class="slds-page-header__title slds-truncate" title="Competitor Analysis">Conversion Budget</h1>
+            </div>
+            <div class="slds-col slds-no-flex slds-grid slds-align-top">
+                <div class="slds-button-group">
+                    <ui:button label="Save" press="{!c.updateOpp}"/>        
+                </div>
+            </div>
+        </div>
+        <div class="slds-grid slds-wrap slds-grid--pull-padded slds-m-vertical--x-small">
+            <div class="slds-col slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-5">
+                <ui:outputText class="uiLabel-left form-element__label uiLabel" value="Total Budget - EOI/PQ"/><br></br>
+                <ui:outputCurrency aura:id="totalBudgetEP" value="{!v.Opp.Total_Budget_EOI_PQ__c}"/>
+            </div>
+            <div class="slds-col slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-5">
+                <ui:outputText class="uiLabel-left form-element__label uiLabel" value="Total Budget - Tender"/><br></br>
+                <ui:outputCurrency aura:id="totalBudgetT" value="{!v.Opp.Total_Budget_Tender__c}"/>
+            </div>
+            <div class="slds-col slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-5">
+                <ui:outputText class="uiLabel-left form-element__label uiLabel" value="Total Budget - Post Tender"/><br></br>
+                <ui:outputCurrency aura:id="totalBudgetPT" value="{!v.Opp.Total_Budget_Post_Tender__c}"/>
+            </div>
+            <div class="slds-col slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-5">
+                <ui:outputText class="uiLabel-left form-element__label uiLabel" value="Total Budget (AUD)"/><br></br>
+                <ui:outputCurrency aura:id="totalBudgetAmount" value="{!v.Opp.Total_Budget_AUD__c}"/>
+            </div>
+            <div class="slds-col slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-5">
+                <!-- Placeholder to adjust the columns -->
+            </div>
+        </div>
+        <div class="slds-grid slds-wrap slds-grid--pull-padded slds-m-vertical--x-small">
+            <div class="slds-col slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-5">
+                <ui:outputText class="uiLabel-left form-element__label uiLabel" value="Net Budget - EOI/PQ"/><br></br>
+                <ui:outputCurrency aura:id="netBudgetEP" value="{!v.Opp.Net_Budget_EOI_PQ__c}"/>
+            </div>
+            <div class="slds-col slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-5">
+                <ui:outputText class="uiLabel-left form-element__label uiLabel" value="Net Budget - Tender"/><br></br>
+                <ui:outputCurrency aura:id="netBudgetT" value="{!v.Opp.Net_Budget_Tender__c}"/>
+            </div>
+            <div class="slds-col slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-5">
+                <ui:outputText class="uiLabel-left form-element__label uiLabel" value="Net Budget - Post Tender"/><br></br>
+                <ui:outputCurrency aura:id="netBudgetPT" value="{!v.Opp.Net_Budget_Post_Tender__c}"/>
+            </div>
+            <div class="slds-col slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-5">
+                <ui:outputText class="uiLabel-left form-element__label uiLabel" value="Net Budget Amount"/><br></br>
+                <ui:outputCurrency aura:id="netBudgetAmount" value="{!v.Opp.Net_Budget_Amount__c}"/>
+            </div>
+            <div class="slds-col slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-5">
+                <ui:outputText class="uiLabel-left form-element__label uiLabel" value="JH Bid Cost(%) of JH Revenue"/><br></br>
+                <ui:outputNumber aura:id="jhBidPer" value="{!v.Opp.JH_Bid_Cost_of_JH_Revenue__c}" format=".00"/>%
+            </div>
+        </div>
+        <div class="slds-grid slds-m-vertical--x-small">            
+            <div class="uiInput uiInputTextArea uiInput--default uiInput--textarea slds-size--2-of-2">
+                <ui:inputTextArea aura:id="inputRT" label="Conversion Budget" value="{!v.Opp.Conversion_Budget_Comments__c}" rows="5" class="textarea" />
+            </div>
+        </div>
+    </div>
+    
+    
+	
+</aura:component>

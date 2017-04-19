@@ -1,0 +1,106 @@
+39.0 APEX_CODE,FINEST;APEX_PROFILING,FINEST;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+14:07:43.0 (343946)|USER_INFO|[EXTERNAL]|00528000006B07F|dev@systempartners.com.prod.pcphase2|Australian Eastern Standard Time|GMT+11:00
+14:07:43.0 (379103)|EXECUTION_STARTED
+14:07:43.0 (383011)|CODE_UNIT_STARTED|[EXTERNAL]|aura
+14:07:43.0 (859592)|HEAP_ALLOCATE|[72]|Bytes:3
+14:07:43.0 (900790)|HEAP_ALLOCATE|[77]|Bytes:152
+14:07:43.0 (914678)|HEAP_ALLOCATE|[342]|Bytes:408
+14:07:43.0 (930278)|HEAP_ALLOCATE|[355]|Bytes:408
+14:07:43.0 (945326)|HEAP_ALLOCATE|[467]|Bytes:48
+14:07:43.0 (971027)|HEAP_ALLOCATE|[139]|Bytes:6
+14:07:43.0 (993772)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+14:07:43.0 (1001375)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+14:07:43.0 (2194047)|CODE_UNIT_STARTED|[EXTERNAL]|01pO00000003MVy|ApprovalController.getOpportunityRecord
+14:07:43.0 (2289272)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+14:07:43.0 (2294770)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:07:43.0 (2304382)|METHOD_ENTRY|[1]|01pO00000003MVy|ApprovalController.ApprovalController()
+14:07:43.0 (2308122)|STATEMENT_EXECUTE|[1]
+14:07:43.0 (2312122)|STATEMENT_EXECUTE|[1]
+14:07:43.0 (2316503)|METHOD_EXIT|[1]|ApprovalController
+14:07:43.0 (2319843)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+14:07:43.0 (2327585)|SYSTEM_MODE_ENTER|false
+14:07:43.0 (2334084)|VARIABLE_SCOPE_BEGIN|[15]|opportunityId|String|false|false
+14:07:43.0 (2353946)|VARIABLE_ASSIGNMENT|[15]|opportunityId|"006O0000008kYYvIAM"
+14:07:43.0 (2361148)|STATEMENT_EXECUTE|[15]
+14:07:43.0 (2362480)|STATEMENT_EXECUTE|[18]
+14:07:43.0 (2365506)|HEAP_ALLOCATE|[18]|Bytes:160
+14:07:43.0 (2374328)|HEAP_ALLOCATE|[18]|Bytes:4
+14:07:43.0 (2384598)|HEAP_ALLOCATE|[18]|Bytes:7
+14:07:43.0 (2428175)|HEAP_ALLOCATE|[50]|Bytes:5
+14:07:43.0 (2449030)|HEAP_ALLOCATE|[56]|Bytes:5
+14:07:43.0 (2456468)|HEAP_ALLOCATE|[64]|Bytes:7
+14:07:43.0 (3115531)|SOQL_EXECUTE_BEGIN|[18]|Aggregations:0|SELECT Id, name, Gate_Status__c, TSF_Gate_Status__c, CRA_Gate_Status__c, StageName, Competitor_Analysis_General_Comments__c FROM Opportunity WHERE Id = :tmpVar1
+14:07:43.0 (3129554)|LIMIT_USAGE|[18]|SOQL|1|100
+14:07:43.0 (3139913)|LIMIT_USAGE|[18]|AGGS|0|300
+14:07:43.0 (9261645)|SOQL_EXECUTE_END|[18]|Rows:1
+14:07:43.0 (9271048)|LIMIT_USAGE|[18]|SOQL_ROWS|1|50000
+14:07:43.0 (9284245)|HEAP_ALLOCATE|[18]|Bytes:8
+14:07:43.0 (9293252)|HEAP_ALLOCATE|[18]|Bytes:178
+14:07:43.0 (9390178)|HEAP_ALLOCATE|[18]|Bytes:8
+14:07:43.0 (9407668)|VARIABLE_SCOPE_BEGIN|[18]|allOpps|List<Opportunity>|true|false
+14:07:43.0 (9441098)|VARIABLE_ASSIGNMENT|[18]|allOpps|[{"Id":"006O0000008kYYvIAM","Name":"Lismore Base Hospita (73 more) ...","Gate_Status__c":"Not Started","StageName":"Gate 1"}]|0x56269ca4
+14:07:43.0 (9445118)|STATEMENT_EXECUTE|[27]
+14:07:43.0 (9455695)|SYSTEM_MODE_EXIT|false
+14:07:43.9 (9482373)|CUMULATIVE_LIMIT_USAGE
+14:07:43.9 (9482373)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:07:43.9 (9482373)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+14:07:43.9 (9482373)|STATIC_VARIABLE_LIST|
+  char[]:DigitTens:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  double:MAX_VALUE:0
+  Boolean:FALSE:0
+  long:serialVersionUID:0
+  double:MIN_VALUE:0
+  int:SIZE:0
+  double:NEGATIVE_INFINITY:0
+  int:MAX_VALUE:0
+  String:_sfdcSuppressedCodeLocations:0
+  char[]:digits:0
+  double:NaN:0
+  Boolean:TRUE:0
+  int:MIN_VALUE:0
+  char[]:DigitOnes:0
+  int:BYTES:0
+  int:MIN_EXPONENT:0
+  int[]:sizeTable:0
+  int:MAX_EXPONENT:0
+  int:SIZE:0
+  double:POSITIVE_INFINITY:0
+  String:_sfdcAdditionalCodeLocations:0
+  double:MIN_NORMAL:0
+  int:BYTES:0
+
+14:07:43.9 (9482373)|CUMULATIVE_LIMIT_USAGE_END
+
+14:07:43.0 (9589985)|CODE_UNIT_FINISHED|ApprovalController.getOpportunityRecord
+14:07:43.14 (14165114)|CUMULATIVE_PROFILING_BEGIN
+14:07:43.14 (14165114)|CUMULATIVE_PROFILING|SOQL operations|
+Class.ApprovalController.getOpportunityRecord: line 18, column 1: [SELECT   Id,name,
+                                                           			Gate_Status__c,
+                                                           			TSF_Gate_Status__c,
+                                                           			CRA_Gate_Status__c,
+                                                           			StageName,
+                                    								Competitor_Analysis_General_Comments__c
+                                 							FROM     Opportunity
+                                 							WHERE    Id = :opportunityId]: executed 1 time in 7 ms
+
+14:07:43.14 (14165114)|CUMULATIVE_PROFILING|No profiling information for SOSL operations
+14:07:43.14 (14165114)|CUMULATIVE_PROFILING|No profiling information for DML operations
+14:07:43.14 (14165114)|CUMULATIVE_PROFILING|method invocations|
+External entry point: public static List<Opportunity> getOpportunityRecord(String): executed 1 time in 7 ms
+
+14:07:43.14 (14165114)|CUMULATIVE_PROFILING_END

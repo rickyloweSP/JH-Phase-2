@@ -1,0 +1,102 @@
+<messaging:emailTemplate subject="Advice of Tender Won – {!relatedTo.Name}" recipientType="User" relatedToType="Opportunity">
+      <messaging:htmlEmailBody >            
+            <html>          
+                <body style="font-family:Courier; size:12pt;">
+                    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td>
+
+                                <p><i>This is a system generated email, please do not reply.</i></p><br/>
+
+                            </td>
+                        </tr>                        
+                        <tr>
+                            <td>
+                                <b>Details of Submission</b><br/>&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>                                
+                                <!-- Table for Submission Details --> 
+                                <table width="100%" border="1" align="center" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+                                            Project Name</td>
+                                        <td style="border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+                                            {!relatedTo.Name}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+                                            Project Number</td>
+                                        <td style="border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+                                            {!relatedTo.Prospect_Number__c}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+                                            Sponsor Business Group</td>
+                                        <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+                                            {!relatedTo.Business_Group__r.Name}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+                                            Other Business Group Splits</td>
+                                        <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+                                            <apex:repeat var="otherBU" value="{!relatedTo.JH_Collaborative_Structure__r}">
+                                                {!otherBU.Business_Unit__r.Name} - {!otherBU.Proposed_Split__c}% <br/>
+                                            </apex:repeat>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+                                            Business Development Manager</td>
+                                        <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+                                            {!relatedTo.Business_Development_Manager__r.Name}</td>
+                                    </tr>
+                                       <tr>
+                                        <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+                                            Sponsor Regional Business</td>
+                                        <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+                                            {!relatedTo.Regional_Business__r.Name}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+                                            Other Regional Business Splits</td>
+                                        <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+                                            <apex:repeat var="otherBU" value="{!relatedTo.JH_Collaborative_Structure_Regions__r}">
+                                                {!otherBU.Business_Unit__r.Name} - {!otherBU.Proposed_Split__c}% <br/>
+                                            </apex:repeat>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+                                            Project Development Manager</td>
+                                        <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+                                            {!relatedTo.Project_Development_Manager__r.Name}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#D3D3D3;">
+                                            JH Share % / JV Partners %</td>
+                                        <td style="width:25%;border-width:1px;padding:4px;border-style:solid;border-color:#000000;background-color:#FFFFFF;">
+                                            <apex:repeat var="dp" value="{!relatedTo.Delivery_Partner__r}">
+                                                {!dp.Partner__r.Name} - {!dp.Proposed_Split__c}% <br/>
+                                            </apex:repeat></td>
+                                    </tr>
+                                </table>                                                 
+                            </td>
+                        </tr>
+                        <tr>&nbsp;&nbsp;</tr>
+                        <tr>
+                            <td>
+                              
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                
+                                </td>
+                                </tr>
+                                </table>
+                </body>
+            </html>         
+        </messaging:htmlEmailBody>  
+</messaging:emailTemplate>

@@ -1,0 +1,5 @@
+<messaging:emailTemplate subject="{!relatedTo.Previous_Stage__c} for {!relatedTo.Name} has been {!relatedTo.Previous_Gate_Status__c}" recipientType="User" relatedToType="Opportunity">
+    <messaging:htmlEmailBody >            
+        <c:Approval_Outcome_Notification_VF recipientUser="{!recipient}" relatedToOpp="{!relatedTo}" EmailType="Normal"/>            
+    </messaging:htmlEmailBody>  
+</messaging:emailTemplate>

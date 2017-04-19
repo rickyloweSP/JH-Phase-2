@@ -1,0 +1,26 @@
+<aura:component controller="ApprovalController"  implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName" access="global">
+<aura:attribute name="Opp" type="Opportunity" />
+<aura:attribute name="OppToUpdate" type="Opportunity" default="{'sobjectType': 'Opportunity'}"/>
+   
+<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    
+    <div class="slds-page-header" style="border: 1px solid rgb(216, 221, 230);border-radius: .25rem;">
+        <div class="slds-grid">
+            <div class="slds-col slds-has-flexi-truncate">      
+                <h1 class="slds-page-header__title slds-truncate" title="Competitor Analysis">Competitor Analysis</h1>
+            </div>
+            <div class="slds-col slds-no-flex slds-grid slds-align-top">
+                <div class="slds-button-group">
+                    <ui:button label="Save" press="{!c.updateOpp}"/>        
+                </div>
+            </div>
+        </div>
+        <div class="slds-grid">            
+            <div class="uiInput uiInputTextArea uiInput--default uiInput--textarea slds-size--2-of-2">
+                <ui:inputTextArea aura:id="inputRT" value="{!v.Opp.Competitor_Analysis_General_Comments__c}" rows="5" class="textarea"/>
+            </div>
+        </div>
+    </div>
+
+</aura:component>
