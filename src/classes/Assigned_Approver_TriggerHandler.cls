@@ -35,5 +35,6 @@ public without sharing class Assigned_Approver_TriggerHandler extends TriggerHan
 
     public override void afterInsert() {
         Assigned_Approver_Service.setProxyAsShareRecord((list<Assigned_Approver__c>) Trigger.new);
+        Assigned_Approver_Service.ControlApproversSharing((list<Assigned_Approver__c>) Trigger.new);
     } 
 }

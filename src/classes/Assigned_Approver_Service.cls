@@ -107,7 +107,7 @@ public without sharing class Assigned_Approver_Service {
         //If after trigger then find the next approver
         if(gatesToFindNextApprover.size() > 0 && IsAfter){
         	System.debug(loggingLevel.Error, '*** Triggering find next approver');
-        	gateTriggerHandler.findNextApprover(gatesToFindNextApprover);
+        	GateService.findNextApprover(gatesToFindNextApprover);
         }
     }
 
@@ -182,7 +182,7 @@ public without sharing class Assigned_Approver_Service {
 
         for(Assigned_Approver__c AA : newList){
             //Add the Gate Sharing Rules to the list
-            GateShareList.add(Assigned_Approver_Helper.createGateShare(AA.Gate__c, AA.Approver__c));
+            GateShareList.add(GateHelper.createGateShare(AA.Gate__c, AA.Approver__c, Schema.Gate__Share.RowCause.Approver__c));
 
             //add the opp team member
             OpportunityTeamMember OTM = new OpportunityTeamMember(OpportunityId = AA.Opportunity_ID__c, UserId = AA.Approver__c, TeamMemberRole = 'Approver');
@@ -190,7 +190,7 @@ public without sharing class Assigned_Approver_Service {
 
             //if there is a Proxy approver then add them to the gate share list
             if(AA.Proxy_Approver__c != null){
-                GateShareList.add(Assigned_Approver_Helper.createGateShare(AA.Gate__c, AA.Proxy_Approver__c));
+                GateShareList.add(GateHelper.createGateShare(AA.Gate__c, AA.Proxy_Approver__c, Schema.Gate__Share.RowCause.Approver__c));
 
                 OpportunityTeamMember OTMproxy = new OpportunityTeamMember(OpportunityId = AA.Opportunity_ID__c, UserId = AA.Proxy_Approver__c, TeamMemberRole = 'Approver');
                 oppTeamToInsert.add(OTMproxy);
@@ -198,8 +198,13 @@ public without sharing class Assigned_Approver_Service {
         }
         
         try{
-            insert oppTeamToInsert;
-            insert GateShareList;
+            if(oppTeamToInsert.size() >0){
+                insert oppTeamToInsert;
+                opportunityService.manageSharingForOppTeamMembers(oppTeamToInsert);     //Insert Share records for the Opp Team Members
+            }
+            if(GateShareList.size() > 0){
+                insert GateShareList;
+            } 
         }
         catch(exception e){
             Debug.logError(e);

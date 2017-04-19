@@ -23,17 +23,4 @@ public without sharing class Assigned_Approver_Helper {
         return d;
     }
 
-    /**
-     * @description creates approver gate share record from the gate id and the user id
-     * @return 
-     **/
-    public static Gate__Share createGateShare(ID gateID, ID UserID){
-        Gate__Share share = new Gate__Share();
-        share.ParentId = gateID;
-        share.UserOrGroupId = UserID;
-        share.AccessLevel = 'edit';
-        share.RowCause = Schema.Gate__Share.RowCause.Approver__c;
-        return share;
-    }
-
 }

@@ -33,11 +33,11 @@ private class Approval_Process_Test {
 		initiateGate(opp[0].ID, null);
 
 		//4) Check that a gate record has been created
-		list<gate__c> gate = GateService.getGateAndApproversFromOpp(opp[0].id);
+		list<gate__c> gate = GateHelper.getGateAndApproversFromOpp(opp[0].id);
 		system.assert(gate.size() == 1);
 
 		//5) Check Approvers have been created 
-		list<Assigned_Approver__c> AA = GateService.getApproversForGate(gate[0].Id);
+		list<Assigned_Approver__c> AA = GateHelper.getApproversForGate(gate[0].Id);
 		System.debug(loggingLevel.Error, '*** AAs in test method: ' + AA);
 		system.assert(AA.size() > 0);
 		system.assert(AA.size() == 4);	//Gate 1 approval for a prospect over the highest threshold requires approval from all 4 levels - See blueworks process '4a. Determine Approvers - Gates 1 & 2' - https://us001.blueworkslive.com/scr/processes/20000199d5253d5#bpmn
@@ -77,7 +77,7 @@ private class Approval_Process_Test {
 		initiateGate(opp[0].ID, null);
 
 		//4) Check that a gate record has been created
-		list<gate__c> gate = GateService.getGateAndApproversFromOpp(opp[0].id);
+		list<gate__c> gate = GateHelper.getGateAndApproversFromOpp(opp[0].id);
 		system.assert(gate.size() == 1);
 	}
 
