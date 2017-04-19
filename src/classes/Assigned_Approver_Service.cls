@@ -176,11 +176,37 @@ public without sharing class Assigned_Approver_Service {
      * @return void
      **/
     public static void ControlApproversSharing(list<Assigned_Approver__c> newList){
-        list<Assigned_Approver__Share> AssignedApproverShareList = new list<Assigned_Approver__Share>();
+        Debug_Log_Service Debug = new Debug_Log_Service('Control Approval Gate+Prospect Sharing');
+        list<Gate__Share> GateShareList = new list<Gate__Share>();
+        list<OpportunityTeamMember> oppTeamToInsert = new list<OpportunityTeamMember>();
 
+        for(Assigned_Approver__c AA : newList){
+            //Add the Gate Sharing Rules to the list
+            GateShareList.add(Assigned_Approver_Helper.createGateShare(AA.Gate__c, AA.Approver__c));
+
+            //add the opp team member
+            OpportunityTeamMember OTM = new OpportunityTeamMember(OpportunityId = AA.Opportunity_ID__c, UserId = AA.Approver__c, TeamMemberRole = 'Approver');
+            oppTeamToInsert.add(OTM);
+
+            //if there is a Proxy approver then add them to the gate share list
+            if(AA.Proxy_Approver__c != null){
+                GateShareList.add(Assigned_Approver_Helper.createGateShare(AA.Gate__c, AA.Proxy_Approver__c));
+
+                OpportunityTeamMember OTMproxy = new OpportunityTeamMember(OpportunityId = AA.Opportunity_ID__c, UserId = AA.Proxy_Approver__c, TeamMemberRole = 'Approver');
+                oppTeamToInsert.add(OTMproxy);
+            }
+        }
         
-        insert AssignedApproverShareList;
+        try{
+            insert oppTeamToInsert;
+            insert GateShareList;
+        }
+        catch(exception e){
+            Debug.logError(e);
+        } 
+        finally{
+            Debug.finishLogging();
+        }
     }
-
 
 }
